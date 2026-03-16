@@ -38,5 +38,15 @@
     "lat": 33.30617,
     "lon": 44.387221,
     "display_name": "بغداد, بلدية المنطقة الخضراء, محافظة بغداد, العراق"
+  },
+  "airport, lynden pindling, bahamas": {
+    "lat": 25.049305,
+    "lon": -77.4653,
+    "display_name": "Bahamas Post Office, Lynden Pindling International Airport, New Providence, The Bahamas"
+  },
+  "plane": {
+    "lat": 44.53127,
+    "lon": 18.586291,
+    "display_name": "Plane, Grad Tuzla, Tuzlanski kanton, Federacija Bosne i Hercegovine, 75212, Bosna i Hercegovina / Босна и Херцеговина"
   }
 }
