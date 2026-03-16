@@ -75,7 +75,7 @@ def main():
     # 4 — AI ANALYSIS (batched)
     logger.info("PHASE 4: AI analysis (3-stage pipeline)...")
     all_incidents = []
-    batch_size = 8
+    batch_size = 5
 
     for i in range(0, len(new_articles), batch_size):
         batch = new_articles[i : i + batch_size]
@@ -91,8 +91,8 @@ def main():
             logger.error(f"    Batch error: {e}")
 
         if i + batch_size < len(new_articles):
-            logger.info("    Waiting 45s for rate limit...")
-            time.sleep(45)
+            logger.info("    Waiting 60s for rate limit...")
+            time.sleep(60)
 
     logger.info(f"  Total incidents detected: {len(all_incidents)}")
 
