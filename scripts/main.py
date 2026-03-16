@@ -134,7 +134,25 @@ def main():
                 try:
                     inc["year"] = int(inc["date"][:4])
                 except (ValueError, TypeError):
-                    inc["year"] = datetime.now(timezone.utc).year                    
+                    inc["year"] = datetime.now(timezone.utc).year     
+           # 5.6 — FIX MISSING IATA CODES
+    if all_incidents:
+        logger.info("PHASE 5.6: Fixing missing IATA codes...")
+        from iata_lookup import find_iata
+
+        for inc in all_incidents:
+            current_iata = inc.get("airport_iata")
+            if not current_iata or current_iata in ("null", "unknown", "", None):
+                found = find_iata(
+                    inc.get("airport_name", ""),
+                    inc.get("city", ""),
+                    inc.get("country", ""),
+                )
+                if found:
+                    inc["airport_iata"] = found
+                    logger.info(
+                        f"    IATA: {found} for {inc.get('airport_name', inc.get('city', ''))}"
+                    )         
 
     # 6 — SAVE (with smart dedup)
     if all_incidents:
