@@ -108,6 +108,33 @@ def main():
                         inc["geo_lat"] = coords["lat"]
                         inc["geo_lon"] = coords["lon"]
                         logger.info(f"    {query} -> ({coords['lat']}, {coords['lon']})")
+        # 5.5 — FIX UNKNOWN DATES
+    if all_incidents:
+        logger.info("PHASE 5.5: Fixing unknown dates...")
+        for inc in all_incidents:
+            if not inc.get("date") or inc["date"] in ("unknown", "null", ""):
+                # Kaynak makalelerin tarihini kullan
+                src_indices = inc.get("source_articles", [])
+                for idx in src_indices:
+                    if 0 <= idx < len(new_articles):
+                        pub = new_articles[idx].get("published", "")
+                        if pub and pub != "unknown":
+                            inc["date"] = pub[:10]
+                            logger.info(f"    Date fixed: {inc['date']} for {inc.get('summary_en', '')[:40]}")
+                            break
+
+                # Hâlâ unknown ise bugünün tarihini koy
+                if not inc.get("date") or inc["date"] in ("unknown", "null", ""):
+                    from datetime import datetime, timezone
+                    inc["date"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                    logger.info(f"    Date set to today for {inc.get('summary_en', '')[:40]}")
+
+            # year alanını da düzelt
+            if inc.get("date") and inc["date"] != "unknown":
+                try:
+                    inc["year"] = int(inc["date"][:4])
+                except (ValueError, TypeError):
+                    inc["year"] = datetime.now(timezone.utc).year                    
 
     # 6 — SAVE (with smart dedup)
     if all_incidents:
