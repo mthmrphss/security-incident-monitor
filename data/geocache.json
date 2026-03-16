@@ -1,1 +1,42 @@
-{}
+{
+  "dubai, united arab emirates": {
+    "lat": 25.074282,
+    "lon": 55.188539,
+    "display_name": "دبي, الإمارات العربية المتحدة"
+  },
+  "airport, savannah, united states": {
+    "lat": 32.124238,
+    "lon": -81.197706,
+    "display_name": "Savannah/Hilton Head International Airport, Artley Road, Savannah, Chatham County, Georgia, 31408, United States"
+  },
+  "airport, boston, united states": {
+    "lat": 42.374333,
+    "lon": -71.030279,
+    "display_name": "Airport, Transportation Way, The Flats, East Boston, Boston, Suffolk County, Massachusetts, 02128, United States"
+  },
+  "airport, kuwait city, kuwait": {
+    "lat": 29.307466,
+    "lon": 47.962808,
+    "display_name": "طريق المطار, اليرموك - قطعة 3, اليرموك, مدينة الكويت, خيطان, محافظة العاصمة, 72504, الكويت"
+  },
+  "airport, ireland": {
+    "lat": 53.426845,
+    "lon": -6.243516,
+    "display_name": "Bank of Ireland, Corballis Road South, Airport ED, Fingal, County Dublin, Leinster, K67 A0K7, Éire / Ireland"
+  },
+  "airport, vero beach, united states": {
+    "lat": 27.657215,
+    "lon": -80.41833,
+    "display_name": "Vero Beach Municipal Airport, 3400, Cherokee Drive, Vero Beach, Indian River County, Florida, 32960, United States"
+  },
+  "dubai international airport, dubai, united arab emirates": {
+    "lat": 25.251542,
+    "lon": 55.366652,
+    "display_name": "مطار دبي الدولي, شارع بيروت, محيصنة, دبي, الإمارات العربية المتحدة"
+  },
+  "baghdad, iraq": {
+    "lat": 33.30617,
+    "lon": 44.387221,
+    "display_name": "بغداد, بلدية المنطقة الخضراء, محافظة بغداد, العراق"
+  }
+}
