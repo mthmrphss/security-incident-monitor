@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "",
-    "total_incidents": 0,
+    "last_updated": "2026-03-16T16:33:00.625737+00:00",
+    "total_incidents": 9,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -18,5 +18,376 @@
       "low": "Minor incident / threat only"
     }
   },
-  "incidents": []
+  "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "city": "Dubai",
+      "location_detail": "near Dubai airport",
+      "airport_name": "Dubai Airport",
+      "airport_iata": "DXB",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "explosion",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_tr": "Dubai Havalimanı yakınlarında İran insansız hava aracı saldırısı sonrası büyük patlama meydana geldi.",
+      "summary_en": "A large explosion occurred near Dubai Airport following an Iranian drone attack.",
+      "source_articles": [
+        0
+      ],
+      "confidence": 0.95,
+      "data_quality": "medium",
+      "tags": [
+        "drone attack",
+        "explosion"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaEc1aGtSVndsNlNUNklTYkU4ZzV5MnY5MkNTLVFaUy1uSGpWcDFLeXN6bHhBTFJZTXlmMENqNDRhdGZNcWNMTjIyUlNtQ0NWYTJSY0tmOUthVWhJU3dacUhqaERsYkVyZ19YdlFKbzIyUHJPV0g3MW1xdDh6YmpOa0drNDRhamp0ZkZwbXV4TTR5bFl1ZWdaYXEwT05yUFAwN2phWWJyS2cteWFvSF9HR3ZyYy15VFVJS3dPNkZSUjFCMjZ5SXQ3eFdva2d4VkhI0gHWAUFVX3lxTE1OVDZuRmFZZ0JWSXpZNXJTZlQxc3Z3dnJ0QzB1cWxvdC1pZDg1ZmRIVUxFa0ZlZzFscm5zM3VmdWtZaU9xT1duSzQwRW92aVJUMXIwTDFwWU5DVVRlOEN0OUJtNUM2bzF0MFhfQVJSaHdzUjNiRWN1ZDB4NnE4NmdBNDdlY2tmb1VHdzh0emdCQmUzYmFTUXlxLUtHaGlBQVdYaTVjblB4aExBdjctd3MxMUI3TmRxTklPOFg4MFplaU5DOXB3Y19GcjNKb19UOHR2TjFEdkE?oc=5"
+      ],
+      "geo_lat": 25.074282,
+      "geo_lon": 55.188539,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "49d96a8e7567",
+      "created_at": "2026-03-16T16:33:00.625614+00:00",
+      "last_updated": "2026-03-16T16:33:00.625632+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "Baghdad airport",
+      "airport_name": "Baghdad Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Bağdat Havalimanı'ndaki saldırılar, IŞİD şüphelilerinin tutulduğu hapishaneyi tehdit ediyor.",
+      "summary_en": "Attacks at Baghdad Airport threaten a prison holding ISIS suspects.",
+      "source_articles": [
+        1
+      ],
+      "confidence": 0.85,
+      "data_quality": "low",
+      "tags": [
+        "attack",
+        "ISIS"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNOXFkVWRoMzhWSm1QRERyaml6SjViUmNwWVhQOXJDbGhySEtOZ2x0aVJTTlpMbDZvcFd5aHZDWlhibEY3WE1uRk1jQ1owMGlFcGhxUFFjaXVQQXY5ZDhzZkVWb0lUbDljZ1RZNzNvaS1NOG90c1BOTl9IN0xIdnprZnBxNHhyOXR4aE96V3p0U2VIR3VBdFQ4?oc=5"
+      ],
+      "geo_lat": 33.234216,
+      "geo_lon": 44.239916,
+      "verification_status": "auto",
+      "verification_score": 0.85,
+      "id": "29c6dde3e023",
+      "created_at": "2026-03-16T16:33:00.625649+00:00",
+      "last_updated": "2026-03-16T16:33:00.625652+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "United States",
+      "country_code": "US",
+      "city": "Savannah",
+      "location_detail": "Savannah/Hilton Head International Airport",
+      "airport_name": "Savannah/Hilton Head International Airport",
+      "airport_iata": "SAV",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Savannah/Hilton Head Uluslararası Havalimanı'na yapılan bomba tehdidi 'güvenilir değil' olarak açıklandı.",
+      "summary_en": "A bomb threat at Savannah/Hilton Head International Airport was deemed 'not credible'.",
+      "source_articles": [
+        2,
+        3,
+        4
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "bomb threat"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSlUwRV9tTE1OLVlqUHNQUmpaV1U4azJFRWh4dDB0UzRIMUZid1lIcG10Um1aV2pkbWdxQXZGN2plaVBPRmtiZ0ZPVXJCOTVsUEk4TFRFUnkxYXptTUxlUG1PcmItVXczdURWc3o5MFpGQ2NmY2p3c1hiQXlybkJhREtKZ1pxVlpMbjBjYzF3?oc=5",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZi13bGJkM1d0UTdqeWx3N2g5SGFfejNaUXhKVVRleml3T2xjUHE0V3Z5Wi0yLWpTYmhpYkVoallpS3RXQ3lxVjJCSFlrZWo0MXJQdGF0RGVxVk5lQjVYR1lMQTRody1TTmlodGJSRFNkaUNnYms0RF9qUE1IMW9uUmxB?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSDFDVmphN0dEYUh6eVlYRlRXSkg0cHpyRzVobjI2U3R1azJ4WUpMaXdmQnZpRG5tREd0VTlGMjg3V2dnbHhoYzFFeXBsWXhNYUxfVllRSzBjMDJsblRFR0JSUkVjd1VtaklaOGctbjAtcFNKMi1tc0dnWjhEd09UWWpWVGhDdDZiT0Y4cEFScFZ5b0EzQmE4QlRXYTdIdkNuQk04WDJEWXLSAa4BQVVfeXFMTWRyaVJ3VlFOeUgyaFFoY05SVEtTcDNucGt4WHZOVnNfQ01pMDdzaW12WmY5a3pHSldFWmpCbkYtMzE0Qmg3X1VHOTJzRlp3M3RiUXdpVmlGV0xqX1lvZVpiRHh2MXg2dlFKbnMwbmxXZ1EwbXJ2eW5ZZElPX29NdFBKM214RHZsR0NxZ3g5cVE2WWljdFdWMmxJeGswNHhpZnNnUkZJV1ctOWtnOWd3?oc=5"
+      ],
+      "geo_lat": 32.135511,
+      "geo_lon": -81.207608,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "dcc2070c83a3",
+      "created_at": "2026-03-16T16:33:00.625661+00:00",
+      "last_updated": "2026-03-16T16:33:00.625663+00:00",
+      "source_count": 3
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "Kuwait",
+      "country_code": "KW",
+      "city": "unknown",
+      "location_detail": "Kuwait airport",
+      "airport_name": "Kuwait airport",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Orta Doğu'daki savaşın 16. gününde Kuveyt Havalimanı saldırıya uğradı.",
+      "summary_en": "Kuwait Airport was attacked on the 16th day of the Middle East war.",
+      "source_articles": [
+        1
+      ],
+      "confidence": 0.8,
+      "data_quality": "low",
+      "tags": [
+        "war"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAJBVV95cUxPUnZOeFpTYlR1aWw2Z3V0VEtPS0d1NFI2SUJPbEVkV1dHMzBzeVNKTW5OUEJMcTJWZk5tWjBQamczSXJFbWNqdUw3T19wWVZVVkR0X3QxVlVpdHZFbTdZbDBWVzVDejJrV19lU01hU2hMMGNXNU96SUt6b0JfMk5aYzZybHR1dmhBcXVRcWpLTThZQXdjazJQNmpuTDZyNlkyYjl2bk5icUxkLWVUYnJYNDhOd05rZHBKZ1NWM1RsZTJ2VHlVc1ZpUnBUTzVYVjZsclU5Um9JSUdaVmNiWDhqYlVUT2JKT0JQeGlybE9RYjMxOGF6SC1BRmhud29sQWFl0gGGAkFVX3lxTE12c0JlLTBLODZhTmNIWTdKb1NmZ0dNa05ncTA0QTIxNXNhR3ZwRUZkZ3NzWFVlemdDdVhPS085UlRnZkFiOWNQR1M0ZjJBTG10RzV2clVWeXdIalJ5ZWlBZDFoOGN5WmltVzJHNHE2elNEQk5DdjlsSjZjZlBLeG50N2lsU0R0ckFRbEYyYVd4b3FQbGFDLUhTR0dkUWJGY2ZMT0FLTW1hRzdValhRWGlLeGpQY0NGMmFJZk1KR0V3RzBKODFtdGgwekZuZkNXQWRPTy14cG02Sk12cmVkaG10LXFjV2M3bkk5VFRaTTc5ZW0xTkNkNHVtNmlJNXdQWUNCS1Y4TXc?oc=5"
+      ],
+      "geo_lat": 29.307466,
+      "geo_lon": 47.962808,
+      "verification_status": "auto",
+      "verification_score": 0.8,
+      "id": "25362c034dce",
+      "created_at": "2026-03-16T16:33:00.625671+00:00",
+      "last_updated": "2026-03-16T16:33:00.625674+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "city": "Dubai",
+      "location_detail": "Dubai International Airport",
+      "airport_name": "Dubai International Airport",
+      "airport_iata": "DXB",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone attack",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Dubai Uluslararası Havalimanı'na yıkıcı bir drone saldırısı düzenlendi, yangın çıktı.",
+      "summary_en": "Dubai International Airport was struck by a devastating drone attack, causing a fire.",
+      "source_articles": [
+        4
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "drone attack",
+        "fire"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisAJBVV95cUxQQUhMVC1IbGlGVjdVNk5zMUJYa0hRRGRpb3Z6VENvZE5ZaE0wR0ppT1g3a3hYV1ZKQWRLOTFQQ0lxT3N6aFhyWkVMVVk0aFd4X3hLXzNGWi11Y2E0Q1FpYmQxcjhKc1c3VmNtUm8xQjFwWWFFY2MxSXhCSV82cVFzdjV4S01lUmFRZ1NVS1JvOGJjWjJrRTBueGpYLVFCbzN5QzVWdnZ0dDVtSmNqLTFkNWhUdWEwQ3RtYXEwUUk1enJjSmQ0ZUFYUEd4c1FxWUZnRDFLQ1laSVpkckNfaXFmUzNGNk5ya2l6M3pVZU9PanFLUG5RS0w3NVFpRmpOS1dadXRRbEtzQmNPN1RJaGFxMzdLWG9kVExNMlhrLUsyT3hscmZoME43elp1U1JDNjB5?oc=5"
+      ],
+      "geo_lat": 25.074282,
+      "geo_lon": 55.188539,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "49d96a8e7567",
+      "created_at": "2026-03-16T16:33:00.625682+00:00",
+      "last_updated": "2026-03-16T16:33:00.625685+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "United States",
+      "country_code": "US",
+      "city": "Vero Beach",
+      "location_detail": "Vero Beach Airport",
+      "airport_name": "Vero Beach Airport",
+      "airport_iata": "VRB",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Boston'dan Vero Beach'e giden bir JetBlue uçağına bomba tehdidi yapıldı, uçak arandı.",
+      "summary_en": "A bomb threat was made to a JetBlue flight from Boston to Vero Beach, the plane was searched.",
+      "source_articles": [
+        0,
+        3
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "bomb threat"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNbFR2WlZXTENQZm9iZHBhMmVSeEtNbUx5Z0ktU2x5NUU2VVZuVHFGSC01MFFuQ3hJeWliRWtGNzRja1pXR3pUamktNXFTS0JkTDVhcXVYSFhWZlB6TTFuclNwSzhBNlJ0Um9mTm1XcVlSZVB5Wk9ZZnNKMjJwZnRWY2tJV1ktcXJwNFdJTXZ4MkhYT2pOUnY3cnV6RlkxM0JXQW80MHZRZFYyaTNRSmFxRGQ5VmRkdFMwcFdydm50NDF6cUNLUk1TLUpkT18wekpnTWR6UGpJQVUzQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcm01QW04SXhmQzMtVnJucTJ1alUxZlh1WW1fSnJrZ3ZiaGo2X0E1YWxmbk5Qd3RkcGg4TTlsRi1ZdFRLU3lxNy04OUhtLUlVTHgtRXpORmdGbHJzZHU0YVVKV0FQdExoM1dET2VfVkZwRkNMdURWTmlSNEh3bzFrVjZCTnBjYTFMQkRtRnhrZEZnd0luZXZJOUZWQm9zMnNzOGFIZVFwcXpPMXZSMVl5UzdiVXE?oc=5"
+      ],
+      "geo_lat": 27.657215,
+      "geo_lon": -80.41833,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "26d68531c58c",
+      "created_at": "2026-03-16T16:33:00.625693+00:00",
+      "last_updated": "2026-03-16T16:33:00.625696+00:00",
+      "source_count": 2
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": "unknown",
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "city": "Dubai",
+      "location_detail": "near Dubai International Airport",
+      "airport_name": "Dubai International Airport",
+      "airport_iata": "DXB",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_tr": "İran'ın Dubai Uluslararası Havalimanı yakınına drone ile saldırması sonucu yakıt tankı vuruldu, bazı uçuşlar etkilendi.",
+      "summary_en": "Iran attacked near Dubai International Airport with a drone, hitting a fuel tank and affecting some flights.",
+      "source_articles": [
+        2,
+        3,
+        4
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "drone attack",
+        "airport"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVnRmZjNmVGxnX2U3aHhaTGFFakljU25PVGRlUW8xLTZUdUxhSUszS3VmM0huQWxlNTg5U3VGVTVJRHhBal82MnM1RFBib21WT2VmRlRaZHp2X1Z6MWRQalBWT3FMYU9sN21WUE1oM3pUNHpyc2lFd3luRHJNYzMza2NPMTVoYzA?oc=5",
+        "https://news.google.com/rss/articles/CBMigAJBVV95cUxPcG1vQXpvak5yUG5MZVBFQlZMVEZBWmRrdkhZMGp5SGNGdG5EekNOdlU0Q0hhSVB6UXhfWFl1aU1ZeVZzdnJ1ak9xbWFHWkJvSHRUUF91VFdUQ3dzNGxSdngxc2d1cDhRMlpzcUhoU1BRMHdjakh6VjJWU3J2QWVMbzgyUXplcFhTd250UU1QLUpkaFVBd1BTdWRhRlZLaFQ2dFVVQ1Yyb3pNYWZtaUJqYWNmcVhfeGMzZzB4UHVoS2JULTNnMjhfZ09pcllDR0xsaGF0QVZhbW8yTWRFSGVSc2hUZVRjVHVTRU9XbjRyRDdWQ3FWTWxwcy1ETld4a3Fk0gGGAkFVX3lxTE1KN1dLcVE2RzBFOEI3Umw5Ym5pdThaeVhuTGwwLUNuRWdsdlRESmNHV204VkM2SW1DamJsTnhkS2JDU0JQcWEycDlmbEQxMEx2a2RVa0xQdDhsejBpS3JkUHRZc18wb3F1LVJueWxGMEpJNTJhTzcxdVZtdnlpNHdPRlo3ekIwYkRralF2X0o3aTVLckZkMktmUzJjTjhRc2RNMTdkbnVkOFZDRWhqMFgtcXJSVlpQc3JTYUFXOG8wOTZlMHFFOW5zbjJlU29qLVlSTTFKcW1adHBfOFNJdXgxdWdYVjgtQ0NLR0hrMS1jSHMteUdPWHZwV0FRV0hPOU5YMzFURHc?oc=5",
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaVJwQW5vQnBBSl9vM1Aza0lWTjVuR25mbVlpbGp2Y0RQZFJuaWw2dDRQOU1wc0FmR3NaSllmcENaX3gyY01PZkFxRVpqUWYzZVdVQkxGaFVIdFZPMG1VRGFOeEtqWlE4S0x2NUFOMWVfekl1LW5RU3M3MHlxQmJZMC14Z2xJblN5VnRMNVpQNmRoaE5nQThWVS1EaldBWDRVUDZxaWo0V0xzUHA5dk1nRlNvQ002Vk0taE9NckYwVWJCdFBPcTBZUnAzc2xoYXhRTGxZR2xuTdIB3AFBVV95cUxNMEFvbmJjM3BpaTAzZGNiS1Y2emN4Q2FyOW5WeThRci12OVJzUmh6NXRqalhWSUs3R1FUSzh0RllkXzVIZmRMYURLeTAwSXpSTElDV3FhT0NCRTVPUDl5N1M2M2UxQUQzQVZqakw5X0tKOWptSWNONGpnR29YLTNnazBFUHlNNWdyUXF2V3pPdDc0cFhsWTlfdHNaOHEydGhHYWFJdktEWlExaHdVVWNwNVMxTDV3TTZaV1JqMDhYc0hYSVRDVkZyRVZsblRoM1l1QjBEZ0tWdWZzYmxo?oc=5"
+      ],
+      "geo_lat": 25.074282,
+      "geo_lon": 55.188539,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "49d96a8e7567",
+      "created_at": "2026-03-16T16:33:00.625703+00:00",
+      "last_updated": "2026-03-16T16:33:00.625706+00:00",
+      "source_count": 3
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "near Baghdad International Airport, Victory base",
+      "airport_name": "Baghdad International Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "Victory base",
+      "attack_type": "other",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_tr": "İran, Irak'taki Bağdat Uluslararası Havalimanı yakınlarındaki ABD'ye ait Victory üssüne saldırdı.",
+      "summary_en": "Iran attacked the US-owned Victory base near Baghdad International Airport in Iraq.",
+      "source_articles": [
+        4
+      ],
+      "confidence": 0.95,
+      "data_quality": "medium",
+      "tags": [
+        "military base"
+      ],
+      "source_urls": [
+        "https://x.com/haskologlu/status/2032916221121671462#m"
+      ],
+      "geo_lat": 33.246052,
+      "geo_lon": 44.2162,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "29c6dde3e023",
+      "created_at": "2026-03-16T16:33:00.625717+00:00",
+      "last_updated": "2026-03-16T16:33:00.625721+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "unknown",
+      "year": 2025,
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "city": "Dubai",
+      "location_detail": "near Dubai International Airport, fuel tank",
+      "airport_name": "Dubai International Airport",
+      "airport_iata": "DXB",
+      "hotel_name": null,
+      "venue_name": "fuel storage area",
+      "attack_type": "explosion",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_tr": "Dubai Uluslararası Havalimanı yakıt depolama alanına yapılan İran saldırısı yangına yol açtı.",
+      "summary_en": "An Iranian attack on the fuel storage area of Dubai International Airport caused a fire.",
+      "source_articles": [
+        1,
+        2,
+        3
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "fuel tank",
+        "fire"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxQU2ZRQThNVmZBZXMyczBMcjBpVm5aYlNCWEZhMnFGLVQ1TzhUc2c0OTg0VUItWFlwTk03YWt2aUtldmtZeWhVdi15bU5rRC1OMGlNbnp6QUNvNWE1T3JzNW1ZSERpeXpIbHJCVXg1VmYzelNPRGdQS0F3Um5lVlVUZVpMS2dKaHRoQXlCT3ZzeXdpS1QxY0xuRE0zRC1VVlJhMWVHLXB4ZlNSekxGNmN5RlRR0gGyAUFVX3lxTFBTZlFBOE1WZkFlczJzMExyMGlWblpiU0JYRmEycUYtVDVPOFRzZzQ5ODRVQi1YWXBOTTdha3ZpS2V2a1l5aFV2LXltTmtELU4waU1uenpBQ281YTVPcnM1bVlIRGl5ekhsckJVeDVWZjN6U09EZ1BLQXdSbmVWVVRlWkxLZ0podGhBeUJPdnN5d2lLVDFjTG5ETTNELVVWUmExZUctcHhmU1J6TEY2Y3lGVFE?oc=5",
+        "https://www.bbc.com/news/articles/crl4gxgkkylo?at_medium=RSS&at_campaign=rss",
+        "https://x.com/ww3mediaa/status/2033575347866706393#m"
+      ],
+      "geo_lat": 25.074282,
+      "geo_lon": 55.188539,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "49d96a8e7567",
+      "created_at": "2026-03-16T16:33:00.625729+00:00",
+      "last_updated": "2026-03-16T16:33:00.625732+00:00",
+      "source_count": 3
+    }
+  ]
 }
