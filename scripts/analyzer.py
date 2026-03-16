@@ -18,8 +18,8 @@ class GeminiAnalyzer:
 
         # ── Birden fazla model — biri doluysa diğerini dene ──
         self._model_names = [
-            "gemini-2.0-flash-lite",    # 4K RPM, Unlimited RPD
-            "gemini-2.0-flash",         # 2K RPM, Unlimited RPD
+            "gemini-2.5-flash-lite",    # 4K RPM, Unlimited RPD, en ucuz
+            "gemini-2.0-flash",         # 2K RPM, Unlimited RPD, yedek
         ]
 
         self._models = {}
