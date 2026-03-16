@@ -18,9 +18,8 @@ class GeminiAnalyzer:
 
         # ── Birden fazla model — biri doluysa diğerini dene ──
         self._model_names = [
-            "gemini-2.0-flash-lite",    # En hafif, ayrı kota havuzu
-            "gemini-2.0-flash",         # Ana model
-            "gemini-1.5-flash",         # Eski ama stabil
+            "gemini-2.0-flash",
+            "gemini-1.5-flash",
         ]
 
         self._models = {}
