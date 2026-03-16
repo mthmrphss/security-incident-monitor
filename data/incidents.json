@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "project": "Security Incident Monitor",
+    "description": "Airport attacks, airline personnel incidents, hotel attacks database",
+    "version": "2.0",
+    "created_at": "",
+    "last_updated": "",
+    "total_incidents": 0,
+    "categories": {
+      "AIRPORT_ATTACK": "Physical attacks on airports",
+      "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
+      "HOTEL_ATTACK": "Physical attacks on hotels"
+    },
+    "severity_levels": {
+      "critical": "Mass casualties / large-scale attack",
+      "high": "Deaths or serious injuries",
+      "medium": "Injuries or serious threat",
+      "low": "Minor incident / threat only"
+    }
+  },
+  "incidents": []
+}

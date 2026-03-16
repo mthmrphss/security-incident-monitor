@@ -1,0 +1,43 @@
+name: "Security Incident Monitor"
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        run: python scripts/main.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Commit results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Incident Monitor Bot"
+          git add data/
+          git diff --staged --quiet || \
+            git commit -m "update incidents $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
