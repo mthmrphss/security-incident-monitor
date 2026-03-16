@@ -43,7 +43,7 @@ class NewsCollector:
     def collect_all(self) -> List[Dict]:
         articles = []
         articles.extend(self._collect_rss())
-        articles.extend(self._collect_reddit())
+        # articles.extend(self._collect_reddit())
         articles.extend(self._collect_gdelt())
         articles.extend(self._collect_nitter())
 
