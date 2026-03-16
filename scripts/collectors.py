@@ -349,34 +349,105 @@ class NewsCollector:
         logger.info(f"  Nitter total: {len(articles)}")
         return articles
 
-    # ══════════════════════════════════════
+        # ══════════════════════════════════════════
     # KEYWORD FILTER
-    # ══════════════════════════════════════
+    # ══════════════════════════════════════════
 
     def keyword_filter(self, articles: List[Dict]) -> List[Dict]:
+        """
+        2 katmanlı filtre:
+          Katman 1 — Konu kelimesi var mı? (airport, hotel, airline, crew...)
+          Katman 2 — Olay kelimesi var mı? (attack, bomb, shoot, assault...)
+          İkisi de varsa → geçir
+        """
+
+        # ── KONU KELİMELERİ (en az 1 tanesi olmalı) ──
+        TOPIC_WORDS = {
+            "airport", "airfield", "aerodrome", "terminal",
+            "airline", "airways", "aviation",
+            "flight attendant", "cabin crew", "air hostess",
+            "stewardess", "pilot", "copilot", "co-pilot",
+            "aircrew", "air crew", "ground crew", "ground staff",
+            "hotel", "motel", "resort", "hostel", "inn",
+            "lodging", "accommodation",
+            "havalimanı", "havaalani", "havayolu",
+            "kabin ekibi", "hostes", "pilot",
+            "otel", "tatil köyü",
+            "aéroport", "hôtel",
+            "flughafen",
+            "aeropuerto",
+        }
+
+        # ── OLAY KELİMELERİ (en az 1 tanesi olmalı) ──
+        EVENT_WORDS = {
+            "attack", "attacked", "attacker",
+            "bomb", "bombing", "bombed", "bomber",
+            "shoot", "shooting", "shot", "gunfire", "gunman",
+            "explo", "explosion", "explode", "exploded",
+            "stab", "stabbing", "stabbed", "knife",
+            "assault", "assaulted",
+            "terror", "terrorist", "terrorism",
+            "siege", "hostage",
+            "kill", "killed", "dead", "death", "died",
+            "injur", "injured", "wound", "wounded",
+            "threat", "threaten",
+            "armed", "weapon", "gun", "firearm", "rifle",
+            "punch", "punched", "hit", "slap", "slapped",
+            "violent", "violence",
+            "arson", "fire set", "set fire",
+            "raid", "raided", "storm", "stormed",
+            "detonate", "detonated", "detonation",
+            "suicide", "martyr",
+            "saldırı", "saldırıldı", "saldırgan",
+            "bomba", "bombalı", "bombalandı",
+            "patlama", "patladı",
+            "bıçak", "bıçaklandı", "bıçaklı",
+            "silahlı", "silah", "ateş açıldı",
+            "terör", "terörist",
+            "rehine", "rehin",
+            "öldürüldü", "öldü", "ölü",
+            "yaralı", "yaralandı",
+            "darp", "darp edildi", "saldırdı",
+            "baskın",
+        }
+
         filtered = []
 
         for article in articles:
             text = f"{article.get('title', '')} {article.get('summary', '')}".lower()
 
+            # Negatif keyword kontrolü
             has_negative = any(neg in text for neg in self.negative_keywords)
+            if has_negative:
+                # Negatif varsa çok güçlü eşleşme gerekli
+                min_topic = 1
+                min_event = 2
+            else:
+                min_topic = 1
+                min_event = 1
 
-            match_score = 0
-            matched = []
-            for kw in self.keywords:
-                if kw in text:
-                    match_score += 1
-                    matched.append(kw)
+            # Konu kelimesi ara
+            topic_matches = []
+            for tw in TOPIC_WORDS:
+                if tw in text:
+                    topic_matches.append(tw)
 
-            if match_score > 0 and not has_negative:
-                article["keyword_score"] = match_score
-                article["matched_keywords"] = matched
+            # Olay kelimesi ara
+            event_matches = []
+            for ew in EVENT_WORDS:
+                if ew in text:
+                    event_matches.append(ew)
+
+            # Karar
+            if len(topic_matches) >= min_topic and len(event_matches) >= min_event:
+                article["keyword_score"] = len(topic_matches) + len(event_matches)
+                article["topic_matches"] = topic_matches[:5]
+                article["event_matches"] = event_matches[:5]
+                article["has_negative_keyword"] = has_negative
                 filtered.append(article)
-            elif match_score >= 2 and has_negative:
-                article["keyword_score"] = match_score
-                article["matched_keywords"] = matched
-                article["has_negative_keyword"] = True
-                filtered.append(article)
+
+        # Skora göre sırala (en yüksek önce)
+        filtered.sort(key=lambda x: x.get("keyword_score", 0), reverse=True)
 
         return filtered
 
