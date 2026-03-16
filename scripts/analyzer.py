@@ -175,6 +175,8 @@ RULES:
 - Merge same event from multiple articles into ONE single incident.
 - SAME airport + SAME country = SAME event, merge them.
 - SAME hotel + SAME country = SAME event, merge them.
+- BUT if SAME location has MULTIPLE DIFFERENT attacks on same day, keep them SEPARATE.
+- Different attack types at same location = DIFFERENT incidents.
 - If NO real incidents, return {{"incidents": []}}
 - confidence must be >= 0.7"""
 
