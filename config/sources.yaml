@@ -195,12 +195,16 @@ nitter:
       category: "general"
       description: "World War 3 Media - conflict news"
 
-    - handle: "BNONews"
+    - handle: "conflicttr"
       category: "general"
-      description: "Breaking News alerts"
+      description: "Conflict alerts"
 
     - handle: "haskologlu"
       category: "general"
       description: "Breaking news alerts"
+
+      - handle: "clashreport"
+      category: "general"
+      description: "Clash Report - conflict news
 
    
