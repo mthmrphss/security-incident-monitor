@@ -38,7 +38,7 @@ class GeminiAnalyzer:
                 logger.warning(f"Model {name} init failed: {e}")
 
         self._last_request_time = 0
-        self._min_interval = 8
+        self._min_interval = 2
         self._max_retries = 3
 
     # ═══════════════════════════════════════
