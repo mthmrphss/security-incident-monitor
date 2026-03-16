@@ -1,177 +1,136 @@
-keywords:
-  english:
-    - "airport attack"
-    - "airport shooting"
-    - "airport bombing"
-    - "airport stabbing"
-    - "airport security breach"
-    - "airport threat"
-    - "airport explosion"
-    - "airport terror"
-    - "airline crew attack"
-    - "airline staff assault"
-    - "flight attendant attack"
-    - "flight attendant assault"
-    - "pilot assault"
-    - "pilot attacked"
-    - "airline personnel attack"
-    - "ground crew attack"
-    - "hotel attack"
-    - "hotel bombing"
-    - "hotel shooting"
-    - "hotel siege"
-    - "hotel explosion"
-    - "hotel terror"
-    - "resort attack"
-    - "tourist hotel attack"
-    - "hostage hotel"
-    - "aviation security incident"
-    - "passenger attack crew"
-    - "unruly passenger assault"
-    - "airline worker attacked"
-    - "airport gunfire"
-    - "airport knife"
-    - "hotel gunfire"
-    - "hotel armed"
+import os
+import sys
+import time
+import logging
+from datetime import datetime, timezone
 
-  turkish:
-    - "havalimanı saldırı"
-    - "havalimanı bomba"
-    - "havalimanı bıçak"
-    - "havalimanı patlama"
-    - "havayolu personel saldırı"
-    - "kabin ekibi saldırı"
-    - "pilot saldırı"
-    - "hostes saldırı"
-    - "otel saldırı"
-    - "otel bomba"
-    - "otel patlama"
-    - "otel silahlı"
-    - "otel baskın"
-    - "otel rehine"
-    - "yer hizmetleri saldırı"
-    - "havalimanı silahlı"
-    - "havalimanı terör"
-    - "otel terör"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-  french:
-    - "attaque aéroport"
-    - "attentat hôtel"
-    - "agression personnel aérien"
-    - "fusillade aéroport"
-    - "bombe hôtel"
+from collectors import NewsCollector
+from analyzer import GeminiAnalyzer
+from geocoder import GeocoderService
+from storage import IncidentStorage
 
-  german:
-    - "Flughafen Angriff"
-    - "Hotel Angriff"
-    - "Airline Personal Angriff"
-    - "Flughafen Schießerei"
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger("Main")
 
-  spanish:
-    - "ataque aeropuerto"
-    - "ataque hotel"
-    - "agresión personal aéreo"
-    - "tiroteo aeropuerto"
-    - "bomba hotel"
 
-  arabic_translit:
-    - "airport hujum"
-    - "hotel hujum"
-    - "matar hujum"
+def build_geocode_query(incident):
+    parts = []
+    for field in ["venue_name", "airport_name", "hotel_name"]:
+        val = incident.get(field)
+        if val and val not in ("unknown", "null", "", None):
+            parts.append(val)
+            break
+    for field in ["city", "country"]:
+        val = incident.get(field)
+        if val and val not in ("unknown", "null", "", None):
+            parts.append(val)
+    return ", ".join(parts)
 
-negative_keywords:
-  - "stock market"
-  - "shares"
-  - "investment"
-  - "movie"
-  - "film"
-  - "book review"
-  - "novel"
-  - "video game"
-  - "game release"
-  - "anniversary of"
-  - "years ago today"
-  - "remembering the"
-  - "memorial"
-  - "commemoration"
-  - "drill exercise"
-  - "simulation"
-  - "training exercise"
-  - "new security system"
-  - "security upgrade"
-  - "security technology"
-  - "strike action"
-  - "labor dispute"
-  - "walkout"
-  - "pay dispute"
-  - "delayed flight"
-  - "cancelled flight"
-  - "weather delay"
-  - "hotel review"
-  - "hotel rating"
-  - "star hotel"
-  - "tourism record"
-  - "travel tips"
-  - "booking"
-  - "reservation"
-  - "renovation"
-  - "grand opening"
 
-rss_feeds:
-  - name: "Google News - Airport Attack"
-    url: "https://news.google.com/rss/search?q=airport+attack+OR+airport+shooting+OR+airport+bombing&hl=en&gl=US&ceid=US:en"
-    category: "airport"
+def main():
+    logger.info("=" * 60)
+    logger.info("SECURITY INCIDENT MONITOR v2.0")
+    logger.info("=" * 60)
 
-  - name: "Google News - Hotel Attack"
-    url: "https://news.google.com/rss/search?q=hotel+attack+OR+hotel+bombing+OR+hotel+shooting+OR+hotel+siege&hl=en&gl=US&ceid=US:en"
-    category: "hotel"
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    if not gemini_key:
+        logger.error("GEMINI_API_KEY not found in environment")
+        sys.exit(1)
 
-  - name: "Google News - Airline Crew"
-    url: "https://news.google.com/rss/search?q=airline+crew+attack+OR+flight+attendant+assault+OR+pilot+attacked&hl=en&gl=US&ceid=US:en"
-    category: "airline_personnel"
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    config_path = os.path.join(root, "config", "sources.yaml")
+    data_dir = os.path.join(root, "data")
+    os.makedirs(data_dir, exist_ok=True)
 
-  - name: "Google News - Aviation Security"
-    url: "https://news.google.com/rss/search?q=aviation+security+incident+OR+airport+security+threat&hl=en&gl=US&ceid=US:en"
-    category: "airport"
+    collector = NewsCollector(config_path)
+    analyzer = GeminiAnalyzer(gemini_key)
+    geocoder = GeocoderService(data_dir)
+    storage = IncidentStorage(data_dir)
 
-  - name: "Google News TR - Havalimanı"
-    url: "https://news.google.com/rss/search?q=havalimanı+saldırı+OR+havalimanı+bomba+OR+havalimanı+terör&hl=tr&gl=TR&ceid=TR:tr"
-    category: "airport"
+    # 1 — COLLECT
+    logger.info("PHASE 1: Collecting from all sources...")
+    raw = collector.collect_all()
+    logger.info(f"  Raw articles: {len(raw)}")
 
-  - name: "Google News TR - Otel"
-    url: "https://news.google.com/rss/search?q=otel+saldırı+OR+otel+bomba+OR+otel+baskın&hl=tr&gl=TR&ceid=TR:tr"
-    category: "hotel"
+    # 2 — KEYWORD FILTER
+    logger.info("PHASE 2: Keyword filtering...")
+    filtered = collector.keyword_filter(raw)
+    logger.info(f"  After keyword filter: {len(filtered)}")
 
-  - name: "Google News TR - Personel"
-    url: "https://news.google.com/rss/search?q=kabin+ekibi+saldırı+OR+hostes+saldırı+OR+pilot+saldırı&hl=tr&gl=TR&ceid=TR:tr"
-    category: "airline_personnel"
+    # 3 — URL DEDUP
+    logger.info("PHASE 3: URL dedup...")
+    new_articles = storage.filter_processed(filtered)
+    logger.info(f"  New articles: {len(new_articles)}")
 
-  - name: "BBC World News"
-    url: "http://feeds.bbci.co.uk/news/world/rss.xml"
-    category: "general"
+    if not new_articles:
+        logger.info("No new articles found. Done.")
+        return
 
-  - name: "Al Jazeera English"
-    url: "https://www.aljazeera.com/xml/rss/all.xml"
-    category: "general"
+    # 4 — AI ANALYSIS (batched)
+    logger.info("PHASE 4: AI analysis (3-stage pipeline)...")
+    all_incidents = []
+    batch_size = 8
 
-  - name: "Security Week"
-    url: "https://www.securityweek.com/feed/"
-    category: "security"
+    for i in range(0, len(new_articles), batch_size):
+        batch = new_articles[i : i + batch_size]
+        batch_num = i // batch_size + 1
+        total_batches = (len(new_articles) + batch_size - 1) // batch_size
+        logger.info(f"  Batch {batch_num}/{total_batches} ({len(batch)} articles)")
 
-reddit:
-  subreddits:
-    - name: "worldnews"
-      search_queries:
-        - "airport attack"
-        - "hotel bombing"
-        - "airline crew assault"
-    - name: "news"
-      search_queries:
-        - "airport shooting"
-        - "hotel attack"
-        - "flight attendant attacked"
-    - name: "aviation"
-      search_queries:
-        - "security incident"
-        - "crew attack"
-        - "airport threat"
+        try:
+            incidents = analyzer.analyze_batch(batch)
+            all_incidents.extend(incidents)
+            logger.info(f"    Found {len(incidents)} incidents")
+        except Exception as e:
+            logger.error(f"    Batch error: {e}")
+
+        if i + batch_size < len(new_articles):
+            logger.info("    Waiting 15s for rate limit...")
+            time.sleep(15)
+
+    logger.info(f"  Total incidents detected: {len(all_incidents)}")
+
+    # 5 — GEOCODING
+    if all_incidents:
+        logger.info("PHASE 5: Geocoding...")
+        for inc in all_incidents:
+            if not inc.get("geo_lat"):
+                query = build_geocode_query(inc)
+                if query:
+                    coords = geocoder.geocode(query)
+                    if coords:
+                        inc["geo_lat"] = coords["lat"]
+                        inc["geo_lon"] = coords["lon"]
+                        logger.info(f"    {query} -> ({coords['lat']}, {coords['lon']})")
+
+    # 6 — SAVE (with smart dedup)
+    if all_incidents:
+        logger.info("PHASE 6: Saving with smart dedup...")
+        added = storage.save_incidents(all_incidents)
+        logger.info(f"  New incidents saved: {added}")
+
+    # Mark URLs as processed
+    urls = [a.get("url", "") for a in new_articles if a.get("url")]
+    storage.mark_processed(urls)
+
+    # 7 — SUMMARY
+    stats = storage.get_stats()
+    logger.info("=" * 60)
+    logger.info("SUMMARY")
+    logger.info(f"  Total incidents : {stats['total']}")
+    logger.info(f"  Airport attacks : {stats['airport']}")
+    logger.info(f"  Hotel attacks   : {stats['hotel']}")
+    logger.info(f"  Personnel       : {stats['airline_personnel']}")
+    logger.info(f"  Countries       : {stats['countries']}")
+    logger.info(f"  Verified        : {stats['verified']}")
+    logger.info("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
