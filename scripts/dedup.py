@@ -9,7 +9,7 @@ logger = logging.getLogger("Dedup")
 
 class SmartDeduplicator:
 
-    SIMILARITY_THRESHOLD = 0.65
+    SIMILARITY_THRESHOLD = 0.50
 
     LOCATION_ALIASES = {
         "istanbul": ["ist", "konstantinopol", "constantinople"],
@@ -85,12 +85,42 @@ class SmartDeduplicator:
     # ═══════════════════════════════════════
 
     def _event_similarity(self, a: Dict, b: Dict) -> float:
+        # ── KISA DEVRE: Aynı IATA kodu + aynı ülke = KESİN aynı olay ──
+        iata1 = (a.get("airport_iata") or "").upper().strip()
+        iata2 = (b.get("airport_iata") or "").upper().strip()
+        if (
+            iata1 and iata2
+            and iata1 == iata2
+            and iata1 not in ("", "UNKNOWN", "NULL")
+            and a.get("incident_type") == b.get("incident_type")
+        ):
+            # Aynı havalimanı + aynı olay tipi → tarih kontrolü yap
+            date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
+            if date_sim >= 0.3:  # Aynı hafta içinde veya ikisi de unknown
+                logger.info(f"  IATA match: {iata1} — auto-merge")
+                return 1.0
+
+        # ── KISA DEVRE: Aynı otel adı + aynı ülke = KESİN aynı olay ──
+        hotel1 = (a.get("hotel_name") or "").lower().strip()
+        hotel2 = (b.get("hotel_name") or "").lower().strip()
+        if (
+            hotel1 and hotel2
+            and hotel1 not in ("unknown", "null", "")
+            and hotel2 not in ("unknown", "null", "")
+            and SequenceMatcher(None, hotel1, hotel2).ratio() > 0.6
+            and a.get("incident_type") == b.get("incident_type")
+        ):
+            logger.info(f"  Hotel match: {hotel1} — auto-merge")
+            return 1.0
+
+        # ── NORMAL BENZERLİK HESABI ──
         date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
         loc_sim = self._location_similarity(a, b)
-        type_sim = 1.0 if a.get("incident_type") == b.get("incident_type") else 0.2
+        type_sim = 1.0 if a.get("incident_type") == b.get("incident_type") else 0.1
         text_sim = self._text_similarity(a, b)
 
-        return date_sim * 0.25 + loc_sim * 0.25 + type_sim * 0.15 + text_sim * 0.35
+        # Konum ağırlığını artır
+        return date_sim * 0.20 + loc_sim * 0.35 + type_sim * 0.10 + text_sim * 0.35
 
     def _date_similarity(self, d1: str, d2: str) -> float:
         try:
