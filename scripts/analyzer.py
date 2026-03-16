@@ -1,3 +1,5 @@
+# scripts/analyzer.py
+
 import json
 import time
 import logging
@@ -31,6 +33,78 @@ class GeminiAnalyzer:
                 "response_mime_type": "application/json",
             },
         )
+
+        # ── RATE LIMIT AYARLARI ──
+        self._last_request_time = 0
+        self._min_interval = 6       # İstekler arası minimum 6 saniye
+        self._retry_base_wait = 30   # 429 hatası sonrası bekleme (saniye)
+        self._max_retries = 4        # Maksimum deneme
+
+    # ═══════════════════════════════════════
+    # RATE LIMITER
+    # ═══════════════════════════════════════
+
+    def _wait_for_rate_limit(self):
+        """İstekler arası minimum süreyi garantile."""
+        now = time.time()
+        elapsed = now - self._last_request_time
+        if elapsed < self._min_interval:
+            wait = self._min_interval - elapsed
+            logger.info(f"      ⏳ Rate limit: {wait:.1f}s bekleniyor...")
+            time.sleep(wait)
+        self._last_request_time = time.time()
+
+    def _safe_generate(self, model, prompt: str, label: str = "") -> dict:
+        """
+        Rate-limit korumalı API çağrısı.
+        429 hatalarında otomatik bekleyip tekrar dener.
+        """
+        for attempt in range(self._max_retries):
+            try:
+                self._wait_for_rate_limit()
+
+                logger.info(f"      🤖 API call: {label} (attempt {attempt+1})")
+                response = model.generate_content(prompt)
+
+                if not response.text:
+                    logger.warning(f"      Empty response for {label}")
+                    return {}
+
+                self._last_request_time = time.time()
+                return json.loads(response.text)
+
+            except Exception as e:
+                error_str = str(e)
+
+                if "429" in error_str or "quota" in error_str.lower() or "rate" in error_str.lower():
+                    # ── RATE LIMIT HATASI ──
+                    # Hata mesajından bekleme süresini çıkarmaya çalış
+                    wait = self._retry_base_wait * (attempt + 1)
+
+                    # "retry in XX.XXs" varsa onu kullan
+                    import re
+                    retry_match = re.search(r"retry in (\d+\.?\d*)", error_str.lower())
+                    if retry_match:
+                        wait = max(float(retry_match.group(1)) + 5, wait)
+
+                    logger.warning(
+                        f"      ⚠️ Rate limit! {wait:.0f}s bekleniyor... "
+                        f"(attempt {attempt+1}/{self._max_retries})"
+                    )
+                    time.sleep(wait)
+
+                elif "json" in error_str.lower() or "parse" in error_str.lower():
+                    logger.warning(f"      JSON parse error: {e}")
+                    if attempt < self._max_retries - 1:
+                        time.sleep(10)
+
+                else:
+                    logger.error(f"      API error: {e}")
+                    if attempt < self._max_retries - 1:
+                        time.sleep(15)
+
+        logger.error(f"      ❌ {label}: All {self._max_retries} attempts failed")
+        return {}
 
     # ═══════════════════════════════════════
     # MAIN PIPELINE
@@ -83,7 +157,6 @@ NOT RELEVANT — FILTER OUT:
 - Aircraft accidents, technical failures
 - Hotel fires (unless arson attack)
 - Hotel theft, fraud
-- Hijacking (unless physical crew assault)
 - Movies, books, documentaries about attacks
 - Anniversary/memorial articles about PAST events
 - Security technology/product news
@@ -108,10 +181,7 @@ FEW-SHOT EXAMPLES:
 → relevant: false, reason: "labor strike, not an attack"
 
 "Anniversary of 2016 Istanbul airport attack"
-→ relevant: false, reason: "memorial of past event, not new incident"
-
-"Hotel & Resort industry reports record tourism"
-→ relevant: false, reason: "tourism statistics"
+→ relevant: false, reason: "memorial of past event"
 
 ARTICLES TO CLASSIFY:
 
@@ -132,28 +202,26 @@ Return JSON:
 
 If confidence < 0.7, set relevant to false."""
 
-        try:
-            response = self.model.generate_content(prompt)
-            result = json.loads(response.text)
+        result = self._safe_generate(self.model, prompt, "Stage1-Classify")
 
-            relevant = []
-            for cl in result.get("classifications", []):
-                idx = cl.get("index", -1)
-                if (
-                    cl.get("relevant") is True
-                    and cl.get("confidence", 0) >= 0.7
-                    and 0 <= idx < len(articles)
-                ):
-                    art = articles[idx].copy()
-                    art["ai_category"] = cl.get("category")
-                    art["ai_confidence"] = cl.get("confidence")
-                    art["ai_reason"] = cl.get("reason", "")
-                    relevant.append(art)
-            return relevant
+        if not result:
+            return articles  # Fallback: hepsini geçir
 
-        except Exception as e:
-            logger.error(f"Stage 1 error: {e}")
-            return articles
+        relevant = []
+        for cl in result.get("classifications", []):
+            idx = cl.get("index", -1)
+            if (
+                cl.get("relevant") is True
+                and cl.get("confidence", 0) >= 0.7
+                and 0 <= idx < len(articles)
+            ):
+                art = articles[idx].copy()
+                art["ai_category"] = cl.get("category")
+                art["ai_confidence"] = cl.get("confidence")
+                art["ai_reason"] = cl.get("reason", "")
+                relevant.append(art)
+
+        return relevant
 
     # ═══════════════════════════════════════
     # STAGE 2 — EXTRACT
@@ -174,12 +242,12 @@ If confidence < 0.7, set relevant to false."""
         prompt = f"""Extract security incident details from these articles.
 
 CRITICAL RULES:
-1. Only write information EXPLICITLY stated in the article. Do NOT guess or fabricate.
-2. Use "unknown" for missing information. Do NOT invent locations, names, or numbers.
+1. Only write information EXPLICITLY stated in the article. Do NOT guess.
+2. Use "unknown" for missing information. Do NOT invent.
 3. If multiple articles describe the SAME event, merge into ONE incident.
-4. Date format: YYYY-MM-DD. If uncertain, use the article's publication date.
+4. Date format: YYYY-MM-DD.
 5. Country names in English.
-6. Summary max 200 characters, clearly describe the event.
+6. Summary max 200 characters.
 
 ARTICLES:
 
@@ -216,46 +284,42 @@ OUTPUT FORMAT:
   ]
 }}
 
-If multiple articles cover the SAME event, list all indices in source_articles and all URLs in source_urls.
 If NO valid incidents found, return: {{"incidents": []}}"""
 
-        try:
-            time.sleep(2)
-            response = self.model.generate_content(prompt)
-            result = json.loads(response.text)
-            incidents = result.get("incidents", [])
+        result = self._safe_generate(self.model, prompt, "Stage2-Extract")
 
-            for inc in incidents:
-                src_indices = inc.get("source_articles", [])
-                urls = []
-                for idx in src_indices:
-                    if 0 <= idx < len(articles):
-                        u = articles[idx].get("url", "")
-                        if u:
-                            urls.append(u)
-                if urls:
-                    inc["source_urls"] = urls
-                elif not inc.get("source_urls"):
-                    inc["source_urls"] = []
-
-                inc.setdefault("incident_type", "UNKNOWN")
-                inc.setdefault("date", "unknown")
-                inc.setdefault("country", "unknown")
-                inc.setdefault("city", "unknown")
-                inc.setdefault("severity", "medium")
-                inc.setdefault("data_quality", "medium")
-                inc.setdefault("casualties_dead", 0)
-                inc.setdefault("casualties_injured", 0)
-                inc.setdefault("geo_lat", None)
-                inc.setdefault("geo_lon", None)
-                inc.setdefault("summary_tr", "")
-                inc.setdefault("summary_en", "")
-
-            return incidents
-
-        except Exception as e:
-            logger.error(f"Stage 2 error: {e}")
+        if not result:
             return []
+
+        incidents = result.get("incidents", [])
+
+        for inc in incidents:
+            src_indices = inc.get("source_articles", [])
+            urls = []
+            for idx in src_indices:
+                if 0 <= idx < len(articles):
+                    u = articles[idx].get("url", "")
+                    if u:
+                        urls.append(u)
+            if urls:
+                inc["source_urls"] = urls
+            elif not inc.get("source_urls"):
+                inc["source_urls"] = []
+
+            inc.setdefault("incident_type", "UNKNOWN")
+            inc.setdefault("date", "unknown")
+            inc.setdefault("country", "unknown")
+            inc.setdefault("city", "unknown")
+            inc.setdefault("severity", "medium")
+            inc.setdefault("data_quality", "medium")
+            inc.setdefault("casualties_dead", 0)
+            inc.setdefault("casualties_injured", 0)
+            inc.setdefault("geo_lat", None)
+            inc.setdefault("geo_lon", None)
+            inc.setdefault("summary_tr", "")
+            inc.setdefault("summary_en", "")
+
+        return incidents
 
     # ═══════════════════════════════════════
     # STAGE 3 — VERIFY
@@ -267,7 +331,7 @@ If NO valid incidents found, return: {{"incidents": []}}"""
 
         verified = []
 
-        for inc in incidents:
+        for inc_index, inc in enumerate(incidents):
             related_texts = []
             for idx in inc.get("source_articles", []):
                 if 0 <= idx < len(source_articles):
@@ -289,13 +353,12 @@ If NO valid incidents found, return: {{"incidents": []}}"""
                         )
 
             if not related_texts:
-                logger.warning(f"      No source found for: {inc.get('summary_en', '')[:50]}")
+                logger.warning(f"      No source for: {inc.get('summary_en', '')[:50]}")
                 continue
 
             sources_text = "\n---\n".join(related_texts[:3])
 
-            prompt = f"""Compare the extracted incident with the source articles.
-Check if the extracted data is actually supported by the sources.
+            prompt = f"""Compare the extracted incident with source articles.
 
 EXTRACTED INCIDENT:
 {json.dumps(inc, ensure_ascii=False, indent=2)}
@@ -304,11 +367,11 @@ SOURCE ARTICLES:
 {sources_text}
 
 CHECK:
-1. Is this actually a physical ATTACK/ASSAULT? (not accident, strike, or tech issue)
-2. Is the country/city mentioned in the source?
+1. Is this actually a physical ATTACK/ASSAULT?
+2. Is the country/city in the source?
 3. Is the date consistent?
-4. Are casualty numbers supported by the source?
-5. Is this a CURRENT event (not a historical article or anniversary)?
+4. Are casualty numbers supported?
+5. Is this a CURRENT event?
 
 Return JSON:
 {{
@@ -317,43 +380,38 @@ Return JSON:
   "issues": ["issue descriptions"],
   "corrections": {{"field": "corrected_value"}},
   "reason": "explanation"
-}}
+}}"""
 
-REJECT if: fabricated info, not an attack, historical article, or completely unsupported.
-FIX if: mostly correct but some fields need correction.
-ACCEPT if: all data is supported by sources."""
+            validation = self._safe_generate(
+                self.validator, prompt, f"Stage3-Verify-{inc_index}"
+            )
 
-            try:
-                time.sleep(1.5)
-                response = self.validator.generate_content(prompt)
-                validation = json.loads(response.text)
-
-                verdict = validation.get("verdict", "REJECT")
-                conf = validation.get("confidence", 0)
-
-                if verdict == "ACCEPT" and conf >= 0.6:
-                    inc["verification_score"] = conf
-                    inc["verification_status"] = "verified"
-                    verified.append(inc)
-                    logger.info(f"      ACCEPT ({conf:.0%}): {inc.get('summary_en', '')[:50]}")
-
-                elif verdict == "FIX" and conf >= 0.5:
-                    for field, value in validation.get("corrections", {}).items():
-                        if field in inc and value:
-                            inc[field] = value
-                    inc["verification_score"] = conf
-                    inc["verification_status"] = "corrected"
-                    verified.append(inc)
-                    logger.info(f"      FIX ({conf:.0%}): {inc.get('summary_en', '')[:50]}")
-
-                else:
-                    reason = validation.get("reason", "unknown")
-                    logger.info(f"      REJECT ({conf:.0%}): {inc.get('summary_en', '')[:50]} — {reason}")
-
-            except Exception as e:
-                logger.warning(f"      Verify error: {e}")
+            if not validation:
                 if inc.get("data_quality") == "high":
                     inc["verification_status"] = "unverified"
                     verified.append(inc)
+                continue
+
+            verdict = validation.get("verdict", "REJECT")
+            conf = validation.get("confidence", 0)
+
+            if verdict == "ACCEPT" and conf >= 0.6:
+                inc["verification_score"] = conf
+                inc["verification_status"] = "verified"
+                verified.append(inc)
+                logger.info(f"      ACCEPT ({conf:.0%}): {inc.get('summary_en', '')[:50]}")
+
+            elif verdict == "FIX" and conf >= 0.5:
+                for field, value in validation.get("corrections", {}).items():
+                    if field in inc and value:
+                        inc[field] = value
+                inc["verification_score"] = conf
+                inc["verification_status"] = "corrected"
+                verified.append(inc)
+                logger.info(f"      FIX ({conf:.0%}): {inc.get('summary_en', '')[:50]}")
+
+            else:
+                reason = validation.get("reason", "unknown")
+                logger.info(f"      REJECT ({conf:.0%}): {inc.get('summary_en', '')[:50]} — {reason}")
 
         return verified
