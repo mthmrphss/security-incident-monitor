@@ -91,8 +91,8 @@ def main():
             logger.error(f"    Batch error: {e}")
 
         if i + batch_size < len(new_articles):
-            logger.info("    Waiting 15s for rate limit...")
-            time.sleep(15)
+            logger.info("    Waiting 45s for rate limit...")
+            time.sleep(45)
 
     logger.info(f"  Total incidents detected: {len(all_incidents)}")
 
