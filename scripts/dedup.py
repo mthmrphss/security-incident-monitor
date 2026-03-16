@@ -85,7 +85,7 @@ class SmartDeduplicator:
     # ═══════════════════════════════════════
 
     def _event_similarity(self, a: Dict, b: Dict) -> float:
-        # ── KISA DEVRE: Aynı IATA kodu + aynı ülke = KESİN aynı olay ──
+        # ── KISA DEVRE: Aynı lokasyon kontrolü ──
         iata1 = (a.get("airport_iata") or "").upper().strip()
         iata2 = (b.get("airport_iata") or "").upper().strip()
         if (
@@ -94,13 +94,32 @@ class SmartDeduplicator:
             and iata1 not in ("", "UNKNOWN", "NULL")
             and a.get("incident_type") == b.get("incident_type")
         ):
-            # Aynı havalimanı + aynı olay tipi → tarih kontrolü yap
             date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
-            if date_sim >= 0.3:  # Aynı hafta içinde veya ikisi de unknown
-                logger.info(f"  IATA match: {iata1} — auto-merge")
-                return 1.0
+            text_sim = self._text_similarity(a, b)
 
-        # ── KISA DEVRE: Aynı otel adı + aynı ülke = KESİN aynı olay ──
+            # Aynı havalimanı + aynı gün AMA metin çok farklıysa
+            # → FARKLI OLAY olabilir (aynı gün birden fazla saldırı)
+            if date_sim >= 0.9 and text_sim < 0.25:
+                # Saldırı tipi de farklıysa kesinlikle ayrı olay
+                if a.get("attack_type") != b.get("attack_type"):
+                    logger.info(
+                        f"  IATA match BUT different attack: "
+                        f"{a.get('attack_type')} vs {b.get('attack_type')} — KEEP SEPARATE"
+                    )
+                    return 0.4  # Eşik altında → ayrı olay
+
+                # Saldırı tipi aynı ama metin çok farklı → muhtemelen farklı olay
+                logger.info(
+                    f"  IATA match BUT text very different ({text_sim:.0%}) — KEEP SEPARATE"
+                )
+                return 0.4
+
+            # Metin benzer → aynı olayın farklı kaynakları
+            if date_sim >= 0.3 and text_sim >= 0.25:
+                logger.info(f"  IATA match + similar text ({text_sim:.0%}) — MERGE")
+                return 1.0
+                
+         # ── KISA DEVRE: Aynı otel kontrolü ──
         hotel1 = (a.get("hotel_name") or "").lower().strip()
         hotel2 = (b.get("hotel_name") or "").lower().strip()
         if (
@@ -110,8 +129,16 @@ class SmartDeduplicator:
             and SequenceMatcher(None, hotel1, hotel2).ratio() > 0.6
             and a.get("incident_type") == b.get("incident_type")
         ):
-            logger.info(f"  Hotel match: {hotel1} — auto-merge")
-            return 1.0
+            text_sim = self._text_similarity(a, b)
+
+            if text_sim < 0.25:
+                logger.info(
+                    f"  Hotel match BUT text very different ({text_sim:.0%}) — KEEP SEPARATE"
+                )
+                return 0.4
+            else:
+                logger.info(f"  Hotel match + similar text ({text_sim:.0%}) — MERGE")
+                return 1.0
 
         # ── NORMAL BENZERLİK HESABI ──
         date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
