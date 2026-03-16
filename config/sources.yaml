@@ -182,13 +182,6 @@ nitter:
   # Biri çalışmazsa diğerine geçer
   instances:
     - "https://nitter.net"
-    - "https://nitter.privacydev.net"
-    - "https://nitter.poast.org"
-    - "https://nitter.woodland.cafe"
-    - "https://n.opnxng.com"
-    - "https://nitter.lunar.icu"
-    - "https://bird.trom.tf"
-    - "https://nitter.cz"
 
   # Her deneme arasında bekleme (saniye)
   retry_delay: 5
@@ -206,32 +199,8 @@ nitter:
       category: "general"
       description: "Breaking News alerts"
 
-    - handle: "IntelCrab"
+    - handle: "haskologlu"
       category: "general"
-      description: "OSINT intelligence"
-
-    - handle: "Conflicts"
-      category: "general"
-      description: "Global conflict tracker"
-
-    - handle: "aviation_safety"
-      category: "aviation"
-      description: "Aviation safety news"
-
-    - handle: "airaborneinfo"
-      category: "aviation"
-      description: "Aviation incident reports"
-
-    - handle: "Terror_Alarm"
-      category: "security"
-      description: "Terror attack alerts"
-
-    - handle: "IntlSpectator"
-      category: "general"
-      description: "International news"
-
-    - handle: "sotaboronina"
-      category: "security"
-      description: "Security incident news"
+      description: "Breaking news alerts"
 
    
