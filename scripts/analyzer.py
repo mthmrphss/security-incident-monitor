@@ -124,7 +124,8 @@ class GeminiAnalyzer:
         for i, art in enumerate(articles):
             title = art.get("title", "")[:150]
             summary = art.get("summary", "")[:200]
-            articles_text += f"[{i}] {title}\n{summary}\n\n"
+            pub_date = art.get("published", "")[:10]
+            articles_text += f"[{i}] DATE:{pub_date} | {title}\n{summary}\n\n"
 
         prompt = f"""Analyze these news articles. Find ONLY real physical security incidents in these categories:
 
@@ -169,8 +170,11 @@ For each REAL incident found, return:
 
 RULES:
 - ONLY info explicitly in the article. Do NOT invent.
-- Use "unknown" for missing info.
-- Merge same event from multiple articles into ONE.
+- Use "unknown" for missing info EXCEPT date.
+- For DATE: use the article's DATE field shown above. NEVER return "unknown" for date.
+- Merge same event from multiple articles into ONE single incident.
+- SAME airport + SAME country = SAME event, merge them.
+- SAME hotel + SAME country = SAME event, merge them.
 - If NO real incidents, return {{"incidents": []}}
 - confidence must be >= 0.7"""
 
