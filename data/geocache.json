@@ -73,5 +73,10 @@
     "lat": 25.251542,
     "lon": 55.366652,
     "display_name": "مطار دبي الدولي, شارع بيروت, محيصنة, دبي, الإمارات العربية المتحدة"
+  },
+  "florida airport, florida, united states": {
+    "lat": 30.49375,
+    "lon": -81.693038,
+    "display_name": "Jacksonville International Airport, Cole Flyer Road, Jacksonville, Duval County, Florida, 32218, United States"
   }
 }

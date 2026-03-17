@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-17T13:28:52.350984+00:00",
+    "last_updated": "2026-03-17T19:14:36.445489+00:00",
     "total_incidents": 9,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -51,17 +51,18 @@
       ],
       "source_urls": [
         "https://news.google.com/rss/articles/CBMigAFBVV95cUxNa2xpZzlpX3c1YVdJSldfUW9zcmEydU9BTEg1LXRzeWlXS3YyNTF0bEZMdGxIYjR5UVdnZGpJN2VrSllId01Ib2hsbmdpRHFQWnNrZkpGam1ISHVRZnVqMmdBVjdtQ2FibFdBS1kzRHVLSG5ZRmVJRUJVQ0FVcTNfNtIBlAFBVV95cUxPaEdvRHRzVldGdjU1djlSM1Zac2ZaYzdNb1pzZVRrNHBjcVpJS1d1NjJKbXdjVlRWVkJURVkyVTZSLWwzNGZDcXRNNFljYmNoU2hJa1R5S1FaeEVnakNDODZleVNybmJnYzIxNWx2V3dQQTNoeVlLNWY2d1ZTU19qcHpqT19kYjE4ZEpNeDZxNm5FU2dF?oc=5",
-        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPeFVmMXgyTlZ0aFdSRnFzR2xwWU15eFJZOTc3Yy02X0xueGR0YlU1SXRaWWd1ak0wNW80amx2TGpyQ1pBWERJTU1YaWRKZnVybGxQYi14VF94TFlxZTNIc0hRLVYzVnBUbGFrMUYwY1lBWFRZNTVMUThOYU1HOENORS1MbmplUUhvUmxvMEJpdUlkX19FTUJvbmw5LWdtM0gtajRvcmtOcFhxekRGRU1xUTQtcTFUemtDRkRibDMydlVicnZOV2pvb3hsR2hMVFlNOHZEUHVaUHJ3QUtXclhEbHRTSy1yZw?oc=5",
         "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBiN3VBWERIZ2FrbFNESjYtemp6V0FrYTBqVGRmVmpZNVZGbWlTaFRhQ0NZaFVDTFVaT280YUk5YUtwa2twX0xpX2J2Rl96MXhVX05faUxZTktYZw?oc=5",
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQa2s3WnQ5V3U2eXFlTVlObUtNMjNwM3p1bFQ2X0lTRS1LTTdPRlotMDQ2SE91VFNmblNtWmpWcjBaYmQweHF2VEcxMURpS1BmUDZyZE1OZlltanl0TllmTW5MOEF3dEN0TzN0TmV3ZWtvUEZSQklnV0tzazExRkFBamQ5bENQWGlwcS1IWXJJYjdrbF9kMkhpM190M2EwWldld2p4RHI5UFBzZFAwUVYxUEZrVzNOQzdsMm52N0NNQkpRQ0ZmdFhxZThqY0lqR0tRZmc?oc=5",
         "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOHVXSzdtbV9haWQ0YnV2dFk4TnBDcHprbUhIOF9xUXk0T0Jvd09sYTdZNjR2SF9zYWpYM2VmYmk4TUtEbkVfbWoxTGxqOW5xYm5WcjFwWHRDVkxOcFNRZVNpNWpqV2tWVjBPUGh0a0pBUnFOTldDSVZ1OVo4SzlIcUhrZzk4Qy0xcTd6R0tZaWdxWlk3WnUzeUFxU2lqWGVkTUh4WVJGelFneElBV0tLVNIBtgFBVV95cUxNRk96UTVNZ2xLYVFHRHpTMHhabVJXVExJakF3cDVGQjFoR0hORkpxdk93UTBaQ2txMzVvTVNSTUFyQ0V0TzZidzdCeDB6ZkhOSkxKWmtFQmduYUFOejVqdUZaby1fYzM5RXpaamdSUGpVTkp4MFNZSjM5SS1LVXJBdHdpelF2bnpPeXRpTlNWSDNkaUVuTXRwWkt0QnZvaDVOZ1JFTWxySXN2Y3d5X29sWEFCbjBLUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPeFVmMXgyTlZ0aFdSRnFzR2xwWU15eFJZOTc3Yy02X0xueGR0YlU1SXRaWWd1ak0wNW80amx2TGpyQ1pBWERJTU1YaWRKZnVybGxQYi14VF94TFlxZTNIc0hRLVYzVnBUbGFrMUYwY1lBWFRZNTVMUThOYU1HOENORS1MbmplUUhvUmxvMEJpdUlkX19FTUJvbmw5LWdtM0gtajRvcmtOcFhxekRGRU1xUTQtcTFUemtDRkRibDMydlVicnZOV2pvb3hsR2hMVFlNOHZEUHVaUHJ3QUtXclhEbHRTSy1yZw?oc=5",
         "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN00wN3lUTV83bGNBVGl0a0VYTGs4b0Z6N1BIMTdYaEtnWF85YnJWQlotdEhiSjgyYmxITkhoT21lVHNPWVl2a0tJbV81dmpzUmhpZGhDaFR4OHNEYVQ2NTRYS0ZueVFpR2N0SS1kcmlfSEp1QWRiRXNud0RBVnZQNzFIUk1ocWZZ?oc=5"
       ],
       "geo_lat": 42.374333,
       "geo_lon": -71.030279,
       "verification_status": "auto",
       "verification_score": 0.95,
-      "source_count": 5,
-      "last_updated": "2026-03-17T12:50:02.761710+00:00",
+      "source_count": 6,
+      "last_updated": "2026-03-17T19:14:36.445421",
       "id": "9624cf186425",
       "created_at": "2026-03-17T12:50:02.761701+00:00"
     },
