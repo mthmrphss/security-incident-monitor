@@ -9,7 +9,7 @@ logger = logging.getLogger("Dedup")
 
 class SmartDeduplicator:
 
-    SIMILARITY_THRESHOLD = 0.50
+    SIMILARITY_THRESHOLD = 0.70
 
     LOCATION_ALIASES = {
         "istanbul": ["ist", "konstantinopol", "constantinople"],
