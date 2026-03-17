@@ -48,5 +48,30 @@
     "lat": 44.53127,
     "lon": 18.586291,
     "display_name": "Plane, Grad Tuzla, Tuzlanski kanton, Federacija Bosne i Hercegovine, 75212, Bosna i Hercegovina / Босна и Херцеговина"
+  },
+  "airport, united states": {
+    "lat": 42.374333,
+    "lon": -71.030279,
+    "display_name": "Airport, Transportation Way, The Flats, East Boston, Boston, Suffolk County, Massachusetts, 02128, United States"
+  },
+  "bistro, frankfurt, germany": {
+    "lat": 50.12138,
+    "lon": 8.648312,
+    "display_name": "Bistro Hong Kong, 26, Leipziger Straße, Einkaufsmeile Leipziger Straße, Bockenheim, Innenstadt 2, Frankfurt am Main, Hessen, 60487, Deutschland"
+  },
+  "al dhafra air base, abu dhabi, united arab emirates": {
+    "lat": 24.238608,
+    "lon": 54.552172,
+    "display_name": "قاعدة الظفرة الجوية, شارع اللُّجَين, جرن يافور, جَرْن يَافُور, أبوظبي, أبو ظبي, الإمارات العربية المتحدة"
+  },
+  "detroit airport, detroit, united states": {
+    "lat": 42.411244,
+    "lon": -83.008531,
+    "display_name": "Coleman A. Young Municipal Airport, East Outer Drive, Detroit, Wayne County, Michigan, 48213, United States"
+  },
+  "dubai airport, dubai, united arab emirates": {
+    "lat": 25.251542,
+    "lon": 55.366652,
+    "display_name": "مطار دبي الدولي, شارع بيروت, محيصنة, دبي, الإمارات العربية المتحدة"
   }
 }
