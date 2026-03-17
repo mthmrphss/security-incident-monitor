@@ -158,7 +158,7 @@ rss_feeds:
     url: "https://www.securityweek.com/feed/"
     category: "security"
 
-    - name: "Reddit World News"
+  - name: "Reddit World News"
     url: "https://www.reddit.com/r/worldnews/new/.rss"
     category: "security"
 
