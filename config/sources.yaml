@@ -207,7 +207,7 @@ nitter:
       category: "general"
       description: "Breaking news alerts"
 
-      - handle: "clashreport"
+    - handle: "clashreport"
       category: "general"
       description: "Clash Report - conflict news
 
