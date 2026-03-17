@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-17T12:50:02.761733+00:00",
+    "last_updated": "2026-03-17T13:28:52.350984+00:00",
     "total_incidents": 9,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -360,7 +360,7 @@
       "city": "Savannah",
       "location_detail": "Savannah/HHI Airport",
       "airport_name": "Savannah/Hilton Head International Airport",
-      "airport_iata": null,
+      "airport_iata": "SAV",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "threat",
@@ -381,18 +381,19 @@
         "bomb threat"
       ],
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOa0FIR3dJLXVZQjRVTk9WVkVJckVoVlhDT2JBeXVPODhyRThZUW0xUnZXWTYxQlQ3S2hNS09QdzRLaWs4NTF2bDZXVnpVaFY0Ym9pYzBYenBtUlRlalI3TzdlN1A1dmdyZ3NIRVZkZHBsdHItVWxpYnBPcDJaai01TVoxc21mUnh6YWxSVzNR?oc=5",
         "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSDFDVmphN0dEYUh6eVlYRlRXSkg0cHpyRzVobjI2U3R1azJ4WUpMaXdmQnZpRG5tREd0VTlGMjg3V2dnbHhoYzFFeXBsWXhNYUxfVllRSzBjMDJsblRFR0JSUkVjd1VtaklaOGctbjAtcFNKMi1tc0dnWjhEd09UWWpWVGhDdDZiT0Y4cEFScFZ5b0EzQmE4QlRXYTdIdkNuQk04WDJEWXLSAa4BQVVfeXFMTWRyaVJ3VlFOeUgyaFFoY05SVEtTcDNucGt4WHZOVnNfQ01pMDdzaW12WmY5a3pHSldFWmpCbkYtMzE0Qmg3X1VHOTJzRlp3M3RiUXdpVmlGV0xqX1lvZVpiRHh2MXg2dlFKbnMwbmxXZ1EwbXJ2eW5ZZElPX29NdFBKM214RHZsR0NxZ3g5cVE2WWljdFdWMmxJeGswNHhpZnNnUkZJV1ctOWtnOWd3?oc=5",
         "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcm01QW04SXhmQzMtVnJucTJ1alUxZlh1WW1fSnJrZ3ZiaGo2X0E1YWxmbk5Qd3RkcGg4TTlsRi1ZdFRLU3lxNy04OUhtLUlVTHgtRXpORmdGbHJzZHU0YVVKV0FQdExoM1dET2VfVkZwRkNMdURWTmlSNEh3bzFrVjZCTnBjYTFMQkRtRnhrZEZnd0luZXZJOUZWQm9zMnNzOGFIZVFwcXpPMXZSMVl5UzdiVXE?oc=5",
-        "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZi13bGJkM1d0UTdqeWx3N2g5SGFfejNaUXhKVVRleml3T2xjUHE0V3Z5Wi0yLWpTYmhpYkVoallpS3RXQ3lxVjJCSFlrZWo0MXJQdGF0RGVxVk5lQjVYR1lMQTRody1TTmlodGJSRFNkaUNnYms0RF9qUE1IMW9uUmxB?oc=5",
         "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNbFR2WlZXTENQZm9iZHBhMmVSeEtNbUx5Z0ktU2x5NUU2VVZuVHFGSC01MFFuQ3hJeWliRWtGNzRja1pXR3pUamktNXFTS0JkTDVhcXVYSFhWZlB6TTFuclNwSzhBNlJ0Um9mTm1XcVlSZVB5Wk9ZZnNKMjJwZnRWY2tJV1ktcXJwNFdJTXZ4MkhYT2pOUnY3cnV6RlkxM0JXQW80MHZRZFYyaTNRSmFxRGQ5VmRkdFMwcFdydm50NDF6cUNLUk1TLUpkT18wekpnTWR6UGpJQVUzQQ?oc=5",
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSlUwRV9tTE1OLVlqUHNQUmpaV1U4azJFRWh4dDB0UzRIMUZid1lIcG10Um1aV2pkbWdxQXZGN2plaVBPRmtiZ0ZPVXJCOTVsUEk4TFRFUnkxYXptTUxlUG1PcmItVXczdURWc3o5MFpGQ2NmY2p3c1hiQXlybkJhREtKZ1pxVlpMbjBjYzF3?oc=5"
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSlUwRV9tTE1OLVlqUHNQUmpaV1U4azJFRWh4dDB0UzRIMUZid1lIcG10Um1aV2pkbWdxQXZGN2plaVBPRmtiZ0ZPVXJCOTVsUEk4TFRFUnkxYXptTUxlUG1PcmItVXczdURWc3o5MFpGQ2NmY2p3c1hiQXlybkJhREtKZ1pxVlpMbjBjYzF3?oc=5",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZi13bGJkM1d0UTdqeWx3N2g5SGFfejNaUXhKVVRleml3T2xjUHE0V3Z5Wi0yLWpTYmhpYkVoallpS3RXQ3lxVjJCSFlrZWo0MXJQdGF0RGVxVk5lQjVYR1lMQTRody1TTmlodGJSRFNkaUNnYms0RF9qUE1IMW9uUmxB?oc=5"
       ],
       "geo_lat": 32.124238,
       "geo_lon": -81.197706,
       "verification_status": "auto",
       "verification_score": 0.95,
-      "source_count": 5,
-      "last_updated": "2026-03-16T17:22:34.782532+00:00",
+      "source_count": 6,
+      "last_updated": "2026-03-17T13:28:52.350921",
       "id": "930d77825270",
       "created_at": "2026-03-16T17:22:34.782529+00:00"
     }
