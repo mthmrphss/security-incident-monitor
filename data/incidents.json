@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-18T02:48:54.394146+00:00",
-    "total_incidents": 10,
+    "last_updated": "2026-03-18T13:29:22.058678+00:00",
+    "total_incidents": 11,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -56,6 +56,45 @@
       "id": "b8d046548e4a",
       "created_at": "2026-03-18T02:48:54.394128+00:00",
       "last_updated": "2026-03-18T02:48:54.394138+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "date": "2026-03-18",
+      "year": 2026,
+      "country": "Turkey",
+      "country_code": "TR",
+      "city": "Batman",
+      "location_detail": "otel odası",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "otel",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "narkotik",
+      "summary_tr": "Batman'da bir otel odasına narkotik operasyonu düzenlendi.",
+      "summary_en": "A narcotics operation was conducted in a hotel room in Batman.",
+      "source_articles": [
+        0
+      ],
+      "confidence": 0.95,
+      "data_quality": "low",
+      "tags": [
+        "narcotics"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE45WkNwZ0R5ZzI1WURjR0RZREZSWk1SNjNhbzhNWVppZ2JwWkhUUEljdDlDa3NYbG00dEl3SDdUWEdTdktKVm5PWUl2Zm4tV25xN1JnWVlDa2ZxV3p0T0dxczh0aHgyY1BTMUpwM3pvNERCd9IBd0FVX3lxTFBXMnpEM2RjeW5XRXo4UUszMmZUbUhTMXVxWEJvOV9DYUdRZWNXWkxHNWUydVZIUmJNSEN5YmRzb3dmQ1dLYTFxMlA3ZTMxa2gydGJtVXhqTUxyUDNFdWZXSzJLSnNfUl91ODNHM2FuTXBGT3VIaFBN?oc=5"
+      ],
+      "geo_lat": 37.880034,
+      "geo_lon": 41.124921,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "59d6c43e308a",
+      "created_at": "2026-03-18T13:29:22.058664+00:00",
+      "last_updated": "2026-03-18T13:29:22.058673+00:00",
       "source_count": 1
     },
     {

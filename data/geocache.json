@@ -83,5 +83,10 @@
     "lat": 36.240412,
     "lon": 43.946569,
     "display_name": "فڕۆکەخانەی نێودەوڵەتی هەولێر, شەقامی ڕەمزی نافع, شاری خەونەکان, ھەولێر, ناحیەی ناوەندی هەولێر, قەزای ناوەندی هەولێر, پارێزگای ھەولێر, هەرێمی کوردستان, 44001, العراق"
+  },
+  "otel, batman, turkey": {
+    "lat": 37.880034,
+    "lon": 41.124921,
+    "display_name": "Grand White Otel, 7, Cumhuriyet Bulvarı, Eski Çarşı, Meydan Mahallesi, Batman Merkez, Batman, Güneydoğu Anadolu Bölgesi, 72050, Türkiye"
   }
 }
