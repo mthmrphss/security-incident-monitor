@@ -88,5 +88,25 @@
     "lat": 37.880034,
     "lon": 41.124921,
     "display_name": "Grand White Otel, 7, Cumhuriyet Bulvarı, Eski Çarşı, Meydan Mahallesi, Batman Merkez, Batman, Güneydoğu Anadolu Bölgesi, 72050, Türkiye"
+  },
+  "airport area, egypt": {
+    "lat": 5.616461,
+    "lon": -0.177099,
+    "display_name": "Embassy of Egypt, Senchi Road, Airport Residential Area, Dzorwulu, Accra, Ayawaso West Municipal District, Greater Accra Region, Ghana"
+  },
+  "hotel near lax, los angeles, united states": {
+    "lat": 33.929825,
+    "lon": -118.351074,
+    "display_name": "Comfort Inn Cockatoo Near LAX Airport, 11500, Acacia Avenue, Hawthorne, Los Angeles County, California, 90250, United States"
+  },
+  "batman, turkey": {
+    "lat": 37.78741,
+    "lon": 41.257392,
+    "display_name": "Batman, Güneydoğu Anadolu Bölgesi, Türkiye"
+  },
+  "airport, iran": {
+    "lat": 38.120572,
+    "lon": 46.243011,
+    "display_name": "فرودگاه, شهر تبریز, بخش مرکزی شهرستان تبریز, شهرستان تبریز, استان آذربایجان شرقی, ایران"
   }
 }

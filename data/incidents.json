@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-18T13:29:22.058678+00:00",
-    "total_incidents": 11,
+    "last_updated": "2026-03-18T19:13:56.404507+00:00",
+    "total_incidents": 14,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -71,7 +71,7 @@
       "hotel_name": null,
       "venue_name": "otel",
       "attack_type": "other",
-      "severity": "low",
+      "severity": "medium",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "narkotik",
@@ -86,7 +86,8 @@
         "narcotics"
       ],
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMickFVX3lxTE45WkNwZ0R5ZzI1WURjR0RZREZSWk1SNjNhbzhNWVppZ2JwWkhUUEljdDlDa3NYbG00dEl3SDdUWEdTdktKVm5PWUl2Zm4tV25xN1JnWVlDa2ZxV3p0T0dxczh0aHgyY1BTMUpwM3pvNERCd9IBd0FVX3lxTFBXMnpEM2RjeW5XRXo4UUszMmZUbUhTMXVxWEJvOV9DYUdRZWNXWkxHNWUydVZIUmJNSEN5YmRzb3dmQ1dLYTFxMlA3ZTMxa2gydGJtVXhqTUxyUDNFdWZXSzJLSnNfUl91ODNHM2FuTXBGT3VIaFBN?oc=5"
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE45WkNwZ0R5ZzI1WURjR0RZREZSWk1SNjNhbzhNWVppZ2JwWkhUUEljdDlDa3NYbG00dEl3SDdUWEdTdktKVm5PWUl2Zm4tV25xN1JnWVlDa2ZxV3p0T0dxczh0aHgyY1BTMUpwM3pvNERCd9IBd0FVX3lxTFBXMnpEM2RjeW5XRXo4UUszMmZUbUhTMXVxWEJvOV9DYUdRZWNXWkxHNWUydVZIUmJNSEN5YmRzb3dmQ1dLYTFxMlA3ZTMxa2gydGJtVXhqTUxyUDNFdWZXSzJLSnNfUl91ODNHM2FuTXBGT3VIaFBN?oc=5",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSlR6VGt4c3ZDSXRCU3ZSdTQ0dFVINThnUTlYc25PbWF0eEp5UjRVd0JTWndLYkM1WWlLZVFCVTBLVmpfYTlnWVJ5LXQ4M21LVTN5ekRSbFNuOF9QY3R0V21MVDczNXM0bXJrZmRaU0locDJUeTV6ZVZwVHpSWXJVa0RR0gGHAUFVX3lxTE5LQlBPYVl3dVk2ME1FSHc0d2VVTDhOOURjMUZaRjdPT0NJakZyNnNGZFROcG5mQmZYelptWVZWLTFERFlyTXAyZEZNT1NSRkpDaG5uMEt5TE16TE5yWVJLd0lMbmx0X2hHM1l4ZlpwX192cnZEQ1lfOFNlN25HdE8xTU9JVGNkaw?oc=5"
       ],
       "geo_lat": 37.880034,
       "geo_lon": 41.124921,
@@ -94,7 +95,86 @@
       "verification_score": 0.95,
       "id": "59d6c43e308a",
       "created_at": "2026-03-18T13:29:22.058664+00:00",
-      "last_updated": "2026-03-18T13:29:22.058673+00:00",
+      "last_updated": "2026-03-18T19:13:56.402196",
+      "source_count": 2
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "date": "2026-03-18",
+      "year": 2026,
+      "country": "United States",
+      "country_code": "US",
+      "city": "Los Angeles",
+      "location_detail": "hotel near LAX",
+      "airport_name": "LAX",
+      "airport_iata": "LAX",
+      "hotel_name": "unknown",
+      "venue_name": "hotel near LAX",
+      "attack_type": "explosion",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "man",
+      "summary_tr": "LAX yakınlarındaki bir otele el yapımı patlayıcı atan adamın cezası belli olacak.",
+      "summary_en": "Man who hurled explosive at hotel near LAX due for sentencing.",
+      "source_articles": [
+        2
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "explosion"
+      ],
+      "source_urls": [
+        "https://mynewsla.com/crime/2026/03/18/sentencing-due-for-man-who-hurled-explosive-at-hotel-near-lax/"
+      ],
+      "geo_lat": 33.929825,
+      "geo_lon": -118.351074,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "6374512d051f",
+      "created_at": "2026-03-18T19:13:56.404484+00:00",
+      "last_updated": "2026-03-18T19:13:56.404486+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-18",
+      "year": 2026,
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "unknown",
+      "location_detail": "airports",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "ABD-İran savaşının 19. gününde, havalimanlarına saldırılar düzenlendi.",
+      "summary_en": "On Day 19 of the US-Iran war, strikes hit airports.",
+      "source_articles": [
+        1
+      ],
+      "confidence": 0.95,
+      "data_quality": "low",
+      "tags": [
+        "strike",
+        "war"
+      ],
+      "source_urls": [
+        "https://timesofindia.indiatimes.com/world/middle-east/us-iran-war-day-19-highlights-mojtaba-khamenei-releases-rare-revenge-message-strikes-hit-airports-and-energy-sites/articleshow/129661752.cms"
+      ],
+      "geo_lat": 38.120572,
+      "geo_lon": 46.243011,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "70d6e2b2fd7c",
+      "created_at": "2026-03-18T19:13:56.404497+00:00",
+      "last_updated": "2026-03-18T19:13:56.404501+00:00",
       "source_count": 1
     },
     {
@@ -312,6 +392,47 @@
       "created_at": "2026-03-16T19:15:20.485567+00:00",
       "last_updated": "2026-03-16T19:15:20.485572+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-16",
+      "year": 2026,
+      "country": "Egypt",
+      "country_code": "EG",
+      "city": "unknown",
+      "location_detail": "airport area",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport area",
+      "attack_type": "drone attack",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Dubai'ye giden bir uçak, Mısır hava sahasında meydana gelen drone saldırısı nedeniyle geri döndü.",
+      "summary_en": "A flight to Dubai was turned back over Egypt due to a drone attack in the airport area.",
+      "source_articles": [
+        3,
+        4
+      ],
+      "confidence": 0.9,
+      "data_quality": "medium",
+      "tags": [
+        "drone"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93QlpFRnNGN0t0aTUybFZ2bUd6aGJyc1o0T04xTHd6MTN1SmFIQ2JzeFZrNEVjT1dPbG1ScjA5NVVFRFI4QmJNdmgxWmNlLWxwZklOQWZaa3NxSXZK?oc=5",
+        "https://news.google.com/rss/articles/CBMiWkFVX3lxTE02UUpFZnFqRzNjZXBfTDhQaWhhQVFHbHlxamRkaDJCNTBrd255bFhLTDg4VndYUjhwMzNyRDVjbUJrbU9IdGotVDY3ZkRwdU5GTGJlU0ZkbUREZw?oc=5"
+      ],
+      "geo_lat": 5.616461,
+      "geo_lon": -0.177099,
+      "verification_status": "auto",
+      "verification_score": 0.9,
+      "id": "cb51d53e2060",
+      "created_at": "2026-03-18T19:13:56.404470+00:00",
+      "last_updated": "2026-03-18T19:13:56.404476+00:00",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
