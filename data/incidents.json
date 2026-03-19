@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-19T02:51:13.001531+00:00",
+    "last_updated": "2026-03-19T13:23:42.186709+00:00",
     "total_incidents": 16,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -167,6 +167,7 @@
         "war"
       ],
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxOOUtMczhGdEJXdE8wUDNEZFJXU2dwWnljckFJSUZHRnVZN0lkT1pRUkJuZXRPMDZKZ21nU0V4VHB4SC1MeVRMRnpfWDhfS0xRVVl2RWE2cWVRNFJFa0NFLXplNkVZTEFCSnN6YjRYV1RHdmFWaGRYdU9fQUFNa3dEc2kxVVNIUlNWM2UwNUJBaEpPTTh4Ym41OTZxUDJXYUJlYldR?oc=5",
         "https://timesofindia.indiatimes.com/world/middle-east/us-iran-war-day-19-highlights-mojtaba-khamenei-releases-rare-revenge-message-strikes-hit-airports-and-energy-sites/articleshow/129661752.cms"
       ],
       "geo_lat": 38.120572,
@@ -175,8 +176,8 @@
       "verification_score": 0.95,
       "id": "70d6e2b2fd7c",
       "created_at": "2026-03-18T19:13:56.404497+00:00",
-      "last_updated": "2026-03-18T19:13:56.404501+00:00",
-      "source_count": 1
+      "last_updated": "2026-03-19T13:23:42.186641",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -191,7 +192,7 @@
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "threat",
-      "severity": "low",
+      "severity": "medium",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
@@ -208,8 +209,9 @@
         "bomb threat"
       ],
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVG92ODhsMXBSd25zVmtrekVoRGhRM3V6TUU0eVpoV2hVdE9hS1ZDUlgyWlBLTEwwV2Vpc3FMaVQ3M2NPX2dyLWJ1NWNHa0NEa2dNMEY4YXRYX3ZKOTNhRVB2bGtETER4REo0c3hUUVRtcWNaaFZJbkFlQ3ZfNzRwQ0doa3pNZnJwQTdVaFhPOC1UWnV2SFNfdnBHa09Sc3dvRGd0T3JZNi1vRXE0a3ZLbHJR?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmNpUjNoc09aamxLVktja3g1TFBWTTNYZ3hlaS1DbENoUUFvZG5GTS15eVJFUHlyemNiUEItX3lmQzRpMGJCZjBIeUhhNEdVcF9ud1hGcHk4WDFseWlzTzFsZUZsdGIwU2Q5NmszSmpNLUgzbWU1RFA3djhqUl9rVjRFbDA2NXlqM0lYTmtTZlNncXdZYS1sSDkxR19lUU5FX0t6VGFxakVqeU1YUWEwUXB6aw?oc=5",
         "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUFRpZGlzMDZwN3d1OVVILWozUnhiVm5QcmJ5NHhlMFlsTkJBdDhnR01fTGdtTjRDUFBWM2dFTXlqQmg3Y1JrbWxhUHhXQV84VmFSRGNxc3U2WkxSUmprdFo0TEtzelhiSGlLRUdLenpBaDNZSk9ja1B2S1cya1lJLXh1WlJpZElfSHBGUzhqQi1pODVSN2l1ZUdOS3ZYLVBxMzBnOW9hNkhkQjVQc05CaUI2TQ?oc=5",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVG92ODhsMXBSd25zVmtrekVoRGhRM3V6TUU0eVpoV2hVdE9hS1ZDUlgyWlBLTEwwV2Vpc3FMaVQ3M2NPX2dyLWJ1NWNHa0NEa2dNMEY4YXRYX3ZKOTNhRVB2bGtETER4REo0c3hUUVRtcWNaaFZJbkFlQ3ZfNzRwQ0doa3pNZnJwQTdVaFhPOC1UWnV2SFNfdnBHa09Sc3dvRGd0T3JZNi1vRXE0a3ZLbHJR?oc=5",
         "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNk5idHJJLVdBLUtCYWxoNGh5VWE4eGxxRzE3aVowN05jSF9VbnZLbGNJdzFSeS1CMTFIeXZBcTBQWGVKMS1wcl9EU04wbERlbGpaX3diM0w2T0lPNlp3VXJ4cUNxSUhYR0xHeUgxU1hLTnBxN08xeXcxWTBnWkIxbkdoTWtSVmpqSGx0YVFnT25PNVJnTnFiQWRrUE8xUnRKZFBza1RNRGt4ZHZ4MF9tSVFnd3BtTjZSYWpFb2NnTWFJTWFaSF8zc2ZLelNFeFU?oc=5"
       ],
       "geo_lat": 45.503182,
@@ -218,8 +220,8 @@
       "verification_score": 0.95,
       "id": "17dd2c639767",
       "created_at": "2026-03-19T02:51:13.001505+00:00",
-      "last_updated": "2026-03-19T02:51:13.001514+00:00",
-      "source_count": 3
+      "last_updated": "2026-03-19T13:23:42.185632",
+      "source_count": 4
     },
     {
       "incident_type": "HOTEL_ATTACK",
