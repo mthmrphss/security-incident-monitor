@@ -108,5 +108,15 @@
     "lat": 38.120572,
     "lon": 46.243011,
     "display_name": "فرودگاه, شهر تبریز, بخش مرکزی شهرستان تبریز, شهرستان تبریز, استان آذربایجان شرقی, ایران"
+  },
+  "montreal, canada": {
+    "lat": 45.503182,
+    "lon": -73.569806,
+    "display_name": "Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, Canada"
+  },
+  "hotel, spain": {
+    "lat": 40.407197,
+    "lon": -3.699996,
+    "display_name": "Hotel, 11, Calle de Valencia, Lavapiés, Embajadores, Centro, Madrid, Comunidad de Madrid, 28012, España"
   }
 }

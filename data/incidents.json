@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-18T19:13:56.404507+00:00",
-    "total_incidents": 14,
+    "last_updated": "2026-03-19T02:51:13.001531+00:00",
+    "total_incidents": 16,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -86,8 +86,9 @@
         "narcotics"
       ],
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMickFVX3lxTE45WkNwZ0R5ZzI1WURjR0RZREZSWk1SNjNhbzhNWVppZ2JwWkhUUEljdDlDa3NYbG00dEl3SDdUWEdTdktKVm5PWUl2Zm4tV25xN1JnWVlDa2ZxV3p0T0dxczh0aHgyY1BTMUpwM3pvNERCd9IBd0FVX3lxTFBXMnpEM2RjeW5XRXo4UUszMmZUbUhTMXVxWEJvOV9DYUdRZWNXWkxHNWUydVZIUmJNSEN5YmRzb3dmQ1dLYTFxMlA3ZTMxa2gydGJtVXhqTUxyUDNFdWZXSzJLSnNfUl91ODNHM2FuTXBGT3VIaFBN?oc=5",
-        "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSlR6VGt4c3ZDSXRCU3ZSdTQ0dFVINThnUTlYc25PbWF0eEp5UjRVd0JTWndLYkM1WWlLZVFCVTBLVmpfYTlnWVJ5LXQ4M21LVTN5ekRSbFNuOF9QY3R0V21MVDczNXM0bXJrZmRaU0locDJUeTV6ZVZwVHpSWXJVa0RR0gGHAUFVX3lxTE5LQlBPYVl3dVk2ME1FSHc0d2VVTDhOOURjMUZaRjdPT0NJakZyNnNGZFROcG5mQmZYelptWVZWLTFERFlyTXAyZEZNT1NSRkpDaG5uMEt5TE16TE5yWVJLd0lMbmx0X2hHM1l4ZlpwX192cnZEQ1lfOFNlN25HdE8xTU9JVGNkaw?oc=5"
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSlR6VGt4c3ZDSXRCU3ZSdTQ0dFVINThnUTlYc25PbWF0eEp5UjRVd0JTWndLYkM1WWlLZVFCVTBLVmpfYTlnWVJ5LXQ4M21LVTN5ekRSbFNuOF9QY3R0V21MVDczNXM0bXJrZmRaU0locDJUeTV6ZVZwVHpSWXJVa0RR0gGHAUFVX3lxTE5LQlBPYVl3dVk2ME1FSHc0d2VVTDhOOURjMUZaRjdPT0NJakZyNnNGZFROcG5mQmZYelptWVZWLTFERFlyTXAyZEZNT1NSRkpDaG5uMEt5TE16TE5yWVJLd0lMbmx0X2hHM1l4ZlpwX192cnZEQ1lfOFNlN25HdE8xTU9JVGNkaw?oc=5",
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVF9XUXR1QVNEWDFSc2dZckJPNWZrYXZTSDNnMkl3c2daSWtsOFFHeW5UZmpnWEZ2X2F3aEt3UlIyNm9vTGVSVkFVX3BrQzc2cV9ESFZXbHpvMUY5c2h6VVdRRWhtS2xnMGNmZ1N3d3JWblNxUkYtUXJBeGxvVnpFU1ZqLWlUOFE?oc=5",
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE45WkNwZ0R5ZzI1WURjR0RZREZSWk1SNjNhbzhNWVppZ2JwWkhUUEljdDlDa3NYbG00dEl3SDdUWEdTdktKVm5PWUl2Zm4tV25xN1JnWVlDa2ZxV3p0T0dxczh0aHgyY1BTMUpwM3pvNERCd9IBd0FVX3lxTFBXMnpEM2RjeW5XRXo4UUszMmZUbUhTMXVxWEJvOV9DYUdRZWNXWkxHNWUydVZIUmJNSEN5YmRzb3dmQ1dLYTFxMlA3ZTMxa2gydGJtVXhqTUxyUDNFdWZXSzJLSnNfUl91ODNHM2FuTXBGT3VIaFBN?oc=5"
       ],
       "geo_lat": 37.880034,
       "geo_lon": 41.124921,
@@ -95,8 +96,8 @@
       "verification_score": 0.95,
       "id": "59d6c43e308a",
       "created_at": "2026-03-18T13:29:22.058664+00:00",
-      "last_updated": "2026-03-18T19:13:56.402196",
-      "source_count": 2
+      "last_updated": "2026-03-19T02:51:13.001426",
+      "source_count": 3
     },
     {
       "incident_type": "HOTEL_ATTACK",
@@ -176,6 +177,90 @@
       "created_at": "2026-03-18T19:13:56.404497+00:00",
       "last_updated": "2026-03-18T19:13:56.404501+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-18",
+      "year": 2026,
+      "country": "Canada",
+      "country_code": "CA",
+      "city": "Montreal",
+      "location_detail": "Montreal airport",
+      "airport_name": "Montreal airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Montreal havalimanında bomba tehdidi nedeniyle uçuşlar durduruldu. Tehdidin ardından havalimanı kapatıldı ve uçuşlar ertelendi.",
+      "summary_en": "Flights were grounded at Montreal airport due to a bomb threat. The airport was closed and flights were delayed.",
+      "source_articles": [
+        0,
+        1,
+        2
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "bomb threat"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVG92ODhsMXBSd25zVmtrekVoRGhRM3V6TUU0eVpoV2hVdE9hS1ZDUlgyWlBLTEwwV2Vpc3FMaVQ3M2NPX2dyLWJ1NWNHa0NEa2dNMEY4YXRYX3ZKOTNhRVB2bGtETER4REo0c3hUUVRtcWNaaFZJbkFlQ3ZfNzRwQ0doa3pNZnJwQTdVaFhPOC1UWnV2SFNfdnBHa09Sc3dvRGd0T3JZNi1vRXE0a3ZLbHJR?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUFRpZGlzMDZwN3d1OVVILWozUnhiVm5QcmJ5NHhlMFlsTkJBdDhnR01fTGdtTjRDUFBWM2dFTXlqQmg3Y1JrbWxhUHhXQV84VmFSRGNxc3U2WkxSUmprdFo0TEtzelhiSGlLRUdLenpBaDNZSk9ja1B2S1cya1lJLXh1WlJpZElfSHBGUzhqQi1pODVSN2l1ZUdOS3ZYLVBxMzBnOW9hNkhkQjVQc05CaUI2TQ?oc=5",
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNk5idHJJLVdBLUtCYWxoNGh5VWE4eGxxRzE3aVowN05jSF9VbnZLbGNJdzFSeS1CMTFIeXZBcTBQWGVKMS1wcl9EU04wbERlbGpaX3diM0w2T0lPNlp3VXJ4cUNxSUhYR0xHeUgxU1hLTnBxN08xeXcxWTBnWkIxbkdoTWtSVmpqSGx0YVFnT25PNVJnTnFiQWRrUE8xUnRKZFBza1RNRGt4ZHZ4MF9tSVFnd3BtTjZSYWpFb2NnTWFJTWFaSF8zc2ZLelNFeFU?oc=5"
+      ],
+      "geo_lat": 45.503182,
+      "geo_lon": -73.569806,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "17dd2c639767",
+      "created_at": "2026-03-19T02:51:13.001505+00:00",
+      "last_updated": "2026-03-19T02:51:13.001514+00:00",
+      "source_count": 3
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "date": "2026-03-18",
+      "year": 2026,
+      "country": "Spain",
+      "country_code": "ES",
+      "city": "unknown",
+      "location_detail": "hotel room balcony",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "assault",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "İspanya'da bir otel odasında cinsel saldırıdan kaçan genç kız, balkondan atlayarak kurtuldu.",
+      "summary_en": "A teenage girl escaped a sexual assault in a hotel room in Spain by jumping from a balcony.",
+      "source_articles": [
+        0,
+        1
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "sexual assault"
+      ],
+      "source_urls": [
+        "https://www.liverpoolecho.co.uk/news/uk-world-news/girl-flees-sexual-assault-hotel-33619542",
+        "https://www.belfastlive.co.uk/news/uk-world-news/british-teen-14-escapes-alleged-33619500"
+      ],
+      "geo_lat": 40.407197,
+      "geo_lon": -3.699996,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "f472f3859cf5",
+      "created_at": "2026-03-19T02:51:13.001526+00:00",
+      "last_updated": "2026-03-19T02:51:13.001528+00:00",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
