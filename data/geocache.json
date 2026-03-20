@@ -118,5 +118,10 @@
     "lat": 40.407197,
     "lon": -3.699996,
     "display_name": "Hotel, 11, Calle de Valencia, Lavapiés, Embajadores, Centro, Madrid, Comunidad de Madrid, 28012, España"
+  },
+  "sydney airport, sydney, australia": {
+    "lat": -33.949894,
+    "lon": 151.181968,
+    "display_name": "Sydney (Kingsford Smith) Airport, Foreshore Road, Botany, Eastern Suburbs, Sydney, Bayside Council, New South Wales, 2019, Australia"
   }
 }

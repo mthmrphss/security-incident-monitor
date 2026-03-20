@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-19T13:23:42.186709+00:00",
-    "total_incidents": 16,
+    "last_updated": "2026-03-20T02:41:17.971230+00:00",
+    "total_incidents": 17,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,45 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "date": "2026-03-20",
+      "year": 2026,
+      "country": "Australia",
+      "country_code": "AU",
+      "city": "Sydney",
+      "location_detail": "during its descent into Sydney Airport",
+      "airport_name": null,
+      "airport_iata": "SYD",
+      "hotel_name": null,
+      "venue_name": "Sydney Airport",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 3,
+      "perpetrator": "turbulence",
+      "summary_tr": "Sydney Havalimanı'na iniş sırasında türbülans nedeniyle 3 kabin görevlisi hastaneye kaldırıldı.",
+      "summary_en": "Three flight attendants were hospitalized due to turbulence during descent into Sydney Airport.",
+      "source_articles": [
+        0
+      ],
+      "confidence": 0.95,
+      "data_quality": "medium",
+      "tags": [
+        "turbulence"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/c78l572p4n7o?at_medium=RSS&at_campaign=rss"
+      ],
+      "geo_lat": -33.949894,
+      "geo_lon": 151.181968,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "30c887fb952f",
+      "created_at": "2026-03-20T02:41:17.971210+00:00",
+      "last_updated": "2026-03-20T02:41:17.971223+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "date": "2026-03-18",
