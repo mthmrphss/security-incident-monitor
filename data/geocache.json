@@ -123,5 +123,10 @@
     "lat": -33.949894,
     "lon": 151.181968,
     "display_name": "Sydney (Kingsford Smith) Airport, Foreshore Road, Botany, Eastern Suburbs, Sydney, Bayside Council, New South Wales, 2019, Australia"
+  },
+  "zaventem airport, zaventem, belgium": {
+    "lat": 50.898336,
+    "lon": 4.483259,
+    "display_name": "Brussels Airport, Luchthaven Brussel Nationaal, Zaventem, Halle-Vilvoorde, Vlaams-Brabant, Vlaanderen, 1930, België / Belgique / Belgien"
   }
 }

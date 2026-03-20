@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-20T02:41:17.971230+00:00",
-    "total_incidents": 17,
+    "last_updated": "2026-03-20T07:10:38.684516+00:00",
+    "total_incidents": 18,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -56,6 +56,45 @@
       "id": "30c887fb952f",
       "created_at": "2026-03-20T02:41:17.971210+00:00",
       "last_updated": "2026-03-20T02:41:17.971223+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-20",
+      "year": 2026,
+      "country": "Belgium",
+      "country_code": "BE",
+      "city": "Zaventem",
+      "location_detail": "near a flight attendant",
+      "airport_name": "Brussels Airport",
+      "airport_iata": "BRU",
+      "hotel_name": null,
+      "venue_name": "Zaventem airport",
+      "attack_type": "bombing",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Zaventem Havalimanı'nda bir terörist, bir hostesin yakınına bomba yerleştirdi.",
+      "summary_en": "A terrorist detonated a bomb near a flight attendant at Zaventem airport.",
+      "source_articles": [
+        0
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "terrorism"
+      ],
+      "source_urls": [
+        "https://www.vrt.be/vrtnws/nl/2026/03/17/22-maart-getuigenis-docu-nidhi/"
+      ],
+      "geo_lat": 50.898336,
+      "geo_lon": 4.483259,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "72b1e3db0f14",
+      "created_at": "2026-03-20T07:10:38.684503+00:00",
+      "last_updated": "2026-03-20T07:10:38.684511+00:00",
       "source_count": 1
     },
     {
