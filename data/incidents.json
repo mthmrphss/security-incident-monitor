@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-21T02:38:10.202762+00:00",
+    "last_updated": "2026-03-21T13:04:55.462239+00:00",
     "total_incidents": 19,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -47,7 +47,8 @@
         "drone attack"
       ],
       "source_urls": [
-        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629"
+        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629",
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5"
       ],
       "geo_lat": 33.263646,
       "geo_lon": 44.22362,
@@ -55,8 +56,8 @@
       "verification_score": 0.95,
       "id": "a2fbd4fc9843",
       "created_at": "2026-03-21T02:38:10.202744+00:00",
-      "last_updated": "2026-03-21T02:38:10.202755+00:00",
-      "source_count": 1
+      "last_updated": "2026-03-21T13:04:55.462179",
+      "source_count": 2
     },
     {
       "incident_type": "AIRLINE_PERSONNEL",
