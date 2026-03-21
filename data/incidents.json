@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-20T13:15:55.361833+00:00",
-    "total_incidents": 18,
+    "last_updated": "2026-03-21T02:38:10.202762+00:00",
+    "total_incidents": 19,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,45 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-21",
+      "year": 2026,
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "US Base",
+      "airport_name": "Baghdad International Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "Baghdad International Airport",
+      "attack_type": "other",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Bağdat Uluslararası Havalimanı'ndaki ABD üssüne İHA ile saldırı düzenlendi.",
+      "summary_en": "A drone attack was carried out on the US base at Baghdad International Airport.",
+      "source_articles": [
+        0
+      ],
+      "confidence": 0.95,
+      "data_quality": "medium",
+      "tags": [
+        "drone attack"
+      ],
+      "source_urls": [
+        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629"
+      ],
+      "geo_lat": 33.263646,
+      "geo_lon": 44.22362,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "a2fbd4fc9843",
+      "created_at": "2026-03-21T02:38:10.202744+00:00",
+      "last_updated": "2026-03-21T02:38:10.202755+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRLINE_PERSONNEL",
       "date": "2026-03-20",

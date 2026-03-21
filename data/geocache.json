@@ -128,5 +128,10 @@
     "lat": 50.898336,
     "lon": 4.483259,
     "display_name": "Brussels Airport, Luchthaven Brussel Nationaal, Zaventem, Halle-Vilvoorde, Vlaams-Brabant, Vlaanderen, 1930, België / Belgique / Belgien"
+  },
+  "baghdad international airport, baghdad, iraq": {
+    "lat": 33.263646,
+    "lon": 44.22362,
+    "display_name": "مطار بغداد الدولي, 893-2, حي بدر, ناحية المامون, قضاء الکرخ, بغداد, محافظة بغداد, 10012, العراق"
   }
 }
