@@ -138,5 +138,20 @@
     "lat": 42.600387,
     "lon": 21.025763,
     "display_name": "Aeroporti, Rruga e Pejës, Sllatinë e Vogël, Komuna e Fushë Kosovës / Opština Kosovo Polje, Rajoni i Prishtinës / Prištinski okrug, 12050, Kosova / Kosovo"
+  },
+  "brussels, belgium": {
+    "lat": 50.846737,
+    "lon": 4.352493,
+    "display_name": "Bruxelles - Brussel, Brussel-Hoofdstad - Bruxelles-Capitale, Région de Bruxelles-Capitale - Brussels Hoofdstedelijk Gewest, België / Belgique / Belgien"
+  },
+  "airport, baghdad, iraq": {
+    "lat": 33.234216,
+    "lon": 44.239916,
+    "display_name": "قيادة القوة الجوية, طريق المطار للمرور السريع, محلة 887, العامرية, ناحية المنصور, قضاء الکرخ, بغداد, بلدية المنصور, محافظة بغداد, 10012, العراق"
+  },
+  "hotel, ho chi minh city, vietnam": {
+    "lat": 8.680084,
+    "lon": 106.601957,
+    "display_name": "Horizon Côn Đảo Hotel, Khu 5, Lương Thế Trân, Khu 5, Côn Sơn, Đặc khu Côn Đảo, Thành phố Hồ Chí Minh, 79000, Việt Nam"
   }
 }

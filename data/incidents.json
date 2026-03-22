@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-22T02:53:03.454641+00:00",
-    "total_incidents": 20,
+    "last_updated": "2026-03-22T13:07:33.714421+00:00",
+    "total_incidents": 22,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,88 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-22",
+      "year": 2026,
+      "country": "Belgium",
+      "country_code": "BE",
+      "city": "Brussels",
+      "location_detail": "Zaventem airport",
+      "airport_name": "Brussels Airport",
+      "airport_iata": "BRU",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Brüksel Havalimanı'ndaki bombalamanın 10. yıl dönümü. Kurbanlar ve aileleri destek çağrısında bulundu.",
+      "summary_en": "10th anniversary of Brussels Airport bombing. Victims and families call for support.",
+      "source_articles": [
+        0,
+        1
+      ],
+      "confidence": 0.95,
+      "data_quality": "medium",
+      "tags": [
+        "anniversary",
+        "terrorism"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaFVKM203ZElNNG5Zcl9aUWhMUjZ1RGxORVljRm50a091ay1LSjNFZ2NvYzRORGUzbzZwSEJ5VnY3bVVkR3h3Q0t0TTFMZ3A0VGd4NFNYRmRWZ2dpdHJ0TXJBX2xNU0g4endVSThReVBoUXAwbl8wZV9GdHpkMEhJTUJ1ckhadEhPRC13RGJtM3k5dlVHS3hHLWxQRkh4a3Buc1c3S1Y1SVA?oc=5",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE5RWGs3N21uZU1yRWxENDMyWDR4cVVRblYzOW11cFFPSXotbUNOOWgwODNHb1hJNVBybl9KZDZpdWJkLURiYW1Id3plbDdab2VQdGNDSGpHOEE4VG1hVkhKOFBKMTdrWXU3TFZyV0tDdFJFV3pH?oc=5"
+      ],
+      "geo_lat": 50.846737,
+      "geo_lon": 4.352493,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "c97470eea666",
+      "created_at": "2026-03-22T13:07:33.714391+00:00",
+      "last_updated": "2026-03-22T13:07:33.714403+00:00",
+      "source_count": 2
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "date": "2026-03-22",
+      "year": 2026,
+      "country": "Vietnam",
+      "country_code": "VN",
+      "city": "Ho Chi Minh City",
+      "location_detail": "hotel",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "killing",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "Chinese suspect",
+      "summary_tr": "Ho Chi Minh City'de bir otelde cinayet sonrası Çinli şüpheli tutuklandı.",
+      "summary_en": "Chinese suspect arrested after hotel killing in Ho Chi Minh City.",
+      "source_articles": [
+        2
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "killing",
+        "arrest"
+      ],
+      "source_urls": [
+        "https://vietnamnews.vn/society/1777850/chinese-suspect-arrested-after-hotel-killing-in-hcm-city.html"
+      ],
+      "geo_lat": 8.680084,
+      "geo_lon": 106.601957,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "07c409d3449a",
+      "created_at": "2026-03-22T13:07:33.714413+00:00",
+      "last_updated": "2026-03-22T13:07:33.714416+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "date": "2026-03-21",
@@ -47,8 +129,9 @@
         "drone attack"
       ],
       "source_urls": [
-        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629",
-        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5"
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5",
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUmVJNkVsbUV5RGp2RnlFX3J1aERhLVM0R3B0ZjhhMl84dGg4RkV2SDZWMmYtUG93Nm1VZTlfYlhZcVdacEs3UHdvQmdmQnZrVzhhcWFhaGE4d3lCTFdvdS1tazZXZnpFbE1aNFhYaUtaTFlKenpUdmQ2NndsWDhKQWc0WFlobU15SGk3cDVtTmd0cWR2U0NuZ211dGFWSnZ5ZEY1eWNjSXplZU5VeEpxVFBEa0tMME1sd1hkNA?oc=5",
+        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629"
       ],
       "geo_lat": 33.263646,
       "geo_lon": 44.22362,
@@ -56,8 +139,8 @@
       "verification_score": 0.95,
       "id": "a2fbd4fc9843",
       "created_at": "2026-03-21T02:38:10.202744+00:00",
-      "last_updated": "2026-03-21T13:04:55.462179",
-      "source_count": 2
+      "last_updated": "2026-03-22T13:07:33.710081",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
