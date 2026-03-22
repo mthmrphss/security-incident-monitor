@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-22T13:07:33.714421+00:00",
-    "total_incidents": 22,
+    "last_updated": "2026-03-22T18:52:42.779601+00:00",
+    "total_incidents": 23,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -103,6 +103,46 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-22",
+      "year": 2026,
+      "country": "Israel",
+      "country_code": "IL",
+      "city": "Tel Aviv",
+      "location_detail": "Ben Gurion Airport",
+      "airport_name": "Ben Gurion Airport",
+      "airport_iata": "TLV",
+      "hotel_name": null,
+      "venue_name": "Ben Gurion Airport",
+      "attack_type": "other",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "İran'ın Arash-2 füzeleriyle Ben Gurion Havalimanı'na yönelik olası saldırı tehdidi.",
+      "summary_en": "Threat of attack on Ben Gurion Airport with Iran's Arash-2 missiles.",
+      "source_articles": [
+        0
+      ],
+      "confidence": 0.95,
+      "data_quality": "low",
+      "tags": [
+        "missile",
+        "threat"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPenB1ZXZHUGVkMmg3SUxBNG1zZEhQdGNoMFAzLUsxREV6cnZXRGM3TEdSNHlpSGg2N04zZ1ZoS1VPZFRScE5maFF4alBlRk15TURhZEx2aXhJODFNamFyTHBGTzB6ZjBtMzNyRVJUZ25uS3A3QzFhaUJzOFE0ZmJHVllMMVk0bDNHck5NbXBsbklJYUtzMlM2emhzZVRvX2pfN1BYdmZNdEtRWWk2blVqcEwwWUxRUUtnR3ZtNDNfOHZuTHJ3OGp3TUNlSlpyRjNTeWFfd2hZWndNZnlQWTlN0gHkAUFVX3lxTE9yOW9hNThITExad1ZNTWZ1WXpsR3R2dWFrbUo3WGM3MHZUNE96cXMtRWtVTDRLOXZjQlhTTjVCTExmdnAxcHlKYW11blVIalFWUXl6OGR1UWpoSEV4cEdlWGlaRGZCV0NoTk84UEtqZ0ZOTU5RN0ZMLTFtNnpCamRua2NLNmlzZ3VBc2VqNDJyTF9HWExiYUw2NUR1UWVNcG9sbDZUSnJpWEI4bElJeGVuS0hnMTRPVU05Q2VldlhsYzF3aXRYeEQwbWJfc1FrcXM1OHFrRW4tYjVGalZmcmJEVlhNVw?oc=5"
+      ],
+      "geo_lat": 32.0853,
+      "geo_lon": 34.781806,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "id": "f2e8a2115a46",
+      "created_at": "2026-03-22T18:52:42.779586+00:00",
+      "last_updated": "2026-03-22T18:52:42.779594+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
       "date": "2026-03-21",
       "year": 2026,
       "country": "Iraq",
@@ -117,7 +157,7 @@
       "severity": "medium",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "Iraqi resistance",
       "summary_tr": "Bağdat Uluslararası Havalimanı'ndaki ABD üssüne İHA ile saldırı düzenlendi.",
       "summary_en": "A drone attack was carried out on the US base at Baghdad International Airport.",
       "source_articles": [
@@ -131,7 +171,8 @@
       "source_urls": [
         "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5",
         "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUmVJNkVsbUV5RGp2RnlFX3J1aERhLVM0R3B0ZjhhMl84dGg4RkV2SDZWMmYtUG93Nm1VZTlfYlhZcVdacEs3UHdvQmdmQnZrVzhhcWFhaGE4d3lCTFdvdS1tazZXZnpFbE1aNFhYaUtaTFlKenpUdmQ2NndsWDhKQWc0WFlobU15SGk3cDVtTmd0cWR2U0NuZ211dGFWSnZ5ZEY1eWNjSXplZU5VeEpxVFBEa0tMME1sd1hkNA?oc=5",
-        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629"
+        "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629",
+        "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5SZmNaaFpGWndIUXMyVmw5bVhaRk9XS3pRbTZZcEh5dllDdnNsXzFHN2lIUXVZUDEwZ252cmpsZDJnWUJUamlabEVDUW5sX2M?oc=5"
       ],
       "geo_lat": 33.263646,
       "geo_lon": 44.22362,
@@ -139,8 +180,8 @@
       "verification_score": 0.95,
       "id": "a2fbd4fc9843",
       "created_at": "2026-03-21T02:38:10.202744+00:00",
-      "last_updated": "2026-03-22T13:07:33.710081",
-      "source_count": 3
+      "last_updated": "2026-03-22T18:52:42.779499",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
