@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-23T02:54:30.307975+00:00",
-    "total_incidents": 24,
+    "last_updated": "2026-03-23T07:23:06.782958+00:00",
+    "total_incidents": 25,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,50 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-23",
+      "year": 2026,
+      "country": "United States",
+      "country_code": "US",
+      "city": "New York",
+      "location_detail": "LaGuardia Airport",
+      "airport_name": "LaGuardia Airport",
+      "airport_iata": "LGA",
+      "hotel_name": null,
+      "venue_name": "LaGuardia Airport",
+      "attack_type": "other",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 1,
+      "perpetrator": "unknown",
+      "summary_tr": "LaGuardia Havalimanı'nda bir yolcu uçağı itfaiye aracıyla çarpıştı, havalimanı kapandı, ölü ve yaralılar var.",
+      "summary_en": "A passenger plane collided with a fire truck at LaGuardia Airport, causing closure, fatalities, and injuries.",
+      "source_articles": [
+        0,
+        1,
+        3
+      ],
+      "confidence": 0.95,
+      "data_quality": "high",
+      "tags": [
+        "collision"
+      ],
+      "source_urls": [
+        "https://x.com/clashreport/status/2035950076699312375#m",
+        "https://x.com/ww3mediaa/status/2035971788274876680#m",
+        "https://www.aljazeera.com/news/2026/3/23/air-canada-jet-collides-with-ground-vehicle-at-new-york-airport?traffic_source=rss",
+        "https://x.com/ConflictTR/status/2035952831174201562#m"
+      ],
+      "geo_lat": 40.775714,
+      "geo_lon": -73.873364,
+      "verification_status": "auto",
+      "verification_score": 0.95,
+      "source_count": 4,
+      "last_updated": "2026-03-23T07:23:06.782953+00:00",
+      "id": "63e6f376ad13",
+      "created_at": "2026-03-23T07:23:06.782944+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "date": "2026-03-22",
@@ -114,10 +158,10 @@
       "hotel_name": null,
       "venue_name": "Ben Gurion Airport",
       "attack_type": "other",
-      "severity": "medium",
+      "severity": "high",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "Iran",
       "summary_tr": "İran'ın Arash-2 füzeleriyle Ben Gurion Havalimanı'na yönelik olası saldırı tehdidi.",
       "summary_en": "Threat of attack on Ben Gurion Airport with Iran's Arash-2 missiles.",
       "source_articles": [
@@ -130,6 +174,7 @@
         "threat"
       ],
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNd3FQemRUeHFXVHlONGs4NG1rR2Q2YnE1dzIzaG1tWUhxbnk2TVJ2M3lob05vNDFaQXVIYUdFcUJpSmxscHE5RTBFdlhGdWxpaENvRFJWRUs4Um1GOUJsU2ZaVzhNbXFONXJrODNLX2lpSHRsd2t1a2NVZ3g3N1k5VXdYMFJ2bXZLOTNvNXc3QVNQSHNOWElDa1c3WHpYVE00NHg1U3Q2TFAzcVJuQVlGZ1JHckpyZlVDejQwem9KSFNqd29BN1FzOTUxUDJMbU91a2M1X2Q5TmZ3Z19pWmlvZTdaaU16UGNZZFFqYWhtc2tfN25oUjFzU0xIOHNWYkxFNkFjTF8xeVVpN1HSAZACQVVfeXFMT3ctSmdrTlZud3N3TncwdmVZTDg3Wkw1ZnJORzFsaVJBdHNkeVE0VVVCd1ZaMi1uenhMeWZQSUhjMGNHeWlZS2piMW5lOElqSHMyQ3RCMFFfZ3BpVldudUU4WXVVbGVuUlNGVkNTRDFKV1ZXMEVNcFo3NHpCWWV5MXlOSFFfb3B1aUYzcENwU0doUDdRR1g4UzU1bU5YQnJWa1JkM0RCZ0gwWm1UNjhpWF9VajZpRURuWkxBaWNlMFp1SGxQVEMxMFQwTEpVbTM4SDhzaFdsb0toQm55MnFhRTkwSlFiQmpLY0F3Ul9mUnpMOGcxQ2p2aEhORWFIWlhkLUFwZWtjQjBuUHJmOWkzU24?oc=5",
         "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPenB1ZXZHUGVkMmg3SUxBNG1zZEhQdGNoMFAzLUsxREV6cnZXRGM3TEdSNHlpSGg2N04zZ1ZoS1VPZFRScE5maFF4alBlRk15TURhZEx2aXhJODFNamFyTHBGTzB6ZjBtMzNyRVJUZ25uS3A3QzFhaUJzOFE0ZmJHVllMMVk0bDNHck5NbXBsbklJYUtzMlM2emhzZVRvX2pfN1BYdmZNdEtRWWk2blVqcEwwWUxRUUtnR3ZtNDNfOHZuTHJ3OGp3TUNlSlpyRjNTeWFfd2hZWndNZnlQWTlN0gHkAUFVX3lxTE9yOW9hNThITExad1ZNTWZ1WXpsR3R2dWFrbUo3WGM3MHZUNE96cXMtRWtVTDRLOXZjQlhTTjVCTExmdnAxcHlKYW11blVIalFWUXl6OGR1UWpoSEV4cEdlWGlaRGZCV0NoTk84UEtqZ0ZOTU5RN0ZMLTFtNnpCamRua2NLNmlzZ3VBc2VqNDJyTF9HWExiYUw2NUR1UWVNcG9sbDZUSnJpWEI4bElJeGVuS0hnMTRPVU05Q2VldlhsYzF3aXRYeEQwbWJfc1FrcXM1OHFrRW4tYjVGalZmcmJEVlhNVw?oc=5"
       ],
       "geo_lat": 32.0853,
@@ -138,8 +183,8 @@
       "verification_score": 0.95,
       "id": "f2e8a2115a46",
       "created_at": "2026-03-22T18:52:42.779586+00:00",
-      "last_updated": "2026-03-22T18:52:42.779594+00:00",
-      "source_count": 1
+      "last_updated": "2026-03-23T07:23:06.768628",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
