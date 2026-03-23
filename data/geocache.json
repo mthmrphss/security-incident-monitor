@@ -163,5 +163,10 @@
     "lat": 40.775714,
     "lon": -73.873364,
     "display_name": "LaGuardia Airport, Ditmars Boulevard, Queens, Queens County, New York, 11371, United States"
+  },
+  "ben gurion, israel": {
+    "lat": 32.09092,
+    "lon": 34.823395,
+    "display_name": "בן גוריון, זאב ז'בוטינסקי, תל גיבורים, בני ברק, נפת תל אביב, מחוז תל אביב, 5121501, ישראל"
   }
 }

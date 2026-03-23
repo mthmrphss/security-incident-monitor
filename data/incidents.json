@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-23T07:23:06.782958+00:00",
-    "total_incidents": 25,
+    "last_updated": "2026-03-23T13:28:25.585403+00:00",
+    "total_incidents": 26,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -62,6 +62,46 @@
       "last_updated": "2026-03-23T07:23:06.782953+00:00",
       "id": "63e6f376ad13",
       "created_at": "2026-03-23T07:23:06.782944+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-23",
+      "year": 2026,
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "unknown",
+      "location_detail": "Iranian airspace",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "İran hava sahası ihlalleri ve havaalanı saldırıları nedeniyle Kuveyt, ICAO'ya protesto sundu.",
+      "summary_en": "Kuwait filed a protest with ICAO over Iranian airspace violations and airport attacks.",
+      "source_articles": [
+        4
+      ],
+      "confidence": 0.8,
+      "data_quality": "low",
+      "tags": [
+        "airspace violation",
+        "airport attack"
+      ],
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5YUmdBbmZhZlhsdGp1OWoyZFZBemlEc0NXaVNFRTRyaW4zNmMybmVGUnUwMjBpeldVUDVIM0RfQm1FUlFZQlNkZTZ1WF9OLTFiVHNvRjVqSHpOVS11VzVRcXd3?oc=5"
+      ],
+      "geo_lat": 38.120572,
+      "geo_lon": 46.243011,
+      "verification_status": "auto",
+      "verification_score": 0.8,
+      "id": "eb70fea40370",
+      "created_at": "2026-03-23T13:28:25.585389+00:00",
+      "last_updated": "2026-03-23T13:28:25.585397+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -174,8 +214,9 @@
         "threat"
       ],
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNd3FQemRUeHFXVHlONGs4NG1rR2Q2YnE1dzIzaG1tWUhxbnk2TVJ2M3lob05vNDFaQXVIYUdFcUJpSmxscHE5RTBFdlhGdWxpaENvRFJWRUs4Um1GOUJsU2ZaVzhNbXFONXJrODNLX2lpSHRsd2t1a2NVZ3g3N1k5VXdYMFJ2bXZLOTNvNXc3QVNQSHNOWElDa1c3WHpYVE00NHg1U3Q2TFAzcVJuQVlGZ1JHckpyZlVDejQwem9KSFNqd29BN1FzOTUxUDJMbU91a2M1X2Q5TmZ3Z19pWmlvZTdaaU16UGNZZFFqYWhtc2tfN25oUjFzU0xIOHNWYkxFNkFjTF8xeVVpN1HSAZACQVVfeXFMT3ctSmdrTlZud3N3TncwdmVZTDg3Wkw1ZnJORzFsaVJBdHNkeVE0VVVCd1ZaMi1uenhMeWZQSUhjMGNHeWlZS2piMW5lOElqSHMyQ3RCMFFfZ3BpVldudUU4WXVVbGVuUlNGVkNTRDFKV1ZXMEVNcFo3NHpCWWV5MXlOSFFfb3B1aUYzcENwU0doUDdRR1g4UzU1bU5YQnJWa1JkM0RCZ0gwWm1UNjhpWF9VajZpRURuWkxBaWNlMFp1SGxQVEMxMFQwTEpVbTM4SDhzaFdsb0toQm55MnFhRTkwSlFiQmpLY0F3Ul9mUnpMOGcxQ2p2aEhORWFIWlhkLUFwZWtjQjBuUHJmOWkzU24?oc=5",
-        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPenB1ZXZHUGVkMmg3SUxBNG1zZEhQdGNoMFAzLUsxREV6cnZXRGM3TEdSNHlpSGg2N04zZ1ZoS1VPZFRScE5maFF4alBlRk15TURhZEx2aXhJODFNamFyTHBGTzB6ZjBtMzNyRVJUZ25uS3A3QzFhaUJzOFE0ZmJHVllMMVk0bDNHck5NbXBsbklJYUtzMlM2emhzZVRvX2pfN1BYdmZNdEtRWWk2blVqcEwwWUxRUUtnR3ZtNDNfOHZuTHJ3OGp3TUNlSlpyRjNTeWFfd2hZWndNZnlQWTlN0gHkAUFVX3lxTE9yOW9hNThITExad1ZNTWZ1WXpsR3R2dWFrbUo3WGM3MHZUNE96cXMtRWtVTDRLOXZjQlhTTjVCTExmdnAxcHlKYW11blVIalFWUXl6OGR1UWpoSEV4cEdlWGlaRGZCV0NoTk84UEtqZ0ZOTU5RN0ZMLTFtNnpCamRua2NLNmlzZ3VBc2VqNDJyTF9HWExiYUw2NUR1UWVNcG9sbDZUSnJpWEI4bElJeGVuS0hnMTRPVU05Q2VldlhsYzF3aXRYeEQwbWJfc1FrcXM1OHFrRW4tYjVGalZmcmJEVlhNVw?oc=5"
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNOWxyUGI0RlZHX2FNV1lIOWpWcVpyWXU2UEVRTVY4T25reUVCWDdjeDNvMm4xTHNVdm5fUlhWT1BjRkEtYmp2dnZQVXZPVUwwcm5QbzBDQUhtem9ZcVMwT1ZKWlZkeC1ZcG91WGpTUWhwa0NEamE3M2Z6dURDTnBLVHJtWDAtYU56UEFoLVhOS0UxNTdUT0JJamdqekR3aklXUFlGeVN1TTJhaXNleW5TNUF2VGNFZV9FSEhJUnY5S2tjbURmakp3TFAwY3lYaHQ1Um9XZVZ3UTI?oc=5",
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPenB1ZXZHUGVkMmg3SUxBNG1zZEhQdGNoMFAzLUsxREV6cnZXRGM3TEdSNHlpSGg2N04zZ1ZoS1VPZFRScE5maFF4alBlRk15TURhZEx2aXhJODFNamFyTHBGTzB6ZjBtMzNyRVJUZ25uS3A3QzFhaUJzOFE0ZmJHVllMMVk0bDNHck5NbXBsbklJYUtzMlM2emhzZVRvX2pfN1BYdmZNdEtRWWk2blVqcEwwWUxRUUtnR3ZtNDNfOHZuTHJ3OGp3TUNlSlpyRjNTeWFfd2hZWndNZnlQWTlN0gHkAUFVX3lxTE9yOW9hNThITExad1ZNTWZ1WXpsR3R2dWFrbUo3WGM3MHZUNE96cXMtRWtVTDRLOXZjQlhTTjVCTExmdnAxcHlKYW11blVIalFWUXl6OGR1UWpoSEV4cEdlWGlaRGZCV0NoTk84UEtqZ0ZOTU5RN0ZMLTFtNnpCamRua2NLNmlzZ3VBc2VqNDJyTF9HWExiYUw2NUR1UWVNcG9sbDZUSnJpWEI4bElJeGVuS0hnMTRPVU05Q2VldlhsYzF3aXRYeEQwbWJfc1FrcXM1OHFrRW4tYjVGalZmcmJEVlhNVw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNd3FQemRUeHFXVHlONGs4NG1rR2Q2YnE1dzIzaG1tWUhxbnk2TVJ2M3lob05vNDFaQXVIYUdFcUJpSmxscHE5RTBFdlhGdWxpaENvRFJWRUs4Um1GOUJsU2ZaVzhNbXFONXJrODNLX2lpSHRsd2t1a2NVZ3g3N1k5VXdYMFJ2bXZLOTNvNXc3QVNQSHNOWElDa1c3WHpYVE00NHg1U3Q2TFAzcVJuQVlGZ1JHckpyZlVDejQwem9KSFNqd29BN1FzOTUxUDJMbU91a2M1X2Q5TmZ3Z19pWmlvZTdaaU16UGNZZFFqYWhtc2tfN25oUjFzU0xIOHNWYkxFNkFjTF8xeVVpN1HSAZACQVVfeXFMT3ctSmdrTlZud3N3TncwdmVZTDg3Wkw1ZnJORzFsaVJBdHNkeVE0VVVCd1ZaMi1uenhMeWZQSUhjMGNHeWlZS2piMW5lOElqSHMyQ3RCMFFfZ3BpVldudUU4WXVVbGVuUlNGVkNTRDFKV1ZXMEVNcFo3NHpCWWV5MXlOSFFfb3B1aUYzcENwU0doUDdRR1g4UzU1bU5YQnJWa1JkM0RCZ0gwWm1UNjhpWF9VajZpRURuWkxBaWNlMFp1SGxQVEMxMFQwTEpVbTM4SDhzaFdsb0toQm55MnFhRTkwSlFiQmpLY0F3Ul9mUnpMOGcxQ2p2aEhORWFIWlhkLUFwZWtjQjBuUHJmOWkzU24?oc=5"
       ],
       "geo_lat": 32.0853,
       "geo_lon": 34.781806,
@@ -183,8 +224,8 @@
       "verification_score": 0.95,
       "id": "f2e8a2115a46",
       "created_at": "2026-03-22T18:52:42.779586+00:00",
-      "last_updated": "2026-03-23T07:23:06.768628",
-      "source_count": 2
+      "last_updated": "2026-03-23T13:28:25.581392",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -253,10 +294,11 @@
         "drone attack"
       ],
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5",
         "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5SZmNaaFpGWndIUXMyVmw5bVhaRk9XS3pRbTZZcEh5dllDdnNsXzFHN2lIUXVZUDEwZ252cmpsZDJnWUJUamlabEVDUW5sX2M?oc=5",
         "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629",
+        "https://x.com/ConflictTR/status/2036056069428887868#m",
         "https://news.google.com/rss/articles/CBMipAFBVV95cUxNS1Q2SjFwZWs1dDNBa0k4eVVaQTRBZVpUNjZseE80M2pOQV9VMmNiaTZaQWIxdGUwR1ROWGpMdE9qRE16U0N2TFVfUGdQTXJjMS1jZnI2V25mN2tPb3FiN2dVLU0xSmYtNGlxYmxfSldEZXV3MEFMbDhMT1k2LWlfN3lrWE16ejBMaGR2Y0dGLXAyei1nWUYzamhSTThMOTB3a3BnZQ?oc=5",
-        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5",
         "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUmVJNkVsbUV5RGp2RnlFX3J1aERhLVM0R3B0ZjhhMl84dGg4RkV2SDZWMmYtUG93Nm1VZTlfYlhZcVdacEs3UHdvQmdmQnZrVzhhcWFhaGE4d3lCTFdvdS1tazZXZnpFbE1aNFhYaUtaTFlKenpUdmQ2NndsWDhKQWc0WFlobU15SGk3cDVtTmd0cWR2U0NuZ211dGFWSnZ5ZEY1eWNjSXplZU5VeEpxVFBEa0tMME1sd1hkNA?oc=5"
       ],
       "geo_lat": 33.263646,
@@ -265,8 +307,8 @@
       "verification_score": 0.95,
       "id": "a2fbd4fc9843",
       "created_at": "2026-03-21T02:38:10.202744+00:00",
-      "last_updated": "2026-03-23T02:54:30.303386",
-      "source_count": 5
+      "last_updated": "2026-03-23T13:28:25.583106",
+      "source_count": 6
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -413,6 +455,7 @@
         "explosion"
       ],
       "source_urls": [
+        "https://www.evrensel.net/haber/5976388/abd-ussunun-bulundugu-erbil-havalimani-yakininda-patlama-sesleri-duyuldu",
         "https://www.haberler.com/guncel/erbil-de-siddetli-patlamalar-kamikaze-iha-etkisiz-hale-getirildi-19667369-haberi/"
       ],
       "geo_lat": 36.240412,
@@ -421,8 +464,8 @@
       "verification_score": 0.95,
       "id": "b8d046548e4a",
       "created_at": "2026-03-18T02:48:54.394128+00:00",
-      "last_updated": "2026-03-18T02:48:54.394138+00:00",
-      "source_count": 1
+      "last_updated": "2026-03-23T13:28:25.585305",
+      "source_count": 2
     },
     {
       "incident_type": "HOTEL_ATTACK",
