@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-22T18:52:42.779601+00:00",
-    "total_incidents": 23,
+    "last_updated": "2026-03-23T02:54:30.307975+00:00",
+    "total_incidents": 24,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -143,6 +143,45 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
+      "date": "2026-03-22",
+      "year": 2026,
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "city": "Dubai",
+      "location_detail": "Dubai airport",
+      "airport_name": "Dubai Airport",
+      "airport_iata": "DXB",
+      "hotel_name": null,
+      "venue_name": "Dubai airport",
+      "attack_type": "threat",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_tr": "Birleşik Arap Emirlikleri'ndeki havalimanlarında füze uyarıları nedeniyle artan güvenlik riskleri yaşandı.",
+      "summary_en": "Escalating safety risks at UAE airports due to missile warnings.",
+      "source_articles": [
+        1
+      ],
+      "confidence": 0.85,
+      "data_quality": "medium",
+      "tags": [
+        "missile warning"
+      ],
+      "source_urls": [
+        "https://x.com/clashreport/status/2035837935837434210#m"
+      ],
+      "geo_lat": 25.251542,
+      "geo_lon": 55.366652,
+      "verification_status": "auto",
+      "verification_score": 0.85,
+      "id": "c30bb75669c4",
+      "created_at": "2026-03-23T02:54:30.307958+00:00",
+      "last_updated": "2026-03-23T02:54:30.307969+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
       "date": "2026-03-21",
       "year": 2026,
       "country": "Iraq",
@@ -169,10 +208,11 @@
         "drone attack"
       ],
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5",
-        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUmVJNkVsbUV5RGp2RnlFX3J1aERhLVM0R3B0ZjhhMl84dGg4RkV2SDZWMmYtUG93Nm1VZTlfYlhZcVdacEs3UHdvQmdmQnZrVzhhcWFhaGE4d3lCTFdvdS1tazZXZnpFbE1aNFhYaUtaTFlKenpUdmQ2NndsWDhKQWc0WFlobU15SGk3cDVtTmd0cWR2U0NuZ211dGFWSnZ5ZEY1eWNjSXplZU5VeEpxVFBEa0tMME1sd1hkNA?oc=5",
+        "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5SZmNaaFpGWndIUXMyVmw5bVhaRk9XS3pRbTZZcEh5dllDdnNsXzFHN2lIUXVZUDEwZ252cmpsZDJnWUJUamlabEVDUW5sX2M?oc=5",
         "https://www.mersinhaber.com/haber-bagdat-uluslararasi-havalimaninda-abd-ussune-iha-ile-saldiri-gerceklesti/581629",
-        "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5SZmNaaFpGWndIUXMyVmw5bVhaRk9XS3pRbTZZcEh5dllDdnNsXzFHN2lIUXVZUDEwZ252cmpsZDJnWUJUamlabEVDUW5sX2M?oc=5"
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxNS1Q2SjFwZWs1dDNBa0k4eVVaQTRBZVpUNjZseE80M2pOQV9VMmNiaTZaQWIxdGUwR1ROWGpMdE9qRE16U0N2TFVfUGdQTXJjMS1jZnI2V25mN2tPb3FiN2dVLU0xSmYtNGlxYmxfSldEZXV3MEFMbDhMT1k2LWlfN3lrWE16ejBMaGR2Y0dGLXAyei1nWUYzamhSTThMOTB3a3BnZQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNY09WWklnZS1HazVaQ0tyUFRaaVZSTjI5ampRSTIwWXhLTURReDdUa1JlYTJtUlBTWDVhVFNRTjZGS1hMX2NMUjdsY1ZQalRWNEhENE1WRzhLUU5Wa043SzFzbWhFTTNPZE5keWRYdlRZdy1OQWFVMXlMQTU5Z0FBcnR4eDRwV3FJSS04WUI3SFdsVUU2dEU0RGhWWVVjYlNOMndybGZldllCLWxuS1RjVkpJZXJoT0lpS0xYNjExaE9lRVBBSkRIMFJBdzQ4d1lsaWVSN3FWcFZsbjBnS3pjVFF0Yll6QzTSAewBQVVfeXFMTjJpaFhSaTJFNlM5OTk1V1NZempVMHg4MHdpX01zMkdUakswR3JPbGFPUXFjMjJvRHJ1aUZELXhVQ25JM09Tem5HQ3Fkbk1OMEhUekc3djNSdnZxS1ZpVmtXR0VVT0tzaEZsQlZLQ2o5ekp1NmtuSS0xcEhHQ1V5c0FxNTF1TUVERFIwSjlZVE0zLVNTTUg5Y1d4WGxkVmNHYW1SOXBPaXFPdmdkU1ZvLUVPZUZvU0xLOW9lZU5FZE42bXBIZnVRTDV0T0lqUGRPZVNGczFfbFcwbnN3VEN6T1d6WTZsUDNfYlVoTkE?oc=5",
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUmVJNkVsbUV5RGp2RnlFX3J1aERhLVM0R3B0ZjhhMl84dGg4RkV2SDZWMmYtUG93Nm1VZTlfYlhZcVdacEs3UHdvQmdmQnZrVzhhcWFhaGE4d3lCTFdvdS1tazZXZnpFbE1aNFhYaUtaTFlKenpUdmQ2NndsWDhKQWc0WFlobU15SGk3cDVtTmd0cWR2U0NuZ211dGFWSnZ5ZEY1eWNjSXplZU5VeEpxVFBEa0tMME1sd1hkNA?oc=5"
       ],
       "geo_lat": 33.263646,
       "geo_lon": 44.22362,
@@ -180,8 +220,8 @@
       "verification_score": 0.95,
       "id": "a2fbd4fc9843",
       "created_at": "2026-03-21T02:38:10.202744+00:00",
-      "last_updated": "2026-03-22T18:52:42.779499",
-      "source_count": 4
+      "last_updated": "2026-03-23T02:54:30.303386",
+      "source_count": 5
     },
     {
       "incident_type": "AIRPORT_ATTACK",
