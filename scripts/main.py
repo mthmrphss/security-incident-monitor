@@ -38,9 +38,9 @@ def main():
     logger.info("SECURITY INCIDENT MONITOR v2.0")
     logger.info("=" * 60)
 
-    gemini_key = os.environ.get("GEMINI_API_KEY")
-    if not gemini_key:
-        logger.error("GEMINI_API_KEY not found in environment")
+    api_key = os.environ.get("GROQ_API_KEY")
+    if not api_key:
+        logger.error("GROQ_API_KEY not found in environment")
         sys.exit(1)
 
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -49,7 +49,7 @@ def main():
     os.makedirs(data_dir, exist_ok=True)
 
     collector = NewsCollector(config_path)
-    analyzer = GeminiAnalyzer(gemini_key)
+    analyzer = GeminiAnalyzer(api_key)
     geocoder = GeocoderService(data_dir)
     storage = IncidentStorage(data_dir)
 
@@ -75,7 +75,7 @@ def main():
     # 4 — AI ANALYSIS (batched)
     logger.info("PHASE 4: AI analysis (3-stage pipeline)...")
     all_incidents = []
-    batch_size = 5
+    batch_size = 10
 
     for i in range(0, len(new_articles), batch_size):
         batch = new_articles[i : i + batch_size]
