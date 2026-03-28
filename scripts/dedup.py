@@ -234,7 +234,15 @@ class SmartDeduplicator:
                 m[f] = new
 
         for nf in ["casualties_dead", "casualties_injured"]:
-            m[nf] = max(m.get(nf, 0) or 0, secondary.get(nf, 0) or 0)
+            try:
+                val1 = int(m.get(nf, 0) or 0)
+            except (ValueError, TypeError):
+                val1 = 0
+            try:
+                val2 = int(secondary.get(nf, 0) or 0)
+            except (ValueError, TypeError):
+                val2 = 0
+            m[nf] = max(val1, val2)
 
         sev_order = {"critical": 4, "high": 3, "medium": 2, "low": 1}
         if sev_order.get(secondary.get("severity"), 0) > sev_order.get(m.get("severity"), 0):
