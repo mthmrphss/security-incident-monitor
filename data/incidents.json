@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-28T18:48:47.207648+00:00",
-    "total_incidents": 29,
+    "last_updated": "2026-03-28T18:53:53.426603+00:00",
+    "total_incidents": 30,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260328T180000Z",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Kerkük",
+      "location_detail": "Kerkük Havalimanı",
+      "airport_name": "Kerkük Havalimanı",
+      "airport_iata": "null",
+      "hotel_name": "null",
+      "venue_name": "Haşdi Şabi karargahı",
+      "attack_type": "hava saldırısı",
+      "severity": "low",
+      "casualties_dead": 3,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "3 killed in attack",
+      "summary_tr": "Saldırıda 3 kişi öldü",
+      "is_ongoing": "false",
+      "is_false_alarm": "false",
+      "tags": [
+        "Haşdi Şabi",
+        "Kerkük Havalimanı",
+        "hava saldırısı",
+        "false_alarm"
+      ],
+      "date": "20260328T1",
+      "year": 2026,
+      "source_urls": [
+        "https://www.haberler.com/guncel/kerkuk-havalimani-ndaki-hasdi-sabi-karargahina-hava-saldirisi-19696261-haberi/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": false,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.5,
+      "verification_status": "probable",
+      "verification_score": 0.5,
+      "id": "140f3cadbc20",
+      "created_at": "2026-03-28T18:53:53.426590+00:00",
+      "last_updated": "2026-03-28T18:53:53.426598+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
