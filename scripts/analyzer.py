@@ -351,7 +351,13 @@ STRICT RULES:
             if "false_alarm" not in tags:
                 tags.append("false_alarm")
             result["tags"] = tags
-
+            
+        # Sayısal alanları int'e zorla
+        for nf in ["casualties_dead", "casualties_injured"]:
+            try:
+                result[nf] = int(result[nf] or 0)
+            except (ValueError, TypeError):
+                result[nf] = 0
         return result
 
     # ═══════════════════════════════════════
