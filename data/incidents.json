@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-23T13:28:25.585403+00:00",
-    "total_incidents": 26,
+    "last_updated": "2026-03-28T18:48:47.207648+00:00",
+    "total_incidents": 29,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,171 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-28",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Erbil",
+      "location_detail": "near Erbil International Airport",
+      "airport_name": "Erbil International Airport",
+      "airport_iata": "EBL",
+      "hotel_name": "null",
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Drone attack foiled near Erbil International Airport",
+      "summary_tr": "Erbil Uluslararası Havalimanı yakınlarında drone saldırısı engellendi",
+      "is_ongoing": "false",
+      "is_false_alarm": "false",
+      "tags": [
+        "drone attack",
+        "airport security",
+        "false_alarm"
+      ],
+      "date": "2026-03-28",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPeTNqNXgya2RJeWM1WDRoc1htM2hTVERhbkM0YlcwQjRvWHJKXzhfRzNRVnVGZF91bXpmOTB1LUlGQS1qOTlmS1l3em1qSTYwRUhzX2x5Q3BOVGVDdVU4bm52MnBQdGs1ME9kdnJUOWRnZ3B6TjYwZ2ptN2pUU2RNT0Rpd1RmcnpzWFVBRQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 36.240412,
+      "geo_lon": 43.946569,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.8,
+      "verification_status": "verified",
+      "verification_score": 0.8,
+      "id": "2b974d01eee6",
+      "created_at": "2026-03-28T18:48:47.207602+00:00",
+      "last_updated": "2026-03-28T18:48:47.207611+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-28",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Mumbai",
+      "location_detail": "Mumbai airport",
+      "airport_name": "Mumbai airport",
+      "airport_iata": "BOM",
+      "hotel_name": "null",
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "58-year-old passenger",
+      "summary_en": "Bomb scare at Mumbai airport",
+      "summary_tr": "Mumbai havalimanında bomba alarmı",
+      "is_ongoing": false,
+      "is_false_alarm": "true",
+      "tags": [
+        "airport",
+        "bomb scare",
+        "arrest",
+        "false_alarm"
+      ],
+      "date": "2026-03-28",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNnVxZ3dybVR4OXRrVnlaSm42eGtyY2ZibktCVlBvT0JUSVBZaDRoY0Q2ZmVGQ1otSnJDcG1ycEpSRlZBWGlENnZYWDJTdU81WHBsRXZTSjN0UDRHbFU5emJua1hjNy1rQnJyZ2lEeXo5RlJCb2VXdkwyV09Ma3RXNUFNSzRBbmM5N1FxMk9LT2V6RWxoUGpEQURvR2dPNzB5WkRLbVJFZGpmWnlTYUkyRjFELUEzVU04TkV0TlRZRGtOdlJkOFUyMmhsajZid1FLMFFr0gHYAUFVX3lxTE5USGRNUmJfaWRHR2VBRlFrcVc3LVV0ZlMtcVd1UHRDeGM4SkhqQjZKdDRtb0JmbE9mMEFWM1BZZVNlSnF3NEh4cWprVVRzMFFndFA0bzVneFcxNXpMT1ZkdkUtSldHNGM5S0ZNQ0RwYnFiTXFMYTBoLXpwTDZ3ZUtVWmQ3Q3VORm5WeUxkZnZ4MV9jS3h6dm05MmpaQUZCbkk5TjNrbGlzY2ZiVERhY0Z6SUh0OU9JR2xXZVNDdUROaDk4Ull5cC1HVkRkeFlCRjRfZ0pqSUlhQw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 19.054999,
+      "geo_lon": 72.869203,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.8,
+      "verification_status": "verified",
+      "verification_score": 0.8,
+      "id": "e0619ae7a8fa",
+      "created_at": "2026-03-28T18:48:47.207625+00:00",
+      "last_updated": "2026-03-28T18:48:47.207629+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-28",
+      "country": "Kuwait",
+      "country_code": "KW",
+      "city": "unknown",
+      "location_detail": "Kuwait International Airport",
+      "airport_name": "Kuwait International Airport",
+      "airport_iata": "KWI",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Kuwait International Airport suffers damage in drone attacks",
+      "summary_tr": "Kuwait Uluslararası Havalimanı drone saldırılarında hasar gördü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "drone attack",
+        "airport security"
+      ],
+      "date": "2026-03-28",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 29.307466,
+      "geo_lon": 47.962808,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "d1327d83a94d",
+      "created_at": "2026-03-28T18:48:47.207639+00:00",
+      "last_updated": "2026-03-28T18:48:47.207643+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "date": "2026-03-23",
