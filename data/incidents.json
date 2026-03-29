@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-29T07:19:12.974957+00:00",
+    "last_updated": "2026-03-29T13:18:01.550258+00:00",
     "total_incidents": 30,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -215,8 +215,9 @@
       "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
+        "https://x.com/ConflictTR/status/2037982370129682555#m",
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5",
-        "https://x.com/ConflictTR/status/2037982370129682555#m"
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYXZMZklObUt5dlRzZDUyNmo3VW5vN2EzQ1Nqci1tUUc0OXgxZUktVEVLdzdQMVdTbDA1SFhHTDFXN2JpVzJNdWwyamxkTExyeWxnYnZkakFnYldlMXFhWG5kQzc5Tk1QOUlvY0lWOHNsNW8wRlh2aFhFVUlXTDIwX1NNRm1XVHp5ZlhZVTA5SHhYSmhySlozbnlTZ0phemoxcWtrbDliTE5VanNZOHJsWnRjaURXUzBP0gG-AUFVX3lxTE83eGp3aWpHNy14S3J3ajQ2QUp2a1FDdGRhdVRHSS1Ta29yZkV3VnZXSWlWbzVZNUNyVTZ5ZklsQjBSVjk3aUdDUWV2eXI1NDZwSldFc1N2b2Juemp4bWV1b2hxZVJVWHJRZHdIVm1JQktoc18wcm9mMERCYlhBeHVGLVRidFIxeERIUEFmYWdpR19yRUUyRzZTNWl4S2Z6YzczeGNPY1FqQW00NEx0eS1BcTVlaWk3azRsemtndVE?oc=5"
       ],
       "source_articles": [
         0
@@ -239,8 +240,8 @@
       "verification_score": 0.9,
       "id": "d1327d83a94d",
       "created_at": "2026-03-28T18:48:47.207639+00:00",
-      "last_updated": "2026-03-29T03:24:12.088971",
-      "source_count": 2
+      "last_updated": "2026-03-29T13:18:01.550181",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
