@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-28T18:53:53.426603+00:00",
+    "last_updated": "2026-03-29T03:24:12.089045+00:00",
     "total_incidents": 30,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -202,7 +202,7 @@
       "severity": "unknown",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "Iran",
       "summary_en": "Kuwait International Airport suffers damage in drone attacks",
       "summary_tr": "Kuwait Uluslararası Havalimanı drone saldırılarında hasar gördü",
       "is_ongoing": false,
@@ -214,7 +214,8 @@
       "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5"
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5",
+        "https://x.com/ConflictTR/status/2037982370129682555#m"
       ],
       "source_articles": [
         0
@@ -237,8 +238,8 @@
       "verification_score": 0.9,
       "id": "d1327d83a94d",
       "created_at": "2026-03-28T18:48:47.207639+00:00",
-      "last_updated": "2026-03-28T18:48:47.207643+00:00",
-      "source_count": 1
+      "last_updated": "2026-03-29T03:24:12.088971",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
