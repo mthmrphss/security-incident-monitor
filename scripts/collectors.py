@@ -214,13 +214,6 @@ class NewsCollector:
     # ══════════════════════════════════════
 
     def _collect_nitter(self) -> List[Dict]:
-        """
-        Nitter RSS ile Twitter/X hesaplarından haber topla.
-
-        - Birden fazla Nitter instance sırayla denenir
-        - Her instance için max_retries kadar tekrar denenir
-        - Çalışan instance hatırlanır, sonraki hesaplarda önce o denenir
-        """
         articles = []
         nitter_cfg = self.config.get("nitter", {})
 
@@ -241,7 +234,6 @@ class NewsCollector:
             category = account.get("category", "general")
             fetched = False
 
-            # Çalışan instance'ı öne al
             ordered = list(instances)
             if working_instance and working_instance in ordered:
                 ordered.remove(working_instance)
@@ -283,7 +275,6 @@ class NewsCollector:
                                 time.sleep(retry_delay)
                             continue
 
-                        # BAŞARILI
                         working_instance = instance_url
                         count = 0
 
@@ -331,7 +322,7 @@ class NewsCollector:
 
                     except requests.exceptions.ConnectionError:
                         logger.warning(f"    Connection error: {instance_url}")
-                        break  # Bu instance down, sonrakine geç
+                        break
 
                     except Exception as e:
                         logger.warning(f"    Error: {e}")
@@ -349,7 +340,84 @@ class NewsCollector:
         logger.info(f"  Nitter total: {len(articles)}")
         return articles
 
-        # ══════════════════════════════════════════
+    # ══════════════════════════════════════════
+    # ARTICLE CONTENT ENRICHMENT
+    # ══════════════════════════════════════════
+
+    def enrich_articles(self, articles: List[Dict]) -> List[Dict]:
+        """
+        Keyword filtreden geçen makalelerin gerçek içeriğini çek.
+        RSS'ten sadece başlık + 1-2 cümle geliyor.
+        Bu metot asıl haberin metnini alır.
+        """
+        logger.info(f"  Enriching {len(articles)} articles with full content...")
+
+        for i, article in enumerate(articles):
+            url = article.get("url", "")
+            if not url:
+                continue
+
+            # Zaten yeterli içerik varsa atla
+            if len(article.get("summary", "")) > 500:
+                continue
+
+            # Reddit, Twitter gibi kaynaklarda zaten içerik var
+            if article.get("source_type") in ("reddit", "twitter"):
+                continue
+
+            # Google News redirect URL'lerini atla (genelde 403 verir)
+            if "news.google.com" in url:
+                continue
+
+            try:
+                resp = self.session.get(url, timeout=10, allow_redirects=True)
+
+                if resp.status_code != 200:
+                    continue
+
+                content_type = resp.headers.get("content-type", "")
+                if "text/html" not in content_type:
+                    continue
+
+                soup = BeautifulSoup(resp.text, "lxml")
+
+                # Gereksiz elementleri kaldır
+                for tag in soup(["script", "style", "nav", "header",
+                                 "footer", "aside", "form", "iframe",
+                                 "figure", "figcaption", "button"]):
+                    tag.decompose()
+
+                # Makale gövdesini bul
+                article_tag = soup.find("article")
+                if article_tag:
+                    text = article_tag.get_text(separator=" ", strip=True)
+                else:
+                    paragraphs = soup.find_all("p")
+                    text = " ".join(
+                        p.get_text(strip=True) for p in paragraphs
+                        if len(p.get_text(strip=True)) > 40
+                    )
+
+                text = re.sub(r"\s+", " ", text).strip()
+
+                if len(text) > 100:
+                    article["summary"] = text[:1000]
+                    article["enriched"] = True
+                    logger.info(f"    [{i+1}] Enriched: {len(text)} chars → 1000")
+
+            except requests.exceptions.Timeout:
+                logger.warning(f"    [{i+1}] Timeout: {url[:60]}")
+            except Exception as e:
+                logger.warning(f"    [{i+1}] Enrich error: {str(e)[:80]}")
+
+            time.sleep(0.5)
+
+        enriched_count = sum(1 for a in articles if a.get("enriched"))
+        logger.info(f"  Enriched {enriched_count}/{len(articles)} articles")
+
+        return articles
+
+    # ══════════════════════════════════════════
     # KEYWORD FILTER
     # ══════════════════════════════════════════
 
@@ -361,7 +429,6 @@ class NewsCollector:
           İkisi de varsa → geçir
         """
 
-        # ── KONU KELİMELERİ (en az 1 tanesi olmalı) ──
         TOPIC_WORDS = {
             "airport", "airfield", "aerodrome", "terminal",
             "airline", "airways", "aviation",
@@ -378,7 +445,6 @@ class NewsCollector:
             "aeropuerto",
         }
 
-        # ── OLAY KELİMELERİ (en az 1 tanesi olmalı) ──
         EVENT_WORDS = {
             "attack", "attacked", "attacker",
             "bomb", "bombing", "bombed", "bomber",
@@ -416,29 +482,24 @@ class NewsCollector:
         for article in articles:
             text = f"{article.get('title', '')} {article.get('summary', '')}".lower()
 
-            # Negatif keyword kontrolü
             has_negative = any(neg in text for neg in self.negative_keywords)
             if has_negative:
-                # Negatif varsa çok güçlü eşleşme gerekli
                 min_topic = 1
                 min_event = 2
             else:
                 min_topic = 1
                 min_event = 1
 
-            # Konu kelimesi ara
             topic_matches = []
             for tw in TOPIC_WORDS:
                 if tw in text:
                     topic_matches.append(tw)
 
-            # Olay kelimesi ara
             event_matches = []
             for ew in EVENT_WORDS:
                 if ew in text:
                     event_matches.append(ew)
 
-            # Karar
             if len(topic_matches) >= min_topic and len(event_matches) >= min_event:
                 article["keyword_score"] = len(topic_matches) + len(event_matches)
                 article["topic_matches"] = topic_matches[:5]
@@ -446,7 +507,6 @@ class NewsCollector:
                 article["has_negative_keyword"] = has_negative
                 filtered.append(article)
 
-        # Skora göre sırala (en yüksek önce)
         filtered.sort(key=lambda x: x.get("keyword_score", 0), reverse=True)
 
         return filtered
@@ -475,6 +535,7 @@ class NewsCollector:
         clean = re.sub(r"\s+", " ", clean).strip()
         if clean.startswith("R to @") and len(clean) < 30:
             return ""
+        clean = re.sub(r"pic\.twitter\.com/\S+", "", clean).strip()
         return clean[:2000]
 
     def _nitter_to_twitter_url(self, nitter_url: str, instance: str) -> str:
@@ -512,7 +573,6 @@ class NewsCollector:
             dt = date_parser.parse(date_str)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=timezone.utc)
-            now = datetime.now(timezone.utc)
-            return (now - dt) <= timedelta(hours=hours)
+            return (datetime.now(timezone.utc) - dt) <= timedelta(hours=hours)
         except Exception:
             return True
