@@ -71,7 +71,12 @@ def main():
     if not new_articles:
         logger.info("No new articles found. Done.")
         return
-
+        
+    # 3.5 — ENRICH CONTENT
+    if new_articles:
+        logger.info("PHASE 3.5: Enriching article content...")
+        new_articles = collector.enrich_articles(new_articles)
+        
     # 4 — AI ANALYSIS (batched)
     logger.info("PHASE 4: AI analysis (3-stage pipeline)...")
     all_incidents = []
