@@ -358,6 +358,72 @@ STRICT RULES:
                 result[nf] = int(result[nf] or 0)
             except (ValueError, TypeError):
                 result[nf] = 0
+
+        # Boolean alanları düzelt (LLM bazen string döndürür)
+        for bf in ["is_false_alarm", "is_ongoing"]:
+            val = result.get(bf)
+            if isinstance(val, str):
+                result[bf] = val.lower() in ("true", "1", "yes")
+
+        # attack_type'ı normalize et
+        attack_map = {
+            "hava saldırısı": "airstrike",
+            "bombalama": "bombing",
+            "bombalı saldırı": "bombing",
+            "silahlı saldırı": "shooting",
+            "bıçaklı saldırı": "stabbing",
+            "drone saldırısı": "drone",
+            "intihar saldırısı": "bombing",
+            "araçlı saldırı": "vehicle",
+            "roket saldırısı": "bombing",
+            "füze saldırısı": "bombing",
+            "airstrike": "airstrike",
+            "air strike": "airstrike",
+            "rocket attack": "bombing",
+            "missile": "bombing",
+            "car bomb": "bombing",
+            "suicide bomb": "bombing",
+            "ied": "bombing",
+        }
+        at = (result.get("attack_type") or "other").lower()
+        result["attack_type"] = attack_map.get(at, at)
+
+        valid_attacks = {
+            "bombing", "shooting", "stabbing", "assault", "explosion",
+            "siege", "threat", "drone", "arson", "airstrike",
+            "vehicle", "other"
+        }
+        if result["attack_type"] not in valid_attacks:
+            result["attack_type"] = "other"
+
+        # null string'leri None'a çevir
+        for field in ["airport_name", "airport_iata", "hotel_name"]:
+            if result.get(field) in ("null", "NULL", "None", "none", ""):
+                result[field] = None
+
+        # Ülke boşsa şehirden çıkar
+        known_cities = {
+            "kerkük": ("Iraq", "IQ"), "kirkuk": ("Iraq", "IQ"),
+            "bağdat": ("Iraq", "IQ"), "baghdad": ("Iraq", "IQ"),
+            "erbil": ("Iraq", "IQ"), "basra": ("Iraq", "IQ"),
+            "mosul": ("Iraq", "IQ"), "dubai": ("United Arab Emirates", "AE"),
+            "abu dhabi": ("United Arab Emirates", "AE"),
+            "riyadh": ("Saudi Arabia", "SA"), "jeddah": ("Saudi Arabia", "SA"),
+            "doha": ("Qatar", "QA"), "kuwait city": ("Kuwait", "KW"),
+            "beirut": ("Lebanon", "LB"), "damascus": ("Syria", "SY"),
+            "aleppo": ("Syria", "SY"), "kabul": ("Afghanistan", "AF"),
+            "mogadishu": ("Somalia", "SO"), "istanbul": ("Turkey", "TR"),
+            "ankara": ("Turkey", "TR"), "tel aviv": ("Israel", "IL"),
+            "jerusalem": ("Israel", "IL"), "tehran": ("Iran", "IR"),
+            "cairo": ("Egypt", "EG"), "tripoli": ("Libya", "LY"),
+            "sanaa": ("Yemen", "YE"), "aden": ("Yemen", "YE"),
+        }
+        if result.get("country") in ("unknown", "null", "", None):
+            city_lower = (result.get("city") or "").lower().strip()
+            if city_lower in known_cities:
+                result["country"] = known_cities[city_lower][0]
+                result["country_code"] = known_cities[city_lower][1]
+
         return result
 
     # ═══════════════════════════════════════
