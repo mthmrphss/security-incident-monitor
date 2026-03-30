@@ -203,5 +203,10 @@
     "lat": 33.640712,
     "lon": -84.446227,
     "display_name": "Airport, 6000, North Terminal Parkway, Atlanta, Clayton County, Georgia, 30337, United States"
+  },
+  "columbus, united states": {
+    "lat": 39.96226,
+    "lon": -83.000707,
+    "display_name": "Columbus, Franklin County, Ohio, United States"
   }
 }

@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-30T03:27:54.101708+00:00",
-    "total_incidents": 31,
+    "last_updated": "2026-03-30T08:00:01.960886+00:00",
+    "total_incidents": 33,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -78,6 +78,116 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Columbus",
+      "location_detail": "on flight from Columbus to Atlanta",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Passenger makes verbal bomb threat",
+      "summary_tr": "Yolcu bomba tehdidi savurdu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "flight"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaWxsMHJoekNiYlBCNmpCNXdGeUEyZTdCZVgydVgwalpaV0todFZrelhjaGc0ejN5Rl9sRFJMRDJnbWdJa3FGTkZHYmt1cEhOWVdBNW5MU3N1a083bmVGY0FNenZ3SWV3anhTUjJUbnNBa25jQmlQU0RXQ2xLanM0WEFWTkV1MzkwbVBqYjNQSUxXa0w2aENCTll0cWI3WENQY2VSYUJoQnNRQUd4Z1pKNnlFV1ViNDZkOHZacWtjN2UtdDVGYlRtT0hnSjY1RW14RlU4MEJR?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 39.96226,
+      "geo_lon": -83.000707,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "c901428d219a",
+      "created_at": "2026-03-30T08:00:01.960853+00:00",
+      "last_updated": "2026-03-30T08:00:01.960864+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "Baghdad International Airport",
+      "airport_name": "Baghdad International Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Iran-backed Iraqi militias",
+      "summary_en": "Aircraft damaged in drone attack",
+      "summary_tr": null,
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "drone attack",
+        "airport",
+        "Iraq"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/clashreport/status/2038503284629987436#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.234216,
+      "geo_lon": 44.239916,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "d60c382041b1",
+      "created_at": "2026-03-30T08:00:01.960878+00:00",
+      "last_updated": "2026-03-30T08:00:01.960881+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-03-29",
       "country": "United States",
       "country_code": "US",
@@ -104,11 +214,12 @@
       "date": "2026-03-29",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXRMQlU4Y2RRTXVSb0xnZW5PN3RXeFlyTktSUmNLRUJjZnBRSW1SMzRpQlF3WWFnSGNObElBYUxva1MyNTNXcE85eUEyQXFqQnpGSmVlMXJYTjZPX0xzSlE4V21XOWdIa1ZSX2RGU1U5d3lhNkdpU2J0NnRYQ1A1TmFmeWF1dF83QllEYXJfNGNoc3ZLajNBbHNvRdIBoAFBVV95cUxQWlA4Q21JX1JvRmVTTm4wU2cxM18xSUl1dmhodXMwWThJSV9JcExwa3Z2VlNSeDNmUEo0eU01Z2xEbUFkVW1ER25oclpkNlQxbkZ5Tl80dWlTMHdHaWwzTlk4dVQySk56cHkzLXEyaU5FeENuWnZQOVR0UFNoeUdBb3h2QWFEWDZsYUEtdG00dGxnaHNVMmhFQ29Cclc0aGw1?oc=5",
         "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRFRxbWltQURWWWRWRU41RlRwSElCYmZ1dUhTbDlYVElCRzdkYVMyN1c4NDZuRDNSYWNuWnZDbTZuR3Y2cm5UYWRyQU1JeXRZOUFiOTIyaV9lZUhvc01ZWVRXUjcwNjNxN1dTZEpJZkNyeDVSZUIwbURQN0xRZlRaOGpObjFDdWM1MFNUSTlMd0hOeHMzRV8wSVNhOGRSTkluZGxqRGh3Vmt1M3Rrd1HSAcIBQVVfeXFMUExiTjNPcFV5cFFGdTVRNlBqRkF4VEpNRUZPTF9LR2tDNHg2ZTNveW85ZlNXVk5yVDFwNkZwU1dqcnRfQktoTmlUMHBpSEZZbUd6eEdWU0VNMkh4ZDRjajVLTUlWV3o3bGFieS1YWFFKNkg1aGtsbVRCdEpQc3VVM2E5TW96cXZwNWJKRFRWbHI2X3Z4dThoQWpJemZMV0NTakUxWEYxZ3dQMkFkTi1TNF9YTkthMVVlZTl6OXJRenFTSnc?oc=5",
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQjJ4N1RJV1lNZHotZ1pNSG1nT0drTng2Rlh4MmNZZmNaWE12Tk1OcGEyQ1JyRWlOQkhDa1lvUlk0eHRKSDc3YVlMUDQzZWtKQWxDOUQwUU1oX3cwNUl5RmNMS2d5a0ZTeEdNQXA1OU5NYWhBOHhvN05mRE00ZUxYQ216TUNQSkFOMG5sM2E5R0xZTGJTTjJSNG1mWUp5VnBxamdtOEdybTZfYUdLSnFMQmNDV0JBZW1IM2Vv?oc=5",
-        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5",
-        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5"
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXRMQlU4Y2RRTXVSb0xnZW5PN3RXeFlyTktSUmNLRUJjZnBRSW1SMzRpQlF3WWFnSGNObElBYUxva1MyNTNXcE85eUEyQXFqQnpGSmVlMXJYTjZPX0xzSlE4V21XOWdIa1ZSX2RGU1U5d3lhNkdpU2J0NnRYQ1A1TmFmeWF1dF83QllEYXJfNGNoc3ZLajNBbHNvRdIBoAFBVV95cUxQWlA4Q21JX1JvRmVTTm4wU2cxM18xSUl1dmhodXMwWThJSV9JcExwa3Z2VlNSeDNmUEo0eU01Z2xEbUFkVW1ER25oclpkNlQxbkZ5Tl80dWlTMHdHaWwzTlk4dVQySk56cHkzLXEyaU5FeENuWnZQOVR0UFNoeUdBb3h2QWFEWDZsYUEtdG00dGxnaHNVMmhFQ29Cclc0aGw1?oc=5",
+        "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQVFZWeTRMZ0RKdDU5MG5udlAyemw4RTlzVzRzYVBOZ2hROExWcXFJMjdNbFhRQWJQQ21FaUkxMl9WZERERlN6X2Jrek5IZ0hoNzJ6Z0hKeFNRdVZrWFdFZzVscGk1bnZtMFpYempEdHMxSWRyVjhjMlprZEZFdEJGRVhyeTc5bmNaUERxcU13M1FfOFVRdjZWN3laczhralJydEo5YWg0blZEQXUxZWMxZG9MS3Q1U3NKX1ExbHpmUUF5eXpPVlJxdEZqb0c0UWNuZjlBZzdDbTkwQW5aMHpJNWQ4WHlQVUg2b2ZwazBJdk9ITGppYy1OV2lKM18?oc=5",
+        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5",
+        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5"
       ],
       "source_articles": [
         0
@@ -129,8 +240,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 5,
-      "last_updated": "2026-03-30T03:27:54.101701+00:00",
+      "source_count": 6,
+      "last_updated": "2026-03-30T08:00:01.956712",
       "id": "0974cf02896e",
       "created_at": "2026-03-30T03:27:54.101692+00:00"
     },
