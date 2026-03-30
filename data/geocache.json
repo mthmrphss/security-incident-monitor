@@ -188,5 +188,20 @@
     "lat": 36.240412,
     "lon": 43.946569,
     "display_name": "فڕۆکەخانەی نێودەوڵەتی هەولێر, شەقامی زاگرۆس, ڕەشکین, ناحیەی ناوەندی هەولێر, قەزای ناوەندی هەولێر, پارێزگای ھەولێر, هەرێمی کوردستان, 22004, العراق"
+  },
+  "airport, atlanta, united states": {
+    "lat": 33.640712,
+    "lon": -84.446227,
+    "display_name": "Airport, 6000, North Terminal Parkway, Atlanta, Clayton County, Georgia, 30337, United States"
+  },
+  "airport, atlanta": {
+    "lat": 33.640712,
+    "lon": -84.446227,
+    "display_name": "Airport, 6000, North Terminal Parkway, Atlanta, Clayton County, Georgia, 30337, United States"
+  },
+  "airport, atlanta, usa": {
+    "lat": 33.640712,
+    "lon": -84.446227,
+    "display_name": "Airport, 6000, North Terminal Parkway, Atlanta, Clayton County, Georgia, 30337, United States"
   }
 }

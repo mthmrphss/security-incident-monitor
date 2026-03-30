@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-29T13:18:01.550258+00:00",
-    "total_incidents": 30,
+    "last_updated": "2026-03-30T03:27:54.101708+00:00",
+    "total_incidents": 31,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -74,6 +74,65 @@
       "created_at": "2026-03-28T18:53:53.426590+00:00",
       "last_updated": "2026-03-28T18:53:53.426598+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-29",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Atlanta",
+      "location_detail": "Atlanta airport",
+      "airport_name": "Atlanta airport",
+      "airport_iata": "ATL",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Frontier flight bomb threat scare",
+      "summary_tr": "Frontier uçağı bomba tehdidi alarmı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "Frontier flight"
+      ],
+      "date": "2026-03-29",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXRMQlU4Y2RRTXVSb0xnZW5PN3RXeFlyTktSUmNLRUJjZnBRSW1SMzRpQlF3WWFnSGNObElBYUxva1MyNTNXcE85eUEyQXFqQnpGSmVlMXJYTjZPX0xzSlE4V21XOWdIa1ZSX2RGU1U5d3lhNkdpU2J0NnRYQ1A1TmFmeWF1dF83QllEYXJfNGNoc3ZLajNBbHNvRdIBoAFBVV95cUxQWlA4Q21JX1JvRmVTTm4wU2cxM18xSUl1dmhodXMwWThJSV9JcExwa3Z2VlNSeDNmUEo0eU01Z2xEbUFkVW1ER25oclpkNlQxbkZ5Tl80dWlTMHdHaWwzTlk4dVQySk56cHkzLXEyaU5FeENuWnZQOVR0UFNoeUdBb3h2QWFEWDZsYUEtdG00dGxnaHNVMmhFQ29Cclc0aGw1?oc=5",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRFRxbWltQURWWWRWRU41RlRwSElCYmZ1dUhTbDlYVElCRzdkYVMyN1c4NDZuRDNSYWNuWnZDbTZuR3Y2cm5UYWRyQU1JeXRZOUFiOTIyaV9lZUhvc01ZWVRXUjcwNjNxN1dTZEpJZkNyeDVSZUIwbURQN0xRZlRaOGpObjFDdWM1MFNUSTlMd0hOeHMzRV8wSVNhOGRSTkluZGxqRGh3Vmt1M3Rrd1HSAcIBQVVfeXFMUExiTjNPcFV5cFFGdTVRNlBqRkF4VEpNRUZPTF9LR2tDNHg2ZTNveW85ZlNXVk5yVDFwNkZwU1dqcnRfQktoTmlUMHBpSEZZbUd6eEdWU0VNMkh4ZDRjajVLTUlWV3o3bGFieS1YWFFKNkg1aGtsbVRCdEpQc3VVM2E5TW96cXZwNWJKRFRWbHI2X3Z4dThoQWpJemZMV0NTakUxWEYxZ3dQMkFkTi1TNF9YTkthMVVlZTl6OXJRenFTSnc?oc=5",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQjJ4N1RJV1lNZHotZ1pNSG1nT0drTng2Rlh4MmNZZmNaWE12Tk1OcGEyQ1JyRWlOQkhDa1lvUlk0eHRKSDc3YVlMUDQzZWtKQWxDOUQwUU1oX3cwNUl5RmNMS2d5a0ZTeEdNQXA1OU5NYWhBOHhvN05mRE00ZUxYQ216TUNQSkFOMG5sM2E5R0xZTGJTTjJSNG1mWUp5VnBxamdtOEdybTZfYUdLSnFMQmNDV0JBZW1IM2Vv?oc=5",
+        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5",
+        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.640712,
+      "geo_lon": -84.446227,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 5,
+      "last_updated": "2026-03-30T03:27:54.101701+00:00",
+      "id": "0974cf02896e",
+      "created_at": "2026-03-30T03:27:54.101692+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
