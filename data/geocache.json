@@ -213,5 +213,15 @@
     "lat": 50.724182,
     "lon": -1.855312,
     "display_name": "Langtry Manor Hotel, 26, Derby Road, Springbourne, Bournemouth, Bournemouth, Christchurch and Poole, England, BH1 3QB, United Kingdom"
+  },
+  "airport, mashhad, iran": {
+    "lat": 36.231254,
+    "lon": 59.65476,
+    "display_name": "فرودگاه, منطقه ۷, شهر مشهد, بخش مرکزی شهرستان مشهد, شهرستان مشهد, استان خراسان رضوی, ایران"
+  },
+  "tehran, iran": {
+    "lat": 35.689252,
+    "lon": 51.3896,
+    "display_name": "شهر تهران, بخش مرکزی شهرستان تهران, شهرستان تهران, استان تهران, ایران"
   }
 }

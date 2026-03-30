@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-30T13:54:48.261322+00:00",
-    "total_incidents": 35,
+    "last_updated": "2026-03-30T19:12:15.504024+00:00",
+    "total_incidents": 37,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -293,6 +293,63 @@
       "id": "d60c382041b1",
       "created_at": "2026-03-30T13:54:48.261314+00:00",
       "last_updated": "2026-03-30T13:54:48.261317+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "Mashhad",
+      "location_detail": "Mashhad Airport",
+      "airport_name": "Mashhad Airport",
+      "airport_iata": "MHD",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "US",
+      "summary_en": "US strike hits Iranian aircraft",
+      "summary_tr": "ABD saldırısı İran uçağına çarptı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "US",
+        "Iran",
+        "Mashhad Airport",
+        "aircraft",
+        "strike"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigwJBVV95cUxOQWU2T1pnR2Y0NkduY3NZdFY5Y3pKVHUtN05VY2dFb00yU1hoTWNxTFlpcnFROTE0Y28xc3daZVZ0NGc5MUVkV25jazlYOFMxR1FjdmZSS1BqdzU0dFJxYnBUaDhKSHhFdmtvc3kyaTJkdmVUMzI4MC1XYnRib0RrWFRrdUFJWDg5aDBITTVWU3k1cjMxN19HaDJfb3BVck5Cd2RQU1F4c3N4VzlCV1Z0YjJ0dHhKeEFyM0hlczdCLWQyU0ZaUVZVZUlveGxxcjJYdktTMFNQMG5yWFNGQlE2WHB5cENBTi1vc2FDZWlzU1RBNWt2WUNMS0VqNWZPUTBPVTVN?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 36.231254,
+      "geo_lon": 59.65476,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "990583c39051",
+      "created_at": "2026-03-30T19:12:15.503994+00:00",
+      "last_updated": "2026-03-30T19:12:15.504006+00:00",
       "source_count": 1
     },
     {
@@ -1600,6 +1657,61 @@
       "last_updated": "2026-03-17T13:28:52.350921",
       "id": "930d77825270",
       "created_at": "2026-03-16T17:22:34.782529+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-03-08",
+      "publish_date": "20260330T184500Z",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "Tehran",
+      "location_detail": "Shahran oil refinery",
+      "airport_name": null,
+      "airport_iata": "IKA",
+      "hotel_name": null,
+      "venue_name": "Shahran oil refinery",
+      "attack_type": "airstrike",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Airstrike on Shahran oil refinery",
+      "summary_tr": "Şehran petrol rafinerisine hava saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airstrike",
+        "oil refinery",
+        "Iran"
+      ],
+      "date": "2026-03-08",
+      "year": 2026,
+      "source_urls": [
+        "https://edition.cnn.com/2026/03/30/world/middle-east-civilian-targets-iran-war-intl"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.689252,
+      "geo_lon": 51.3896,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "7396490b323c",
+      "created_at": "2026-03-30T19:12:15.504014+00:00",
+      "last_updated": "2026-03-30T19:12:15.504019+00:00",
+      "source_count": 1
     }
   ]
 }
