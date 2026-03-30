@@ -208,5 +208,10 @@
     "lat": 39.96226,
     "lon": -83.000707,
     "display_name": "Columbus, Franklin County, Ohio, United States"
+  },
+  "hotel, bournemouth": {
+    "lat": 50.724182,
+    "lon": -1.855312,
+    "display_name": "Langtry Manor Hotel, 26, Derby Road, Springbourne, Bournemouth, Bournemouth, Christchurch and Poole, England, BH1 3QB, United Kingdom"
   }
 }

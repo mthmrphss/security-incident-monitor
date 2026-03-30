@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-30T08:00:01.960886+00:00",
-    "total_incidents": 33,
+    "last_updated": "2026-03-30T13:54:48.261322+00:00",
+    "total_incidents": 35,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,61 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260330T104500Z",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Bournemouth",
+      "location_detail": "Roundhouse Hotel",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": "Roundhouse Hotel",
+      "venue_name": "hotel",
+      "attack_type": "assault",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Mehmet and Veli Bulbul",
+      "summary_en": "Brothers attack asylum seekers",
+      "summary_tr": "Kardeşler sığınmacılara saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "revenge attack",
+        "asylum seekers",
+        "migrant hotel"
+      ],
+      "date": "20260330T1",
+      "year": 2026,
+      "source_urls": [
+        "https://www.dailymail.co.uk/news/article-15690903/Brothers-carried-revenge-attack-asylum-seekers-living-notorious-migrant-hotel-avoid-jail.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 50.724182,
+      "geo_lon": -1.855312,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": false,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "945fa6d871db",
+      "created_at": "2026-03-30T13:54:48.261293+00:00",
+      "last_updated": "2026-03-30T13:54:48.261303+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
@@ -187,6 +242,61 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-03-30",
+      "publish_date": "20260330T130000Z",
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "Baghdad International Airport",
+      "airport_name": "Baghdad International Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Rocket attack on Baghdad airport",
+      "summary_tr": "Bağdat havalimanına roketli saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport attack",
+        "rocket attack",
+        "Iraq"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://diyarbakirsoz.com/dunya/bagdat-uluslararasi-havalimanina-roketli-saldiri-560847"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.234216,
+      "geo_lon": 44.239916,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.65,
+      "verification_status": "probable",
+      "verification_score": 0.65,
+      "id": "d60c382041b1",
+      "created_at": "2026-03-30T13:54:48.261314+00:00",
+      "last_updated": "2026-03-30T13:54:48.261317+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
       "publish_date": "2026-03-29",
       "country": "United States",
@@ -216,10 +326,11 @@
       "source_urls": [
         "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRFRxbWltQURWWWRWRU41RlRwSElCYmZ1dUhTbDlYVElCRzdkYVMyN1c4NDZuRDNSYWNuWnZDbTZuR3Y2cm5UYWRyQU1JeXRZOUFiOTIyaV9lZUhvc01ZWVRXUjcwNjNxN1dTZEpJZkNyeDVSZUIwbURQN0xRZlRaOGpObjFDdWM1MFNUSTlMd0hOeHMzRV8wSVNhOGRSTkluZGxqRGh3Vmt1M3Rrd1HSAcIBQVVfeXFMUExiTjNPcFV5cFFGdTVRNlBqRkF4VEpNRUZPTF9LR2tDNHg2ZTNveW85ZlNXVk5yVDFwNkZwU1dqcnRfQktoTmlUMHBpSEZZbUd6eEdWU0VNMkh4ZDRjajVLTUlWV3o3bGFieS1YWFFKNkg1aGtsbVRCdEpQc3VVM2E5TW96cXZwNWJKRFRWbHI2X3Z4dThoQWpJemZMV0NTakUxWEYxZ3dQMkFkTi1TNF9YTkthMVVlZTl6OXJRenFTSnc?oc=5",
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQjJ4N1RJV1lNZHotZ1pNSG1nT0drTng2Rlh4MmNZZmNaWE12Tk1OcGEyQ1JyRWlOQkhDa1lvUlk0eHRKSDc3YVlMUDQzZWtKQWxDOUQwUU1oX3cwNUl5RmNMS2d5a0ZTeEdNQXA1OU5NYWhBOHhvN05mRE00ZUxYQ216TUNQSkFOMG5sM2E5R0xZTGJTTjJSNG1mWUp5VnBxamdtOEdybTZfYUdLSnFMQmNDV0JBZW1IM2Vv?oc=5",
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXRMQlU4Y2RRTXVSb0xnZW5PN3RXeFlyTktSUmNLRUJjZnBRSW1SMzRpQlF3WWFnSGNObElBYUxva1MyNTNXcE85eUEyQXFqQnpGSmVlMXJYTjZPX0xzSlE4V21XOWdIa1ZSX2RGU1U5d3lhNkdpU2J0NnRYQ1A1TmFmeWF1dF83QllEYXJfNGNoc3ZLajNBbHNvRdIBoAFBVV95cUxQWlA4Q21JX1JvRmVTTm4wU2cxM18xSUl1dmhodXMwWThJSV9JcExwa3Z2VlNSeDNmUEo0eU01Z2xEbUFkVW1ER25oclpkNlQxbkZ5Tl80dWlTMHdHaWwzTlk4dVQySk56cHkzLXEyaU5FeENuWnZQOVR0UFNoeUdBb3h2QWFEWDZsYUEtdG00dGxnaHNVMmhFQ29Cclc0aGw1?oc=5",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UeTFQanBmTkVnWENKY2tFUGRqSHc4Mzh6Q0lmbTJydDdHeW1kZFk1WGJhMnBXQWZaVFJUVC00Ym9McDZiYXZqZkswb1ZpNnVCYUIyMGRzb2FwSXhzaFZOQVU0U0pVd2VLbVdIbXdYeW8?oc=5",
         "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQVFZWeTRMZ0RKdDU5MG5udlAyemw4RTlzVzRzYVBOZ2hROExWcXFJMjdNbFhRQWJQQ21FaUkxMl9WZERERlN6X2Jrek5IZ0hoNzJ6Z0hKeFNRdVZrWFdFZzVscGk1bnZtMFpYempEdHMxSWRyVjhjMlprZEZFdEJGRVhyeTc5bmNaUERxcU13M1FfOFVRdjZWN3laczhralJydEo5YWg0blZEQXUxZWMxZG9MS3Q1U3NKX1ExbHpmUUF5eXpPVlJxdEZqb0c0UWNuZjlBZzdDbTkwQW5aMHpJNWQ4WHlQVUg2b2ZwazBJdk9ITGppYy1OV2lKM18?oc=5",
-        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5",
-        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5"
+        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXRMQlU4Y2RRTXVSb0xnZW5PN3RXeFlyTktSUmNLRUJjZnBRSW1SMzRpQlF3WWFnSGNObElBYUxva1MyNTNXcE85eUEyQXFqQnpGSmVlMXJYTjZPX0xzSlE4V21XOWdIa1ZSX2RGU1U5d3lhNkdpU2J0NnRYQ1A1TmFmeWF1dF83QllEYXJfNGNoc3ZLajNBbHNvRdIBoAFBVV95cUxQWlA4Q21JX1JvRmVTTm4wU2cxM18xSUl1dmhodXMwWThJSV9JcExwa3Z2VlNSeDNmUEo0eU01Z2xEbUFkVW1ER25oclpkNlQxbkZ5Tl80dWlTMHdHaWwzTlk4dVQySk56cHkzLXEyaU5FeENuWnZQOVR0UFNoeUdBb3h2QWFEWDZsYUEtdG00dGxnaHNVMmhFQ29Cclc0aGw1?oc=5",
+        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5"
       ],
       "source_articles": [
         0
@@ -240,8 +351,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 6,
-      "last_updated": "2026-03-30T08:00:01.956712",
+      "source_count": 7,
+      "last_updated": "2026-03-30T13:54:48.253399",
       "id": "0974cf02896e",
       "created_at": "2026-03-30T03:27:54.101692+00:00"
     },
@@ -385,9 +496,10 @@
       "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
-        "https://x.com/ConflictTR/status/2037982370129682555#m",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYXZMZklObUt5dlRzZDUyNmo3VW5vN2EzQ1Nqci1tUUc0OXgxZUktVEVLdzdQMVdTbDA1SFhHTDFXN2JpVzJNdWwyamxkTExyeWxnYnZkakFnYldlMXFhWG5kQzc5Tk1QOUlvY0lWOHNsNW8wRlh2aFhFVUlXTDIwX1NNRm1XVHp5ZlhZVTA5SHhYSmhySlozbnlTZ0phemoxcWtrbDliTE5VanNZOHJsWnRjaURXUzBP0gG-AUFVX3lxTE83eGp3aWpHNy14S3J3ajQ2QUp2a1FDdGRhdVRHSS1Ta29yZkV3VnZXSWlWbzVZNUNyVTZ5ZklsQjBSVjk3aUdDUWV2eXI1NDZwSldFc1N2b2Juemp4bWV1b2hxZVJVWHJRZHdIVm1JQktoc18wcm9mMERCYlhBeHVGLVRidFIxeERIUEFmYWdpR19yRUUyRzZTNWl4S2Z6YzczeGNPY1FqQW00NEx0eS1BcTVlaWk3azRsemtndVE?oc=5",
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYXZMZklObUt5dlRzZDUyNmo3VW5vN2EzQ1Nqci1tUUc0OXgxZUktVEVLdzdQMVdTbDA1SFhHTDFXN2JpVzJNdWwyamxkTExyeWxnYnZkakFnYldlMXFhWG5kQzc5Tk1QOUlvY0lWOHNsNW8wRlh2aFhFVUlXTDIwX1NNRm1XVHp5ZlhZVTA5SHhYSmhySlozbnlTZ0phemoxcWtrbDliTE5VanNZOHJsWnRjaURXUzBP0gG-AUFVX3lxTE83eGp3aWpHNy14S3J3ajQ2QUp2a1FDdGRhdVRHSS1Ta29yZkV3VnZXSWlWbzVZNUNyVTZ5ZklsQjBSVjk3aUdDUWV2eXI1NDZwSldFc1N2b2Juemp4bWV1b2hxZVJVWHJRZHdIVm1JQktoc18wcm9mMERCYlhBeHVGLVRidFIxeERIUEFmYWdpR19yRUUyRzZTNWl4S2Z6YzczeGNPY1FqQW00NEx0eS1BcTVlaWk3azRsemtndVE?oc=5"
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZjhrTHViZUNYUUZkdUdpdld1WklBc09Gd3hjVk5QbkZvRkVVZThwWGZMcjVEQWk3dm43UUg4dHh4QTVvQzVVa1ZQbnFjdEc5eTlBckZmZmhEZ0lmWWFmTUtMQmROeTBMYkRROWxTeEhVRWlsZ0NLT083QXAtd0hvVzJseU92eEg1YU4zOFdsSEZuUEdrQlVKTmkzdXowY0N3YS1kTHQ3QjktbHJfU1FVZGpuT09QcEI5VGc?oc=5",
+        "https://x.com/ConflictTR/status/2037982370129682555#m"
       ],
       "source_articles": [
         0
@@ -410,8 +522,8 @@
       "verification_score": 0.9,
       "id": "d1327d83a94d",
       "created_at": "2026-03-28T18:48:47.207639+00:00",
-      "last_updated": "2026-03-29T13:18:01.550181",
-      "source_count": 3
+      "last_updated": "2026-03-30T13:54:48.257414",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
