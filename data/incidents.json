@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-31T13:55:48.928011+00:00",
-    "total_incidents": 44,
+    "last_updated": "2026-03-31T19:19:07.068346+00:00",
+    "total_incidents": 47,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -293,6 +293,171 @@
       "id": "e12e174baa33",
       "created_at": "2026-03-31T07:33:16.218416+00:00",
       "last_updated": "2026-03-31T07:33:16.218426+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "event_date": "2026-03-31",
+      "publish_date": "2026-03-31",
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "city": "Al Kharj",
+      "location_detail": "residence of American pilots and aircrew",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "gathering",
+      "attack_type": "drone",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "IRGC Aerospace Force",
+      "summary_en": "Drone attack on US pilots' residence",
+      "summary_tr": "ABD pilotlarının evine drone saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "drone attack",
+        "military",
+        "Saudi Arabia"
+      ],
+      "date": "2026-03-31",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/ConflictTR/status/2039047342351872363#m",
+        "https://x.com/clashreport/status/2039048383516619161#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 23.83044,
+      "geo_lon": 47.684013,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-03-31T19:19:07.068326+00:00",
+      "id": "b9ecaad91f22",
+      "created_at": "2026-03-31T19:19:07.068319+00:00"
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260331T134500Z",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Marayoor",
+      "location_detail": "Marayoor town, panchayat office and a nearby hotel",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "hotel and panchayat office",
+      "attack_type": "assault",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 2,
+      "perpetrator": "wild buffalo",
+      "summary_en": "Wild buffalo attacks people in Marayoor",
+      "summary_tr": "Vahşi manda Marayoor'da insanlara saldırıyor",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "wild animal attack",
+        "hotel incident"
+      ],
+      "date": "2026-03-31",
+      "year": 2026,
+      "source_urls": [
+        "https://www.madhyamam.com/kerala/marayur-wild-buffalo-panchayat-office-hotel-two-injured-1507539"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 10.275742,
+      "geo_lon": 77.162036,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "e00ef0b7edc7",
+      "created_at": "2026-03-31T19:19:07.068334+00:00",
+      "last_updated": "2026-03-31T19:19:07.068336+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-03-31",
+      "publish_date": "20260331T134500Z",
+      "country": "Kosova",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "otel",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "otel",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Kosovalı taraftarlar",
+      "summary_en": "Attack on hotel where Turkey's national team is staying",
+      "summary_tr": "Türkiye A Milli Takımı'nın kaldığı otele saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "hotel attack",
+        "sports",
+        "Kosova"
+      ],
+      "date": "2026-03-31",
+      "year": 2026,
+      "source_urls": [
+        "https://www.kayserihaber.com.tr/haber/kosovada-a-milli-takimin-kaldigi-otele-saldiri-91001"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.7,
+      "verification_status": "verified",
+      "verification_score": 0.7,
+      "id": "2a7dc0f80235",
+      "created_at": "2026-03-31T19:19:07.068341+00:00",
+      "last_updated": "2026-03-31T19:19:07.068343+00:00",
       "source_count": 1
     },
     {
@@ -632,7 +797,7 @@
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
       "publish_date": "2026-03-30",
-      "country": "unknown",
+      "country": "United States",
       "country_code": "US",
       "city": "Atlanta",
       "location_detail": "‘Remote Location’",
@@ -657,8 +822,9 @@
       "date": "2026-03-30",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYjV0OTM3UmVvYVA2TElMbG9KcTlEZGlEMFdMdWhjdEdZdWxwS2RrWkpxY1hjU2NWLXA3OWY3cHlRN29NYnFCdE9hRGVacmhjR2RaTkVHOTRuTDhhME4yc2czZzhpaHQzTmlVR1ExNlVkcnRTTEpHbnIweFNBLS01RE9kV3JqbFptMzV0WEsteTk?oc=5",
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMUduZ3JwUWRmNDJHVnlxWVBzaEFPVWU2UkN5THBmWmdfNDBWZTB4cUNpSnJDWGJQaHRxZTJBMHM4T0ZFd05WeURpTmMzTndPcUUxeWRndllDQ0JYeHYyNlhOd3R4SURVcVQ1OURiTm50dzktVzNFdHB3MG92YXpoOHZLempnZGFseEVIbFNwVVNqLXphQUlPTnZWZ29wV3JESUV6WWlzdVRHdlk?oc=5"
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTE1QejVFVGh6NnNYaGsxbTdyZFNWclppT3Y0RF9yTTNqaG5FbGdJT3FlNmh0RDdhXzVwU2Npc19UTVluczBTUklnQl9mdGFpU2ZGRnlWc0hoWFh0SlhfbXVXSl91QlV4QXB5alVxT3JlN1hNamV3eGc?oc=5",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMUduZ3JwUWRmNDJHVnlxWVBzaEFPVWU2UkN5THBmWmdfNDBWZTB4cUNpSnJDWGJQaHRxZTJBMHM4T0ZFd05WeURpTmMzTndPcUUxeWRndllDQ0JYeHYyNlhOd3R4SURVcVQ1OURiTm50dzktVzNFdHB3MG92YXpoOHZLempnZGFseEVIbFNwVVNqLXphQUlPTnZWZ29wV3JESUV6WWlzdVRHdlk?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYjV0OTM3UmVvYVA2TElMbG9KcTlEZGlEMFdMdWhjdEdZdWxwS2RrWkpxY1hjU2NWLXA3OWY3cHlRN29NYnFCdE9hRGVacmhjR2RaTkVHOTRuTDhhME4yc2czZzhpaHQzTmlVR1ExNlVkcnRTTEpHbnIweFNBLS01RE9kV3JqbFptMzV0WEsteTk?oc=5"
       ],
       "source_articles": [
         0
@@ -681,8 +847,8 @@
       "verification_score": 0.6,
       "id": "47ae8a7f3a0a",
       "created_at": "2026-03-31T02:56:42.098273+00:00",
-      "last_updated": "2026-03-31T07:33:16.209967",
-      "source_count": 2
+      "last_updated": "2026-03-31T19:19:07.056212",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",

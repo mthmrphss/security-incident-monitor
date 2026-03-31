@@ -253,5 +253,15 @@
     "lat": 42.663877,
     "lon": 21.164085,
     "display_name": "Prishtinë, Komuna e Prishtinës / Opština Priština, Rajoni i Prishtinës / Prištinski okrug, Kosova / Kosovo"
+  },
+  "al kharj, saudi arabia": {
+    "lat": 23.83044,
+    "lon": 47.684013,
+    "display_name": "محافظة الخرج, منطقة الرياض, السعودية"
+  },
+  "marayoor, india": {
+    "lat": 10.275742,
+    "lon": 77.162036,
+    "display_name": "Marayoor, Devikulam, Idukki, Kerala, 685620, India"
   }
 }
