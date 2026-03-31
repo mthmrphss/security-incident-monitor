@@ -11,6 +11,44 @@ class SmartDeduplicator:
 
     SIMILARITY_THRESHOLD = 0.70
 
+    COUNTRY_ALIASES = {
+        "kosova": "kosovo",
+        "türkiye": "turkey",
+        "turkiye": "turkey",
+        "türkei": "turkey",
+        "turquie": "turkey",
+        "birlesik arap emirlikleri": "united arab emirates",
+        "bae": "united arab emirates",
+        "uae": "united arab emirates",
+        "abd": "united states",
+        "usa": "united states",
+        "amerika": "united states",
+        "ingiltere": "united kingdom",
+        "uk": "united kingdom",
+        "fransa": "france",
+        "almanya": "germany",
+        "rusya": "russia",
+        "cin": "china",
+        "japonya": "japan",
+        "misir": "egypt",
+        "irak": "iraq",
+        "iran": "iran",
+        "suriye": "syria",
+        "lübnan": "lebanon",
+        "lubnan": "lebanon",
+        "filistin": "palestine",
+        "israil": "israel",
+        "suudi arabistan": "saudi arabia",
+        "kuveyt": "kuwait",
+        "katar": "qatar",
+        "yemen": "yemen",
+        "libya": "libya",
+        "somali": "somalia",
+        "afganistan": "afghanistan",
+        "pakistan": "pakistan",
+        "hindistan": "india",
+    }
+
     LOCATION_ALIASES = {
         "istanbul": ["ist", "konstantinopol", "constantinople"],
         "new york": ["nyc", "ny", "jfk", "lga", "ewr", "new york city"],
@@ -269,9 +307,13 @@ class SmartDeduplicator:
         if not s:
             return ""
         s = s.lower().strip()
-        s = re.sub(r"[^a-zçğıöşüa-z0-9\s]", "", s)
-        return re.sub(r"\s+", " ", s).strip()
+        s = re.sub(r"[^a-zçğıöşü0-9\s]", "", s)
+        s = re.sub(r"\s+", " ", s).strip()
 
+        # Ülke/şehir isim varyasyonları
+        s = self.COUNTRY_ALIASES.get(s, s)
+        return s
+        
     def _are_aliases(self, a: str, b: str) -> bool:
         for canonical, aliases in self.LOCATION_ALIASES.items():
             all_names = [canonical] + aliases
