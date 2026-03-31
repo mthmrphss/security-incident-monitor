@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-30T19:12:15.504024+00:00",
-    "total_incidents": 37,
+    "last_updated": "2026-03-31T02:56:42.098282+00:00",
+    "total_incidents": 41,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -355,6 +355,171 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "unknown",
+      "country_code": "US",
+      "city": "Raleigh-Durham",
+      "location_detail": "Terminal 1",
+      "airport_name": "RDU",
+      "airport_iata": "RDU",
+      "hotel_name": null,
+      "venue_name": "Airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "anonymous",
+      "summary_en": "RDU's Terminal 1 reopens after anonymous bomb threat",
+      "summary_tr": "RDU Terminal 1, anonim bomba tehdidi sonrası yeniden açıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "evacuation"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWFRrZ2F6WTVLTUp1ZHNzQkRyaDBybVlteHFwNHlDNl9mQWI2UlJuRU1kbEhwZ2MycjlEbDFDVlBkc0U5NXMza0l4Z2pfd3FXYjJUaGltM19SbC10ak9PSDViSEkwSmZGc3dfMXptU2VxcnQ5TzlNSXA5TU5lTjdyNGxCLVhYeV9mOGJoNWR4NDltMmRDZDVXZWJBanXSAaIBQVVfeXFMTzk5aVU0TWl4bjVraWJHanphLVh5bUJjLTFGbXh3RkFrUlQtNFcybnFwWHRGejVpM3ViZHVyUm9uN0JZZWJrNGpROE5oVHZTRXk2ZU9SWHhFTlQ3RFZRdG9Va3hiQUttb1ZOUkVabUdRR3pPQ3p2UDVXakM3Y0VJV3YzQ0hPRFVCa21QaGhGT0tnQk5neDhIZ09XbVpmOTRKcVd3?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.85716,
+      "geo_lon": -78.818269,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "2e6b9fd2a261",
+      "created_at": "2026-03-31T02:56:42.098249+00:00",
+      "last_updated": "2026-03-31T02:56:42.098253+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Palm Springs",
+      "location_detail": "airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb squad conducts controlled detonation",
+      "summary_tr": "Bomb squad kontrollü patlatma yaptı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb squad",
+        "controlled detonation"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxOS0c3VF9nQ29wQTF3UFBGMmlVS1l5SWpSUDk2c0RZNTh0czVRWi1rVzY2THluTzRqckpJVmN3d21mekRNdHRKckhoR1g0bmRzQnJFTTdwek1XU0tDQWNGdXJ4bHJudWpSd3JpN3JEV05UcVgxSmtSRkZ1VFlXQzVrSWVOaEhqXzNWcC1yb01BTTdBVWlYaS1xRnNLRGdwN3ZKcEhBNElCOFdFQ25vN1hBRi1obXlRdw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.830339,
+      "geo_lon": -116.509645,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "8b1443c556d9",
+      "created_at": "2026-03-31T02:56:42.098262+00:00",
+      "last_updated": "2026-03-31T02:56:42.098265+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "‘Remote Location’",
+      "airport_name": "unknown",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Frontier Airlines Passenger",
+      "summary_en": "Passenger makes bomb threat",
+      "summary_tr": "Yolcu bomba tehdidi savurdu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "Frontier Airlines"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYjV0OTM3UmVvYVA2TElMbG9KcTlEZGlEMFdMdWhjdEdZdWxwS2RrWkpxY1hjU2NWLXA3OWY3cHlRN29NYnFCdE9hRGVacmhjR2RaTkVHOTRuTDhhME4yc2czZzhpaHQzTmlVR1ExNlVkcnRTTEpHbnIweFNBLS01RE9kV3JqbFptMzV0WEsteTk?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 60.321816,
+      "geo_lon": 24.947361,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "47ae8a7f3a0a",
+      "created_at": "2026-03-31T02:56:42.098273+00:00",
+      "last_updated": "2026-03-31T02:56:42.098276+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-03-29",
       "country": "United States",
       "country_code": "US",
@@ -381,13 +546,14 @@
       "date": "2026-03-29",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRFRxbWltQURWWWRWRU41RlRwSElCYmZ1dUhTbDlYVElCRzdkYVMyN1c4NDZuRDNSYWNuWnZDbTZuR3Y2cm5UYWRyQU1JeXRZOUFiOTIyaV9lZUhvc01ZWVRXUjcwNjNxN1dTZEpJZkNyeDVSZUIwbURQN0xRZlRaOGpObjFDdWM1MFNUSTlMd0hOeHMzRV8wSVNhOGRSTkluZGxqRGh3Vmt1M3Rrd1HSAcIBQVVfeXFMUExiTjNPcFV5cFFGdTVRNlBqRkF4VEpNRUZPTF9LR2tDNHg2ZTNveW85ZlNXVk5yVDFwNkZwU1dqcnRfQktoTmlUMHBpSEZZbUd6eEdWU0VNMkh4ZDRjajVLTUlWV3o3bGFieS1YWFFKNkg1aGtsbVRCdEpQc3VVM2E5TW96cXZwNWJKRFRWbHI2X3Z4dThoQWpJemZMV0NTakUxWEYxZ3dQMkFkTi1TNF9YTkthMVVlZTl6OXJRenFTSnc?oc=5",
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQjJ4N1RJV1lNZHotZ1pNSG1nT0drTng2Rlh4MmNZZmNaWE12Tk1OcGEyQ1JyRWlOQkhDa1lvUlk0eHRKSDc3YVlMUDQzZWtKQWxDOUQwUU1oX3cwNUl5RmNMS2d5a0ZTeEdNQXA1OU5NYWhBOHhvN05mRE00ZUxYQ216TUNQSkFOMG5sM2E5R0xZTGJTTjJSNG1mWUp5VnBxamdtOEdybTZfYUdLSnFMQmNDV0JBZW1IM2Vv?oc=5",
-        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UeTFQanBmTkVnWENKY2tFUGRqSHc4Mzh6Q0lmbTJydDdHeW1kZFk1WGJhMnBXQWZaVFJUVC00Ym9McDZiYXZqZkswb1ZpNnVCYUIyMGRzb2FwSXhzaFZOQVU0U0pVd2VLbVdIbXdYeW8?oc=5",
-        "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQVFZWeTRMZ0RKdDU5MG5udlAyemw4RTlzVzRzYVBOZ2hROExWcXFJMjdNbFhRQWJQQ21FaUkxMl9WZERERlN6X2Jrek5IZ0hoNzJ6Z0hKeFNRdVZrWFdFZzVscGk1bnZtMFpYempEdHMxSWRyVjhjMlprZEZFdEJGRVhyeTc5bmNaUERxcU13M1FfOFVRdjZWN3laczhralJydEo5YWg0blZEQXUxZWMxZG9MS3Q1U3NKX1ExbHpmUUF5eXpPVlJxdEZqb0c0UWNuZjlBZzdDbTkwQW5aMHpJNWQ4WHlQVUg2b2ZwazBJdk9ITGppYy1OV2lKM18?oc=5",
-        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5",
         "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXRMQlU4Y2RRTXVSb0xnZW5PN3RXeFlyTktSUmNLRUJjZnBRSW1SMzRpQlF3WWFnSGNObElBYUxva1MyNTNXcE85eUEyQXFqQnpGSmVlMXJYTjZPX0xzSlE4V21XOWdIa1ZSX2RGU1U5d3lhNkdpU2J0NnRYQ1A1TmFmeWF1dF83QllEYXJfNGNoc3ZLajNBbHNvRdIBoAFBVV95cUxQWlA4Q21JX1JvRmVTTm4wU2cxM18xSUl1dmhodXMwWThJSV9JcExwa3Z2VlNSeDNmUEo0eU01Z2xEbUFkVW1ER25oclpkNlQxbkZ5Tl80dWlTMHdHaWwzTlk4dVQySk56cHkzLXEyaU5FeENuWnZQOVR0UFNoeUdBb3h2QWFEWDZsYUEtdG00dGxnaHNVMmhFQ29Cclc0aGw1?oc=5",
-        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5"
+        "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBTLWx4ZU9KLVB6Y3ZBRlBuSEhfV2NNd2U4cVVLYjVjSE9wQlk3dUJsUFZaNmpMOTlWU1ZrYzBpM2RsZmpCM2l6aQ?oc=5",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRFRxbWltQURWWWRWRU41RlRwSElCYmZ1dUhTbDlYVElCRzdkYVMyN1c4NDZuRDNSYWNuWnZDbTZuR3Y2cm5UYWRyQU1JeXRZOUFiOTIyaV9lZUhvc01ZWVRXUjcwNjNxN1dTZEpJZkNyeDVSZUIwbURQN0xRZlRaOGpObjFDdWM1MFNUSTlMd0hOeHMzRV8wSVNhOGRSTkluZGxqRGh3Vmt1M3Rrd1HSAcIBQVVfeXFMUExiTjNPcFV5cFFGdTVRNlBqRkF4VEpNRUZPTF9LR2tDNHg2ZTNveW85ZlNXVk5yVDFwNkZwU1dqcnRfQktoTmlUMHBpSEZZbUd6eEdWU0VNMkh4ZDRjajVLTUlWV3o3bGFieS1YWFFKNkg1aGtsbVRCdEpQc3VVM2E5TW96cXZwNWJKRFRWbHI2X3Z4dThoQWpJemZMV0NTakUxWEYxZ3dQMkFkTi1TNF9YTkthMVVlZTl6OXJRenFTSnc?oc=5",
+        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOb1c4c1lCRjNTRVNJSkUtQlNtd1BmeEdJLUl6cGd2d2RUSGZIUVBBR0p2Q2F3WnlfaG9raWcxdHBVbFdnVy1kNDlZMEVYay1KRERFWUd2QW9uUU1mbGFsa3F2Ymw2M2pYMGdoLUJRTTBObkdMRjJFbTNVTXNzYlROb0JiZTlHc0hlNzI0RkVGWjhxWTJNblNTM0FTd3ZOVWh0WEdXblVhXzFZeGVUYXNjampMMGVoQmVma3RQWm9oTWkyZk90OGFjWmxQQU8wTlJycmZmbGc1NHhITlI2YTBreXNkWFlHM3VsaXJ6M0Q4cVFmeC16dTdXZ19UZw?oc=5",
+        "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQVFZWeTRMZ0RKdDU5MG5udlAyemw4RTlzVzRzYVBOZ2hROExWcXFJMjdNbFhRQWJQQ21FaUkxMl9WZERERlN6X2Jrek5IZ0hoNzJ6Z0hKeFNRdVZrWFdFZzVscGk1bnZtMFpYempEdHMxSWRyVjhjMlprZEZFdEJGRVhyeTc5bmNaUERxcU13M1FfOFVRdjZWN3laczhralJydEo5YWg0blZEQXUxZWMxZG9MS3Q1U3NKX1ExbHpmUUF5eXpPVlJxdEZqb0c0UWNuZjlBZzdDbTkwQW5aMHpJNWQ4WHlQVUg2b2ZwazBJdk9ITGppYy1OV2lKM18?oc=5",
+        "https://news.google.com/rss/articles/CBMiigJBVV95cUxOeThSMFUzdUZFQTZyalN2TUpnTmpCSWVIekl5SzlUZXpESnJ5TmdJVWRPTDZ2LS01TllMRHpENjhWYmhMRG1BOFVERFVXajkyVENrek9qSmZrNjU2bXhUM2lQZEt5WDF1RzVpa2ZzS0l6ZEozM203NEZhZW1fQ21JellsNHNBdWdBaDJXMk9ZVXFRcVJuWkNpUkdkYXdrcU1hTEhNclYzQkpiYnNReVV6a3lSR18zdWFqS3c3Ry1fdTBnWWE0bzFHczRZN2NwLWNEeEVTb1IzX3VaR2prOFNvZUdnQnBWSXhiZEowck42cUZSOF9lNFlOcEJyelZiWDFXZ3BKbnZzOEdfd9IBjwJBVV95cUxQaHBidUh2VHdqQ0Z2UUgydUh4UVY5d3VTbW5FMnJndV9OMDNYZ3ZZd3hIS1FVYXVRTWoweWNwOVQ2aC1PUXdvRk4zTTR4czVqQkZLLVZld0xWLXM1TGFlQklkcVE4NkdxaXRWZUU3MUlCN2k3dXhhRnU2eW9RR1dRSUF5ZWt1MzFBRFM5NlNXRzRHNmkxZlpMUjVuTmlaYlc5VTgxQzgtQXp1Nk1jNVpJcmZNUkxNVkdpODgxcVRyNXVRNWl6UnpMdVkzZE5QdjBURTlqTy1QYXJzRExEYTItSFdIc2JyZFJRTzVyTGtsMF9mNWZLTmhCbXlqRUFaR3Y3a29vWmpOLXNSdHNHdE9v?oc=5",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UeTFQanBmTkVnWENKY2tFUGRqSHc4Mzh6Q0lmbTJydDdHeW1kZFk1WGJhMnBXQWZaVFJUVC00Ym9McDZiYXZqZkswb1ZpNnVCYUIyMGRzb2FwSXhzaFZOQVU0U0pVd2VLbVdIbXdYeW8?oc=5",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQjJ4N1RJV1lNZHotZ1pNSG1nT0drTng2Rlh4MmNZZmNaWE12Tk1OcGEyQ1JyRWlOQkhDa1lvUlk0eHRKSDc3YVlMUDQzZWtKQWxDOUQwUU1oX3cwNUl5RmNMS2d5a0ZTeEdNQXA1OU5NYWhBOHhvN05mRE00ZUxYQ216TUNQSkFOMG5sM2E5R0xZTGJTTjJSNG1mWUp5VnBxamdtOEdybTZfYUdLSnFMQmNDV0JBZW1IM2Vv?oc=5"
       ],
       "source_articles": [
         0
@@ -408,8 +574,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 7,
-      "last_updated": "2026-03-30T13:54:48.253399",
+      "source_count": 8,
+      "last_updated": "2026-03-31T02:56:42.082457",
       "id": "0974cf02896e",
       "created_at": "2026-03-30T03:27:54.101692+00:00"
     },
@@ -1711,6 +1877,61 @@
       "id": "7396490b323c",
       "created_at": "2026-03-30T19:12:15.504014+00:00",
       "last_updated": "2026-03-30T19:12:15.504019+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2008-11-26",
+      "publish_date": "2026-03-28T05:00:00+00:00",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Mumbai",
+      "location_detail": "Taj Hotel",
+      "airport_name": null,
+      "airport_iata": "BOM",
+      "hotel_name": "Taj Hotel",
+      "venue_name": "Hotel",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Mumbai terrorist attacks of 2008",
+      "summary_tr": "2008 Mumbay terör saldırıları",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "Mumbai",
+        "Terrorist Attack",
+        "Taj Hotel"
+      ],
+      "date": "2008-11-26",
+      "year": 2008,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE9QRXBZTkFSVnZ1aHRTWlQ2U2xZYW9SM1NlRmloaFN1aW0yNlA1RjVuQzlnZUVmLUltTEtoX1hySUF0cDZvNVZhRXAyZlN6VU94UzFJZDJXdkJMYkplYUFFT0RmSE1SWmRfTjkxQXhPOU4yUTg?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 19.065006,
+      "geo_lon": 72.929413,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "3eb05be00c7d",
+      "created_at": "2026-03-31T02:56:42.098218+00:00",
+      "last_updated": "2026-03-31T02:56:42.098235+00:00",
       "source_count": 1
     }
   ]

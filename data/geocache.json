@@ -223,5 +223,25 @@
     "lat": 35.689252,
     "lon": 51.3896,
     "display_name": "شهر تهران, بخش مرکزی شهرستان تهران, شهرستان تهران, استان تهران, ایران"
+  },
+  "hotel, mumbai, india": {
+    "lat": 19.065006,
+    "lon": 72.929413,
+    "display_name": "hotel, road no12 plot no41 azad nagar shivaji nagar baiganwadi mumbai 400043, Road 12, Adarsh Nagar, Shivaji Nagar, M/E Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, 400043, India"
+  },
+  "airport, raleigh-durham": {
+    "lat": 35.85716,
+    "lon": -78.818269,
+    "display_name": "Staybridge Suites Raleigh-Durham Apt-Morrisville, 1012, Airport Boulevard, Morrisville, Wake County, North Carolina, 27560, United States"
+  },
+  "airport, palm springs, united states": {
+    "lat": 33.830339,
+    "lon": -116.509645,
+    "display_name": "Palm Springs International Airport, Clubhouse View Drive, Palm Springs, Riverside County, California, 92262, United States"
+  },
+  "airport": {
+    "lat": 60.321816,
+    "lon": 24.947361,
+    "display_name": "Helsinki-Vantaan lentoasema, Ruskeasannantie, Ruskeasanta, Tikkurilan suuralue, Vantaa, Helsingin seutukunta, Uusimaa, Manner-Suomi, 01390, Suomi / Finland"
   }
 }
