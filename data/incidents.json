@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-31T07:33:16.218434+00:00",
-    "total_incidents": 42,
+    "last_updated": "2026-03-31T13:55:48.928011+00:00",
+    "total_incidents": 44,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,117 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260331T121500Z",
+      "country": "Kosovo",
+      "country_code": "XK",
+      "city": "Priştine",
+      "location_detail": "A Milli Futbol Takımı'nın konakladığı otel",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "otel",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "bir grup Kosovalı",
+      "summary_en": "Hotel attacked with fireworks",
+      "summary_tr": "Otele havai fişek saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "havai fişek",
+        "A Milli Futbol Takımı",
+        "2026 FIFA Dünya Kupası"
+      ],
+      "date": "20260331T1",
+      "year": 2026,
+      "source_urls": [
+        "https://www.sozcu.com.tr/a-millilerin-oteline-havai-fisekli-saldiri-p306092",
+        "https://www.haber61.net/gundem/a-milli-takim-oteline-iki-ayri-noktadan-havai-fisek-saldirisi-h628182.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 42.663877,
+      "geo_lon": 21.164085,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": false,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.7,
+      "verification_status": "verified",
+      "verification_score": 0.7,
+      "source_count": 2,
+      "last_updated": "2026-03-31T13:55:48.927989+00:00",
+      "id": "d9642bbadcc6",
+      "created_at": "2026-03-31T13:55:48.927982+00:00"
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260331T113000Z",
+      "country": "Kosova",
+      "country_code": "XK",
+      "city": "Priştine",
+      "location_detail": "otel",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "otel",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Kosovalı bir grup",
+      "summary_en": "Hotel attack with fireworks",
+      "summary_tr": "Otele havai fişek saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "fireworks",
+        "hotel attack",
+        "sports"
+      ],
+      "date": "20260331T1",
+      "year": 2026,
+      "source_urls": [
+        "https://www.cnnturk.com/spor/futbol/a-milli-takimin-kaldigi-otele-havai-fisek-saldirisi-2412029"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 42.663877,
+      "geo_lon": 21.164085,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": false,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.7,
+      "verification_status": "verified",
+      "verification_score": 0.7,
+      "id": "551e96b7b773",
+      "created_at": "2026-03-31T13:55:48.928000+00:00",
+      "last_updated": "2026-03-31T13:55:48.928004+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "unknown",

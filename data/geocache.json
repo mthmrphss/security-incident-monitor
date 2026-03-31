@@ -243,5 +243,15 @@
     "lat": 60.321816,
     "lon": 24.947361,
     "display_name": "Helsinki-Vantaan lentoasema, Ruskeasannantie, Ruskeasanta, Tikkurilan suuralue, Vantaa, Helsingin seutukunta, Uusimaa, Manner-Suomi, 01390, Suomi / Finland"
+  },
+  "priştine, kosovo": {
+    "lat": 42.663877,
+    "lon": 21.164085,
+    "display_name": "Prishtinë, Komuna e Prishtinës / Opština Priština, Rajoni i Prishtinës / Prištinski okrug, Kosova / Kosovo"
+  },
+  "priştine, kosova": {
+    "lat": 42.663877,
+    "lon": 21.164085,
+    "display_name": "Prishtinë, Komuna e Prishtinës / Opština Priština, Rajoni i Prishtinës / Prištinski okrug, Kosova / Kosovo"
   }
 }
