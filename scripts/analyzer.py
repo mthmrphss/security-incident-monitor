@@ -314,14 +314,23 @@ STRICT RULES:
 
         # ── Tarih düzeltme ──
         event_date = result.get("event_date", "")
-        publish_date = result.get("publish_date", pub_date[:10])
+        publish_date = result.get("publish_date", "")
 
-        if not event_date or event_date in ("unknown", "null", ""):
+        # Tarihleri normalize et (ISO 8601 basic → YYYY-MM-DD)
+        event_date = self._normalize_date(event_date)
+        publish_date = self._normalize_date(publish_date)
+
+        # Makale yayın tarihinden de dene
+        article_pub = self._normalize_date(pub_date)
+
+        # Öncelik: event_date > publish_date > article_pub > bugün
+        if not event_date or event_date == "unknown":
             event_date = publish_date
-
-        # event_date geçerli mi kontrol et
-        if not re.match(r"^\d{4}-\d{2}-\d{2}$", str(event_date)):
-            event_date = publish_date[:10] if publish_date else "unknown"
+        if not event_date or event_date == "unknown":
+            event_date = article_pub
+        if not event_date or event_date == "unknown":
+            from datetime import datetime, timezone
+            event_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         result["date"] = event_date
         result["year"] = int(event_date[:4]) if event_date and event_date != "unknown" else None
@@ -543,3 +552,24 @@ STRICT RULES:
             "status": status,
             "signals": {k: v for k, v in signals.items()},
         }
+    def _normalize_date(self, date_str: str) -> str:
+        """Çeşitli tarih formatlarını YYYY-MM-DD'ye çevir."""
+        if not date_str or date_str in ("unknown", "null", "", "None"):
+            return "unknown"
+
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", date_str):
+            return date_str
+
+        m = re.match(r"^(\d{4})(\d{2})(\d{2})", date_str)
+        if m:
+            return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+
+        try:
+            from dateutil import parser as dp
+            dt = dp.parse(date_str)
+            return dt.strftime("%Y-%m-%d")
+        except Exception:
+            pass
+
+        return "unknown"
+        
