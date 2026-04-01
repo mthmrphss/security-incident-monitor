@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-03-31T19:19:07.068346+00:00",
-    "total_incidents": 47,
+    "last_updated": "2026-04-01T03:33:12.450825+00:00",
+    "total_incidents": 49,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -244,6 +244,61 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-04-01",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Detroit",
+      "location_detail": "Detroit Metro Airport",
+      "airport_name": "Detroit Metro Airport",
+      "airport_iata": "DTW",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "a man",
+      "summary_en": "Bomb threat forces emergency landing",
+      "summary_tr": "Bomba tehdidi acil inişe neden oldu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "emergency landing"
+      ],
+      "date": "2026-04-01",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbHA0aUJxTXNNZ205TTNXZ3N1ZVZmTkc0YWZiUWVsWkVZczZNQnFqNzdic3diLXFDcmtuVUxvUTFrdGx4WlBjM041cGNoMm1qNWtkTDBsMkNMNVpuVHBiVDIwTWtEdm5Kdk1wdG9xMU1LbWN0TTNSTmlHcEhrekVXQnBpS2IxS0h6UXNwcWJ1MndHc0dILS0xbEJfRUV3UGN2b3NqQkJiN3dFaFRUb2p0bmVGdjduc1MzdXJad3JUWkN6U1owM0JPemU5ZjR0dw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 42.331551,
+      "geo_lon": -83.04664,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "95ca21124513",
+      "created_at": "2026-04-01T03:33:12.450796+00:00",
+      "last_updated": "2026-04-01T03:33:12.450806+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-03-31",
       "country": "United States",
       "country_code": "US",
@@ -468,8 +523,8 @@
       "country_code": "US",
       "city": "Columbus",
       "location_detail": "on flight from Columbus to Atlanta",
-      "airport_name": null,
-      "airport_iata": null,
+      "airport_name": "Atlanta airport",
+      "airport_iata": "ATL",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "threat",
@@ -489,7 +544,8 @@
       "date": "2026-03-30",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaWxsMHJoekNiYlBCNmpCNXdGeUEyZTdCZVgydVgwalpaV0todFZrelhjaGc0ejN5Rl9sRFJMRDJnbWdJa3FGTkZHYmt1cEhOWVdBNW5MU3N1a083bmVGY0FNenZ3SWV3anhTUjJUbnNBa25jQmlQU0RXQ2xLanM0WEFWTkV1MzkwbVBqYjNQSUxXa0w2aENCTll0cWI3WENQY2VSYUJoQnNRQUd4Z1pKNnlFV1ViNDZkOHZacWtjN2UtdDVGYlRtT0hnSjY1RW14RlU4MEJR?oc=5"
+        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaWxsMHJoekNiYlBCNmpCNXdGeUEyZTdCZVgydVgwalpaV0todFZrelhjaGc0ejN5Rl9sRFJMRDJnbWdJa3FGTkZHYmt1cEhOWVdBNW5MU3N1a083bmVGY0FNenZ3SWV3anhTUjJUbnNBa25jQmlQU0RXQ2xLanM0WEFWTkV1MzkwbVBqYjNQSUxXa0w2aENCTll0cWI3WENQY2VSYUJoQnNRQUd4Z1pKNnlFV1ViNDZkOHZacWtjN2UtdDVGYlRtT0hnSjY1RW14RlU4MEJR?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOZ2hMVDFKTjZLUmJIZVNUdmJUOUkwTm1uYldvQjBBaC1JUThTYkxqWFdTem5oOEJOTDFMU3BNSkFseTlaOEd1OUNzN1dnOFlkRjFRMjhzSHBzYjJKZExWbm9neEVLeVo4d2pPQ2szTDQ1MzVkQ21JUE9vd2x0Z3FpUWVlZ05UQWo4YUhYSV9CcC0zcFd1elI3U1VWNnViZ9IBsgFBVV95cUxOb3k2d3BtODQwWk5wWFRyQXJXdjZmazZMbFRxV013NWJRODNqaGhVZkdTUkVxRU1CeUpJX3VVLTdsM0ZlRDRod0NqTUdTUkhWeEVxUTBGS3hFaVhnT0NBaE9RVnYzMlFIWnRrUjN6WlEtS0cxb1RUaUNLdWNwS2xBMmxpNFJKWmUzOXkwM1FFZDkza0ZwMVdITHEzYnBlbEJXbG5rQ2FKbDZoSE0xcnZQMjdR?oc=5"
       ],
       "source_articles": [
         0
@@ -512,8 +568,8 @@
       "verification_score": 1.0,
       "id": "c901428d219a",
       "created_at": "2026-03-30T08:00:01.960853+00:00",
-      "last_updated": "2026-03-30T08:00:01.960864+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-01T03:33:12.441423",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -853,6 +909,61 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-03-30",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": "unknown",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "Frontier Airlines Flight",
+      "attack_type": "threat",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat on Frontier Airlines Flight",
+      "summary_tr": "Frontier Havayolları Uçuşunda bomba tehdidi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "Frontier Airlines"
+      ],
+      "date": "2026-03-30",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE90TE5zM1FaUlBnQ1BJLWhXNXpDd0xnNkF0eWtIS09CWnJpc1FMYXkxWm9WdTA4N2NUWmF5cGs0SnNsSFdlRjdnV0UwTWJPVXUwT241QVFEUy1nU3Z0Um9NbGNiVlUzQU1hMGlFeVlNY0JTdUFldFlHZQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "47ae8a7f3a0a",
+      "created_at": "2026-04-01T03:33:12.450817+00:00",
+      "last_updated": "2026-04-01T03:33:12.450821+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-03-29",
       "country": "United States",
       "country_code": "US",
@@ -1053,10 +1164,11 @@
       "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYXZMZklObUt5dlRzZDUyNmo3VW5vN2EzQ1Nqci1tUUc0OXgxZUktVEVLdzdQMVdTbDA1SFhHTDFXN2JpVzJNdWwyamxkTExyeWxnYnZkakFnYldlMXFhWG5kQzc5Tk1QOUlvY0lWOHNsNW8wRlh2aFhFVUlXTDIwX1NNRm1XVHp5ZlhZVTA5SHhYSmhySlozbnlTZ0phemoxcWtrbDliTE5VanNZOHJsWnRjaURXUzBP0gG-AUFVX3lxTE83eGp3aWpHNy14S3J3ajQ2QUp2a1FDdGRhdVRHSS1Ta29yZkV3VnZXSWlWbzVZNUNyVTZ5ZklsQjBSVjk3aUdDUWV2eXI1NDZwSldFc1N2b2Juemp4bWV1b2hxZVJVWHJRZHdIVm1JQktoc18wcm9mMERCYlhBeHVGLVRidFIxeERIUEFmYWdpR19yRUUyRzZTNWl4S2Z6YzczeGNPY1FqQW00NEx0eS1BcTVlaWk3azRsemtndVE?oc=5",
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5",
+        "https://www.aljazeera.com/news/liveblog/2026/4/1/iran-live-trump-says-no-deal-needed-to-end-war-isfahan-steel-plants-hit?traffic_source=rss",
+        "https://x.com/ConflictTR/status/2037982370129682555#m",
         "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZjhrTHViZUNYUUZkdUdpdld1WklBc09Gd3hjVk5QbkZvRkVVZThwWGZMcjVEQWk3dm43UUg4dHh4QTVvQzVVa1ZQbnFjdEc5eTlBckZmZmhEZ0lmWWFmTUtMQmROeTBMYkRROWxTeEhVRWlsZ0NLT083QXAtd0hvVzJseU92eEg1YU4zOFdsSEZuUEdrQlVKTmkzdXowY0N3YS1kTHQ3QjktbHJfU1FVZGpuT09QcEI5VGc?oc=5",
-        "https://x.com/ConflictTR/status/2037982370129682555#m"
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYXZMZklObUt5dlRzZDUyNmo3VW5vN2EzQ1Nqci1tUUc0OXgxZUktVEVLdzdQMVdTbDA1SFhHTDFXN2JpVzJNdWwyamxkTExyeWxnYnZkakFnYldlMXFhWG5kQzc5Tk1QOUlvY0lWOHNsNW8wRlh2aFhFVUlXTDIwX1NNRm1XVHp5ZlhZVTA5SHhYSmhySlozbnlTZ0phemoxcWtrbDliTE5VanNZOHJsWnRjaURXUzBP0gG-AUFVX3lxTE83eGp3aWpHNy14S3J3ajQ2QUp2a1FDdGRhdVRHSS1Ta29yZkV3VnZXSWlWbzVZNUNyVTZ5ZklsQjBSVjk3aUdDUWV2eXI1NDZwSldFc1N2b2Juemp4bWV1b2hxZVJVWHJRZHdIVm1JQktoc18wcm9mMERCYlhBeHVGLVRidFIxeERIUEFmYWdpR19yRUUyRzZTNWl4S2Z6YzczeGNPY1FqQW00NEx0eS1BcTVlaWk3azRsemtndVE?oc=5"
       ],
       "source_articles": [
         0
@@ -1079,8 +1191,8 @@
       "verification_score": 0.9,
       "id": "d1327d83a94d",
       "created_at": "2026-03-28T18:48:47.207639+00:00",
-      "last_updated": "2026-03-30T13:54:48.257414",
-      "source_count": 4
+      "last_updated": "2026-04-01T03:33:12.450700",
+      "source_count": 5
     },
     {
       "incident_type": "AIRPORT_ATTACK",

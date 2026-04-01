@@ -263,5 +263,10 @@
     "lat": 10.275742,
     "lon": 77.162036,
     "display_name": "Marayoor, Devikulam, Idukki, Kerala, 685620, India"
+  },
+  "detroit, united states": {
+    "lat": 42.331551,
+    "lon": -83.04664,
+    "display_name": "Detroit, Wayne County, Michigan, United States"
   }
 }
