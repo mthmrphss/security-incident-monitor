@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-01T03:33:12.450825+00:00",
+    "last_updated": "2026-04-01T07:50:50.627403+00:00",
     "total_incidents": 49,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -531,7 +531,7 @@
       "severity": "low",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "Frontier passenger",
       "summary_en": "Passenger makes verbal bomb threat",
       "summary_tr": "Yolcu bomba tehdidi savurdu",
       "is_ongoing": false,
@@ -544,8 +544,9 @@
       "date": "2026-03-30",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOZ2hMVDFKTjZLUmJIZVNUdmJUOUkwTm1uYldvQjBBaC1JUThTYkxqWFdTem5oOEJOTDFMU3BNSkFseTlaOEd1OUNzN1dnOFlkRjFRMjhzSHBzYjJKZExWbm9neEVLeVo4d2pPQ2szTDQ1MzVkQ21JUE9vd2x0Z3FpUWVlZ05UQWo4YUhYSV9CcC0zcFd1elI3U1VWNnViZ9IBsgFBVV95cUxOb3k2d3BtODQwWk5wWFRyQXJXdjZmazZMbFRxV013NWJRODNqaGhVZkdTUkVxRU1CeUpJX3VVLTdsM0ZlRDRod0NqTUdTUkhWeEVxUTBGS3hFaVhnT0NBaE9RVnYzMlFIWnRrUjN6WlEtS0cxb1RUaUNLdWNwS2xBMmxpNFJKWmUzOXkwM1FFZDkza0ZwMVdITHEzYnBlbEJXbG5rQ2FKbDZoSE0xcnZQMjdR?oc=5",
         "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaWxsMHJoekNiYlBCNmpCNXdGeUEyZTdCZVgydVgwalpaV0todFZrelhjaGc0ejN5Rl9sRFJMRDJnbWdJa3FGTkZHYmt1cEhOWVdBNW5MU3N1a083bmVGY0FNenZ3SWV3anhTUjJUbnNBa25jQmlQU0RXQ2xLanM0WEFWTkV1MzkwbVBqYjNQSUxXa0w2aENCTll0cWI3WENQY2VSYUJoQnNRQUd4Z1pKNnlFV1ViNDZkOHZacWtjN2UtdDVGYlRtT0hnSjY1RW14RlU4MEJR?oc=5",
-        "https://news.google.com/rss/articles/CBMingFBVV95cUxOZ2hMVDFKTjZLUmJIZVNUdmJUOUkwTm1uYldvQjBBaC1JUThTYkxqWFdTem5oOEJOTDFMU3BNSkFseTlaOEd1OUNzN1dnOFlkRjFRMjhzSHBzYjJKZExWbm9neEVLeVo4d2pPQ2szTDQ1MzVkQ21JUE9vd2x0Z3FpUWVlZ05UQWo4YUhYSV9CcC0zcFd1elI3U1VWNnViZ9IBsgFBVV95cUxOb3k2d3BtODQwWk5wWFRyQXJXdjZmazZMbFRxV013NWJRODNqaGhVZkdTUkVxRU1CeUpJX3VVLTdsM0ZlRDRod0NqTUdTUkhWeEVxUTBGS3hFaVhnT0NBaE9RVnYzMlFIWnRrUjN6WlEtS0cxb1RUaUNLdWNwS2xBMmxpNFJKWmUzOXkwM1FFZDkza0ZwMVdITHEzYnBlbEJXbG5rQ2FKbDZoSE0xcnZQMjdR?oc=5"
+        "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNTWVnMkdnT3B4SXV1d2VUTkRmLXVlanU1aDNHSEh3NS1famhiXzNnZkg2RHhpOWVGRGpHZjZnMmpTeDRmT01jMUxLR3JSZElaS09vVlpjOVM0bHlpR0liS0lDZlVmMmppa3RDYXFuWlNGNXZjaGFQaWtIWTJxSVMyTzJrUDk5TllXeFZ1cVAtWUlqYzlFVVVtNjJnMUcxX3hrUWJySHRKelc4YmFQc3ZsNG5GNy1jRjZPbC00WmdiSTYtV2M2M1hUcTFOR0IyN0VOZE1ZcXFSN21mVW9ONzRubTZWVXNwUFd1SW5lRGljSG5JNnBNeG45aA?oc=5"
       ],
       "source_articles": [
         0
@@ -568,8 +569,8 @@
       "verification_score": 1.0,
       "id": "c901428d219a",
       "created_at": "2026-03-30T08:00:01.960853+00:00",
-      "last_updated": "2026-04-01T03:33:12.441423",
-      "source_count": 2
+      "last_updated": "2026-04-01T07:50:50.625579",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -919,7 +920,7 @@
       "hotel_name": null,
       "venue_name": "Frontier Airlines Flight",
       "attack_type": "threat",
-      "severity": "unknown",
+      "severity": "low",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
@@ -935,6 +936,7 @@
       "date": "2026-03-30",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPenBhbUJMYm1ROXBLaW5FTEpucmUxN0tsY1Z6WHJ5SWVxUWxCbmo1YmhuYzd4QWh6U3VzNUdUSEdsX0IxVHAzLTdkeGhDbnNiU3VVQmprZU5wSmlaUEZiN0tBY1A1TjFJb0RXemlpd1ROY1d3eXBxNG16QXNLMHFiR0p1TWZQN1lqZDl1Yy02d3NGX3J1eTNWRElQcw?oc=5",
         "https://news.google.com/rss/articles/CBMieEFVX3lxTE90TE5zM1FaUlBnQ1BJLWhXNXpDd0xnNkF0eWtIS09CWnJpc1FMYXkxWm9WdTA4N2NUWmF5cGs0SnNsSFdlRjdnV0UwTWJPVXUwT241QVFEUy1nU3Z0Um9NbGNiVlUzQU1hMGlFeVlNY0JTdUFldFlHZQ?oc=5"
       ],
       "source_articles": [
@@ -958,8 +960,8 @@
       "verification_score": 0.6,
       "id": "47ae8a7f3a0a",
       "created_at": "2026-04-01T03:33:12.450817+00:00",
-      "last_updated": "2026-04-01T03:33:12.450821+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-01T07:50:50.627335",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
