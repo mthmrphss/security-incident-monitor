@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-01T13:59:25.940219+00:00",
-    "total_incidents": 51,
+    "last_updated": "2026-04-01T19:18:32.009794+00:00",
+    "total_incidents": 52,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -407,6 +407,61 @@
       "last_updated": "2026-04-01T13:59:25.940215+00:00",
       "id": "daadbbd73968",
       "created_at": "2026-04-01T13:59:25.940213+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-01",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "Changi Airport Terminal 5 construction site",
+      "airport_name": "Changi Airport",
+      "airport_iata": "SIN",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "WWII bomb found at airport",
+      "summary_tr": "Havaalanında II. Dünya Savaşı bombası bulundu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "WWII bomb",
+        "airport construction site"
+      ],
+      "date": "2026-04-01",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUnJlWm5reUE4TktUbEVjMnBfQU42MjkxckVHMUZWbTJFUmtVQUVXbzdIRi1GZmd6cGtHRjhaOXVqcm5hLTdYWnFsaXNmUUkzWm5PeVphQXh1U3d2bWU3Ym1CTkdCZzJ1c3AtdjVLS01YLUZ2cDFQR1RhWC12WDgxcUlOVjFjR19NM2R5R21lSGQ1ZlRoRlh0dlRNbGRDSWRKZUVmRzc2TWZmLXEyb3drWjd5S3dEbzM2eFdiWkxrVm4?oc=5",
+        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQemhnbHBlcjBiTjZkQ19jWGtIQTZUWlVySVMzeDBEN2ljVTJjU0pIenhjcE9GRUl1bGM5bGF6OFh3SmpxVVp6bTVEeWtmMFZIRURnZDd1WnpHZXJQTnFVeUE4UjFETkt2djBJNEh3MmFxbk9VYnZCQUZaSk1HX3RFUFdxMGd5Q3poWU4yT2ZxLW1ORlR6SzZoLTExX2E4NzI2TkhsWGJVdDJOMnNGX3ozUllRYWZxRkpwdURJcmNXVU5OMXlRSmlYVVV1RVJkOVlpc0lQVFFFbXl5dm1YMFdZMC1LbjU2RC1T?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 60.321816,
+      "geo_lon": 24.947361,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "source_count": 2,
+      "last_updated": "2026-04-01T19:18:32.009788+00:00",
+      "id": "31d88084dd7c",
+      "created_at": "2026-04-01T19:18:32.009780+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -1225,6 +1280,7 @@
       "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxObDZ5eVNKVHlPOHEwUTU2ZV9pSnFILTQ1NmxPdjVQT2UtNnY1NE9DWHJWWjNneEVROVd6TzBIVnpMczBwd1JNQ0hOWVVJcjYtV2pra2EzYllKWjV4RGhlNE05ckxWa09Xa3pkUmliVi1lZU40TkVuTmFFcnROR1NLNXFWZjFLaU4wM1lQQllHREczalhEc2lFbVFiNzBuTWJlalVFRmFqNGNHN0oxdGtfSTFqbW94dHBJRjZSYmZR0gHDAUFVX3lxTE5leUlDV2tCTDhuZFFGVWNLNWVIVlJhSHNkN3hTSzR2SmFoclBYTUlNRHltTUxCaFRYS1l6d0ZGYWdtdlF0SXhxdG9nYnZLeUhIM3JWc1dENWNRQW95d0lOMFlKczdHUU1xRmEwMllfRnEwbVdyU2l5RVNQNlAwYkpaNlF6Y1hOR2ZpcVBMS2dHcjRFdmlEVnNvbXFzMkxfU0NrZlZrNk9xWFpWZS1KOXhzMlUxaHJzY3lwOWJqY3pKWndPdw?oc=5",
         "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNnVxZ3dybVR4OXRrVnlaSm42eGtyY2ZibktCVlBvT0JUSVBZaDRoY0Q2ZmVGQ1otSnJDcG1ycEpSRlZBWGlENnZYWDJTdU81WHBsRXZTSjN0UDRHbFU5emJua1hjNy1rQnJyZ2lEeXo5RlJCb2VXdkwyV09Ma3RXNUFNSzRBbmM5N1FxMk9LT2V6RWxoUGpEQURvR2dPNzB5WkRLbVJFZGpmWnlTYUkyRjFELUEzVU04TkV0TlRZRGtOdlJkOFUyMmhsajZid1FLMFFr0gHYAUFVX3lxTE5USGRNUmJfaWRHR2VBRlFrcVc3LVV0ZlMtcVd1UHRDeGM4SkhqQjZKdDRtb0JmbE9mMEFWM1BZZVNlSnF3NEh4cWprVVRzMFFndFA0bzVneFcxNXpMT1ZkdkUtSldHNGM5S0ZNQ0RwYnFiTXFMYTBoLXpwTDZ3ZUtVWmQ3Q3VORm5WeUxkZnZ4MV9jS3h6dm05MmpaQUZCbkk5TjNrbGlzY2ZiVERhY0Z6SUh0OU9JR2xXZVNDdUROaDk4Ull5cC1HVkRkeFlCRjRfZ0pqSUlhQw?oc=5"
       ],
       "source_articles": [
@@ -1248,8 +1304,8 @@
       "verification_score": 0.8,
       "id": "e0619ae7a8fa",
       "created_at": "2026-03-28T18:48:47.207625+00:00",
-      "last_updated": "2026-03-28T18:48:47.207629+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-01T19:18:32.003469",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
