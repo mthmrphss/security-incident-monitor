@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-01T07:50:50.627403+00:00",
-    "total_incidents": 49,
+    "last_updated": "2026-04-01T13:59:25.940219+00:00",
+    "total_incidents": 51,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -299,6 +299,118 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-04-01",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "Kuwait",
+      "location_detail": "off coast of Qatar",
+      "airport_name": "Kuwait airport",
+      "airport_iata": "KWI",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "high",
+      "casualties_dead": 5,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_en": "Iran hits tanker, kills 5",
+      "summary_tr": "İran tankerine saldırdı, 5 kişi öldü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport attack",
+        "Iran",
+        "Qatar",
+        "Kuwait"
+      ],
+      "date": "2026-04-01",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOMk5lVE1sN1JfWEVlbkhlZWQ3N09hc19tWHd1M0ppVEhCUlEwVFZkVUR1S2dLX014RVFRN2ZlVVpFRl9hcGlmVlJ2MXZ0N0ZyeGdhejFLSVNzLV8xTDMweDZIZGdXbGp0alMxY2hGampvWHhpMEY4T3gwS3lrVzhwcWJXWVVmeU02bzduWi1PMUFycFZPT1BrTVNHempoR2F4cWZRME1tSGdhcDFTdVNsVEZPV3Rrdi1tbjZOd2RtWGZfQ2ZCWThWdGUyWC1JZXBERFBBOHEzeUhaWWhLcVA0aFEwS1hsMXVqSWcxc2xtUl9VQTg?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 29.376432,
+      "geo_lon": 47.985902,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "a3249d12b56c",
+      "created_at": "2026-04-01T13:59:25.940189+00:00",
+      "last_updated": "2026-04-01T13:59:25.940202+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-01",
+      "country": "Kuwait",
+      "country_code": "KW",
+      "city": "unknown",
+      "location_detail": "Kuwait airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_en": "Drone attack targets Kuwait airport",
+      "summary_tr": "İnsansız hava aracı Kuveyt havaalanına saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "drone attack",
+        "airport attack",
+        "false_alarm"
+      ],
+      "date": "2026-04-01",
+      "year": 2026,
+      "source_urls": [
+        "https://www.reddit.com/r/worldnews/comments/1s9jic6/drone_attack_targets_kuwait_airport_fuel_tanks_on/",
+        "https://www.naharnet.com/stories/en/319294-iran-hits-kuwait-airport-tanker-off-qatar-ahead-of-trump-speech"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 29.307466,
+      "geo_lon": 47.962808,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "source_count": 2,
+      "last_updated": "2026-04-01T13:59:25.940215+00:00",
+      "id": "daadbbd73968",
+      "created_at": "2026-04-01T13:59:25.940213+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-03-31",
       "country": "United States",
       "country_code": "US",
@@ -544,9 +656,10 @@
       "date": "2026-03-30",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMingFBVV95cUxOZ2hMVDFKTjZLUmJIZVNUdmJUOUkwTm1uYldvQjBBaC1JUThTYkxqWFdTem5oOEJOTDFMU3BNSkFseTlaOEd1OUNzN1dnOFlkRjFRMjhzSHBzYjJKZExWbm9neEVLeVo4d2pPQ2szTDQ1MzVkQ21JUE9vd2x0Z3FpUWVlZ05UQWo4YUhYSV9CcC0zcFd1elI3U1VWNnViZ9IBsgFBVV95cUxOb3k2d3BtODQwWk5wWFRyQXJXdjZmazZMbFRxV013NWJRODNqaGhVZkdTUkVxRU1CeUpJX3VVLTdsM0ZlRDRod0NqTUdTUkhWeEVxUTBGS3hFaVhnT0NBaE9RVnYzMlFIWnRrUjN6WlEtS0cxb1RUaUNLdWNwS2xBMmxpNFJKWmUzOXkwM1FFZDkza0ZwMVdITHEzYnBlbEJXbG5rQ2FKbDZoSE0xcnZQMjdR?oc=5",
+        "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNTWVnMkdnT3B4SXV1d2VUTkRmLXVlanU1aDNHSEh3NS1famhiXzNnZkg2RHhpOWVGRGpHZjZnMmpTeDRmT01jMUxLR3JSZElaS09vVlpjOVM0bHlpR0liS0lDZlVmMmppa3RDYXFuWlNGNXZjaGFQaWtIWTJxSVMyTzJrUDk5TllXeFZ1cVAtWUlqYzlFVVVtNjJnMUcxX3hrUWJySHRKelc4YmFQc3ZsNG5GNy1jRjZPbC00WmdiSTYtV2M2M1hUcTFOR0IyN0VOZE1ZcXFSN21mVW9ONzRubTZWVXNwUFd1SW5lRGljSG5JNnBNeG45aA?oc=5",
         "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaWxsMHJoekNiYlBCNmpCNXdGeUEyZTdCZVgydVgwalpaV0todFZrelhjaGc0ejN5Rl9sRFJMRDJnbWdJa3FGTkZHYmt1cEhOWVdBNW5MU3N1a083bmVGY0FNenZ3SWV3anhTUjJUbnNBa25jQmlQU0RXQ2xLanM0WEFWTkV1MzkwbVBqYjNQSUxXa0w2aENCTll0cWI3WENQY2VSYUJoQnNRQUd4Z1pKNnlFV1ViNDZkOHZacWtjN2UtdDVGYlRtT0hnSjY1RW14RlU4MEJR?oc=5",
-        "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNTWVnMkdnT3B4SXV1d2VUTkRmLXVlanU1aDNHSEh3NS1famhiXzNnZkg2RHhpOWVGRGpHZjZnMmpTeDRmT01jMUxLR3JSZElaS09vVlpjOVM0bHlpR0liS0lDZlVmMmppa3RDYXFuWlNGNXZjaGFQaWtIWTJxSVMyTzJrUDk5TllXeFZ1cVAtWUlqYzlFVVVtNjJnMUcxX3hrUWJySHRKelc4YmFQc3ZsNG5GNy1jRjZPbC00WmdiSTYtV2M2M1hUcTFOR0IyN0VOZE1ZcXFSN21mVW9ONzRubTZWVXNwUFd1SW5lRGljSG5JNnBNeG45aA?oc=5"
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOZ2hMVDFKTjZLUmJIZVNUdmJUOUkwTm1uYldvQjBBaC1JUThTYkxqWFdTem5oOEJOTDFMU3BNSkFseTlaOEd1OUNzN1dnOFlkRjFRMjhzSHBzYjJKZExWbm9neEVLeVo4d2pPQ2szTDQ1MzVkQ21JUE9vd2x0Z3FpUWVlZ05UQWo4YUhYSV9CcC0zcFd1elI3U1VWNnViZ9IBsgFBVV95cUxOb3k2d3BtODQwWk5wWFRyQXJXdjZmazZMbFRxV013NWJRODNqaGhVZkdTUkVxRU1CeUpJX3VVLTdsM0ZlRDRod0NqTUdTUkhWeEVxUTBGS3hFaVhnT0NBaE9RVnYzMlFIWnRrUjN6WlEtS0cxb1RUaUNLdWNwS2xBMmxpNFJKWmUzOXkwM1FFZDkza0ZwMVdITHEzYnBlbEJXbG5rQ2FKbDZoSE0xcnZQMjdR?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxPWTVpRWloaUZqTDJkLWdWX0RtNmUxUVMxTVZERHZUSWFzcm9ZRWNBV3pGNVhjUDd1RW5nS1JzWkgwdDB1Ym5uRExteFpEbHdLZVpERXlmS010NVN1X0dkaUIzSWZXQkZSSkZkSzRyaGI5cXBISnBlYWtDUm95TS1lU1d4Zlo2dUI2SHRLazFlMlFoVmVsZXpNMmhpQjhRd9IBsgFBVV95cUxNaGpfUTlTdGtuUmM5N0p1bHJva2tUZXowVzEtVEFOQ2pRNXQ4UWxZX1h1aWRIeWJTOVQzNmV4eE1SdXBKTVctYVNOODY4YmdBT2o3OU12YldRazRLTTJiVVVVcDM3ZUpMSFRZWWcySVI0dWZlMnRqaDFRRVAySUhZc3c2dngtemJobnY2aHlkMjd1akpjWUctclNaZFAwZmVDSmhSbEJUczB5R1FpZjBSVGFn?oc=5"
       ],
       "source_articles": [
         0
@@ -569,8 +682,8 @@
       "verification_score": 1.0,
       "id": "c901428d219a",
       "created_at": "2026-03-30T08:00:01.960853+00:00",
-      "last_updated": "2026-04-01T07:50:50.625579",
-      "source_count": 3
+      "last_updated": "2026-04-01T13:59:25.921271",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -1144,14 +1257,14 @@
       "publish_date": "2026-03-28",
       "country": "Kuwait",
       "country_code": "KW",
-      "city": "unknown",
+      "city": "Tehran",
       "location_detail": "Kuwait International Airport",
       "airport_name": "Kuwait International Airport",
       "airport_iata": "KWI",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "drone",
-      "severity": "unknown",
+      "severity": "high",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "Iran",
@@ -1166,6 +1279,7 @@
       "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
+        "https://abcnews.com/Business/wireStory/iran-hits-kuwait-airport-tanker-off-qatar-strikes-131604007",
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWHpFcUhldDl2Y0dPUmVqdzBfcGd0OXJaUkg1cHZnb1BDTjNMY1ZtWDN0THJQZ0Fka2g5Zi13UkFFdHM4M2xOdzZfVHRNNkdqSVIzRktvcjZuSnIzcENleEdfY1UtcXByTF9CZHpud0hsU1hBcGRRYU54OGlqa0tlVEpCbjFIMGVxb2R2TlYteFJMb193QUpoTXFocXB1dHRX?oc=5",
         "https://www.aljazeera.com/news/liveblog/2026/4/1/iran-live-trump-says-no-deal-needed-to-end-war-isfahan-steel-plants-hit?traffic_source=rss",
         "https://x.com/ConflictTR/status/2037982370129682555#m",
@@ -1193,8 +1307,8 @@
       "verification_score": 0.9,
       "id": "d1327d83a94d",
       "created_at": "2026-03-28T18:48:47.207639+00:00",
-      "last_updated": "2026-04-01T03:33:12.450700",
-      "source_count": 5
+      "last_updated": "2026-04-01T13:59:25.935225",
+      "source_count": 6
     },
     {
       "incident_type": "AIRPORT_ATTACK",
