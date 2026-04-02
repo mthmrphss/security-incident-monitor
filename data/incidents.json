@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-02T02:58:22.786850+00:00",
-    "total_incidents": 52,
+    "last_updated": "2026-04-02T07:27:59.096800+00:00",
+    "total_incidents": 53,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -244,6 +244,61 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-04-02",
+      "country": "Singapore",
+      "country_code": "SG",
+      "city": "Singapore",
+      "location_detail": "near airport",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "250-Kg World War II Bomb disposed near airport",
+      "summary_tr": "Havaalanı yakınlarında 250-Kg II. Dünya Savaşı bombası imha edildi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "World War II bomb",
+        "airport",
+        "Singapore"
+      ],
+      "date": "2026-04-02",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdWk2V0JOX0N2R2JJV2gtWEZHM3U0LXZxV0U3VHZYNDh2azNqMjllY1IzS1FEZkNFc19EdEFGdkhwUUJmdThOMzFOTXFfNGVYOTlpckxJY1Z5UjU5Q29ySnN5UVEzTUp6RElxVS1UWlVUR2VyMW9FVnA3SjBPeWxtUnhJMDAwUEt6TlJEQktZc3p1MVpSMmhwSHBsWDE4TXJ6OG5ZUW1wS2FUaE9uc1RUaWl3?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 1.355134,
+      "geo_lon": 103.984888,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "7ffe05348637",
+      "created_at": "2026-04-02T07:27:59.096781+00:00",
+      "last_updated": "2026-04-02T07:27:59.096793+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-04-01",
       "country": "United States",
       "country_code": "US",
@@ -413,9 +468,9 @@
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
       "publish_date": "2026-04-01",
-      "country": "unknown",
-      "country_code": "unknown",
-      "city": "unknown",
+      "country": "Singapore",
+      "country_code": "SG",
+      "city": "Singapore",
       "location_detail": "Changi Airport Terminal 5 construction site",
       "airport_name": "Changi Airport",
       "airport_iata": "SIN",
@@ -437,8 +492,9 @@
       "date": "2026-04-01",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQemhnbHBlcjBiTjZkQ19jWGtIQTZUWlVySVMzeDBEN2ljVTJjU0pIenhjcE9GRUl1bGM5bGF6OFh3SmpxVVp6bTVEeWtmMFZIRURnZDd1WnpHZXJQTnFVeUE4UjFETkt2djBJNEh3MmFxbk9VYnZCQUZaSk1HX3RFUFdxMGd5Q3poWU4yT2ZxLW1ORlR6SzZoLTExX2E4NzI2TkhsWGJVdDJOMnNGX3ozUllRYWZxRkpwdURJcmNXVU5OMXlRSmlYVVV1RVJkOVlpc0lQVFFFbXl5dm1YMFdZMC1LbjU2RC1T?oc=5",
         "https://news.google.com/rss/articles/CBMisAFBVV95cUxQYTNuNVV3T1p0X3VkWjRNODlKNFhyOE9zYjY2YWZOV1A3MDR1eXl2blcxSThYVEJHTHJfeXNqSjk2MTZ3S1ZIbDVZcTRELUdfcDZYR3lHR3hvUWIwNmNGTWNGVUtmNXlCZ1dhSkxvSHZaR1BTQkhOZVZMbGhyd3VIMTdyZlJmUDFuLXNUVWE4cklnWDRiX055ODVnNzRsYXMyVHAyNWZ5RWE5djZrMGVoUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQemhnbHBlcjBiTjZkQ19jWGtIQTZUWlVySVMzeDBEN2ljVTJjU0pIenhjcE9GRUl1bGM5bGF6OFh3SmpxVVp6bTVEeWtmMFZIRURnZDd1WnpHZXJQTnFVeUE4UjFETkt2djBJNEh3MmFxbk9VYnZCQUZaSk1HX3RFUFdxMGd5Q3poWU4yT2ZxLW1ORlR6SzZoLTExX2E4NzI2TkhsWGJVdDJOMnNGX3ozUllRYWZxRkpwdURJcmNXVU5OMXlRSmlYVVV1RVJkOVlpc0lQVFFFbXl5dm1YMFdZMC1LbjU2RC1T?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQalM0bUhKNmlfUUtROTlwQ1FoOFR2M1lIaVR6eVZ6YTcwUjRnMGw1ZW15UEkwbDNiWVVUQ3BON1IwNFpHQzBOdjduczhaU05hRUEySmlqd3RKcWFxQU5WRml5YjROd2xOWFc2eGFPTlh4bTBFV1BwSGxXT2dua0ctag?oc=5",
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUnJlWm5reUE4TktUbEVjMnBfQU42MjkxckVHMUZWbTJFUmtVQUVXbzdIRi1GZmd6cGtHRjhaOXVqcm5hLTdYWnFsaXNmUUkzWm5PeVphQXh1U3d2bWU3Ym1CTkdCZzJ1c3AtdjVLS01YLUZ2cDFQR1RhWC12WDgxcUlOVjFjR19NM2R5R21lSGQ1ZlRoRlh0dlRNbGRDSWRKZUVmRzc2TWZmLXEyb3drWjd5S3dEbzM2eFdiWkxrVm4?oc=5"
       ],
       "source_articles": [
@@ -460,8 +516,8 @@
       "quality_score": 0.75,
       "verification_status": "verified",
       "verification_score": 0.75,
-      "source_count": 3,
-      "last_updated": "2026-04-02T02:58:22.786782",
+      "source_count": 4,
+      "last_updated": "2026-04-02T07:27:59.096626",
       "id": "31d88084dd7c",
       "created_at": "2026-04-01T19:18:32.009780+00:00"
     },

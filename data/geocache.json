@@ -283,5 +283,10 @@
     "lat": 29.307466,
     "lon": 47.962808,
     "display_name": "طريق المطار, اليرموك - قطعة 3, اليرموك, مدينة الكويت, خيطان, محافظة العاصمة, 72504, الكويت"
+  },
+  "airport, singapore, singapore": {
+    "lat": 1.355134,
+    "lon": 103.984888,
+    "display_name": "Airport, 65, T1 Boulevard, Changi, East Region, Singapore, 819663, Singapore"
   }
 }
