@@ -288,5 +288,10 @@
     "lat": 1.355134,
     "lon": 103.984888,
     "display_name": "Airport, 65, T1 Boulevard, Changi, East Region, Singapore, 819663, Singapore"
+  },
+  "airport, detroit": {
+    "lat": 42.411244,
+    "lon": -83.008531,
+    "display_name": "Coleman A. Young Municipal Airport, Dobel Street, Airport Sub, Detroit, Wayne County, Michigan, 48234, United States"
   }
 }
