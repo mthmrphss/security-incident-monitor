@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-02T07:27:59.096800+00:00",
+    "last_updated": "2026-04-02T13:48:39.511716+00:00",
     "total_incidents": 53,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -249,8 +249,8 @@
       "country_code": "SG",
       "city": "Singapore",
       "location_detail": "near airport",
-      "airport_name": null,
-      "airport_iata": null,
+      "airport_name": "Changi Airport",
+      "airport_iata": "SIN",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "bombing",
@@ -270,7 +270,8 @@
       "date": "2026-04-02",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdWk2V0JOX0N2R2JJV2gtWEZHM3U0LXZxV0U3VHZYNDh2azNqMjllY1IzS1FEZkNFc19EdEFGdkhwUUJmdThOMzFOTXFfNGVYOTlpckxJY1Z5UjU5Q29ySnN5UVEzTUp6RElxVS1UWlVUR2VyMW9FVnA3SjBPeWxtUnhJMDAwUEt6TlJEQktZc3p1MVpSMmhwSHBsWDE4TXJ6OG5ZUW1wS2FUaE9uc1RUaWl3?oc=5"
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdWk2V0JOX0N2R2JJV2gtWEZHM3U0LXZxV0U3VHZYNDh2azNqMjllY1IzS1FEZkNFc19EdEFGdkhwUUJmdThOMzFOTXFfNGVYOTlpckxJY1Z5UjU5Q29ySnN5UVEzTUp6RElxVS1UWlVUR2VyMW9FVnA3SjBPeWxtUnhJMDAwUEt6TlJEQktZc3p1MVpSMmhwSHBsWDE4TXJ6OG5ZUW1wS2FUaE9uc1RUaWl3?oc=5",
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPYVhiZTRvWTNaMmFfWXpwVGRJWEViTE15dDhRSXhuWVhTOERMUkZMVTlBWTNaSWNwSjByc2dFRkdvZmVuQXNMWDNwUjVyQjNnRDF6ZFpQcjVOMzEyaUs4NUpvSDgzT2c2d182Z0ZIVHVwdzRCRk9OT1o1SHhYUS0zOW4tamtjclF6V0Iza0dyWS1TNXpENS1yOS03cDg3LXBYcXM4WlZmWDMtQmRJLU1BaUJCdEJSaUVmZTc1TGNHMGtHSjhqVVJhT0QtLWthUFRIMUpZTA?oc=5"
       ],
       "source_articles": [
         0
@@ -293,8 +294,8 @@
       "verification_score": 1.0,
       "id": "7ffe05348637",
       "created_at": "2026-04-02T07:27:59.096781+00:00",
-      "last_updated": "2026-04-02T07:27:59.096793+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-02T13:48:39.511615",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
