@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-02T19:16:19.141524+00:00",
-    "total_incidents": 53,
+    "last_updated": "2026-04-03T03:01:08.147920+00:00",
+    "total_incidents": 55,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -244,6 +244,117 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-04-03",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Amarillo",
+      "location_detail": "Amarillo airport",
+      "airport_name": "Amarillo airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Amarillo airport reopens after bomb threat",
+      "summary_tr": "Amarillo havalimanı bomba tehdidinden sonra yeniden açıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "false_alarm"
+      ],
+      "date": "2026-04-03",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX0VRWjRjQllIRmJwQ1UzdWZFUEtoWVpYV2dmQXMxSlJQRlZsQ1pwLWZuS2ZxOWR1Mmd0OWNJbjNfeVBqU1h5ekV3Q0hBczhERHFmUENTMktwbjNlbElkV0Zna0FqZ2I0aUVEdlpkbUhwNVU1S3NsYjVmZEdFLXZOcDc1eWpWazFoYjNTQ01ncFZUQVRfWldpQzlwOC1kUU9kX2N3RDd6QdIBuwFBVV95cUxQSU9uYkNrWHpieGhuZjg1TGd3QWp4UjVmaWlDU3czRUh1bXh4aHlQRkl1RTBJcWhQcXRlQl9vbkN2ck5saXA1Tnc1MTkyeXdOLUZCQnlMNW1Na2VMTF8ybUdwbEg1OHVPclJVTDlGX2RONmVrZWM4X2xFblRpclpWcFJaTEM4bmx0aGhyZGp2SlJ0cFRYUkhORnhtd25rX1BROUNvTGFpY2FQMEFkd2VhSW9hOE9XZkgxOTJ3?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.220803,
+      "geo_lon": -101.709733,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "38546549f2bf",
+      "created_at": "2026-04-03T03:01:08.147889+00:00",
+      "last_updated": "2026-04-03T03:01:08.147900+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-03",
+      "country": "unknown",
+      "country_code": "US",
+      "city": "Amarillo",
+      "location_detail": "Rick Husband Amarillo International airport",
+      "airport_name": "Rick Husband Amarillo International airport",
+      "airport_iata": "AMA",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "bomb threat at airport",
+      "summary_tr": "havaalanında bomba tehdidi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "Amarillo"
+      ],
+      "date": "2026-04-03",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxNc21ZOW1Kc09SSkZIcmdEMy1YTXlrS1RBRFRIcldnNU43RmU1TUhtSzliMnl2TWpISXFNUDBtVk5JbzNTdDFEVWEzWkQ2LUtkWDBPQy1QaUNMS21HVnExSi1ZeUFyNENxS1NKY3pfcllyeXEtYkxhV0ZkZnBPTWpnTEd0X1lRQVFjR1cyYXFhcGpIMXFQeEhWMDFwS3dJRjNxWkdOcEhkajg4MjBSTEE?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZndiWmUxcXIydVM1d2dGbklCZUEta2RMcnZYSzQzYmFST0FIQ0tMeWFIVkNnNzNpUGVLWnFpaDdXY2VaSDFTeEY0WVRMbHdfVGFpZjQ5OTY1YlE5elVYVGtROTgweWJZOVZMR0ZfSVc5dEZRb3VoV3FjZThOWWZlaWVMdUtBRkFDajVfWGRTVHhHSlpXYzFFcWM0UnU4eW9nLWRB?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.220803,
+      "geo_lon": -101.709733,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "source_count": 2,
+      "last_updated": "2026-04-03T03:01:08.147914+00:00",
+      "id": "6f42080235e4",
+      "created_at": "2026-04-03T03:01:08.147911+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-04-02",
       "country": "Singapore",
       "country_code": "SG",
@@ -383,8 +494,9 @@
       "date": "2026-04-01",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOMk5lVE1sN1JfWEVlbkhlZWQ3N09hc19tWHd1M0ppVEhCUlEwVFZkVUR1S2dLX014RVFRN2ZlVVpFRl9hcGlmVlJ2MXZ0N0ZyeGdhejFLSVNzLV8xTDMweDZIZGdXbGp0alMxY2hGampvWHhpMEY4T3gwS3lrVzhwcWJXWVVmeU02bzduWi1PMUFycFZPT1BrTVNHempoR2F4cWZRME1tSGdhcDFTdVNsVEZPV3Rrdi1tbjZOd2RtWGZfQ2ZCWThWdGUyWC1JZXBERFBBOHEzeUhaWWhLcVA0aFEwS1hsMXVqSWcxc2xtUl9VQTg?oc=5",
-        "http://www.oklahomacitysun.com/news/278958560/kuwait-airport-tanker-off-qatar-bombed-by-iran"
+        "http://www.oklahomacitysun.com/news/278958560/kuwait-airport-tanker-off-qatar-bombed-by-iran",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQYTk2UW12cVpBLTlkcnFkMExVVjJaR25IZERtY1lBRVZrUjdqVzR1REdlZmdDVWdlVVhlMHM3NlVPWi1uNG9MWjZKX0ZaOWxvcHNYSVdRYVFibXVtZFo5WWd0M3RLbWVndzJmMEJBRVZXN3NEeGw0a3ZVcjBqc09RNGRwTlBpSlZ4VHlKYnB0WHRLVHVkNm83WXB0OGppYWlpdXpZR2tBcEc4RkdBLWJVSmRoaHN3NkkzQ3N3?oc=5",
+        "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOMk5lVE1sN1JfWEVlbkhlZWQ3N09hc19tWHd1M0ppVEhCUlEwVFZkVUR1S2dLX014RVFRN2ZlVVpFRl9hcGlmVlJ2MXZ0N0ZyeGdhejFLSVNzLV8xTDMweDZIZGdXbGp0alMxY2hGampvWHhpMEY4T3gwS3lrVzhwcWJXWVVmeU02bzduWi1PMUFycFZPT1BrTVNHempoR2F4cWZRME1tSGdhcDFTdVNsVEZPV3Rrdi1tbjZOd2RtWGZfQ2ZCWThWdGUyWC1JZXBERFBBOHEzeUhaWWhLcVA0aFEwS1hsMXVqSWcxc2xtUl9VQTg?oc=5"
       ],
       "source_articles": [
         0
@@ -407,8 +519,8 @@
       "verification_score": 1.0,
       "id": "a3249d12b56c",
       "created_at": "2026-04-01T13:59:25.940189+00:00",
-      "last_updated": "2026-04-02T02:58:22.785796",
-      "source_count": 2
+      "last_updated": "2026-04-03T03:01:08.147796",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",

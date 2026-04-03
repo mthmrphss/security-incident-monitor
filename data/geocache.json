@@ -293,5 +293,15 @@
     "lat": 42.411244,
     "lon": -83.008531,
     "display_name": "Coleman A. Young Municipal Airport, Dobel Street, Airport Sub, Detroit, Wayne County, Michigan, 48234, United States"
+  },
+  "airport, amarillo, united states": {
+    "lat": 35.220803,
+    "lon": -101.709733,
+    "display_name": "Rick Husband Amarillo International Airport, 10801, Airport Boulevard, Amarillo, Potter County, Texas, 79111, United States"
+  },
+  "airport, amarillo": {
+    "lat": 35.220803,
+    "lon": -101.709733,
+    "display_name": "Rick Husband Amarillo International Airport, 10801, Airport Boulevard, Amarillo, Potter County, Texas, 79111, United States"
   }
 }
