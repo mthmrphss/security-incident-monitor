@@ -303,5 +303,10 @@
     "lat": 35.220803,
     "lon": -101.709733,
     "display_name": "Rick Husband Amarillo International Airport, 10801, Airport Boulevard, Amarillo, Potter County, Texas, 79111, United States"
+  },
+  "airport, malda, india": {
+    "lat": 25.0099,
+    "lon": 88.125134,
+    "display_name": "Malda Airport, A. B. A. Gani Khan Sarani, Malda, English Bazar, Maldah, West Bengal, 732101, India"
   }
 }
