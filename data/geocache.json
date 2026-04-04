@@ -308,5 +308,10 @@
     "lat": 25.0099,
     "lon": 88.125134,
     "display_name": "Malda Airport, A. B. A. Gani Khan Sarani, Malda, English Bazar, Maldah, West Bengal, 732101, India"
+  },
+  "airport, greenville": {
+    "lat": 31.845708,
+    "lon": -86.610529,
+    "display_name": "Mac Crenshaw Memorial Airport, Airport Lane, Greenville, Butler County, Alabama, 36037, United States"
   }
 }
