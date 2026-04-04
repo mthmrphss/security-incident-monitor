@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-04T02:46:00.772851+00:00",
-    "total_incidents": 60,
+    "last_updated": "2026-04-04T07:11:09.554782+00:00",
+    "total_incidents": 61,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -628,6 +628,60 @@
       "id": "8527c869da2e",
       "created_at": "2026-04-04T02:46:00.772843+00:00",
       "last_updated": "2026-04-04T02:46:00.772846+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260403T224500Z",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Bengal",
+      "location_detail": "airport",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "mastermind behind judge hostage drama",
+      "summary_en": "Mastermind behind judge hostage drama arrested",
+      "summary_tr": null,
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport arrest",
+        "hostage drama"
+      ],
+      "date": "2026-04-03",
+      "year": 2026,
+      "source_urls": [
+        "https://www.tribuneindia.com/news/india/mastermind-behind-judge-hostage-drama-in-bengal-arrested-at-airport/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 22.996495,
+      "geo_lon": 87.685588,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "fd9288a70dd8",
+      "created_at": "2026-04-04T07:11:09.554770+00:00",
+      "last_updated": "2026-04-04T07:11:09.554778+00:00",
       "source_count": 1
     },
     {

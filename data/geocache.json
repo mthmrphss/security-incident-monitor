@@ -313,5 +313,10 @@
     "lat": 31.845708,
     "lon": -86.610529,
     "display_name": "Mac Crenshaw Memorial Airport, Airport Lane, Greenville, Butler County, Alabama, 36037, United States"
+  },
+  "bengal, india": {
+    "lat": 22.996495,
+    "lon": 87.685588,
+    "display_name": "West Bengal, India"
   }
 }
