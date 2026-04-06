@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-06T03:24:45.816077+00:00",
+    "last_updated": "2026-04-06T07:56:39.730176+00:00",
     "total_incidents": 63,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -1414,8 +1414,8 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
-      "event_date": "2026-03-30",
-      "publish_date": "20260330T130000Z",
+      "event_date": "unknown",
+      "publish_date": "2026-03-30",
       "country": "Iraq",
       "country_code": "IQ",
       "city": "Baghdad",
@@ -1424,24 +1424,25 @@
       "airport_iata": "BGW",
       "hotel_name": null,
       "venue_name": "airport",
-      "attack_type": "other",
-      "severity": "high",
+      "attack_type": "drone",
+      "severity": "unknown",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
-      "summary_en": "Rocket attack on Baghdad airport",
-      "summary_tr": "Bağdat havalimanına roketli saldırı",
+      "perpetrator": "Iran-backed Iraqi militias",
+      "summary_en": "Aircraft damaged in drone attack",
+      "summary_tr": null,
       "is_ongoing": false,
       "is_false_alarm": false,
       "tags": [
-        "airport attack",
-        "rocket attack",
+        "drone attack",
+        "airport",
         "Iraq"
       ],
       "date": "2026-03-30",
       "year": 2026,
       "source_urls": [
-        "https://diyarbakirsoz.com/dunya/bagdat-uluslararasi-havalimanina-roketli-saldiri-560847"
+        "https://www.reddit.com/r/worldnews/comments/1sdp09l/victoria_base_attack_baghdad_airport_facility/",
+        "https://x.com/clashreport/status/2038503284629987436#m"
       ],
       "source_articles": [
         0
@@ -1453,19 +1454,19 @@
         "has_country": true,
         "has_city": true,
         "has_valid_date": true,
-        "text_overlap": false,
+        "text_overlap": true,
         "valid_type": true,
         "attack_in_source": true,
-        "location_in_source": false,
+        "location_in_source": true,
         "not_false_alarm": true
       },
-      "quality_score": 0.65,
-      "verification_status": "probable",
-      "verification_score": 0.65,
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
       "id": "d60c382041b1",
-      "created_at": "2026-03-30T13:54:48.261314+00:00",
-      "last_updated": "2026-03-30T13:54:48.261317+00:00",
-      "source_count": 1
+      "created_at": "2026-03-30T08:00:01.960878+00:00",
+      "last_updated": "2026-04-06T07:56:39.730103",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
