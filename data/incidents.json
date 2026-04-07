@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-07T02:57:47.171591+00:00",
-    "total_incidents": 64,
+    "last_updated": "2026-04-07T07:43:20.128219+00:00",
+    "total_incidents": 65,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -296,6 +296,61 @@
       "last_updated": "2026-04-07T02:57:47.171580+00:00",
       "id": "d319d96d51ce",
       "created_at": "2026-04-07T02:57:47.171575+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-06",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "Tehran",
+      "location_detail": "Mehrabad Airport and smaller airstrips",
+      "airport_name": "Mehrabad Airport",
+      "airport_iata": "THR",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "IDF",
+      "summary_en": "IDF hit Tehran's airport",
+      "summary_tr": "İsrail Savunma Kuvvetleri Tahran Havalimanına saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport attack",
+        "IDF",
+        "Tehran"
+      ],
+      "date": "2026-04-06",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUzgxRGVJYVJpX3VrUF94eFV3T3R6TlF5QkVLWXFVOWxwQkNjd1JLcE1GY05qYlNSaGR1X2w5dm1xVTc4NVlULUgybVV5VmRDeGUwLUtoTk1xamE4ZDMwQXFTZEk4WWhBRVlNZWNhOHhTSTJ5MnZFUXVYeWZxSEF1cXNQeURlVk9TeEFydkxYNGxiQU92ZkViMndUZEk4VXVsdU1LUk5LQXFlUVRqVGktOWlKdHA?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.423428,
+      "geo_lon": 51.198962,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "d319d96d51ce",
+      "created_at": "2026-04-07T07:43:20.128180+00:00",
+      "last_updated": "2026-04-07T07:43:20.128191+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
