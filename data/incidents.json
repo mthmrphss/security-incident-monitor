@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-07T07:43:20.128219+00:00",
-    "total_incidents": 65,
+    "last_updated": "2026-04-07T13:51:38.433465+00:00",
+    "total_incidents": 66,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -239,6 +239,62 @@
       "id": "140f3cadbc20",
       "created_at": "2026-03-28T18:53:53.426590+00:00",
       "last_updated": "2026-03-28T18:53:53.426598+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260407T033000Z",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "unknown",
+      "location_detail": "3 Iran airports",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airports",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Israel",
+      "summary_en": "Israel targets 3 Iran airports",
+      "summary_tr": "İsrail 3 İran havaalanına saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport attack",
+        "Iran",
+        "Israel",
+        "false_alarm"
+      ],
+      "date": "2026-04-07",
+      "year": 2026,
+      "source_urls": [
+        "https://timesofindia.indiatimes.com/world/middle-east/hub-for-arming-financing-regimes-proxies-israel-targets-3-iran-airports-aircraft-helicopters-hit/articleshow/130074049.cms"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 29.543695,
+      "geo_lon": 52.598163,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "76af780402dd",
+      "created_at": "2026-04-07T13:51:38.433446+00:00",
+      "last_updated": "2026-04-07T13:51:38.433458+00:00",
       "source_count": 1
     },
     {
