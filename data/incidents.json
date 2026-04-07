@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-07T13:51:38.433465+00:00",
+    "last_updated": "2026-04-07T19:20:59.771695+00:00",
     "total_incidents": 66,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -271,6 +271,7 @@
       "date": "2026-04-07",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWTZOdWwtN3Y2NEFOc21PcE5LUVA4WUlhSHRIUFY0RHZyc043c2g4RkdqVVJ1Zk94bTVZcmhLVlRQNGVlMDJ4alFKRUhVMzJyTjRkRTRUNjdRd2ZoM1lEY0VSOUtEeUhWbFE1VE9ZVElyR19ybDhKZHNEZWVQSk80TFN1QnNaTWxZR2NLTUl4dHJCalZzN1NCUHdSNXpXNVVjclVpN0pOMVE?oc=5",
         "https://timesofindia.indiatimes.com/world/middle-east/hub-for-arming-financing-regimes-proxies-israel-targets-3-iran-airports-aircraft-helicopters-hit/articleshow/130074049.cms"
       ],
       "source_articles": [
@@ -294,8 +295,8 @@
       "verification_score": 0.9,
       "id": "76af780402dd",
       "created_at": "2026-04-07T13:51:38.433446+00:00",
-      "last_updated": "2026-04-07T13:51:38.433458+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-07T19:20:59.771573",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
