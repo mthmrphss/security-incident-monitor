@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-06T07:56:39.730176+00:00",
-    "total_incidents": 63,
+    "last_updated": "2026-04-07T02:57:47.171591+00:00",
+    "total_incidents": 64,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -240,6 +240,62 @@
       "created_at": "2026-03-28T18:53:53.426590+00:00",
       "last_updated": "2026-03-28T18:53:53.426598+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "20260406T231500Z",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "Tehran",
+      "location_detail": "Sharif University",
+      "airport_name": null,
+      "airport_iata": "IKA",
+      "hotel_name": null,
+      "venue_name": "University",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "US-Israeli",
+      "summary_en": "US-Israeli strikes on Iranian universities",
+      "summary_tr": "ABD-İsrail'in İran üniversitelerine saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "University",
+        "Iran",
+        "US-Israeli strikes"
+      ],
+      "date": "2026-04-06",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTFAtR3dJRVpSVUF4MzVXc3FRLVB6RE9HWlVrQVQ3ZVhCai1IMFVQYlJGTTFkYjk1YmJSOE9qMHZ3YnBLVV9QaTdXSnlsc2xGVG9uQ1ZVTU5ESUxRYjZMeTBob182U3R6YzlYWTlmdFN3?oc=5",
+        "https://www.zerohedge.com/geopolitical/top-university-dubbed-mit-iran-bombed-along-several-airports"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.703998,
+      "geo_lon": 51.399413,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-04-07T02:57:47.171580+00:00",
+      "id": "d319d96d51ce",
+      "created_at": "2026-04-07T02:57:47.171575+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
