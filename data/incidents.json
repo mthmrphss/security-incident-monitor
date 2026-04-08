@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-07T19:20:59.771695+00:00",
-    "total_incidents": 66,
+    "last_updated": "2026-04-08T03:03:52.412485+00:00",
+    "total_incidents": 68,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -297,6 +297,116 @@
       "created_at": "2026-04-07T13:51:38.433446+00:00",
       "last_updated": "2026-04-07T19:20:59.771573",
       "source_count": 2
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-07",
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "vicinity of Baghdad International Airport near US assets",
+      "airport_name": "Baghdad International Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "explosion",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "10 explosions near Baghdad airport",
+      "summary_tr": "Bagdat havalimanı yakınlarında 10 patlama",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "explosion",
+        "airport attack",
+        "Baghdad"
+      ],
+      "date": "2026-04-07",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPbkdfNU8zOUdOLWVPVUJzZ3ZsUWhLb0gxZUNPNmEzT3pnT3RERkFveGtIaWF2Y0dMdFh6U2lVbHdmMnVKTEh1U0lsYUs0S1VLZnVZM25UN1FrNTBVVndmY1VabGZRZGVaRGx5MDBMWlJ4X1RrXzNqbW9oSGpWTGMyaFZMSDNVak1jRDBVVDBMVjRfeW9VbWxEMmZLd2J2X2ZmcnJ3Z0RKMWgxVFphZ09PQnZ3aGo5NTI4emxlYi1rcTdMRDhsVWtEbGNTYV9DOUdPOXNCTg?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.234216,
+      "geo_lon": 44.239916,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "8a84446100e7",
+      "created_at": "2026-04-08T03:03:52.412464+00:00",
+      "last_updated": "2026-04-08T03:03:52.412472+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-07",
+      "country": "Russia",
+      "country_code": "RU",
+      "city": "Novorossiysk",
+      "location_detail": "Russia's terminal",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "terminal",
+      "attack_type": "drone",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Oil exports suspended after UAV attack",
+      "summary_tr": "İnsansız hava aracı saldırısı sonrası petrol ihracatı askıya alındı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "UAV",
+        "oil exports",
+        "Novorossiysk"
+      ],
+      "date": "2026-04-07",
+      "year": 2026,
+      "source_urls": [
+        "https://www.reddit.com/r/worldnews/comments/1sf5ne6/oil_exports_from_russias_terminal_in_novorossiysk/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 44.724151,
+      "geo_lon": 37.816471,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "1272b4ad7051",
+      "created_at": "2026-04-08T03:03:52.412480+00:00",
+      "last_updated": "2026-04-08T03:03:52.412482+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
