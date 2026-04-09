@@ -348,5 +348,15 @@
     "lat": 12.959944,
     "lon": 77.644138,
     "display_name": "Zoomcar India, 7th Floor,Tower-B, Diamond District, HAL Old Airport Road, Corporation Colony, Kodihalli, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560008, India"
+  },
+  "airport, roswell": {
+    "lat": 33.408434,
+    "lon": -104.545203,
+    "display_name": "Old Roswell Airport Apron, West College Boulevard, Roswell, Chaves County, New Mexico, 88201, United States"
+  },
+  "airport, tampa, united states": {
+    "lat": 27.979165,
+    "lon": -82.534928,
+    "display_name": "Tampa International Airport, 4100, George J. Bean Parkway, Paradise, Tampa, Hillsborough County, Florida, 33607, United States"
   }
 }

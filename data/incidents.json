@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-09T02:53:32.752929+00:00",
-    "total_incidents": 70,
+    "last_updated": "2026-04-09T19:19:42.336941+00:00",
+    "total_incidents": 72,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -239,6 +239,117 @@
       "id": "140f3cadbc20",
       "created_at": "2026-03-28T18:53:53.426590+00:00",
       "last_updated": "2026-03-28T18:53:53.426598+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-09",
+      "country": "unknown",
+      "country_code": "US",
+      "city": "Roswell",
+      "location_detail": "airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Roswell woman",
+      "summary_en": "bomb scare at airport",
+      "summary_tr": "havaalanında bomba alarmı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb scare",
+        "false_alarm"
+      ],
+      "date": "2026-04-09",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxQM3dLTlVUQmJYWFNobnlEdUJ0Y2U5LVdwaFRDb3NOS2VrQkJNWmJnbmRYUkx0RDFFVmViajMzaVFoWWp3WWx3UTNaa0pCWUdXYkpSMkpRbFQxdTlUQWZtdG1xQWdDYlRHTjMyYldHZ3duWlBWaGRyNzFHODZVRkNTQlhaV0d1MzYzU1lXWWY5ZUl6Wk1vQzNWQ1dvWGt5aWR6M3FUakdCc9IBrAFBVV95cUxQSkkyd1FUMEIzdVAyUWRNdFhIV2VWT1ZYcFhRcjRfUW9HZ2ZzbGxuamM2N1p6QzEzU3JqLUJtcjZZSTZqQWlXMFdiNFA3ZWdEMWs0WDN6dzdMRjBRSDhhXzFaRV9EX2Vxa2JkLUt5ZjdkUEZ4b212eWdDYzUwcmNjOVpSdkdkYzFuQlNpU052T20xeVYyYzBIX2tRYzk1QXpDUXdCZEFwd1Z1Tk14?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.408434,
+      "geo_lon": -104.545203,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "e5dbe86edfd1",
+      "created_at": "2026-04-09T19:19:42.336915+00:00",
+      "last_updated": "2026-04-09T19:19:42.336922+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-09",
+      "publish_date": "2026-04-09",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Tampa",
+      "location_detail": "Near Tampa Airport",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "Airport",
+      "attack_type": "other",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb Squad Clears Empty Pressure Cooker",
+      "summary_tr": "Bomb Squad Boş Basınçlı Kapları Temizledi",
+      "is_ongoing": false,
+      "is_false_alarm": true,
+      "tags": [
+        "airport",
+        "pressure cooker",
+        "bomb squad",
+        "false_alarm"
+      ],
+      "date": "2026-04-09",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxObFZRNldqMXp6VXBPcXgxRGhxRVlFN1NTd1NKMGgweE9MZVphbTRlTWtQV2N0cmtYTk92Y3Z3RElmaVBGOEpLdWd3VWtETG1QZUZORy1uVk02UjZpdnpGMW5ZZXBpWGJvV094cEFLMkZjVGxRSDlBMWJtNS1ob01fZXJWM0FfSGlpUVRtS2ZnNGFCWmhJbVFBY3lxdjJLQ0U?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 27.979165,
+      "geo_lon": -82.534928,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.95,
+      "verification_status": "verified",
+      "verification_score": 0.95,
+      "id": "fd28dcf6e00d",
+      "created_at": "2026-04-09T19:19:42.336931+00:00",
+      "last_updated": "2026-04-09T19:19:42.336935+00:00",
       "source_count": 1
     },
     {
