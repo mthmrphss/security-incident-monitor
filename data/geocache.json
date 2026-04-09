@@ -343,5 +343,10 @@
     "lat": 44.724151,
     "lon": 37.816471,
     "display_name": "Контейнерный терминал НУТЭП, Восточный район, Новороссийск, городской округ Новороссийск, Краснодарский край, Южный федеральный округ, 353900, Россия"
+  },
+  "airport, bengaluru, india": {
+    "lat": 12.959944,
+    "lon": 77.644138,
+    "display_name": "Zoomcar India, 7th Floor,Tower-B, Diamond District, HAL Old Airport Road, Corporation Colony, Kodihalli, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560008, India"
   }
 }
