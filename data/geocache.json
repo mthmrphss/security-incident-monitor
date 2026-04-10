@@ -358,5 +358,10 @@
     "lat": 27.979165,
     "lon": -82.534928,
     "display_name": "Tampa International Airport, 4100, George J. Bean Parkway, Paradise, Tampa, Hillsborough County, Florida, 33607, United States"
+  },
+  "airport, chisinau, moldova": {
+    "lat": 46.929628,
+    "lon": 28.93758,
+    "display_name": "Aeroportul Internațional Chișinău „Eugen Doga”, Bulevardul Dacia, Codru, sectorul Botanica, Chișinău, Municipiul Chișinău, MD-2029, Moldova"
   }
 }
