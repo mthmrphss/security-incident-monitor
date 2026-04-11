@@ -363,5 +363,10 @@
     "lat": 46.929628,
     "lon": 28.93758,
     "display_name": "Aeroportul Internațional Chișinău „Eugen Doga”, Bulevardul Dacia, Codru, sectorul Botanica, Chișinău, Municipiul Chișinău, MD-2029, Moldova"
+  },
+  "taipei, taiwan": {
+    "lat": 25.03752,
+    "lon": 121.56368,
+    "display_name": "臺北市, 臺灣"
   }
 }
