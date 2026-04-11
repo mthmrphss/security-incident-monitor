@@ -368,5 +368,15 @@
     "lat": 25.03752,
     "lon": 121.56368,
     "display_name": "臺北市, 臺灣"
+  },
+  "beirut, lebanon": {
+    "lat": 33.889226,
+    "lon": 35.502558,
+    "display_name": "بيروت, البسطة التحتا, باشورة, محافظة بيروت, لبنان"
+  },
+  "hotel, belfast": {
+    "lat": 54.594707,
+    "lon": -5.932723,
+    "display_name": "Maldron Hotel Belfast City, 20, Brunswick Street, Linen Quarter, Sandy Row, Belfast, Belfast City District, County Antrim, Northern Ireland / Tuaisceart Éireann, BT2 7GE, United Kingdom"
   }
 }
