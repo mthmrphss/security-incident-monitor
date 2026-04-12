@@ -383,5 +383,10 @@
     "lat": -24.393452,
     "lon": -65.093695,
     "display_name": "Aeropuerto Internacional Gobernador Horacio Guzmán, Avenida La Bandera, Virgen del Valle, Juan Manuel de Rosas, Perico, Municipio de Perico, Departamento El Carmen, Jujuy, Y4610, Argentina"
+  },
+  "airport, shannon, ireland": {
+    "lat": 52.690781,
+    "lon": -8.912716,
+    "display_name": "Shannon Airport Fire Station, O'Reagan Avenue, Clenagh ED, Shannon Municipal District, County Clare, Munster, V14 N763, Éire / Ireland"
   }
 }

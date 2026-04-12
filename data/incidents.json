@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-12T13:16:54.714595+00:00",
-    "total_incidents": 78,
+    "last_updated": "2026-04-12T19:02:37.075380+00:00",
+    "total_incidents": 79,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -297,6 +297,61 @@
       "created_at": "2026-04-12T03:30:19.805295+00:00",
       "last_updated": "2026-04-12T13:16:54.714503",
       "source_count": 2
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-12",
+      "country": "Ireland",
+      "country_code": "IE",
+      "city": "Shannon",
+      "location_detail": "Shannon Airport",
+      "airport_name": "Shannon Airport",
+      "airport_iata": "SNN",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "stabbing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Stabbing attack on US military plane",
+      "summary_tr": "ABD askeri uçağına bıçaklı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport attack",
+        "US military",
+        "stabbing"
+      ],
+      "date": "2026-04-12",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNWRPU3hzZ2NCRmc4czZmbXVjM2ZCNU0wSFFzSGsxdXVRVlRaWGVjb0NwYkxRckdKZGY4VENMYV9mVEQzR2RqNkllNmhKaXBJeEVIOTZXd1A2RlNzNmJoUVhzZFZVaFZLcUVWNlFSQ1VZTTBramRhVkNhTXpMWWtxTS0tNXBuNmJRdEJLSFpGbUlTQVNpczJnR0x3?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 52.690781,
+      "geo_lon": -8.912716,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.65,
+      "verification_status": "probable",
+      "verification_score": 0.65,
+      "id": "caef45213887",
+      "created_at": "2026-04-12T19:02:37.075365+00:00",
+      "last_updated": "2026-04-12T19:02:37.075375+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
