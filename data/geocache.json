@@ -378,5 +378,10 @@
     "lat": 54.594707,
     "lon": -5.932723,
     "display_name": "Maldron Hotel Belfast City, 20, Brunswick Street, Linen Quarter, Sandy Row, Belfast, Belfast City District, County Antrim, Northern Ireland / Tuaisceart Éireann, BT2 7GE, United Kingdom"
+  },
+  "airport, jujuy": {
+    "lat": -24.393452,
+    "lon": -65.093695,
+    "display_name": "Aeropuerto Internacional Gobernador Horacio Guzmán, Avenida La Bandera, Virgen del Valle, Juan Manuel de Rosas, Perico, Municipio de Perico, Departamento El Carmen, Jujuy, Y4610, Argentina"
   }
 }

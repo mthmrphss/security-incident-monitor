@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-11T18:58:19.068093+00:00",
-    "total_incidents": 76,
+    "last_updated": "2026-04-12T03:30:19.805327+00:00",
+    "total_incidents": 78,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -244,6 +244,62 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
+      "publish_date": "2026-04-12",
+      "country": "Iraq",
+      "country_code": "IQ",
+      "city": "Baghdad",
+      "location_detail": "Baghdad Airport",
+      "airport_name": "Baghdad Airport",
+      "airport_iata": "BGW",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "explosion",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "US Diplomats attacked in Iraq",
+      "summary_tr": "Irak'ta ABD diplomatlarina saldiri",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport attack",
+        "explosion",
+        "US diplomats",
+        "false_alarm"
+      ],
+      "date": "2026-04-12",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiggJBVV95cUxNVm5LZ3RvTTZZSkRMWmU3ZGFrTS0wbVFUUmZjQWEzbHBEMDFiUVpzVFc2SHlWbzh6N0QyX3lOVTl4X091T1IwM0lYWDFubGpiUHF3eUt2TWd5dDZPUks5bGJoWDZPV2daZVlxRXVHRko2ZjFTZ1EwUlNBQzF4ZnMyQjFJZmZSVFFNZnZMV1BPV3Z2T0RtZmlkeHhfUlhvT3ZncUVrY0pjNVhWdmFwSDhpUnFBU0F5M3duY3JrRWY2VU1mMmh1SGVuTE9BMnQ3WHNDMjN3Y1RiUUVGNmxXMkZiRGRaTHVPMG91VjBaem5RN3dIczdrUklheU16NzctdEEtLXfSAYcCQVVfeXFMTTVmVGtrUk1naXN4N1gycDl5TlhoNDBwRy1tQy1IeW80ek13QjJsV1NmM2NTbmVqajctekVMa3BvTkNNUEFSeUM1VjgyRWJVaHBnSUc3M3RkMGJTTHFON0Jlb2w5REZyLWF5Ym1hYThMeXV3dUI2WFBRQktDZ0tockp5OGtzSnJNQVMxT3hBRTdJUWhyMWJ6d1BiT1J4YlY3RzB6V2lOS21qRXgydmxhd0hkQ2NjZWpUY3h5VnhzbGg2dkpEN3g0YTZGM0J3Z1RtZWwtQlUzaDllWXc5YXpiRXQ4OXNoa2J1RExMWTBXWUZ5ZUNXdG1YdHFjQnBtNzBXTndBQldDUWs?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 33.234216,
+      "geo_lon": 44.239916,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "d45cb3ba8beb",
+      "created_at": "2026-04-12T03:30:19.805295+00:00",
+      "last_updated": "2026-04-12T03:30:19.805305+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
       "publish_date": "2026-04-11",
       "country": "Lebanon",
       "country_code": "LB",
@@ -273,8 +329,9 @@
       "source_urls": [
         "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPeEtWdTZGd2NyaXZaSC12aS11a3FOZmJRSFVaV1Z6aWNHTF9kLXI5WjJjcXZpTk1OcWJ2RUVTNmEyNmYtSm9yRlh3VWRsdkIxWEpJSldpc2xPTE5ycHktWXB1cGpLRHhKZkpaZVBxVEk0WTZFNVI3Y1lwcnptbzRlbkQwWkp3UWw5U09tdVhtbEpnOUtHQ09lV0xrak5RLWZSNWNScEQ4NFNZem55SFBHeU1Bem9oR2prQlJLU0V3ODhEdmx1SV9neVhpdDY5QUVteVEwc01lWWl1Y05hUDdpMXZ1QmZLb3g3NWRvQQ?oc=5",
         "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOd2pRNUxuSXZtSzZ6SHRvSm9aUHNIcVNJbGFmS3FzME5HZUNHaXh5dUlEcUZud0NXc2k2VGJsMnZEYnM4dmhWRXlLWHNldU9HdnlZNjlVUzA2dVZZNFdGZmhzNzYzWUZEZnQ2eG8wYUMyWUNvZGlBS0ZvVkNqRGlzR3dEZVNRdXc3RHZNXzBmNkJLRU9haF9RM21fbGJGWXJsdXVnMFhGRHZOaTVnOHN1S2lqdkhhNG4zdVBxMVFhVmtrc0NiVDE0NUVQYjRpTGFpY2c?oc=5",
-        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdHRMZ1R2VXI0Yl9XTGJxa0IzYzR6QV9yOE1wWTl0QjZFNkk4aDRqTHJjSmdjb3hqbXBiUWk2czE5MlRmcmh4VzZqTWQxbGVMVkM1eVNJdmVPWEFKV05BZGlPRXRkN2ZGYUJfTkpwb3lUMGU4di1CYkhmVTNXY2JnREdOQ0hXamJwVnZydXdHbm90YUV1ZkpmaFVqZ0JfemNsN2pxczRGSFNBd3BybkgwVFhRSEdZUVpaNFlfU3l5RVM2R0hfUmw1NFh1TkxFbkhsMXk0aWJ3?oc=5",
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMjlSQnk0NHRhb1NtanIyQUdMRE92RmUzUHFBZklPbmFwMnNqTTRmNTg5cEZzRU5YeUdKYUJDeUxZaEJNc2pQTXVKbFdjTS1ZSnBmaGtyY2FSTndwZUhBZGhwZWFHdC1KNWs1TUotRVc0UVlGVGVYVVdrdWJsQTN0Tmo5cDZvR0RHV0xjODRsSWJRbmZqa0RFdERQVG5JUGNmaGpNWEJkM2JPVFZBZkFLRGpEeFlNVVZHWVJIY2Y0V2hnVDBJUk5kWno2cm5PZXN4SmhTNmliQmJiNDA?oc=5"
+        "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQNzhVcjd1LXB6UjhWVXNfTncwYzlVTDlWck5qRVZUREd3SnBPUEE5cFJNM1h3bGM0SE16UEs3ZWFRZFN6U05XeEQ4SHJvZTVyLWtzcjdCaElnSGJTUTdBbzlyQkJnLUtuQ2FJV0cxSkxJVEZ3S2stNWl1cE1jUGFVdGtaay1HUC10THJ0STdmaWpROVd2alRfaXBDR0d5RWx1Z093RVBIMF9aaHRPZ0ZiRUZFdWo3QWVkeDlvZUh2c2ExMnp5emJyQmNuNEoxalFHbmFaemhGUERDcExlMHlhMFhQSWM?oc=5",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMjlSQnk0NHRhb1NtanIyQUdMRE92RmUzUHFBZklPbmFwMnNqTTRmNTg5cEZzRU5YeUdKYUJDeUxZaEJNc2pQTXVKbFdjTS1ZSnBmaGtyY2FSTndwZUhBZGhwZWFHdC1KNWs1TUotRVc0UVlGVGVYVVdrdWJsQTN0Tmo5cDZvR0RHV0xjODRsSWJRbmZqa0RFdERQVG5JUGNmaGpNWEJkM2JPVFZBZkFLRGpEeFlNVVZHWVJIY2Y0V2hnVDBJUk5kWno2cm5PZXN4SmhTNmliQmJiNDA?oc=5",
+        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdHRMZ1R2VXI0Yl9XTGJxa0IzYzR6QV9yOE1wWTl0QjZFNkk4aDRqTHJjSmdjb3hqbXBiUWk2czE5MlRmcmh4VzZqTWQxbGVMVkM1eVNJdmVPWEFKV05BZGlPRXRkN2ZGYUJfTkpwb3lUMGU4di1CYkhmVTNXY2JnREdOQ0hXamJwVnZydXdHbm90YUV1ZkpmaFVqZ0JfemNsN2pxczRGSFNBd3BybkgwVFhRSEdZUVpaNFlfU3l5RVM2R0hfUmw1NFh1TkxFbkhsMXk0aWJ3?oc=5"
       ],
       "source_articles": [
         0
@@ -295,8 +352,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 4,
-      "last_updated": "2026-04-11T18:58:19.068071+00:00",
+      "source_count": 5,
+      "last_updated": "2026-04-12T03:30:19.780063",
       "id": "ca19d817d90a",
       "created_at": "2026-04-11T18:58:19.068062+00:00"
     },
@@ -353,6 +410,63 @@
       "created_at": "2026-04-11T18:58:19.068084+00:00",
       "last_updated": "2026-04-11T18:58:19.068087+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "unknown",
+      "publish_date": "2026-04-11",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Jujuy",
+      "location_detail": "Jujuy airport",
+      "airport_name": "Jujuy airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "'Lobo' player",
+      "summary_en": "Player yelled 'bomb' on plane",
+      "summary_tr": "Oyuncu uçağın içinde 'bomb' diye bağırdı",
+      "is_ongoing": false,
+      "is_false_alarm": true,
+      "tags": [
+        "airport",
+        "threat",
+        "false alarm",
+        "false_alarm"
+      ],
+      "date": "2026-04-11",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWDhMZVduYlpfcEtKcGdtVnFFMC0tNy1BZ2JmN3pPb3UzOE5qcmxBRVA1RXgxTW5KNVNGSGo2UVQ3RUpwQ0gyRnhKNXNheUpaU09XdUxVMmdtdUNzM1RWazBZRTJTMC1oNlNmbEtLSXNDcExmMlhjUGpoM29wdVh1d3VyVVRJaWhBM3ZnMmZSa0g4OTZ3RVNNLUNlMlpvcXRCOW43c3hHcW5UUk1MR05Z?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSG1YMzNRQW1qekxFTGd6YmFYZ1pFUGZMZHIxa2lGR18zMWdKX2VQMVB1OE1MT2Y3U1JkSExjSTZCN0M2OFQ4Y0NGVTdjYVlVdnFVU1J4OEhuSW1zd3E5QXlUNTlKcWw1VF9PUmxoMzA0RWZJN1ZRaFpjU1JfWEcybzQ3YnpPcVVCLVNXZS1VR0twVGl5RERjMXZiRkpkZzNM?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": -24.393452,
+      "geo_lon": -65.093695,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.65,
+      "verification_status": "probable",
+      "verification_score": 0.65,
+      "source_count": 2,
+      "last_updated": "2026-04-12T03:30:19.805322+00:00",
+      "id": "c4ff61b3ec21",
+      "created_at": "2026-04-12T03:30:19.805319+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
