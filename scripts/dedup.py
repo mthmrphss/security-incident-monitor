@@ -187,7 +187,7 @@ class SmartDeduplicator:
         # Konum ağırlığını artır
         return date_sim * 0.20 + loc_sim * 0.35 + type_sim * 0.10 + text_sim * 0.35
 
-def _location_similarity(self, a: Dict, b: Dict) -> float:
+    def _location_similarity(self, a: Dict, b: Dict) -> float:
         score = 0.0
 
         # 1. ÜLKE KONTROLÜ
