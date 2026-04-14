@@ -151,7 +151,7 @@ class SmartDeduplicator:
             return 0.0
 
     def _event_similarity(self, a: Dict, b: Dict) -> float:
-        # ── KISA DEVRE: Aynı lokasyon kontrolü ──
+        # ── KISA DEVRE: Aynı lokasyon kontrolü (IATA) ──
         iata1 = (a.get("airport_iata") or "").upper().strip()
         iata2 = (b.get("airport_iata") or "").upper().strip()
         if (
@@ -164,7 +164,6 @@ class SmartDeduplicator:
             text_sim = self._text_similarity(a, b)
 
             # Aynı havalimanı + aynı gün AMA metin çok farklıysa
-            # → FARKLI OLAY olabilir (aynı gün birden fazla saldırı)
             if date_sim >= 0.9 and text_sim < 0.25:
                 # Saldırı tipi de farklıysa kesinlikle ayrı olay
                 if a.get("attack_type") != b.get("attack_type"):
@@ -174,7 +173,6 @@ class SmartDeduplicator:
                     )
                     return 0.4  # Eşik altında → ayrı olay
 
-                # Saldırı tipi aynı ama metin çok farklı → muhtemelen farklı olay
                 logger.info(
                     f"  IATA match BUT text very different ({text_sim:.0%}) — KEEP SEPARATE"
                 )
@@ -184,8 +182,25 @@ class SmartDeduplicator:
             if date_sim >= 0.3 and text_sim >= 0.25:
                 logger.info(f"  IATA match + similar text ({text_sim:.0%}) — MERGE")
                 return 1.0
-                
-         # ── KISA DEVRE: Aynı otel kontrolü ──
+
+        # ── KISA DEVRE: Aynı havalimanı adı ──
+        ap1 = self._norm(a.get("airport_name") or "")
+        ap2 = self._norm(b.get("airport_name") or "")
+        if (
+            ap1 and ap2
+            and ap1 not in ("unknown", "airport", "")
+            and ap2 not in ("unknown", "airport", "")
+            and a.get("incident_type") == b.get("incident_type")
+        ):
+            name_sim = SequenceMatcher(None, ap1, ap2).ratio()
+            if name_sim > 0.6:
+                date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
+                text_sim = self._text_similarity(a, b)
+                if date_sim >= 0.3 and text_sim >= 0.25:
+                    logger.info(f"  Airport name match ({name_sim:.0%}): {ap1} — MERGE")
+                    return 1.0
+
+        # ── KISA DEVRE: Aynı otel kontrolü ──
         hotel1 = (a.get("hotel_name") or "").lower().strip()
         hotel2 = (b.get("hotel_name") or "").lower().strip()
         if (
