@@ -122,6 +122,34 @@ class SmartDeduplicator:
     # SIMILARITY
     # ═══════════════════════════════════════
 
+    def _date_similarity(self, d1: str, d2: str) -> float:
+        """İki tarih arasındaki benzerlik skorunu hesaplar (YYYY-MM-DD formatı beklenir)."""
+        if not d1 or not d2:
+            return 0.0
+
+        if d1 == d2:
+            return 1.0
+
+        try:
+            date1 = datetime.strptime(str(d1)[:10], "%Y-%m-%d")
+            date2 = datetime.strptime(str(d2)[:10], "%Y-%m-%d")
+            
+            delta_days = abs((date1 - date2).days)
+            
+            if delta_days == 0:
+                return 1.0
+            elif delta_days == 1:
+                return 0.8
+            elif delta_days <= 3:
+                return 0.5
+            elif delta_days <= 7:
+                return 0.2
+            else:
+                return 0.0
+                
+        except (ValueError, TypeError):
+            return 0.0
+
     def _event_similarity(self, a: Dict, b: Dict) -> float:
         # ── KISA DEVRE: Aynı lokasyon kontrolü ──
         iata1 = (a.get("airport_iata") or "").upper().strip()
