@@ -388,5 +388,15 @@
     "lat": 52.690781,
     "lon": -8.912716,
     "display_name": "Shannon Airport Fire Station, O'Reagan Avenue, Clenagh ED, Shannon Municipal District, County Clare, Munster, V14 N763, Éire / Ireland"
+  },
+  "airport, elko, united states": {
+    "lat": 40.825502,
+    "lon": -115.788011,
+    "display_name": "Elko Regional Airport, Dwight D. Eisenhower Highway, Elko, Elko County, Nevada, 89801, United States"
+  },
+  "airport, elko": {
+    "lat": 40.825502,
+    "lon": -115.788011,
+    "display_name": "Elko Regional Airport, 5, Cimarron West, Elko, Elko County, Nevada, 89801, United States"
   }
 }
