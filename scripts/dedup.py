@@ -187,34 +187,25 @@ class SmartDeduplicator:
         # Konum ağırlığını artır
         return date_sim * 0.20 + loc_sim * 0.35 + type_sim * 0.10 + text_sim * 0.35
 
-    def _date_similarity(self, d1: str, d2: str) -> float:
-        try:
-            dt1 = datetime.strptime(d1[:10], "%Y-%m-%d")
-            dt2 = datetime.strptime(d2[:10], "%Y-%m-%d")
-            diff = abs((dt1 - dt2).days)
-            if diff == 0:
-                return 1.0
-            elif diff <= 1:
-                return 0.9
-            elif diff <= 3:
-                return 0.6
-            elif diff <= 7:
-                return 0.3
-            return 0.0
-        except (ValueError, TypeError):
-            return 0.3
-
-    def _location_similarity(self, a: Dict, b: Dict) -> float:
+def _location_similarity(self, a: Dict, b: Dict) -> float:
         score = 0.0
 
+        # 1. ÜLKE KONTROLÜ
         c1 = self._norm(a.get("country", ""))
         c2 = self._norm(b.get("country", ""))
+        
+        if c1 == "unknown": c1 = ""
+        if c2 == "unknown": c2 = ""
+
         if c1 and c2:
             if c1 == c2:
                 score += 0.4
             else:
-                return 0.0
+                return 0.0  # Ülkeler kesin farklıysa direkt 0 bas ve çık!
+        elif c1 or c2:
+            score += 0.1    # Biri dolu diğeri boş/unknown ise ufak bir puan ver
 
+        # 2. ŞEHİR KONTROLÜ
         city1 = self._norm(a.get("city", ""))
         city2 = self._norm(b.get("city", ""))
         if city1 and city2:
@@ -223,17 +214,20 @@ class SmartDeduplicator:
             elif SequenceMatcher(None, city1, city2).ratio() > 0.7:
                 score += 0.2
 
+        # 3. MEKAN KONTROLÜ
         v1 = self._venue(a)
         v2 = self._venue(b)
         if v1 and v2:
             if SequenceMatcher(None, v1, v2).ratio() > 0.6:
                 score += 0.3
 
+        # 4. HAVALİMANI KONTROLÜ
         iata1 = (a.get("airport_iata") or "").upper()
         iata2 = (b.get("airport_iata") or "").upper()
         if iata1 and iata2 and iata1 == iata2:
             score += 0.3
 
+        # EN SON ÇIKIŞ (Tavan limiti ile teslimat)
         return min(score, 1.0)
 
     def _text_similarity(self, a: Dict, b: Dict) -> float:
