@@ -48,7 +48,7 @@ map_df, raw_df, metadata = load_data()
 
 # --- 3. YAN MENÜ (KONTROL PANELİ) ---
 with st.sidebar:
-    st.markdown("<h1 style='text-align: center; color: #4da6ff;'>🛡️ G.S.M.</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #4da6ff;'>🛡️ Global Security Monitor.</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: gray; font-size: 0.8rem;'>Global Security Monitor v2.0</p>", unsafe_allow_html=True)
     st.markdown("---")
 
@@ -77,7 +77,7 @@ else:
     filtrelenmis_df = map_df[(map_df["incident_type"].isin(secilen_tur)) & (map_df["severity"].isin(secilen_risk))]
 
 # --- 5. ANA EKRAN: KPI METRİKLERİ ---
-st.title("🌐 Stratejik İstihbarat Komuta Merkezi")
+st.title("🌐 Security Incident Monitor")
 
 if not filtrelenmis_df.empty:
     # Özel CSS ile daha şık KPI kartları
