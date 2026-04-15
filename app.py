@@ -108,7 +108,10 @@ def load_and_clean_data():
         "medium": [255, 210, 0, 210],
         "low": [0, 180, 255, 210]
     }
-    df["color"] = df["severity"].map(color_map).fillna([[150, 150, 150, 150]])
+    
+    # 🔥 HATA DÜZELTİLDİ: fillna yerine güvenli .get() metodu kullanıyoruz
+    # Eğer severity değeri color_map içinde yoksa veya null ise varsayılan gri rengi ata.
+    df["color"] = df["severity"].apply(lambda x: color_map.get(x, [150, 150, 150, 150]))
     
     return df, raw_data["metadata"]
 
