@@ -4,165 +4,266 @@ import pydeck as pdk
 import plotly.express as px
 import json
 
-# --- 1. SAYFA VE ARAYÜZ AYARLARI ---
-st.set_page_config(page_title="Global Security Monitor", page_icon="🛡️", layout="wide")
+# --- 1. KOMUTA MERKEZİ AYARLARI ---
+st.set_page_config(page_title="Security Intelligence Command", page_icon="🛡️", layout="wide")
 
-# Daha temiz bir UI için Custom CSS
+# Mobil Uyumlu, Esnek (Fluid) ve Animasyonlu CSS
 st.markdown("""
 <style>
-    .kpi-card { background-color: #1e1e2f; padding: 20px; border-radius: 10px; border-left: 5px solid #4da6ff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
-    .kpi-title { color: #8bb9e5; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-    .kpi-value { color: #ffffff; font-size: 2rem; font-weight: bold; }
-    .stTabs [data-baseweb="tab-list"] { gap: 24px; }
-    .stTabs [data-baseweb="tab"] { height: 50px; white-space: pre-wrap; background-color: transparent; border-radius: 4px 4px 0px 0px; gap: 1px; padding-top: 10px; padding-bottom: 10px; }
+    /* Ortak Responsive Ayarlar */
+    .reportview-container { background: #0d1117; }
+    
+    /* Mobil Öncelikli KPI Kartları */
+    .kpi-card { 
+        background-color: #161b22; 
+        padding: clamp(10px, 2vw, 20px); 
+        border-radius: 10px; 
+        border-left: 5px solid #1f6feb; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        margin-bottom: 10px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* İkonlar ve Metinlerin Ezilmemesi İçin Esnek Boyutlandırma */
+    .kpi-title { 
+        color: #8bb9e5; 
+        font-size: clamp(0.7rem, 1.5vw, 0.9rem); 
+        text-transform: uppercase; 
+        letter-spacing: 1px; 
+        margin-bottom: 5px; 
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .kpi-value { 
+        color: #ffffff; 
+        font-size: clamp(1.5rem, 5vw, 2.5rem); 
+        font-weight: bold; 
+    }
+
+    /* 🔥 YENİ: Kritik Durumlar İçin Pulse (Nefes Alan) Animasyonu */
+    .pulse-alert {
+        border-left: 5px solid #ff4d4d;
+        animation: pulse-red 2s infinite;
+    }
+    @keyframes pulse-red {
+        0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+    }
+
+    /* 🔥 YENİ: Kayan İstihbarat Bandı (Ticker) */
+    .ticker-wrapper { 
+        width: 100%; overflow: hidden; background-color: #161b22; 
+        border-top: 1px solid #30363d; border-bottom: 1px solid #30363d; 
+        padding: 8px 0; margin-bottom: 20px; border-radius: 5px;
+    }
+    .ticker { 
+        display: inline-block; white-space: nowrap; padding-right: 100%; 
+        box-sizing: content-box; animation: ticker 25s linear infinite; 
+    }
+    .ticker:hover { animation-play-state: paused; cursor: default; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+    .ticker-item { display: inline-block; padding: 0 2rem; font-size: 0.95rem; color: #e6edf3; border-right: 1px solid #30363d;}
+    .ticker-alert { color: #ff4d4d; font-weight: bold; }
+
+    /* Mobilde Sekmelerin (Tabs) Yatayda Kaydırılabilir Olması */
+    .stTabs [data-baseweb="tab-list"] { 
+        gap: 5px; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 5px;
+    }
+    .stTabs [data-baseweb="tab"] { 
+        background-color: #161b22; border-radius: 8px 8px 0 0; 
+        padding: clamp(8px, 2vw, 15px); color: #8b949e; font-size: clamp(0.8rem, 2vw, 1rem); white-space: nowrap; 
+    }
+    .stTabs [aria-selected="true"] { background-color: #1f6feb !important; color: white !important; }
+    
+    .news-card { 
+        border-left: 4px solid #1f6feb; padding: clamp(10px, 2vw, 15px); background: #161b22; 
+        margin-bottom: 10px; border-radius: 0 8px 8px 0; word-wrap: break-word; 
+    }
 </style>
 """, unsafe_allow_html=True)
 
-# --- 2. VERİ YÜKLEME VE İŞLEME ---
+# --- 2. AKILLI VERİ YÜKLEME ---
 @st.cache_data
-def load_data():
+def load_and_clean_data():
     with open("data/incidents.json", "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     
     df = pd.DataFrame(raw_data["incidents"])
-    map_df = df.dropna(subset=["geo_lat", "geo_lon"]).copy()
-    map_df['parsed_date'] = pd.to_datetime(map_df['created_at'], errors='coerce')
-    map_df = map_df.sort_values(by='parsed_date', ascending=False)
     
-    def get_color(severity):
-        if severity == "critical": return [255, 50, 50, 200]
-        elif severity == "high": return [255, 140, 0, 200]
-        elif severity == "medium": return [255, 215, 0, 200]
-        else: return [50, 150, 255, 200]
-        
-    map_df["color"] = map_df["severity"].apply(get_color)
+    # Koordinat Doğrulama
+    df = df.dropna(subset=["geo_lat", "geo_lon"])
     
-    # Arama motoru için birleştirilmiş bir metin sütunu (küçük harfe çevrilmiş)
-    map_df["search_text"] = (map_df["country"].fillna("") + " " + 
-                             map_df["city"].fillna("") + " " + 
-                             map_df["summary_tr"].fillna("") + " " + 
-                             map_df["summary_en"].fillna("")).str.lower()
-    return map_df, df, raw_data["metadata"]
+    # Tarih dönüşümü
+    df['parsed_date'] = pd.to_datetime(df['created_at'], errors='coerce')
+    df = df.sort_values(by='parsed_date', ascending=False)
+    
+    # Risk renkleri (WebGL uyumlu)
+    color_map = {
+        "critical": [255, 0, 0, 210],
+        "high": [255, 120, 0, 210],
+        "medium": [255, 210, 0, 210],
+        "low": [0, 180, 255, 210]
+    }
+    df["color"] = df["severity"].map(color_map).fillna([[150, 150, 150, 150]])
+    
+    return df, raw_data["metadata"]
 
-map_df, raw_df, metadata = load_data()
+try:
+    data_df, metadata = load_and_clean_data()
+except Exception as e:
+    st.error(f"Veri yüklenirken kritik hata oluştu: {e}")
+    st.stop()
 
-# --- 3. YAN MENÜ (KONTROL PANELİ) ---
+# --- 3. GELİŞMİŞ SOL PANEL (KONTROL MENÜSÜ) ---
 with st.sidebar:
-    st.markdown("<h1 style='text-align: center; color: #4da6ff;'>🛡️ Global Security Monitor.</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: gray; font-size: 0.8rem;'>Global Security Monitor v2.0</p>", unsafe_allow_html=True)
-    st.markdown("---")
+    st.markdown("""
+        <div style='background: linear-gradient(45deg, #1f6feb, #4da6ff); padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px;'>
+            <h2 style='color: white; margin: 0;'>S.I.C.</h2>
+            <p style='color: #e6edf3; font-size: 0.8rem; margin: 0;'>Security Intelligence Command</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    # Yeni: Metin Arama
-    arama_metni = st.text_input("🔍 Serbest Arama", placeholder="Ülke, şehir, veya anahtar kelime...")
+    st.subheader("🔍 Akıllı Filtreleme")
     
-    secilen_tur = st.multiselect("🎯 Olay Türü", options=map_df["incident_type"].unique(), default=map_df["incident_type"].unique())
-    secilen_risk = st.multiselect("⚠️ Risk Seviyesi", options=map_df["severity"].unique(), default=map_df["severity"].unique())
+    search_query = st.text_input("Anahtar Kelime Ara", placeholder="Havalimanı, saldırı, otel...")
+
+    all_countries = sorted(data_df["country"].unique())
+    selected_countries = st.multiselect("🏴 Ülke Seçimi", options=all_countries, default=all_countries)
+
+    selected_types = st.multiselect("🎯 Olay Türü", options=data_df["incident_type"].unique(), default=data_df["incident_type"].unique())
+    selected_severity = st.select_slider("⚠️ Minimum Risk", options=["low", "medium", "high", "critical"], value="low")
 
     st.markdown("---")
-    
-    # Yeni: CSV Dışa Aktarma Butonu
-    @st.cache_data
-    def convert_df(df):
-        return df.to_csv(index=False).encode('utf-8')
+    st.caption(f"DB Versiyon: {metadata.get('version')} | Toplam Kayıt: {len(data_df)}")
 
 # --- 4. FİLTRELEME MANTIĞI ---
-# Arama metni varsa ona göre de filtrele
-if arama_metni:
-    filtrelenmis_df = map_df[
-        (map_df["incident_type"].isin(secilen_tur)) & 
-        (map_df["severity"].isin(secilen_risk)) &
-        (map_df["search_text"].str.contains(arama_metni.lower()))
+severity_order = {"low": 0, "medium": 1, "high": 2, "critical": 3}
+filtered_df = data_df[
+    (data_df["country"].isin(selected_countries)) &
+    (data_df["incident_type"].isin(selected_types)) &
+    (data_df["severity"].map(severity_order) >= severity_order[selected_severity])
+]
+
+if search_query:
+    filtered_df = filtered_df[
+        filtered_df["summary_tr"].str.contains(search_query, case=False, na=False) |
+        filtered_df["city"].str.contains(search_query, case=False, na=False)
     ]
-else:
-    filtrelenmis_df = map_df[(map_df["incident_type"].isin(secilen_tur)) & (map_df["severity"].isin(secilen_risk))]
 
-# --- 5. ANA EKRAN: KPI METRİKLERİ ---
-st.title("🌐 Security Incident Monitor")
+# --- 5. ANA PANEL VE DASHBOARD ---
+st.title("🛡️ Küresel Havacılık ve Güvenlik Monitörü")
 
-if not filtrelenmis_df.empty:
-    # Özel CSS ile daha şık KPI kartları
-    k1, k2, k3, k4 = st.columns(4)
-    with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>Filtrelenen Vaka</div><div class='kpi-value'>{len(filtrelenmis_df)}</div></div>", unsafe_allow_html=True)
-    with k2: st.markdown(f"<div class='kpi-card' style='border-left-color: #ff4d4d;'><div class='kpi-title'>Kritik & Yüksek</div><div class='kpi-value'>{len(filtrelenmis_df[filtrelenmis_df['severity'].isin(['critical', 'high'])])}</div></div>", unsafe_allow_html=True)
-    with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd11a;'><div class='kpi-title'>Etkilenen Ülke</div><div class='kpi-value'>{filtrelenmis_df['country'].nunique()}</div></div>", unsafe_allow_html=True)
-    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>Can Kaybı</div><div class='kpi-value'>{int(filtrelenmis_df['casualties_dead'].sum())}</div></div>", unsafe_allow_html=True)
+# 🔥 YENİ: KAYAN İSTİHBARAT BANDI (TİCKER)
+if not data_df.empty:
+    latest_incidents = data_df.head(5) # En son 5 olayı al
+    ticker_items = []
+    for _, row in latest_incidents.iterrows():
+        icon = "🔴" if row['severity'] in ['critical', 'high'] else "🟡"
+        alert_class = "ticker-alert" if row['severity'] in ['critical', 'high'] else ""
+        ticker_items.append(f"<span class='ticker-item {alert_class}'>{icon} {row['city'].upper()}, {row['country'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['date']})</span>")
     
-    st.write("") # Boşluk
+    ticker_html = f"<div class='ticker-wrapper'><div class='ticker'>{''.join(ticker_items)}</div></div>"
+    st.markdown(ticker_html, unsafe_allow_html=True)
 
-    # --- 6. SEKME (TAB) MİMARİSİ ---
-    tab1, tab2, tab3, tab4 = st.tabs(["🗺️ Operasyon Haritası", "📰 Genişletilmiş Haber Akışı", "📈 Olay Trendleri", "🗄️ Veri Dışa Aktar"])
+if not filtered_df.empty:
+    # KPI Şeridi
+    k1, k2, k3, k4 = st.columns(4)
+    
+    # Eğer kritik olay varsa 2. karta 'pulse-alert' animasyonunu ekliyoruz
+    critical_count = len(filtered_df[filtered_df['severity'] == 'critical'])
+    pulse_class = "pulse-alert" if critical_count > 0 else ""
+    
+    with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>📌 Aktif Olay</div><div class='kpi-value'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
+    with k2: st.markdown(f"<div class='kpi-card {pulse_class}' style='border-left-color: #ff4d4d;'><div class='kpi-title'>🔴 Kritik Seviye</div><div class='kpi-value'>{critical_count}</div></div>", unsafe_allow_html=True)
+    with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd11a;'><div class='kpi-title'>🏴 Etkilenen Şehir</div><div class='kpi-value'>{filtered_df['city'].nunique()}</div></div>", unsafe_allow_html=True)
+    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Veri Kalitesi (Ort.)</div><div class='kpi-value'>{filtered_df['quality_score'].mean():.2f}</div></div>", unsafe_allow_html=True)
 
-    # SEKME 1: DEVASA HARİTA
-    with tab1:
+    st.write("") 
+    
+    # Sekmeli Yapı
+    t_map, t_feed, t_stats = st.tabs(["🌐 İnteraktif Operasyon Haritası", "🗞️ İstihbarat Akışı", "📊 Analitik Raporlar"])
+
+    with t_map:
         layer = pdk.Layer(
-            'ScatterplotLayer',
-            data=filtrelenmis_df,
-            get_position='[geo_lon, geo_lat]', 
-            get_fill_color='color',
-            get_line_color=[255, 255, 255, 80],
-            get_radius=50000,                  
-            pickable=True, opacity=0.8, stroked=True, filled=True, radius_scale=1, radius_min_pixels=8, radius_max_pixels=30, line_width_min_pixels=1,
+            "ScatterplotLayer",
+            data=filtered_df,
+            get_position="[geo_lon, geo_lat]",
+            get_fill_color="color",
+            get_line_color=[255, 255, 255, 50],
+            get_radius=50000,
+            pickable=True,
+            opacity=0.8,
+            stroked=True,
+            filled=True,
+            radius_min_pixels=8,
+            radius_max_pixels=40,
+            line_width_min_pixels=1
         )
-        view_state = pdk.ViewState(latitude=39.0, longitude=35.0, zoom=2.5, pitch=25)
+
+        view_state = pdk.ViewState(
+            latitude=filtered_df["geo_lat"].mean(),
+            longitude=filtered_df["geo_lon"].mean(),
+            zoom=2.5,
+            pitch=35
+        )
+
         r = pdk.Deck(
-            layers=[layer], initial_view_state=view_state, map_provider="carto", map_style="dark",
-            tooltip={"html": "<b>{city}, {country}</b><br/><b>Tür:</b> {incident_type} | <b>Risk:</b> {severity}<br/><b>Özet:</b> {summary_tr}", "style": {"backgroundColor": "#1E1E1E", "color": "white", "borderRadius": "8px", "padding": "10px"}}
+            layers=[layer],
+            initial_view_state=view_state,
+            map_provider="carto",
+            map_style="dark",
+            tooltip={
+                "html": "<b>{city}, {country}</b><br><b>Tür:</b> {incident_type}<br><b>Özet:</b> {summary_tr}",
+                "style": {"backgroundColor": "#0d1117", "color": "white", "border": "1px solid #30363d", "borderRadius": "5px"}
+            }
         )
-        # Haritaya 600px yükseklik verdik, sekmenin içini tam dolduracak
-        st.pydeck_chart(r, use_container_width=True)
+        st.pydeck_chart(r, height=600, use_container_width=True)
 
-    # SEKME 2: DAHA TEMİZ VE OKUNAKLI HABER AKIŞI
-    with tab2:
-        # Haberleri yan yana 2 kolon halinde dizelim ki çok aşağı inmek gerekmesin
-        cols = st.columns(2)
-        for index, row in enumerate(filtrelenmis_df.itertuples()):
-            col = cols[index % 2] # Sağ-Sol kolon dağıtımı
-            icon = "🔴" if row.severity == "critical" else "🟠" if row.severity == "high" else "🟡" if row.severity == "medium" else "🔵"
-            
-            with col.expander(f"{icon} {row.date} | {row.city}, {row.country}", expanded=True):
-                if pd.notna(row.summary_tr): st.markdown(f"**Özet:** {row.summary_tr}")
+    with t_feed:
+        st.subheader("📅 Kronolojik Olay Akışı")
+        for i, row in filtered_df.iterrows():
+            with st.container():
+                risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#4da6ff"
                 
-                # Etiketler (Tags)
-                if isinstance(row.tags, list):
-                    st.caption(" • ".join([f"#{t}" for t in row.tags]))
+                st.markdown(f"""
+                <div class='news-card' style='border-left-color: {risk_color};'>
+                    <h4 style='margin:0;'>{row['city']}, {row['country']} | {row['incident_type']}</h4>
+                    <p style='color:#8b949e; font-size:0.8rem; margin-top:3px;'>🗓️ {row['date']} • ⚠️ Risk: <b>{row['severity'].upper()}</b></p>
+                    <p style='font-size: 1.05rem;'>{row['summary_tr'] or row['summary_en']}</p>
+                </div>
+                """, unsafe_allow_html=True)
                 
-                # Linkleri yan yana şık butonlar gibi dizme
-                if isinstance(row.source_urls, list) and len(row.source_urls) > 0:
-                    links = " | ".join([f"[Kaynak {i+1}]({url})" for i, url in enumerate(row.source_urls)])
-                    st.markdown(f"🔗 {links}")
+                if row.get('source_urls'):
+                    links = " | ".join([f"[{'Kaynak '+str(idx+1)}]({url})" for idx, url in enumerate(row['source_urls'])])
+                    st.caption(f"🔗 {links}")
+                st.write("---")
 
-    # SEKME 3: YENİ TREND ANALİZİ GRAFİĞİ
-    with tab3:
-        st.markdown("### Zaman İçindeki Vaka Dağılımı")
-        # Plotly ile etkileşimli çubuk grafik (Tarihe ve Riske göre)
-        trend_df = filtrelenmis_df.groupby([filtrelenmis_df['parsed_date'].dt.date, 'severity']).size().reset_index(name='count')
-        
-        # Risk renklerini haritayla uyumlu yapalım
-        color_map = {"critical": "#ff3333", "high": "#ff8c00", "medium": "#ffd700", "low": "#3399ff"}
-        
-        if not trend_df.empty:
-            fig = px.bar(trend_df, x="parsed_date", y="count", color="severity", 
-                         color_discrete_map=color_map,
-                         labels={"parsed_date": "Tarih", "count": "Olay Sayısı", "severity": "Risk Seviyesi"},
-                         title="Günlük İstihbarat Raporu Yoğunluğu")
-            
-            fig.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white")
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.info("Bu tarih aralığı için trend grafiği oluşturulacak yeterli veri yok.")
+    with t_stats:
+        col_a, col_b = st.columns(2)
+        with col_a:
+            st.markdown("### Türlere Göre Dağılım")
+            fig_pie = px.pie(filtered_df, names='incident_type', hole=0.4, template="plotly_dark")
+            fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+            st.plotly_chart(fig_pie, use_container_width=True)
+        with col_b:
+            st.markdown("### Risk Yoğunluğu")
+            color_map_px = {"critical": "#ff4d4d", "high": "#ff8c00", "medium": "#ffd700", "low": "#4da6ff"}
+            fig_bar = px.bar(filtered_df, x='severity', color='severity', color_discrete_map=color_map_px, template="plotly_dark")
+            fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+            st.plotly_chart(fig_bar, use_container_width=True)
 
-    # SEKME 4: VERİ TABANI VE İNDİRME
-    with tab4:
-        st.markdown("### Ham Veri İzleme ve Dışa Aktarma")
-        st.dataframe(filtrelenmis_df[["date", "incident_type", "severity", "country", "city", "summary_tr"]], use_container_width=True)
-        
-        csv = convert_df(filtrelenmis_df)
-        st.download_button(
-            label="📥 Filtrelenmiş Veriyi CSV Olarak İndir",
-            data=csv,
-            file_name='security_incidents_export.csv',
-            mime='text/csv',
-        )
+    # Veri İndirme Alanı
+    st.markdown("---")
+    st.download_button(
+        "📥 Filtrelenmiş Veriyi CSV Olarak İndir",
+        data=filtered_df.to_csv(index=False).encode('utf-8'),
+        file_name='security_intelligence_report.csv',
+        mime='text/csv'
+    )
 
 else:
-    st.error("⚠️ Filtrelerinize veya arama teriminize uygun hiçbir güvenlik olayı bulunamadı. Lütfen filtreleri esnetin.")
+    st.warning("⚠️ Filtrelerinize uygun hiçbir güvenlik olayı bulunamadı. Lütfen sol menüden ayarları esnetin.")
