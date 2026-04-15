@@ -42,8 +42,7 @@ def load_data():
                              map_df["city"].fillna("") + " " + 
                              map_df["summary_tr"].fillna("") + " " + 
                              map_df["summary_en"].fillna("")).str.lower()
-    
-    return map_df, raw_df, raw_data["metadata"]
+    return map_df, df, raw_data["metadata"]
 
 map_df, raw_df, metadata = load_data()
 
