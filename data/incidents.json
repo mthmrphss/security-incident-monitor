@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-14T08:00:05.151336+00:00",
+    "last_updated": "2026-04-15T08:00:16.048946+00:00",
     "total_incidents": 81,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -269,10 +269,11 @@
       "date": "2026-04-14",
       "year": 2026,
       "source_urls": [
-        "https://bnonews.com/index.php/2026/04/juvenile-adult-male-found-dead-in-apparent-murder-suicide-at-nevada-airport/",
+        "https://www.kolotv.com/2026/04/13/1-killed-shooting-elko-regional-airport/",
+        "https://www.2news.com/news/local/elko-airport-reopens-after-shooting-leaves-father-son-dead-in-apparent-murder-suicide/article_71b5b4ec-de45-41fd-b826-28bd1e7d8224.html",
         "https://www.airliners.net/forum/viewtopic.php?f=3&t=1509139",
         "https://www.ksl.com:443/article/51483034/2-dead-1-in-custody-after-shooting-at-elko-airport",
-        "https://www.kolotv.com/2026/04/13/1-killed-shooting-elko-regional-airport/"
+        "https://bnonews.com/index.php/2026/04/juvenile-adult-male-found-dead-in-apparent-murder-suicide-at-nevada-airport/"
       ],
       "source_articles": [
         0
@@ -293,8 +294,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 4,
-      "last_updated": "2026-04-14T08:00:05.151318+00:00",
+      "source_count": 5,
+      "last_updated": "2026-04-15T08:00:16.048846",
       "id": "3e999efd3163",
       "created_at": "2026-04-14T08:00:05.151307+00:00"
     },
