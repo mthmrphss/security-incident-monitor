@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-15T08:00:16.048946+00:00",
-    "total_incidents": 81,
+    "last_updated": "2026-04-16T03:35:58.508347+00:00",
+    "total_incidents": 82,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -269,11 +269,12 @@
       "date": "2026-04-14",
       "year": 2026,
       "source_urls": [
-        "https://www.kolotv.com/2026/04/13/1-killed-shooting-elko-regional-airport/",
         "https://www.2news.com/news/local/elko-airport-reopens-after-shooting-leaves-father-son-dead-in-apparent-murder-suicide/article_71b5b4ec-de45-41fd-b826-28bd1e7d8224.html",
-        "https://www.airliners.net/forum/viewtopic.php?f=3&t=1509139",
         "https://www.ksl.com:443/article/51483034/2-dead-1-in-custody-after-shooting-at-elko-airport",
-        "https://bnonews.com/index.php/2026/04/juvenile-adult-male-found-dead-in-apparent-murder-suicide-at-nevada-airport/"
+        "https://bnonews.com/index.php/2026/04/juvenile-adult-male-found-dead-in-apparent-murder-suicide-at-nevada-airport/",
+        "https://newsradio1310.com/ixp/96/p/elko-airport-murder-suicide-2026/",
+        "https://www.kolotv.com/2026/04/13/1-killed-shooting-elko-regional-airport/",
+        "https://www.airliners.net/forum/viewtopic.php?f=3&t=1509139"
       ],
       "source_articles": [
         0
@@ -294,8 +295,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 5,
-      "last_updated": "2026-04-15T08:00:16.048846",
+      "source_count": 6,
+      "last_updated": "2026-04-16T03:35:58.508239",
       "id": "3e999efd3163",
       "created_at": "2026-04-14T08:00:05.151307+00:00"
     },
@@ -4178,6 +4179,60 @@
       "id": "3eb05be00c7d",
       "created_at": "2026-03-31T02:56:42.098218+00:00",
       "last_updated": "2026-03-31T02:56:42.098235+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2008",
+      "publish_date": "20260416T021500Z",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Mumbai",
+      "location_detail": "Taj Mahal Palace",
+      "airport_name": null,
+      "airport_iata": "BOM",
+      "hotel_name": "Taj Mahal Palace",
+      "venue_name": "hotel",
+      "attack_type": "siege",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Lashkar-e-Taiba",
+      "summary_en": "Terrorist attack on hotel",
+      "summary_tr": "Otele terör saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "terrorism",
+        "hotel attack"
+      ],
+      "date": "2008-04-16",
+      "year": 2008,
+      "source_urls": [
+        "https://www.canalsur.es/rtva/hotel-bombay-tension-y-heroismo-en-la-noche-mas-oscura-de-mumbai/2264365.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 19.065006,
+      "geo_lon": 72.929413,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "ac54394f616f",
+      "created_at": "2026-04-16T03:35:58.508335+00:00",
+      "last_updated": "2026-04-16T03:35:58.508342+00:00",
       "source_count": 1
     }
   ]
