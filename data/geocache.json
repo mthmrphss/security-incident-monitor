@@ -398,5 +398,10 @@
     "lat": 40.825502,
     "lon": -115.788011,
     "display_name": "Elko Regional Airport, 5, Cimarron West, Elko, Elko County, Nevada, 89801, United States"
+  },
+  "abuja, nigeria": {
+    "lat": 9.064331,
+    "lon": 7.489297,
+    "display_name": "Abuja, Municipal Area Council, Federal Capital Territory, 900001, Nigeria"
   }
 }
