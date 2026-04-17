@@ -87,7 +87,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 2. AKILLI VERİ YÜKLEME ---
-@st.cache_data
+# 🔥 YENİ: ttl=300 ile cache'in her 5 dakikada bir otomatik temizlenmesini sağladık
+@st.cache_data(ttl=300)
 def load_and_clean_data():
     with open("data/incidents.json", "r", encoding="utf-8") as f:
         raw_data = json.load(f)
@@ -95,11 +96,17 @@ def load_and_clean_data():
     df = pd.DataFrame(raw_data["incidents"])
     
     # Koordinat Doğrulama
-    df = df.dropna(subset=["geo_lat", "geo_lon"])
+    df = df.dropna(subset=["geo_lat", "geo_lon"]).copy()
     
     # Tarih dönüşümü
     df['parsed_date'] = pd.to_datetime(df['created_at'], errors='coerce')
     df = df.sort_values(by='parsed_date', ascending=False)
+    
+    # 🔥 YENİ: "unknown" veya "null" ülke sorununu düzeltme
+    # Eğer ülke verisi çekilememişse filtrelerin bozulmaması için standardize ediyoruz
+    df['country'] = df['country'].replace(['unknown', '', None], 'Bilinmeyen Ülke (Sistem Hatası)')
+    # İsteğe bağlı olarak string değerleri büyük harfle başlatarak görseli toparlıyoruz
+    df['country'] = df['country'].str.title() 
     
     # Risk renkleri (WebGL uyumlu)
     color_map = {
@@ -109,18 +116,11 @@ def load_and_clean_data():
         "low": [0, 180, 255, 210]
     }
     
-    # 🔥 HATA DÜZELTİLDİ: fillna yerine güvenli .get() metodu kullanıyoruz
-    # Eğer severity değeri color_map içinde yoksa veya null ise varsayılan gri rengi ata.
-    df["color"] = df["severity"].apply(lambda x: color_map.get(x, [150, 150, 150, 150]))
+    # Fillna yerine lambda ile güvenli renk ataması
+    df["color"] = df["severity"].apply(lambda x: color_map.get(str(x).lower(), [150, 150, 150, 150]))
     
     return df, raw_data["metadata"]
-
-try:
-    data_df, metadata = load_and_clean_data()
-except Exception as e:
-    st.error(f"Veri yüklenirken kritik hata oluştu: {e}")
-    st.stop()
-
+    
 # --- 3. GELİŞMİŞ SOL PANEL (KONTROL MENÜSÜ) ---
 with st.sidebar:
     st.markdown("""
