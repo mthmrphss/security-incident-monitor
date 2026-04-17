@@ -403,5 +403,10 @@
     "lat": 9.064331,
     "lon": 7.489297,
     "display_name": "Abuja, Municipal Area Council, Federal Capital Territory, 900001, Nigeria"
+  },
+  "perth airport, perth, australia": {
+    "lat": -31.941521,
+    "lon": 115.965577,
+    "display_name": "Perth Airport, Airport Drive, Perth Airport, City of Belmont, Western Australia, 6105, Australia"
   }
 }
