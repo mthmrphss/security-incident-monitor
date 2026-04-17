@@ -87,7 +87,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 2. AKILLI VERİ YÜKLEME ---
-# 🔥 YENİ: ttl=300 ile cache'in her 5 dakikada bir otomatik temizlenmesini sağladık
 @st.cache_data(ttl=300)
 def load_and_clean_data():
     with open("data/incidents.json", "r", encoding="utf-8") as f:
@@ -102,10 +101,8 @@ def load_and_clean_data():
     df['parsed_date'] = pd.to_datetime(df['created_at'], errors='coerce')
     df = df.sort_values(by='parsed_date', ascending=False)
     
-    # 🔥 YENİ: "unknown" veya "null" ülke sorununu düzeltme
-    # Eğer ülke verisi çekilememişse filtrelerin bozulmaması için standardize ediyoruz
+    # "unknown" veya "null" ülke sorununu düzeltme
     df['country'] = df['country'].replace(['unknown', '', None], 'Bilinmeyen Ülke (Sistem Hatası)')
-    # İsteğe bağlı olarak string değerleri büyük harfle başlatarak görseli toparlıyoruz
     df['country'] = df['country'].str.title() 
     
     # Risk renkleri (WebGL uyumlu)
@@ -120,7 +117,13 @@ def load_and_clean_data():
     df["color"] = df["severity"].apply(lambda x: color_map.get(str(x).lower(), [150, 150, 150, 150]))
     
     return df, raw_data["metadata"]
-    
+
+try:
+    data_df, metadata = load_and_clean_data()
+except Exception as e:
+    st.error(f"Veri yüklenirken kritik hata oluştu: {e}")
+    st.stop()
+
 # --- 3. GELİŞMİŞ SOL PANEL (KONTROL MENÜSÜ) ---
 with st.sidebar:
     st.markdown("""
@@ -183,7 +186,14 @@ if not filtered_df.empty:
     with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>📌 Aktif Olay</div><div class='kpi-value'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
     with k2: st.markdown(f"<div class='kpi-card {pulse_class}' style='border-left-color: #ff4d4d;'><div class='kpi-title'>🔴 Kritik Seviye</div><div class='kpi-value'>{critical_count}</div></div>", unsafe_allow_html=True)
     with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd11a;'><div class='kpi-title'>🏴 Etkilenen Şehir</div><div class='kpi-value'>{filtered_df['city'].nunique()}</div></div>", unsafe_allow_html=True)
-    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Veri Kalitesi (Ort.)</div><div class='kpi-value'>{filtered_df['quality_score'].mean():.2f}</div></div>", unsafe_allow_html=True)
+    
+    # Check if quality_score column exists and isn't entirely null before calculating mean
+    if 'quality_score' in filtered_df.columns and not filtered_df['quality_score'].isnull().all():
+        quality_mean_str = f"{filtered_df['quality_score'].mean():.2f}"
+    else:
+        quality_mean_str = "N/A"
+        
+    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Veri Kalitesi (Ort.)</div><div class='kpi-value'>{quality_mean_str}</div></div>", unsafe_allow_html=True)
 
     st.write("") 
     
