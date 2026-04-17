@@ -5,6 +5,8 @@ import plotly.express as px
 import pycountry
 import os
 import json
+import folium
+import streamlit.components.v1 as components
 
 # --- 1. KOMUTA MERKEZİ AYARLARI ---
 st.set_page_config(page_title="S.I.C. Dashboard", page_icon="🛡️", layout="wide", initial_sidebar_state="expanded")
@@ -390,42 +392,42 @@ if not filtered_df.empty:
         
         map_df['tooltip_html'] = map_df.apply(format_tooltip, axis=1)
 
-        # BULANIKLIĞI VE DAĞILMAYI ÖNLEYEN 3D SÜTUN (COLUMN) KATMANI
-        layer = pdk.Layer(
-            "ColumnLayer",
-            data=map_df,
-            get_position="[geo_lon, geo_lat]",
-            get_elevation="incident_count",
-            elevation_scale=50000, # Sütun boyunu olay sayısıyla çarpar
-            radius=20000,          # Sütunun kalınlığı
-            get_fill_color="color",
-            get_line_color=[255, 255, 255, 120],
-            pickable=True,
-            auto_highlight=True,
-            extruded=True,         # 3D silindirik yapıyı açar
-            wireframe=True         # 3D yapının daha teknolojik görünmesini sağlar
+        # 2D TEMİZ HARİTA: FOLIUM (LEAFLET.JS)
+        m = folium.Map(
+            location=[map_df["geo_lat"].mean(), map_df["geo_lon"].mean()],
+            zoom_start=2,
+            tiles="CartoDB dark_matter",
+            control_scale=True
         )
 
-        view_state = pdk.ViewState(
-            latitude=map_df["geo_lat"].mean(),
-            longitude=map_df["geo_lon"].mean(),
-            zoom=2.2,
-            pitch=45,              # 3D sütunların görünmesi için kamerayı eğer
-            bearing=15             # Hafif açılı görünüm
-        )
+        for _, row in map_df.iterrows():
+            # Folium pin renkleri ('red', 'orange', 'beige', 'lightblue' vb.)
+            if row['max_severity'] == "critical":
+                pin_color = "darkred"
+                icon_type = "warning-sign"
+            elif row['max_severity'] == "high":
+                pin_color = "orange"
+                icon_type = "warning-sign"
+            elif row['max_severity'] == "medium":
+                pin_color = "beige"
+                icon_type = "info-sign"
+            else:
+                pin_color = "cadetblue"
+                icon_type = "info-sign"
+                
+            # HTML Popup'ı Folium'a bağlama
+            popup_iframe = folium.IFrame(html=row['tooltip_html'], width=350, height=250)
+            popup = folium.Popup(popup_iframe, max_width=400)
+            
+            folium.Marker(
+                location=[row['geo_lat'], row['geo_lon']],
+                popup=popup,
+                tooltip=f"📍 {row['city']}, {row['country']} ({row['incident_count']} Olay)",
+                icon=folium.Icon(color=pin_color, icon=icon_type)
+            ).add_to(m)
 
-        r = pdk.Deck(
-            layers=[layer],
-            initial_view_state=view_state,
-            map_provider="carto",
-            map_style="dark",
-            tooltip={
-                "html": "{tooltip_html}",
-                "style": {"backgroundColor": "rgba(13, 17, 23, 0.95)", "color": "white", "border": "1px solid #30363d", "borderRadius": "8px", "padding": "15px", "maxWidth": "400px", "boxShadow": "0 4px 12px rgba(0,0,0,0.5)"}
-            }
-        )
         st.markdown("<h3 style='color:#e6edf3; margin-top:10px; margin-bottom:-10px;'>🌐 Küresel Operasyon Haritası</h3>", unsafe_allow_html=True)
-        st.pydeck_chart(r, height=650, use_container_width=True)
+        components.html(m._repr_html_(), height=650)
     else:
         st.info("🗺️ Seçili filtrelere uygun, geçerli koordinata sahip olay bulunamadı.")
 
