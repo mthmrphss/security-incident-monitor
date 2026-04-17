@@ -21,14 +21,14 @@ logger = logging.getLogger("Main")
 
 def build_geocode_query(incident):
     parts = []
-    for field in ["venue_name", "airport_name", "hotel_name"]:
+    for field in ["airport_name", "hotel_name", "venue_name"]:
         val = incident.get(field)
-        if val and val not in ("unknown", "null", "", None):
+        if val and str(val).lower() not in ("unknown", "null", "", "none"):
             parts.append(val)
             break
     for field in ["city", "country"]:
         val = incident.get(field)
-        if val and val not in ("unknown", "null", "", None):
+        if val and str(val).lower() not in ("unknown", "null", "", "none"):
             parts.append(val)
     return ", ".join(parts)
 

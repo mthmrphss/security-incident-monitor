@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 import plotly.express as px
+import pycountry
+import os
 import json
 
 # --- 1. KOMUTA MERKEZİ AYARLARI ---
@@ -87,8 +89,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 2. AKILLI VERİ YÜKLEME ---
-@st.cache_data(ttl=300)
-def load_and_clean_data():
+@st.cache_data
+def load_and_clean_data(mtime):
     with open("data/incidents.json", "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     
@@ -102,7 +104,18 @@ def load_and_clean_data():
     df = df.sort_values(by='parsed_date', ascending=False)
     
     # "unknown" veya "null" ülke sorununu düzeltme
-    df['country'] = df['country'].replace(['unknown', '', None], 'Bilinmeyen Ülke (Sistem Hatası)')
+    def get_country_name(code):
+        if pd.isna(code) or str(code).lower() in ('unknown', '', 'null', 'none'):
+            return None
+        country = pycountry.countries.get(alpha_2=str(code).upper())
+        return country.name if country else None
+
+    df['country'] = df['country'].replace(['unknown', '', None, 'null'], None)
+    if 'country_code' in df.columns:
+        mask = df['country'].isna()
+        df.loc[mask, 'country'] = df.loc[mask, 'country_code'].apply(get_country_name)
+        
+    df['country'] = df['country'].fillna('Bilinmeyen Ülke (Sistem Hatası)')
     df['country'] = df['country'].str.title() 
     
     # Risk renkleri (WebGL uyumlu)
@@ -119,7 +132,8 @@ def load_and_clean_data():
     return df, raw_data["metadata"]
 
 try:
-    data_df, metadata = load_and_clean_data()
+    mtime = os.path.getmtime("data/incidents.json")
+    data_df, metadata = load_and_clean_data(mtime)
 except Exception as e:
     st.error(f"Veri yüklenirken kritik hata oluştu: {e}")
     st.stop()
