@@ -3,6 +3,7 @@
 import os
 import re
 import time
+import json
 import hashlib
 import logging
 from datetime import datetime, timedelta, timezone
@@ -348,7 +349,7 @@ class NewsCollector:
         """
         Keyword filtreden geçen makalelerin gerçek içeriğini çek.
         RSS'ten sadece başlık + 1-2 cümle geliyor.
-        Bu metot asıl haberin metnini alır.
+        Bu metot asıl haberin metnini alır + gerçek yayın tarihini çıkarır.
         """
         logger.info(f"  Enriching {len(articles)} articles with full content...")
 
@@ -357,17 +358,24 @@ class NewsCollector:
             if not url:
                 continue
 
-            # Zaten yeterli içerik varsa atla
-            if len(article.get("summary", "")) > 500:
-                continue
-
             # Reddit, Twitter gibi kaynaklarda zaten içerik var
             if article.get("source_type") in ("reddit", "twitter"):
                 continue
 
-            # Google News redirect URL'lerini atla (genelde 403 verir)
+            # Google News redirect URL'lerini gerçek URL'ye çevir
             if "news.google.com" in url:
-                continue
+                resolved = self._resolve_google_news_url(url)
+                if resolved and "news.google.com" not in resolved:
+                    article["original_url"] = url
+                    article["url"] = resolved
+                    url = resolved
+                    logger.info(f"    [{i+1}] Google News resolved: {url[:80]}")
+                else:
+                    # Çözülemediyse tarih çıkarımı yapamayız ama devam et
+                    continue
+
+            # Zaten yeterli içerik varsa sadece tarih çıkarımı yap
+            needs_content = len(article.get("summary", "")) <= 500
 
             try:
                 resp = self.session.get(url, timeout=10, allow_redirects=True)
@@ -379,31 +387,37 @@ class NewsCollector:
                 if "text/html" not in content_type:
                     continue
 
-                soup = BeautifulSoup(resp.text, "lxml")
+                # Ham HTML üzerinden önce tarih çıkar (script tag'leri lazım)
+                raw_soup = BeautifulSoup(resp.text, "lxml")
+                real_date = self._extract_publish_date(raw_soup)
+                if real_date:
+                    article["real_publish_date"] = real_date
+                    logger.info(f"    [{i+1}] Real date: {real_date}")
 
-                # Gereksiz elementleri kaldır
-                for tag in soup(["script", "style", "nav", "header",
-                                 "footer", "aside", "form", "iframe",
-                                 "figure", "figcaption", "button"]):
-                    tag.decompose()
+                if needs_content:
+                    # Gereksiz elementleri kaldır (içerik çıkarımı için)
+                    for tag in raw_soup(["script", "style", "nav", "header",
+                                     "footer", "aside", "form", "iframe",
+                                     "figure", "figcaption", "button"]):
+                        tag.decompose()
 
-                # Makale gövdesini bul
-                article_tag = soup.find("article")
-                if article_tag:
-                    text = article_tag.get_text(separator=" ", strip=True)
-                else:
-                    paragraphs = soup.find_all("p")
-                    text = " ".join(
-                        p.get_text(strip=True) for p in paragraphs
-                        if len(p.get_text(strip=True)) > 40
-                    )
+                    # Makale gövdesini bul
+                    article_tag = raw_soup.find("article")
+                    if article_tag:
+                        text = article_tag.get_text(separator=" ", strip=True)
+                    else:
+                        paragraphs = raw_soup.find_all("p")
+                        text = " ".join(
+                            p.get_text(strip=True) for p in paragraphs
+                            if len(p.get_text(strip=True)) > 40
+                        )
 
-                text = re.sub(r"\s+", " ", text).strip()
+                    text = re.sub(r"\s+", " ", text).strip()
 
-                if len(text) > 100:
-                    article["summary"] = text[:1000]
-                    article["enriched"] = True
-                    logger.info(f"    [{i+1}] Enriched: {len(text)} chars → 1000")
+                    if len(text) > 100:
+                        article["summary"] = text[:1000]
+                        article["enriched"] = True
+                        logger.info(f"    [{i+1}] Enriched: {len(text)} chars → 1000")
 
             except requests.exceptions.Timeout:
                 logger.warning(f"    [{i+1}] Timeout: {url[:60]}")
@@ -413,9 +427,120 @@ class NewsCollector:
             time.sleep(0.5)
 
         enriched_count = sum(1 for a in articles if a.get("enriched"))
-        logger.info(f"  Enriched {enriched_count}/{len(articles)} articles")
+        date_count = sum(1 for a in articles if a.get("real_publish_date"))
+        logger.info(f"  Enriched {enriched_count}/{len(articles)} articles, {date_count} real dates found")
 
         return articles
+
+    def _resolve_google_news_url(self, google_url: str) -> str:
+        """Google News redirect URL'sini gerçek haber URL'sine çöz."""
+        import base64
+
+        # Yöntem 1: URL path'inden base64 encoded URL'yi çıkar
+        # Format: /rss/articles/CBMi...?oc=5 → base64 decode → gerçek URL
+        try:
+            # Path'ten article ID'sini al
+            if "/articles/" in google_url:
+                encoded_part = google_url.split("/articles/")[1].split("?")[0]
+                # Padding düzelt
+                padding = 4 - len(encoded_part) % 4
+                if padding != 4:
+                    encoded_part += "=" * padding
+                decoded = base64.urlsafe_b64decode(encoded_part)
+                # Decoded bytes içinde URL ara
+                decoded_str = decoded.decode("utf-8", errors="ignore")
+                url_match = re.search(r'https?://[^\s"<>]+', decoded_str)
+                if url_match:
+                    found_url = url_match.group(0)
+                    if "news.google.com" not in found_url and "consent.google" not in found_url:
+                        return found_url
+        except Exception:
+            pass
+
+        # Yöntem 2: HTTP redirect takibi (consent cookie ile)
+        try:
+            session = requests.Session()
+            session.cookies.set("CONSENT", "YES+cb", domain=".google.com")
+            session.headers.update({"User-Agent": USER_AGENT})
+            resp = session.get(google_url, timeout=10, allow_redirects=True)
+            final_url = resp.url
+            if final_url and "news.google.com" not in final_url and "consent.google" not in final_url:
+                return final_url
+        except Exception as e:
+            logger.warning(f"  Google News resolve failed: {str(e)[:60]}")
+
+        return ""
+
+    def _extract_publish_date(self, soup: BeautifulSoup) -> str:
+        """
+        HTML sayfasından gerçek yayınlanma tarihini çıkar.
+        Öncelik sırası:
+        1. <meta property="article:published_time">
+        2. <meta name="date" / name="publish_date" / name="pubdate">
+        3. <meta property="og:article:published_time">
+        4. <time datetime="...">
+        5. JSON-LD (application/ld+json) içindeki datePublished
+        """
+        # 1. article:published_time meta tag
+        for attr in ["article:published_time", "og:article:published_time"]:
+            tag = soup.find("meta", attrs={"property": attr})
+            if tag and tag.get("content"):
+                parsed = self._try_parse_date(tag["content"])
+                if parsed:
+                    return parsed
+
+        # 2. name-based meta tags
+        for name in ["date", "publish_date", "pubdate", "publishdate",
+                     "article_date", "article:date", "DC.date.issued"]:
+            tag = soup.find("meta", attrs={"name": re.compile(name, re.I)})
+            if tag and tag.get("content"):
+                parsed = self._try_parse_date(tag["content"])
+                if parsed:
+                    return parsed
+
+        # 3. <time> element with datetime attribute
+        time_tag = soup.find("time", attrs={"datetime": True})
+        if time_tag:
+            parsed = self._try_parse_date(time_tag["datetime"])
+            if parsed:
+                return parsed
+
+        # 4. JSON-LD structured data
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                ld_data = json.loads(script.string or "")
+                # Tek obje veya liste olabilir
+                items = ld_data if isinstance(ld_data, list) else [ld_data]
+                for item in items:
+                    dp = item.get("datePublished")
+                    if dp:
+                        parsed = self._try_parse_date(dp)
+                        if parsed:
+                            return parsed
+                    # @graph yapısı
+                    for graph_item in item.get("@graph", []):
+                        dp = graph_item.get("datePublished")
+                        if dp:
+                            parsed = self._try_parse_date(dp)
+                            if parsed:
+                                return parsed
+            except (json.JSONDecodeError, AttributeError, TypeError):
+                continue
+
+        return ""
+
+    def _try_parse_date(self, date_str: str) -> str:
+        """Tarih string'ini YYYY-MM-DD formatına çevir. Başarısızsa boş string döndür."""
+        if not date_str or len(date_str) < 8:
+            return ""
+        try:
+            dt = date_parser.parse(date_str)
+            # Makul bir tarih mi? (2020-2030 arası)
+            if dt.year < 2020 or dt.year > 2030:
+                return ""
+            return dt.strftime("%Y-%m-%d")
+        except Exception:
+            return ""
 
     # ══════════════════════════════════════════
     # KEYWORD FILTER

@@ -104,11 +104,10 @@ def load_and_clean_data(mtime):
     df = df.sort_values(by='parsed_date', ascending=False)
     
     # Güvenilir görüntüleme tarihi oluşturma
-    # 'date' alanı güvenilmez (bazen 2008 gibi eski olay tarihi, bazen gelecek tarih)
-    # Strateji: publish_date > created_at sırasıyla en güvenilir kaynağı kullan
+    # Strateji: real_publish_date (HTML meta) > publish_date (RSS) > created_at
     def normalize_date(row):
-        """publish_date'ten güvenilir bir YYYY-MM-DD tarihi çıkar."""
-        for field in ['publish_date', 'created_at']:
+        """En güvenilir kaynaktan YYYY-MM-DD tarihi çıkar."""
+        for field in ['real_publish_date', 'publish_date', 'created_at']:
             raw = row.get(field)
             if pd.isna(raw) or not raw or str(raw).lower() in ('unknown', 'null', ''):
                 continue

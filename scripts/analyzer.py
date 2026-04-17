@@ -15,6 +15,7 @@ import json
 import time
 import re
 import logging
+from datetime import timedelta
 from typing import List, Dict
 
 from groq import Groq
@@ -261,14 +262,20 @@ Only set relevant:true if the article clearly describes a physical attack, assau
         title = article.get("title", "")[:200]
         summary = article.get("summary", "")[:500]
         pub_date = article.get("published", "")[:25]
+        real_pub_date = article.get("real_publish_date", "")
         source = article.get("source", "")
         url = article.get("url", "")
         category = article.get("ai_category", "UNKNOWN")
 
+        # Prompt'ta en güvenilir tarihi göster
+        date_context = ""
+        if real_pub_date:
+            date_context = f"\nARTICLE REAL PUBLISH DATE (from HTML meta): {real_pub_date}"
+        date_context += f"\nRSS/FEED DATE: {pub_date}"
+
         prompt = f"""Extract incident details from this single article.
 
-SOURCE: {source}
-PUBLISHED: {pub_date}
+SOURCE: {source}{date_context}
 CATEGORY: {category}
 TITLE: {title}
 CONTENT: {summary}
@@ -278,7 +285,7 @@ Return JSON:
 {{
   "incident_type": "{category}",
   "event_date": "YYYY-MM-DD from the article text, NOT the publish date if different",
-  "publish_date": "{pub_date[:10]}",
+  "publish_date": "{real_pub_date or pub_date[:10]}",
   "country": "Country in English",
   "country_code": "XX",
   "city": "City name",
@@ -303,6 +310,7 @@ STRICT RULES:
 - ONLY write what is EXPLICITLY in the article text above.
 - If info is NOT in the text, write "unknown" or null. Do NOT guess.
 - event_date: extract the actual event date from text. If text says "yesterday" and publish is 2026-03-17, event_date is 2026-03-16.
+- publish_date: Use the ARTICLE REAL PUBLISH DATE if provided, otherwise use RSS/FEED DATE.
 - If no event date in text, use publish_date as fallback.
 - is_false_alarm: true if article says "not credible", "hoax", "nothing found"
 - Do NOT invent casualty numbers. If not mentioned, use 0."""
@@ -320,20 +328,41 @@ STRICT RULES:
         event_date = self._normalize_date(event_date)
         publish_date = self._normalize_date(publish_date)
 
-        # Makale yayın tarihinden de dene
+        # Gerçek yayın tarihi (HTML meta'dan)
+        real_date = self._normalize_date(real_pub_date) if real_pub_date else "unknown"
+
+        # RSS/feed tarihi
         article_pub = self._normalize_date(pub_date)
 
-        # Öncelik: event_date > publish_date > article_pub > bugün
-        if not event_date or event_date == "unknown":
-            event_date = publish_date
-        if not event_date or event_date == "unknown":
-            event_date = article_pub
-        if not event_date or event_date == "unknown":
-            from datetime import datetime, timezone
-            event_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        # ── Geliştirilmiş Fallback Zinciri ──
+        # Öncelik: event_date > real_publish_date > publish_date (LLM) > RSS date > bugün
+        best_date = "unknown"
+        for candidate in [event_date, real_date, publish_date, article_pub]:
+            if candidate and candidate != "unknown":
+                best_date = candidate
+                break
 
-        result["date"] = event_date
-        result["year"] = int(event_date[:4]) if event_date and event_date != "unknown" else None
+        if best_date == "unknown":
+            from datetime import datetime, timezone
+            best_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+        # ── Tarih Tutarlılık Kontrolü ──
+        # Gelecek tarih kontrolü
+        from datetime import datetime, timezone
+        try:
+            best_dt = datetime.strptime(best_date, "%Y-%m-%d")
+            today = datetime.now(timezone.utc).replace(tzinfo=None)
+            if best_dt > today + timedelta(days=1):
+                # Gelecek tarihi reddet, real_publish_date veya bugünü kullan
+                logger.warning(f"      Future date rejected: {best_date}")
+                best_date = real_date if real_date != "unknown" else today.strftime("%Y-%m-%d")
+        except (ValueError, TypeError):
+            pass
+
+        result["date"] = best_date
+        result["event_date"] = event_date if event_date != "unknown" else best_date
+        result["publish_date"] = real_date if real_date != "unknown" else (publish_date if publish_date != "unknown" else article_pub)
+        result["year"] = int(best_date[:4]) if best_date and best_date != "unknown" else None
 
         # Kaynak URL ekle
         result["source_urls"] = [url] if url else []

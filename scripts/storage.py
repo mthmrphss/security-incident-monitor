@@ -102,11 +102,14 @@ class IncidentStorage:
     # ─────────────────────────────────
 
     def _hash(self, inc: Dict) -> str:
+        # date alanı güvenilmez olduğundan hash'ten çıkarıldı.
+        # Aynı olay farklı tarihlerle geldiğinde duplikasyon önlenir.
+        venue = inc.get("airport_name") or inc.get("hotel_name") or inc.get("venue_name") or ""
         parts = [
-            inc.get("date", ""),
             inc.get("country", ""),
             inc.get("city", ""),
             inc.get("incident_type", ""),
+            venue,
         ]
         return hashlib.sha256("|".join(str(p).lower().strip() for p in parts).encode()).hexdigest()
 
