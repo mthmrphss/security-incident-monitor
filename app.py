@@ -7,88 +7,136 @@ import os
 import json
 
 # --- 1. KOMUTA MERKEZİ AYARLARI ---
-st.set_page_config(page_title="Security Intelligence Command", page_icon="🛡️", layout="wide")
+st.set_page_config(page_title="S.I.C. Dashboard", page_icon="🛡️", layout="wide", initial_sidebar_state="expanded")
 
-# Mobil Uyumlu, Esnek (Fluid) ve Animasyonlu CSS
+# Premium UI CSS (Glassmorphism & Modern Styling)
 st.markdown("""
 <style>
-    /* Ortak Responsive Ayarlar */
-    .reportview-container { background: #0d1117; }
-    
-    /* Mobil Öncelikli KPI Kartları */
-    .kpi-card { 
-        background-color: #161b22; 
-        padding: clamp(10px, 2vw, 20px); 
-        border-radius: 10px; 
-        border-left: 5px solid #1f6feb; 
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        margin-bottom: 10px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    /* Global Background & Fonts */
+    .stApp {
+        background-color: #0e1117;
     }
     
-    /* İkonlar ve Metinlerin Ezilmemesi İçin Esnek Boyutlandırma */
+    /* Sleek Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #161b22;
+        border-right: 1px solid #30363d;
+    }
+    
+    /* Logo Box */
+    .logo-container {
+        background: linear-gradient(135deg, #2e7cf6 0%, #1f4287 100%);
+        padding: 25px 20px;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 25px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    .logo-container h2 {
+        color: white; margin: 0; font-weight: 800; font-size: 2rem; letter-spacing: 2px;
+    }
+    .logo-container p {
+        color: #a3c2f2; font-size: 0.85rem; margin: 5px 0 0 0; text-transform: uppercase; letter-spacing: 1px;
+    }
+    
+    /* Glassmorphism KPI Cards */
+    .kpi-card { 
+        background: rgba(22, 27, 34, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 20px; 
+        border-radius: 12px; 
+        border: 1px solid rgba(255,255,255,0.05);
+        border-left: 4px solid #2e7cf6; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 15px; 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .kpi-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
     .kpi-title { 
-        color: #8bb9e5; 
-        font-size: clamp(0.7rem, 1.5vw, 0.9rem); 
+        color: #8b949e; 
+        font-size: 0.85rem; 
         text-transform: uppercase; 
         letter-spacing: 1px; 
-        margin-bottom: 5px; 
-        white-space: nowrap; 
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-bottom: 8px; 
+        font-weight: 600;
     }
     .kpi-value { 
         color: #ffffff; 
-        font-size: clamp(1.5rem, 5vw, 2.5rem); 
-        font-weight: bold; 
+        font-size: 2.2rem; 
+        font-weight: 700; 
+        line-height: 1;
     }
 
-    /* 🔥 YENİ: Kritik Durumlar İçin Pulse (Nefes Alan) Animasyonu */
+    /* Pulse Alert for Critical KPI */
     .pulse-alert {
-        border-left: 5px solid #ff4d4d;
+        border-left-color: #ff4d4d;
         animation: pulse-red 2s infinite;
     }
     @keyframes pulse-red {
-        0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.4); }
+        0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.3); }
         70% { box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
         100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
     }
 
-    /* 🔥 YENİ: Kayan İstihbarat Bandı (Ticker) */
+    /* Modern Ticker */
     .ticker-wrapper { 
-        width: 100%; overflow: hidden; background-color: #161b22; 
-        border-top: 1px solid #30363d; border-bottom: 1px solid #30363d; 
-        padding: 8px 0; margin-bottom: 20px; border-radius: 5px;
+        width: 100%; overflow: hidden; 
+        background: rgba(22, 27, 34, 0.8);
+        border: 1px solid rgba(255,255,255,0.05);
+        padding: 10px 0; margin-bottom: 25px; border-radius: 8px;
     }
     .ticker { 
         display: inline-block; white-space: nowrap; padding-right: 100%; 
-        box-sizing: content-box; animation: ticker 25s linear infinite; 
+        box-sizing: content-box; animation: ticker 30s linear infinite; 
     }
     .ticker:hover { animation-play-state: paused; cursor: default; }
     @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-    .ticker-item { display: inline-block; padding: 0 2rem; font-size: 0.95rem; color: #e6edf3; border-right: 1px solid #30363d;}
-    .ticker-alert { color: #ff4d4d; font-weight: bold; }
+    .ticker-item { display: inline-block; padding: 0 2rem; font-size: 0.95rem; color: #c9d1d9; border-right: 1px solid #30363d;}
+    .ticker-alert { color: #ff6b6b; font-weight: 600; }
 
-    /* Mobilde Sekmelerin (Tabs) Yatayda Kaydırılabilir Olması */
+    /* News Feed Cards */
+    .news-card { 
+        background: #161b22; 
+        border: 1px solid #30363d;
+        border-left: 4px solid #2e7cf6; 
+        padding: 18px; 
+        margin-bottom: 15px; 
+        border-radius: 8px; 
+        transition: background-color 0.2s;
+    }
+    .news-card:hover {
+        background: #1c2128;
+    }
+    .news-header {
+        display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;
+    }
+    .news-title { margin:0; font-size: 1.1rem; font-weight: 600; color: #e6edf3; }
+    .news-meta { color:#8b949e; font-size:0.85rem; }
+    .news-summary { font-size: 1rem; color: #c9d1d9; line-height: 1.5; margin-top: 10px; }
+    
+    /* Custom Tabs */
     .stTabs [data-baseweb="tab-list"] { 
-        gap: 5px; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 5px;
+        gap: 8px; border-bottom: 1px solid #30363d; padding-bottom: 0px;
     }
     .stTabs [data-baseweb="tab"] { 
-        background-color: #161b22; border-radius: 8px 8px 0 0; 
-        padding: clamp(8px, 2vw, 15px); color: #8b949e; font-size: clamp(0.8rem, 2vw, 1rem); white-space: nowrap; 
+        background-color: transparent; border: none;
+        padding: 12px 20px; color: #8b949e; font-size: 1rem; font-weight: 500;
+        border-bottom: 2px solid transparent; border-radius: 0;
     }
-    .stTabs [aria-selected="true"] { background-color: #1f6feb !important; color: white !important; }
-    
-    .news-card { 
-        border-left: 4px solid #1f6feb; padding: clamp(10px, 2vw, 15px); background: #161b22; 
-        margin-bottom: 10px; border-radius: 0 8px 8px 0; word-wrap: break-word; 
+    .stTabs [aria-selected="true"] { 
+        background-color: transparent !important; 
+        color: #2e7cf6 !important; 
+        border-bottom: 2px solid #2e7cf6 !important; 
     }
 </style>
 """, unsafe_allow_html=True)
 
-# --- 2. AKILLI VERİ YÜKLEME ---
+# --- 2. AKILLI VERİ YÜKLEME VE TEMİZLEME ---
 @st.cache_data
 def load_and_clean_data(mtime):
     with open("data/incidents.json", "r", encoding="utf-8") as f:
@@ -96,15 +144,7 @@ def load_and_clean_data(mtime):
     
     df = pd.DataFrame(raw_data["incidents"])
     
-    # Koordinat Doğrulama
-    df = df.dropna(subset=["geo_lat", "geo_lon"]).copy()
-    
-    # Tarih dönüşümü
-    df['parsed_date'] = pd.to_datetime(df['created_at'], errors='coerce')
-    df = df.sort_values(by='parsed_date', ascending=False)
-    
-    # Güvenilir görüntüleme tarihi oluşturma
-    # Strateji: real_publish_date (HTML meta) > publish_date (RSS) > created_at
+    # 1. TARİH NORMALİZASYONU (Sıralama İçin Önce Yapılmalı)
     def normalize_date(row):
         """En güvenilir kaynaktan YYYY-MM-DD tarihi çıkar."""
         for field in ['real_publish_date', 'publish_date', 'created_at']:
@@ -114,45 +154,67 @@ def load_and_clean_data(mtime):
             parsed = pd.to_datetime(str(raw), errors='coerce')
             if pd.notna(parsed):
                 return parsed.strftime('%Y-%m-%d')
-        return 'Tarih Yok'
+        return '1970-01-01' # Fallback for sorting
     
     def normalize_event_date(val):
-        """event_date'ten okunabilir bir tarih çıkar (opsiyonel bilgi)."""
         if pd.isna(val) or not val or str(val).lower() in ('unknown', 'null', ''):
             return None
         parsed = pd.to_datetime(str(val), errors='coerce')
         if pd.notna(parsed):
             return parsed.strftime('%Y-%m-%d')
         return None
-    
+
     df['display_date'] = df.apply(normalize_date, axis=1)
     df['event_date_display'] = df['event_date'].apply(normalize_event_date)
     
-    # "unknown" veya "null" ülke sorununu düzeltme
+    # KRONOLOJİK SIRALAMA DÜZELTMESİ (created_at yerine display_date)
+    df['parsed_date'] = pd.to_datetime(df['display_date'], errors='coerce')
+    df = df.sort_values(by='parsed_date', ascending=False)
+    
+    # 2. "UNKNOWN" ŞEHİR/ÜLKE YÖNETİMİ
     def get_country_name(code):
         if pd.isna(code) or str(code).lower() in ('unknown', '', 'null', 'none'):
             return None
         country = pycountry.countries.get(alpha_2=str(code).upper())
         return country.name if country else None
 
+    # Country Code'dan isim kurtarma
     df['country'] = df['country'].replace(['unknown', '', None, 'null'], None)
     if 'country_code' in df.columns:
         mask = df['country'].isna()
         df.loc[mask, 'country'] = df.loc[mask, 'country_code'].apply(get_country_name)
         
-    df['country'] = df['country'].fillna('Bilinmeyen Ülke (Sistem Hatası)')
+    # Kalan Unknown'ları Türkçeleştir
+    df['country'] = df['country'].fillna('Bilinmeyen Ülke')
+    df['city'] = df['city'].replace(['unknown', '', None, 'null'], 'Bilinmeyen Şehir')
     df['country'] = df['country'].str.title() 
+    df['city'] = df['city'].str.title()
     
-    # Risk renkleri (WebGL uyumlu)
+    # 3. HARİTA İÇİN GEÇERLİ KOORDİNAT BAYRAĞI
+    # Unknown olanları feed'de tut, haritada gösterme
+    def is_valid_location(row):
+        has_coords = pd.notna(row.get('geo_lat')) and pd.notna(row.get('geo_lon'))
+        is_unknown = (row.get('country') == 'Bilinmeyen Ülke') and (row.get('city') == 'Bilinmeyen Şehir')
+        return has_coords and not is_unknown
+
+    df['has_valid_location'] = df.apply(is_valid_location, axis=1)
+
+    # 4. RİSK RENKLERİ VE HARİTA YARIÇAPI
     color_map = {
-        "critical": [255, 0, 0, 210],
-        "high": [255, 120, 0, 210],
-        "medium": [255, 210, 0, 210],
-        "low": [0, 180, 255, 210]
+        "critical": [255, 77, 77, 200],   # Red
+        "high": [255, 140, 0, 200],       # Dark Orange
+        "medium": [255, 215, 0, 200],     # Gold
+        "low": [77, 166, 255, 200]        # Light Blue
+    }
+    radius_map = {
+        "critical": 60000,
+        "high": 40000,
+        "medium": 25000,
+        "low": 15000
     }
     
-    # Fillna yerine lambda ile güvenli renk ataması
     df["color"] = df["severity"].apply(lambda x: color_map.get(str(x).lower(), [150, 150, 150, 150]))
+    df["radius"] = df["severity"].apply(lambda x: radius_map.get(str(x).lower(), 15000))
     
     return df, raw_data["metadata"]
 
@@ -166,24 +228,28 @@ except Exception as e:
 # --- 3. GELİŞMİŞ SOL PANEL (KONTROL MENÜSÜ) ---
 with st.sidebar:
     st.markdown("""
-        <div style='background: linear-gradient(45deg, #1f6feb, #4da6ff); padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px;'>
-            <h2 style='color: white; margin: 0;'>S.I.C.</h2>
-            <p style='color: #e6edf3; font-size: 0.8rem; margin: 0;'>Security Intelligence Command</p>
+        <div class='logo-container'>
+            <h2>S.I.C.</h2>
+            <p>Security Intelligence Command</p>
         </div>
     """, unsafe_allow_html=True)
 
-    st.subheader("🔍 Akıllı Filtreleme")
+    st.markdown("<h4 style='color: #c9d1d9; margin-bottom: 15px;'>🔍 Akıllı Filtreleme</h4>", unsafe_allow_html=True)
     
-    search_query = st.text_input("Anahtar Kelime Ara", placeholder="Havalimanı, saldırı, otel...")
+    search_query = st.text_input("Anahtar Kelime Ara", placeholder="Havalimanı, saldırı, drone...")
 
-    all_countries = sorted(data_df["country"].unique())
+    # Filtrelerde Bilinmeyen Ülke en sona atılsın
+    all_countries = sorted([c for c in data_df["country"].unique() if c != 'Bilinmeyen Ülke'])
+    if 'Bilinmeyen Ülke' in data_df["country"].unique():
+        all_countries.append('Bilinmeyen Ülke')
+        
     selected_countries = st.multiselect("🏴 Ülke Seçimi", options=all_countries, default=all_countries)
 
     selected_types = st.multiselect("🎯 Olay Türü", options=data_df["incident_type"].unique(), default=data_df["incident_type"].unique())
     selected_severity = st.select_slider("⚠️ Minimum Risk", options=["low", "medium", "high", "critical"], value="low")
 
-    st.markdown("---")
-    st.caption(f"DB Versiyon: {metadata.get('version')} | Toplam Kayıt: {len(data_df)}")
+    st.markdown("<br><hr style='border-color: #30363d;'>", unsafe_allow_html=True)
+    st.caption(f"DB Versiyon: {metadata.get('version')} | Toplam Olay: {len(data_df)}")
 
 # --- 4. FİLTRELEME MANTIĞI ---
 severity_order = {"low": 0, "medium": 1, "high": 2, "critical": 3}
@@ -196,20 +262,22 @@ filtered_df = data_df[
 if search_query:
     filtered_df = filtered_df[
         filtered_df["summary_tr"].str.contains(search_query, case=False, na=False) |
-        filtered_df["city"].str.contains(search_query, case=False, na=False)
+        filtered_df["city"].str.contains(search_query, case=False, na=False) |
+        filtered_df["summary_en"].str.contains(search_query, case=False, na=False)
     ]
 
 # --- 5. ANA PANEL VE DASHBOARD ---
-st.title("🛡️ Küresel Havacılık ve Güvenlik Monitörü")
+st.title("Küresel Havacılık ve Güvenlik Monitörü")
 
-# 🔥 YENİ: KAYAN İSTİHBARAT BANDI (TİCKER)
+# KAYAN İSTİHBARAT BANDI (TİCKER)
 if not data_df.empty:
-    latest_incidents = data_df.head(5) # En son 5 olayı al
+    latest_incidents = data_df.head(6)
     ticker_items = []
     for _, row in latest_incidents.iterrows():
         icon = "🔴" if row['severity'] in ['critical', 'high'] else "🟡"
         alert_class = "ticker-alert" if row['severity'] in ['critical', 'high'] else ""
-        ticker_items.append(f"<span class='ticker-item {alert_class}'>{icon} {row['city'].upper()}, {row['country'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['display_date']})</span>")
+        text = f"{row['city'].upper()}, {row['country'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['display_date']})"
+        ticker_items.append(f"<span class='ticker-item {alert_class}'>{icon} {text}</span>")
     
     ticker_html = f"<div class='ticker-wrapper'><div class='ticker'>{''.join(ticker_items)}</div></div>"
     st.markdown(ticker_html, unsafe_allow_html=True)
@@ -218,21 +286,20 @@ if not filtered_df.empty:
     # KPI Şeridi
     k1, k2, k3, k4 = st.columns(4)
     
-    # Eğer kritik olay varsa 2. karta 'pulse-alert' animasyonunu ekliyoruz
     critical_count = len(filtered_df[filtered_df['severity'] == 'critical'])
     pulse_class = "pulse-alert" if critical_count > 0 else ""
     
-    with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>📌 Aktif Olay</div><div class='kpi-value'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
-    with k2: st.markdown(f"<div class='kpi-card {pulse_class}' style='border-left-color: #ff4d4d;'><div class='kpi-title'>🔴 Kritik Seviye</div><div class='kpi-value'>{critical_count}</div></div>", unsafe_allow_html=True)
-    with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd11a;'><div class='kpi-title'>🏴 Etkilenen Şehir</div><div class='kpi-value'>{filtered_df['city'].nunique()}</div></div>", unsafe_allow_html=True)
+    with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>📌 Filtrelenen Olay</div><div class='kpi-value'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
+    with k2: st.markdown(f"<div class='kpi-card {pulse_class}' style='border-left-color: #ff4d4d;'><div class='kpi-title'>🔴 Kritik Risk</div><div class='kpi-value'>{critical_count}</div></div>", unsafe_allow_html=True)
     
-    # Check if quality_score column exists and isn't entirely null before calculating mean
+    valid_cities = filtered_df[filtered_df['city'] != 'Bilinmeyen Şehir']['city'].nunique()
+    with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd700;'><div class='kpi-title'>🏴 Etkilenen Şehir</div><div class='kpi-value'>{valid_cities}</div></div>", unsafe_allow_html=True)
+    
     if 'quality_score' in filtered_df.columns and not filtered_df['quality_score'].isnull().all():
-        quality_mean_str = f"{filtered_df['quality_score'].mean():.2f}"
+        quality_mean = f"{filtered_df['quality_score'].mean():.2f}"
     else:
-        quality_mean_str = "N/A"
-        
-    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Veri Kalitesi (Ort.)</div><div class='kpi-value'>{quality_mean_str}</div></div>", unsafe_allow_html=True)
+        quality_mean = "N/A"
+    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Güvenilirlik Skoru</div><div class='kpi-value'>{quality_mean}</div></div>", unsafe_allow_html=True)
 
     st.write("") 
     
@@ -240,82 +307,94 @@ if not filtered_df.empty:
     t_map, t_feed, t_stats = st.tabs(["🌐 İnteraktif Operasyon Haritası", "🗞️ İstihbarat Akışı", "📊 Analitik Raporlar"])
 
     with t_map:
-        layer = pdk.Layer(
-            "ScatterplotLayer",
-            data=filtered_df,
-            get_position="[geo_lon, geo_lat]",
-            get_fill_color="color",
-            get_line_color=[255, 255, 255, 50],
-            get_radius=50000,
-            pickable=True,
-            opacity=0.8,
-            stroked=True,
-            filled=True,
-            radius_min_pixels=8,
-            radius_max_pixels=40,
-            line_width_min_pixels=1
-        )
+        # Harita için lokasyonu geçerli olanları ayır (Unknown'ları gizle)
+        map_df = filtered_df[filtered_df['has_valid_location'] == True]
+        
+        if not map_df.empty:
+            layer = pdk.Layer(
+                "ScatterplotLayer",
+                data=map_df,
+                get_position="[geo_lon, geo_lat]",
+                get_fill_color="color",
+                get_line_color=[255, 255, 255, 80],
+                get_radius="radius", # Dinamik radius
+                pickable=True,
+                opacity=0.9,
+                stroked=True,
+                filled=True,
+                line_width_min_pixels=1
+            )
 
-        view_state = pdk.ViewState(
-            latitude=filtered_df["geo_lat"].mean(),
-            longitude=filtered_df["geo_lon"].mean(),
-            zoom=2.5,
-            pitch=35
-        )
+            view_state = pdk.ViewState(
+                latitude=map_df["geo_lat"].mean(),
+                longitude=map_df["geo_lon"].mean(),
+                zoom=2.0,
+                pitch=25
+            )
 
-        r = pdk.Deck(
-            layers=[layer],
-            initial_view_state=view_state,
-            map_provider="carto",
-            map_style="dark",
-            tooltip={
-                "html": "<b>{city}, {country}</b><br><b>Tür:</b> {incident_type}<br><b>Özet:</b> {summary_tr}",
-                "style": {"backgroundColor": "#0d1117", "color": "white", "border": "1px solid #30363d", "borderRadius": "5px"}
-            }
-        )
-        st.pydeck_chart(r, height=600, use_container_width=True)
+            r = pdk.Deck(
+                layers=[layer],
+                initial_view_state=view_state,
+                map_provider="carto",
+                map_style="dark",
+                tooltip={
+                    "html": "<div style='font-family: sans-serif;'><h4 style='margin:0 0 5px 0; color:#2e7cf6;'>{city}, {country}</h4><b>Tür:</b> {incident_type}<br><b>Risk:</b> {severity}<br><br>{summary_tr}</div>",
+                    "style": {"backgroundColor": "rgba(22, 27, 34, 0.95)", "color": "white", "border": "1px solid #30363d", "borderRadius": "8px", "padding": "10px"}
+                }
+            )
+            st.pydeck_chart(r, height=600, use_container_width=True)
+        else:
+            st.info("🗺️ Seçili filtrelere uygun, geçerli koordinata sahip olay bulunamadı.")
 
     with t_feed:
-        st.subheader("📅 Kronolojik Olay Akışı")
+        st.write("<br>", unsafe_allow_html=True)
         for i, row in filtered_df.iterrows():
             with st.container():
-                risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#4da6ff"
+                risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#2e7cf6"
                 
                 event_info = f" (Olay Tarihi: {row['event_date_display']})" if row.get('event_date_display') and row['event_date_display'] != row['display_date'] else ""
+                
                 st.markdown(f"""
                 <div class='news-card' style='border-left-color: {risk_color};'>
-                    <h4 style='margin:0;'>{row['city']}, {row['country']} | {row['incident_type']}</h4>
-                    <p style='color:#8b949e; font-size:0.8rem; margin-top:3px;'>🗓️ {row['display_date']}{event_info} • ⚠️ Risk: <b>{row['severity'].upper()}</b></p>
-                    <p style='font-size: 1.05rem;'>{row['summary_tr'] or row['summary_en']}</p>
+                    <div class='news-header'>
+                        <div class='news-title'>{row['city']}, {row['country']} | {row['incident_type']}</div>
+                        <span style='background: {risk_color}33; color: {risk_color}; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;'>{row['severity'].upper()}</span>
+                    </div>
+                    <div class='news-meta'>🗓️ Görüntülenme: {row['display_date']}{event_info} • 📌 {row['venue_name'] or 'Genel'}</div>
+                    <div class='news-summary'>{row['summary_tr'] or row['summary_en']}</div>
                 </div>
                 """, unsafe_allow_html=True)
                 
                 if row.get('source_urls'):
                     links = " | ".join([f"[{'Kaynak '+str(idx+1)}]({url})" for idx, url in enumerate(row['source_urls'])])
                     st.caption(f"🔗 {links}")
-                st.write("---")
+                else:
+                    st.write("")
 
     with t_stats:
+        st.write("<br>", unsafe_allow_html=True)
         col_a, col_b = st.columns(2)
         with col_a:
-            st.markdown("### Türlere Göre Dağılım")
-            fig_pie = px.pie(filtered_df, names='incident_type', hole=0.4, template="plotly_dark")
-            fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+            st.markdown("<h4 style='color:#c9d1d9;'>🎯 Türlere Göre Dağılım</h4>", unsafe_allow_html=True)
+            fig_pie = px.pie(filtered_df, names='incident_type', hole=0.5, template="plotly_dark", 
+                             color_discrete_sequence=px.colors.sequential.Blues_r)
+            fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", margin=dict(t=20, b=20, l=0, r=0))
             st.plotly_chart(fig_pie, use_container_width=True)
         with col_b:
-            st.markdown("### Risk Yoğunluğu")
+            st.markdown("<h4 style='color:#c9d1d9;'>⚠️ Risk Yoğunluğu</h4>", unsafe_allow_html=True)
             color_map_px = {"critical": "#ff4d4d", "high": "#ff8c00", "medium": "#ffd700", "low": "#4da6ff"}
             fig_bar = px.bar(filtered_df, x='severity', color='severity', color_discrete_map=color_map_px, template="plotly_dark")
-            fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+            fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", showlegend=False, margin=dict(t=20, b=20, l=0, r=0))
             st.plotly_chart(fig_bar, use_container_width=True)
 
     # Veri İndirme Alanı
-    st.markdown("---")
+    st.markdown("<hr style='border-color: #30363d; margin: 30px 0;'>", unsafe_allow_html=True)
     st.download_button(
         "📥 Filtrelenmiş Veriyi CSV Olarak İndir",
         data=filtered_df.to_csv(index=False).encode('utf-8'),
         file_name='security_intelligence_report.csv',
-        mime='text/csv'
+        mime='text/csv',
+        type="primary"
     )
 
 else:
