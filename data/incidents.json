@@ -2922,8 +2922,8 @@
         0
       ],
       "data_quality": "medium",
-      "geo_lat": 60.321816,
-      "geo_lon": 24.947361,
+      "geo_lat": 33.640712,
+      "geo_lon": -84.446227,
       "validation_signals": {
         "has_country": false,
         "has_city": false,
@@ -2978,8 +2978,8 @@
         0
       ],
       "data_quality": "medium",
-      "geo_lat": null,
-      "geo_lon": null,
+      "geo_lat": 33.640712,
+      "geo_lon": -84.446227,
       "validation_signals": {
         "has_country": false,
         "has_city": false,
