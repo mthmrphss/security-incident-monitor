@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-17T03:27:22.591370+00:00",
-    "total_incidents": 85,
+    "last_updated": "2026-04-17T08:01:40.523914+00:00",
+    "total_incidents": 86,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -297,6 +297,62 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-17",
+      "publish_date": "2026-04-17",
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "city": "Dubai",
+      "location_detail": "near Dubai airport",
+      "airport_name": "Dubai airport",
+      "airport_iata": "DXB",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "high",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "Iran",
+      "summary_en": "Drone attack near Dubai airport",
+      "summary_tr": "Dubai havalimanına yakınlarında drone saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "drone attack",
+        "airport",
+        "Dubai"
+      ],
+      "date": "2026-04-17",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxNX3BIRk81TTBBSkZhUDdFM18wWXpJTlBaYzBEUkw4NGlRX1lHekpVSVlXSTIzcGw3UlNkR3cxeFdMNXpxa0NZMm1tc2JaOEtpVDhwY1hOY1V3WG14UENMRm9WdjliZWVSWVRmRENabGl1VmRUUGlqTGJUX1BocVAwZmxoYmFjRWFVQUdHcy0yLUFzaU85QTltZzBxZk5RUkRUQzg4SXlid2pjUWI1Tm5N?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWWJ4TGJfYjZncVdFcVJuaU1DRVRQLVNxN2pEaVJ1UkQ3RDIxMjc5ZlZ3Rk1waUV2alhfTERvSnlhcGNDQ0FpbmlLdWdWOHdJdzllSFl4b2pMNTlDbmF6SW96VDR0eVg5akthUXNRX2JOa0xZM3k3NFlLd2lrQ0Fid2tIeXNOUjNSOXZEckFDMHRVM3pFOXJPbk1kd3llTC1fWlE?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 25.074282,
+      "geo_lon": 55.188539,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-04-17T08:01:40.523907+00:00",
+      "id": "1b533f58d37c",
+      "created_at": "2026-04-17T08:01:40.523895+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-16",
       "publish_date": "2026-04-16",
       "country": "unknown",
@@ -378,8 +434,9 @@
       "date": "2026-04-16",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNb1ZNQzlRY01KMzB0blg3TzJ6VzJJblNBS0tKVmxiSFM2UWZfZWk3MUVMOHR3VmhGWDFGQWc3VGlpMTkzTENuZVVtbVhrVXpYN04yMTNFdm5LcjF6R1ZEZnBfOG9YeEItMFJUbDRHaWU0c1dfMUVSYjRnQ1dpWHQ3TFg5dGIwaWNKMmNLR1J1a0hOYVQ5NkQ3MExuZlRRekZCRHgyX3N6bEdHV2JFeFppVHEtT25LS3k3cnVYWENMcXU?oc=5",
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRGotWExBZ0JsaTIyb2hndFgwV194MHZjV1M4SWM3X2VhWTNhbEEySktNQ0JIMlJDVXRwdUVRbGR0NE5xdVlyVXBpRDBSMzZYNS1GUHphbE5TWXg0YXdSYUJTWlFiVVc5YkN3cGlrWTdCRG0zb1BoVlZfTFpQTmxQN2dnRlpnRG93QkZrZGxhR0NmckN3d0dxN0dLLWlrbHEwdjhFYllhV2NsdFlmRktSMGtR?oc=5"
+        "https://blueprint.ng/terrorists-planning-attack-on-abuja-airport-kuje-prison-niger-report/",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRGotWExBZ0JsaTIyb2hndFgwV194MHZjV1M4SWM3X2VhWTNhbEEySktNQ0JIMlJDVXRwdUVRbGR0NE5xdVlyVXBpRDBSMzZYNS1GUHphbE5TWXg0YXdSYUJTWlFiVVc5YkN3cGlrWTdCRG0zb1BoVlZfTFpQTmxQN2dnRlpnRG93QkZrZGxhR0NmckN3d0dxN0dLLWlrbHEwdjhFYllhV2NsdFlmRktSMGtR?oc=5",
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNb1ZNQzlRY01KMzB0blg3TzJ6VzJJblNBS0tKVmxiSFM2UWZfZWk3MUVMOHR3VmhGWDFGQWc3VGlpMTkzTENuZVVtbVhrVXpYN04yMTNFdm5LcjF6R1ZEZnBfOG9YeEItMFJUbDRHaWU0c1dfMUVSYjRnQ1dpWHQ3TFg5dGIwaWNKMmNLR1J1a0hOYVQ5NkQ3MExuZlRRekZCRHgyX3N6bEdHV2JFeFppVHEtT25LS3k3cnVYWENMcXU?oc=5"
       ],
       "source_articles": [
         0
@@ -402,8 +459,8 @@
       "verification_score": 0.85,
       "id": "d2669b74c986",
       "created_at": "2026-04-16T14:09:45.997622+00:00",
-      "last_updated": "2026-04-16T19:26:47.662340",
-      "source_count": 2
+      "last_updated": "2026-04-17T08:01:40.500285",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
