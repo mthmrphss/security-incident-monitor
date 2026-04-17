@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-17T10:31:25.761532+00:00",
+    "last_updated": "2026-04-17T08:01:40.523914+00:00",
     "total_incidents": 86,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -22,7 +22,7 @@
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-03-31",
+      "publish_date": "20260331T121500Z",
       "country": "Kosovo",
       "country_code": "XK",
       "city": "Priştine",
@@ -45,7 +45,7 @@
         "A Milli Futbol Takımı",
         "2026 FIFA Dünya Kupası"
       ],
-      "date": "2026-03-31",
+      "date": "20260331T1",
       "year": 2026,
       "source_urls": [
         "https://www.sozcu.com.tr/a-millilerin-oteline-havai-fisekli-saldiri-p306092",
@@ -71,15 +71,14 @@
       "verification_status": "verified",
       "verification_score": 0.7,
       "source_count": 2,
-      "last_updated": "2026-04-17T10:30:24.671165+00:00",
+      "last_updated": "2026-03-31T13:55:48.927989+00:00",
       "id": "d9642bbadcc6",
-      "created_at": "2026-03-31T13:55:48.927982+00:00",
-      "real_publish_date": "2026-03-31"
+      "created_at": "2026-03-31T13:55:48.927982+00:00"
     },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-03-31",
+      "publish_date": "20260331T113000Z",
       "country": "Kosova",
       "country_code": "XK",
       "city": "Priştine",
@@ -102,7 +101,7 @@
         "hotel attack",
         "sports"
       ],
-      "date": "2026-03-31",
+      "date": "20260331T1",
       "year": 2026,
       "source_urls": [
         "https://www.cnnturk.com/spor/futbol/a-milli-takimin-kaldigi-otele-havai-fisek-saldirisi-2412029"
@@ -128,14 +127,13 @@
       "verification_score": 0.7,
       "id": "551e96b7b773",
       "created_at": "2026-03-31T13:55:48.928000+00:00",
-      "last_updated": "2026-04-17T10:30:25.439410+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-31"
+      "last_updated": "2026-03-31T13:55:48.928004+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-03-30",
+      "publish_date": "20260330T104500Z",
       "country": "unknown",
       "country_code": "unknown",
       "city": "Bournemouth",
@@ -158,7 +156,7 @@
         "asylum seekers",
         "migrant hotel"
       ],
-      "date": "2026-03-30",
+      "date": "20260330T1",
       "year": 2026,
       "source_urls": [
         "https://www.dailymail.co.uk/news/article-15690903/Brothers-carried-revenge-attack-asylum-seekers-living-notorious-migrant-hotel-avoid-jail.html"
@@ -184,14 +182,13 @@
       "verification_score": 0.75,
       "id": "945fa6d871db",
       "created_at": "2026-03-30T13:54:48.261293+00:00",
-      "last_updated": "2026-04-17T10:30:26.754323+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-30"
+      "last_updated": "2026-03-30T13:54:48.261303+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-03-28",
+      "publish_date": "20260328T180000Z",
       "country": "unknown",
       "country_code": "unknown",
       "city": "Kerkük",
@@ -215,7 +212,7 @@
         "hava saldırısı",
         "false_alarm"
       ],
-      "date": "2026-03-28",
+      "date": "20260328T1",
       "year": 2026,
       "source_urls": [
         "https://www.haberler.com/guncel/kerkuk-havalimani-ndaki-hasdi-sabi-karargahina-hava-saldirisi-19696261-haberi/"
@@ -241,14 +238,13 @@
       "verification_score": 0.5,
       "id": "140f3cadbc20",
       "created_at": "2026-03-28T18:53:53.426590+00:00",
-      "last_updated": "2026-04-17T10:30:30.673354+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-28"
+      "last_updated": "2026-03-28T18:53:53.426598+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "Monday",
-      "publish_date": "2026-04-16",
+      "publish_date": "20260416T190000Z",
       "country": "unknown",
       "country_code": "US",
       "city": "Elko",
@@ -270,7 +266,7 @@
         "murder-suicide",
         "airport shooting"
       ],
-      "date": "2026-04-16",
+      "date": "2026-04-20",
       "year": 2026,
       "source_urls": [
         "https://www.2news.com/news/local/elko-police-release-additional-details-on-mondays-apparent-murder-suicide-at-airport/article_71b5b4ec-de45-41fd-b826-28bd1e7d8224.html"
@@ -296,14 +292,13 @@
       "verification_score": 0.85,
       "id": "73d16dee96c2",
       "created_at": "2026-04-17T03:27:22.591354+00:00",
-      "last_updated": "2026-04-17T10:30:31.737020+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-04-16"
+      "last_updated": "2026-04-17T03:27:22.591364+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
-      "event_date": "2026-03-16",
-      "publish_date": "2026-03-16",
+      "event_date": "2026-04-17",
+      "publish_date": "2026-04-17",
       "country": "United Arab Emirates",
       "country_code": "AE",
       "city": "Dubai",
@@ -326,7 +321,7 @@
         "airport",
         "Dubai"
       ],
-      "date": "2026-03-16",
+      "date": "2026-04-17",
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMirwFBVV95cUxNX3BIRk81TTBBSkZhUDdFM18wWXpJTlBaYzBEUkw4NGlRX1lHekpVSVlXSTIzcGw3UlNkR3cxeFdMNXpxa0NZMm1tc2JaOEtpVDhwY1hOY1V3WG14UENMRm9WdjliZWVSWVRmRENabGl1VmRUUGlqTGJUX1BocVAwZmxoYmFjRWFVQUdHcy0yLUFzaU85QTltZzBxZk5RUkRUQzg4SXlid2pjUWI1Tm5N?oc=5",
@@ -354,8 +349,7 @@
       "source_count": 2,
       "last_updated": "2026-04-17T08:01:40.523907+00:00",
       "id": "1b533f58d37c",
-      "created_at": "2026-04-17T08:01:40.523895+00:00",
-      "real_publish_date": "2026-03-16"
+      "created_at": "2026-04-17T08:01:40.523895+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -415,7 +409,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-17",
+      "publish_date": "2026-04-16",
       "country": "Nigeria",
       "country_code": "NG",
       "city": "Abuja",
@@ -437,7 +431,7 @@
         "terrorism",
         "airport security"
       ],
-      "date": "2026-04-17",
+      "date": "2026-04-16",
       "year": 2026,
       "source_urls": [
         "https://blueprint.ng/terrorists-planning-attack-on-abuja-airport-kuje-prison-niger-report/",
@@ -465,14 +459,13 @@
       "verification_score": 0.85,
       "id": "d2669b74c986",
       "created_at": "2026-04-16T14:09:45.997622+00:00",
-      "last_updated": "2026-04-17T10:30:32.529167+00:00",
-      "source_count": 3,
-      "real_publish_date": "2026-04-17"
+      "last_updated": "2026-04-17T08:01:40.500285",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-14",
+      "publish_date": "20260414T01",
       "country": "United States",
       "country_code": "US",
       "city": "Elko",
@@ -524,10 +517,9 @@
       "verification_status": "verified",
       "verification_score": 1.0,
       "source_count": 6,
-      "last_updated": "2026-04-17T10:30:34.437899+00:00",
+      "last_updated": "2026-04-16T03:35:58.508239",
       "id": "3e999efd3163",
-      "created_at": "2026-04-14T08:00:05.151307+00:00",
-      "real_publish_date": "2026-04-14"
+      "created_at": "2026-04-14T08:00:05.151307+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -762,7 +754,7 @@
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-11",
+      "publish_date": "20260411T091500Z",
       "country": "unknown",
       "country_code": "unknown",
       "city": "Belfast",
@@ -810,9 +802,8 @@
       "verification_score": 0.85,
       "id": "dfb086541285",
       "created_at": "2026-04-11T18:58:19.068084+00:00",
-      "last_updated": "2026-04-17T10:30:36.664335+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-04-11"
+      "last_updated": "2026-04-11T18:58:19.068087+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -1153,7 +1144,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-07",
+      "publish_date": "20260407T033000Z",
       "country": "Iran",
       "country_code": "IR",
       "city": "unknown",
@@ -1204,9 +1195,8 @@
       "verification_score": 0.9,
       "id": "76af780402dd",
       "created_at": "2026-04-07T13:51:38.433446+00:00",
-      "last_updated": "2026-04-17T10:30:47.896360+00:00",
-      "source_count": 2,
-      "real_publish_date": "2026-04-07"
+      "last_updated": "2026-04-07T19:20:59.771573",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -1322,7 +1312,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-06",
+      "publish_date": "20260406T231500Z",
       "country": "Iran",
       "country_code": "IR",
       "city": "Tehran",
@@ -1371,10 +1361,9 @@
       "verification_status": "verified",
       "verification_score": 1.0,
       "source_count": 2,
-      "last_updated": "2026-04-17T10:30:49.559421+00:00",
+      "last_updated": "2026-04-07T02:57:47.171580+00:00",
       "id": "d319d96d51ce",
-      "created_at": "2026-04-07T02:57:47.171575+00:00",
-      "real_publish_date": "2026-04-06"
+      "created_at": "2026-04-07T02:57:47.171575+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -1660,7 +1649,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-03",
+      "publish_date": "20260403T061500Z",
       "country": "India",
       "country_code": "IN",
       "city": "Malda",
@@ -1708,9 +1697,8 @@
       "verification_score": 1.0,
       "id": "8e9329b25c48",
       "created_at": "2026-04-03T07:26:31.357330+00:00",
-      "last_updated": "2026-04-17T10:30:50.753650+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-04-03"
+      "last_updated": "2026-04-03T07:26:31.357338+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -1937,7 +1925,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-04",
+      "publish_date": "20260403T224500Z",
       "country": "India",
       "country_code": "IN",
       "city": "Bengal",
@@ -1959,7 +1947,7 @@
         "airport arrest",
         "hostage drama"
       ],
-      "date": "2026-04-04",
+      "date": "2026-04-03",
       "year": 2026,
       "source_urls": [
         "https://www.tribuneindia.com/news/india/mastermind-behind-judge-hostage-drama-in-bengal-arrested-at-airport/"
@@ -1985,14 +1973,13 @@
       "verification_score": 1.0,
       "id": "fd9288a70dd8",
       "created_at": "2026-04-04T07:11:09.554770+00:00",
-      "last_updated": "2026-04-17T10:30:55.891489+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-04-04"
+      "last_updated": "2026-04-04T07:11:09.554778+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRLINE_PERSONNEL",
       "event_date": "2026-04-03",
-      "publish_date": "2026-04-10",
+      "publish_date": "20260410T234500Z",
       "country": "Taiwan",
       "country_code": "TW",
       "city": "Taipei",
@@ -2014,7 +2001,7 @@
         "airline incident",
         "assault"
       ],
-      "date": "2026-04-10",
+      "date": "2026-04-03",
       "year": 2026,
       "source_urls": [
         "https://www.breitbart.com/crime/2026/04/10/watch-senior-citizen-slaps-flight-attendant-on-taiwan-flight/"
@@ -2040,9 +2027,8 @@
       "verification_score": 1.0,
       "id": "c3c48e6ec714",
       "created_at": "2026-04-11T02:50:56.755366+00:00",
-      "last_updated": "2026-04-17T10:30:57.025650+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-04-10"
+      "last_updated": "2026-04-11T02:50:56.755373+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -2440,7 +2426,7 @@
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-03-31",
+      "publish_date": "20260331T134500Z",
       "country": "India",
       "country_code": "IN",
       "city": "Marayoor",
@@ -2488,14 +2474,13 @@
       "verification_score": 0.85,
       "id": "e00ef0b7edc7",
       "created_at": "2026-03-31T19:19:07.068334+00:00",
-      "last_updated": "2026-04-17T10:31:01.498764+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-31"
+      "last_updated": "2026-03-31T19:19:07.068336+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-03-31",
-      "publish_date": "2026-03-31",
+      "publish_date": "20260331T134500Z",
       "country": "Kosova",
       "country_code": "unknown",
       "city": "unknown",
@@ -2544,9 +2529,8 @@
       "verification_score": 0.7,
       "id": "2a7dc0f80235",
       "created_at": "2026-03-31T19:19:07.068341+00:00",
-      "last_updated": "2026-04-17T10:31:02.694208+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-31"
+      "last_updated": "2026-03-31T19:19:07.068343+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3177,7 +3161,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
-      "publish_date": "2026-04-01",
+      "publish_date": "2026-03-28",
       "country": "Kuwait",
       "country_code": "KW",
       "city": "Tehran",
@@ -3199,7 +3183,7 @@
         "drone attack",
         "airport security"
       ],
-      "date": "2026-04-01",
+      "date": "2026-03-28",
       "year": 2026,
       "source_urls": [
         "https://abcnews.com/Business/wireStory/iran-hits-kuwait-airport-tanker-off-qatar-strikes-131604007",
@@ -3230,9 +3214,8 @@
       "verification_score": 0.9,
       "id": "d1327d83a94d",
       "created_at": "2026-03-28T18:48:47.207639+00:00",
-      "last_updated": "2026-04-17T10:31:05.422411+00:00",
-      "source_count": 6,
-      "real_publish_date": "2026-04-01"
+      "last_updated": "2026-04-01T13:59:25.935225",
+      "source_count": 6
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3274,11 +3257,9 @@
       "verification_status": "auto",
       "verification_score": 0.95,
       "source_count": 4,
-      "last_updated": "2026-04-17T10:31:07.940673+00:00",
+      "last_updated": "2026-03-23T07:23:06.782953+00:00",
       "id": "63e6f376ad13",
-      "created_at": "2026-03-23T07:23:06.782944+00:00",
-      "real_publish_date": "2026-03-23",
-      "publish_date": "2026-03-23"
+      "created_at": "2026-03-23T07:23:06.782944+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3524,10 +3505,8 @@
       "verification_score": 0.95,
       "id": "a2fbd4fc9843",
       "created_at": "2026-03-21T02:38:10.202744+00:00",
-      "last_updated": "2026-04-17T10:31:11.382831+00:00",
-      "source_count": 6,
-      "real_publish_date": "2026-03-21",
-      "publish_date": "2026-03-21"
+      "last_updated": "2026-03-23T13:28:25.583106",
+      "source_count": 6
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3604,10 +3583,8 @@
       "verification_score": 0.95,
       "id": "30c887fb952f",
       "created_at": "2026-03-20T02:41:17.971210+00:00",
-      "last_updated": "2026-04-17T10:31:12.325560+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-20",
-      "publish_date": "2026-03-20"
+      "last_updated": "2026-03-20T02:41:17.971223+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3645,14 +3622,12 @@
       "verification_score": 0.95,
       "id": "72b1e3db0f14",
       "created_at": "2026-03-20T07:10:38.684503+00:00",
-      "last_updated": "2026-04-17T10:31:13.015652+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-20",
-      "publish_date": "2026-03-20"
+      "last_updated": "2026-03-20T07:10:38.684511+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
-      "date": "2026-03-23",
+      "date": "2026-03-18",
       "year": 2026,
       "country": "Iraq",
       "country_code": "IQ",
@@ -3687,10 +3662,8 @@
       "verification_score": 0.95,
       "id": "b8d046548e4a",
       "created_at": "2026-03-18T02:48:54.394128+00:00",
-      "last_updated": "2026-04-17T10:31:13.669790+00:00",
-      "source_count": 2,
-      "real_publish_date": "2026-03-23",
-      "publish_date": "2026-03-23"
+      "last_updated": "2026-03-23T13:28:25.585305",
+      "source_count": 2
     },
     {
       "incident_type": "HOTEL_ATTACK",
@@ -3770,10 +3743,8 @@
       "verification_score": 0.95,
       "id": "6374512d051f",
       "created_at": "2026-03-18T19:13:56.404484+00:00",
-      "last_updated": "2026-04-17T10:31:14.271792+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-18",
-      "publish_date": "2026-03-18"
+      "last_updated": "2026-03-18T19:13:56.404486+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3813,10 +3784,8 @@
       "verification_score": 0.95,
       "id": "70d6e2b2fd7c",
       "created_at": "2026-03-18T19:13:56.404497+00:00",
-      "last_updated": "2026-04-17T10:31:15.116842+00:00",
-      "source_count": 2,
-      "real_publish_date": "2026-03-18",
-      "publish_date": "2026-03-18"
+      "last_updated": "2026-03-19T13:23:42.186641",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -3987,10 +3956,8 @@
       "verification_score": 0.95,
       "id": "1dc2713edde1",
       "created_at": "2026-03-17T12:50:02.761724+00:00",
-      "last_updated": "2026-04-17T10:31:18.591561+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-17",
-      "publish_date": "2026-03-17"
+      "last_updated": "2026-03-17T12:50:02.761728+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -4037,11 +4004,9 @@
       "verification_status": "auto",
       "verification_score": 0.95,
       "source_count": 10,
-      "last_updated": "2026-04-17T10:31:20.121458+00:00",
+      "last_updated": "2026-03-18T02:48:54.391494",
       "id": "56bf589f28ba",
-      "created_at": "2026-03-16T17:22:34.782507+00:00",
-      "real_publish_date": "2026-03-16",
-      "publish_date": "2026-03-16"
+      "created_at": "2026-03-16T17:22:34.782507+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -4331,7 +4296,7 @@
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-03-08",
-      "publish_date": "2026-03-30",
+      "publish_date": "20260330T184500Z",
       "country": "Iran",
       "country_code": "IR",
       "city": "Tehran",
@@ -4354,7 +4319,7 @@
         "oil refinery",
         "Iran"
       ],
-      "date": "2026-03-30",
+      "date": "2026-03-08",
       "year": 2026,
       "source_urls": [
         "https://edition.cnn.com/2026/03/30/world/middle-east-civilian-targets-iran-war-intl"
@@ -4380,9 +4345,8 @@
       "verification_score": 1.0,
       "id": "7396490b323c",
       "created_at": "2026-03-30T19:12:15.504014+00:00",
-      "last_updated": "2026-04-17T10:31:23.270525+00:00",
-      "source_count": 1,
-      "real_publish_date": "2026-03-30"
+      "last_updated": "2026-03-30T19:12:15.504019+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "HOTEL_ATTACK",
