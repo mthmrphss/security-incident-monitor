@@ -119,6 +119,23 @@ st.markdown("""
     .news-meta { color:#8b949e; font-size:0.85rem; }
     .news-summary { font-size: 1rem; color: #c9d1d9; line-height: 1.5; margin-top: 10px; }
     
+    /* Feed Scroll Container */
+    .feed-scroll-container {
+        max-height: 700px;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+    .feed-scroll-container::-webkit-scrollbar {
+        width: 8px;
+    }
+    .feed-scroll-container::-webkit-scrollbar-track {
+        background: #0d1117;
+    }
+    .feed-scroll-container::-webkit-scrollbar-thumb {
+        background-color: #30363d;
+        border-radius: 4px;
+    }
+    
     /* Custom Tabs */
     .stTabs [data-baseweb="tab-list"] { 
         gap: 8px; border-bottom: 1px solid #30363d; padding-bottom: 0px;
@@ -238,15 +255,17 @@ with st.sidebar:
     
     search_query = st.text_input("Anahtar Kelime Ara", placeholder="Havalimanı, saldırı, drone...")
 
-    # Filtrelerde Bilinmeyen Ülke en sona atılsın
-    all_countries = sorted([c for c in data_df["country"].unique() if c != 'Bilinmeyen Ülke'])
-    if 'Bilinmeyen Ülke' in data_df["country"].unique():
-        all_countries.append('Bilinmeyen Ülke')
-        
-    selected_countries = st.multiselect("🏴 Ülke Seçimi", options=all_countries, default=all_countries)
+    with st.expander("🌍 Lokasyon Filtreleri", expanded=True):
+        # Filtrelerde Bilinmeyen Ülke en sona atılsın
+        all_countries = sorted([c for c in data_df["country"].unique() if c != 'Bilinmeyen Ülke'])
+        if 'Bilinmeyen Ülke' in data_df["country"].unique():
+            all_countries.append('Bilinmeyen Ülke')
+            
+        selected_countries = st.multiselect("🏴 Ülke Seçimi", options=all_countries, default=all_countries)
 
-    selected_types = st.multiselect("🎯 Olay Türü", options=data_df["incident_type"].unique(), default=data_df["incident_type"].unique())
-    selected_severity = st.select_slider("⚠️ Minimum Risk", options=["low", "medium", "high", "critical"], value="low")
+    with st.expander("🎯 Risk ve Tür Filtreleri", expanded=True):
+        selected_types = st.multiselect("Olay Türü", options=data_df["incident_type"].unique(), default=data_df["incident_type"].unique())
+        selected_severity = st.select_slider("⚠️ Minimum Risk", options=["low", "medium", "high", "critical"], value="low")
 
     st.markdown("<br><hr style='border-color: #30363d;'>", unsafe_allow_html=True)
     st.caption(f"DB Versiyon: {metadata.get('version')} | Toplam Olay: {len(data_df)}")
@@ -371,28 +390,28 @@ if not filtered_df.empty:
         
         map_df['tooltip_html'] = map_df.apply(format_tooltip, axis=1)
 
-        # BULANIKLIĞI VE DAĞILMAYI ÖNLEYEN KESKİN KATMAN AYARLARI
+        # BULANIKLIĞI VE DAĞILMAYI ÖNLEYEN 3D SÜTUN (COLUMN) KATMANI
         layer = pdk.Layer(
-            "ScatterplotLayer",
+            "ColumnLayer",
             data=map_df,
             get_position="[geo_lon, geo_lat]",
+            get_elevation="incident_count",
+            elevation_scale=50000, # Sütun boyunu olay sayısıyla çarpar
+            radius=20000,          # Sütunun kalınlığı
             get_fill_color="color",
-            get_line_color=[255, 255, 255, 220], # Daha belirgin beyaz sınır
-            get_radius="radius", 
-            radius_min_pixels=6,   # Uzaklaştırıldığında çok küçülüp kaybolmasını/dağılmasını engeller
-            radius_max_pixels=35,  # Yakınlaştırıldığında çok büyüyüp bulanıklaşmasını engeller
+            get_line_color=[255, 255, 255, 120],
             pickable=True,
-            opacity=0.9,
-            stroked=True,
-            filled=True,
-            line_width_min_pixels=2 # Sınır çizgisini keskin tutar
+            auto_highlight=True,
+            extruded=True,         # 3D silindirik yapıyı açar
+            wireframe=True         # 3D yapının daha teknolojik görünmesini sağlar
         )
 
         view_state = pdk.ViewState(
             latitude=map_df["geo_lat"].mean(),
             longitude=map_df["geo_lon"].mean(),
             zoom=2.2,
-            pitch=35
+            pitch=45,              # 3D sütunların görünmesi için kamerayı eğer
+            bearing=15             # Hafif açılı görünüm
         )
 
         r = pdk.Deck(
@@ -412,11 +431,35 @@ if not filtered_df.empty:
 
     st.write("<br>", unsafe_allow_html=True)
     
-    # --- ALT SEKMELER (SADECE AKIŞ VE İSTATİSTİK) ---
-    t_feed, t_stats = st.tabs(["🗞️ İstihbarat Akışı", "📊 Analitik Raporlar"])
+    # --- ALT SEKMELER (ZAMAN ÇİZELGESİ, AKIŞ VE İSTATİSTİK) ---
+    t_timeline, t_feed, t_stats = st.tabs(["⏱️ Zaman Çizelgesi", "🗞️ İstihbarat Akışı", "📊 Analitik Raporlar"])
+
+    with t_timeline:
+        st.write("<br>", unsafe_allow_html=True)
+        if not filtered_df.empty:
+            timeline_df = filtered_df.copy()
+            # Yıl-Ay formatında çıkar
+            timeline_df['month_year'] = pd.to_datetime(timeline_df['display_date'], errors='coerce').dt.to_period('M').astype(str)
+            timeline_counts = timeline_df.groupby(['month_year', 'severity']).size().reset_index(name='count')
+            
+            color_map_px = {"critical": "#ff4d4d", "high": "#ff8c00", "medium": "#ffd700", "low": "#4da6ff"}
+            
+            fig_time = px.bar(
+                timeline_counts, x="month_year", y="count", color="severity",
+                color_discrete_map=color_map_px,
+                title="Aylara Göre Olay Yoğunluğu",
+                labels={"month_year": "Tarih (Yıl-Ay)", "count": "Olay Sayısı", "severity": "Risk"},
+                template="plotly_dark"
+            )
+            fig_time.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", barmode="stack", margin=dict(t=40, b=20, l=0, r=0))
+            st.plotly_chart(fig_time, use_container_width=True)
+        else:
+            st.info("Zaman grafiği çizilecek veri yok.")
 
     with t_feed:
         st.write("<br>", unsafe_allow_html=True)
+        st.markdown("<div class='feed-scroll-container'>", unsafe_allow_html=True)
+        
         for i, row in filtered_df.iterrows():
             with st.container():
                 risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#2e7cf6"
@@ -439,6 +482,7 @@ if not filtered_df.empty:
                     st.caption(f"🔗 {links}")
                 else:
                     st.write("")
+        st.markdown("</div>", unsafe_allow_html=True)
 
     with t_stats:
         st.write("<br>", unsafe_allow_html=True)
