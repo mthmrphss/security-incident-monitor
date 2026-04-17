@@ -2307,8 +2307,8 @@
         0
       ],
       "data_quality": "medium",
-      "geo_lat": 60.321816,
-      "geo_lon": 24.947361,
+      "geo_lat": 1.3521,
+      "geo_lon": 103.8198,
       "validation_signals": {
         "has_country": false,
         "has_city": false,
