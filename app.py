@@ -103,6 +103,32 @@ def load_and_clean_data(mtime):
     df['parsed_date'] = pd.to_datetime(df['created_at'], errors='coerce')
     df = df.sort_values(by='parsed_date', ascending=False)
     
+    # Güvenilir görüntüleme tarihi oluşturma
+    # 'date' alanı güvenilmez (bazen 2008 gibi eski olay tarihi, bazen gelecek tarih)
+    # Strateji: publish_date > created_at sırasıyla en güvenilir kaynağı kullan
+    def normalize_date(row):
+        """publish_date'ten güvenilir bir YYYY-MM-DD tarihi çıkar."""
+        for field in ['publish_date', 'created_at']:
+            raw = row.get(field)
+            if pd.isna(raw) or not raw or str(raw).lower() in ('unknown', 'null', ''):
+                continue
+            parsed = pd.to_datetime(str(raw), errors='coerce')
+            if pd.notna(parsed):
+                return parsed.strftime('%Y-%m-%d')
+        return 'Tarih Yok'
+    
+    def normalize_event_date(val):
+        """event_date'ten okunabilir bir tarih çıkar (opsiyonel bilgi)."""
+        if pd.isna(val) or not val or str(val).lower() in ('unknown', 'null', ''):
+            return None
+        parsed = pd.to_datetime(str(val), errors='coerce')
+        if pd.notna(parsed):
+            return parsed.strftime('%Y-%m-%d')
+        return None
+    
+    df['display_date'] = df.apply(normalize_date, axis=1)
+    df['event_date_display'] = df['event_date'].apply(normalize_event_date)
+    
     # "unknown" veya "null" ülke sorununu düzeltme
     def get_country_name(code):
         if pd.isna(code) or str(code).lower() in ('unknown', '', 'null', 'none'):
@@ -184,7 +210,7 @@ if not data_df.empty:
     for _, row in latest_incidents.iterrows():
         icon = "🔴" if row['severity'] in ['critical', 'high'] else "🟡"
         alert_class = "ticker-alert" if row['severity'] in ['critical', 'high'] else ""
-        ticker_items.append(f"<span class='ticker-item {alert_class}'>{icon} {row['city'].upper()}, {row['country'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['date']})</span>")
+        ticker_items.append(f"<span class='ticker-item {alert_class}'>{icon} {row['city'].upper()}, {row['country'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['display_date']})</span>")
     
     ticker_html = f"<div class='ticker-wrapper'><div class='ticker'>{''.join(ticker_items)}</div></div>"
     st.markdown(ticker_html, unsafe_allow_html=True)
@@ -256,10 +282,11 @@ if not filtered_df.empty:
             with st.container():
                 risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#4da6ff"
                 
+                event_info = f" (Olay Tarihi: {row['event_date_display']})" if row.get('event_date_display') and row['event_date_display'] != row['display_date'] else ""
                 st.markdown(f"""
                 <div class='news-card' style='border-left-color: {risk_color};'>
                     <h4 style='margin:0;'>{row['city']}, {row['country']} | {row['incident_type']}</h4>
-                    <p style='color:#8b949e; font-size:0.8rem; margin-top:3px;'>🗓️ {row['date']} • ⚠️ Risk: <b>{row['severity'].upper()}</b></p>
+                    <p style='color:#8b949e; font-size:0.8rem; margin-top:3px;'>🗓️ {row['display_date']}{event_info} • ⚠️ Risk: <b>{row['severity'].upper()}</b></p>
                     <p style='font-size: 1.05rem;'>{row['summary_tr'] or row['summary_en']}</p>
                 </div>
                 """, unsafe_allow_html=True)
