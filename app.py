@@ -308,28 +308,94 @@ if not filtered_df.empty:
 
     with t_map:
         # Harita için lokasyonu geçerli olanları ayır (Unknown'ları gizle)
-        map_df = filtered_df[filtered_df['has_valid_location'] == True]
+        map_df_raw = filtered_df[filtered_df['has_valid_location'] == True]
         
-        if not map_df.empty:
+        if not map_df_raw.empty:
+            # AKILLI SICAK NOKTA (SMART HOTSPOT) MİMARİSİ
+            # Aynı koordinattaki olayları grupla
+            def get_max_severity(sev_list):
+                if 'critical' in sev_list: return 'critical'
+                if 'high' in sev_list: return 'high'
+                if 'medium' in sev_list: return 'medium'
+                return 'low'
+            
+            def format_tooltip(row):
+                header = f"<h4 style='margin:0 0 5px 0; color:#2e7cf6;'>{row['city']}, {row['country']}</h4>"
+                count_info = f"<div style='margin-bottom:8px; font-weight:bold;'>Toplam Olay: {row['incident_count']}</div>"
+                
+                # İlk 5 olayı listele
+                summaries = row['summary_list']
+                dates = row['date_list']
+                types = row['type_list']
+                sevs = row['sev_list']
+                
+                list_html = "<ul style='margin:0; padding-left:15px; font-size:0.9rem;'>"
+                display_count = min(5, len(summaries))
+                for i in range(display_count):
+                    color = "#ff4d4d" if sevs[i] == 'critical' else "#ff8c00" if sevs[i] == 'high' else "#ffd700" if sevs[i] == 'medium' else "#c9d1d9"
+                    list_html += f"<li style='margin-bottom:4px;'><span style='color:{color};'>[{sevs[i].upper()}]</span> {dates[i]} - {types[i]}: {str(summaries[i])[:60]}...</li>"
+                list_html += "</ul>"
+                
+                extra = f"<div style='margin-top:8px; font-style:italic; color:#8b949e;'>ve +{len(summaries) - 5} olay daha...</div>" if len(summaries) > 5 else ""
+                
+                return f"<div style='font-family: sans-serif;'>{header}{count_info}{list_html}{extra}</div>"
+
+            # DataFrame'i Aggregate Et
+            agg_funcs = {
+                'id': 'count',
+                'severity': list,
+                'summary_tr': list,
+                'display_date': list,
+                'incident_type': list
+            }
+            
+            map_df = map_df_raw.groupby(['geo_lat', 'geo_lon', 'city', 'country']).agg(agg_funcs).reset_index()
+            map_df.rename(columns={
+                'id': 'incident_count', 
+                'severity': 'sev_list',
+                'summary_tr': 'summary_list',
+                'display_date': 'date_list',
+                'incident_type': 'type_list'
+            }, inplace=True)
+            
+            # Renk ve Boyut ataması
+            color_map = {
+                "critical": [255, 77, 77, 210],   
+                "high": [255, 140, 0, 210],       
+                "medium": [255, 215, 0, 210],     
+                "low": [77, 166, 255, 210]        
+            }
+            
+            map_df['max_severity'] = map_df['sev_list'].apply(get_max_severity)
+            map_df['color'] = map_df['max_severity'].apply(lambda x: color_map.get(x, [150, 150, 150, 200]))
+            
+            # Boyut formülü: base + (count * çarpan)
+            base_radius_map = {"critical": 60000, "high": 40000, "medium": 25000, "low": 15000}
+            map_df['base_radius'] = map_df['max_severity'].apply(lambda x: base_radius_map.get(x, 15000))
+            map_df['radius'] = map_df['base_radius'] + (map_df['incident_count'] * 5000)
+            
+            # Tooltip HTML hazırla
+            map_df['tooltip_html'] = map_df.apply(format_tooltip, axis=1)
+
             layer = pdk.Layer(
                 "ScatterplotLayer",
                 data=map_df,
                 get_position="[geo_lon, geo_lat]",
                 get_fill_color="color",
-                get_line_color=[255, 255, 255, 80],
-                get_radius="radius", # Dinamik radius
+                get_line_color=[255, 255, 255, 100],
+                get_radius="radius", 
                 pickable=True,
                 opacity=0.9,
                 stroked=True,
                 filled=True,
-                line_width_min_pixels=1
+                line_width_min_pixels=1.5
             )
 
             view_state = pdk.ViewState(
                 latitude=map_df["geo_lat"].mean(),
                 longitude=map_df["geo_lon"].mean(),
                 zoom=2.0,
-                pitch=25
+                pitch=30
             )
 
             r = pdk.Deck(
@@ -338,8 +404,8 @@ if not filtered_df.empty:
                 map_provider="carto",
                 map_style="dark",
                 tooltip={
-                    "html": "<div style='font-family: sans-serif;'><h4 style='margin:0 0 5px 0; color:#2e7cf6;'>{city}, {country}</h4><b>Tür:</b> {incident_type}<br><b>Risk:</b> {severity}<br><br>{summary_tr}</div>",
-                    "style": {"backgroundColor": "rgba(22, 27, 34, 0.95)", "color": "white", "border": "1px solid #30363d", "borderRadius": "8px", "padding": "10px"}
+                    "html": "{tooltip_html}",
+                    "style": {"backgroundColor": "rgba(22, 27, 34, 0.95)", "color": "white", "border": "1px solid #30363d", "borderRadius": "8px", "padding": "15px", "maxWidth": "400px"}
                 }
             )
             st.pydeck_chart(r, height=600, use_container_width=True)
