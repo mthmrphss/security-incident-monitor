@@ -408,5 +408,10 @@
     "lat": -31.941521,
     "lon": 115.965577,
     "display_name": "Perth Airport, Airport Drive, Perth Airport, City of Belmont, Western Australia, 6105, Australia"
+  },
+  "united airlines flight": {
+    "lat": 39.763312,
+    "lon": -104.901457,
+    "display_name": "United Airlines Flight Training Center, Denver, Colorado, United States"
   }
 }

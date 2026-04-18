@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-17T13:49:00.640680+00:00",
-    "total_incidents": 87,
+    "last_updated": "2026-04-18T19:03:58.345293+00:00",
+    "total_incidents": 88,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,61 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "A",
+      "event_date": "2026-04-18",
+      "publish_date": "2026-04-18",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "onboard",
+      "airport_name": "unknown",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "United Airlines flight",
+      "attack_type": "threat",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "United Airlines flight diverted due to bomb threat",
+      "summary_tr": "Birleşik Havayolları uçuşu bomba tehdidi nedeniyle yönlendirildi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "bomb threat",
+        "United Airlines",
+        "flight diversion"
+      ],
+      "date": "2026-04-18",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNDFGV1NzdEczdDRrTExpc181MlJFMWVfMngyZ0NWWUQ1R2NhT1JGRFBaRU9CcWQwQVE4Nlc2MGZia1gwOWt0Y2oxTkwxeUIyeWx5YUNtbTBmbnRCb2VhaDFXM2VJRkpxU1BMQ1VUM1ByUTh2RU5HYkZWRkFYYmNfdm1TQW1qbzhoLUE?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 39.763312,
+      "geo_lon": -104.901457,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": false,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.5,
+      "verification_status": "probable",
+      "verification_score": 0.5,
+      "id": "86b0b30684dd",
+      "created_at": "2026-04-18T19:03:58.345280+00:00",
+      "last_updated": "2026-04-18T19:03:58.345288+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "unknown",
