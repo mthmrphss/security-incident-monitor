@@ -413,5 +413,20 @@
     "lat": 39.763312,
     "lon": -104.901457,
     "display_name": "United Airlines Flight Training Center, Denver, Colorado, United States"
+  },
+  "pittsburgh airport, pittsburgh, united states": {
+    "lat": 40.450239,
+    "lon": -80.166771,
+    "display_name": "Hilton Garden Inn Pittsburgh Airport South-Robinson Mall, 303, Park Manor Drive, Pittsburgh, Allegheny County, Pennsylvania, 15205, United States"
+  },
+  "chicago": {
+    "lat": 41.875562,
+    "lon": -87.624421,
+    "display_name": "Chicago, South Chicago Township, Cook County, Illinois, United States"
+  },
+  "pittsburgh, united states": {
+    "lat": 40.440697,
+    "lon": -80.002567,
+    "display_name": "Pittsburgh, Allegheny County, Pennsylvania, United States"
   }
 }

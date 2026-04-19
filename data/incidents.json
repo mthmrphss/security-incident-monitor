@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-18T19:03:58.345293+00:00",
-    "total_incidents": 88,
+    "last_updated": "2026-04-19T03:39:03.942447+00:00",
+    "total_incidents": 91,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -20,11 +20,66 @@
   },
   "incidents": [
     {
+      "incident_type": "B",
+      "event_date": "2026-04-19",
+      "publish_date": "2026-04-19",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Pittsburgh",
+      "location_detail": "LaGuardia Airport",
+      "airport_name": "LaGuardia Airport",
+      "airport_iata": "LGA",
+      "hotel_name": null,
+      "venue_name": "Airport",
+      "attack_type": "threat",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Flight diverted due to potential bomb",
+      "summary_tr": "Potansiyel bomba nedeniyle uçuş yönlendirildi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "flight diversion"
+      ],
+      "date": "2026-04-19",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSVRRQUFmbWIwWFRkQ3IwWTBOaTlITWZlOWFnWkw0YjBoREMzZHdsWmdCSTRQWHU1TnFsajM4cmhOcXFqNHYwLWtVeUtSUXJWWjdqN1NjUW51SXpTVXMwTU1VMHYxYkFTUjdWSHc2cUEzQWpvYTl0YnJMb2pxN3ZIYkZOZEYzLVFGSjlZMHVUNkQ2djV4LWpwQlA1NG1fdldqQ3VIWGs3ek5SREFIQUVIVG5vbHNvWTY4WWE4V2RaN2I5dmFOemRVT0MyUm0?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 40.440697,
+      "geo_lon": -80.002567,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": false,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "e031d85dfe55",
+      "created_at": "2026-04-19T03:39:03.942439+00:00",
+      "last_updated": "2026-04-19T03:39:03.942442+00:00",
+      "source_count": 1
+    },
+    {
       "incident_type": "A",
       "event_date": "2026-04-18",
       "publish_date": "2026-04-18",
       "country": "unknown",
-      "country_code": "unknown",
+      "country_code": "XX",
       "city": "unknown",
       "location_detail": "onboard",
       "airport_name": "unknown",
@@ -32,7 +87,7 @@
       "hotel_name": null,
       "venue_name": "United Airlines flight",
       "attack_type": "threat",
-      "severity": "unknown",
+      "severity": "low",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
@@ -48,7 +103,8 @@
       "date": "2026-04-18",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNDFGV1NzdEczdDRrTExpc181MlJFMWVfMngyZ0NWWUQ1R2NhT1JGRFBaRU9CcWQwQVE4Nlc2MGZia1gwOWt0Y2oxTkwxeUIyeWx5YUNtbTBmbnRCb2VhaDFXM2VJRkpxU1BMQ1VUM1ByUTh2RU5HYkZWRkFYYmNfdm1TQW1qbzhoLUE?oc=5"
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNDFGV1NzdEczdDRrTExpc181MlJFMWVfMngyZ0NWWUQ1R2NhT1JGRFBaRU9CcWQwQVE4Nlc2MGZia1gwOWt0Y2oxTkwxeUIyeWx5YUNtbTBmbnRCb2VhaDFXM2VJRkpxU1BMQ1VUM1ByUTh2RU5HYkZWRkFYYmNfdm1TQW1qbzhoLUE?oc=5",
+        "https://news.google.com/rss/articles/CBMifkFVX3lxTFBnTElaZUN1N1pFY1d2RUpsWVVuWkV1RTBWSGJuUXh6b3BLY2o5YkdIVUtYd3pQWkJ1TlotTkc0OHRpWFpVNmpEakgxQ2U4UVZZbE1QN3BZZTNTNkVwdDBldS00eV9yM0tZMzFuZml0V28yR25xWjAwcDJIMDVMdw?oc=5"
       ],
       "source_articles": [
         0
@@ -71,7 +127,119 @@
       "verification_score": 0.5,
       "id": "86b0b30684dd",
       "created_at": "2026-04-18T19:03:58.345280+00:00",
-      "last_updated": "2026-04-18T19:03:58.345288+00:00",
+      "last_updated": "2026-04-19T03:39:03.931010",
+      "source_count": 2
+    },
+    {
+      "incident_type": "B",
+      "event_date": "2026-04-18",
+      "publish_date": "2026-04-18",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Pittsburgh",
+      "location_detail": "Pittsburgh",
+      "airport_name": "Pittsburgh airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat diverts flight",
+      "summary_tr": "Bomb tehdidi uçuşu yönlendirdi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "United Airlines",
+        "flight diversion",
+        "false_alarm"
+      ],
+      "date": "2026-04-18",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOEFScXNBUDBoVHpuRGk4RXRsckNtRW5VcDQ5YWpqYUpuUUtIcmNFNU5lWlNrRU00eHZKNUdqeV9sc1dGNFhWNU03Vmxob2kyRWRnOFdpYjh2X25xdE9VWHU1blAtblJjVGxSbWdrTjZvOTh5dUduWFlYNlNRaURGdlE1ZVRNUkUzREFyQTBUSmxyZ1hjc0ZOMQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 40.450239,
+      "geo_lon": -80.166771,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": false,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "9f5bb6b1184b",
+      "created_at": "2026-04-19T03:39:03.942408+00:00",
+      "last_updated": "2026-04-19T03:39:03.942416+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "B",
+      "event_date": "2026-04-18",
+      "publish_date": "2026-04-18",
+      "country": "unknown",
+      "country_code": "US",
+      "city": "Chicago",
+      "location_detail": "unknown",
+      "airport_name": "unknown",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Beeping noise causes bomb alert",
+      "summary_tr": "Bip sesine neden olan bomba ihbarı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "United Airlines"
+      ],
+      "date": "2026-04-18",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihgJBVV95cUxNS1NMLTlCUC1HTWw3eXNybHFkaGdPOEJhVkNTLXZzYXlLcVF6VXFsT3owUmFuOEJYbmhoVWlXczlmcmJqaExyajh4aEhwNU9kNGJfbndWclFJV0NqVl9DSzJxcnlKaEN2a3FPbHM5d0x2eGo0TkZnTTcwcTMtOE9DMEJ5RmNZTDhRemg4N081ZU5JQlFjT1loMGt2X1IyVnFkX19TR2xySy1zdzFoRUtaX3UxU1I5QmowOG9Wc2lOc1VyeXVMM1NySGVzUVhBNUY5XzMtWXk4S2JxWnY2elN0SkhoRENrblp2TGVNQ2lvX3pWampwbWo0Zk5EY2s3b0dLemlURUV3?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 41.875562,
+      "geo_lon": -87.624421,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": false,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "4074a5e2031e",
+      "created_at": "2026-04-19T03:39:03.942428+00:00",
+      "last_updated": "2026-04-19T03:39:03.942431+00:00",
       "source_count": 1
     },
     {
