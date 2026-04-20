@@ -4,6 +4,17 @@ from datetime import datetime
 from typing import List, Dict, Tuple, Set, Optional
 from difflib import SequenceMatcher
 
+try:
+    from analyzer import normalize_incident_type, VALID_INCIDENT_TYPES
+except ImportError:
+    VALID_INCIDENT_TYPES = {"AIRPORT_ATTACK", "AIRLINE_PERSONNEL", "HOTEL_ATTACK"}
+    CATEGORY_MAP = {"A": "AIRPORT_ATTACK", "B": "AIRLINE_PERSONNEL", "C": "HOTEL_ATTACK"}
+    def normalize_incident_type(raw_type):
+        if not raw_type:
+            return "AIRPORT_ATTACK"
+        cleaned = raw_type.strip().upper()
+        return CATEGORY_MAP.get(cleaned, cleaned if cleaned in VALID_INCIDENT_TYPES else "AIRPORT_ATTACK")
+
 logger = logging.getLogger("Dedup")
 
 
@@ -151,6 +162,10 @@ class SmartDeduplicator:
             return 0.0
 
     def _event_similarity(self, a: Dict, b: Dict) -> float:
+        # ── ÖNCE: incident_type normalleştir (A/B/C → tam isim) ──
+        type_a = normalize_incident_type(a.get("incident_type", ""))
+        type_b = normalize_incident_type(b.get("incident_type", ""))
+
         # ── KISA DEVRE: Aynı lokasyon kontrolü (IATA) ──
         iata1 = (a.get("airport_iata") or "").upper().strip()
         iata2 = (b.get("airport_iata") or "").upper().strip()
@@ -158,7 +173,7 @@ class SmartDeduplicator:
             iata1 and iata2
             and iata1 == iata2
             and iata1 not in ("", "UNKNOWN", "NULL")
-            and a.get("incident_type") == b.get("incident_type")
+            and type_a == type_b
         ):
             date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
             text_sim = self._text_similarity(a, b)
@@ -190,7 +205,7 @@ class SmartDeduplicator:
             ap1 and ap2
             and ap1 not in ("unknown", "airport", "")
             and ap2 not in ("unknown", "airport", "")
-            and a.get("incident_type") == b.get("incident_type")
+            and type_a == type_b
         ):
             name_sim = SequenceMatcher(None, ap1, ap2).ratio()
             if name_sim > 0.6:
@@ -208,7 +223,7 @@ class SmartDeduplicator:
             and hotel1 not in ("unknown", "null", "")
             and hotel2 not in ("unknown", "null", "")
             and SequenceMatcher(None, hotel1, hotel2).ratio() > 0.6
-            and a.get("incident_type") == b.get("incident_type")
+            and type_a == type_b
         ):
             text_sim = self._text_similarity(a, b)
 
@@ -221,11 +236,31 @@ class SmartDeduplicator:
                 logger.info(f"  Hotel match + similar text ({text_sim:.0%}) — MERGE")
                 return 1.0
 
-        # ── NORMAL BENZERLİK HESABI ──
-        date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
-        loc_sim = self._location_similarity(a, b)
-        type_sim = 1.0 if a.get("incident_type") == b.get("incident_type") else 0.1
+        # ── KISA DEVRE: YÜKSEK METİN BENZERLİĞİ ──
+        # Metin çok benzerse, konum/tür farklı olsa bile muhtemelen aynı olay
         text_sim = self._text_similarity(a, b)
+        date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
+
+        if text_sim >= 0.50 and date_sim >= 0.5:
+            logger.info(
+                f"  HIGH TEXT SIMILARITY ({text_sim:.0%}) + close date ({date_sim:.0%}) — MERGE"
+            )
+            return 1.0
+
+        # Aynı saldırı tipi + yakın tarih + makul metin benzerliği
+        if (
+            a.get("attack_type") == b.get("attack_type")
+            and date_sim >= 0.5
+            and text_sim >= 0.35
+        ):
+            logger.info(
+                f"  Same attack_type + close date + moderate text ({text_sim:.0%}) — MERGE"
+            )
+            return 0.85
+
+        # ── NORMAL BENZERLİK HESABI ──
+        loc_sim = self._location_similarity(a, b)
+        type_sim = 1.0 if type_a == type_b else 0.1
 
         # Konum ağırlığını artır
         return date_sim * 0.20 + loc_sim * 0.35 + type_sim * 0.10 + text_sim * 0.35
@@ -246,7 +281,11 @@ class SmartDeduplicator:
             else:
                 return 0.0  # Ülkeler kesin farklıysa direkt 0 bas ve çık!
         elif c1 or c2:
-            score += 0.1    # Biri dolu diğeri boş/unknown ise ufak bir puan ver
+            # Biri dolu diğeri boş/unknown: nötr skor (metin benzerliği ağır bassın)
+            score += 0.15
+        else:
+            # İkisi de unknown: konum kıyaslaması anlamsız, nötr skor ver
+            score += 0.2
 
         # 2. ŞEHİR KONTROLÜ
         city1 = self._norm(a.get("city", ""))

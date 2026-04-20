@@ -164,6 +164,55 @@ def main():
                         f"    IATA: {found} for {inc.get('airport_name', inc.get('city', ''))}"
                     )         
 
+    # 5.7 — STALENESS DETECTION
+    if all_incidents:
+        logger.info("PHASE 5.7: Staleness detection...")
+        from analyzer import normalize_incident_type
+        today = datetime.now(timezone.utc).replace(tzinfo=None)
+
+        stale_count = 0
+        removed_count = 0
+        filtered_incidents = []
+
+        for inc in all_incidents:
+            # LLM is_stale kontrolü
+            if inc.get("is_stale"):
+                logger.info(f"    STALE (LLM flagged): {inc.get('summary_en', '')[:50]}")
+                stale_count += 1
+                continue  # Stale olanları tamamen atla
+
+            # Tarih tabanlı staleness kontrolü
+            event_date_str = inc.get("event_date") or inc.get("date") or ""
+            if event_date_str and event_date_str != "unknown":
+                try:
+                    event_dt = datetime.strptime(str(event_date_str)[:10], "%Y-%m-%d")
+                    age_days = (today - event_dt).days
+                    if age_days > 14:
+                        logger.info(
+                            f"    STALE ({age_days} days old): {inc.get('summary_en', '')[:50]}"
+                        )
+                        stale_count += 1
+                        continue  # 14 günden eski olayları atla
+                except (ValueError, TypeError):
+                    pass
+
+            filtered_incidents.append(inc)
+
+        all_incidents = filtered_incidents
+        logger.info(f"    Stale removed: {stale_count}, remaining: {len(all_incidents)}")
+
+    # 5.8 — INCIDENT_TYPE NORMALIZATION (son savunma hattı)
+    if all_incidents:
+        logger.info("PHASE 5.8: Normalizing incident types...")
+        from analyzer import normalize_incident_type
+
+        for inc in all_incidents:
+            old_type = inc.get("incident_type", "")
+            new_type = normalize_incident_type(old_type)
+            if old_type != new_type:
+                logger.info(f"    Type fixed: {old_type} -> {new_type}")
+                inc["incident_type"] = new_type
+
     # 6 — SAVE (with smart dedup)
     if all_incidents:
         logger.info("PHASE 6: Saving with smart dedup...")

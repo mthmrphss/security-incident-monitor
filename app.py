@@ -209,6 +209,56 @@ def load_and_clean_data(mtime):
     df['country'] = df['country'].str.title() 
     df['city'] = df['city'].str.title()
     
+    # incident_type normalizasyonu (A/B/C → tam isim)
+    CATEGORY_MAP = {"A": "AIRPORT_ATTACK", "B": "AIRLINE_PERSONNEL", "C": "HOTEL_ATTACK"}
+    VALID_TYPES = {"AIRPORT_ATTACK", "AIRLINE_PERSONNEL", "HOTEL_ATTACK"}
+    def fix_type(t):
+        if pd.isna(t) or not t:
+            return "AIRPORT_ATTACK"
+        t = str(t).strip().upper()
+        if t in CATEGORY_MAP:
+            return CATEGORY_MAP[t]
+        if t in VALID_TYPES:
+            return t
+        return "AIRPORT_ATTACK"
+    df['incident_type'] = df['incident_type'].apply(fix_type)
+    
+    # Akıllı konum başlığı üretimi
+    def smart_location(row):
+        city = row.get('city', '')
+        country = row.get('country', '')
+        venue = row.get('venue_name', '') or ''
+        location_detail = row.get('location_detail', '') or ''
+        
+        city_unknown = city in ('Bilinmeyen Şehir', 'Bilinmeyen Şehir', 'Unknown', '')
+        country_unknown = country in ('Bilinmeyen Ülke', 'Unknown', '')
+        
+        if not city_unknown and not country_unknown:
+            return f"{city}, {country}"
+        elif not city_unknown:
+            return city
+        elif not country_unknown:
+            # Venue veya location_detail'dan bilgi çek
+            if venue and venue.lower() not in ('airport', 'hotel', 'unknown', 'null', ''):
+                return f"{venue}, {country}"
+            elif location_detail and location_detail.lower() not in ('unknown', 'null', ''):
+                return f"{location_detail}, {country}"
+            return country
+        else:
+            # Her ikisi de bilinmiyor
+            if venue and venue.lower() not in ('airport', 'hotel', 'unknown', 'null', ''):
+                return venue
+            elif location_detail and location_detail.lower() not in ('unknown', 'null', ''):
+                return location_detail
+            return '📍 Konum Doğrulanmadı'
+    
+    df['display_location'] = df.apply(smart_location, axis=1)
+    df['has_unknown_location'] = df.apply(
+        lambda r: r.get('city', '') in ('Bilinmeyen Şehir', 'Bilinmeyen Şehir', 'Unknown', '') 
+                  and r.get('country', '') in ('Bilinmeyen Ülke', 'Unknown', ''), 
+        axis=1
+    )
+    
     # 3. HARİTA İÇİN GEÇERLİ KOORDİNAT BAYRAĞI
     # Unknown olanları feed'de tut, haritada gösterme
     def is_valid_location(row):
@@ -292,12 +342,16 @@ st.title("Küresel Havacılık ve Güvenlik Monitörü")
 
 # KAYAN İSTİHBARAT BANDI (TİCKER)
 if not data_df.empty:
-    latest_incidents = data_df.head(6)
+    # Ticker'da bilinmeyen konumlu olayları filtrele
+    ticker_candidates = data_df[data_df['has_unknown_location'] == False].head(8)
+    if len(ticker_candidates) < 3:
+        ticker_candidates = data_df.head(6)
+    latest_incidents = ticker_candidates.head(6)
     ticker_items = []
     for _, row in latest_incidents.iterrows():
         icon = "🔴" if row['severity'] in ['critical', 'high'] else "🟡"
         alert_class = "ticker-alert" if row['severity'] in ['critical', 'high'] else ""
-        text = f"{row['city'].upper()}, {row['country'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['display_date']})"
+        text = f"{row['display_location'].upper()}: {row['summary_tr'] or row['summary_en']} ({row['display_date']})"
         ticker_items.append(f"<span class='ticker-item {alert_class}'>{icon} {text}</span>")
     
     ticker_html = f"<div class='ticker-wrapper'><div class='ticker'>{''.join(ticker_items)}</div></div>"
@@ -462,16 +516,35 @@ if not filtered_df.empty:
         st.write("<br>", unsafe_allow_html=True)
         st.markdown("<div class='feed-scroll-container'>", unsafe_allow_html=True)
         
+        # Olay türü Etiketleri (okunabilir Türkçe)
+        TYPE_LABELS = {
+            "AIRPORT_ATTACK": "✈️ Havalimanı Saldırısı",
+            "AIRLINE_PERSONNEL": "👨‍✈️ Havayolu Personeli",
+            "HOTEL_ATTACK": "🏨 Otel Saldırısı",
+        }
+        
         for i, row in filtered_df.iterrows():
             with st.container():
                 risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#2e7cf6"
                 
                 event_info = f" (Olay Tarihi: {row['event_date_display']})" if row.get('event_date_display') and row['event_date_display'] != row['display_date'] else ""
                 
+                # Akıllı konum ve okunabilir tür
+                display_loc = row.get('display_location', f"{row['city']}, {row['country']}")
+                type_label = TYPE_LABELS.get(row['incident_type'], row['incident_type'])
+                
+                # Bilinmeyen konum için özel stil
+                loc_style = "color: #6e7681; font-style: italic;" if row.get('has_unknown_location', False) else ""
+                
+                # Stale olay uyarısı
+                stale_badge = ""
+                if row.get('is_stale', False):
+                    stale_badge = "<span style='background: #6e768133; color: #6e7681; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; margin-left: 8px;'>⚠️ Eski Haber</span>"
+                
                 st.markdown(f"""
                 <div class='news-card' style='border-left-color: {risk_color};'>
                     <div class='news-header'>
-                        <div class='news-title'>{row['city']}, {row['country']} | {row['incident_type']}</div>
+                        <div class='news-title' style='{loc_style}'>{display_loc} | {type_label}{stale_badge}</div>
                         <span style='background: {risk_color}33; color: {risk_color}; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;'>{row['severity'].upper()}</span>
                     </div>
                     <div class='news-meta'>🗓️ Görüntülenme: {row['display_date']}{event_info} • 📌 {row['venue_name'] or 'Genel'}</div>

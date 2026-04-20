@@ -28,6 +28,25 @@ MAX_ARTICLES_PER_BATCH = 15     # Stage 1 için
 MAX_ARTICLES_STAGE2 = 5         # Stage 2 tek tek işler
 GROQ_CONTEXT_LIMIT = 6000       # Prompt için güvenli karakter limiti
 
+# ── KATEGORİ NORMALİZASYONU ──
+CATEGORY_MAP = {"A": "AIRPORT_ATTACK", "B": "AIRLINE_PERSONNEL", "C": "HOTEL_ATTACK"}
+VALID_INCIDENT_TYPES = {"AIRPORT_ATTACK", "AIRLINE_PERSONNEL", "HOTEL_ATTACK"}
+
+def normalize_incident_type(raw_type: str) -> str:
+    """A/B/C veya diğer geçersiz değerleri doğru kategori ismine çevir."""
+    if not raw_type:
+        return "AIRPORT_ATTACK"
+    cleaned = raw_type.strip().upper()
+    if cleaned in CATEGORY_MAP:
+        return CATEGORY_MAP[cleaned]
+    if cleaned in VALID_INCIDENT_TYPES:
+        return cleaned
+    # Kısmi eşleşme dene
+    for valid in VALID_INCIDENT_TYPES:
+        if cleaned in valid or valid in cleaned:
+            return valid
+    return "AIRPORT_ATTACK"  # Güvenli varsayılan
+
 
 class GeminiAnalyzer:
 
@@ -244,7 +263,9 @@ Only set relevant:true if the article clearly describes a physical attack, assau
             idx = r.get("index", -1)
             if r.get("relevant") is True and 0 <= idx < len(articles):
                 art = articles[idx].copy()
-                art["ai_category"] = r.get("category", "UNKNOWN")
+                # Kategoriyi normalize et (A→AIRPORT_ATTACK, B→AIRLINE_PERSONNEL, C→HOTEL_ATTACK)
+                raw_cat = r.get("category", "UNKNOWN")
+                art["ai_category"] = normalize_incident_type(raw_cat)
                 relevant.append(art)
 
         return relevant
@@ -303,6 +324,7 @@ Return JSON:
   "summary_tr": "Turkish translation max 150 chars",
   "is_ongoing": false,
   "is_false_alarm": false,
+  "is_stale": false,
   "tags": ["relevant tags"]
 }}
 
@@ -313,7 +335,9 @@ STRICT RULES:
 - publish_date: Use the ARTICLE REAL PUBLISH DATE if provided, otherwise use RSS/FEED DATE.
 - If no event date in text, use publish_date as fallback.
 - is_false_alarm: true if article says "not credible", "hoax", "nothing found"
-- Do NOT invent casualty numbers. If not mentioned, use 0."""
+- is_stale: true if the article is reporting on an OLD event (weeks/months ago) with NO new developments. Recycled/republished old news should be marked stale.
+- Do NOT invent casualty numbers. If not mentioned, use 0.
+- incident_type MUST be one of: AIRPORT_ATTACK, AIRLINE_PERSONNEL, HOTEL_ATTACK. Do NOT use letters like A, B, C."""
 
         result = self._call_api(prompt, f"Stage2-{article.get('title', '')[:30]}")
 
@@ -369,7 +393,9 @@ STRICT RULES:
         result["source_articles"] = [0]
 
         # Varsayılan alanlar
-        result.setdefault("incident_type", category)
+        # incident_type normalleştirme (LLM bazen "A"/"B" döndürüyor)
+        raw_type = result.get("incident_type", category)
+        result["incident_type"] = normalize_incident_type(raw_type)
         result.setdefault("country", "unknown")
         result.setdefault("city", "unknown")
         result.setdefault("severity", "medium")
