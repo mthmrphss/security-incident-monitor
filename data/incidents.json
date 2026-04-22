@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-22T13:33:55.239665+00:00",
+    "last_updated": "2026-04-22T13:43:23.775976+00:00",
     "total_incidents": 92,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -48,11 +48,12 @@
       "date": "2026-04-21",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NODFMdjBtSUhqeWpjeTBMOHhySFN0MXBfMHlQQXBkbWpMQjlWYkNyemNNdGFyVHVNOGlrYno0UkR2cHY3V09VUV9hYlpSZDc4R21Qdl95XzRWNHlzVVRVaWIwb1lVSnluVTdjelVvd3F6LXJVbmxGRmY3V3V5Rzg?oc=5",
-        "https://news.google.com/rss/articles/CBMigAJBVV95cUxOUjJEbk52M1BjcEZ2RVlNS1UwN2lVbVRXbldyb2VlVWFLR2xlT3Y5Ylkzd0RCNmRFRmpKb0c3M21reG14NEcxRkdYamVMTXJDODRYa3ZQNjNFVDM5dGRGZEt6T3FVdVZQOTM3NG5iZzlfXzlURURlemRWZjM0MExGYVp2dDBudUlQdmF6YkMyLWp4dlhMY2NKZnl0YktlaWJKbHpmYUFDakRVRHFPUUhXdVowUmVSNlQ1NGxta3BqajJSNmVWS3VtenpjY29tT0w4UTBsazFpeUhTemRzbklNd1ZPU05ieVA5dFU4YnZRSVgtM0Zwbm1LS0x0elVlcWpU?oc=5",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQa0hKOW41UWdWb2E1S1dwUlVFdkpqaVpTandfZ2tobEM1UzhBRDNoeXExeGJUdFF4TUdheEEyZ2daejNXWWhMT2RWTnE1elJtSG5GYk1GUzZNNTdNOVVxNWgybVFOcEEyVzFEZUFINmo4MU80OXJDVWJ5M3lZY2laMVVwVHJSeGI5OUMtQ08wejhDa1U1S0RwLXNUOVM4LVNOdk5EZ2VfQkZjY0k?oc=5",
         "https://news.google.com/rss/articles/CBMitAFBVV95cUxOU1g0QXR1UWlfMGtLcVkyNWRtUUFpSFpnbkF5TXVwZW1hLUxVcEI5V2J5cmlvYmE0MmdJMGVUS0RyWkhaRzVvbnAzYWhxc3FJUzdMMGFHU2h6emlONm5iUkhmRUVJQWdPUlZ1bHpseTNWRVMweWxMNEhhM0s5eTFSSDhTdnMwRWZzazNVX0lFTGk4REs4R1M5U0MxYW5jRzByMzlOeGM4RlNmcUx4Si04dlhRaGg?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQU0tQYmk0YXJHOF9kdExlNkZ2YkFubVEtSjQ1ZllOUEh5TlBRUVdkQTJLQ3g4TDVPUkQtUHhVTEstelJnMU5rTjljMEQ1MkMteVA2ZG1JcEQ5bVR4NktNVjRwNEM2WHFvU1VYWUpnbWlqeGZVUFBtcVN1RGlvaklRUXFleGNIVWxyU1BRQ1I3UnVoUi1iYmhMME9qQTU3eDJhZHhmanhhZmdCVHgxS3F0R3FUNXVqOG450gG-AUFVX3lxTE5qTXJSYTJwUDhaQjlXaUlEZm1IN1JyaFptQktPNnVSVVF4OEZzZzI3UzctODU2TmlONUpXNFRWX2FXcUZ5V2hNbElHYkM0dUtLdERVdnlEeE1vMG9pUTVtRkpseWJKR3VSZG52b0VXN2RhTHREd3Q5b1B4RkdWSVNfSHB5dUFvT3lTNnJ5ZDN4MVNRQWphVGJTLXJnVTIyYTNVdHVKTERlOGxQSjlOWDZxNDNTdEZYRWZUQTVaaFE?oc=5",
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYjJRd1ZLU0R3Nl8xbS05VHR3NVpVeHdMVW1YMVJfZ0gxYUVnSHJtS0xoTUJxSTVTQnF1d2pRNmp2ZVE2ZU1YU0kyNkEtc0VXOU8ycGJrLWIwcjVIZ2Y4aXF4LWpyeUxHNUFMaUdEU1VSM040VTJpMmFtVWlyeE9EWXNtX0hBZ1RxQUZfMXJKUjVJdHJHTi12Rkx1MA?oc=5"
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NODFMdjBtSUhqeWpjeTBMOHhySFN0MXBfMHlQQXBkbWpMQjlWYkNyemNNdGFyVHVNOGlrYno0UkR2cHY3V09VUV9hYlpSZDc4R21Qdl95XzRWNHlzVVRVaWIwb1lVSnluVTdjelVvd3F6LXJVbmxGRmY3V3V5Rzg?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYjJRd1ZLU0R3Nl8xbS05VHR3NVpVeHdMVW1YMVJfZ0gxYUVnSHJtS0xoTUJxSTVTQnF1d2pRNmp2ZVE2ZU1YU0kyNkEtc0VXOU8ycGJrLWIwcjVIZ2Y4aXF4LWpyeUxHNUFMaUdEU1VSM040VTJpMmFtVWlyeE9EWXNtX0hBZ1RxQUZfMXJKUjVJdHJHTi12Rkx1MA?oc=5",
+        "https://news.google.com/rss/articles/CBMigAJBVV95cUxOUjJEbk52M1BjcEZ2RVlNS1UwN2lVbVRXbldyb2VlVWFLR2xlT3Y5Ylkzd0RCNmRFRmpKb0c3M21reG14NEcxRkdYamVMTXJDODRYa3ZQNjNFVDM5dGRGZEt6T3FVdVZQOTM3NG5iZzlfXzlURURlemRWZjM0MExGYVp2dDBudUlQdmF6YkMyLWp4dlhMY2NKZnl0YktlaWJKbHpmYUFDakRVRHFPUUhXdVowUmVSNlQ1NGxta3BqajJSNmVWS3VtenpjY29tT0w4UTBsazFpeUhTemRzbklNd1ZPU05ieVA5dFU4YnZRSVgtM0Zwbm1LS0x0elVlcWpU?oc=5",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQU0tQYmk0YXJHOF9kdExlNkZ2YkFubVEtSjQ1ZllOUEh5TlBRUVdkQTJLQ3g4TDVPUkQtUHhVTEstelJnMU5rTjljMEQ1MkMteVA2ZG1JcEQ5bVR4NktNVjRwNEM2WHFvU1VYWUpnbWlqeGZVUFBtcVN1RGlvaklRUXFleGNIVWxyU1BRQ1I3UnVoUi1iYmhMME9qQTU3eDJhZHhmanhhZmdCVHgxS3F0R3FUNXVqOG450gG-AUFVX3lxTE5qTXJSYTJwUDhaQjlXaUlEZm1IN1JyaFptQktPNnVSVVF4OEZzZzI3UzctODU2TmlONUpXNFRWX2FXcUZ5V2hNbElHYkM0dUtLdERVdnlEeE1vMG9pUTVtRkpseWJKR3VSZG52b0VXN2RhTHREd3Q5b1B4RkdWSVNfSHB5dUFvT3lTNnJ5ZDN4MVNRQWphVGJTLXJnVTIyYTNVdHVKTERlOGxQSjlOWDZxNDNTdEZYRWZUQTVaaFE?oc=5"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 5,
-      "last_updated": "2026-04-22T13:33:55.239647+00:00",
+      "source_count": 6,
+      "last_updated": "2026-04-22T13:43:23.775879",
       "id": "04797041fa0a",
       "created_at": "2026-04-22T13:33:55.239644+00:00"
     },
