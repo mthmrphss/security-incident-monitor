@@ -31,7 +31,7 @@ jobs:
       - name: Run scanner
         run: python scripts/main.py
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_SEC_INCIDENT_API_KEY }}
 
       - name: Commit results
         run: |
