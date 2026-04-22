@@ -135,7 +135,6 @@ def main():
 
                 # Hâlâ unknown ise bugünün tarihini koy
                 if not inc.get("date") or inc["date"] in ("unknown", "null", ""):
-                    from datetime import datetime, timezone
                     inc["date"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
                     logger.info(f"    Date set to today for {inc.get('summary_en', '')[:40]}")
 
