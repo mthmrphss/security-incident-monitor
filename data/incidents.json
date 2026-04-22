@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-22T14:06:12.547587+00:00",
-    "total_incidents": 92,
+    "last_updated": "2026-04-22T19:31:32.029750+00:00",
+    "total_incidents": 93,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-22",
+      "publish_date": "2026-04-22",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Elko",
+      "location_detail": "inside a restroom at Elko International Airport",
+      "airport_name": "Elko International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "shooting",
+      "severity": "critical",
+      "casualties_dead": 2,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "11-year-old boy killed in airport shooting",
+      "summary_tr": null,
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "shooting",
+        "airport",
+        "fatalities"
+      ],
+      "date": "2026-04-22",
+      "year": 2026,
+      "source_urls": [
+        "https://www.dailystar.co.uk/news/us-news/boy-11-killed-elko-airport-37055103",
+        "https://www.mirror.co.uk/news/us-news/elko-airport-shooting-father-son-37054356"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 41.195813,
+      "geo_lon": -115.327286,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-04-22T19:31:32.029744+00:00",
+      "id": "65d8f3d58eef",
+      "created_at": "2026-04-22T19:31:32.029738+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-21",

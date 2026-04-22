@@ -463,5 +463,20 @@
     "lat": 77.619235,
     "lon": -42.812597,
     "display_name": "Kalaallit Nunaat"
+  },
+  "elko, united states": {
+    "lat": 41.195813,
+    "lon": -115.327286,
+    "display_name": "Elko County, Nevada, United States"
+  },
+  "kabul, afghanistan": {
+    "lat": 34.52695,
+    "lon": 69.185058,
+    "display_name": "کابل ښار, کابل ښاروالۍ, ولایت كابل, 1001, افغانستان"
+  },
+  "manchester airport, manchester": {
+    "lat": 53.350342,
+    "lon": -2.280369,
+    "display_name": "Manchester Airport, Boundary Terrace, Moss Nook, Woodhouse Park, Wythenshawe, Manchester, Greater Manchester, England, M90 1QX, United Kingdom"
   }
 }
