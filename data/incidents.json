@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-20T06:00:00.000000+00:00",
-    "total_incidents": 88,
+    "last_updated": "2026-04-22T13:33:55.239665+00:00",
+    "total_incidents": 92,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,237 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-21",
+      "publish_date": "2026-04-21",
+      "country": "Greenland",
+      "country_code": "GL",
+      "city": "Nuuk",
+      "location_detail": "Nuuk airport",
+      "airport_name": "Nuuk airport",
+      "airport_iata": "GOH",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "one arrested",
+      "summary_en": "Nuuk airport evacuated after bomb threat",
+      "summary_tr": "Nuuk havalimanı bomba tehdidi nedeniyle boşaltıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "airport evacuation",
+        "bomb threat"
+      ],
+      "date": "2026-04-21",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NODFMdjBtSUhqeWpjeTBMOHhySFN0MXBfMHlQQXBkbWpMQjlWYkNyemNNdGFyVHVNOGlrYno0UkR2cHY3V09VUV9hYlpSZDc4R21Qdl95XzRWNHlzVVRVaWIwb1lVSnluVTdjelVvd3F6LXJVbmxGRmY3V3V5Rzg?oc=5",
+        "https://news.google.com/rss/articles/CBMigAJBVV95cUxOUjJEbk52M1BjcEZ2RVlNS1UwN2lVbVRXbldyb2VlVWFLR2xlT3Y5Ylkzd0RCNmRFRmpKb0c3M21reG14NEcxRkdYamVMTXJDODRYa3ZQNjNFVDM5dGRGZEt6T3FVdVZQOTM3NG5iZzlfXzlURURlemRWZjM0MExGYVp2dDBudUlQdmF6YkMyLWp4dlhMY2NKZnl0YktlaWJKbHpmYUFDakRVRHFPUUhXdVowUmVSNlQ1NGxta3BqajJSNmVWS3VtenpjY29tT0w4UTBsazFpeUhTemRzbklNd1ZPU05ieVA5dFU4YnZRSVgtM0Zwbm1LS0x0elVlcWpU?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOU1g0QXR1UWlfMGtLcVkyNWRtUUFpSFpnbkF5TXVwZW1hLUxVcEI5V2J5cmlvYmE0MmdJMGVUS0RyWkhaRzVvbnAzYWhxc3FJUzdMMGFHU2h6emlONm5iUkhmRUVJQWdPUlZ1bHpseTNWRVMweWxMNEhhM0s5eTFSSDhTdnMwRWZzazNVX0lFTGk4REs4R1M5U0MxYW5jRzByMzlOeGM4RlNmcUx4Si04dlhRaGg?oc=5",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQU0tQYmk0YXJHOF9kdExlNkZ2YkFubVEtSjQ1ZllOUEh5TlBRUVdkQTJLQ3g4TDVPUkQtUHhVTEstelJnMU5rTjljMEQ1MkMteVA2ZG1JcEQ5bVR4NktNVjRwNEM2WHFvU1VYWUpnbWlqeGZVUFBtcVN1RGlvaklRUXFleGNIVWxyU1BRQ1I3UnVoUi1iYmhMME9qQTU3eDJhZHhmanhhZmdCVHgxS3F0R3FUNXVqOG450gG-AUFVX3lxTE5qTXJSYTJwUDhaQjlXaUlEZm1IN1JyaFptQktPNnVSVVF4OEZzZzI3UzctODU2TmlONUpXNFRWX2FXcUZ5V2hNbElHYkM0dUtLdERVdnlEeE1vMG9pUTVtRkpseWJKR3VSZG52b0VXN2RhTHREd3Q5b1B4RkdWSVNfSHB5dUFvT3lTNnJ5ZDN4MVNRQWphVGJTLXJnVTIyYTNVdHVKTERlOGxQSjlOWDZxNDNTdEZYRWZUQTVaaFE?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYjJRd1ZLU0R3Nl8xbS05VHR3NVpVeHdMVW1YMVJfZ0gxYUVnSHJtS0xoTUJxSTVTQnF1d2pRNmp2ZVE2ZU1YU0kyNkEtc0VXOU8ycGJrLWIwcjVIZ2Y4aXF4LWpyeUxHNUFMaUdEU1VSM040VTJpMmFtVWlyeE9EWXNtX0hBZ1RxQUZfMXJKUjVJdHJHTi12Rkx1MA?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 64.190616,
+      "geo_lon": -51.676392,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 5,
+      "last_updated": "2026-04-22T13:33:55.239647+00:00",
+      "id": "04797041fa0a",
+      "created_at": "2026-04-22T13:33:55.239644+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-20",
+      "publish_date": "2026-04-20",
+      "country": "Afghanistan",
+      "country_code": "AF",
+      "city": "Kabul",
+      "location_detail": "Kabul airport",
+      "airport_name": "Kabul airport",
+      "airport_iata": "KBL",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Afghan charged in deadly bombing",
+      "summary_tr": "Öldürücü bombalama ile ilgili Afgan suçlandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "bombing",
+        "airport attack",
+        "Kabul"
+      ],
+      "date": "2026-04-20",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQOHNnY1NCRHVMX2E0QUd6MVVTaG0zMGlsbDZiN2VXakk2UUEtVjhsdkhscmVxUE4xN1RVOC1ZT3QySWIybkFsS2lpQWRWeVdLMjlGcHhIUlE5cGdSMVE0SnNZOXhyYkNVcFVBWGZacmp2VVVNNHFhZmthNzAxWXZ6ZmQtd3JPOTRVbmx4NDlnZVdiUi1iNjhJTzFoN29MTlNRZ3JnYVZfT1FaZWNoVEFqOTExdXNYU3l0dFBkNk9GRW9XRG9kWGc1aUZRZDlYb2J3SGd3TUNwaFg3NWYyVVVWQ1c4bUdGMUFoS0hlVUtUeWUySEtXbjN6UlRLRDF4eFFSMmM0ckZpdW9LRm8?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOTUxfbGhGcmt0anFwQlg5ajBtdzVuZ205cnRqSFU1WTFTbGlWX2ZyWXcxcHpoSmRWeEhhTTVBdDNYM3RIUzNsVF9jSDg5M2ZkNllQWFFjYUNHWEx6YmZpLWo4WV85a2xjQ0RwejRJSEY0Ylg3UGt1MmtHQkxWcE4xNmRPcU1Cd1NBYm42eW1BZDZMXzV5SEhLYTRmd25lQdIBowFBVV95cUxNMmpNU0hhdWlsOVJBSEdISnBXdHhoOGpkYzBEVTM1MVhrY3FrYlVYZExobWxjMkhzcXFROWhHNUJwdERvOEsyLWRad1JtQ0RyVi0yZERMV2k3dDZoZ1RCakJYeE9hM09sTUM4MzkxR1FtenpVMXdWaW1ud0tFeGpuZGRsQUd4WUdXY0c1bVRZc05DNkJXREFXNUZTUnFoQnJwT3Zv?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcHBYNlpWMG5OeTRpa1laN3BLUFlWblZFNlJJVmNYTGVoUlI1OXB5OGNicnZFVDFkZXFiOEFTY0FTeHdTZWV0eTJCYjJ6N1ZON0pYWUY2c2hnMnZlODZTcGt0OU02Z1BtZ1ctNVNNZ0dyYWNFaXU4RGY5QlBEUnNTN0dfSzd4TEs3RHF0OHZKd0s?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 34.566688,
+      "geo_lon": 69.206501,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 3,
+      "last_updated": "2026-04-22T13:33:55.239614+00:00",
+      "id": "14e091fd4d89",
+      "created_at": "2026-04-22T13:33:55.239600+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-20",
+      "publish_date": "2026-04-20",
+      "country": "Afghanistan",
+      "country_code": "AF",
+      "city": "Kabul",
+      "location_detail": "Kabul airport",
+      "airport_name": "Kabul airport",
+      "airport_iata": "KBL",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Woman",
+      "summary_en": "Bombing at Kabul airport",
+      "summary_tr": "Kabil havalimanında bombalı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "airport attack",
+        "bombing",
+        "Kabul"
+      ],
+      "date": "2026-04-20",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAJBVV95cUxOVHBZUEk0T2FHSEl2NHFiZDFTSjFXUHBteWZjQ2dma1lja3NTaVZkZk4zZFBrMG0wZ0lOOXZxM1BzdDZYRnNIbWViZEw1ZEE3VU1IMUctNTMxZUxJYWFWWEtmQmcyOXEzQzFfYWE4ZnlsWTF6MkpKbFEzTFZjSHFsalFWVHFNcF81NEdBYTNxb2gwQU9LWHA0ZVFnYkJ6NUNMMEVVOGpESnRnQ0NzSnhaYWJYTGl2TU05VEtNYkVSRldEbUdPZ1dndHZuMG4zaHp4dml3V1VkZ0VkX0ZfU2NjRWNGQlRrMElLWjlPRG1TWUtRVDc3dU5QWEMzZlJ4SXVfRVJCcE55eFpua0lncFhhYjNWZ0RsQTVHVnUwcw?oc=5",
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdl9TVGFGbW9RNXVBVnZmNHN0SHFYN1BidFRuT0RicHlBcm9WSzRWUDUxZkhJclpDamVfVURXbkUzZGVzcFVvaDhBSUdPbkUwSGI0LUVLSTNYM3JwNFdYVE1HcGgwX0daQjUweFhwTkNsT0lIVjcwWW1nalVMNmk1YW1OQlFGTkpXY2paVGx3WUVLR0Z6elBrQTFSTVJRSjlxdXFkOE82QVBMRFFJWDAtV0V6Mlk4Tmp5bWc3ZDRNNzNnSXFvalhsSdIBzgFBVV95cUxPODQ4djdXT003amZoNkphRk12c0VweGtHaS1kYzVJWnUyQzRUcHZiQnVJOFRzbVpKdU9zT3JqN09Lb0FsQkNCdTBDUXBvSmp1Z1pWZ2FxUFJJTFdhSEdVQ1NtVFZELTRvVTkyTG5NV2Vna0lZSnhWMThCaGdDU0xfSTJLeFFKV1ZtOW5ETWUzTGt5bWM2bHZQTDAzWDMwdUR0SW5pMkdMb3FWWlQ2YjRXd0xyQkk3dlk2ODUyX2Y2a3VBcjNuajRoWHl0SUUzUQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 34.566688,
+      "geo_lon": 69.206501,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-04-22T13:33:55.239635+00:00",
+      "id": "14e091fd4d89",
+      "created_at": "2026-04-22T13:33:55.239631+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-20",
+      "publish_date": "2026-04-20",
+      "country": "United States",
+      "country_code": "US",
+      "city": "unknown",
+      "location_detail": "US airport",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Woman with glam lifestyle",
+      "summary_en": "Woman charged with brokering deals for Iran drones, bombs, ammo for Sudan at US airport",
+      "summary_tr": "Kadın, İran insansız hava araçları, bombaları ve mühimmatı Sudan'a aracılık yaptığı iddiasıyla ABD havaalanında gözaltına alındı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "airport",
+        "attack",
+        "Iran",
+        "Sudan"
+      ],
+      "date": "2026-04-20",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOLTRpeGRwa3FNaVc0RGRFeHNoVDVnUDVaSHg5eWxsYmtPVnpwMU1ra2FOeDVqT3pxQV91QWEwQzljbUh1ak8zTThHWHAyWktUcnJzZ1hBb1g4UURQcWpHX2pUUFF0MEFWY3dkVExMdmx1amhnT1lST2dTaEJSd2VnZ1JnZ0VvVmpKTlNWcjFuZmVuSy1VTGV3R2hoendMNXJHN3hrRjVPd2IwMGhmaWZxT1FvaWNrNWVCWUV5b0duWkxYYlIyNlBfVy04N3ZlTnNBUmVZMnFQN0RBWTBJcVVmZ2FCWUtpQ0pVcTZmQ1NfaXJJME0?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 39.78373,
+      "geo_lon": -100.445882,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "aadf31e5b0d0",
+      "created_at": "2026-04-22T13:33:55.239655+00:00",
+      "last_updated": "2026-04-22T13:33:55.239658+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-18",
@@ -51,10 +282,11 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMifkFVX3lxTFBnTElaZUN1N1pFY1d2RUpsWVVuWkV1RTBWSGJuUXh6b3BLY2o5YkdIVUtYd3pQWkJ1TlotTkc0OHRpWFpVNmpEakgxQ2U4UVZZbE1QN3BZZTNTNkVwdDBldS00eV9yM0tZMzFuZml0V28yR25xWjAwcDJIMDVMdw?oc=5",
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOEFScXNBUDBoVHpuRGk4RXRsckNtRW5VcDQ5YWpqYUpuUUtIcmNFNU5lWlNrRU00eHZKNUdqeV9sc1dGNFhWNU03Vmxob2kyRWRnOFdpYjh2X25xdE9VWHU1blAtblJjVGxSbWdrTjZvOTh5dUduWFlYNlNRaURGdlE1ZVRNUkUzREFyQTBUSmxyZ1hjc0ZOMQ?oc=5",
         "https://news.google.com/rss/articles/CBMihgJBVV95cUxNS1NMLTlCUC1HTWw3eXNybHFkaGdPOEJhVkNTLXZzYXlLcVF6VXFsT3owUmFuOEJYbmhoVWlXczlmcmJqaExyajh4aEhwNU9kNGJfbndWclFJV0NqVl9DSzJxcnlKaEN2a3FPbHM5d0x2eGo0TkZnTTcwcTMtOE9DMEJ5RmNZTDhRemg4N081ZU5JQlFjT1loMGt2X1IyVnFkX19TR2xySy1zdzFoRUtaX3UxU1I5QmowOG9Wc2lOc1VyeXVMM1NySGVzUVhBNUY5XzMtWXk4S2JxWnY2elN0SkhoRENrblp2TGVNQ2lvX3pWampwbWo0Zk5EY2s3b0dLemlURUV3?oc=5",
         "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNDFGV1NzdEczdDRrTExpc181MlJFMWVfMngyZ0NWWUQ1R2NhT1JGRFBaRU9CcWQwQVE4Nlc2MGZia1gwOWt0Y2oxTkwxeUIyeWx5YUNtbTBmbnRCb2VhaDFXM2VJRkpxU1BMQ1VUM1ByUTh2RU5HYkZWRkFYYmNfdm1TQW1qbzhoLUE?oc=5",
-        "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOEFScXNBUDBoVHpuRGk4RXRsckNtRW5VcDQ5YWpqYUpuUUtIcmNFNU5lWlNrRU00eHZKNUdqeV9sc1dGNFhWNU03Vmxob2kyRWRnOFdpYjh2X25xdE9VWHU1blAtblJjVGxSbWdrTjZvOTh5dUduWFlYNlNRaURGdlE1ZVRNUkUzREFyQTBUSmxyZ1hjc0ZOMQ?oc=5",
-        "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSVRRQUFmbWIwWFRkQ3IwWTBOaTlITWZlOWFnWkw0YjBoREMzZHdsWmdCSTRQWHU1TnFsajM4cmhOcXFqNHYwLWtVeUtSUXJWWjdqN1NjUW51SXpTVXMwTU1VMHYxYkFTUjdWSHc2cUEzQWpvYTl0YnJMb2pxN3ZIYkZOZEYzLVFGSjlZMHVUNkQ2djV4LWpwQlA1NG1fdldqQ3VIWGs3ek5SREFIQUVIVG5vbHNvWTY4WWE4V2RaN2I5dmFOemRVT0MyUm0?oc=5"
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSVRRQUFmbWIwWFRkQ3IwWTBOaTlITWZlOWFnWkw0YjBoREMzZHdsWmdCSTRQWHU1TnFsajM4cmhOcXFqNHYwLWtVeUtSUXJWWjdqN1NjUW51SXpTVXMwTU1VMHYxYkFTUjdWSHc2cUEzQWpvYTl0YnJMb2pxN3ZIYkZOZEYzLVFGSjlZMHVUNkQ2djV4LWpwQlA1NG1fdldqQ3VIWGs3ek5SREFIQUVIVG5vbHNvWTY4WWE4V2RaN2I5dmFOemRVT0MyUm0?oc=5",
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQ01sUXNUVnlHc1g0U3FUYkNmazNNX01qcHZQRElHSFpLalladXFzZWZsVVNXQmlWYUFvNzBKS0pOVjRjdS11UnBNNFd4bGpNNUtKV09ZcG10WWJsRXA0Z2JWYWNVWjZ6Q2h0RVZaclZwWTZxMWlaOTBEcHNmZFZUV0hWMTkyTkpuOXc?oc=5"
       ],
       "source_articles": [
         0
@@ -77,8 +309,8 @@
       "verification_score": 1.0,
       "id": "86b0b30684dd",
       "created_at": "2026-04-18T19:03:58.345280+00:00",
-      "last_updated": "2026-04-20T06:00:00.000000+00:00",
-      "source_count": 5
+      "last_updated": "2026-04-22T13:33:55.187645",
+      "source_count": 6
     },
     {
       "incident_type": "AIRPORT_ATTACK",

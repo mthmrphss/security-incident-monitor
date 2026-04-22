@@ -428,5 +428,35 @@
     "lat": 40.440697,
     "lon": -80.002567,
     "display_name": "Pittsburgh, Allegheny County, Pennsylvania, United States"
+  },
+  "kabul airport, kabul, afghanistan": {
+    "lat": 34.566688,
+    "lon": 69.206501,
+    "display_name": "میدان هوایی بین‌المللی حامد کرزی, Car Bargain Road, ناحیه پانزدهم, کابل ښار, کابل ښاروالۍ, ولایت كابل, 1007, افغانستان"
+  },
+  "nuuk airport, nuuk, greenland": {
+    "lat": 64.190616,
+    "lon": -51.676392,
+    "display_name": "Mittarfik Nuuk, Illerngit 2001, Taqissorfik, Qinngorput, Nuuk, Sermersooq, 3905, Kalaallit Nunaat"
+  },
+  "denver airport, denver, united states": {
+    "lat": 39.846889,
+    "lon": -104.674013,
+    "display_name": "Denver Airport, 8500, Peña Boulevard, Denver, Colorado, 80249, United States"
+  },
+  "denver international airport, denver, united states": {
+    "lat": 39.860668,
+    "lon": -104.685367,
+    "display_name": "Denver International Airport, 8500, Peña Boulevard, Denver, Colorado, 80249, United States"
+  },
+  "greenland's capital, greenland": {
+    "lat": 14.584522,
+    "lon": 121.091943,
+    "display_name": "Pasig Greenland Village Saturn, Rosario, Pasig Second District, Pasig, Eastern Manila District, Metro Manila, 1609, Philippines"
+  },
+  "united states": {
+    "lat": 39.78373,
+    "lon": -100.445882,
+    "display_name": "United States"
   }
 }
