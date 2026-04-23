@@ -478,5 +478,10 @@
     "lat": 53.350342,
     "lon": -2.280369,
     "display_name": "Manchester Airport, Boundary Terrace, Moss Nook, Woodhouse Park, Wythenshawe, Manchester, Greater Manchester, England, M90 1QX, United Kingdom"
+  },
+  "vero beach, united states": {
+    "lat": 27.638716,
+    "lon": -80.39754,
+    "display_name": "Vero Beach, Indian River County, Florida, United States"
   }
 }
