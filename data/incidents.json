@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-23T14:07:51.940500+00:00",
-    "total_incidents": 95,
+    "last_updated": "2026-04-23T19:27:28.007158+00:00",
+    "total_incidents": 96,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-23",
+      "publish_date": "2026-04-23",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": "unknown",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Two United Airlines flights evacuated due to bomb scares",
+      "summary_tr": "İki United Airlines uçuşu bomba ihbarı nedeniyle tahliye edildi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "bomb scare",
+        "United Airlines",
+        "airport evacuation"
+      ],
+      "date": "2026-04-23",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOEhFLUlQdVMtcDY3VlFQdE9GTkRMWmRXNXdkUlczR3pQLWZvekpwT2V1TWg2OWlQSGVRbjdJNEI5b0lLX0d6dUNHT3dMc3RoTHUxNkhCZFNWVGFRaGJDT0ZZWUZjVEJuSzdwdndPOGdBOERNSGNqbzAyY0lNN3lubDV0WDZjNzIydk5sTXhKbTI5VHRMZ1E?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "800fd7d80dae",
+      "created_at": "2026-04-23T19:27:28.007142+00:00",
+      "last_updated": "2026-04-23T19:27:28.007151+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-22",

@@ -488,5 +488,15 @@
     "lat": 39.739236,
     "lon": -104.984862,
     "display_name": "Denver, Colorado, United States"
+  },
+  "podgorica airport, podgorica, montenegro": {
+    "lat": 42.359206,
+    "lon": 19.249927,
+    "display_name": "Aerodrom Podgorica, Ulica Kuća Rakića 1, Rakića Kuće, Podgorica, Opština Zeta, 81304, Crna Gora / Црна Гора"
+  },
+  "palm beach international airport, palm beach, united states": {
+    "lat": 26.685693,
+    "lon": -80.092891,
+    "display_name": "Palm Beach International Airport, 1000, James L Turnage Boulevard, Palm Beach County, Florida, 33406, United States"
   }
 }
