@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-23T03:35:34.483269+00:00",
-    "total_incidents": 94,
+    "last_updated": "2026-04-23T14:07:51.940500+00:00",
+    "total_incidents": 95,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -105,9 +105,10 @@
       "date": "2026-04-21",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQa0hKOW41UWdWb2E1S1dwUlVFdkpqaVpTandfZ2tobEM1UzhBRDNoeXExeGJUdFF4TUdheEEyZ2daejNXWWhMT2RWTnE1elJtSG5GYk1GUzZNNTdNOVVxNWgybVFOcEEyVzFEZUFINmo4MU80OXJDVWJ5M3lZY2laMVVwVHJSeGI5OUMtQ08wejhDa1U1S0RwLXNUOVM4LVNOdk5EZ2VfQkZjY0k?oc=5",
-        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOU1g0QXR1UWlfMGtLcVkyNWRtUUFpSFpnbkF5TXVwZW1hLUxVcEI5V2J5cmlvYmE0MmdJMGVUS0RyWkhaRzVvbnAzYWhxc3FJUzdMMGFHU2h6emlONm5iUkhmRUVJQWdPUlZ1bHpseTNWRVMweWxMNEhhM0s5eTFSSDhTdnMwRWZzazNVX0lFTGk4REs4R1M5U0MxYW5jRzByMzlOeGM4RlNmcUx4Si04dlhRaGg?oc=5",
         "https://news.google.com/rss/articles/CBMif0FVX3lxTE9NODFMdjBtSUhqeWpjeTBMOHhySFN0MXBfMHlQQXBkbWpMQjlWYkNyemNNdGFyVHVNOGlrYno0UkR2cHY3V09VUV9hYlpSZDc4R21Qdl95XzRWNHlzVVRVaWIwb1lVSnluVTdjelVvd3F6LXJVbmxGRmY3V3V5Rzg?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOU1g0QXR1UWlfMGtLcVkyNWRtUUFpSFpnbkF5TXVwZW1hLUxVcEI5V2J5cmlvYmE0MmdJMGVUS0RyWkhaRzVvbnAzYWhxc3FJUzdMMGFHU2h6emlONm5iUkhmRUVJQWdPUlZ1bHpseTNWRVMweWxMNEhhM0s5eTFSSDhTdnMwRWZzazNVX0lFTGk4REs4R1M5U0MxYW5jRzByMzlOeGM4RlNmcUx4Si04dlhRaGg?oc=5",
+        "https://news.google.com/rss/articles/CBMigAJBVV95cUxNcERnOHo1RHFOQzhRcC1Yd1lGUktGZ1Nta1Jxd0ZZc2FGZk9obzdnRnlva3J6MG9FY2VPNFFNUGl0NG80eXg0ekhSOTMtTzR6SDljZ3pVaTQ1SENUTmNJRk9MOEtOS2FFaXhJYU5vSVVtZjJIcEUwRTdyMmtYd3JZWWlEZnpwY0NvaHFHREI1NHU0dVdTTzM2eXB4UlJfZndHSVFEdkpremIxLTF2SU9KckJYTTBsd2M1T1ZxS0RuQy0zVjF1YXlLTmZTdWFRQlJ0NHYyNUF5SkEtVHIyWUJ3cVNHem5tOExpWk5JSmtUWncxZ0VGOUx4ZGJNQ05MTGJB?oc=5",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQa0hKOW41UWdWb2E1S1dwUlVFdkpqaVpTandfZ2tobEM1UzhBRDNoeXExeGJUdFF4TUdheEEyZ2daejNXWWhMT2RWTnE1elJtSG5GYk1GUzZNNTdNOVVxNWgybVFOcEEyVzFEZUFINmo4MU80OXJDVWJ5M3lZY2laMVVwVHJSeGI5OUMtQ08wejhDa1U1S0RwLXNUOVM4LVNOdk5EZ2VfQkZjY0k?oc=5",
         "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYjJRd1ZLU0R3Nl8xbS05VHR3NVpVeHdMVW1YMVJfZ0gxYUVnSHJtS0xoTUJxSTVTQnF1d2pRNmp2ZVE2ZU1YU0kyNkEtc0VXOU8ycGJrLWIwcjVIZ2Y4aXF4LWpyeUxHNUFMaUdEU1VSM040VTJpMmFtVWlyeE9EWXNtX0hBZ1RxQUZfMXJKUjVJdHJHTi12Rkx1MA?oc=5",
         "https://news.google.com/rss/articles/CBMigAJBVV95cUxOUjJEbk52M1BjcEZ2RVlNS1UwN2lVbVRXbldyb2VlVWFLR2xlT3Y5Ylkzd0RCNmRFRmpKb0c3M21reG14NEcxRkdYamVMTXJDODRYa3ZQNjNFVDM5dGRGZEt6T3FVdVZQOTM3NG5iZzlfXzlURURlemRWZjM0MExGYVp2dDBudUlQdmF6YkMyLWp4dlhMY2NKZnl0YktlaWJKbHpmYUFDakRVRHFPUUhXdVowUmVSNlQ1NGxta3BqajJSNmVWS3VtenpjY29tT0w4UTBsazFpeUhTemRzbklNd1ZPU05ieVA5dFU4YnZRSVgtM0Zwbm1LS0x0elVlcWpU?oc=5",
         "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQU0tQYmk0YXJHOF9kdExlNkZ2YkFubVEtSjQ1ZllOUEh5TlBRUVdkQTJLQ3g4TDVPUkQtUHhVTEstelJnMU5rTjljMEQ1MkMteVA2ZG1JcEQ5bVR4NktNVjRwNEM2WHFvU1VYWUpnbWlqeGZVUFBtcVN1RGlvaklRUXFleGNIVWxyU1BRQ1I3UnVoUi1iYmhMME9qQTU3eDJhZHhmanhhZmdCVHgxS3F0R3FUNXVqOG450gG-AUFVX3lxTE5qTXJSYTJwUDhaQjlXaUlEZm1IN1JyaFptQktPNnVSVVF4OEZzZzI3UzctODU2TmlONUpXNFRWX2FXcUZ5V2hNbElHYkM0dUtLdERVdnlEeE1vMG9pUTVtRkpseWJKR3VSZG52b0VXN2RhTHREd3Q5b1B4RkdWSVNfSHB5dUFvT3lTNnJ5ZDN4MVNRQWphVGJTLXJnVTIyYTNVdHVKTERlOGxQSjlOWDZxNDNTdEZYRWZUQTVaaFE?oc=5"
@@ -131,8 +132,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 6,
-      "last_updated": "2026-04-22T13:43:23.775879",
+      "source_count": 7,
+      "last_updated": "2026-04-23T14:07:51.922960",
       "id": "04797041fa0a",
       "created_at": "2026-04-22T13:33:55.239644+00:00"
     },
@@ -262,7 +263,7 @@
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "bombing",
-      "severity": "low",
+      "severity": "medium",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "Woman",
@@ -280,8 +281,9 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdl9TVGFGbW9RNXVBVnZmNHN0SHFYN1BidFRuT0RicHlBcm9WSzRWUDUxZkhJclpDamVfVURXbkUzZGVzcFVvaDhBSUdPbkUwSGI0LUVLSTNYM3JwNFdYVE1HcGgwX0daQjUweFhwTkNsT0lIVjcwWW1nalVMNmk1YW1OQlFGTkpXY2paVGx3WUVLR0Z6elBrQTFSTVJRSjlxdXFkOE82QVBMRFFJWDAtV0V6Mlk4Tmp5bWc3ZDRNNzNnSXFvalhsSdIBzgFBVV95cUxPODQ4djdXT003amZoNkphRk12c0VweGtHaS1kYzVJWnUyQzRUcHZiQnVJOFRzbVpKdU9zT3JqN09Lb0FsQkNCdTBDUXBvSmp1Z1pWZ2FxUFJJTFdhSEdVQ1NtVFZELTRvVTkyTG5NV2Vna0lZSnhWMThCaGdDU0xfSTJLeFFKV1ZtOW5ETWUzTGt5bWM2bHZQTDAzWDMwdUR0SW5pMkdMb3FWWlQ2YjRXd0xyQkk3dlk2ODUyX2Y2a3VBcjNuajRoWHl0SUUzUQ?oc=5",
-        "https://news.google.com/rss/articles/CBMimAJBVV95cUxPTDJveFBJS2ZXQmlsNzNvNEE1dTF6X00yN2tVMlF1eU5yVGRwakl5azZtdzNtZG9PVHY1dkphX3h2ZGhHTW5GRVktQ1FOZzN2bTR5R2xYckMtdzZxczdtNDVRS1ZZa25kcGxFZUs2MUJOei0yb1dNOWlBVUpVU0dNMW1HaFZHdE1wblhRVDZJbDBSSngzd2kwdFZsXzVCTzNOTTVFZGRmVnJwS0ExTzBVaHcwX29qbm02Z2RxSzVWT1dHM2Z4QXhUR3JaeExFZGhGS1Vuc0VtQTNmZFRjY1FveFNlalJ3Q3RrQWx2bDh1MkxPWUsySndFYnc1Z1k2SzkyUlV3RDlUaldxcTlXVTJ4Vk1rS3cxMmxY?oc=5",
-        "https://news.google.com/rss/articles/CBMinAJBVV95cUxOVHBZUEk0T2FHSEl2NHFiZDFTSjFXUHBteWZjQ2dma1lja3NTaVZkZk4zZFBrMG0wZ0lOOXZxM1BzdDZYRnNIbWViZEw1ZEE3VU1IMUctNTMxZUxJYWFWWEtmQmcyOXEzQzFfYWE4ZnlsWTF6MkpKbFEzTFZjSHFsalFWVHFNcF81NEdBYTNxb2gwQU9LWHA0ZVFnYkJ6NUNMMEVVOGpESnRnQ0NzSnhaYWJYTGl2TU05VEtNYkVSRldEbUdPZ1dndHZuMG4zaHp4dml3V1VkZ0VkX0ZfU2NjRWNGQlRrMElLWjlPRG1TWUtRVDc3dU5QWEMzZlJ4SXVfRVJCcE55eFpua0lncFhhYjNWZ0RsQTVHVnUwcw?oc=5"
+        "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQZmJnSVNUbnRLS2ZZQ3JjNkFxRW0wTFVnQ3ZWRUhuU2haODAyTEZzbkNCaWNrVWdnY0xOMzZDVHB6U0hvX3cweDd5OWxHX1Q2SEF5TFhlRlBzMzZ2SVN5Mm1ORnlyR0dxN0ZST3EtVmhPZExud2JTcGoxVzFid05JekNkOUFfWWY0S3hYN0FGTUs1UGhxaG9tQWdIVU9TWFhDcndCelREVFB4ckxLRGdzeV91M0pyT2tCMXVQVHppT0RjMkh1cm5SUVd6OFZfVk05TUtEMVZDNnFsN2d3cWFkdHhqc2ZSckRESVJleExB?oc=5",
+        "https://news.google.com/rss/articles/CBMinAJBVV95cUxOVHBZUEk0T2FHSEl2NHFiZDFTSjFXUHBteWZjQ2dma1lja3NTaVZkZk4zZFBrMG0wZ0lOOXZxM1BzdDZYRnNIbWViZEw1ZEE3VU1IMUctNTMxZUxJYWFWWEtmQmcyOXEzQzFfYWE4ZnlsWTF6MkpKbFEzTFZjSHFsalFWVHFNcF81NEdBYTNxb2gwQU9LWHA0ZVFnYkJ6NUNMMEVVOGpESnRnQ0NzSnhaYWJYTGl2TU05VEtNYkVSRldEbUdPZ1dndHZuMG4zaHp4dml3V1VkZ0VkX0ZfU2NjRWNGQlRrMElLWjlPRG1TWUtRVDc3dU5QWEMzZlJ4SXVfRVJCcE55eFpua0lncFhhYjNWZ0RsQTVHVnUwcw?oc=5",
+        "https://news.google.com/rss/articles/CBMimAJBVV95cUxPTDJveFBJS2ZXQmlsNzNvNEE1dTF6X00yN2tVMlF1eU5yVGRwakl5azZtdzNtZG9PVHY1dkphX3h2ZGhHTW5GRVktQ1FOZzN2bTR5R2xYckMtdzZxczdtNDVRS1ZZa25kcGxFZUs2MUJOei0yb1dNOWlBVUpVU0dNMW1HaFZHdE1wblhRVDZJbDBSSngzd2kwdFZsXzVCTzNOTTVFZGRmVnJwS0ExTzBVaHcwX29qbm02Z2RxSzVWT1dHM2Z4QXhUR3JaeExFZGhGS1Vuc0VtQTNmZFRjY1FveFNlalJ3Q3RrQWx2bDh1MkxPWUsySndFYnc1Z1k2SzkyUlV3RDlUaldxcTlXVTJ4Vk1rS3cxMmxY?oc=5"
       ],
       "source_articles": [
         0
@@ -302,8 +304,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 3,
-      "last_updated": "2026-04-22T14:06:12.547494",
+      "source_count": 4,
+      "last_updated": "2026-04-23T14:07:51.923927",
       "id": "14e091fd4d89",
       "created_at": "2026-04-22T13:33:55.239631+00:00"
     },
@@ -362,6 +364,62 @@
       "id": "aadf31e5b0d0",
       "created_at": "2026-04-22T13:33:55.239655+00:00",
       "last_updated": "2026-04-22T13:33:55.239658+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-20",
+      "publish_date": "2026-04-23",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Manchester",
+      "location_detail": "Terminal 2 car park at Manchester Airport",
+      "airport_name": "Manchester Airport",
+      "airport_iata": "MAN",
+      "hotel_name": null,
+      "venue_name": "Manchester Airport",
+      "attack_type": "assault",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Mohammed Fahir Amaaz and Muhammad Amaad",
+      "summary_en": "Brothers accused of attacking officer",
+      "summary_tr": "Kardeşler memura saldırmakla suçlanıyor",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "airport attack",
+        "assault",
+        "Manchester Airport"
+      ],
+      "date": "2026-04-20",
+      "year": 2026,
+      "source_urls": [
+        "https://www.manchestereveningnews.co.uk/news/greater-manchester-news/manchester-airport-trial-live-officer-33762007"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 53.350342,
+      "geo_lon": -2.280369,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "576390a6f6ab",
+      "created_at": "2026-04-23T14:07:51.940486+00:00",
+      "last_updated": "2026-04-23T14:07:51.940495+00:00",
       "source_count": 1
     },
     {

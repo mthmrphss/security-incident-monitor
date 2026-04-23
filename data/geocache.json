@@ -483,5 +483,10 @@
     "lat": 27.638716,
     "lon": -80.39754,
     "display_name": "Vero Beach, Indian River County, Florida, United States"
+  },
+  "denver, united states": {
+    "lat": 39.739236,
+    "lon": -104.984862,
+    "display_name": "Denver, Colorado, United States"
   }
 }
