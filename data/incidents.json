@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-23T19:27:28.007158+00:00",
+    "last_updated": "2026-04-24T03:37:43.597713+00:00",
     "total_incidents": 96,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -656,7 +656,7 @@
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "Monday",
       "publish_date": "2026-04-16",
-      "country": "unknown",
+      "country": "USA",
       "country_code": "US",
       "city": "Elko",
       "location_detail": "Elko Regional Airport",
@@ -665,7 +665,7 @@
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "shooting",
-      "severity": "high",
+      "severity": "critical",
       "casualties_dead": 2,
       "casualties_injured": 0,
       "perpetrator": "Giovanni Perez",
@@ -680,6 +680,7 @@
       "date": "2026-04-16",
       "year": 2026,
       "source_urls": [
+        "https://www.express.co.uk/news/world/2197715/son-shot-dead-airport-bathroom-own-dad",
         "https://www.2news.com/news/local/elko-police-release-additional-details-on-mondays-apparent-murder-suicide-at-airport/article_71b5b4ec-de45-41fd-b826-28bd1e7d8224.html"
       ],
       "source_articles": [
@@ -703,8 +704,8 @@
       "verification_score": 0.85,
       "id": "73d16dee96c2",
       "created_at": "2026-04-17T03:27:22.591354+00:00",
-      "last_updated": "2026-04-17T10:30:31.737020+00:00",
-      "source_count": 1,
+      "last_updated": "2026-04-24T03:37:43.597609",
+      "source_count": 2,
       "real_publish_date": "2026-04-16"
     },
     {
