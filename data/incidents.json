@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-24T03:37:43.597713+00:00",
-    "total_incidents": 96,
+    "last_updated": "2026-04-24T08:20:09.708637+00:00",
+    "total_incidents": 97,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "event_date": "2026-04-24",
+      "publish_date": "2026-04-24",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "unknown",
+      "attack_type": "assault",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "former NFL player",
+      "summary_en": "NFL player charged with assault",
+      "summary_tr": "NFL oyuncusu saldırıdan dolayı suçlandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "airline worker",
+        "NFL player",
+        "assault"
+      ],
+      "date": "2026-04-24",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZEVYcFFWcGFKNUtubl9ET1VsTVV1TFo0V1U5WEtka0dhc2dDRTRXckhIanV5Qkdadl9FOXJCUXFSb05sOU9SZFQtMkhCS3Y1N1pWeGY3Z3NFUUF4RWNHQ19DUzFyRHFZRGlOUmg3aGQxcHJXa3BjdUdKMnBaTWY1VUQyanFIQUdMY3RwNEhzU2QyTFNhNDVVN0I1eG5wVHdGWUF0d0Jn0gGrAUFVX3lxTE9jdzdzZEgteXhMUTJyeXBMMTRJTi1zcFIydGV2eWs5X2V5OUVXT2h0MFMxQ0NETVBocWhKb0xydWVwZXJ6UHU0RzZGUFNnX29NM3JpV21WSXNFeGRXRF9mZVNyeElCbXlCZ1lSaHd0SzlPZlk0cGt4TER1N1JPTGNKb1VwOXBFUXVKQUdKQ29zV1g3cGd1YS04VGVpM096dzZ5aUdqQ3FMNTNLMA?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "e952597a413b",
+      "created_at": "2026-04-24T08:20:09.708621+00:00",
+      "last_updated": "2026-04-24T08:20:09.708631+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-23",
