@@ -508,5 +508,15 @@
     "lat": 40.825502,
     "lon": -115.788011,
     "display_name": "Elko Regional Airport, Hillside Drive, Elko, Elko County, Nevada, 89801, United States"
+  },
+  "mali": {
+    "lat": 16.370036,
+    "lon": -2.290024,
+    "display_name": "Mali"
+  },
+  "canberra, australia": {
+    "lat": -35.297591,
+    "lon": 149.101268,
+    "display_name": "Canberra, District of Canberra Central, Australian Capital Territory, 2600, Australia"
   }
 }

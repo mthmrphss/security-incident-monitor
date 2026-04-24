@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-24T08:20:09.708637+00:00",
-    "total_incidents": 97,
+    "last_updated": "2026-04-24T13:59:29.773617+00:00",
+    "total_incidents": 98,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -73,6 +73,62 @@
       "id": "e952597a413b",
       "created_at": "2026-04-24T08:20:09.708621+00:00",
       "last_updated": "2026-04-24T08:20:09.708631+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-04-24",
+      "publish_date": "2026-04-24",
+      "country": "Mali",
+      "country_code": "ML",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": "unknown",
+      "venue_name": "hotel",
+      "attack_type": "other",
+      "severity": "critical",
+      "casualties_dead": 21,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "US Citizen Among 21 Dead",
+      "summary_tr": "21 Ölü, ABD Vatandaşı da Aralarında",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "Mali",
+        "Hotel Attack",
+        "US Citizen"
+      ],
+      "date": "2026-04-24",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPT2dVZ3lTSVpnVDNZcXdYb19rckhPNVhNZ09janpKbE9tcXVjcjRiREdQVm9DbDhHRXcyZzdrQ3VLOGV4NmtIa3p2ZWRDU3NuUTRmbVhsM05rb3hyY083MFZvV1hIcXkycHhCbkhFSE9iZHhYeWpQX3RPWmxqTUVhLTNjQTVFbjJaQ21GLVRuMTZCVjjSAZgBQVVfeXFMTnhTLUxmZmQtVk1NbFNiOXVKcmhXcjl4ZmhiNWdubHZ6enFrVDNCRU9qaHN4d0EzTGFXQnRGaEF0VDNXQWYwMG5GX3VkQ2lITERaRUs3SnBJOHByeS0zc3VTbDVKb1lJT3d0R3RQYjJpbkJtUFR2akp3MHJPUXBPd3FrSmppM0x6ZmlCaFZtdlRQRVlDVl81ODU?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 16.370036,
+      "geo_lon": -2.290024,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "32df51011c66",
+      "created_at": "2026-04-24T13:59:29.773604+00:00",
+      "last_updated": "2026-04-24T13:59:29.773611+00:00",
       "source_count": 1
     },
     {
@@ -682,6 +738,7 @@
       "date": "2026-04-17",
       "year": 2026,
       "source_urls": [
+        "https://www.miragenews.com/nsw-man-charged-for-assaulting-airline-crew-1661515/",
         "https://www.tribuneindia.com/news/diaspora/indian-man-arrested-at-perth-airport-after-allegedly-assaulting-female-passenger-mid-flight/"
       ],
       "source_articles": [
@@ -705,8 +762,8 @@
       "verification_score": 1.0,
       "id": "42254fb649e0",
       "created_at": "2026-04-17T13:49:00.640662+00:00",
-      "last_updated": "2026-04-17T13:49:00.640674+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-24T13:59:29.773498",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
