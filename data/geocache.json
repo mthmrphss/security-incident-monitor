@@ -518,5 +518,15 @@
     "lat": -35.297591,
     "lon": 149.101268,
     "display_name": "Canberra, District of Canberra Central, Australian Capital Territory, 2600, Australia"
+  },
+  "bamako, mali": {
+    "lat": 12.649319,
+    "lon": -8.000337,
+    "display_name": "Bamako, Mali"
+  },
+  "bamako airport, bamako, mali": {
+    "lat": 12.53533,
+    "lon": -7.948765,
+    "display_name": "Aéroport International President Modibo Keïta - Senou, Route de l'Aéroport, Sénou, Bamako, Mali"
   }
 }
