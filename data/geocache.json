@@ -563,5 +563,10 @@
     "lat": 38.897639,
     "lon": -77.036553,
     "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20500, United States"
+  },
+  "washington hilton hotel, washington, united states": {
+    "lat": 38.916454,
+    "lon": -77.045161,
+    "display_name": "Washington Hilton, 1919, Connecticut Avenue Northwest, Columbia Heights, Ward 1, Washington, District of Columbia, 20009, United States"
   }
 }
