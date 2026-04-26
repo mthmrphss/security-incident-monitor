@@ -533,5 +533,30 @@
     "lat": 41.339938,
     "lon": 19.841959,
     "display_name": "Boutique Hotel Rose Bar, Gjolek Kokona, Varri i Bamit, Njësia Bashkiake Nr. 3, Tiranë, Bashkia Tiranë, Qarku i Tiranës, Shqipëria Qendrore, 1006, Shqipëria"
+  },
+  "washington hilton, washington, united states": {
+    "lat": 38.916454,
+    "lon": -77.045161,
+    "display_name": "Washington Hilton, 1919, Connecticut Avenue Northwest, Ward 1, Washington, District of Columbia, 20009, United States"
+  },
+  "d.c., united states": {
+    "lat": 38.893847,
+    "lon": -76.988043,
+    "display_name": "District of Columbia, United States"
+  },
+  "white house, washington, united states": {
+    "lat": 38.897639,
+    "lon": -77.036553,
+    "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20500, United States"
+  },
+  "hilton": {
+    "lat": 13.016764,
+    "lon": 80.204778,
+    "display_name": "Hilton Chennai, 124/1, Inner Ring Road, CMWSSB Division 170, Ward 170, Zone 13 Adyar, Chennai Corporation, Chennai, Tamil Nadu, 600032, India"
+  },
+  "washington, united states": {
+    "lat": 38.895098,
+    "lon": -77.036385,
+    "display_name": "Washington, District of Columbia, United States"
   }
 }
