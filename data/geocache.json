@@ -558,5 +558,10 @@
     "lat": 38.895098,
     "lon": -77.036385,
     "display_name": "Washington, District of Columbia, United States"
+  },
+  "white house, washington dc, united states": {
+    "lat": 38.897639,
+    "lon": -77.036553,
+    "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20500, United States"
   }
 }
