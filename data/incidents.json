@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-27T14:17:05.132752+00:00",
+    "last_updated": "2026-04-27T19:47:10.634637+00:00",
     "total_incidents": 101,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -401,6 +401,7 @@
       "date": "2026-04-25",
       "year": 2026,
       "source_urls": [
+        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url=",
         "https://news.google.com/rss/articles/CBMicEFVX3lxTE1SdmlwdWIxRjZpYUhicnVPZE5mU2xXSnF6MjYza1gxYk85bTl6NlFIcE9nRmpTVTF6OVhwQkVlNHp3TlFHeFpoSXp2T2JzWWVCaDJFdUhOZHI2cDM5VGo5WXowQkNQR3FVMnNoWnM0TWo?oc=5"
       ],
       "source_articles": [
@@ -424,8 +425,8 @@
       "verification_score": 0.9,
       "id": "19a3013ae6ad",
       "created_at": "2026-04-25T07:44:48.121525+00:00",
-      "last_updated": "2026-04-25T07:44:48.121536+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-27T19:47:10.634535",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
