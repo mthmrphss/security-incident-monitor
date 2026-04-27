@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-26T13:28:22.708456+00:00",
+    "last_updated": "2026-04-27T03:50:26.153450+00:00",
     "total_incidents": 106,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -49,15 +49,16 @@
       "date": "2026-04-26",
       "year": 2026,
       "source_urls": [
-        "https://x.com/clashreport/status/2048229051051991446#m",
-        "https://x.com/clashreport/status/2048239348273820022#m",
-        "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss",
-        "https://www.kios.org/2026-04-25/watch-president-trump-speaks-about-shooting-incident-at-correspondents-dinner",
         "https://www.foxnews.com/politics/trump-rushed-from-same-hotel-where-reagan-assassination-attempt-unfolded-1981",
-        "https://news.webindia123.com/news/Articles/World/20260426/4443644.html",
-        "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner?traffic_source=rss",
         "https://x.com/clashreport/status/2048240182860579240#m",
-        "https://www.newsday.com/news/nation/white-house-correspondents-dinner-security-c13615"
+        "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss",
+        "https://foxwilmington.com/blanche-reveals-alleged-wh-correspondents-dinner-gunman-traveled-by-train-from-la-to-d-c-before-arrest/",
+        "https://www.kios.org/2026-04-25/watch-president-trump-speaks-about-shooting-incident-at-correspondents-dinner",
+        "https://x.com/clashreport/status/2048239348273820022#m",
+        "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner?traffic_source=rss",
+        "https://news.webindia123.com/news/Articles/World/20260426/4443644.html",
+        "https://www.newsday.com/news/nation/white-house-correspondents-dinner-security-c13615",
+        "https://x.com/clashreport/status/2048229051051991446#m"
       ],
       "source_articles": [
         0
@@ -78,8 +79,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 9,
-      "last_updated": "2026-04-26T13:28:22.708359",
+      "source_count": 10,
+      "last_updated": "2026-04-27T03:50:26.153355",
       "id": "ecf1a55fc03c",
       "created_at": "2026-04-26T03:46:10.114591+00:00"
     },

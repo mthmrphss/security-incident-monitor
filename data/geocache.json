@@ -568,5 +568,10 @@
     "lat": 38.916454,
     "lon": -77.045161,
     "display_name": "Washington Hilton, 1919, Connecticut Avenue Northwest, Columbia Heights, Ward 1, Washington, District of Columbia, 20009, United States"
+  },
+  "washington d.c., united states": {
+    "lat": 38.895098,
+    "lon": -77.036385,
+    "display_name": "Washington, District of Columbia, United States"
   }
 }
