@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-27T12:05:13.148148+00:00",
-    "total_incidents": 100,
+    "last_updated": "2026-04-27T12:48:08.419799+00:00",
+    "total_incidents": 101,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -187,6 +187,63 @@
       "id": "116046753c4b",
       "created_at": "2026-04-27T12:05:13.148122+00:00",
       "last_updated": "2026-04-27T12:05:13.148130+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-27",
+      "publish_date": "2026-04-27",
+      "country": "Philippines",
+      "country_code": "PH",
+      "city": "unknown",
+      "location_detail": "main airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Old bombs found at Philippines main airport",
+      "summary_tr": "Eski bombalar Filipinler'in ana havalimanında bulundu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb",
+        "Philippines"
+      ],
+      "date": "2026-04-27",
+      "year": 2026,
+      "source_urls": [
+        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url="
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 12.750349,
+      "geo_lon": 122.73121,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "2498e036fe56",
+      "created_at": "2026-04-27T12:48:08.419787+00:00",
+      "last_updated": "2026-04-27T12:48:08.419795+00:00",
       "source_count": 1
     },
     {

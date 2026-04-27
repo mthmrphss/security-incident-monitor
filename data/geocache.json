@@ -588,5 +588,10 @@
     "lat": 33.837139,
     "lon": -118.341361,
     "display_name": "Torrance, Los Angeles County, California, United States"
+  },
+  "philippines": {
+    "lat": 12.750349,
+    "lon": 122.73121,
+    "display_name": "Philippines"
   }
 }
