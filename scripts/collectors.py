@@ -435,46 +435,47 @@ class NewsCollector:
     def _resolve_google_news_url(self, google_url: str) -> str:
         """Google News redirect URL'sini gerçek haber URL'sine çöz.
         
-        Google News encodes URLs in a protobuf-like base64 blob.
-        We try multiple strategies to extract the real URL.
+        Google News 2024+ uses opaque tokens (AU_yqL...) inside base64 blobs
+        instead of direct URLs. We use multiple strategies:
+        1. Direct base64 decode (works for older/some URLs with embedded http://)
+        2. Google News article page scraping (follow the JS redirect)
+        3. HTTP redirect chain following with various User-Agents
         """
         import base64
 
         REJECT_DOMAINS = {"news.google.com", "consent.google.com", "accounts.google.com"}
 
         def _is_valid_result(url: str) -> bool:
-            """Check if resolved URL is a real article (not Google redirect)."""
             if not url or len(url) < 20:
                 return False
             return not any(d in url for d in REJECT_DOMAINS)
 
         def _extract_urls_from_bytes(data: bytes) -> list:
-            """Extract all HTTP(S) URLs from raw bytes."""
             text = data.decode("utf-8", errors="ignore")
             return re.findall(r'https?://[^\s"<>\x00-\x1f\x7f-\x9f]+', text)
 
-        # Yöntem 1: Base64 decode — birden fazla encoded parça deneme
+        # ── Extract article ID from URL ──
+        article_id = ""
         if "/articles/" in google_url:
-            encoded_part = google_url.split("/articles/")[1].split("?")[0]
+            article_id = google_url.split("/articles/")[1].split("?")[0]
+
+        # ═══════════════════════════════════════
+        # YÖNTEM 1: Base64 decode (eski format — URL doğrudan gömülü)
+        # ═══════════════════════════════════════
+        if article_id:
+            parts_to_try = [article_id]
             
-            # Google bazen virgülle ayrılmış birden fazla base64 parçası koyuyor
-            # Ayrıca CBMi... ve CBMi...SB... gibi iki ayrı encoding formatı var
-            parts_to_try = [encoded_part]
-            
-            # Eğer ~SB~ veya benzeri bir ayırıcı varsa parçaları da dene
-            if "SB" in encoded_part[4:]:
-                # İlk parça genelde CBMi ile başlar
-                sb_idx = encoded_part.index("SB", 4)
-                parts_to_try.insert(0, encoded_part[:sb_idx])
+            # SB ayırıcısı varsa parçaları da dene
+            if "SB" in article_id[4:]:
+                sb_idx = article_id.index("SB", 4)
+                parts_to_try.insert(0, article_id[:sb_idx])
             
             for part in parts_to_try:
                 for pad in range(4):
                     try:
-                        padded = part + "=" * pad
-                        decoded = base64.urlsafe_b64decode(padded)
+                        decoded = base64.urlsafe_b64decode(part + "=" * pad)
                         urls = _extract_urls_from_bytes(decoded)
                         for url in urls:
-                            # Temizle — bazen sonda çöp karakter olabiliyor
                             url = re.split(r'[\x00-\x1f\x7f-\x9f]', url)[0].rstrip('.,;:)]}')
                             if _is_valid_result(url):
                                 logger.info(f"  Google News decoded (base64): {url[:80]}")
@@ -482,27 +483,20 @@ class NewsCollector:
                     except Exception:
                         continue
 
-            # Yöntem 1b: Protobuf-style parsing — field marker'ları atlayarak URL çıkar
+            # Protobuf-style parsing
             try:
                 for pad in range(4):
-                    padded = encoded_part + "=" * pad
                     try:
-                        decoded = base64.urlsafe_b64decode(padded)
+                        decoded = base64.urlsafe_b64decode(article_id + "=" * pad)
                     except Exception:
                         continue
-                    
-                    # Protobuf'ta string field'lar genelde 0x0a (field 1, wire type 2) ile başlar
-                    # Ardından length byte, sonra string gelir
-                    # URL'leri bulmak için http ile başlayan byte dizileri ara
                     for marker in [b'http://', b'https://']:
                         idx = decoded.find(marker)
                         while idx >= 0:
-                            # URL sonunu bul
                             end = idx
                             while end < len(decoded) and decoded[end] > 0x1f and decoded[end] != 0x22:
                                 end += 1
-                            candidate = decoded[idx:end].decode('utf-8', errors='ignore')
-                            candidate = candidate.rstrip('.,;:)]}')
+                            candidate = decoded[idx:end].decode('utf-8', errors='ignore').rstrip('.,;:)]}')
                             if _is_valid_result(candidate) and len(candidate) > 25:
                                 logger.info(f"  Google News decoded (protobuf): {candidate[:80]}")
                                 return candidate
@@ -510,64 +504,144 @@ class NewsCollector:
             except Exception:
                 pass
 
-        # Yöntem 2: HTTP redirect takibi (farklı User-Agent'lar ile)
-        user_agents = [
+        # ═══════════════════════════════════════
+        # YÖNTEM 2: Google News article page — data-n-au attribute veya JS redirect
+        # Google 2024+ formatında article sayfası yüklenip gerçek URL çıkarılır
+        # ═══════════════════════════════════════
+        try:
+            # Google News makale sayfasını yükle
+            gn_session = requests.Session()
+            gn_session.headers.update({
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Accept-Encoding": "gzip, deflate",
+            })
+            gn_session.cookies.set("CONSENT", "PENDING+987", domain=".google.com")
+            gn_session.cookies.set("NID", "511=fake", domain=".google.com")
+            
+            resp = gn_session.get(
+                google_url,
+                timeout=15,
+                allow_redirects=True
+            )
+            
+            # Check if we got redirected to the actual article
+            if _is_valid_result(resp.url):
+                logger.info(f"  Google News resolved (redirect): {resp.url[:80]}")
+                return resp.url
+            
+            if resp.status_code == 200 and resp.text:
+                html = resp.text
+                
+                # Strategy 2a: data-n-au attribute (Google News article viewer)
+                au_match = re.search(r'data-n-au="([^"]+)"', html)
+                if au_match and _is_valid_result(au_match.group(1)):
+                    logger.info(f"  Google News resolved (data-n-au): {au_match.group(1)[:80]}")
+                    return au_match.group(1)
+                
+                # Strategy 2b: JSON data in the page containing article URL
+                # Google embeds article data in JS variables like AF_initDataCallback
+                json_url_patterns = [
+                    r'"(https?://(?!news\.google\.com)[a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}[^\s"]*)"',
+                ]
+                
+                # Find all non-Google URLs in the page
+                all_urls = re.findall(
+                    r'"(https?://(?!(?:news|accounts|consent|www)\.google\.com)[^\s"<>]{20,})"',
+                    html
+                )
+                
+                # Filter to likely article URLs (not static assets)
+                article_candidates = []
+                for u in all_urls:
+                    u_lower = u.lower()
+                    # Skip static assets, APIs, tracking pixels
+                    if any(ext in u_lower for ext in ['.js', '.css', '.png', '.jpg', '.gif', '.ico', '.svg', '.woff', 'googleapis.com', 'gstatic.com', 'doubleclick', 'analytics', 'facebook.com/tr', 'syndication']):
+                        continue
+                    if _is_valid_result(u):
+                        article_candidates.append(u)
+                
+                if article_candidates:
+                    # Prefer URLs that look like news articles (have path segments)
+                    scored = []
+                    for u in article_candidates:
+                        score = 0
+                        path = u.split("//", 1)[1] if "//" in u else u
+                        segments = path.count("/")
+                        score += min(segments, 4)  # More path = more likely article
+                        if any(w in u.lower() for w in ['article', 'news', 'story', 'post', '2026', '2025']):
+                            score += 3
+                        if len(u) > 60:
+                            score += 1
+                        scored.append((score, u))
+                    
+                    scored.sort(reverse=True)
+                    best = scored[0][1]
+                    logger.info(f"  Google News resolved (page scrape): {best[:80]}")
+                    return best
+                
+                # Strategy 2c: window.location or location.href in inline scripts
+                loc_match = re.search(
+                    r'(?:window\.location|location\.href)\s*=\s*["\']([^"\']+)["\']',
+                    html
+                )
+                if loc_match and _is_valid_result(loc_match.group(1)):
+                    logger.info(f"  Google News resolved (JS redirect): {loc_match.group(1)[:80]}")
+                    return loc_match.group(1)
+                
+                # Strategy 2d: meta refresh
+                meta_match = re.search(
+                    r'<meta[^>]+http-equiv=["\']?refresh["\']?[^>]+url=["\']?([^"\'>;\s]+)',
+                    html, re.I
+                )
+                if meta_match and _is_valid_result(meta_match.group(1)):
+                    logger.info(f"  Google News resolved (meta refresh): {meta_match.group(1)[:80]}")
+                    return meta_match.group(1)
+                
+                # Strategy 2e: <a> tags with article-like hrefs
+                a_matches = re.findall(
+                    r'<a[^>]+href=["\']?(https?://(?!news\.google\.com)[^\s"\'<>]+)["\']?',
+                    html
+                )
+                for href in a_matches:
+                    if _is_valid_result(href) and len(href) > 40:
+                        parsed_href = href.split("//", 1)[1] if "//" in href else href
+                        if parsed_href.count("/") >= 2:  # Has meaningful path
+                            logger.info(f"  Google News resolved (href): {href[:80]}")
+                            return href
+
+        except requests.exceptions.Timeout:
+            logger.warning(f"  Google News page timeout: {google_url[:60]}")
+        except Exception as e:
+            logger.warning(f"  Google News page error: {str(e)[:60]}")
+
+        # ═══════════════════════════════════════
+        # YÖNTEM 3: Farklı User-Agent'larla HTTP redirect
+        # ═══════════════════════════════════════
+        for ua in [
             "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0",
             USER_AGENT,
-        ]
-        
-        for ua in user_agents:
+        ]:
             try:
                 session = requests.Session()
                 session.cookies.set("CONSENT", "YES+cb.20231119-09-p0.en+FX+410", domain=".google.com")
-                session.headers.update({
-                    "User-Agent": ua,
-                    "Accept": "text/html,application/xhtml+xml",
-                    "Accept-Language": "en-US,en;q=0.9",
-                })
+                session.headers.update({"User-Agent": ua})
                 
-                resp = session.get(google_url, timeout=12, allow_redirects=True)
+                resp = session.get(google_url, timeout=10, allow_redirects=True)
                 
-                # Redirect zincirini kontrol et
                 if resp.history:
                     for r in resp.history:
-                        if _is_valid_result(r.headers.get("Location", "")):
-                            logger.info(f"  Google News resolved (redirect): {r.headers['Location'][:80]}")
-                            return r.headers["Location"]
+                        loc = r.headers.get("Location", "")
+                        if _is_valid_result(loc):
+                            logger.info(f"  Google News resolved (redirect-{ua[:10]}): {loc[:80]}")
+                            return loc
                 
-                final_url = resp.url
-                if _is_valid_result(final_url):
-                    logger.info(f"  Google News resolved (final URL): {final_url[:80]}")
-                    return final_url
-                
-                # HTML içinde meta refresh veya JS redirect olabilir
-                if resp.status_code == 200:
-                    # <meta http-equiv="refresh" content="0;URL='...'">
-                    meta_match = re.search(
-                        r'<meta[^>]+http-equiv=["\']?refresh["\']?[^>]+url=["\']?([^"\'>\s]+)',
-                        resp.text, re.I
-                    )
-                    if meta_match and _is_valid_result(meta_match.group(1)):
-                        logger.info(f"  Google News resolved (meta refresh): {meta_match.group(1)[:80]}")
-                        return meta_match.group(1)
+                if _is_valid_result(resp.url):
+                    logger.info(f"  Google News resolved (final-{ua[:10]}): {resp.url[:80]}")
+                    return resp.url
                     
-                    # <a href="...">... article ...</a> pattern in Google News page
-                    a_match = re.search(
-                        r'<a[^>]+href=["\']?(https?://(?!news\.google\.com)[^\s"\'<>]+)["\']?[^>]*>',
-                        resp.text
-                    )
-                    if a_match and _is_valid_result(a_match.group(1)):
-                        candidate = a_match.group(1)
-                        # Sadece gerçek haber sitesi linkleri
-                        if '.' in candidate.split('//')[1].split('/')[0]:
-                            logger.info(f"  Google News resolved (href): {candidate[:80]}")
-                            return candidate
-                            
-            except requests.exceptions.Timeout:
-                continue
-            except Exception as e:
-                logger.warning(f"  Google News resolve error ({ua[:20]}): {str(e)[:60]}")
+            except Exception:
                 continue
 
         logger.warning(f"  Google News URL could NOT be resolved: {google_url[:80]}")
