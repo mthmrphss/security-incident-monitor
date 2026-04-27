@@ -5,8 +5,25 @@ import plotly.express as px
 import pycountry
 import os
 import json
+import re
 import folium
 import streamlit.components.v1 as components
+from urllib.parse import urlparse
+
+def extract_source_domain(url: str) -> str:
+    """Extract a readable domain name from a URL."""
+    if not url:
+        return "Source"
+    if "news.google.com" in url:
+        return "Google News"
+    if "x.com" in url or "twitter.com" in url:
+        return "X (Twitter)"
+    try:
+        parsed = urlparse(url)
+        domain = parsed.netloc.replace("www.", "")
+        return domain if domain else "Source"
+    except Exception:
+        return "Source"
 
 # --- 1. KOMUTA MERKEZİ AYARLARI ---
 st.set_page_config(page_title="S.I.C. Dashboard", page_icon="🛡️", layout="wide", initial_sidebar_state="expanded")
@@ -203,9 +220,9 @@ def load_and_clean_data(mtime):
         mask = df['country'].isna()
         df.loc[mask, 'country'] = df.loc[mask, 'country_code'].apply(get_country_name)
         
-    # Kalan Unknown'ları Türkçeleştir
-    df['country'] = df['country'].fillna('Bilinmeyen Ülke')
-    df['city'] = df['city'].replace(['unknown', '', None, 'null'], 'Bilinmeyen Şehir')
+    # Fill remaining unknowns with English labels
+    df['country'] = df['country'].fillna('Unknown Country')
+    df['city'] = df['city'].replace(['unknown', '', None, 'null'], 'Unknown City')
     df['country'] = df['country'].str.title() 
     df['city'] = df['city'].str.title()
     
@@ -230,8 +247,8 @@ def load_and_clean_data(mtime):
         venue = row.get('venue_name', '') or ''
         location_detail = row.get('location_detail', '') or ''
         
-        city_unknown = city in ('Bilinmeyen Şehir', 'Bilinmeyen Şehir', 'Unknown', '')
-        country_unknown = country in ('Bilinmeyen Ülke', 'Unknown', '')
+        city_unknown = city in ('Unknown City', 'Bilinmeyen Şehir', 'Unknown', '')
+        country_unknown = country in ('Unknown Country', 'Bilinmeyen Ülke', 'Unknown', '')
         
         if not city_unknown and not country_unknown:
             return f"{city}, {country}"
@@ -250,12 +267,12 @@ def load_and_clean_data(mtime):
                 return venue
             elif location_detail and location_detail.lower() not in ('unknown', 'null', ''):
                 return location_detail
-            return '📍 Konum Doğrulanmadı'
+            return '📍 Location Unverified'
     
     df['display_location'] = df.apply(smart_location, axis=1)
     df['has_unknown_location'] = df.apply(
-        lambda r: r.get('city', '') in ('Bilinmeyen Şehir', 'Bilinmeyen Şehir', 'Unknown', '') 
-                  and r.get('country', '') in ('Bilinmeyen Ülke', 'Unknown', ''), 
+        lambda r: r.get('city', '') in ('Unknown City', 'Bilinmeyen Şehir', 'Unknown', '') 
+                  and r.get('country', '') in ('Unknown Country', 'Bilinmeyen Ülke', 'Unknown', ''), 
         axis=1
     )
     
@@ -263,7 +280,7 @@ def load_and_clean_data(mtime):
     # Unknown olanları feed'de tut, haritada gösterme
     def is_valid_location(row):
         has_coords = pd.notna(row.get('geo_lat')) and pd.notna(row.get('geo_lon'))
-        is_unknown = (row.get('country') == 'Bilinmeyen Ülke') and (row.get('city') == 'Bilinmeyen Şehir')
+        is_unknown = (row.get('country') in ('Unknown Country', 'Bilinmeyen Ülke')) and (row.get('city') in ('Unknown City', 'Bilinmeyen Şehir'))
         return has_coords and not is_unknown
 
     df['has_valid_location'] = df.apply(is_valid_location, axis=1)
@@ -291,7 +308,7 @@ try:
     mtime = os.path.getmtime("data/incidents.json")
     data_df, metadata = load_and_clean_data(mtime)
 except Exception as e:
-    st.error(f"Veri yüklenirken kritik hata oluştu: {e}")
+    st.error(f"Critical error loading data: {e}")
     st.stop()
 
 # --- 3. GELİŞMİŞ SOL PANEL (KONTROL MENÜSÜ) ---
@@ -303,24 +320,24 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<h4 style='color: #c9d1d9; margin-bottom: 15px;'>🔍 Akıllı Filtreleme</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='color: #c9d1d9; margin-bottom: 15px;'>🔍 Smart Filters</h4>", unsafe_allow_html=True)
     
-    search_query = st.text_input("Anahtar Kelime Ara", placeholder="Havalimanı, saldırı, drone...")
+    search_query = st.text_input("Keyword Search", placeholder="Airport, attack, drone...")
 
-    with st.expander("🌍 Lokasyon Filtreleri", expanded=True):
-        # Filtrelerde Bilinmeyen Ülke en sona atılsın
-        all_countries = sorted([c for c in data_df["country"].unique() if c != 'Bilinmeyen Ülke'])
-        if 'Bilinmeyen Ülke' in data_df["country"].unique():
-            all_countries.append('Bilinmeyen Ülke')
+    with st.expander("🌍 Location Filters", expanded=True):
+        # Sort countries, push Unknown to end
+        all_countries = sorted([c for c in data_df["country"].unique() if c not in ('Unknown Country', 'Bilinmeyen Ülke')])
+        if 'Unknown Country' in data_df["country"].unique() or 'Bilinmeyen Ülke' in data_df["country"].unique():
+            all_countries.append('Unknown Country')
             
-        selected_countries = st.multiselect("🏴 Ülke Seçimi", options=all_countries, default=all_countries)
+        selected_countries = st.multiselect("🏴 Country", options=all_countries, default=all_countries)
 
-    with st.expander("🎯 Risk ve Tür Filtreleri", expanded=True):
-        selected_types = st.multiselect("Olay Türü", options=data_df["incident_type"].unique(), default=data_df["incident_type"].unique())
+    with st.expander("🎯 Risk & Type Filters", expanded=True):
+        selected_types = st.multiselect("Incident Type", options=data_df["incident_type"].unique(), default=data_df["incident_type"].unique())
         selected_severity = st.select_slider("⚠️ Minimum Risk", options=["low", "medium", "high", "critical"], value="low")
 
     st.markdown("<br><hr style='border-color: #30363d;'>", unsafe_allow_html=True)
-    st.caption(f"DB Versiyon: {metadata.get('version')} | Toplam Olay: {len(data_df)}")
+    st.caption(f"DB Version: {metadata.get('version')} | Total Incidents: {len(data_df)}")
 
 # --- 4. FİLTRELEME MANTIĞI ---
 severity_order = {"low": 0, "medium": 1, "high": 2, "critical": 3}
@@ -338,7 +355,7 @@ if search_query:
     ]
 
 # --- 5. ANA PANEL VE DASHBOARD ---
-st.title("Küresel Havacılık ve Güvenlik Monitörü")
+st.title("Global Aviation & Security Monitor")
 
 # KAYAN İSTİHBARAT BANDI (TİCKER)
 if not data_df.empty:
@@ -364,17 +381,17 @@ if not filtered_df.empty:
     critical_count = len(filtered_df[filtered_df['severity'] == 'critical'])
     pulse_class = "pulse-alert" if critical_count > 0 else ""
     
-    with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>📌 Filtrelenen Olay</div><div class='kpi-value'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
-    with k2: st.markdown(f"<div class='kpi-card {pulse_class}' style='border-left-color: #ff4d4d;'><div class='kpi-title'>🔴 Kritik Risk</div><div class='kpi-value'>{critical_count}</div></div>", unsafe_allow_html=True)
+    with k1: st.markdown(f"<div class='kpi-card'><div class='kpi-title'>📌 Filtered Incidents</div><div class='kpi-value'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
+    with k2: st.markdown(f"<div class='kpi-card {pulse_class}' style='border-left-color: #ff4d4d;'><div class='kpi-title'>🔴 Critical Risk</div><div class='kpi-value'>{critical_count}</div></div>", unsafe_allow_html=True)
     
-    valid_cities = filtered_df[filtered_df['city'] != 'Bilinmeyen Şehir']['city'].nunique()
-    with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd700;'><div class='kpi-title'>🏴 Etkilenen Şehir</div><div class='kpi-value'>{valid_cities}</div></div>", unsafe_allow_html=True)
+    valid_cities = filtered_df[~filtered_df['city'].isin(['Unknown City', 'Bilinmeyen Şehir'])]['city'].nunique()
+    with k3: st.markdown(f"<div class='kpi-card' style='border-left-color: #ffd700;'><div class='kpi-title'>🏴 Affected Cities</div><div class='kpi-value'>{valid_cities}</div></div>", unsafe_allow_html=True)
     
     if 'quality_score' in filtered_df.columns and not filtered_df['quality_score'].isnull().all():
         quality_mean = f"{filtered_df['quality_score'].mean():.2f}"
     else:
         quality_mean = "N/A"
-    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Güvenilirlik Skoru</div><div class='kpi-value'>{quality_mean}</div></div>", unsafe_allow_html=True)
+    with k4: st.markdown(f"<div class='kpi-card' style='border-left-color: #a64dff;'><div class='kpi-title'>✅ Reliability Score</div><div class='kpi-value'>{quality_mean}</div></div>", unsafe_allow_html=True)
 
     st.write("") 
     
@@ -392,7 +409,7 @@ if not filtered_df.empty:
         
         def format_tooltip(row):
             header = f"<h4 style='margin:0 0 5px 0; color:#2e7cf6;'>{row['city']}, {row['country']}</h4>"
-            count_info = f"<div style='margin-bottom:8px; font-weight:bold;'>Toplam Olay: {row['incident_count']}</div>"
+            count_info = f"<div style='margin-bottom:8px; font-weight:bold;'>Total Incidents: {row['incident_count']}</div>"
             
             summaries = row['summary_list']
             dates = row['date_list']
@@ -406,7 +423,7 @@ if not filtered_df.empty:
                 list_html += f"<li style='margin-bottom:4px;'><span style='color:{color};'>[{sevs[i].upper()}]</span> {dates[i]} - {types[i]}: {str(summaries[i])[:60]}...</li>"
             list_html += "</ul>"
             
-            extra = f"<div style='margin-top:8px; font-style:italic; color:#8b949e;'>ve +{len(summaries) - 5} olay daha...</div>" if len(summaries) > 5 else ""
+            extra = f"<div style='margin-top:8px; font-style:italic; color:#8b949e;'>and +{len(summaries) - 5} more incidents...</div>" if len(summaries) > 5 else ""
             
             return f"<div style='font-family: sans-serif;'>{header}{count_info}{list_html}{extra}</div>"
 
@@ -476,25 +493,24 @@ if not filtered_df.empty:
             folium.Marker(
                 location=[row['geo_lat'], row['geo_lon']],
                 popup=popup,
-                tooltip=f"📍 {row['city']}, {row['country']} ({row['incident_count']} Olay)",
+                tooltip=f"📍 {row['city']}, {row['country']} ({row['incident_count']} Incidents)",
                 icon=folium.Icon(color=pin_color, icon=icon_type)
             ).add_to(m)
 
-        st.markdown("<h3 style='color:#e6edf3; margin-top:10px; margin-bottom:-10px;'>🌐 Küresel Operasyon Haritası</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='color:#e6edf3; margin-top:10px; margin-bottom:-10px;'>🌐 Global Operations Map</h3>", unsafe_allow_html=True)
         components.html(m._repr_html_(), height=650)
     else:
-        st.info("🗺️ Seçili filtrelere uygun, geçerli koordinata sahip olay bulunamadı.")
+        st.info("🗺️ No incidents with valid coordinates found for selected filters.")
 
     st.write("<br>", unsafe_allow_html=True)
     
-    # --- ALT SEKMELER (ZAMAN ÇİZELGESİ, AKIŞ VE İSTATİSTİK) ---
-    t_timeline, t_feed, t_stats = st.tabs(["⏱️ Zaman Çizelgesi", "🗞️ İstihbarat Akışı", "📊 Analitik Raporlar"])
+    # --- TABS (TIMELINE, FEED, ANALYTICS) ---
+    t_timeline, t_feed, t_stats = st.tabs(["⏱️ Timeline", "🗞️ Intelligence Feed", "📊 Analytics"])
 
     with t_timeline:
         st.write("<br>", unsafe_allow_html=True)
         if not filtered_df.empty:
             timeline_df = filtered_df.copy()
-            # Yıl-Ay formatında çıkar
             timeline_df['month_year'] = pd.to_datetime(timeline_df['display_date'], errors='coerce').dt.to_period('M').astype(str)
             timeline_counts = timeline_df.groupby(['month_year', 'severity']).size().reset_index(name='count')
             
@@ -503,57 +519,58 @@ if not filtered_df.empty:
             fig_time = px.bar(
                 timeline_counts, x="month_year", y="count", color="severity",
                 color_discrete_map=color_map_px,
-                title="Aylara Göre Olay Yoğunluğu",
-                labels={"month_year": "Tarih (Yıl-Ay)", "count": "Olay Sayısı", "severity": "Risk"},
+                title="Monthly Incident Density",
+                labels={"month_year": "Date (Year-Month)", "count": "Incident Count", "severity": "Risk"},
                 template="plotly_dark"
             )
             fig_time.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", barmode="stack", margin=dict(t=40, b=20, l=0, r=0))
             st.plotly_chart(fig_time, use_container_width=True)
         else:
-            st.info("Zaman grafiği çizilecek veri yok.")
+            st.info("No data available for timeline chart.")
 
     with t_feed:
         st.write("<br>", unsafe_allow_html=True)
         st.markdown("<div class='feed-scroll-container'>", unsafe_allow_html=True)
         
-        # Olay türü Etiketleri (okunabilir Türkçe)
         TYPE_LABELS = {
-            "AIRPORT_ATTACK": "✈️ Havalimanı Saldırısı",
-            "AIRLINE_PERSONNEL": "👨‍✈️ Havayolu Personeli",
-            "HOTEL_ATTACK": "🏨 Otel Saldırısı",
+            "AIRPORT_ATTACK": "✈️ Airport Attack",
+            "AIRLINE_PERSONNEL": "👨‍✈️ Airline Personnel",
+            "HOTEL_ATTACK": "🏨 Hotel Attack",
         }
         
         for i, row in filtered_df.iterrows():
             with st.container():
                 risk_color = "#ff4d4d" if row['severity'] == "critical" else "#ff8c00" if row['severity'] == "high" else "#ffd700" if row['severity'] == "medium" else "#2e7cf6"
                 
-                event_info = f" (Olay Tarihi: {row['event_date_display']})" if row.get('event_date_display') and row['event_date_display'] != row['display_date'] else ""
+                event_info = f" (Event Date: {row['event_date_display']})" if row.get('event_date_display') and row['event_date_display'] != row['display_date'] else ""
                 
-                # Akıllı konum ve okunabilir tür
                 display_loc = row.get('display_location', f"{row['city']}, {row['country']}")
                 type_label = TYPE_LABELS.get(row['incident_type'], row['incident_type'])
                 
-                # Bilinmeyen konum için özel stil
                 loc_style = "color: #6e7681; font-style: italic;" if row.get('has_unknown_location', False) else ""
                 
-                # Stale olay uyarısı
                 stale_badge = ""
                 if row.get('is_stale', False):
-                    stale_badge = "<span style='background: #6e768133; color: #6e7681; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; margin-left: 8px;'>⚠️ Eski Haber</span>"
+                    stale_badge = "<span style='background: #6e768133; color: #6e7681; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; margin-left: 8px;'>⚠️ Old News</span>"
+                
+                quality_badge = ""
+                dq = row.get('data_quality', 'medium')
+                if dq == 'low':
+                    quality_badge = "<span style='background: #da3633aa; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-left: 6px;'>⚠ Low Quality</span>"
                 
                 st.markdown(f"""
                 <div class='news-card' style='border-left-color: {risk_color};'>
                     <div class='news-header'>
-                        <div class='news-title' style='{loc_style}'>{display_loc} | {type_label}{stale_badge}</div>
+                        <div class='news-title' style='{loc_style}'>{display_loc} | {type_label}{stale_badge}{quality_badge}</div>
                         <span style='background: {risk_color}33; color: {risk_color}; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;'>{row['severity'].upper()}</span>
                     </div>
-                    <div class='news-meta'>🗓️ Görüntülenme: {row['display_date']}{event_info} • 📌 {row['venue_name'] or 'Genel'}</div>
-                    <div class='news-summary'>{row['summary_tr'] or row['summary_en']}</div>
+                    <div class='news-meta'>🗓️ Published: {row['display_date']}{event_info} • 📌 {row['venue_name'] or 'General'}</div>
+                    <div class='news-summary'>{row['summary_en'] or row['summary_tr']}</div>
                 </div>
                 """, unsafe_allow_html=True)
                 
                 if row.get('source_urls'):
-                    links = " | ".join([f"[{'Kaynak '+str(idx+1)}]({url})" for idx, url in enumerate(row['source_urls'])])
+                    links = " | ".join([f"[{extract_source_domain(url)}]({url})" for url in row['source_urls'][:5]])
                     st.caption(f"🔗 {links}")
                 else:
                     st.write("")
@@ -563,13 +580,13 @@ if not filtered_df.empty:
         st.write("<br>", unsafe_allow_html=True)
         col_a, col_b = st.columns(2)
         with col_a:
-            st.markdown("<h4 style='color:#c9d1d9;'>🎯 Türlere Göre Dağılım</h4>", unsafe_allow_html=True)
+            st.markdown("<h4 style='color:#c9d1d9;'>🎯 Distribution by Type</h4>", unsafe_allow_html=True)
             fig_pie = px.pie(filtered_df, names='incident_type', hole=0.5, template="plotly_dark", 
                              color_discrete_sequence=px.colors.sequential.Blues_r)
             fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", margin=dict(t=20, b=20, l=0, r=0))
             st.plotly_chart(fig_pie, use_container_width=True)
         with col_b:
-            st.markdown("<h4 style='color:#c9d1d9;'>⚠️ Risk Yoğunluğu</h4>", unsafe_allow_html=True)
+            st.markdown("<h4 style='color:#c9d1d9;'>⚠️ Risk Density</h4>", unsafe_allow_html=True)
             color_map_px = {"critical": "#ff4d4d", "high": "#ff8c00", "medium": "#ffd700", "low": "#4da6ff"}
             fig_bar = px.bar(filtered_df, x='severity', color='severity', color_discrete_map=color_map_px, template="plotly_dark")
             fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", showlegend=False, margin=dict(t=20, b=20, l=0, r=0))
@@ -578,7 +595,7 @@ if not filtered_df.empty:
     # Veri İndirme Alanı
     st.markdown("<hr style='border-color: #30363d; margin: 30px 0;'>", unsafe_allow_html=True)
     st.download_button(
-        "📥 Filtrelenmiş Veriyi CSV Olarak İndir",
+        "📥 Download Filtered Data as CSV",
         data=filtered_df.to_csv(index=False).encode('utf-8'),
         file_name='security_intelligence_report.csv',
         mime='text/csv',
@@ -586,4 +603,4 @@ if not filtered_df.empty:
     )
 
 else:
-    st.warning("⚠️ Filtrelerinize uygun hiçbir güvenlik olayı bulunamadı. Lütfen sol menüden ayarları esnetin.")
+    st.warning("⚠️ No security incidents match your filters. Please adjust the settings in the sidebar.")

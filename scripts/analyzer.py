@@ -28,6 +28,23 @@ MAX_ARTICLES_PER_BATCH = 15     # Stage 1 için
 MAX_ARTICLES_STAGE2 = 5         # Stage 2 tek tek işler
 GROQ_CONTEXT_LIMIT = 6000       # Prompt için güvenli karakter limiti
 
+# ── TARİH DOĞRULAMA ──
+MIN_VALID_EVENT_YEAR = 2025     # Bu yıldan eski olaylar stale sayılır
+MAX_FUTURE_DAYS = 2             # Bugünden en fazla bu kadar gün ilerideki tarihler kabul edilir
+
+# ── BİLİNEN ESKİ OLAYLAR (Google News link maskeleme sorunu) ──
+# Bu anahtar kelimeler geçen olaylar yıl kontrolüne tabi tutulur
+KNOWN_HISTORICAL_EVENTS = [
+    ("mali", "hotel", "21 dead"),
+    ("mali", "radisson", "hostage"),
+    ("mumbai", "taj", "2008"),
+    ("mumbai", "terrorist", "hotel"),
+    ("westgate", "nairobi", "mall"),
+    ("bataclan", "paris", "attack"),
+    ("brussels", "airport", "2016"),
+    ("istanbul", "ataturk", "2016"),
+]
+
 # ── KATEGORİ NORMALİZASYONU ──
 CATEGORY_MAP = {"A": "AIRPORT_ATTACK", "B": "AIRLINE_PERSONNEL", "C": "HOTEL_ATTACK"}
 VALID_INCIDENT_TYPES = {"AIRPORT_ATTACK", "AIRLINE_PERSONNEL", "HOTEL_ATTACK"}
@@ -223,21 +240,25 @@ class GeminiAnalyzer:
 
             articles_text += text_block
 
-        prompt = f"""Classify each article: is it about a REAL physical security incident?
+        prompt = f"""Classify each article: is it about a REAL, RECENT physical security incident?
 
 Categories:
 A) AIRPORT_ATTACK — bomb, gun, knife, explosion, drone attack at airport
 B) AIRLINE_PERSONNEL — physical assault on cabin crew, pilot, ground staff
 C) HOTEL_ATTACK — bomb, armed raid, hostage, explosion at hotel
 
-NOT relevant (filter out):
+NOT relevant (MUST filter out):
 - Strikes, delays, cancellations, weather
 - Accidents, technical failures
 - Security tech/product news
-- Old event anniversaries, memorials
-- Court cases about past events
+- OLD event anniversaries, memorials, documentaries, retrospectives, "looking back" articles
+- Court cases, trials, or sentencing for PAST events
 - Reviews, tourism, bookings
-- Threats deemed "not credible" with nothing found (mark as low severity if included)
+- Threats deemed "not credible" with nothing found
+- Articles about events that happened YEARS AGO (e.g., 2008 Mumbai attacks, 2015 Mali hotel siege, 2016 Brussels bombing) — even if republished recently
+- Movie reviews, book reviews, or media about past attacks
+
+IMPORTANT: If the article mentions dates like "2015", "2008", "2016" etc. referring to WHEN the event happened, it is OLD NEWS and NOT relevant.
 
 ARTICLES:
 {articles_text}
@@ -250,7 +271,7 @@ Return JSON:
   ]
 }}
 
-Only set relevant:true if the article clearly describes a physical attack, assault, bombing, or credible threat."""
+Only set relevant:true if the article clearly describes a RECENT physical attack, assault, bombing, or credible threat that happened in the current year or very recently."""
 
         result = self._call_api(prompt, "Stage1")
 
@@ -294,8 +315,13 @@ Only set relevant:true if the article clearly describes a physical attack, assau
             date_context = f"\nARTICLE REAL PUBLISH DATE (from HTML meta): {real_pub_date}"
         date_context += f"\nRSS/FEED DATE: {pub_date}"
 
+        # Bugünün tarihini prompt'a ekle (LLM'in zaman algısı için)
+        from datetime import datetime as _dt, timezone as _tz
+        today_str = _dt.now(_tz.utc).strftime("%Y-%m-%d")
+
         prompt = f"""Extract incident details from this single article.
 
+TODAY'S DATE: {today_str}
 SOURCE: {source}{date_context}
 CATEGORY: {category}
 TITLE: {title}
@@ -325,17 +351,23 @@ Return JSON:
   "is_ongoing": false,
   "is_false_alarm": false,
   "is_stale": false,
+  "original_event_year": null,
   "tags": ["relevant tags"]
 }}
 
 STRICT RULES:
 - ONLY write what is EXPLICITLY in the article text above.
 - If info is NOT in the text, write "unknown" or null. Do NOT guess.
-- event_date: extract the actual event date from text. If text says "yesterday" and publish is 2026-03-17, event_date is 2026-03-16.
+- event_date: extract the ACTUAL event date from text. If text says "yesterday" and publish is {today_str}, event_date should be calculated accordingly.
 - publish_date: Use the ARTICLE REAL PUBLISH DATE if provided, otherwise use RSS/FEED DATE.
 - If no event date in text, use publish_date as fallback.
 - is_false_alarm: true if article says "not credible", "hoax", "nothing found"
-- is_stale: true if the article is reporting on an OLD event (weeks/months ago) with NO new developments. Recycled/republished old news should be marked stale.
+- is_stale: true if the article is reporting on an OLD event that happened BEFORE {MIN_VALID_EVENT_YEAR}. This includes:
+  * Anniversary articles ("10 years ago", "in 2015", "marking the Xth anniversary")
+  * Retrospectives, documentaries, reviews of past events
+  * Republished old news or recycled stories
+  * Court cases or trials about events that happened years ago
+- original_event_year: If the event described happened in a DIFFERENT year than the publish date, write that year (e.g., 2015, 2008). Otherwise null.
 - Do NOT invent casualty numbers. If not mentioned, use 0.
 - incident_type MUST be one of: AIRPORT_ATTACK, AIRLINE_PERSONNEL, HOTEL_ATTACK. Do NOT use letters like A, B, C."""
 
@@ -347,6 +379,21 @@ STRICT RULES:
         # ── Tarih düzeltme ──
         event_date = result.get("event_date", "")
         publish_date = result.get("publish_date", "")
+        original_event_year = result.get("original_event_year")
+
+        # ── ESKİ OLAY TESPİTİ (LLM sinyali) ──
+        if original_event_year:
+            try:
+                oey = int(original_event_year)
+                if oey < MIN_VALID_EVENT_YEAR:
+                    logger.warning(
+                        f"      HISTORICAL EVENT detected (year={oey}): "
+                        f"{result.get('summary_en', '')[:60]}"
+                    )
+                    result["is_stale"] = True
+                    return result  # Erken dönüş — stale olarak işaretle
+            except (ValueError, TypeError):
+                pass
 
         # Tarihleri normalize et (ISO 8601 basic → YYYY-MM-DD)
         event_date = self._normalize_date(event_date)
@@ -357,6 +404,20 @@ STRICT RULES:
 
         # RSS/feed tarihi
         article_pub = self._normalize_date(pub_date)
+
+        # ── ESKİ TARİH KONTROLÜ — event_date yıl < MIN_VALID_EVENT_YEAR ──
+        if event_date and event_date != "unknown":
+            try:
+                ed_year = int(event_date[:4])
+                if ed_year < MIN_VALID_EVENT_YEAR:
+                    logger.warning(
+                        f"      OLD EVENT DATE detected ({event_date}): "
+                        f"{result.get('summary_en', '')[:60]}"
+                    )
+                    result["is_stale"] = True
+                    return result
+            except (ValueError, TypeError):
+                pass
 
         # ── Geliştirilmiş Fallback Zinciri ──
         # Öncelik: event_date > real_publish_date > publish_date (LLM) > RSS date > bugün
@@ -371,17 +432,36 @@ STRICT RULES:
             best_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         # ── Tarih Tutarlılık Kontrolü ──
-        # Gelecek tarih kontrolü
         from datetime import datetime, timezone
         try:
             best_dt = datetime.strptime(best_date, "%Y-%m-%d")
             today = datetime.now(timezone.utc).replace(tzinfo=None)
-            if best_dt > today + timedelta(days=1):
-                # Gelecek tarihi reddet, real_publish_date veya bugünü kullan
+
+            # Gelecek tarih kontrolü
+            if best_dt > today + timedelta(days=MAX_FUTURE_DAYS):
                 logger.warning(f"      Future date rejected: {best_date}")
                 best_date = real_date if real_date != "unknown" else today.strftime("%Y-%m-%d")
+
+            # Çok eski tarih kontrolü (MIN_VALID_EVENT_YEAR öncesi)
+            if best_dt.year < MIN_VALID_EVENT_YEAR:
+                logger.warning(
+                    f"      OLD DATE detected ({best_date}), "
+                    f"marking stale: {result.get('summary_en', '')[:60]}"
+                )
+                result["is_stale"] = True
+                return result
         except (ValueError, TypeError):
             pass
+
+        # ── Google News URL kontrolü — çözülememiş link varsa tarih güvenilirliğini düşür ──
+        source_url = url or ""
+        if "news.google.com" in source_url and real_date == "unknown":
+            # Google News linki çözülemediyse ve gerçek tarih yoksa,
+            # sadece RSS tarihine güveniyoruz — bu riskli
+            logger.warning(
+                f"      Unresolved Google News URL + no real date — lower confidence"
+            )
+            result["data_quality"] = "low"
 
         result["date"] = best_date
         result["event_date"] = event_date if event_date != "unknown" else best_date

@@ -166,7 +166,7 @@ def main():
     # 5.7 — STALENESS DETECTION
     if all_incidents:
         logger.info("PHASE 5.7: Staleness detection...")
-        from analyzer import normalize_incident_type
+        from analyzer import normalize_incident_type, MIN_VALID_EVENT_YEAR
         today = datetime.now(timezone.utc).replace(tzinfo=None)
 
         stale_count = 0
@@ -180,18 +180,32 @@ def main():
                 stale_count += 1
                 continue  # Stale olanları tamamen atla
 
-            # Tarih tabanlı staleness kontrolü
+            # Yıl tabanlı staleness kontrolü — MIN_VALID_EVENT_YEAR öncesi olayları reddet
             event_date_str = inc.get("event_date") or inc.get("date") or ""
+            if event_date_str and event_date_str != "unknown":
+                try:
+                    ed_year = int(str(event_date_str)[:4])
+                    if ed_year < MIN_VALID_EVENT_YEAR:
+                        logger.info(
+                            f"    STALE (year {ed_year} < {MIN_VALID_EVENT_YEAR}): "
+                            f"{inc.get('summary_en', '')[:50]}"
+                        )
+                        stale_count += 1
+                        continue
+                except (ValueError, TypeError):
+                    pass
+
+            # Tarih tabanlı staleness kontrolü (10 günden eski)
             if event_date_str and event_date_str != "unknown":
                 try:
                     event_dt = datetime.strptime(str(event_date_str)[:10], "%Y-%m-%d")
                     age_days = (today - event_dt).days
-                    if age_days > 14:
+                    if age_days > 10:
                         logger.info(
                             f"    STALE ({age_days} days old): {inc.get('summary_en', '')[:50]}"
                         )
                         stale_count += 1
-                        continue  # 14 günden eski olayları atla
+                        continue
                 except (ValueError, TypeError):
                     pass
 

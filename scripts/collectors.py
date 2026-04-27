@@ -433,42 +433,144 @@ class NewsCollector:
         return articles
 
     def _resolve_google_news_url(self, google_url: str) -> str:
-        """Google News redirect URL'sini gerçek haber URL'sine çöz."""
+        """Google News redirect URL'sini gerçek haber URL'sine çöz.
+        
+        Google News encodes URLs in a protobuf-like base64 blob.
+        We try multiple strategies to extract the real URL.
+        """
         import base64
 
-        # Yöntem 1: URL path'inden base64 encoded URL'yi çıkar
-        # Format: /rss/articles/CBMi...?oc=5 → base64 decode → gerçek URL
-        try:
-            # Path'ten article ID'sini al
-            if "/articles/" in google_url:
-                encoded_part = google_url.split("/articles/")[1].split("?")[0]
-                # Padding düzelt
-                padding = 4 - len(encoded_part) % 4
-                if padding != 4:
-                    encoded_part += "=" * padding
-                decoded = base64.urlsafe_b64decode(encoded_part)
-                # Decoded bytes içinde URL ara
-                decoded_str = decoded.decode("utf-8", errors="ignore")
-                url_match = re.search(r'https?://[^\s"<>]+', decoded_str)
-                if url_match:
-                    found_url = url_match.group(0)
-                    if "news.google.com" not in found_url and "consent.google" not in found_url:
-                        return found_url
-        except Exception:
-            pass
+        REJECT_DOMAINS = {"news.google.com", "consent.google.com", "accounts.google.com"}
 
-        # Yöntem 2: HTTP redirect takibi (consent cookie ile)
-        try:
-            session = requests.Session()
-            session.cookies.set("CONSENT", "YES+cb", domain=".google.com")
-            session.headers.update({"User-Agent": USER_AGENT})
-            resp = session.get(google_url, timeout=10, allow_redirects=True)
-            final_url = resp.url
-            if final_url and "news.google.com" not in final_url and "consent.google" not in final_url:
-                return final_url
-        except Exception as e:
-            logger.warning(f"  Google News resolve failed: {str(e)[:60]}")
+        def _is_valid_result(url: str) -> bool:
+            """Check if resolved URL is a real article (not Google redirect)."""
+            if not url or len(url) < 20:
+                return False
+            return not any(d in url for d in REJECT_DOMAINS)
 
+        def _extract_urls_from_bytes(data: bytes) -> list:
+            """Extract all HTTP(S) URLs from raw bytes."""
+            text = data.decode("utf-8", errors="ignore")
+            return re.findall(r'https?://[^\s"<>\x00-\x1f\x7f-\x9f]+', text)
+
+        # Yöntem 1: Base64 decode — birden fazla encoded parça deneme
+        if "/articles/" in google_url:
+            encoded_part = google_url.split("/articles/")[1].split("?")[0]
+            
+            # Google bazen virgülle ayrılmış birden fazla base64 parçası koyuyor
+            # Ayrıca CBMi... ve CBMi...SB... gibi iki ayrı encoding formatı var
+            parts_to_try = [encoded_part]
+            
+            # Eğer ~SB~ veya benzeri bir ayırıcı varsa parçaları da dene
+            if "SB" in encoded_part[4:]:
+                # İlk parça genelde CBMi ile başlar
+                sb_idx = encoded_part.index("SB", 4)
+                parts_to_try.insert(0, encoded_part[:sb_idx])
+            
+            for part in parts_to_try:
+                for pad in range(4):
+                    try:
+                        padded = part + "=" * pad
+                        decoded = base64.urlsafe_b64decode(padded)
+                        urls = _extract_urls_from_bytes(decoded)
+                        for url in urls:
+                            # Temizle — bazen sonda çöp karakter olabiliyor
+                            url = re.split(r'[\x00-\x1f\x7f-\x9f]', url)[0].rstrip('.,;:)]}')
+                            if _is_valid_result(url):
+                                logger.info(f"  Google News decoded (base64): {url[:80]}")
+                                return url
+                    except Exception:
+                        continue
+
+            # Yöntem 1b: Protobuf-style parsing — field marker'ları atlayarak URL çıkar
+            try:
+                for pad in range(4):
+                    padded = encoded_part + "=" * pad
+                    try:
+                        decoded = base64.urlsafe_b64decode(padded)
+                    except Exception:
+                        continue
+                    
+                    # Protobuf'ta string field'lar genelde 0x0a (field 1, wire type 2) ile başlar
+                    # Ardından length byte, sonra string gelir
+                    # URL'leri bulmak için http ile başlayan byte dizileri ara
+                    for marker in [b'http://', b'https://']:
+                        idx = decoded.find(marker)
+                        while idx >= 0:
+                            # URL sonunu bul
+                            end = idx
+                            while end < len(decoded) and decoded[end] > 0x1f and decoded[end] != 0x22:
+                                end += 1
+                            candidate = decoded[idx:end].decode('utf-8', errors='ignore')
+                            candidate = candidate.rstrip('.,;:)]}')
+                            if _is_valid_result(candidate) and len(candidate) > 25:
+                                logger.info(f"  Google News decoded (protobuf): {candidate[:80]}")
+                                return candidate
+                            idx = decoded.find(marker, end)
+            except Exception:
+                pass
+
+        # Yöntem 2: HTTP redirect takibi (farklı User-Agent'lar ile)
+        user_agents = [
+            "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0",
+            USER_AGENT,
+        ]
+        
+        for ua in user_agents:
+            try:
+                session = requests.Session()
+                session.cookies.set("CONSENT", "YES+cb.20231119-09-p0.en+FX+410", domain=".google.com")
+                session.headers.update({
+                    "User-Agent": ua,
+                    "Accept": "text/html,application/xhtml+xml",
+                    "Accept-Language": "en-US,en;q=0.9",
+                })
+                
+                resp = session.get(google_url, timeout=12, allow_redirects=True)
+                
+                # Redirect zincirini kontrol et
+                if resp.history:
+                    for r in resp.history:
+                        if _is_valid_result(r.headers.get("Location", "")):
+                            logger.info(f"  Google News resolved (redirect): {r.headers['Location'][:80]}")
+                            return r.headers["Location"]
+                
+                final_url = resp.url
+                if _is_valid_result(final_url):
+                    logger.info(f"  Google News resolved (final URL): {final_url[:80]}")
+                    return final_url
+                
+                # HTML içinde meta refresh veya JS redirect olabilir
+                if resp.status_code == 200:
+                    # <meta http-equiv="refresh" content="0;URL='...'">
+                    meta_match = re.search(
+                        r'<meta[^>]+http-equiv=["\']?refresh["\']?[^>]+url=["\']?([^"\'>\s]+)',
+                        resp.text, re.I
+                    )
+                    if meta_match and _is_valid_result(meta_match.group(1)):
+                        logger.info(f"  Google News resolved (meta refresh): {meta_match.group(1)[:80]}")
+                        return meta_match.group(1)
+                    
+                    # <a href="...">... article ...</a> pattern in Google News page
+                    a_match = re.search(
+                        r'<a[^>]+href=["\']?(https?://(?!news\.google\.com)[^\s"\'<>]+)["\']?[^>]*>',
+                        resp.text
+                    )
+                    if a_match and _is_valid_result(a_match.group(1)):
+                        candidate = a_match.group(1)
+                        # Sadece gerçek haber sitesi linkleri
+                        if '.' in candidate.split('//')[1].split('/')[0]:
+                            logger.info(f"  Google News resolved (href): {candidate[:80]}")
+                            return candidate
+                            
+            except requests.exceptions.Timeout:
+                continue
+            except Exception as e:
+                logger.warning(f"  Google News resolve error ({ua[:20]}): {str(e)[:60]}")
+                continue
+
+        logger.warning(f"  Google News URL could NOT be resolved: {google_url[:80]}")
         return ""
 
     def _extract_publish_date(self, soup: BeautifulSoup) -> str:
@@ -535,8 +637,8 @@ class NewsCollector:
             return ""
         try:
             dt = date_parser.parse(date_str)
-            # Makul bir tarih mi? (2020-2030 arası)
-            if dt.year < 2020 or dt.year > 2030:
+            # Makul bir tarih mi? (2024-2030 arası — eski olayları filtrele)
+            if dt.year < 2024 or dt.year > 2030:
                 return ""
             return dt.strftime("%Y-%m-%d")
         except Exception:
