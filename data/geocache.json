@@ -583,5 +583,10 @@
     "lat": 48.208354,
     "lon": 16.372504,
     "display_name": "Wien, Österreich"
+  },
+  "torrance, united states": {
+    "lat": 33.837139,
+    "lon": -118.341361,
+    "display_name": "Torrance, Los Angeles County, California, United States"
   }
 }
