@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-27T03:50:26.153450+00:00",
-    "total_incidents": 106,
+    "last_updated": "2026-04-27T08:44:10.658685+00:00",
+    "total_incidents": 108,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,119 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-27",
+      "publish_date": "2026-04-27",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Hyderabad",
+      "location_detail": "Hyderabad airport",
+      "airport_name": "Hyderabad airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat email at Hyderabad airport",
+      "summary_tr": "Hyderabad havalimanında bomba tehdidi",
+      "is_ongoing": false,
+      "is_false_alarm": true,
+      "is_stale": false,
+      "tags": [
+        "bomb threat",
+        "airport security",
+        "false_alarm"
+      ],
+      "date": "2026-04-27",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUWhVelBMMHh1WjM2ZU5ZTEtTV0F3NkdXcjBPQ1hmQ093UnVjanRadUhMaVoxUDdKWnZXNmlCVnJvSTRPUlcyZzR6SHROZTk4c05qVmNvQldGUmVfamFNWUFoVkx3NVFlUmFDd3BseGtPWnBUREdleUNPc2stejJEay04OUVkSExvTjJGTXZPVHVMVWVyMUl1OVhOenp1Z0M4QlZGMzVhakcyWDNxWERkc05LY2EyZw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 17.454031,
+      "geo_lon": 78.469673,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.95,
+      "verification_status": "verified",
+      "verification_score": 0.95,
+      "id": "a0d2c14d9503",
+      "created_at": "2026-04-27T08:44:10.658649+00:00",
+      "last_updated": "2026-04-27T08:44:10.658665+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-04-27",
+      "publish_date": "2026-04-27",
+      "country": "Ukraine",
+      "country_code": "UA",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "residential buildings and a hotel",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Russia",
+      "summary_en": "Russia attacked Ukraine with guided bombs and drones",
+      "summary_tr": "Rusya, Ukrayna'ya güdümlü bombalar ve insansız hava araçları ile saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "tags": [
+        "Russia",
+        "Ukraine",
+        "bombing",
+        "drone attack"
+      ],
+      "date": "2026-04-27",
+      "year": 2026,
+      "source_urls": [
+        "https://www.antena3.ro/externe/atacuri-masive-ale-rusiei-asupra-ucrainei-au-folosit-bombe-aeriene-ghidate-si-drone-cladiri-rezidentiale-si-un-hotel-avariate-785891.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.55,
+      "verification_status": "probable",
+      "verification_score": 0.55,
+      "id": "9879af7f067f",
+      "created_at": "2026-04-27T08:44:10.658677+00:00",
+      "last_updated": "2026-04-27T08:44:10.658680+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-04-26",

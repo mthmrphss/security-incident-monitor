@@ -573,5 +573,15 @@
     "lat": 38.895098,
     "lon": -77.036385,
     "display_name": "Washington, District of Columbia, United States"
+  },
+  "hyderabad airport, hyderabad, india": {
+    "lat": 17.454031,
+    "lon": 78.469673,
+    "display_name": "Begumpet Airport, Bowanpally Main Road, Indiramma Nagar, Rasoolpura, Tirumalagiri mandal, Hyderabad, Telangana, 500003, India"
+  },
+  "vienna, austria": {
+    "lat": 48.208354,
+    "lon": 16.372504,
+    "display_name": "Wien, Österreich"
   }
 }
