@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-27T12:48:08.419799+00:00",
+    "last_updated": "2026-04-27T14:17:05.132752+00:00",
     "total_incidents": 101,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -138,17 +138,17 @@
       "publish_date": "2026-04-27",
       "country": "United States",
       "country_code": "US",
-      "city": "unknown",
+      "city": "Washington",
       "location_detail": "White House Correspondents’ Association dinner",
       "airport_name": null,
       "airport_iata": null,
       "hotel_name": null,
       "venue_name": "White House Correspondents’ Association dinner",
       "attack_type": "shooting",
-      "severity": "unknown",
+      "severity": "medium",
       "casualties_dead": 0,
-      "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "casualties_injured": 1,
+      "perpetrator": "Cole Tomas Allen",
       "summary_en": "Shooting at press gala",
       "summary_tr": "Basın galasındaki silahlı saldırı",
       "is_ongoing": false,
@@ -163,14 +163,15 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
+        "https://wtvbam.com/2026/04/27/suspect-in-washington-dinner-shooting-set-to-appear-in-court/",
         "https://www.aljazeera.com/video/newsfeed/2026/4/27/questions-over-trumps-security-after-shooting-at-press-gala?traffic_source=rss"
       ],
       "source_articles": [
         0
       ],
       "data_quality": "medium",
-      "geo_lat": null,
-      "geo_lon": null,
+      "geo_lat": 38.895098,
+      "geo_lon": -77.036385,
       "validation_signals": {
         "has_country": true,
         "has_city": false,
@@ -186,8 +187,8 @@
       "verification_score": 0.75,
       "id": "116046753c4b",
       "created_at": "2026-04-27T12:05:13.148122+00:00",
-      "last_updated": "2026-04-27T12:05:13.148130+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-27T14:17:05.132648",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
