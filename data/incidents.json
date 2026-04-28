@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-27T19:47:10.634637+00:00",
-    "total_incidents": 101,
+    "last_updated": "2026-04-28T03:55:06.844706+00:00",
+    "total_incidents": 102,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -145,7 +145,7 @@
       "hotel_name": null,
       "venue_name": "White House Correspondents’ Association dinner",
       "attack_type": "shooting",
-      "severity": "medium",
+      "severity": "high",
       "casualties_dead": 0,
       "casualties_injured": 1,
       "perpetrator": "Cole Tomas Allen",
@@ -163,8 +163,9 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
-        "https://wtvbam.com/2026/04/27/suspect-in-washington-dinner-shooting-set-to-appear-in-court/",
-        "https://www.aljazeera.com/video/newsfeed/2026/4/27/questions-over-trumps-security-after-shooting-at-press-gala?traffic_source=rss"
+        "https://english.news.cn/northamerica/20260428/15c21a0c92e649dbb0e42791fe434a8e/c.html",
+        "https://www.aljazeera.com/video/newsfeed/2026/4/27/questions-over-trumps-security-after-shooting-at-press-gala?traffic_source=rss",
+        "https://wtvbam.com/2026/04/27/suspect-in-washington-dinner-shooting-set-to-appear-in-court/"
       ],
       "source_articles": [
         0
@@ -187,8 +188,8 @@
       "verification_score": 0.75,
       "id": "116046753c4b",
       "created_at": "2026-04-27T12:05:13.148122+00:00",
-      "last_updated": "2026-04-27T14:17:05.132648",
-      "source_count": 2
+      "last_updated": "2026-04-28T03:55:06.826379",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -249,6 +250,62 @@
     },
     {
       "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-04-27",
+      "publish_date": "2026-04-27",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Washington",
+      "location_detail": "White House",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "White House Correspondents’ Association dinner",
+      "attack_type": "shooting",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Man charged with attempted assassination of Trump",
+      "summary_tr": "Trump'a suikast girişiminden sorumlu tutulan kişi tutuklandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "assassination attempt",
+        "White House"
+      ],
+      "date": "2026-04-27",
+      "year": 2026,
+      "source_urls": [
+        "https://www.brandonsun.com/world/2026/04/27/washington-media-dinner-shooting-suspect-makes-first-court-appearance-on-federal-charges"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 38.895098,
+      "geo_lon": -77.036385,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "eb9b4f66c590",
+      "created_at": "2026-04-28T03:55:06.844689+00:00",
+      "last_updated": "2026-04-28T03:55:06.844699+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-04-26",
       "publish_date": "2026-04-26",
       "country": "United States",
@@ -277,18 +334,19 @@
       "date": "2026-04-26",
       "year": 2026,
       "source_urls": [
-        "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner?traffic_source=rss",
-        "https://www.aljazeera.com/video/newsfeed/2026/4/26/dramatic-scenes-as-trump-rushed-from-white-house-gala?traffic_source=rss",
-        "https://www.newsday.com/news/nation/white-house-correspondents-dinner-security-c13615",
-        "https://www.kios.org/2026-04-25/watch-president-trump-speaks-about-shooting-incident-at-correspondents-dinner",
-        "https://x.com/clashreport/status/2048240182860579240#m",
-        "https://www.wyff4.com/article/white-house-dinner-correspondents-security-protocol/71135018",
-        "https://www.foxnews.com/politics/trump-rushed-from-same-hotel-where-reagan-assassination-attempt-unfolded-1981",
-        "https://news.webindia123.com/news/Articles/World/20260426/4443644.html",
-        "https://x.com/clashreport/status/2048229051051991446#m",
         "https://x.com/clashreport/status/2048239348273820022#m",
+        "https://www.foxnews.com/politics/trump-rushed-from-same-hotel-where-reagan-assassination-attempt-unfolded-1981",
+        "https://www.aljazeera.com/video/newsfeed/2026/4/26/dramatic-scenes-as-trump-rushed-from-white-house-gala?traffic_source=rss",
+        "https://www.kios.org/2026-04-25/watch-president-trump-speaks-about-shooting-incident-at-correspondents-dinner",
+        "https://www.wyff4.com/article/white-house-dinner-correspondents-security-protocol/71135018",
+        "https://x.com/clashreport/status/2048229051051991446#m",
+        "https://x.com/clashreport/status/2048240182860579240#m",
         "https://foxwilmington.com/blanche-reveals-alleged-wh-correspondents-dinner-gunman-traveled-by-train-from-la-to-d-c-before-arrest/",
-        "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss"
+        "http://www.sandiegosun.com/news/279015941/white-house-correspondents-association-dinner-shooting-suspect-charged-with-attempted-assassination",
+        "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner?traffic_source=rss",
+        "https://news.webindia123.com/news/Articles/World/20260426/4443644.html",
+        "https://www.newsday.com/news/nation/white-house-correspondents-dinner-security-c13615"
       ],
       "source_articles": [
         0
@@ -309,8 +367,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 12,
-      "last_updated": "2026-04-27T12:05:13.148037",
+      "source_count": 13,
+      "last_updated": "2026-04-28T03:55:06.843615",
       "id": "ecf1a55fc03c",
       "created_at": "2026-04-26T03:46:10.114591+00:00"
     },
@@ -425,7 +483,7 @@
       "verification_score": 0.9,
       "id": "19a3013ae6ad",
       "created_at": "2026-04-25T07:44:48.121525+00:00",
-      "last_updated": "2026-04-27T19:47:10.634535",
+      "last_updated": "2026-04-28T03:55:06.844574",
       "source_count": 2
     },
     {
