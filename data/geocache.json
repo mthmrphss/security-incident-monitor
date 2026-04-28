@@ -593,5 +593,10 @@
     "lat": 12.750349,
     "lon": 122.73121,
     "display_name": "Philippines"
+  },
+  "dinner, washington, united states": {
+    "lat": 45.14808,
+    "lon": -67.702955,
+    "display_name": "Dinner Island, Greenlaw Chopping Township, Washington County, Maine, United States"
   }
 }

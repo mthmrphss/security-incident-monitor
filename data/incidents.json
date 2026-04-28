@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-28T03:55:06.844706+00:00",
+    "last_updated": "2026-04-28T08:41:21.688189+00:00",
     "total_incidents": 102,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -163,9 +163,10 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
-        "https://english.news.cn/northamerica/20260428/15c21a0c92e649dbb0e42791fe434a8e/c.html",
         "https://www.aljazeera.com/video/newsfeed/2026/4/27/questions-over-trumps-security-after-shooting-at-press-gala?traffic_source=rss",
-        "https://wtvbam.com/2026/04/27/suspect-in-washington-dinner-shooting-set-to-appear-in-court/"
+        "https://wtvbam.com/2026/04/27/suspect-in-washington-dinner-shooting-set-to-appear-in-court/",
+        "https://english.news.cn/northamerica/20260428/15c21a0c92e649dbb0e42791fe434a8e/c.html",
+        "https://www.chronicle.lu/category/international-news/60885-suspect-in-washington-dinner-shooting-charged-with-trying-to-assassinate-trump"
       ],
       "source_articles": [
         0
@@ -188,8 +189,8 @@
       "verification_score": 0.75,
       "id": "116046753c4b",
       "created_at": "2026-04-27T12:05:13.148122+00:00",
-      "last_updated": "2026-04-28T03:55:06.826379",
-      "source_count": 3
+      "last_updated": "2026-04-28T08:41:21.687313",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -264,7 +265,7 @@
       "severity": "high",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "Cole Tomas Allen",
       "summary_en": "Man charged with attempted assassination of Trump",
       "summary_tr": "Trump'a suikast girişiminden sorumlu tutulan kişi tutuklandı",
       "is_ongoing": false,
@@ -278,7 +279,8 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
-        "https://www.brandonsun.com/world/2026/04/27/washington-media-dinner-shooting-suspect-makes-first-court-appearance-on-federal-charges"
+        "https://www.brandonsun.com/world/2026/04/27/washington-media-dinner-shooting-suspect-makes-first-court-appearance-on-federal-charges",
+        "https://www.bbc.com/news/articles/cew7wez72vxo?at_medium=RSS&at_campaign=rss"
       ],
       "source_articles": [
         0
@@ -301,8 +303,8 @@
       "verification_score": 1.0,
       "id": "eb9b4f66c590",
       "created_at": "2026-04-28T03:55:06.844689+00:00",
-      "last_updated": "2026-04-28T03:55:06.844699+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-28T08:41:21.688069",
+      "source_count": 2
     },
     {
       "incident_type": "HOTEL_ATTACK",
