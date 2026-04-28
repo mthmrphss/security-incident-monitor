@@ -598,5 +598,10 @@
     "lat": 45.14808,
     "lon": -67.702955,
     "display_name": "Dinner Island, Greenlaw Chopping Township, Washington County, Maine, United States"
+  },
+  "krabi airport, krabi, thailand": {
+    "lat": 8.096408,
+    "lon": 98.985124,
+    "display_name": "ท่าอากาศยานนานาชาติกระบี่, 4, อำเภอเหนือคลอง, จังหวัดกระบี่, ประเทศไทย"
   }
 }

@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-28T08:41:21.688189+00:00",
+    "last_updated": "2026-04-28T19:56:35.606619+00:00",
     "total_incidents": 102,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -35,7 +35,7 @@
       "severity": "low",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "passenger",
       "summary_en": "Bomb threat email at Hyderabad airport",
       "summary_tr": "Hyderabad havalimanında bomba tehdidi",
       "is_ongoing": false,
@@ -49,6 +49,7 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
+        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url=",
         "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUWhVelBMMHh1WjM2ZU5ZTEtTV0F3NkdXcjBPQ1hmQ093UnVjanRadUhMaVoxUDdKWnZXNmlCVnJvSTRPUlcyZzR6SHROZTk4c05qVmNvQldGUmVfamFNWUFoVkx3NVFlUmFDd3BseGtPWnBUREdleUNPc2stejJEay04OUVkSExvTjJGTXZPVHVMVWVyMUl1OVhOenp1Z0M4QlZGMzVhakcyWDNxWERkc05LY2EyZw?oc=5"
       ],
       "source_articles": [
@@ -72,8 +73,8 @@
       "verification_score": 0.95,
       "id": "a0d2c14d9503",
       "created_at": "2026-04-27T08:44:10.658649+00:00",
-      "last_updated": "2026-04-27T08:44:10.658665+00:00",
-      "source_count": 1
+      "last_updated": "2026-04-28T19:56:35.606508",
+      "source_count": 2
     },
     {
       "incident_type": "HOTEL_ATTACK",
@@ -142,7 +143,7 @@
       "location_detail": "White House Correspondents’ Association dinner",
       "airport_name": null,
       "airport_iata": null,
-      "hotel_name": null,
+      "hotel_name": "Washington Hilton",
       "venue_name": "White House Correspondents’ Association dinner",
       "attack_type": "shooting",
       "severity": "high",
@@ -163,9 +164,10 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
+        "https://english.news.cn/northamerica/20260428/15c21a0c92e649dbb0e42791fe434a8e/c.html",
         "https://www.aljazeera.com/video/newsfeed/2026/4/27/questions-over-trumps-security-after-shooting-at-press-gala?traffic_source=rss",
         "https://wtvbam.com/2026/04/27/suspect-in-washington-dinner-shooting-set-to-appear-in-court/",
-        "https://english.news.cn/northamerica/20260428/15c21a0c92e649dbb0e42791fe434a8e/c.html",
+        "https://www.heraldextra.com/top-headlines/2026/apr/27/man-charged-with-attempted-assassination-of-trump-in-white-house-correspondents-dinner-shooting/",
         "https://www.chronicle.lu/category/international-news/60885-suspect-in-washington-dinner-shooting-charged-with-trying-to-assassinate-trump"
       ],
       "source_articles": [
@@ -189,8 +191,8 @@
       "verification_score": 0.75,
       "id": "116046753c4b",
       "created_at": "2026-04-27T12:05:13.148122+00:00",
-      "last_updated": "2026-04-28T08:41:21.687313",
-      "source_count": 4
+      "last_updated": "2026-04-28T19:56:35.605209",
+      "source_count": 5
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -336,19 +338,20 @@
       "date": "2026-04-26",
       "year": 2026,
       "source_urls": [
-        "https://x.com/clashreport/status/2048239348273820022#m",
-        "https://www.foxnews.com/politics/trump-rushed-from-same-hotel-where-reagan-assassination-attempt-unfolded-1981",
+        "https://www.newsday.com/news/nation/white-house-correspondents-dinner-security-c13615",
+        "https://news.webindia123.com/news/Articles/World/20260426/4443644.html",
+        "https://foxwilmington.com/blanche-reveals-alleged-wh-correspondents-dinner-gunman-traveled-by-train-from-la-to-d-c-before-arrest/",
+        "https://x.com/clashreport/status/2048229051051991446#m",
+        "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner?traffic_source=rss",
         "https://www.aljazeera.com/video/newsfeed/2026/4/26/dramatic-scenes-as-trump-rushed-from-white-house-gala?traffic_source=rss",
+        "https://www.foxnews.com/politics/trump-rushed-from-same-hotel-where-reagan-assassination-attempt-unfolded-1981",
+        "https://www.kplctv.com/2026/04/28/gov-landry-recounts-harrowing-moments-gunfire-heard-white-house-correspondents-dinner/",
         "https://www.kios.org/2026-04-25/watch-president-trump-speaks-about-shooting-incident-at-correspondents-dinner",
         "https://www.wyff4.com/article/white-house-dinner-correspondents-security-protocol/71135018",
-        "https://x.com/clashreport/status/2048229051051991446#m",
-        "https://x.com/clashreport/status/2048240182860579240#m",
-        "https://foxwilmington.com/blanche-reveals-alleged-wh-correspondents-dinner-gunman-traveled-by-train-from-la-to-d-c-before-arrest/",
-        "http://www.sandiegosun.com/news/279015941/white-house-correspondents-association-dinner-shooting-suspect-charged-with-attempted-assassination",
+        "https://x.com/clashreport/status/2048239348273820022#m",
         "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss",
-        "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner?traffic_source=rss",
-        "https://news.webindia123.com/news/Articles/World/20260426/4443644.html",
-        "https://www.newsday.com/news/nation/white-house-correspondents-dinner-security-c13615"
+        "http://www.sandiegosun.com/news/279015941/white-house-correspondents-association-dinner-shooting-suspect-charged-with-attempted-assassination",
+        "https://x.com/clashreport/status/2048240182860579240#m"
       ],
       "source_articles": [
         0
@@ -369,8 +372,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 13,
-      "last_updated": "2026-04-28T03:55:06.843615",
+      "source_count": 14,
+      "last_updated": "2026-04-28T19:56:35.606246",
       "id": "ecf1a55fc03c",
       "created_at": "2026-04-26T03:46:10.114591+00:00"
     },
