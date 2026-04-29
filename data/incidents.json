@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-29T03:45:36.422370+00:00",
-    "total_incidents": 103,
+    "last_updated": "2026-04-29T08:30:22.298245+00:00",
+    "total_incidents": 105,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -78,6 +78,63 @@
       "source_count": 1
     },
     {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-04-28",
+      "publish_date": "2026-04-28",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Belfast",
+      "location_detail": "Dunmurry",
+      "airport_name": "Belfast International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "Belfast International Airport",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb attack in Dunmurry",
+      "summary_tr": "null",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "bomb attack",
+        "Dunmurry",
+        "Belfast International Airport"
+      ],
+      "date": "2026-04-28",
+      "year": 2026,
+      "source_urls": [
+        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url="
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 54.652656,
+      "geo_lon": -6.228744,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "f1f33b13c867",
+      "created_at": "2026-04-29T08:30:22.298218+00:00",
+      "last_updated": "2026-04-29T08:30:22.298226+00:00",
+      "source_count": 1
+    },
+    {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-27",
       "publish_date": "2026-04-27",
@@ -131,7 +188,7 @@
       "verification_score": 0.95,
       "id": "a0d2c14d9503",
       "created_at": "2026-04-27T08:44:10.658649+00:00",
-      "last_updated": "2026-04-29T03:45:36.407898",
+      "last_updated": "2026-04-29T08:30:22.298110",
       "source_count": 2
     },
     {
@@ -365,6 +422,62 @@
       "created_at": "2026-04-28T03:55:06.844689+00:00",
       "last_updated": "2026-04-28T08:41:21.688069",
       "source_count": 2
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-04-27",
+      "publish_date": "2026-04-27",
+      "country": "Bangladesh",
+      "country_code": "BD",
+      "city": "Dhaka",
+      "location_detail": "8 airports",
+      "airport_name": null,
+      "airport_iata": "DAC",
+      "hotel_name": null,
+      "venue_name": "airports",
+      "attack_type": "threat",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "militant",
+      "summary_en": "Security tightened at 8 airports due to militant attack threat",
+      "summary_tr": "Müslüman saldırgan tehdidi nedeniyle 8 havalimanında güvenlik sıkılaştı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport security",
+        "militant threat"
+      ],
+      "date": "2026-04-27",
+      "year": 2026,
+      "source_urls": [
+        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url="
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 23.764386,
+      "geo_lon": 90.389014,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "e9c964fd54e6",
+      "created_at": "2026-04-29T08:30:22.298237+00:00",
+      "last_updated": "2026-04-29T08:30:22.298240+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "HOTEL_ATTACK",

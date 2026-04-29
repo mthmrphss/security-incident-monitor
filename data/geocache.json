@@ -608,5 +608,10 @@
     "lat": 54.652656,
     "lon": -6.228744,
     "display_name": "Belfast International Airport, Antrim Road, Antrim and Newtownabbey District, County Antrim, Northern Ireland / Tuaisceart Éireann, BT29 4ZY, United Kingdom"
+  },
+  "dhaka, bangladesh": {
+    "lat": 23.764386,
+    "lon": 90.389014,
+    "display_name": "ঢাকা, ঢাকা মহানগর, ঢাকা জেলা, ঢাকা বিভাগ, 1215, বাংলাদেশ"
   }
 }
