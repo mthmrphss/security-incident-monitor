@@ -603,5 +603,10 @@
     "lat": 8.096408,
     "lon": 98.985124,
     "display_name": "ท่าอากาศยานนานาชาติกระบี่, 4, อำเภอเหนือคลอง, จังหวัดกระบี่, ประเทศไทย"
+  },
+  "belfast international airport, belfast": {
+    "lat": 54.652656,
+    "lon": -6.228744,
+    "display_name": "Belfast International Airport, Antrim Road, Antrim and Newtownabbey District, County Antrim, Northern Ireland / Tuaisceart Éireann, BT29 4ZY, United Kingdom"
   }
 }

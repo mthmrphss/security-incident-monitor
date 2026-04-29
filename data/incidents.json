@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-28T19:56:35.606619+00:00",
-    "total_incidents": 102,
+    "last_updated": "2026-04-29T03:45:36.422370+00:00",
+    "total_incidents": 103,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -20,6 +20,64 @@
   },
   "incidents": [
     {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-04-28",
+      "publish_date": "2026-04-28",
+      "country": "Mali",
+      "country_code": "ML",
+      "city": "Bamako",
+      "location_detail": "Mali capital",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "Mali capital",
+      "attack_type": "siege",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "al-Qaeda-linked JNIM",
+      "summary_en": "Armed group announces siege on Mali capital",
+      "summary_tr": "Silahlı grup, Mali başkentine kuşatma başlattığını açıkladı",
+      "is_ongoing": true,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "Mali",
+        "al-Qaeda",
+        "JNIM",
+        "siege"
+      ],
+      "date": "2026-04-28",
+      "year": 2026,
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/4/28/armed-group-announces-siege-on-mali-capital?traffic_source=rss"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 12.649319,
+      "geo_lon": -8.000337,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "b1b109465a3f",
+      "created_at": "2026-04-29T03:45:36.422354+00:00",
+      "last_updated": "2026-04-29T03:45:36.422364+00:00",
+      "source_count": 1
+    },
+    {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-04-27",
       "publish_date": "2026-04-27",
@@ -28,7 +86,7 @@
       "city": "Hyderabad",
       "location_detail": "Hyderabad airport",
       "airport_name": "Hyderabad airport",
-      "airport_iata": null,
+      "airport_iata": "KBV",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "threat",
@@ -49,8 +107,8 @@
       "date": "2026-04-27",
       "year": 2026,
       "source_urls": [
-        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url=",
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUWhVelBMMHh1WjM2ZU5ZTEtTV0F3NkdXcjBPQ1hmQ093UnVjanRadUhMaVoxUDdKWnZXNmlCVnJvSTRPUlcyZzR6SHROZTk4c05qVmNvQldGUmVfamFNWUFoVkx3NVFlUmFDd3BseGtPWnBUREdleUNPc2stejJEay04OUVkSExvTjJGTXZPVHVMVWVyMUl1OVhOenp1Z0M4QlZGMzVhakcyWDNxWERkc05LY2EyZw?oc=5"
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUWhVelBMMHh1WjM2ZU5ZTEtTV0F3NkdXcjBPQ1hmQ093UnVjanRadUhMaVoxUDdKWnZXNmlCVnJvSTRPUlcyZzR6SHROZTk4c05qVmNvQldGUmVfamFNWUFoVkx3NVFlUmFDd3BseGtPWnBUREdleUNPc2stejJEay04OUVkSExvTjJGTXZPVHVMVWVyMUl1OVhOenp1Z0M4QlZGMzVhakcyWDNxWERkc05LY2EyZw?oc=5",
+        "https://uberproxy-pen-redirect.corp.google.com/uberproxy/pen?url="
       ],
       "source_articles": [
         0
@@ -73,7 +131,7 @@
       "verification_score": 0.95,
       "id": "a0d2c14d9503",
       "created_at": "2026-04-27T08:44:10.658649+00:00",
-      "last_updated": "2026-04-28T19:56:35.606508",
+      "last_updated": "2026-04-29T03:45:36.407898",
       "source_count": 2
     },
     {
