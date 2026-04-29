@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from collectors import NewsCollector
-from analyzer import GeminiAnalyzer
+from analyzer import GeminiAnalyzer, normalize_incident_type, MIN_VALID_EVENT_YEAR
 from geocoder import GeocoderService
 from storage import IncidentStorage
 
@@ -22,7 +22,7 @@ logger = logging.getLogger("Main")
 def build_geocode_query(incident):
     parts = []
     # Ignore generic terms that break geocoding
-    ignore_venues = {"airport", "hotel", "venue", "station", "building", "unknown", "null", "none"}
+    ignore_venues = {"airport", "hotel", "venue", "station", "building", "resort", "unknown", "null", "none"}
     
     for field in ["airport_name", "hotel_name", "venue_name"]:
         val = incident.get(field)
@@ -101,8 +101,8 @@ def main():
             logger.error(f"    Batch error: {e}")
 
         if i + batch_size < len(new_articles):
-            logger.info("    Waiting 10s for rate limit...")
-            time.sleep(10)
+            logger.info("    Waiting 15s for rate limit...")
+            time.sleep(15)
 
     logger.info(f"  Total incidents detected: {len(all_incidents)}")
 
@@ -166,7 +166,6 @@ def main():
     # 5.7 — STALENESS DETECTION
     if all_incidents:
         logger.info("PHASE 5.7: Staleness detection...")
-        from analyzer import normalize_incident_type, MIN_VALID_EVENT_YEAR
         today = datetime.now(timezone.utc).replace(tzinfo=None)
 
         stale_count = 0
@@ -217,8 +216,6 @@ def main():
     # 5.8 — INCIDENT_TYPE NORMALIZATION (son savunma hattı)
     if all_incidents:
         logger.info("PHASE 5.8: Normalizing incident types...")
-        from analyzer import normalize_incident_type
-
         for inc in all_incidents:
             old_type = inc.get("incident_type", "")
             new_type = normalize_incident_type(old_type)

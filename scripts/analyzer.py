@@ -24,12 +24,12 @@ logger = logging.getLogger("Analyzer")
 
 # ── TOKEN LİMİTLERİ ──
 MAX_CHARS_PER_ARTICLE = 300     # ~75 token
-MAX_ARTICLES_PER_BATCH = 15     # Stage 1 için
+MAX_ARTICLES_PER_BATCH = 10     # Stage 1 için (main.py batch_size ile tutarlı)
 MAX_ARTICLES_STAGE2 = 5         # Stage 2 tek tek işler
-GROQ_CONTEXT_LIMIT = 6000       # Prompt için güvenli karakter limiti
+GROQ_CONTEXT_LIMIT = 5000       # Prompt için güvenli karakter limiti (daha konservatif)
 
 # ── TARİH DOĞRULAMA ──
-MIN_VALID_EVENT_YEAR = 2025     # Bu yıldan eski olaylar stale sayılır
+MIN_VALID_EVENT_YEAR = datetime.now(timezone.utc).year  # Dinamik: her yıl otomatik güncellenir
 MAX_FUTURE_DAYS = 2             # Bugünden en fazla bu kadar gün ilerideki tarihler kabul edilir
 
 # ── BİLİNEN ESKİ OLAYLAR (Google News link maskeleme sorunu) ──
@@ -73,10 +73,11 @@ class GeminiAnalyzer:
         self._model_names = [
             "llama-3.3-70b-versatile",
             "meta-llama/llama-4-scout-17b-16e-instruct",
+            "llama-3.1-8b-instant",  # Hızlı, ucuz fallback — son çare
         ]
 
         self._last_request_time = 0
-        self._min_interval = 3
+        self._min_interval = 4   # Groq free tier güvenliği için 3→4
         self._max_retries = 3
 
     # ═══════════════════════════════════════
@@ -117,8 +118,8 @@ class GeminiAnalyzer:
                             },
                             {"role": "user", "content": prompt}
                         ],
-                        temperature=0.05,
-                        max_tokens=4096,
+                        temperature=0.1,
+                        max_tokens=1024,
                         response_format={"type": "json_object"},
                     )
 

@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import pydeck as pdk
 import plotly.express as px
 import pycountry
 import os
@@ -15,7 +14,7 @@ def extract_source_domain(url: str) -> str:
     if not url:
         return "Source"
     if "news.google.com" in url:
-        return "Google News"
+        return "🔗 Google News (unresolved)"
     if "x.com" in url or "twitter.com" in url:
         return "X (Twitter)"
     try:
@@ -168,6 +167,30 @@ st.markdown("""
         background-color: transparent !important; 
         color: #2e7cf6 !important; 
         border-bottom: 2px solid #2e7cf6 !important; 
+    }
+
+    /* Stale / Old News Card Effect */
+    .stale-card {
+        opacity: 0.55;
+        filter: grayscale(0.6);
+        border-left-color: #6e7681 !important;
+    }
+    .stale-card .news-title {
+        color: #8b949e !important;
+    }
+    .stale-card .news-summary {
+        color: #6e7681 !important;
+    }
+
+    /* English-only badge */
+    .lang-badge {
+        background: #1f6feb33;
+        color: #58a6ff;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        margin-left: 6px;
+        font-weight: 500;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -549,6 +572,11 @@ if not filtered_df.empty:
                 
                 loc_style = "color: #6e7681; font-style: italic;" if row.get('has_unknown_location', False) else ""
                 
+                # Stale card CSS class
+                card_class = "news-card"
+                if row.get('is_stale', False):
+                    card_class += " stale-card"
+                
                 stale_badge = ""
                 if row.get('is_stale', False):
                     stale_badge = "<span style='background: #6e768133; color: #6e7681; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; margin-left: 8px;'>⚠️ Old News</span>"
@@ -558,14 +586,20 @@ if not filtered_df.empty:
                 if dq == 'low':
                     quality_badge = "<span style='background: #da3633aa; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-left: 6px;'>⚠ Low Quality</span>"
                 
+                # Summary: TR öncelikli, boşsa EN fallback + badge
+                summary_text = row.get('summary_tr', '') or row.get('summary_en', '')
+                lang_badge = ""
+                if not row.get('summary_tr') and row.get('summary_en'):
+                    lang_badge = "<span class='lang-badge'>🇬🇧 English only</span>"
+                
                 st.markdown(f"""
-                <div class='news-card' style='border-left-color: {risk_color};'>
+                <div class='{card_class}' style='border-left-color: {risk_color};'>
                     <div class='news-header'>
-                        <div class='news-title' style='{loc_style}'>{display_loc} | {type_label}{stale_badge}{quality_badge}</div>
+                        <div class='news-title' style='{loc_style}'>{display_loc} | {type_label}{stale_badge}{quality_badge}{lang_badge}</div>
                         <span style='background: {risk_color}33; color: {risk_color}; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;'>{row['severity'].upper()}</span>
                     </div>
                     <div class='news-meta'>🗓️ Published: {row['display_date']}{event_info} • 📌 {row['venue_name'] or 'General'}</div>
-                    <div class='news-summary'>{row['summary_en'] or row['summary_tr']}</div>
+                    <div class='news-summary'>{summary_text}</div>
                 </div>
                 """, unsafe_allow_html=True)
                 
@@ -595,12 +629,22 @@ if not filtered_df.empty:
     # Veri İndirme Alanı
     st.markdown("<hr style='border-color: #30363d; margin: 30px 0;'>", unsafe_allow_html=True)
     st.download_button(
-        "📥 Download Filtered Data as CSV",
+        label="📥 Download Filtered Data as CSV",
         data=filtered_df.to_csv(index=False).encode('utf-8'),
         file_name='security_intelligence_report.csv',
         mime='text/csv',
-        type="primary"
+        use_container_width=True
     )
 
 else:
-    st.warning("⚠️ No security incidents match your filters. Please adjust the settings in the sidebar.")
+    st.markdown("""
+    <div style='text-align: center; padding: 60px 20px; background: rgba(22,27,34,0.5); border-radius: 12px; border: 1px solid #30363d;'>
+        <h2 style='color: #8b949e; margin-bottom: 15px;'>🔍 No Incidents Found</h2>
+        <p style='color: #6e7681; font-size: 1.1rem;'>Your current filters are too restrictive. Try:</p>
+        <ul style='color: #6e7681; text-align: left; display: inline-block; margin-top: 10px;'>
+            <li>Lowering the minimum risk level</li>
+            <li>Selecting more countries or incident types</li>
+            <li>Clearing the keyword search</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
