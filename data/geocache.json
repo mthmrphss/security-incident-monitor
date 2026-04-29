@@ -613,5 +613,10 @@
     "lat": 23.764386,
     "lon": 90.389014,
     "display_name": "ঢাকা, ঢাকা মহানগর, ঢাকা জেলা, ঢাকা বিভাগ, 1215, বাংলাদেশ"
+  },
+  "washington hilton, washington": {
+    "lat": 38.916454,
+    "lon": -77.045161,
+    "display_name": "Washington Hilton, 1919, Connecticut Avenue Northwest, Columbia Heights, Ward 1, Washington, District of Columbia, 20009, United States"
   }
 }
