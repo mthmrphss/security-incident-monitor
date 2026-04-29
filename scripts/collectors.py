@@ -362,17 +362,11 @@ class NewsCollector:
             if article.get("source_type") in ("reddit", "twitter"):
                 continue
 
-            # Google News redirect URL'lerini gerçek URL'ye çevir
+            # Google News linklerini çözmeye çalışmıyoruz (uberproxy çalışmıyor).
+            # RSS'ten gelen title + summary ile yetiniyoruz.
+            # Eski olay tespiti LLM prompt'larında agresif stale detection ile yapılıyor.
             if "news.google.com" in url:
-                resolved = self._resolve_google_news_url(url)
-                if resolved and "news.google.com" not in resolved:
-                    article["original_url"] = url
-                    article["url"] = resolved
-                    url = resolved
-                    logger.info(f"    [{i+1}] Google News resolved: {url[:80]}")
-                else:
-                    # Çözülemediyse tarih çıkarımı yapamayız ama devam et
-                    continue
+                continue
 
             # Zaten yeterli içerik varsa sadece tarih çıkarımı yap
             needs_content = len(article.get("summary", "")) <= 500
@@ -381,6 +375,10 @@ class NewsCollector:
                 resp = self.session.get(url, timeout=10, allow_redirects=True)
 
                 if resp.status_code != 200:
+                    continue
+                if resp.status_code in (403, 429, 503):
+                    # Bot koruması / rate limit — hızlı atla
+                    logger.warning(f"    [{i+1}] Blocked ({resp.status_code}): {url[:60]}")
                     continue
 
                 content_type = resp.headers.get("content-type", "")
@@ -401,11 +399,21 @@ class NewsCollector:
                                      "figure", "figcaption", "button"]):
                         tag.decompose()
 
-                    # Makale gövdesini bul
-                    article_tag = raw_soup.find("article")
-                    if article_tag:
-                        text = article_tag.get_text(separator=" ", strip=True)
-                    else:
+                    # Makale gövdesini bul — önce yaygın container'ları dene
+                    text = ""
+                    for container in ["article", "main", ('div', {'role': 'main'}),
+                                       ('div', {'class': 'content'}), ('div', {'id': 'content'})]:
+                        if isinstance(container, tuple):
+                            tag = raw_soup.find(container[0], attrs=container[1])
+                        else:
+                            tag = raw_soup.find(container)
+                        if tag:
+                            text = tag.get_text(separator=" ", strip=True)
+                            if len(text) > 200:
+                                break
+
+                    # Container bulunamadıysa paragraph aggregation
+                    if not text:
                         paragraphs = raw_soup.find_all("p")
                         text = " ".join(
                             p.get_text(strip=True) for p in paragraphs
@@ -414,13 +422,38 @@ class NewsCollector:
 
                     text = re.sub(r"\s+", " ", text).strip()
 
+                    # Yaygın gereksiz metinleri temizle
+                    noise_patterns = [
+                        r"Cookie Policy.*?\.",
+                        r"Subscribe Now.*?\.",
+                        r"Sign Up.*?\.",
+                        r"Privacy Policy.*?\.",
+                        r"Terms of Service.*?\.",
+                        r"All rights reserved.*?\.",
+                        r"© \d{4}.*?\.",
+                        r"Read more.*?\.",
+                        r"Related articles.*?\.",
+                        r"Follow us on.*?\.",
+                        r"Share this article.*?\.",
+                        r"Advertisement.*?\.",
+                        r"Sponsored content.*?\.",
+                        r"Click here to.*?\.",
+                        r"Learn more.*?\.",
+                    ]
+                    for pattern in noise_patterns:
+                        text = re.sub(pattern, "", text, flags=re.IGNORECASE)
+
+                    text = re.sub(r"\s+", " ", text).strip()
+
                     if len(text) > 100:
-                        article["summary"] = text[:1000]
+                        article["summary"] = text[:2000]
                         article["enriched"] = True
-                        logger.info(f"    [{i+1}] Enriched: {len(text)} chars → 1000")
+                        logger.info(f"    [{i+1}] Enriched: {len(text)} chars → 2000")
 
             except requests.exceptions.Timeout:
                 logger.warning(f"    [{i+1}] Timeout: {url[:60]}")
+            except requests.exceptions.HTTPError as e:
+                logger.warning(f"    [{i+1}] HTTP error: {e}")
             except Exception as e:
                 logger.warning(f"    [{i+1}] Enrich error: {str(e)[:80]}")
 
@@ -431,221 +464,6 @@ class NewsCollector:
         logger.info(f"  Enriched {enriched_count}/{len(articles)} articles, {date_count} real dates found")
 
         return articles
-
-    def _resolve_google_news_url(self, google_url: str) -> str:
-        """Google News redirect URL'sini gerçek haber URL'sine çöz.
-        
-        Google News 2024+ uses opaque tokens (AU_yqL...) inside base64 blobs
-        instead of direct URLs. We use multiple strategies:
-        1. Direct base64 decode (works for older/some URLs with embedded http://)
-        2. Google News article page scraping (follow the JS redirect)
-        3. HTTP redirect chain following with various User-Agents
-        """
-        import base64
-
-        REJECT_DOMAINS = {"news.google.com", "consent.google.com", "accounts.google.com"}
-
-        def _is_valid_result(url: str) -> bool:
-            if not url or len(url) < 20:
-                return False
-            return not any(d in url for d in REJECT_DOMAINS)
-
-        def _extract_urls_from_bytes(data: bytes) -> list:
-            text = data.decode("utf-8", errors="ignore")
-            return re.findall(r'https?://[^\s"<>\x00-\x1f\x7f-\x9f]+', text)
-
-        # ── Extract article ID from URL ──
-        article_id = ""
-        if "/articles/" in google_url:
-            article_id = google_url.split("/articles/")[1].split("?")[0]
-
-        # ═══════════════════════════════════════
-        # YÖNTEM 1: Base64 decode (eski format — URL doğrudan gömülü)
-        # ═══════════════════════════════════════
-        if article_id:
-            parts_to_try = [article_id]
-            
-            # SB ayırıcısı varsa parçaları da dene
-            if "SB" in article_id[4:]:
-                sb_idx = article_id.index("SB", 4)
-                parts_to_try.insert(0, article_id[:sb_idx])
-            
-            for part in parts_to_try:
-                for pad in range(4):
-                    try:
-                        decoded = base64.urlsafe_b64decode(part + "=" * pad)
-                        urls = _extract_urls_from_bytes(decoded)
-                        for url in urls:
-                            url = re.split(r'[\x00-\x1f\x7f-\x9f]', url)[0].rstrip('.,;:)]}')
-                            if _is_valid_result(url):
-                                logger.info(f"  Google News decoded (base64): {url[:80]}")
-                                return url
-                    except Exception:
-                        continue
-
-            # Protobuf-style parsing
-            try:
-                for pad in range(4):
-                    try:
-                        decoded = base64.urlsafe_b64decode(article_id + "=" * pad)
-                    except Exception:
-                        continue
-                    for marker in [b'http://', b'https://']:
-                        idx = decoded.find(marker)
-                        while idx >= 0:
-                            end = idx
-                            while end < len(decoded) and decoded[end] > 0x1f and decoded[end] != 0x22:
-                                end += 1
-                            candidate = decoded[idx:end].decode('utf-8', errors='ignore').rstrip('.,;:)]}')
-                            if _is_valid_result(candidate) and len(candidate) > 25:
-                                logger.info(f"  Google News decoded (protobuf): {candidate[:80]}")
-                                return candidate
-                            idx = decoded.find(marker, end)
-            except Exception:
-                pass
-
-        # ═══════════════════════════════════════
-        # YÖNTEM 2: Google News article page — data-n-au attribute veya JS redirect
-        # Google 2024+ formatında article sayfası yüklenip gerçek URL çıkarılır
-        # ═══════════════════════════════════════
-        try:
-            # Google News makale sayfasını yükle
-            gn_session = requests.Session()
-            gn_session.headers.update({
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.9",
-                "Accept-Encoding": "gzip, deflate",
-            })
-            gn_session.cookies.set("CONSENT", "PENDING+987", domain=".google.com")
-            gn_session.cookies.set("NID", "511=fake", domain=".google.com")
-            
-            resp = gn_session.get(
-                google_url,
-                timeout=15,
-                allow_redirects=True
-            )
-            
-            # Check if we got redirected to the actual article
-            if _is_valid_result(resp.url):
-                logger.info(f"  Google News resolved (redirect): {resp.url[:80]}")
-                return resp.url
-            
-            if resp.status_code == 200 and resp.text:
-                html = resp.text
-                
-                # Strategy 2a: data-n-au attribute (Google News article viewer)
-                au_match = re.search(r'data-n-au="([^"]+)"', html)
-                if au_match and _is_valid_result(au_match.group(1)):
-                    logger.info(f"  Google News resolved (data-n-au): {au_match.group(1)[:80]}")
-                    return au_match.group(1)
-                
-                # Strategy 2b: JSON data in the page containing article URL
-                # Google embeds article data in JS variables like AF_initDataCallback
-                json_url_patterns = [
-                    r'"(https?://(?!news\.google\.com)[a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}[^\s"]*)"',
-                ]
-                
-                # Find all non-Google URLs in the page
-                all_urls = re.findall(
-                    r'"(https?://(?!(?:news|accounts|consent|www)\.google\.com)[^\s"<>]{20,})"',
-                    html
-                )
-                
-                # Filter to likely article URLs (not static assets)
-                article_candidates = []
-                for u in all_urls:
-                    u_lower = u.lower()
-                    # Skip static assets, APIs, tracking pixels
-                    if any(ext in u_lower for ext in ['.js', '.css', '.png', '.jpg', '.gif', '.ico', '.svg', '.woff', 'googleapis.com', 'gstatic.com', 'doubleclick', 'analytics', 'facebook.com/tr', 'syndication']):
-                        continue
-                    if _is_valid_result(u):
-                        article_candidates.append(u)
-                
-                if article_candidates:
-                    # Prefer URLs that look like news articles (have path segments)
-                    scored = []
-                    for u in article_candidates:
-                        score = 0
-                        path = u.split("//", 1)[1] if "//" in u else u
-                        segments = path.count("/")
-                        score += min(segments, 4)  # More path = more likely article
-                        if any(w in u.lower() for w in ['article', 'news', 'story', 'post', '2026', '2025']):
-                            score += 3
-                        if len(u) > 60:
-                            score += 1
-                        scored.append((score, u))
-                    
-                    scored.sort(reverse=True)
-                    best = scored[0][1]
-                    logger.info(f"  Google News resolved (page scrape): {best[:80]}")
-                    return best
-                
-                # Strategy 2c: window.location or location.href in inline scripts
-                loc_match = re.search(
-                    r'(?:window\.location|location\.href)\s*=\s*["\']([^"\']+)["\']',
-                    html
-                )
-                if loc_match and _is_valid_result(loc_match.group(1)):
-                    logger.info(f"  Google News resolved (JS redirect): {loc_match.group(1)[:80]}")
-                    return loc_match.group(1)
-                
-                # Strategy 2d: meta refresh
-                meta_match = re.search(
-                    r'<meta[^>]+http-equiv=["\']?refresh["\']?[^>]+url=["\']?([^"\'>;\s]+)',
-                    html, re.I
-                )
-                if meta_match and _is_valid_result(meta_match.group(1)):
-                    logger.info(f"  Google News resolved (meta refresh): {meta_match.group(1)[:80]}")
-                    return meta_match.group(1)
-                
-                # Strategy 2e: <a> tags with article-like hrefs
-                a_matches = re.findall(
-                    r'<a[^>]+href=["\']?(https?://(?!news\.google\.com)[^\s"\'<>]+)["\']?',
-                    html
-                )
-                for href in a_matches:
-                    if _is_valid_result(href) and len(href) > 40:
-                        parsed_href = href.split("//", 1)[1] if "//" in href else href
-                        if parsed_href.count("/") >= 2:  # Has meaningful path
-                            logger.info(f"  Google News resolved (href): {href[:80]}")
-                            return href
-
-        except requests.exceptions.Timeout:
-            logger.warning(f"  Google News page timeout: {google_url[:60]}")
-        except Exception as e:
-            logger.warning(f"  Google News page error: {str(e)[:60]}")
-
-        # ═══════════════════════════════════════
-        # YÖNTEM 3: Farklı User-Agent'larla HTTP redirect
-        # ═══════════════════════════════════════
-        for ua in [
-            "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-            USER_AGENT,
-        ]:
-            try:
-                session = requests.Session()
-                session.cookies.set("CONSENT", "YES+cb.20231119-09-p0.en+FX+410", domain=".google.com")
-                session.headers.update({"User-Agent": ua})
-                
-                resp = session.get(google_url, timeout=10, allow_redirects=True)
-                
-                if resp.history:
-                    for r in resp.history:
-                        loc = r.headers.get("Location", "")
-                        if _is_valid_result(loc):
-                            logger.info(f"  Google News resolved (redirect-{ua[:10]}): {loc[:80]}")
-                            return loc
-                
-                if _is_valid_result(resp.url):
-                    logger.info(f"  Google News resolved (final-{ua[:10]}): {resp.url[:80]}")
-                    return resp.url
-                    
-            except Exception:
-                continue
-
-        logger.warning(f"  Google News URL could NOT be resolved: {google_url[:80]}")
-        return ""
 
     def _extract_publish_date(self, soup: BeautifulSoup) -> str:
         """
@@ -778,12 +596,37 @@ class NewsCollector:
             "baskın",
         }
 
+        # Ek negatif keyword'ler (config'dekilerin üzerine)
+        EXTRA_NEGATIVE = {
+            "drill", "exercise", "simulation", "training",
+            "anniversary", "remembering", "memorial", "commemoration",
+            "years since", "look back", "retrospective",
+            "movie", "film", "book review", "novel",
+            "video game", "game release",
+            "stock market", "shares", "investment",
+            "strike action", "labor dispute", "walkout", "pay dispute",
+            "delayed flight", "cancelled flight", "weather delay",
+            "hotel review", "hotel rating", "star hotel",
+            "tourism record", "travel tips", "booking", "reservation",
+            "renovation", "grand opening",
+            "new security system", "security upgrade", "security technology",
+        }
+        all_negative = set(self.negative_keywords) | EXTRA_NEGATIVE
+
+        def _word_in_text(word: str, text: str) -> bool:
+            """Tam kelime sınırı kontrolü yap — 'airport' 'airportable' içinde yakalanmasın."""
+            # Çok kelimeli ifadeler için regex kullan
+            if len(word.split()) > 1:
+                return word in text
+            # Tek kelimeler için \b sınır kontrolü
+            return bool(re.search(rf'\b{re.escape(word)}\b', text))
+
         filtered = []
 
         for article in articles:
             text = f"{article.get('title', '')} {article.get('summary', '')}".lower()
 
-            has_negative = any(neg in text for neg in self.negative_keywords)
+            has_negative = any(_word_in_text(neg, text) for neg in all_negative)
             if has_negative:
                 min_topic = 1
                 min_event = 2
@@ -793,12 +636,12 @@ class NewsCollector:
 
             topic_matches = []
             for tw in TOPIC_WORDS:
-                if tw in text:
+                if _word_in_text(tw, text):
                     topic_matches.append(tw)
 
             event_matches = []
             for ew in EVENT_WORDS:
-                if ew in text:
+                if _word_in_text(ew, text):
                     event_matches.append(ew)
 
             if len(topic_matches) >= min_topic and len(event_matches) >= min_event:

@@ -116,6 +116,18 @@ negative_keywords:
   - "reservation"
   - "renovation"
   - "grand opening"
+  - "drill"
+  - "exercise"
+  - "training"
+  - "anniversary"
+  - "retrospective"
+  - "look back"
+  - "on this day"
+  - "years since"
+  - "court case"
+  - "trial"
+  - "sentencing"
+  - "documentary"
 
 rss_feeds:
   - name: "Google News - Airport Attack"

@@ -15,7 +15,7 @@ import json
 import time
 import re
 import logging
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from typing import List, Dict
 
 from groq import Groq
@@ -242,6 +242,8 @@ class GeminiAnalyzer:
 
         prompt = f"""Classify each article: is it about a REAL, RECENT physical security incident?
 
+TODAY'S DATE: {datetime.now(timezone.utc).strftime('%Y-%m-%d')}
+
 Categories:
 A) AIRPORT_ATTACK — bomb, gun, knife, explosion, drone attack at airport
 B) AIRLINE_PERSONNEL — physical assault on cabin crew, pilot, ground staff
@@ -257,8 +259,15 @@ NOT relevant (MUST filter out):
 - Threats deemed "not credible" with nothing found
 - Articles about events that happened YEARS AGO (e.g., 2008 Mumbai attacks, 2015 Mali hotel siege, 2016 Brussels bombing) — even if republished recently
 - Movie reviews, book reviews, or media about past attacks
+- Drills, exercises, simulations, training scenarios
 
-IMPORTANT: If the article mentions dates like "2015", "2008", "2016" etc. referring to WHEN the event happened, it is OLD NEWS and NOT relevant.
+AGGRESSIVE STALE DETECTION RULES (apply STRICTLY):
+1. If the article mentions dates like "2015", "2008", "2016", "2020", "2021", "2022" etc. referring to WHEN the event happened, and that year is NOT the current year → it is OLD NEWS and NOT relevant.
+2. If the article contains words like "anniversary", "remembering", "memorial", "commemoration", "years since", "look back", "retrospective", "on this day" → it is OLD NEWS and NOT relevant.
+3. If the article mentions "drill", "exercise", "simulation", "training" → it is NOT relevant.
+4. If the article is about a court case, trial, sentencing, or legal proceedings for a PAST event → it is NOT relevant.
+5. If the article's publish date is recent but it describes an event that clearly happened in a DIFFERENT year → it is NOT relevant (republished old news).
+6. ONLY set relevant:true if the article clearly describes a RECENT physical attack, assault, bombing, or credible threat that happened in the CURRENT YEAR or very recently (within the last few days).
 
 ARTICLES:
 {articles_text}
@@ -316,8 +325,7 @@ Only set relevant:true if the article clearly describes a RECENT physical attack
         date_context += f"\nRSS/FEED DATE: {pub_date}"
 
         # Bugünün tarihini prompt'a ekle (LLM'in zaman algısı için)
-        from datetime import datetime as _dt, timezone as _tz
-        today_str = _dt.now(_tz.utc).strftime("%Y-%m-%d")
+        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         prompt = f"""Extract incident details from this single article.
 
@@ -347,7 +355,7 @@ Return JSON:
   "casualties_injured": 0,
   "perpetrator": "from article or unknown",
   "summary_en": "what happened in max 150 chars",
-  "summary_tr": "Turkish translation max 150 chars",
+  "summary_tr": "Doğal, akıcı Türkçe kullan. Kelime kelime çeviri yapma. Olayın özünü kısa ve net anlat. Teknik terimleri doğru kullan: airport=havalimanı, crew=kabin ekibi, flight attendant=hostes, pilot=pilot, bombing=bombalı saldırı, shooting=silahlı saldırı, stabbing=bıçaklı saldırı, assault=saldırı, hostage=rehine, siege=kuşatma, explosion=patlama, attack=saldırı. Maksimum 150 karakter.",
   "is_ongoing": false,
   "is_false_alarm": false,
   "is_stale": false,
@@ -362,10 +370,13 @@ STRICT RULES:
 - publish_date: Use the ARTICLE REAL PUBLISH DATE if provided, otherwise use RSS/FEED DATE.
 - If no event date in text, use publish_date as fallback.
 - is_false_alarm: true if article says "not credible", "hoax", "nothing found"
-- is_stale: true if the article is reporting on an OLD event that happened BEFORE {MIN_VALID_EVENT_YEAR}. This includes:
-  * Anniversary articles ("10 years ago", "in 2015", "marking the Xth anniversary")
-  * Retrospectives, documentaries, reviews of past events
-  * Republished old news or recycled stories
+- is_stale: true if the article is reporting on an OLD event. DETECTION CRITERIA:
+  * The article mentions a year like "2015", "2008", "2016", "2020", "2021", "2022" etc. referring to WHEN the event happened, and that year is NOT the current year.
+  * The article contains words like "anniversary", "remembering", "memorial", "commemoration", "years since", "look back", "retrospective", "on this day".
+  * The article is about a court case, trial, or sentencing for a past event.
+  * The article is a documentary, book review, or movie about a past attack.
+  * The article is clearly a republished old news story.
+- original_event_year: If the event described happened in a DIFFERENT year than the publish date, write that year (e.g., 2015, 2008). Otherwise null.
   * Court cases or trials about events that happened years ago
 - original_event_year: If the event described happened in a DIFFERENT year than the publish date, write that year (e.g., 2015, 2008). Otherwise null.
 - Do NOT invent casualty numbers. If not mentioned, use 0.
@@ -428,11 +439,9 @@ STRICT RULES:
                 break
 
         if best_date == "unknown":
-            from datetime import datetime, timezone
             best_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         # ── Tarih Tutarlılık Kontrolü ──
-        from datetime import datetime, timezone
         try:
             best_dt = datetime.strptime(best_date, "%Y-%m-%d")
             today = datetime.now(timezone.utc).replace(tzinfo=None)
