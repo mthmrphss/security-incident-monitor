@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
+    # Node.js 24'e erken geçiş (Node.js 20 deprecation uyarısını önler)
+    # 2026-09-16'dan sonra Node.js 20 kaldırılacak
+    # https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
