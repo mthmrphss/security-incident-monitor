@@ -147,9 +147,14 @@ class IncidentStorage:
         }
 
     def _save_incidents(self):
-        self.incidents_data["incidents"].sort(
-            key=lambda x: x.get("date", "0000"), reverse=True
-        )
+        def _sort_key(x):
+            # Önce date, yoksa event_date, yoksa publish_date, yoksa created_at
+            for field in ["date", "event_date", "publish_date", "created_at"]:
+                val = x.get(field, "")
+                if val and str(val).lower() not in ("unknown", "null", "", "none"):
+                    return str(val)
+            return "0000"
+        self.incidents_data["incidents"].sort(key=_sort_key, reverse=True)
         with open(self.incidents_file, "w", encoding="utf-8") as f:
             json.dump(self.incidents_data, f, ensure_ascii=False, indent=2)
 

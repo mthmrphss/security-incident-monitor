@@ -104,7 +104,8 @@ class SmartDeduplicator:
                     merged.append(updated)
                     match_found = True
                     logger.info(
-                        f"  MERGE ({sim:.0%}): {new_inc.get('summary_en', '')[:50]}"
+                        f"  MERGE ({sim:.0%}): {new_inc.get('summary_en', '')[:50]} "
+                        f"-> existing ID: {existing.get('id', 'no-id')}"
                     )
                     break
 
@@ -203,16 +204,17 @@ class SmartDeduplicator:
         ap2 = self._norm(b.get("airport_name") or "")
         if (
             ap1 and ap2
+            and len(ap1) >= 5 and len(ap2) >= 5  # "airport" (7) gibi generic kelimeleri engelle
             and ap1 not in ("unknown", "airport", "")
             and ap2 not in ("unknown", "airport", "")
             and type_a == type_b
         ):
             name_sim = SequenceMatcher(None, ap1, ap2).ratio()
-            if name_sim > 0.6:
+            if name_sim >= 0.80:  # 0.60 → 0.80 (daha katı, yanlış merge önler)
                 date_sim = self._date_similarity(a.get("date", ""), b.get("date", ""))
                 text_sim = self._text_similarity(a, b)
                 if date_sim >= 0.3 and text_sim >= 0.25:
-                    logger.info(f"  Airport name match ({name_sim:.0%}): {ap1} — MERGE")
+                    logger.info(f"  Airport name match ({name_sim:.0%}): {ap1} vs {ap2} — MERGE")
                     return 1.0
 
         # ── KISA DEVRE: Aynı otel kontrolü ──
@@ -341,11 +343,24 @@ class SmartDeduplicator:
             "airport_name", "airport_iata", "hotel_name",
             "venue_name", "perpetrator", "attack_type",
         ]
+        GENERIC_VALUES = {"unknown", "null", "", "none", "airport", "unknown airport", "hotel", "unknown hotel", "venue", "unknown venue"}
         for f in fill_fields:
             cur = m.get(f)
             new = secondary.get(f)
-            if (not cur or cur in ("unknown", "null", "", None)) and new and new not in ("unknown", "null", "", None):
-                m[f] = new
+            cur_norm = str(cur).lower().strip() if cur else ""
+            new_norm = str(new).lower().strip() if new else ""
+            # Yeni değer geçerli ve mevcut boş/genericse → yeni değeri kullan
+            if new and new_norm not in GENERIC_VALUES:
+                if not cur or cur_norm in GENERIC_VALUES:
+                    m[f] = new
+
+        # Summary alanlarını da güncelle: yeni daha uzun/spesifikse üzerine yaz
+        for sf in ["summary_en", "summary_tr"]:
+            cur_sum = m.get(sf, "") or ""
+            new_sum = secondary.get(sf, "") or ""
+            # Yeni özet mevcuttan uzunsa ve boş/generic değilse güncelle
+            if new_sum and len(new_sum) > len(cur_sum) and new_sum.lower().strip() not in {"unknown", "null", "", "none"}:
+                m[sf] = new_sum
 
         for nf in ["casualties_dead", "casualties_injured"]:
             try:
