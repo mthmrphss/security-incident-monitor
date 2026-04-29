@@ -8,3 +8,8 @@ venv/
 *.log
 .DS_Store
 Thumbs.db
+
+# Internal planning / IDE files
+.kilo/
+.vscode/
+.idea/
