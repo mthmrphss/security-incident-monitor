@@ -618,5 +618,15 @@
     "lat": 38.916454,
     "lon": -77.045161,
     "display_name": "Washington Hilton, 1919, Connecticut Avenue Northwest, Columbia Heights, Ward 1, Washington, District of Columbia, 20009, United States"
+  },
+  "lakeland international airport": {
+    "lat": 27.985711,
+    "lon": -82.020714,
+    "display_name": "Lakeland Linder International Airport, 3900, Don Emerson Drive, Lakeland, Polk County, Florida, 33811, United States"
+  },
+  "lakeland linder international airport, lakeland": {
+    "lat": 27.985711,
+    "lon": -82.020714,
+    "display_name": "Lakeland Linder International Airport, 3900, Don Emerson Drive, Lakeland, Polk County, Florida, 33811, United States"
   }
 }

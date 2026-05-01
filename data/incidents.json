@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-04-29T19:52:48.827573+00:00",
-    "total_incidents": 106,
+    "last_updated": "2026-05-01T19:23:35.655620+00:00",
+    "total_incidents": 107,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,64 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-01",
+      "publish_date": "2026-05-01",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Lakeland",
+      "location_detail": "Lakeland International Airport",
+      "airport_name": "Lakeland International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Lakeland International Airport reopens after bomb threat",
+      "summary_tr": "Lakeland Uluslararası Havalimanı bomba tehdidinden sonra yeniden açıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "false_alarm"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-01",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOMGJWUzBVd3RNeFM3aGswQTlOLUpRNGZvckhXVnZCNm9IOTVPVmM1Z3lXTHhzcTBYU3pVaVV2YllDdzJwSDJvYm1Zd05CVi1xQWJKU0JuQ3ZmeXA3WEx1ZjdJdWtpTEtJcUlWbXN1QVdxLWRrSE01TVRwU2t2SmJwdUFrUHNqY2dtQjZ4U1MtakdvZk8xdGItVkl2X19FUdIBowFBVV95cUxPZExVbkxiUmxBZ0VJVXE0MkRuazZ4bjRkMFQ2dFAwRnVTZXpzOElCVDdVZzl3X1hVOXJzRTh4RlhfSUUxTkZEQV9GWGtELTQwTkVadV9IeXFKLW1OR1ctRU0tcFlhNVBCaWtLclgtZXcyRnU4ajI3YjE4Y2FEeDZzS2ltOWo1Q0NUZERXR3Yyc1FUY1VMZGhTZU9SRWs2RnJkSlln?oc=5",
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVWRNaGVSa0oydHhXbHFFd3dhcTZxUFZRODB1OWZyakwyRmJVNnRiMm9ZZUN6b09QQTlmNGIzV0g2MWFSMjR3Z1N5MzVOQWZsYWpWRURCS0tkMGl4MmVseldTcWxYUUZYdXAwWHdMWHBtYTdHUUtYYm1SMk5mandmMVZMdUdIOVVxeVR6ZHBaMU95NE1VUUhYNUJ4ZjduMXZOd2M0czdLNUFVT05vY1o4cUY3MVk4TVhZYWZFSWJWZlhzZFNleFloc3RHWQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 27.985711,
+      "geo_lon": -82.020714,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "source_count": 2,
+      "last_updated": "2026-05-01T19:23:35.655615+00:00",
+      "id": "a375e41756f1",
+      "created_at": "2026-05-01T19:23:35.655606+00:00"
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-04-29",
