@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-02T13:32:08.188885+00:00",
+    "last_updated": "2026-05-02T19:14:49.390360+00:00",
     "total_incidents": 108,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -30,7 +30,7 @@
       "airport_name": "Lakeland International Airport",
       "airport_iata": "MEL",
       "hotel_name": null,
-      "venue_name": "airport",
+      "venue_name": "airport terminal",
       "attack_type": "threat",
       "severity": "low",
       "casualties_dead": 0,
@@ -52,8 +52,9 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVWRNaGVSa0oydHhXbHFFd3dhcTZxUFZRODB1OWZyakwyRmJVNnRiMm9ZZUN6b09QQTlmNGIzV0g2MWFSMjR3Z1N5MzVOQWZsYWpWRURCS0tkMGl4MmVseldTcWxYUUZYdXAwWHdMWHBtYTdHUUtYYm1SMk5mandmMVZMdUdIOVVxeVR6ZHBaMU95NE1VUUhYNUJ4ZjduMXZOd2M0czdLNUFVT05vY1o4cUY3MVk4TVhZYWZFSWJWZlhzZFNleFloc3RHWQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMldMeEZ4eUdvTHVLZmNBaUZ2a1FXbzRTZHY5WHBTcmd3YkdxOGV6cWpOVmRQZ0ktUlNacERhYWNVcHBERWVsYlFKSUJBQ0NHZmtZQ3FUZE1JSi14MlpEMUI0eGNqZ1VDNHN6bHZyUV9Jdk5KUHdtVzdubENMRjVnVFhqZ2llNUsxbE01NFJqZjhNeDlEaVMxTFhwa2VJaHA1WDhYbHhPZzN6VUdKQTZrLUdBQdIBxwFBVV95cUxPOEg0UTZiYnhfcENacmtYU1ZPNFZmbWE0NlJfaUpub21qcExpWTVKQUtjaWNCM0tSb01LUzRzQzZYdjFnTFJEb2EtN29LbmFqMm5wbWZzazZQQ21lNXVhcWN4U0M2dkJSajZFU3M0QmJESkduVHZwanBsaG5mZm11am1Lekl6YVlqMTVUTDRhNlB5OUdYY1RlMHpSdHhqQVA4N3dIVThwTnY1NHB6emt1ME9TZGtlZF9OZkdIOTJpVTRma0tBeEhr?oc=5",
-        "https://news.google.com/rss/articles/CBMingFBVV95cUxOMGJWUzBVd3RNeFM3aGswQTlOLUpRNGZvckhXVnZCNm9IOTVPVmM1Z3lXTHhzcTBYU3pVaVV2YllDdzJwSDJvYm1Zd05CVi1xQWJKU0JuQ3ZmeXA3WEx1ZjdJdWtpTEtJcUlWbXN1QVdxLWRrSE01TVRwU2t2SmJwdUFrUHNqY2dtQjZ4U1MtakdvZk8xdGItVkl2X19FUdIBowFBVV95cUxPZExVbkxiUmxBZ0VJVXE0MkRuazZ4bjRkMFQ2dFAwRnVTZXpzOElCVDdVZzl3X1hVOXJzRTh4RlhfSUUxTkZEQV9GWGtELTQwTkVadV9IeXFKLW1OR1ctRU0tcFlhNVBCaWtLclgtZXcyRnU4ajI3YjE4Y2FEeDZzS2ltOWo1Q0NUZERXR3Yyc1FUY1VMZGhTZU9SRWs2RnJkSlln?oc=5"
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOMGJWUzBVd3RNeFM3aGswQTlOLUpRNGZvckhXVnZCNm9IOTVPVmM1Z3lXTHhzcTBYU3pVaVV2YllDdzJwSDJvYm1Zd05CVi1xQWJKU0JuQ3ZmeXA3WEx1ZjdJdWtpTEtJcUlWbXN1QVdxLWRrSE01TVRwU2t2SmJwdUFrUHNqY2dtQjZ4U1MtakdvZk8xdGItVkl2X19FUdIBowFBVV95cUxPZExVbkxiUmxBZ0VJVXE0MkRuazZ4bjRkMFQ2dFAwRnVTZXpzOElCVDdVZzl3X1hVOXJzRTh4RlhfSUUxTkZEQV9GWGtELTQwTkVadV9IeXFKLW1OR1ctRU0tcFlhNVBCaWtLclgtZXcyRnU4ajI3YjE4Y2FEeDZzS2ltOWo1Q0NUZERXR3Yyc1FUY1VMZGhTZU9SRWs2RnJkSlln?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPM05mNkVaR3A4d1pyeE9tV1VydC16THRVaDZWUzBndWRpMkRXTVZFNUtFaVlFaVlpS1NaZk05LUU5bTctTjU2UnRkejJmUnY5LXRIWWktNlVpekllODRHYk1xNzlya3dDZ3ExamVHbzhlb2VSSWVOSHBmdjU5WnNyc3F5emVFalpSSXhCSg?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMldMeEZ4eUdvTHVLZmNBaUZ2a1FXbzRTZHY5WHBTcmd3YkdxOGV6cWpOVmRQZ0ktUlNacERhYWNVcHBERWVsYlFKSUJBQ0NHZmtZQ3FUZE1JSi14MlpEMUI0eGNqZ1VDNHN6bHZyUV9Jdk5KUHdtVzdubENMRjVnVFhqZ2llNUsxbE01NFJqZjhNeDlEaVMxTFhwa2VJaHA1WDhYbHhPZzN6VUdKQTZrLUdBQdIBxwFBVV95cUxPOEg0UTZiYnhfcENacmtYU1ZPNFZmbWE0NlJfaUpub21qcExpWTVKQUtjaWNCM0tSb01LUzRzQzZYdjFnTFJEb2EtN29LbmFqMm5wbWZzazZQQ21lNXVhcWN4U0M2dkJSajZFU3M0QmJESkduVHZwanBsaG5mZm11am1Lekl6YVlqMTVUTDRhNlB5OUdYY1RlMHpSdHhqQVA4N3dIVThwTnY1NHB6emt1ME9TZGtlZF9OZkdIOTJpVTRma0tBeEhr?oc=5"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "quality_score": 0.75,
       "verification_status": "verified",
       "verification_score": 0.75,
-      "source_count": 3,
-      "last_updated": "2026-05-02T03:36:04.506280",
+      "source_count": 4,
+      "last_updated": "2026-05-02T19:14:49.390249",
       "id": "a375e41756f1",
       "created_at": "2026-05-01T19:23:35.655606+00:00"
     },
