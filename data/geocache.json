@@ -628,5 +628,15 @@
     "lat": 27.985711,
     "lon": -82.020714,
     "display_name": "Lakeland Linder International Airport, 3900, Don Emerson Drive, Lakeland, Polk County, Florida, 33811, United States"
+  },
+  "melbourne airport, melbourne, australia": {
+    "lat": -37.676449,
+    "lon": 144.836538,
+    "display_name": "Melbourne Airport, Melbourne, City of Hume, Victoria, 3045, Australia"
+  },
+  "george hotel, melbourne, australia": {
+    "lat": -37.859805,
+    "lon": 144.977714,
+    "display_name": "George Hotel, Grey Street, St Kilda, Melbourne, City of Port Phillip, Victoria, 3182, Australia"
   }
 }
