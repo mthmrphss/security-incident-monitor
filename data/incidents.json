@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-03T03:54:01.357829+00:00",
-    "total_incidents": 109,
+    "last_updated": "2026-05-03T13:26:34.126263+00:00",
+    "total_incidents": 110,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-05-03",
+      "publish_date": "2026-05-03",
+      "country": "Pakistan",
+      "country_code": "PK",
+      "city": "Karachi",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": "KHI",
+      "hotel_name": "unknown",
+      "venue_name": "hotel",
+      "attack_type": "assault",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "hotel owner and staff",
+      "summary_en": "Hotel owner and staff booked for assaulting a food delivery rider",
+      "summary_tr": "Otel sahibi ve personeli bir yemek dağıtım sürücüsüne saldırmaktan dolayı tutuklandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "hotel attack",
+        "assault",
+        "Karachi"
+      ],
+      "date": "2026-05-03",
+      "year": 2026,
+      "source_urls": [
+        "https://www.pakistantoday.com.pk/2026/05/03/hotel-owner-staff-booked-for-assaulting-on-food-delivery-rider-in-karachi"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 24.854684,
+      "geo_lon": 67.020706,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "a355912e5adf",
+      "created_at": "2026-05-03T13:26:34.126248+00:00",
+      "last_updated": "2026-05-03T13:26:34.126257+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-05-02",

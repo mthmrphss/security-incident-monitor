@@ -638,5 +638,10 @@
     "lat": -37.859805,
     "lon": 144.977714,
     "display_name": "George Hotel, Grey Street, St Kilda, Melbourne, City of Port Phillip, Victoria, 3182, Australia"
+  },
+  "karachi, pakistan": {
+    "lat": 24.854684,
+    "lon": 67.020706,
+    "display_name": "کراچی ڈویژن, سندھ, پاکستان"
   }
 }
