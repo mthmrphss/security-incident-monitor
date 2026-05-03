@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-03T13:26:34.126263+00:00",
-    "total_incidents": 110,
+    "last_updated": "2026-05-03T19:12:01.350748+00:00",
+    "total_incidents": 112,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -78,6 +78,120 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-03",
+      "publish_date": "2026-05-03",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Imphal",
+      "location_detail": "near Imphal airport",
+      "airport_name": "Imphal airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb blast near Imphal airport",
+      "summary_tr": "Imphal havalimanı yakınlarında bombalı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "bombing",
+        "airport attack"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-03",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQT3FVOXVBSlBnR2xKOHoxOWY1em5xYU1iR001M3pwSmkwQUNWMmJhX3dJMlZ3bFVwY196cTVZNXZVVmdkWTNxdVRYZUJtc016WEdReThBazZXOV9ObGtIVWo3WkdvcjBsSEQ4eHJ6bW8xdl85aUpCMGtCazczcXRWTTdqQjJRMHZCeXJNTXZwTDc0SUF1SEZyM3haQkxYMFJUYjlUdmNjdDl6UFXSAbABQVVfeXFMTmJhN2Z4S29ZOVJyYUJqVzFWRERkNTJ4MC16SlJEZjVXWG4xYzFneHpOZEs5bkItbjljSTNrRXBpUndwRUpzaWtQQ1AtckZaZExRT0tJeHpPdlhPbFp5Ymo5OUNQUDdQTmVEQXlYZmNXaFVwZFpGVWpWUDJrRUh2YnBlSjVNN1BEbTlWbWFEWDZDRkJqd3dBR1JReGdwSk5EY2l4eGJseWlneWFMbTlMcGc?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 24.757604,
+      "geo_lon": 93.892777,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "f9b121216819",
+      "created_at": "2026-05-03T19:12:01.350715+00:00",
+      "last_updated": "2026-05-03T19:12:01.350724+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "event_date": "2026-05-03",
+      "publish_date": "2026-05-03",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "on a United flight",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "United Airlines",
+      "attack_type": "assault",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Passenger assaulted flight attendant",
+      "summary_tr": "Yolcu hostese saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "United Airlines",
+        "flight attendant",
+        "assault"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-03",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUnBTczBadTd2MFJ5dkdRNnlSOEoxa1kzempLVTRpcDdGazhqbnptMk9WY0hSYl9oNUJIQnlGY3ZreVJTdGkyLVF1UUFwVkd1bnpONGhPUTJsSzBCNS1hWG5NZUZOSWFPcHg2OEpETzNQQXBzUnJHNjZkbDI2TElQWDJIUndYVFQ5SndDMWlwU3F0ckV0ZGxPSjMyZlJEOGox?oc=5",
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxNeDQ5OTdEa0ZFenRTbEJvcTZjbkk3WHRteDlwXzZLYV9mSFF3N0IzNVBuVzZTM0RzdjJPOElkS1B6bmNLNU9aT2dsSHBiZ09vRXdSVlZySVBNN2ZLZU1KMkNqNnZrZDRCNHlOY1BjWDEyd1pTNHo2Vk9kWmtpMlBDWHJDN05IYlM0RS10MTRnVWZHWTBKRjM5VkdMSEk5TU04Nnk4V0J1T3daME9XbTBvRjEzT2VkWDF4TllXaDVWbjlBdURkUFdKMUxlbDA?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 42.007112,
+      "geo_lon": -87.905826,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "source_count": 2,
+      "last_updated": "2026-05-03T19:12:01.350744+00:00",
+      "id": "1bf1b2391dcc",
+      "created_at": "2026-05-03T19:12:01.350739+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-05-02",
       "publish_date": "2026-05-02",
       "country": "unknown",
@@ -94,7 +208,7 @@
       "casualties_injured": 0,
       "perpetrator": "unknown",
       "summary_en": "Bomb squad checks suspicious backpack",
-      "summary_tr": "Şüpheli çanta için bomba timi",
+      "summary_tr": "Esrarengiz sırt çantası bomba alarmına neden oldu",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -108,13 +222,14 @@
       "date": "2026-05-02",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLUxnYjRweklodWdUVlhTaU11TTRIWGxtNzZyVHJ4U3VNa1FiWi1fY3NSYjlYNDlDWTNhNmNiWVBGT3ZnS3UxeTNidnV4QUZ3Tkh4UE9UdzBNMG5HcDEwNEJvVUw2VHBZaktheXJiZVpzaHhYUkxUQ0tXeE5ZeXdZbHRzZ3BCa3BKMG9FSnVreHFub3I5Z0xIbHJUZU9jRjJuYXMwaVd3ZXp0NG1QYm1oQTNhNWJaUC1GWkhuZHRR?oc=5"
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLUxnYjRweklodWdUVlhTaU11TTRIWGxtNzZyVHJ4U3VNa1FiWi1fY3NSYjlYNDlDWTNhNmNiWVBGT3ZnS3UxeTNidnV4QUZ3Tkh4UE9UdzBNMG5HcDEwNEJvVUw2VHBZaktheXJiZVpzaHhYUkxUQ0tXeE5ZeXdZbHRzZ3BCa3BKMG9FSnVreHFub3I5Z0xIbHJUZU9jRjJuYXMwaVd3ZXp0NG1QYm1oQTNhNWJaUC1GWkhuZHRR?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeDZlZzFLNnBHaE1hN1gxVzJoLW9VVVNZblh3VHAteXFsaXVfUjJPeVk3X0lyYlVCTXltWUFiNE5ISGZ6d1Zac29TT2ZublpEZnhIZm9nbHlIMlNmQ3hzbzUwZXhBYTVCUmRLTmFrVnRWVXBiV1dHMG9mOHctUVgtN0VtMnM5NFVuRFU2RE9Ea0tGS1lNVktnRW1FUGo2ZXNJRFhGZEdCSQ?oc=5"
       ],
       "source_articles": [
         0
       ],
-      "geo_lat": null,
-      "geo_lon": null,
+      "geo_lat": 36.962752,
+      "geo_lon": -93.694958,
       "validation_signals": {
         "has_country": false,
         "has_city": true,
@@ -130,8 +245,8 @@
       "verification_score": 0.85,
       "id": "3812832baaad",
       "created_at": "2026-05-03T03:54:01.357817+00:00",
-      "last_updated": "2026-05-03T03:54:01.357824+00:00",
-      "source_count": 1
+      "last_updated": "2026-05-03T19:12:01.304852",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",

@@ -643,5 +643,25 @@
     "lat": 24.854684,
     "lon": 67.020706,
     "display_name": "کراچی ڈویژن, سندھ, پاکستان"
+  },
+  "aurora airport, aurora": {
+    "lat": 36.962752,
+    "lon": -93.694958,
+    "display_name": "Aurora Memorial Municipal Airport, East Highland Street, Aurora, Lawrence County, Missouri, 65605, United States"
+  },
+  "imphal airport, imphal, india": {
+    "lat": 24.757604,
+    "lon": 93.892777,
+    "display_name": "Bir Tikendrajit International Airport, Tiddim Road, Tulihal, Wangoi, Imphal West, Manipur, 795140, India"
+  },
+  "united airlines": {
+    "lat": 42.007112,
+    "lon": -87.905826,
+    "display_name": "United Airlines, 11555, West Touhy Avenue, Chicago, Elk Grove Township, Cook County, Illinois, 60666, United States"
+  },
+  "airplane": {
+    "lat": 40.771778,
+    "lon": -111.951375,
+    "display_name": "Airplane, 2100 West, Jordan Meadows, Salt Lake City, Salt Lake County, Utah, 84134, United States"
   }
 }
