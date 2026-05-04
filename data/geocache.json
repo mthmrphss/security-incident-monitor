@@ -663,5 +663,10 @@
     "lat": 40.771778,
     "lon": -111.951375,
     "display_name": "Airplane, 2100 West, Jordan Meadows, Salt Lake City, Salt Lake County, Utah, 84134, United States"
+  },
+  "newark, newark": {
+    "lat": 53.073627,
+    "lon": -0.800542,
+    "display_name": "Newark, Newark on Trent, Newark and Sherwood, Nottinghamshire, East Midlands, England, United Kingdom"
   }
 }
