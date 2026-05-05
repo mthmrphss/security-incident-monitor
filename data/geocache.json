@@ -668,5 +668,10 @@
     "lat": 53.073627,
     "lon": -0.800542,
     "display_name": "Newark, Newark on Trent, Newark and Sherwood, Nottinghamshire, East Midlands, England, United Kingdom"
+  },
+  "south africa": {
+    "lat": -28.816624,
+    "lon": 24.991639,
+    "display_name": "South Africa"
   }
 }

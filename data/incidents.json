@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-04T19:53:09.415842+00:00",
-    "total_incidents": 112,
+    "last_updated": "2026-05-05T19:46:03.908473+00:00",
+    "total_incidents": 113,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-05-05",
+      "publish_date": "2026-05-05",
+      "country": "South Africa",
+      "country_code": "ZA",
+      "city": "unknown",
+      "location_detail": "Komati River",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "other",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "crocodile",
+      "summary_en": "Crocodile kills hotel owner",
+      "summary_tr": "Timsah otel sahibi öldürdü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "wildlife attack",
+        "hotel attack"
+      ],
+      "date": "2026-05-05",
+      "year": 2026,
+      "source_urls": [
+        "https://malawi24.com/2026/05/05/how-many-people-did-this-crocodile-kill-childrens-shoes-found-inside-the-beast-that-ate-south-african-hotel-owner/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": -28.816624,
+      "geo_lon": 24.991639,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "c0217ace3a17",
+      "created_at": "2026-05-05T19:46:03.908456+00:00",
+      "last_updated": "2026-05-05T19:46:03.908463+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-05-03",
