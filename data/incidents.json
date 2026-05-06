@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-06T08:42:24.238048+00:00",
+    "last_updated": "2026-05-06T19:55:56.931398+00:00",
     "total_incidents": 114,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -93,7 +93,7 @@
       "casualties_injured": 0,
       "perpetrator": "UAE and Ethiopia",
       "summary_en": "Drone attack on Khartoum airport",
-      "summary_tr": "Hartum havalimanına drone saldırısı",
+      "summary_tr": "Hartum Havalimanı'na drone saldırısı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -108,6 +108,7 @@
       "date": "2026-05-05",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNcklwdG1neFhhY2VMaU96NzFoS0MyQk5leUVoZmlVNFhYOC10VXNfYjI0LXc3dE05OTRrRnd5WjYtYTBnM05lZ2VlMkFpMmVYT3g1Q0ZJdkN1anBqYk1BOGlJd01SWHhQRjQzU2Z0bzE4M3RhTXFhc25tRUxGQ1RNSk1KbWtuOFE3a2JNRVJtbTNlUndGUW1uZVlHd3gyaEtUd3k5ckMwcU13Y3lRTDVua2JSSzdWVDBXeHh4UEo2RkJIQ0xuLURyYWtWb1VyR0hjYnV5UG5FS05xbXpxZXQ2UlQycWdpZkpFdVBlVHBBQ0hocEgw?oc=5",
         "https://news.google.com/rss/articles/CBMingFBVV95cUxQd2x6QUJiX0VXQ2JPc0pXM3RQVEc2UG53ejFidmkxT3R5cmRaWTBhNlkzcFA4eWNlX1Vmc0dZZDYyeWZZa3p0b0JtTUxVeGsteG1hZ01qSm1wb0UwcElSTjllRTBqcDlBZVhhMkVrTGxkUy1LSnllazlXeDFBSm9WYnhEUVJIbFlmVm9yM2lJU09reVlPZEkzeWpEZG5yZw?oc=5",
         "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMS1aN0JrdmllZUx1ZDU3aWRxODhsU2N5ZHNvSlVmVVRQeEdreTNsWFpMOVMwdWZiT2djbWZYYTl0aEcyRWpLUkZ5NEYtWTF1YkY4TjFaYkxSN3Nod1BOZnAwN0F6bS1jb242N0FHV1pObWVIRThrYm1obDFMaUNuVWpfS0NDdlM3c2NZTjhNTXFUb0xNbmZPblMyQ0Jyc1J4X0VZVGFuTENRU01TclRPRTUtZ2FrSDBLN0dPZFl2YXpjTzTSAcgBQVVfeXFMTWFGZnhEcFVtbnI5QzB4X1hTcktaSC1oQnhnUXRlWnB0cEl1ZUIxNUZOOF9PNTkzTVhDNEhlQTB3RVZYbExmMmJRVTRyeUZKdktMSVo2aDRENjlwSVdMRW83YThGSXFxU2NTWlZCRzQwd2FnbDRySUJ5ak9yWV9DcTBpdWNseEk5aUxDam5wXy05OUVEdHFHZW9lcVdaMGtuSlRuMkNOdjRXTXA1eFVVQ3Z2Ml9SRklNT0ZwcVV6OGFHY2twcl9CRTg?oc=5"
       ],
@@ -131,8 +132,8 @@
       "verification_score": 1.0,
       "id": "9fc325d61356",
       "created_at": "2026-05-06T03:50:10.013869+00:00",
-      "last_updated": "2026-05-06T08:42:24.237917",
-      "source_count": 2
+      "last_updated": "2026-05-06T19:55:56.931290",
+      "source_count": 3
     },
     {
       "incident_type": "HOTEL_ATTACK",
