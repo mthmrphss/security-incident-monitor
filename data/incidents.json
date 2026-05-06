@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-05T19:46:03.908473+00:00",
-    "total_incidents": 113,
+    "last_updated": "2026-05-06T03:50:10.013881+00:00",
+    "total_incidents": 114,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -73,6 +73,64 @@
       "id": "c0217ace3a17",
       "created_at": "2026-05-05T19:46:03.908456+00:00",
       "last_updated": "2026-05-05T19:46:03.908463+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-05",
+      "publish_date": "2026-05-05",
+      "country": "Sudan",
+      "country_code": "SD",
+      "city": "Khartoum",
+      "location_detail": "Khartoum airport",
+      "airport_name": "Khartoum airport",
+      "airport_iata": "KRT",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Drone attack on Khartoum airport",
+      "summary_tr": "Hartum havalimanına drone saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone attack",
+        "airport attack",
+        "Sudan",
+        "Khartoum"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-05",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxQd2x6QUJiX0VXQ2JPc0pXM3RQVEc2UG53ejFidmkxT3R5cmRaWTBhNlkzcFA4eWNlX1Vmc0dZZDYyeWZZa3p0b0JtTUxVeGsteG1hZ01qSm1wb0UwcElSTjllRTBqcDlBZVhhMkVrTGxkUy1LSnllazlXeDFBSm9WYnhEUVJIbFlmVm9yM2lJU09reVlPZEkzeWpEZG5yZw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 15.590212,
+      "geo_lon": 32.555054,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "9fc325d61356",
+      "created_at": "2026-05-06T03:50:10.013869+00:00",
+      "last_updated": "2026-05-06T03:50:10.013876+00:00",
       "source_count": 1
     },
     {
@@ -192,8 +250,8 @@
       "incident_type": "AIRLINE_PERSONNEL",
       "event_date": "2026-05-03",
       "publish_date": "2026-05-03",
-      "country": "unknown",
-      "country_code": "unknown",
+      "country": "United States",
+      "country_code": "US",
       "city": "Newark",
       "location_detail": "on a United flight",
       "airport_name": "Newark",
@@ -201,10 +259,10 @@
       "hotel_name": null,
       "venue_name": "United Airlines",
       "attack_type": "assault",
-      "severity": "unknown",
+      "severity": "medium",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
+      "perpetrator": "a crazed United Airlines passenger",
       "summary_en": "Passenger detained after attacking flight attendant",
       "summary_tr": "Hostes saldırısı后的 bir yolcunun tutuklanması",
       "is_ongoing": false,
@@ -220,10 +278,11 @@
       "date": "2026-05-03",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUnBTczBadTd2MFJ5dkdRNnlSOEoxa1kzempLVTRpcDdGazhqbnptMk9WY0hSYl9oNUJIQnlGY3ZreVJTdGkyLVF1UUFwVkd1bnpONGhPUTJsSzBCNS1hWG5NZUZOSWFPcHg2OEpETzNQQXBzUnJHNjZkbDI2TElQWDJIUndYVFQ5SndDMWlwU3F0ckV0ZGxPSjMyZlJEOGox?oc=5",
-        "https://news.google.com/rss/articles/CBMizAFBVV95cUxNeDQ5OTdEa0ZFenRTbEJvcTZjbkk3WHRteDlwXzZLYV9mSFF3N0IzNVBuVzZTM0RzdjJPOElkS1B6bmNLNU9aT2dsSHBiZ09vRXdSVlZySVBNN2ZLZU1KMkNqNnZrZDRCNHlOY1BjWDEyd1pTNHo2Vk9kWmtpMlBDWHJDN05IYlM0RS10MTRnVWZHWTBKRjM5VkdMSEk5TU04Nnk4V0J1T3daME9XbTBvRjEzT2VkWDF4TllXaDVWbjlBdURkUFdKMUxlbDA?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU2hMZGVkdnZBZGlVZDM4V3FLU1JmQVpoRVdib1BnbDZ3SDhuTkx4ZlNhOXM2bzVjMjNtQlZyc2tTVlVWdWVQMlVxenN3a0Y3OWRZc0ZjeDVzRzZ0djlMRXFQbGJIQmd5UmVfSzdHT1ZqVWM2WUFsRkZkN0lVREQzbEpwMzF6MVRiRDZfV9IBlAFBVV95cUxOb3Z6NjE1SUJyYkpBRkZUVkRjQWdzYzhFZVB6SlNtRTRGVksxS1JHa3ZWSWtaN3JaT3dFNzZGeHdpWVhaMTh0dUNGTFlvWlU4U1FmU1VmamctUWw4TDZpUkd6azJpMUgyaEdUWF9CMEFTN2c3S1RoWEtxRkNpR01OeHY2Q1had1lucGhWNGEzdVpvenQ2?oc=5",
+        "https://www.skynews.com.au/world-news/united-states/wild-moment-united-airlines-passenger-assaults-flight-attendant-tries-to-storm-cockpit-revealed-in-audio/news-story/93ae27660fc279f58a3716c7f1fa29c2?nk=8749f46eda967fc5bf97846178b49953-1777857408",
         "https://news.google.com/rss/articles/CBMilwFBVV95cUxNalo4b2RsTk1GOEYtaFhnS3o5dXdzN3VneFZUQ0RuUThWZF9Qb1k0c0t5UzRIWXhndnJYcFhLRERGaTgwNWRueUFoM1VvOGlsV3RGWDRmTGFmM3BHemlZMG9oMlVDM0pjSGpzc1JRVkotOFNINnBfRHoxeEphNmVOajloSnFJTHZRT0dJeUZYT1VBYmRXS0Q0?oc=5",
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU2hMZGVkdnZBZGlVZDM4V3FLU1JmQVpoRVdib1BnbDZ3SDhuTkx4ZlNhOXM2bzVjMjNtQlZyc2tTVlVWdWVQMlVxenN3a0Y3OWRZc0ZjeDVzRzZ0djlMRXFQbGJIQmd5UmVfSzdHT1ZqVWM2WUFsRkZkN0lVREQzbEpwMzF6MVRiRDZfV9IBlAFBVV95cUxOb3Z6NjE1SUJyYkpBRkZUVkRjQWdzYzhFZVB6SlNtRTRGVksxS1JHa3ZWSWtaN3JaT3dFNzZGeHdpWVhaMTh0dUNGTFlvWlU4U1FmU1VmamctUWw4TDZpUkd6azJpMUgyaEdUWF9CMEFTN2c3S1RoWEtxRkNpR01OeHY2Q1had1lucGhWNGEzdVpvenQ2?oc=5"
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxNeDQ5OTdEa0ZFenRTbEJvcTZjbkk3WHRteDlwXzZLYV9mSFF3N0IzNVBuVzZTM0RzdjJPOElkS1B6bmNLNU9aT2dsSHBiZ09vRXdSVlZySVBNN2ZLZU1KMkNqNnZrZDRCNHlOY1BjWDEyd1pTNHo2Vk9kWmtpMlBDWHJDN05IYlM0RS10MTRnVWZHWTBKRjM5VkdMSEk5TU04Nnk4V0J1T3daME9XbTBvRjEzT2VkWDF4TllXaDVWbjlBdURkUFdKMUxlbDA?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUnBTczBadTd2MFJ5dkdRNnlSOEoxa1kzempLVTRpcDdGazhqbnptMk9WY0hSYl9oNUJIQnlGY3ZreVJTdGkyLVF1UUFwVkd1bnpONGhPUTJsSzBCNS1hWG5NZUZOSWFPcHg2OEpETzNQQXBzUnJHNjZkbDI2TElQWDJIUndYVFQ5SndDMWlwU3F0ckV0ZGxPSjMyZlJEOGox?oc=5"
       ],
       "source_articles": [
         0
@@ -243,8 +302,8 @@
       "quality_score": 0.6,
       "verification_status": "probable",
       "verification_score": 0.6,
-      "source_count": 4,
-      "last_updated": "2026-05-04T19:53:09.415729",
+      "source_count": 5,
+      "last_updated": "2026-05-06T03:50:10.013739",
       "id": "1bf1b2391dcc",
       "created_at": "2026-05-03T19:12:01.350739+00:00"
     },

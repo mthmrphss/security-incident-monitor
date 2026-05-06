@@ -673,5 +673,15 @@
     "lat": -28.816624,
     "lon": 24.991639,
     "display_name": "South Africa"
+  },
+  "khartoum airport, khartoum, sudan": {
+    "lat": 15.590212,
+    "lon": 32.555054,
+    "display_name": "مطار الخرطوم الدولي, شارع الصفا, بري المحس, بري, الخرطوم, ولاية الخرطوم, 00249, السودان"
+  },
+  "airplane, united states": {
+    "lat": 40.771778,
+    "lon": -111.951375,
+    "display_name": "Airplane, 2100 West, Jordan Meadows, Salt Lake City, Salt Lake County, Utah, 84134, United States"
   }
 }
