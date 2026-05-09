@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-06T19:55:56.931398+00:00",
-    "total_incidents": 114,
+    "last_updated": "2026-05-09T19:17:49.393337+00:00",
+    "total_incidents": 115,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-08",
+      "publish_date": "2026-05-09",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Denver",
+      "location_detail": "runway at Denver International Airport",
+      "airport_name": "Denver International Airport",
+      "airport_iata": "DEN",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Person struck by plane at Denver airport",
+      "summary_tr": "Havalimanı pistinde uçak tarafından biri öldü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "aviation incident",
+        "airport security"
+      ],
+      "date": "2026-05-08",
+      "year": 2026,
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/9/one-dead-in-us-after-being-struck-by-taking-off-frontier-airlines-plane?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c5y95782wyko?at_medium=RSS&at_campaign=rss"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 39.860668,
+      "geo_lon": -104.685367,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-05-09T19:17:49.393329+00:00",
+      "id": "bd1790a3c5ac",
+      "created_at": "2026-05-09T19:17:49.393320+00:00"
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-05-05",
