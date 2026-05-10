@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-09T19:17:49.393337+00:00",
+    "last_updated": "2026-05-10T08:19:46.047987+00:00",
     "total_incidents": 115,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -50,7 +50,8 @@
       "year": 2026,
       "source_urls": [
         "https://www.aljazeera.com/news/2026/5/9/one-dead-in-us-after-being-struck-by-taking-off-frontier-airlines-plane?traffic_source=rss",
-        "https://www.bbc.com/news/articles/c5y95782wyko?at_medium=RSS&at_campaign=rss"
+        "https://www.bbc.com/news/articles/c5y95782wyko?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/video/newsfeed/2026/5/10/person-dies-after-being-hit-by-plane-at-denver-airport?traffic_source=rss"
       ],
       "source_articles": [
         0
@@ -71,8 +72,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 2,
-      "last_updated": "2026-05-09T19:17:49.393329+00:00",
+      "source_count": 3,
+      "last_updated": "2026-05-10T08:19:46.047874",
       "id": "bd1790a3c5ac",
       "created_at": "2026-05-09T19:17:49.393320+00:00"
     },
