@@ -683,5 +683,15 @@
     "lat": 40.771778,
     "lon": -111.951375,
     "display_name": "Airplane, 2100 West, Jordan Meadows, Salt Lake City, Salt Lake County, Utah, 84134, United States"
+  },
+  "malaga airport, malaga, spain": {
+    "lat": 36.678545,
+    "lon": -4.499955,
+    "display_name": "Aeropuerto de Málaga - Costa del Sol, Avenida del Comandante García Morato, Churriana, Guadalmar-San Julián, Málaga, Málaga-Costa del Sol, Málaga, Andalucía, 29004, España"
+  },
+  "khartoum international airport, khartoum, sudan": {
+    "lat": 15.590212,
+    "lon": 32.555054,
+    "display_name": "مطار الخرطوم الدولي, شارع الصفا, بري المحس, بري, الخرطوم, ولاية الخرطوم, 00249, السودان"
   }
 }
