@@ -693,5 +693,10 @@
     "lat": 15.590212,
     "lon": 32.555054,
     "display_name": "مطار الخرطوم الدولي, شارع الصفا, بري المحس, بري, الخرطوم, ولاية الخرطوم, 00249, السودان"
+  },
+  "american airlines": {
+    "lat": 33.952054,
+    "lon": -118.337721,
+    "display_name": "American Airlines Plaza, Hollywood Park, Inglewood, Los Angeles County, California, 90306, United States"
   }
 }
