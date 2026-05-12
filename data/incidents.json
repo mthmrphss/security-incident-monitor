@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-11T04:10:09.521023+00:00",
-    "total_incidents": 117,
+    "last_updated": "2026-05-12T08:51:43.190158+00:00",
+    "total_incidents": 118,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-12",
+      "publish_date": "2026-05-12",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Newark",
+      "location_detail": "Newark Airport",
+      "airport_name": "Newark Airport",
+      "airport_iata": "EWR",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Delta flight searched due to bomb threat",
+      "summary_tr": "Bombalı tehdit nedeniyle Delta uçuşu arandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "Delta flight"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-12",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE1YVzZZOVRGUUpRV3QxTXI3QWxZUDVmV1BRYnB1MTJ0Tk5HNXR1U2pvc1BEWV9sVmZjTEFPTDN6MXlseGtHMkwwOVlleWVPVUJpSmx4dDNUMEJNUFNoMVFoalFDeWFseWFNencwLTI4Xzc?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 40.689064,
+      "geo_lon": -74.177255,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "05c464e2e405",
+      "created_at": "2026-05-12T08:51:43.190140+00:00",
+      "last_updated": "2026-05-12T08:51:43.190152+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-05-10",

@@ -698,5 +698,10 @@
     "lat": 33.952054,
     "lon": -118.337721,
     "display_name": "American Airlines Plaza, Hollywood Park, Inglewood, Los Angeles County, California, 90306, United States"
+  },
+  "newark airport, newark, united states": {
+    "lat": 40.689064,
+    "lon": -74.177255,
+    "display_name": "Newark Liberty International Airport, Brewster Road, Newark, Essex County, New Jersey, 07114, United States"
   }
 }
