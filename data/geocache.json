@@ -703,5 +703,20 @@
     "lat": 40.689064,
     "lon": -74.177255,
     "display_name": "Newark Liberty International Airport, Brewster Road, Newark, Essex County, New Jersey, 07114, United States"
+  },
+  "georgia airport, united states": {
+    "lat": 32.69384,
+    "lon": -83.648018,
+    "display_name": "Middle Georgia Regional Airport, Hawkinsville Road, Avondale, Macon, Bibb County, Georgia, 31216, United States"
+  },
+  "macon airport, macon": {
+    "lat": 32.822633,
+    "lon": -83.563671,
+    "display_name": "Macon Downtown Airport, Riggins Mill Road, Lakeside, Franklinton, Macon, Bibb County, Georgia, 31020, United States"
+  },
+  "macon airport, macon, united states": {
+    "lat": 32.822633,
+    "lon": -83.563671,
+    "display_name": "Macon Downtown Airport, Riggins Mill Road, Lakeside, Franklinton, Macon, Bibb County, Georgia, 31020, United States"
   }
 }
