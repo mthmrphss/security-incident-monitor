@@ -718,5 +718,10 @@
     "lat": 32.822633,
     "lon": -83.563671,
     "display_name": "Macon Downtown Airport, Riggins Mill Road, Lakeside, Franklinton, Macon, Bibb County, Georgia, 31020, United States"
+  },
+  "málaga airport, málaga, spain": {
+    "lat": 36.678545,
+    "lon": -4.499955,
+    "display_name": "Aeropuerto de Málaga - Costa del Sol, Avenida del Comandante García Morato, Churriana, Málaga, Málaga-Costa del Sol, Málaga, Andalucía, 29004, España"
   }
 }

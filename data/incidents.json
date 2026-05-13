@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-13T04:05:01.693935+00:00",
+    "last_updated": "2026-05-13T08:59:56.283651+00:00",
     "total_incidents": 118,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -37,7 +37,7 @@
       "casualties_injured": 0,
       "perpetrator": "unknown",
       "summary_en": "Delta flight searched due to bomb threat",
-      "summary_tr": "Bombalı tehdit nedeniyle Delta uçuşu arandı",
+      "summary_tr": "KLM uçuşu bomba tehdidi nedeniyle yere indirildi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -51,7 +51,8 @@
       "date": "2026-05-12",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMicEFVX3lxTE1YVzZZOVRGUUpRV3QxTXI3QWxZUDVmV1BRYnB1MTJ0Tk5HNXR1U2pvc1BEWV9sVmZjTEFPTDN6MXlseGtHMkwwOVlleWVPVUJpSmx4dDNUMEJNUFNoMVFoalFDeWFseWFNencwLTI4Xzc?oc=5"
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE1YVzZZOVRGUUpRV3QxTXI3QWxZUDVmV1BRYnB1MTJ0Tk5HNXR1U2pvc1BEWV9sVmZjTEFPTDN6MXlseGtHMkwwOVlleWVPVUJpSmx4dDNUMEJNUFNoMVFoalFDeWFseWFNencwLTI4Xzc?oc=5",
+        "https://news.google.com/rss/articles/CBMipgJBVV95cUxQT1dFWWdpRjFEQkFtUW0weVMyQUJ4Nm8za1Jwcmc4ZFVyNXZvbHdCSld3Y0trWWZTaFhXdEVLdjUyLTB5UnpBNFpFcTZFV3VyWEx5eWV2eHRYWVE1ckFSd3BsVlFsdXBnQktoWUU4RlZHSXl4MlN4a0cyUWJ2MlI1YXQwWUp5ODFkT1h2M1l1MFZaQzhwYkdSZjNjYTBoZU5sVFJHMnZOR2F6TzVhUUVKVndRY2lmeHBLZDBGb2dFd21uQ0V2ZkQteDgwT0JwOGRzUTVnamJUaUx0SXh3UkVFM2R5TUh4MkVndEZnUE4yaGFOeU9UTkJ5U2lWanBJa0FCelNFSGRvQWhNMFVpSkZ2am1DR3pkVmcydnRjSlRJSHBaUkNnN0E?oc=5"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "verification_score": 1.0,
       "id": "05c464e2e405",
       "created_at": "2026-05-12T08:51:43.190140+00:00",
-      "last_updated": "2026-05-12T08:51:43.190152+00:00",
-      "source_count": 1
+      "last_updated": "2026-05-13T08:59:56.283536",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
