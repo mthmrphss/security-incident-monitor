@@ -728,5 +728,10 @@
     "lat": 3.166869,
     "lon": 101.694312,
     "display_name": "Hyderabad, Jalan Putra, Chow Kit, Sentul, Kuala Lumpur, 50586, Malaysia"
+  },
+  "hyderabad, india": {
+    "lat": 17.360589,
+    "lon": 78.474061,
+    "display_name": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India"
   }
 }

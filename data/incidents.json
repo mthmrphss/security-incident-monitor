@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-16T08:15:49.487805+00:00",
-    "total_incidents": 119,
+    "last_updated": "2026-05-16T13:50:23.325864+00:00",
+    "total_incidents": 120,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -37,7 +37,7 @@
       "casualties_injured": 0,
       "perpetrator": "unknown",
       "summary_en": "AirAsia Malaysia flight to Hyderabad receives bomb threat",
-      "summary_tr": "Malezya AirAsia Hyderabad uçuşuna bomba tehdidi",
+      "summary_tr": "Hyderabad Havalimanı bomba tehdidi nedeniyle yüksek alarmda",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -52,7 +52,8 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMiugJBVV95cUxQQUhaYktDMEpCM3Q2Z1FKSENtb1g1eVoteXY5eGp2YVpvdHlQOWcwMlJhbERxcTVwRjBBZkZlVjRSOFFvNUxpS2ZmWDE4Zm55dE13Q0JhMHRCaEtNTGllbWl4UXVkVXg5c0tFUTllckhPanpBeEVXdXRnTzh2NW9XYXRxb252Z3lNT3M3RUQ3a3BFNXFLb3RHRk8yTnRoRDdfa19mSl9yU185R3RmZVhoWWE3Y1VxNlNFbllyZHBnaUVkTFloY09lb09Sel9yTkt0WTJySmUzcGxKVlJKNlM4cGZ1bjBiaXkya2pPNXA2OGxwZ2ZjUG9PandIcExRSzIzN0s5Tmh2ZWtCaXhsbGJlcWwyUmM1WmdqU3F6TE9EYVBPVi05WUlaVW5HNE1jMS1PekNweGFXemR0dw?oc=5",
-        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMFVnTXplWWdiQTA5V3VMOUhpQlRPNmgxMTNFUWF5b1lXNFdVM0hmYlI1LVlwVUNWbGxNaUZteVlPMDhTQ21xN2x5UG1ITU15TnZEX21RcTZiQUZhZlhFRXgwbEU1elFzZ0xIbjRBS040cTVVbWtZbHFacWItM1dyRXVkYU5tcGdxLXJYMWhnV2FzZmZCRUsyNWtPYk1yeTdDTi1aUFNBS3RuU3U4ZkEwdThCbGxMM3JKX2hIMklLMHo1OWUxeTRPTTJ4Mm8wSENLZWJNUXVna9IB3AFBVV95cUxQdVFKUDViZVk0aEE5azhCVWpaWWZPMkJfd1gtTjRpX3drOFZfMVZfRElpc0FCZ043WDJSSkpKc21KSzRyNjRpaUhUUGM1aUlFeDdETDhIX1pZcDdvd01pOC1oVDZJNV9zT1FRc1dvb0xEMUktUEVqV0ItTkVUdG5mS08wRG15b1JqdmRrZ2NOUG9EMS05OFRxUWd3T1NKajhvVzZjbE5IMWFGVWxiTWNSMGVGcnNmSmJQdGRmOUhfQ3ExVlJwRG5MM0o3TGJhZTZTNkZUcG9VZzhuTTEt?oc=5"
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMFVnTXplWWdiQTA5V3VMOUhpQlRPNmgxMTNFUWF5b1lXNFdVM0hmYlI1LVlwVUNWbGxNaUZteVlPMDhTQ21xN2x5UG1ITU15TnZEX21RcTZiQUZhZlhFRXgwbEU1elFzZ0xIbjRBS040cTVVbWtZbHFacWItM1dyRXVkYU5tcGdxLXJYMWhnV2FzZmZCRUsyNWtPYk1yeTdDTi1aUFNBS3RuU3U4ZkEwdThCbGxMM3JKX2hIMklLMHo1OWUxeTRPTTJ4Mm8wSENLZWJNUXVna9IB3AFBVV95cUxQdVFKUDViZVk0aEE5azhCVWpaWWZPMkJfd1gtTjRpX3drOFZfMVZfRElpc0FCZ043WDJSSkpKc21KSzRyNjRpaUhUUGM1aUlFeDdETDhIX1pZcDdvd01pOC1oVDZJNV9zT1FRc1dvb0xEMUktUEVqV0ItTkVUdG5mS08wRG15b1JqdmRrZ2NOUG9EMS05OFRxUWd3T1NKajhvVzZjbE5IMWFGVWxiTWNSMGVGcnNmSmJQdGRmOUhfQ3ExVlJwRG5MM0o3TGJhZTZTNkZUcG9VZzhuTTEt?oc=5",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxNT3BqT3U1UXVmdWJyUXpyTjdQZkpRbzlHQ3BjWTJ6ZlpscklBUEo5TzZZZ3l0a2tyay1TdTdScmtacU9nNGlhS2NpMHBkR2FVMlU5RnBpMHdPeHJUamdqNnpXN2ZqUzhBSXBDV1VNamlQTWF6RU5HQXc1WnpsY0RYWndhMC1OeTV0UHhVT2tB?oc=5"
       ],
       "source_articles": [
         0
@@ -74,8 +75,66 @@
       "verification_score": 1.0,
       "id": "082b5f627964",
       "created_at": "2026-05-16T03:44:37.272692+00:00",
-      "last_updated": "2026-05-16T08:15:49.487694",
-      "source_count": 2
+      "last_updated": "2026-05-16T13:50:23.306289",
+      "source_count": 3
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-16",
+      "publish_date": "2026-05-16",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Hyderabad",
+      "location_detail": "Rajiv Gandhi International Airport",
+      "airport_name": "Rajiv Gandhi International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat at Hyderabad airport turns out to be hoax",
+      "summary_tr": "Hindistan'da Hyderabad havalimanında bomba tehdidi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "India"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-16",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinwJBVV95cUxNcVUzX1FuNjhHaHVKSExNNS1JVjVFVFFyYlJXcU42NFZOWUxkTy1uWEtjSjlQS3lDS2ZLQXVDbm1fNXFGNnVWNWYzcVZFZUF6LXpRZVI1aXZyWmlnb1Zjc2ZXOGZHa2UzQ2hCOHBJU3hYdGtMRDFmajVxN3l6N0M3R205YUZlTjI4WjdXYXNyb1k0RHBSWFlncDRhaElzemQzc2lfU3c1bDgtcUY5LWhfeGNGY3dOLXFDMGJ2RlItUXZNRmp4M0d0T3Iybzhicm5oSkFxS2hMTmtCVHpvTEdOMm9aOV8zT0VtdFNlM1JYc3RELUlIbm1KREttWjVFeXoxWEFSNUQ0a2JjSDlpdEpqZWowWlo0bGxBak1PLW1wcw?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVFlFbGktTklLZmt3em9BcEtQRGRwSW9EMkdaMmxhLXJvSzlacWE5UVl1c0hJT19mWXhkbzhaQWI5SWZfMlhhSGpWWVpwYUpFR1FwOEEwVk9nelA4LUhwbzB6SjZzZmRNN2REeUFIaTNPLW1KSlduV1ljOEZMb2VqNktoRGVtR21GY2p6emhZTy1PaXNVVkNnQ1c3ek1mX0ZoX3oxVHVVZ3ZKbk9qYkNieHZCQlbSAboBQVVfeXFMTXRtTlNuYlA2ejlzdnViWGRFd243bXE2UkMtSkczOTFwWmJfbUlYVVplaW5VbkYxNnMtaF9WdUoyY0pBRHl2MS1UX18xclJsZ21GV0VUTjRZSjUzckwtcWpUYmttVG13ZmtfUERHTnUwYUZaeGdJcHFoSG9MbktmYUE0VjdxT3Ffb1BGeWdnWHM2RlJBaTZNMl9DOHQ0bzdxTDRYT3ZGM1M1ZVRyaDBvLWFDY3ZuNGkzZlNR?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 17.360589,
+      "geo_lon": 78.474061,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-05-16T13:50:23.325857+00:00",
+      "id": "85016782d713",
+      "created_at": "2026-05-16T13:50:23.325848+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
