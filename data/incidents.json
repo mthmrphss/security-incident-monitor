@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-16T03:44:37.272709+00:00",
+    "last_updated": "2026-05-16T08:15:49.487805+00:00",
     "total_incidents": 119,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -36,8 +36,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Lufthansa Boeing 747 faces bomb threat",
-      "summary_tr": "Lufthansa Boeing 747 uçağına bomba tehdidi",
+      "summary_en": "AirAsia Malaysia flight to Hyderabad receives bomb threat",
+      "summary_tr": "Malezya AirAsia Hyderabad uçuşuna bomba tehdidi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -51,13 +51,14 @@
       "date": "2026-05-16",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiugJBVV95cUxQQUhaYktDMEpCM3Q2Z1FKSENtb1g1eVoteXY5eGp2YVpvdHlQOWcwMlJhbERxcTVwRjBBZkZlVjRSOFFvNUxpS2ZmWDE4Zm55dE13Q0JhMHRCaEtNTGllbWl4UXVkVXg5c0tFUTllckhPanpBeEVXdXRnTzh2NW9XYXRxb252Z3lNT3M3RUQ3a3BFNXFLb3RHRk8yTnRoRDdfa19mSl9yU185R3RmZVhoWWE3Y1VxNlNFbllyZHBnaUVkTFloY09lb09Sel9yTkt0WTJySmUzcGxKVlJKNlM4cGZ1bjBiaXkya2pPNXA2OGxwZ2ZjUG9PandIcExRSzIzN0s5Tmh2ZWtCaXhsbGJlcWwyUmM1WmdqU3F6TE9EYVBPVi05WUlaVW5HNE1jMS1PekNweGFXemR0dw?oc=5"
+        "https://news.google.com/rss/articles/CBMiugJBVV95cUxQQUhaYktDMEpCM3Q2Z1FKSENtb1g1eVoteXY5eGp2YVpvdHlQOWcwMlJhbERxcTVwRjBBZkZlVjRSOFFvNUxpS2ZmWDE4Zm55dE13Q0JhMHRCaEtNTGllbWl4UXVkVXg5c0tFUTllckhPanpBeEVXdXRnTzh2NW9XYXRxb252Z3lNT3M3RUQ3a3BFNXFLb3RHRk8yTnRoRDdfa19mSl9yU185R3RmZVhoWWE3Y1VxNlNFbllyZHBnaUVkTFloY09lb09Sel9yTkt0WTJySmUzcGxKVlJKNlM4cGZ1bjBiaXkya2pPNXA2OGxwZ2ZjUG9PandIcExRSzIzN0s5Tmh2ZWtCaXhsbGJlcWwyUmM1WmdqU3F6TE9EYVBPVi05WUlaVW5HNE1jMS1PekNweGFXemR0dw?oc=5",
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMFVnTXplWWdiQTA5V3VMOUhpQlRPNmgxMTNFUWF5b1lXNFdVM0hmYlI1LVlwVUNWbGxNaUZteVlPMDhTQ21xN2x5UG1ITU15TnZEX21RcTZiQUZhZlhFRXgwbEU1elFzZ0xIbjRBS040cTVVbWtZbHFacWItM1dyRXVkYU5tcGdxLXJYMWhnV2FzZmZCRUsyNWtPYk1yeTdDTi1aUFNBS3RuU3U4ZkEwdThCbGxMM3JKX2hIMklLMHo1OWUxeTRPTTJ4Mm8wSENLZWJNUXVna9IB3AFBVV95cUxQdVFKUDViZVk0aEE5azhCVWpaWWZPMkJfd1gtTjRpX3drOFZfMVZfRElpc0FCZ043WDJSSkpKc21KSzRyNjRpaUhUUGM1aUlFeDdETDhIX1pZcDdvd01pOC1oVDZJNV9zT1FRc1dvb0xEMUktUEVqV0ItTkVUdG5mS08wRG15b1JqdmRrZ2NOUG9EMS05OFRxUWd3T1NKajhvVzZjbE5IMWFGVWxiTWNSMGVGcnNmSmJQdGRmOUhfQ3ExVlJwRG5MM0o3TGJhZTZTNkZUcG9VZzhuTTEt?oc=5"
       ],
       "source_articles": [
         0
       ],
-      "geo_lat": null,
-      "geo_lon": null,
+      "geo_lat": 3.166869,
+      "geo_lon": 101.694312,
       "validation_signals": {
         "has_country": true,
         "has_city": true,
@@ -73,8 +74,8 @@
       "verification_score": 1.0,
       "id": "082b5f627964",
       "created_at": "2026-05-16T03:44:37.272692+00:00",
-      "last_updated": "2026-05-16T03:44:37.272704+00:00",
-      "source_count": 1
+      "last_updated": "2026-05-16T08:15:49.487694",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",

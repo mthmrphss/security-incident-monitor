@@ -723,5 +723,10 @@
     "lat": 36.678545,
     "lon": -4.499955,
     "display_name": "Aeropuerto de Málaga - Costa del Sol, Avenida del Comandante García Morato, Churriana, Málaga, Málaga-Costa del Sol, Málaga, Andalucía, 29004, España"
+  },
+  "hyderabad, malaysia": {
+    "lat": 3.166869,
+    "lon": 101.694312,
+    "display_name": "Hyderabad, Jalan Putra, Chow Kit, Sentul, Kuala Lumpur, 50586, Malaysia"
   }
 }
