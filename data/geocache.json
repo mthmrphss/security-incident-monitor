@@ -738,5 +738,15 @@
     "lat": 42.307459,
     "lon": -88.283329,
     "display_name": "Hampton Inn McHenry, 1555, South Front Street, McHenry, McHenry County, Illinois, 60050, United States"
+  },
+  "hyderabad airport, hyderabad": {
+    "lat": 25.319433,
+    "lon": 68.368356,
+    "display_name": "حیدرآباد ہوائی اڈا, Kohsar Airport Road, hda employees coop housing society, لطیف آباد, تعلقہ حیدرآباد شہر, تعلقہ لطیف آباد, ضلع حیدرآباد, حیدر آباد ڈویژن, سندھ, پاکستان"
+  },
+  "shamshabad airport, hyderabad": {
+    "lat": 17.231164,
+    "lon": 78.431783,
+    "display_name": "Rajiv Gandhi International Airport, Cargo Road, Shamshabad mandal, Ranga Reddy, Telangana, 509218, India"
   }
 }
