@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-16T13:50:23.325864+00:00",
-    "total_incidents": 120,
+    "last_updated": "2026-05-17T04:06:54.051212+00:00",
+    "total_incidents": 121,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -135,6 +135,63 @@
       "last_updated": "2026-05-16T13:50:23.325857+00:00",
       "id": "85016782d713",
       "created_at": "2026-05-16T13:50:23.325848+00:00"
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-05-16",
+      "publish_date": "2026-05-16",
+      "country": "United States",
+      "country_code": "US",
+      "city": "McHenry",
+      "location_detail": "Hampton Inn, 919 W. Dale Dr.",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": "Hampton Inn",
+      "venue_name": "hotel",
+      "attack_type": "stabbing",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Colin Foster",
+      "summary_en": "Stabbing at McHenry Hampton Inn",
+      "summary_tr": "McHenry Hampton Inn'de bıçaklı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "stabbing",
+        "hotel attack",
+        "attempted murder"
+      ],
+      "date": "2026-05-16",
+      "year": 2026,
+      "source_urls": [
+        "https://www.nbcchicago.com/news/local/suspect-accused-of-attempted-murder-after-unprovoked-stabbing-at-suburban-hotel/3936746/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 42.307459,
+      "geo_lon": -88.283329,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "0918f96004aa",
+      "created_at": "2026-05-17T04:06:54.051197+00:00",
+      "last_updated": "2026-05-17T04:06:54.051207+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",

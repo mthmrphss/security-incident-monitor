@@ -733,5 +733,10 @@
     "lat": 17.360589,
     "lon": 78.474061,
     "display_name": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India"
+  },
+  "hampton inn, mchenry, united states": {
+    "lat": 42.307459,
+    "lon": -88.283329,
+    "display_name": "Hampton Inn McHenry, 1555, South Front Street, McHenry, McHenry County, Illinois, 60050, United States"
   }
 }
