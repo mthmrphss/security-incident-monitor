@@ -753,5 +753,10 @@
     "lat": 4.736773,
     "lon": 45.203888,
     "display_name": "Beledweyne بلد وين, Belet Weyne بلد وين, Hiiraan هيران, Hirshabeelle هيرشابيل, Soomaaliya الصومال"
+  },
+  "halwara airport, ludhiana, india": {
+    "lat": 30.746453,
+    "lon": 75.634151,
+    "display_name": "Halwara Airport, Akalgarh Link Road, Akalgarh, Raikot Tahsil, Ludhiana, Punjab, 141105, India"
   }
 }
