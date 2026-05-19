@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-18T10:22:51.376087+00:00",
+    "last_updated": "2026-05-19T10:03:00.859572+00:00",
     "total_incidents": 122,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -37,7 +37,7 @@
       "casualties_injured": 0,
       "perpetrator": "unknown",
       "summary_en": "Bomb threats sent to Ludhiana schools, Halwara Airport",
-      "summary_tr": "Ludhiana okulları, Halwara Havalimanı'na bomba tehditleri",
+      "summary_tr": "Okullara ve havalimanına bomba tehdidi içeren e-postalar gönderildi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -52,7 +52,8 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1PRFAwckZlZnpzRVdMQ2hhZWVvUkhUMVQyZkFkX1JVN0xiMnlvM3dQU1lad1dWX20tal9kTGFtQmZ0M21DV1Fqc3Zpb1NpNGEzekJ1VEloRndSTWFqUUE?oc=5",
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQ280M25nMGtKQ2RzaVJYa3JHTlJOTE9jNWxQVk9rc2l3czhaaDV3VDVDM2hGYVMtbmRrQ2JTaGI0VGVXUUVISHRaMkUtMDc4czdnTTh4bHdtSlZLbVdMZUx6RVYtb2pVOUw4ZGFhWnNSbUVVdFZBdnBXTjJFXzJ2dTBvZlBGcDFnNmtUWTJiTzJmNHlFYW9faF9PODd5OXRZS3VIYl9mdXh2MGxTX0E?oc=5"
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQ280M25nMGtKQ2RzaVJYa3JHTlJOTE9jNWxQVk9rc2l3czhaaDV3VDVDM2hGYVMtbmRrQ2JTaGI0VGVXUUVISHRaMkUtMDc4czdnTTh4bHdtSlZLbVdMZUx6RVYtb2pVOUw4ZGFhWnNSbUVVdFZBdnBXTjJFXzJ2dTBvZlBGcDFnNmtUWTJiTzJmNHlFYW9faF9PODd5OXRZS3VIYl9mdXh2MGxTX0E?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRHpYTFJxYU1HWjJfODRtcGxuTHFocGh4djFNbDJ0SmtGM1R4TzVaQ0swQzhtem1wNm45aFR3MTBORXVBR1M0Q1dZTkgtZFBheVByWV9NSlZBXzgzVEVzbmlYUGNJSzBYT1BiN1lCSWRFRU5hYkpWR3FVdGt5YVBSVWFOTENVRXBNU0dfdkV6cE00VGxiZTRSa2pwQmE4dTBwRGlnU0gydmpZTndUTzd5Zg?oc=5"
       ],
       "source_articles": [
         0
@@ -72,8 +73,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 2,
-      "last_updated": "2026-05-18T10:22:51.376081+00:00",
+      "source_count": 3,
+      "last_updated": "2026-05-19T10:03:00.859461",
       "id": "53b393eb119e",
       "created_at": "2026-05-18T10:22:51.376073+00:00"
     },
