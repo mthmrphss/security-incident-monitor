@@ -758,5 +758,10 @@
     "lat": 30.746453,
     "lon": 75.634151,
     "display_name": "Halwara Airport, Akalgarh Link Road, Akalgarh, Raikot Tahsil, Ludhiana, Punjab, 141105, India"
+  },
+  "vilnius, lithuania": {
+    "lat": 54.687046,
+    "lon": 25.282911,
+    "display_name": "Vilnius, Vilniaus miesto savivaldybė, Vilniaus apskritis, Lietuva"
   }
 }
