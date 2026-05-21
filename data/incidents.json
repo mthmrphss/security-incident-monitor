@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-21T09:59:33.262142+00:00",
-    "total_incidents": 126,
+    "last_updated": "2026-05-21T15:48:16.555654+00:00",
+    "total_incidents": 129,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -53,6 +53,7 @@
       "source_urls": [
         "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeHBsZU1femZHVWFHWG9iMmVWcXdkYmpic0xGMmtLdWN5b3dfQWRoOVplckFJcGs1VDZtQzhCNGVfQmFjb0Foc3RLR2w0ZDd4TG9lMkZJckVlOGJLTU9yWUlMQmNxU1MxaXI0RFYwczRfUEpjTDZ0cFVYNDA2WXZac3kzOWV5TTdkdjZ2Q0R1T01LRU53dGlKWnJHVUI?oc=5",
         "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLVA5d3BjUHRXS1RuaHpEX3ZJNDdXUXBtOG9KcmpJaVJGTTNad3Nha0l5VzV1OFI0blZvQkIzQU5XX1h0REFHeE9YeVAyWkk1b2dFOEhLNWZMYWJjZ29JU1hKZHdvQmdnS2xuRTVyU1UtTlZ4QVYyVGlVYjZHVUlpOGYtaTcwelRaUHFEaFZ2QV83YlV1dk82eDFmSUZndk5YaExNbjZnbw?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMS1QdmlLNmtIMDV1UHczeUx1MjVtSVdKUlF4cmwzTHVaOFBDV09wYXdMeFpTSmRtMU93bm84ZFFYdjVtOFVUMVYxdWdYcVFpYXBQQ204TzFpWGN6MjV4cGF0Sy1YanlPOUFqZk9hUWV4VVg0RWk2ejJwZXRmeWg1dWstdGFvUlRxLTFoUWcxcDV2QmN0dnFuVHdDanJUOTBOV0c5NVJwVGNMbzhKdHpQNl9tTQ?oc=5",
         "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPajRrUXRwTUpKUEVkTzY5Q0M2ektsZ0xrY2hmajRxUTVSaGgxS1VvdkNRLU95cXlWNTY5RnVQejVRbnpNcWZHTUU3am5Md256bjRMblNZNGdCbVo0NERZYVhCdzQ3Rm54YVlrZHl3ZWtURmtNUEZ2YklnNkg3ZmgxQmZFYWdyZDVKbnNLNGxOS3M4UG5NRG1YOUFZaF9NUjNXOWhYbkduMmkyc2VQWmZPb0t6TXd2b2RtYkF0ZGN6d05nbWwyc29UbEFPMHRpSHp3aHk4TjVnaHJqQ25wR1ZXcDIxQ09EQdIB6wFBVV95cUxOSTJvMnlfX0cwXy1JTkdRV2VadjNrX3NRakJCNUtKU041dzh3aFJfbmpPaUtLb0ZGQXdmNGI4ZkxIcXN4aklJZEpwVWU5OW5PR1pkcFFzd2Iwc2RHX2drSlVlRHlOSXFlTnJaV3ZNbjA1NVh5ajJQWFFXV2duV0Nmd2MtWWhSZG9YT244SnExQWNncjluSDhCeGFNb3Q2Z0lzU21mTllwM0lER3JUdHBsWlpnQVk5ZzRuRzM3cXYyMW84NnJtbHoxMkJGYTk4czlRMzQ4S0pjb2Q5T3hOcVdfdDVxc2FjSW5nVUtN?oc=5"
       ],
       "source_articles": [
@@ -73,8 +74,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 3,
-      "last_updated": "2026-05-21T04:25:13.544007+00:00",
+      "source_count": 4,
+      "last_updated": "2026-05-21T15:48:16.535111",
       "id": "cd94c21c8a4e",
       "created_at": "2026-05-21T04:25:13.544001+00:00"
     },
@@ -133,6 +134,177 @@
       "id": "8387a254068d",
       "created_at": "2026-05-21T09:59:33.262120+00:00",
       "last_updated": "2026-05-21T09:59:33.262131+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-21",
+      "publish_date": "2026-05-21",
+      "country": "Moldova",
+      "country_code": "MD",
+      "city": "Chișinău",
+      "location_detail": "Chișinău Airport",
+      "airport_name": "Chișinău Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Double bomb scare at Chișinău Airport",
+      "summary_tr": "Chișinău Havalimanı'nda çift bomba alarmı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb scare",
+        "evacuation"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-21",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVzVSTjN4ZDB1ZFc3RnZlVHhVVkRTOXY3UlE4U2w0MTF3WlNCT29nNm9OdlFrc3lIMUExX3B1U1laOVZHWXRPT3c2T3Z5TWZBaU4wTUZVY0tZb3FXZ3RWTHZ2MGVTdGt2TWVDbVdsLW1YMHpGcWFkUE5QYW9SeGwyMGVLeFRLWmRGdTZhZ0MxNjBVUkRjc0Q0RVVwWEo?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 46.929628,
+      "geo_lon": 28.93758,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "385e208e147f",
+      "created_at": "2026-05-21T15:48:16.555624+00:00",
+      "last_updated": "2026-05-21T15:48:16.555633+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-21",
+      "publish_date": "2026-05-21",
+      "country": "Australia",
+      "country_code": "AU",
+      "city": "unknown",
+      "location_detail": "Australian airport",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Laser hair removal device sparks bomb scare",
+      "summary_tr": "Lazer saç çıkarma cihazı bomba alarmına neden oldu",
+      "is_ongoing": false,
+      "is_false_alarm": true,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb scare",
+        "laser hair removal device",
+        "false_alarm"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-21",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE01MlJ1VTlFWHd1STlDb0Z5TEd6RnFfNThYcFY4VTl0aEhPUk1NVUxYNVlBRmp0dXg0VnlsZnFoUUw1VHlfakdmNElKMERKTXFpd01HcGt5eEtyMVE?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": -24.776109,
+      "geo_lon": 134.755,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.7,
+      "verification_status": "verified",
+      "verification_score": 0.7,
+      "id": "04b9789e3c35",
+      "created_at": "2026-05-21T15:48:16.555642+00:00",
+      "last_updated": "2026-05-21T15:48:16.555644+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-05-21",
+      "publish_date": "2026-05-21",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "hotel room",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": "unknown",
+      "venue_name": "hotel",
+      "attack_type": "assault",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "celebrity stylist",
+      "summary_en": "Miss Venezuela attacked",
+      "summary_tr": "Miss Venezuela saldırıya uğradı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "celebrity",
+        "hotel attack"
+      ],
+      "date": "2026-05-21",
+      "year": 2026,
+      "source_urls": [
+        "https://www.dailymail.com/news/article-15837381/Miss-Venezuela-Global-releases-shocking-footage-covered-blood-trashed-hotel-room-attacked-celebrity-stylist.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "f292342cbd6c",
+      "created_at": "2026-05-21T15:48:16.555650+00:00",
+      "last_updated": "2026-05-21T15:48:16.555651+00:00",
       "source_count": 1
     },
     {

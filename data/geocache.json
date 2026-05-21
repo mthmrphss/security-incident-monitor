@@ -788,5 +788,10 @@
     "lat": -38.041575,
     "lon": 144.472251,
     "display_name": "Avalon Airport, 80, Beach Road, Avalon, Victoria, 3212, Australia"
+  },
+  "chișinău airport, chișinău, moldova": {
+    "lat": 46.929628,
+    "lon": 28.93758,
+    "display_name": "Aeroportul Internațional Chișinău „Eugen Doga”, Bulevardul Dacia, Codru, sectorul Botanica, Chișinău, Municipiul Chișinău, MD-2029, Moldova"
   }
 }
