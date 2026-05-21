@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-20T09:52:52.144835+00:00",
-    "total_incidents": 123,
+    "last_updated": "2026-05-21T04:25:13.544028+00:00",
+    "total_incidents": 125,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,65 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-21",
+      "publish_date": "2026-05-21",
+      "country": "Australia",
+      "country_code": "AU",
+      "city": "Melbourne",
+      "location_detail": "Melbourne airport",
+      "airport_name": "Melbourne airport",
+      "airport_iata": "MEL",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Melbourne airport shutdown due to bomb threat",
+      "summary_tr": "Melbourne havalimanı bomba tehdidi nedeniyle kapatıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "evacuation"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-21",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeHBsZU1femZHVWFHWG9iMmVWcXdkYmpic0xGMmtLdWN5b3dfQWRoOVplckFJcGs1VDZtQzhCNGVfQmFjb0Foc3RLR2w0ZDd4TG9lMkZJckVlOGJLTU9yWUlMQmNxU1MxaXI0RFYwczRfUEpjTDZ0cFVYNDA2WXZac3kzOWV5TTdkdjZ2Q0R1T01LRU53dGlKWnJHVUI?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLVA5d3BjUHRXS1RuaHpEX3ZJNDdXUXBtOG9KcmpJaVJGTTNad3Nha0l5VzV1OFI0blZvQkIzQU5XX1h0REFHeE9YeVAyWkk1b2dFOEhLNWZMYWJjZ29JU1hKZHdvQmdnS2xuRTVyU1UtTlZ4QVYyVGlVYjZHVUlpOGYtaTcwelRaUHFEaFZ2QV83YlV1dk82eDFmSUZndk5YaExNbjZnbw?oc=5",
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPajRrUXRwTUpKUEVkTzY5Q0M2ektsZ0xrY2hmajRxUTVSaGgxS1VvdkNRLU95cXlWNTY5RnVQejVRbnpNcWZHTUU3am5Md256bjRMblNZNGdCbVo0NERZYVhCdzQ3Rm54YVlrZHl3ZWtURmtNUEZ2YklnNkg3ZmgxQmZFYWdyZDVKbnNLNGxOS3M4UG5NRG1YOUFZaF9NUjNXOWhYbkduMmkyc2VQWmZPb0t6TXd2b2RtYkF0ZGN6d05nbWwyc29UbEFPMHRpSHp3aHk4TjVnaHJqQ25wR1ZXcDIxQ09EQdIB6wFBVV95cUxOSTJvMnlfX0cwXy1JTkdRV2VadjNrX3NRakJCNUtKU041dzh3aFJfbmpPaUtLb0ZGQXdmNGI4ZkxIcXN4aklJZEpwVWU5OW5PR1pkcFFzd2Iwc2RHX2drSlVlRHlOSXFlTnJaV3ZNbjA1NVh5ajJQWFFXV2duV0Nmd2MtWWhSZG9YT244SnExQWNncjluSDhCeGFNb3Q2Z0lzU21mTllwM0lER3JUdHBsWlpnQVk5ZzRuRzM3cXYyMW84NnJtbHoxMkJGYTk4czlRMzQ4S0pjb2Q5T3hOcVdfdDVxc2FjSW5nVUtN?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": -37.676449,
+      "geo_lon": 144.836538,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 3,
+      "last_updated": "2026-05-21T04:25:13.544007+00:00",
+      "id": "cd94c21c8a4e",
+      "created_at": "2026-05-21T04:25:13.544001+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-05-20",
@@ -75,6 +134,62 @@
       "id": "0112cc382a7c",
       "created_at": "2026-05-20T09:52:52.144810+00:00",
       "last_updated": "2026-05-20T09:52:52.144827+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-20",
+      "publish_date": "2026-05-20",
+      "country": "Australia",
+      "country_code": "AU",
+      "city": "unknown",
+      "location_detail": "Avalon Airport",
+      "airport_name": "Avalon Airport",
+      "airport_iata": "AVV",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Suspicious item found at Avalon Airport",
+      "summary_tr": "Avalon Havalimanı'nda şüpheli bir eşya bulundu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport security",
+        "suspicious item"
+      ],
+      "data_quality": "low",
+      "date": "2026-05-20",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE5sczBGb2J1Z05NcXpqOWZqV2R6dTk1Mi1VMGVlNHJ5LWh1WTVPcTBWT3lhbjI2MUdJUEtxc1RvNWVDRnRGX3RrdXRELUdKOWo1UXJnTFJENk04RlRZNDFMOV9tVW1WUktsc1F5R1pn?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": -38.041575,
+      "geo_lon": 144.472251,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "700b05daeb27",
+      "created_at": "2026-05-21T04:25:13.544015+00:00",
+      "last_updated": "2026-05-21T04:25:13.544017+00:00",
       "source_count": 1
     },
     {

@@ -763,5 +763,30 @@
     "lat": 54.687046,
     "lon": 25.282911,
     "display_name": "Vilnius, Vilniaus miesto savivaldybė, Vilniaus apskritis, Lietuva"
+  },
+  "australia": {
+    "lat": -24.776109,
+    "lon": 134.755,
+    "display_name": "Australia"
+  },
+  "avalon airport, australia": {
+    "lat": -38.041575,
+    "lon": 144.472251,
+    "display_name": "Avalon Airport, 80, Beach Road, Avalon, Victoria, 3212, Australia"
+  },
+  "avalon airport, geelong": {
+    "lat": -38.041575,
+    "lon": 144.472251,
+    "display_name": "Avalon Airport, 80, Beach Road, Avalon, City of Greater Geelong, Victoria, 3212, Australia"
+  },
+  "geelong, australia": {
+    "lat": -38.149325,
+    "lon": 144.359824,
+    "display_name": "Geelong, Victoria, 3220, Australia"
+  },
+  "avalon airport": {
+    "lat": -38.041575,
+    "lon": 144.472251,
+    "display_name": "Avalon Airport, 80, Beach Road, Avalon, Victoria, 3212, Australia"
   }
 }
