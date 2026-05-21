@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-21T15:48:16.555654+00:00",
-    "total_incidents": 129,
+    "last_updated": "2026-05-21T20:07:07.379482+00:00",
+    "total_incidents": 131,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -168,6 +168,7 @@
       "date": "2026-05-21",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTmRUN3ZFbDdCN0d3eGl0aTB1TENSMjl2bXNPd1I0SXBLMkNyLTFFMzdmZDlpaVNHSkhJUjJKZ2ptSkxuMnRPdUVnMy1jNTQyUTFadXVwQ0txaDlfWk0wT3ZGQ3d6SFNNM2NxSUVKVUE5SjlQdU5IWGtfLTJKNUpjWW5VSkJIWHVTeFJEYUM4ai0?oc=5",
         "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVzVSTjN4ZDB1ZFc3RnZlVHhVVkRTOXY3UlE4U2w0MTF3WlNCT29nNm9OdlFrc3lIMUExX3B1U1laOVZHWXRPT3c2T3Z5TWZBaU4wTUZVY0tZb3FXZ3RWTHZ2MGVTdGt2TWVDbVdsLW1YMHpGcWFkUE5QYW9SeGwyMGVLeFRLWmRGdTZhZ0MxNjBVUkRjc0Q0RVVwWEo?oc=5"
       ],
       "source_articles": [
@@ -190,8 +191,8 @@
       "verification_score": 1.0,
       "id": "385e208e147f",
       "created_at": "2026-05-21T15:48:16.555624+00:00",
-      "last_updated": "2026-05-21T15:48:16.555633+00:00",
-      "source_count": 1
+      "last_updated": "2026-05-21T20:07:07.379325",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -305,6 +306,119 @@
       "id": "f292342cbd6c",
       "created_at": "2026-05-21T15:48:16.555650+00:00",
       "last_updated": "2026-05-21T15:48:16.555651+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-21",
+      "publish_date": "2026-05-21",
+      "country": "Italy",
+      "country_code": "IT",
+      "city": "Lamezia Terme",
+      "location_detail": "parking area of the international airport",
+      "airport_name": "Lamezia Terme international airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "stabbing",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 1,
+      "perpetrator": "foreign citizen",
+      "summary_en": "Pilot stabbed at Lamezia airport",
+      "summary_tr": "Lamezia havalimanında pilot bıçaklı saldırıya uğradı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "stabbing",
+        "pilot"
+      ],
+      "date": "2026-05-21",
+      "year": 2026,
+      "source_urls": [
+        "https://www.odnako.org/terror-at-lamezia-airport-canadair-pilot-stabbed-in-the-neck-in-the-car-park-its-a-manhunt/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 38.906443,
+      "geo_lon": 16.242107,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "b05001cb3359",
+      "created_at": "2026-05-21T20:07:07.379453+00:00",
+      "last_updated": "2026-05-21T20:07:07.379461+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-05-21",
+      "publish_date": "2026-05-21",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Bath",
+      "location_detail": "Super 8 on West Morris Street",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": "Super 8",
+      "venue_name": "hotel",
+      "attack_type": "assault",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 1,
+      "perpetrator": "William Hargrave and two other men",
+      "summary_en": "3 men charged with gang assault at hotel",
+      "summary_tr": "3 kişi otelde grup saldırısı nedeniyle tutuklandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "gang assault",
+        "hotel attack"
+      ],
+      "date": "2026-05-21",
+      "year": 2026,
+      "source_urls": [
+        "https://13wham.com/news/local/3-charged-with-gang-assault-for-beating-that-seriously-injured-man-at-bath-hotel-super-8-motel-steuben-county"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 42.336986,
+      "geo_lon": -77.332272,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "1fbb0d093e71",
+      "created_at": "2026-05-21T20:07:07.379472+00:00",
+      "last_updated": "2026-05-21T20:07:07.379476+00:00",
       "source_count": 1
     },
     {

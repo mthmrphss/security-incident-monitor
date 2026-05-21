@@ -793,5 +793,15 @@
     "lat": 46.929628,
     "lon": 28.93758,
     "display_name": "Aeroportul Internațional Chișinău „Eugen Doga”, Bulevardul Dacia, Codru, sectorul Botanica, Chișinău, Municipiul Chișinău, MD-2029, Moldova"
+  },
+  "lamezia terme international airport, lamezia terme, italy": {
+    "lat": 38.906443,
+    "lon": 16.242107,
+    "display_name": "Aeroporto Internazionale di Lamezia Terme, Strada Statale Tirrena Inferiore, Rotoli, Lamezia Terme, Catanzaro, Calabria, 88046, Italia"
+  },
+  "super 8, bath, united states": {
+    "lat": 42.336986,
+    "lon": -77.332272,
+    "display_name": "Super 8 by Wyndham Bath Hammondsport Area, 333, West Morris Street, Village of Bath, Town of Bath, Steuben County, New York, 14810, United States"
   }
 }
