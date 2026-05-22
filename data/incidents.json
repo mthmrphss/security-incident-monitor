@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-21T20:07:07.379482+00:00",
+    "last_updated": "2026-05-22T20:03:12.974886+00:00",
     "total_incidents": 131,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -227,7 +227,8 @@
       "date": "2026-05-21",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE01MlJ1VTlFWHd1STlDb0Z5TEd6RnFfNThYcFY4VTl0aEhPUk1NVUxYNVlBRmp0dXg0VnlsZnFoUUw1VHlfakdmNElKMERKTXFpd01HcGt5eEtyMVE?oc=5"
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE01MlJ1VTlFWHd1STlDb0Z5TEd6RnFfNThYcFY4VTl0aEhPUk1NVUxYNVlBRmp0dXg0VnlsZnFoUUw1VHlfakdmNElKMERKTXFpd01HcGt5eEtyMVE?oc=5",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxNa051eDRLQU04ak9velRFa3kwSjRtZzZkM3ZCbWltOFZqY3A1alFyazFlOUpBRjI3dlp3T0hSRTZlRVNyTTB0R2JPNWhtMnRsZ2thYmlXOUQxWkE2bnZPck1QVlF0UFJWVXZsWWpqQUxJUmpqbTBYVXFwVjBDTGJNbmRB?oc=5"
       ],
       "source_articles": [
         0
@@ -249,8 +250,8 @@
       "verification_score": 0.7,
       "id": "04b9789e3c35",
       "created_at": "2026-05-21T15:48:16.555642+00:00",
-      "last_updated": "2026-05-21T15:48:16.555644+00:00",
-      "source_count": 1
+      "last_updated": "2026-05-22T20:03:12.974773",
+      "source_count": 2
     },
     {
       "incident_type": "HOTEL_ATTACK",
