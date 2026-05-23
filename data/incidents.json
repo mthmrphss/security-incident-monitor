@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-22T20:03:12.974886+00:00",
-    "total_incidents": 131,
+    "last_updated": "2026-05-23T13:55:41.045261+00:00",
+    "total_incidents": 132,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "event_date": "2026-05-23",
+      "publish_date": "2026-05-23",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Imphal",
+      "location_detail": "Bashikhong, Imphal East district",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "residence",
+      "attack_type": "bombing",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Grenade thrown at airline manager's house",
+      "summary_tr": "Havalimanı yöneticisinin evine el bombası atıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "grenade attack",
+        "Manipur",
+        "Air India"
+      ],
+      "date": "2026-05-23",
+      "year": 2026,
+      "source_urls": [
+        "https://www.hindustantimes.com/india-news/grenade-thrown-at-airline-manager-s-house-in-manipur-third-such-attack-police-101779539574392.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 24.799116,
+      "geo_lon": 93.936442,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "4acd4d67b20f",
+      "created_at": "2026-05-23T13:55:41.045242+00:00",
+      "last_updated": "2026-05-23T13:55:41.045255+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-05-21",
@@ -497,8 +554,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Suspicious item found at Avalon Airport",
-      "summary_tr": "Avalon Havalimanı'nda şüpheli bir eşya bulundu",
+      "summary_en": "Avalon Airport lockdown over hot chocolate bomb scare",
+      "summary_tr": "Avalon Havalimanı'ndaki sıcak çikolata bombası alarmı sona erdi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -511,6 +568,7 @@
       "date": "2026-05-20",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNmlJdDE5OFFIMFppT3JsQUktR25JZFY2QmZSYjlhemhENHpka2l0RUxWcEZzazVsUHB6ZDJZd19MNlFRUjk5UGx6TlF3TzRyX0RFbFlCLTZxOEJJTHlQX1lFUldha1YwLTV6Vmx4MEs3S3RVYWlQaWwxTTlJVHFUY2QxWkJWZmh5Vko5TkV4aGRmRVNZckN0cFFON0g2dklxZ2hldHFpSHhESmNUNjhqZEF1RjVDdHVLWWtZUTI3ZFNfQ0JlbzVPTHhrUzJWSnRHMHFvM2VMZzVHcGREb0p2U1l6MA?oc=5",
         "https://news.google.com/rss/articles/CBMibkFVX3lxTE5sczBGb2J1Z05NcXpqOWZqV2R6dTk1Mi1VMGVlNHJ5LWh1WTVPcTBWT3lhbjI2MUdJUEtxc1RvNWVDRnRGX3RrdXRELUdKOWo1UXJnTFJENk04RlRZNDFMOV9tVW1WUktsc1F5R1pn?oc=5"
       ],
       "source_articles": [
@@ -533,8 +591,8 @@
       "verification_score": 0.75,
       "id": "700b05daeb27",
       "created_at": "2026-05-21T04:25:13.544015+00:00",
-      "last_updated": "2026-05-21T04:25:13.544017+00:00",
-      "source_count": 1
+      "last_updated": "2026-05-23T13:55:41.030213",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",

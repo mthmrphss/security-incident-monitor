@@ -803,5 +803,10 @@
     "lat": 42.336986,
     "lon": -77.332272,
     "display_name": "Super 8 by Wyndham Bath Hammondsport Area, 333, West Morris Street, Village of Bath, Town of Bath, Steuben County, New York, 14810, United States"
+  },
+  "imphal, india": {
+    "lat": 24.799116,
+    "lon": 93.936442,
+    "display_name": "Imphal, Lamphelpat, Imphal West, Manipur, 795001, India"
   }
 }
