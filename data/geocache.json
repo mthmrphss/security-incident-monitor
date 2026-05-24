@@ -808,5 +808,10 @@
     "lat": 24.799116,
     "lon": 93.936442,
     "display_name": "Imphal, Lamphelpat, Imphal West, Manipur, 795001, India"
+  },
+  "melbourne, australia": {
+    "lat": -37.814245,
+    "lon": 144.963173,
+    "display_name": "Melbourne, Victoria, Australia"
   }
 }
