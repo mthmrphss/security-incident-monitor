@@ -813,5 +813,10 @@
     "lat": -37.814245,
     "lon": 144.963173,
     "display_name": "Melbourne, Victoria, Australia"
+  },
+  "memphis airport, memphis, united states": {
+    "lat": 35.046256,
+    "lon": -89.976895,
+    "display_name": "Memphis International Airport, Democrat Road, Memphis, Shelby County, West Tennessee, Tennessee, 38118, United States"
   }
 }

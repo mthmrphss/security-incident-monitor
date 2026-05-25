@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-24T04:15:13.831705+00:00",
-    "total_incidents": 132,
+    "last_updated": "2026-05-25T04:28:58.594269+00:00",
+    "total_incidents": 133,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-05-24",
+      "publish_date": "2026-05-24",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Memphis",
+      "location_detail": "3100 block of Tearock Lane",
+      "airport_name": "Memphis airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": null,
+      "attack_type": "shooting",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Woman dead after shooting near Memphis airport",
+      "summary_tr": "Memphis havalimanı yakınlarında silahlı saldırı: 1 ölü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "shooting",
+        "airport attack",
+        "Memphis"
+      ],
+      "date": "2026-05-24",
+      "year": 2026,
+      "source_urls": [
+        "https://www.fox13memphis.com/news/woman-dead-suspect-detained-after-shooting-near-memphis-airport-police-say/article_d56f822f-021c-4fa8-92de-022c55730796.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 35.046256,
+      "geo_lon": -89.976895,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "5f474e57c70a",
+      "created_at": "2026-05-25T04:28:58.594256+00:00",
+      "last_updated": "2026-05-25T04:28:58.594265+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRLINE_PERSONNEL",
       "event_date": "2026-05-23",
