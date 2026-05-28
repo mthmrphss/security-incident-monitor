@@ -823,5 +823,10 @@
     "lat": 39.047305,
     "lon": -77.11522,
     "display_name": "Bethesda North Marriott, Banneker Avenue, Metro West District, North Bethesda, Montgomery County, Maryland, 20857, United States"
+  },
+  "delhi airport, delhi, india": {
+    "lat": 28.561095,
+    "lon": 77.085314,
+    "display_name": "Delhi Airport Bus Depot, Vasant Vihar Tehsil, New Delhi, Delhi, India"
   }
 }
