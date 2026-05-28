@@ -818,5 +818,10 @@
     "lat": 35.046256,
     "lon": -89.976895,
     "display_name": "Memphis International Airport, Democrat Road, Memphis, Shelby County, West Tennessee, Tennessee, 38118, United States"
+  },
+  "bethesda north marriott hotel, bethesda, united states": {
+    "lat": 39.047305,
+    "lon": -77.11522,
+    "display_name": "Bethesda North Marriott, Banneker Avenue, Metro West District, North Bethesda, Montgomery County, Maryland, 20857, United States"
   }
 }
