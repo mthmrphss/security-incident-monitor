@@ -828,5 +828,10 @@
     "lat": 28.561095,
     "lon": 77.085314,
     "display_name": "Delhi Airport Bus Depot, Vasant Vihar Tehsil, New Delhi, Delhi, India"
+  },
+  "taganrog, russia": {
+    "lat": 47.215495,
+    "lon": 38.928362,
+    "display_name": "городской округ Таганрог, Ростовская область, Южный федеральный округ, Россия"
   }
 }
