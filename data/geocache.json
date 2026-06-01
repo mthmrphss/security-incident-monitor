@@ -833,5 +833,10 @@
     "lat": 47.215495,
     "lon": 38.928362,
     "display_name": "городской округ Таганрог, Ростовская область, Южный федеральный округ, Россия"
+  },
+  "newark airport, newark": {
+    "lat": 40.689064,
+    "lon": -74.177255,
+    "display_name": "Newark Liberty International Airport, Formosa Street, Maher Terminals, Elizabeth, Union County, New Jersey, 07114, United States"
   }
 }

@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-05-30T08:38:29.932461+00:00",
-    "total_incidents": 136,
+    "last_updated": "2026-06-01T04:57:57.273502+00:00",
+    "total_incidents": 137,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,64 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-01",
+      "publish_date": "2026-06-01",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Newark",
+      "location_detail": "Newark airport",
+      "airport_name": "Newark airport",
+      "airport_iata": "EWR",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "United flight routed back due to security threat",
+      "summary_tr": "Güvenlik tehdidi nedeniyle United uçuşu Newark Havalimanı'na yönlendirildi",
+      "is_ongoing": false,
+      "is_false_alarm": true,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport security",
+        "false alarm",
+        "false_alarm"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-01",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNXBIZlpQUHBTT0ZGT3lnZThlZTBldzNzejhweFVSUDRXdndXMTMyMlJDOTdXYVNmU1lweTRfdDdFMkIyd09MSy1RaktxV2IzdHo2SjVFQWYwNkhZWVBMa01oa1VIaTV5S2hnTTFIek9sOFZfd1loSEZTNUpIVEhLdmU0NkVQelN3eXB1WTlwZ1I2amk0UE9BTGdXbW9nSk14ZU9r0gGoAUFVX3lxTFBwZXpaMUxuTFlXQTRLbFRoM0NwVUJmNTU4UElicGdVYXdrbXJMdGN0Q3lFY2Nvc2wyeWExbzNYS3d4V3Nkd0xSanRVQjdpWWo1STR5alFoczVhaUlVcTRUaVh3bzRiWHFxMkJKQ251Ul9QdVhaNFBvMlBtUjBiQkFYbTUzZ19JUXkyOE13aU1Qc1B0RXhycDFVODNFTl9NengyWElNSEhBbw?oc=5",
+        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOa254MnA5NEJfWXlSVGxlaEJULTEzakt1a3d0c2pCWTd3Rml4bG5ZYm51RjJnSFlsS3RXaU05SXdzaU1Remd6dXdfZWljNFlLc1pxV3RGR0kzejFhTE5kVkQ1Wk8xX1JNdHF0b2JwQkxxVUpWbGxZVDQ1WUx2VG1DZnFYNlVYdWVvNmNSRFJfdVNnVE54MWVaRldkRFdMSzZ3TDN2X3dON1ZHSEF0Q1RlanFMNEozMlphX2U3Sm1ob0Jkb01TX2YyOE1YUmkwbUdkbm1nM1NfZW0tT01uSGFlUXdZZlpoeUdB?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 40.689064,
+      "geo_lon": -74.177255,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.8,
+      "verification_status": "verified",
+      "verification_score": 0.8,
+      "source_count": 2,
+      "last_updated": "2026-06-01T04:57:57.273495+00:00",
+      "id": "05c464e2e405",
+      "created_at": "2026-06-01T04:57:57.273483+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-05-30",
