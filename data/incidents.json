@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-01T04:57:57.273502+00:00",
-    "total_incidents": 137,
+    "last_updated": "2026-06-03T11:14:45.983428+00:00",
+    "total_incidents": 138,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,67 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-03",
+      "publish_date": "2026-06-03",
+      "country": "Kuwait",
+      "country_code": "KW",
+      "city": "Kuwait City",
+      "location_detail": "airport terminal",
+      "airport_name": "Kuwait International Airport",
+      "airport_iata": "KWI",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "high",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "Iranian",
+      "summary_en": "Iranian drone attack on Kuwait airport",
+      "summary_tr": "İran Kuveyt Havalimanı'na bombalı saldırı düzenledi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "Iran",
+        "Kuwait"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-03",
+      "year": 2026,
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/6/3/iranian-drone-hits-kuwaits-main-airport-after-us-strikes-qeshm-island?traffic_source=rss",
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxNejlTQXJhWnlNVk5SNmNHVG0xMnpKcm5mT0wzMFNwbjdsVGNRX0hPZ3U1dk8xRks4OXUxd3RIU0ZmSHFWdG1nTHViVERvenVrSF84b3VJT2Y5ZFNianltSUtHd2xJSEZsZ2pVMmxIdHlzZGpyTFNEQ1NnNF9DUGZ4bFRiclNfVmVfY052NmJ1T1IxZ3FfUzJjbUh1MXNOT1hGNDVaMnpHWFkyd1UwLUcwVGgtUmEtcjc1QXdvQVNyQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxPLTRqLUVfN1RBNDFYNU1DUlZkM2VaRzJ6d0F4b29WVlozd2lmU25fYTVYMXpIZ0xYQm8xVjVaMFlrNGN0RGxETmk2UjBsZlhuaTFjYnU0N1hXSklxaUtDRU1BNi1hZDREeTRPWUd5TXdDeFBoMjhDNnZiaThHaW9XTnpwR3EwS3NCQzUwSnZTV1VkY1hRcTZxcF9pb1h5MmRmbjlhU2RtMVN0OFV3VlgzekJ1dkstMzBWbWpNX2ZxMWpVLXFCMG41bGpTcU9xREU?oc=5",
+        "https://www.omanobserver.om/article/1190616/world/region/kuwait-says-iran-drone-attack-forces-closure-of-airport",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGZWb3Q4Tm1iM1BXdFJmTEVQaldZUzNueW1ESE9oajk1X1kyX1A0SmRoLVdmNjNxd1I0b1NzUFptZjVwQktraWwzSC1Qby1UYVZ5SUctWjExOVpmb2o4UnI3OWIwX1dPSDBiZGd4N1ZaZm91MmF4NHR2MWp1dUVnd3I5OG5BOFJSX0VlQm9VSVBJUjd1UlE?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 29.273396,
+      "geo_lon": 47.497948,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "source_count": 5,
+      "last_updated": "2026-06-03T11:14:45.983421+00:00",
+      "id": "241e9ecfebc9",
+      "created_at": "2026-06-03T11:14:45.983411+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-06-01",

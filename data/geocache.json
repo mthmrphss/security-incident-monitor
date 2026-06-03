@@ -838,5 +838,20 @@
     "lat": 40.689064,
     "lon": -74.177255,
     "display_name": "Newark Liberty International Airport, Formosa Street, Maher Terminals, Elizabeth, Union County, New Jersey, 07114, United States"
+  },
+  "kuwait": {
+    "lat": 29.273396,
+    "lon": 47.497948,
+    "display_name": "الكويت"
+  },
+  "kuwait international airport, kuwait": {
+    "lat": 29.220268,
+    "lon": 47.955156,
+    "display_name": "مطار الكويت الدولي, المطار الدولي, محافظة الفروانية, 85600, الكويت"
+  },
+  "kuwait city, kuwait": {
+    "lat": 29.379653,
+    "lon": 47.973417,
+    "display_name": "مدينة الكويت, القبلة, محافظة العاصمة, 15005, الكويت"
   }
 }
