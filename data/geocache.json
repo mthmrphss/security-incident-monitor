@@ -858,5 +858,10 @@
     "lat": 29.20289,
     "lon": 47.989962,
     "display_name": "Kuwait Airport, طريق فهد المالك الصباح, المطار الدولي, محافظة الفروانية, 32068, الكويت"
+  },
+  "california, united states": {
+    "lat": 36.701463,
+    "lon": -118.755997,
+    "display_name": "California, United States"
   }
 }
