@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-04T10:09:40.881605+00:00",
-    "total_incidents": 139,
+    "last_updated": "2026-06-04T15:33:30.818281+00:00",
+    "total_incidents": 140,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-06-04",
+      "publish_date": "2026-06-04",
+      "country": "Turkey",
+      "country_code": "TR",
+      "city": "Antalya",
+      "location_detail": "in front of a hotel",
+      "airport_name": null,
+      "airport_iata": "AYT",
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "stabbing",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "Eyyüp Taşan",
+      "summary_en": "Man stabbed security guard",
+      "summary_tr": "Güvenlik görevlisi bıçaklandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "stabbing",
+        "security guard",
+        "hotel attack"
+      ],
+      "date": "2026-06-04",
+      "year": 2026,
+      "source_urls": [
+        "https://www.haberler.com/guncel/bicaklanarak-oldurulen-tahsin-in-annesi-oglum-cok-19911630-haberi/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 36.886573,
+      "geo_lon": 30.703024,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.65,
+      "verification_status": "probable",
+      "verification_score": 0.65,
+      "id": "384bf33557d9",
+      "created_at": "2026-06-04T15:33:30.818266+00:00",
+      "last_updated": "2026-06-04T15:33:30.818275+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-06-03",
@@ -52,14 +109,15 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMilAFBVV95cUxNTUNJTEVEQ2lJTnBUMWtlOFEtbUdlX0JMQzNSSUhZTlZQSkJXd0hESzdLWWdXRnM2TEFwNWhlNGFRSEJ3NWpUVjBYZnctdWRnWmdDRGd5aVBiWHdDUW1pRksxTHktRkZBOEdrQ0lWdHM1WXZBYjUyVGQ3dFRGSExaZEZGZmk1Nk4temxpVzJLUXhSaWRa?oc=5",
-        "https://news.google.com/rss/articles/CBMivwFBVV95cUxNejlTQXJhWnlNVk5SNmNHVG0xMnpKcm5mT0wzMFNwbjdsVGNRX0hPZ3U1dk8xRks4OXUxd3RIU0ZmSHFWdG1nTHViVERvenVrSF84b3VJT2Y5ZFNianltSUtHd2xJSEZsZ2pVMmxIdHlzZGpyTFNEQ1NnNF9DUGZ4bFRiclNfVmVfY052NmJ1T1IxZ3FfUzJjbUh1MXNOT1hGNDVaMnpHWFkyd1UwLUcwVGgtUmEtcjc1QXdvQVNyQQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPckZDbFJscWFQakJJVVBwRW1OdmNxOXRNS0c0a05iMHVOYjBULXpwQ01KRkpBM09fejF0dk43bl9SU055cjRUeVEtSVpnSnJOSDZwZktPMlJ4MWtOUkQ0SXNHNFlPay1sM29fa2s1THpBUjZVTWFPbW5DakREa3lac1pxXzdCazdHaTktc28wOG9nWUd6WkZOUEgzR01fQ21rc1BSNjhxeDY2eTkwWE96NXVSRTg0ZF950gG-AUFVX3lxTE5vRUplMkRVcm1IbVR3Vml0YXhWMVhtZXFycjBMX2w2RktmSGNqOEpvaTc3QkgtZmNFVkM3ai1zdzktWnk1cVBZNEZKUEw4QnVCbm9PZUVnakJGemJ0Qy1ZYzRpNzFPZnNJcVNWQndZRWVfZDgyYXB3eVEzcGc0SmF2NTR1OFQ3aGxKa1V5d2dkajVjTnVtMlZPSnF0VUcyY3c4T2FqdWludnJvT1I3R015WVFjMkpla3FLSWlRQVE?oc=5",
         "https://news.google.com/rss/articles/CBMizwFBVV95cUxPLTRqLUVfN1RBNDFYNU1DUlZkM2VaRzJ6d0F4b29WVlozd2lmU25fYTVYMXpIZ0xYQm8xVjVaMFlrNGN0RGxETmk2UjBsZlhuaTFjYnU0N1hXSklxaUtDRU1BNi1hZDREeTRPWUd5TXdDeFBoMjhDNnZiaThHaW9XTnpwR3EwS3NCQzUwSnZTV1VkY1hRcTZxcF9pb1h5MmRmbjlhU2RtMVN0OFV3VlgzekJ1dkstMzBWbWpNX2ZxMWpVLXFCMG41bGpTcU9xREU?oc=5",
-        "https://news.google.com/rss/articles/CBMiggJBVV95cUxQQ0xkdDM1THZRaGQyN3VyeXpKaUZoMGVXT3VsdHJ5VUNLd1BQa09PMkxFQXF5eXRvUV9RN2pNTUZ5REgweXE3OFJMcEIxZ18wOGpoOTlqVV9IZW9jRHpmejhNYmlDaVRDNEpmc1B1cTBTTTFhcXM2R0ZtY044ZEVIU0ZnQl9LUDlpTFI5Vmd2RC0zbS1ZZGNNbkFOSXJCV0hkbnAtYk96a1BXVXJsQVVyMjRMR3hrMlk1aHJVUkJ4OERMb2djZmZoOWNrM2Vtem43TDFnVl9zOVFDMjROU0VicGdsX19nZVlNRU43ZmpQYUxrV2NmNTZnX3lYdWJSSV9lR1HSAYcCQVVfeXFMT3F2dl8wWXVHc1N0c2pTeV9YSXF2ZXk4ZHVxYWluSWtuc1V1MWRDMG5tTEJRQzB3eWpaeXV2eWdodGt6SUx4Rkd5MC12bk1xcmRwV1pVVXZZR2hCekhvX29XY1piNFNudlZwLWFpS1Y5QVp6WWVKTTZNZVdUU2c2aDZlMzhHLUlBQ3g1VFluTEtRdklOQ1Z2SXhUNU9LemtfQmZBMS1QU21wYjBUcXFxSURIc2hPUWpsNTRxOGhPV3dTTjBmX2NfeDlCMEFudkVPTDJCTFI2Yk83SFN2d20yLVJaUmNoWGVIVEpaR0RXblhsOENzZTV4SFFDc1p1X2t4TkFKSWt0eHc?oc=5",
-        "https://www.omanobserver.om/article/1190616/world/region/kuwait-says-iran-drone-attack-forces-closure-of-airport",
         "https://www.aljazeera.com/video/newsfeed/2026/6/3/kuwait-labels-iran-attack-heinous?traffic_source=rss",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPckZDbFJscWFQakJJVVBwRW1OdmNxOXRNS0c0a05iMHVOYjBULXpwQ01KRkpBM09fejF0dk43bl9SU055cjRUeVEtSVpnSnJOSDZwZktPMlJ4MWtOUkQ0SXNHNFlPay1sM29fa2s1THpBUjZVTWFPbW5DakREa3lac1pxXzdCazdHaTktc28wOG9nWUd6WkZOUEgzR01fQ21rc1BSNjhxeDY2eTkwWE96NXVSRTg0ZF950gG-AUFVX3lxTE5vRUplMkRVcm1IbVR3Vml0YXhWMVhtZXFycjBMX2w2RktmSGNqOEpvaTc3QkgtZmNFVkM3ai1zdzktWnk1cVBZNEZKUEw4QnVCbm9PZUVnakJGemJ0Qy1ZYzRpNzFPZnNJcVNWQndZRWVfZDgyYXB3eVEzcGc0SmF2NTR1OFQ3aGxKa1V5d2dkajVjTnVtMlZPSnF0VUcyY3c4T2FqdWludnJvT1I3R015WVFjMkpla3FLSWlRQVE?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSXdVTFlZRlBmN3I5QWdjMVBBREFfYnhaeEs2LWZzc05YQmZQZUZUc2txUXRzaTE5VnNjZW5VYXZnTTZyb3ZVeU0xeTZBV2Y4Q0cweVYyQmFXRU42a1dHTlRmcVRodnE2bDRXLTlxY29DSWFnclIwMzZvOTNqbzFzUHk2OXE5SjFXTi1OYWtRck0tUXlZdk5BMTM1MEhDSFlNcXJjemJ4OGRQdDVRMUxOWmZVcldQZknSAb8BQVVfeXFMT3BNNFBCV2ItRG03bFB4NFFpb0M2YTRRWXZKU2I2S0k0VTE2ZmNlM0llVGNqVDZGY0ktNU1MWGlIbmluOGxnd3lxYWNOV1dsa0lGNVJpYlNuQkJKXzNKVjAxNWZkcjlhTHVxOXVKQ2JuSUlPQm4yMFE2amVxUnZtV1Q4SmNibkF2c2NDY0tMMnA4SlktX2t6N254V19sTHFMSW1DLVR3b21ZTUpuSVRMeDdMck1aTXBZSWxLN1JwYVk?oc=5",
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxNejlTQXJhWnlNVk5SNmNHVG0xMnpKcm5mT0wzMFNwbjdsVGNRX0hPZ3U1dk8xRks4OXUxd3RIU0ZmSHFWdG1nTHViVERvenVrSF84b3VJT2Y5ZFNianltSUtHd2xJSEZsZ2pVMmxIdHlzZGpyTFNEQ1NnNF9DUGZ4bFRiclNfVmVfY052NmJ1T1IxZ3FfUzJjbUh1MXNOT1hGNDVaMnpHWFkyd1UwLUcwVGgtUmEtcjc1QXdvQVNyQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGZWb3Q4Tm1iM1BXdFJmTEVQaldZUzNueW1ESE9oajk1X1kyX1A0SmRoLVdmNjNxd1I0b1NzUFptZjVwQktraWwzSC1Qby1UYVZ5SUctWjExOVpmb2o4UnI3OWIwX1dPSDBiZGd4N1ZaZm91MmF4NHR2MWp1dUVnd3I5OG5BOFJSX0VlQm9VSVBJUjd1UlE?oc=5",
+        "https://www.omanobserver.om/article/1190616/world/region/kuwait-says-iran-drone-attack-forces-closure-of-airport",
         "https://www.aljazeera.com/news/2026/6/3/iranian-drone-hits-kuwaits-main-airport-after-us-strikes-qeshm-island?traffic_source=rss",
-        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVGZWb3Q4Tm1iM1BXdFJmTEVQaldZUzNueW1ESE9oajk1X1kyX1A0SmRoLVdmNjNxd1I0b1NzUFptZjVwQktraWwzSC1Qby1UYVZ5SUctWjExOVpmb2o4UnI3OWIwX1dPSDBiZGd4N1ZaZm91MmF4NHR2MWp1dUVnd3I5OG5BOFJSX0VlQm9VSVBJUjd1UlE?oc=5"
+        "https://news.google.com/rss/articles/CBMiggJBVV95cUxQQ0xkdDM1THZRaGQyN3VyeXpKaUZoMGVXT3VsdHJ5VUNLd1BQa09PMkxFQXF5eXRvUV9RN2pNTUZ5REgweXE3OFJMcEIxZ18wOGpoOTlqVV9IZW9jRHpmejhNYmlDaVRDNEpmc1B1cTBTTTFhcXM2R0ZtY044ZEVIU0ZnQl9LUDlpTFI5Vmd2RC0zbS1ZZGNNbkFOSXJCV0hkbnAtYk96a1BXVXJsQVVyMjRMR3hrMlk1aHJVUkJ4OERMb2djZmZoOWNrM2Vtem43TDFnVl9zOVFDMjROU0VicGdsX19nZVlNRU43ZmpQYUxrV2NmNTZnX3lYdWJSSV9lR1HSAYcCQVVfeXFMT3F2dl8wWXVHc1N0c2pTeV9YSXF2ZXk4ZHVxYWluSWtuc1V1MWRDMG5tTEJRQzB3eWpaeXV2eWdodGt6SUx4Rkd5MC12bk1xcmRwV1pVVXZZR2hCekhvX29XY1piNFNudlZwLWFpS1Y5QVp6WWVKTTZNZVdUU2c2aDZlMzhHLUlBQ3g1VFluTEtRdklOQ1Z2SXhUNU9LemtfQmZBMS1QU21wYjBUcXFxSURIc2hPUWpsNTRxOGhPV3dTTjBmX2NfeDlCMEFudkVPTDJCTFI2Yk83SFN2d20yLVJaUmNoWGVIVEpaR0RXblhsOENzZTV4SFFDc1p1X2t4TkFKSWt0eHc?oc=5"
       ],
       "source_articles": [
         0
@@ -79,8 +137,8 @@
       "quality_score": 0.9,
       "verification_status": "verified",
       "verification_score": 0.9,
-      "source_count": 9,
-      "last_updated": "2026-06-04T10:09:40.881468",
+      "source_count": 10,
+      "last_updated": "2026-06-04T15:33:30.817665",
       "id": "241e9ecfebc9",
       "created_at": "2026-06-03T11:14:45.983411+00:00"
     },
@@ -100,9 +158,9 @@
       "severity": "unknown",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
-      "summary_en": "Man caught with bomb",
-      "summary_tr": "Bomba ile yakalanan adam",
+      "perpetrator": "a man",
+      "summary_en": "Man charged with bringing bomb to California airport",
+      "summary_tr": "Bir adam California havalimanına bomba getirmekle suçlandı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -116,7 +174,8 @@
       "date": "2026-06-03",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNN2doSHhzTDNHNjNFSFFrUjBzbUtoTXJ3RUNzMjhVaGE4Ukt5b2kycjVFbzBtVzRrQXhMeUdNSkw2Zk9CdTJaNjlFcXJpbGdvZEZ0R0F0UDJKa2h6ZmF3S3hxUFZ3NE5HS0JhRmFnd3R6S1Y2NnVWeG8xWXA4NlEtaXY1N2Z4VFZrWEZR?oc=5"
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNN2doSHhzTDNHNjNFSFFrUjBzbUtoTXJ3RUNzMjhVaGE4Ukt5b2kycjVFbzBtVzRrQXhMeUdNSkw2Zk9CdTJaNjlFcXJpbGdvZEZ0R0F0UDJKa2h6ZmF3S3hxUFZ3NE5HS0JhRmFnd3R6S1Y2NnVWeG8xWXA4NlEtaXY1N2Z4VFZrWEZR?oc=5",
+        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNMlFObDRYMVB6QjJwR0RNUXk3NVkwc3RLZWlwTHN6RzQxUURxQ0RrOFhmcEZmTVJCLUJUV1BjWVhvdm4tX0U3M0sxSG02X1RkTmIxUTBMbVBMTWg0LUlESnFVX2sxc0poNVNkM1VlNklNQW1fVTFnUDBmTWhTZlVjZDBzRWZCMGZyc2l3d3hSbm91Zlp5STlIazdiYlhYZTI0SzBuY0xfek5xVk1qcHQ0ZUVsMDg2RkVHd1U1SkJYcjIwckc2azVPcjNWa09TNWFpOHB0M254REtnUW5YWS1TN0QzMW5WVnZMMFFrdTYzU05rWTMySGhoT3ROOA?oc=5"
       ],
       "source_articles": [
         0
@@ -138,8 +197,8 @@
       "verification_score": 1.0,
       "id": "9eb312f244bd",
       "created_at": "2026-06-04T04:49:22.025381+00:00",
-      "last_updated": "2026-06-04T04:49:22.025390+00:00",
-      "source_count": 1
+      "last_updated": "2026-06-04T15:33:30.818132",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
