@@ -878,5 +878,10 @@
     "lat": 23.612363,
     "lon": 58.593813,
     "display_name": "مسقط, ولاية مسقط, محافظة مسقط, عمان"
+  },
+  "charles county, united states": {
+    "lat": 38.499161,
+    "lon": -77.027847,
+    "display_name": "Charles County, Maryland, United States"
   }
 }
