@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-05T10:06:11.435928+00:00",
-    "total_incidents": 142,
+    "last_updated": "2026-06-05T15:21:20.840469+00:00",
+    "total_incidents": 143,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -73,6 +73,63 @@
       "id": "100f945cb5ba",
       "created_at": "2026-06-05T04:22:54.834117+00:00",
       "last_updated": "2026-06-05T04:22:54.834127+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-05",
+      "publish_date": "2026-06-05",
+      "country": "Australia",
+      "country_code": "AU",
+      "city": "unknown",
+      "location_detail": "Avalon Airport",
+      "airport_name": "Avalon Airport",
+      "airport_iata": "AVV",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "shooting",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "teen",
+      "summary_en": "Teen stormed plane with shotgun",
+      "summary_tr": "Silahlı saldırı: Genç, tüfekle uçağa saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "shotgun",
+        "teen"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-05",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxQczNYSFhaVzFjb0JfcDlTUU9WdXBrX2pOTVF0YUxkVHh1bFVQcWZHN0RCVnA1UnZLajgwZE9ZeGxORE5NTWNyeWQ0R2ZpbmI0RDZ0VG4tNWJ0dmNiM2NYRl8tNW84QUxieW5nYzllNTJDWlVKZmswZ0h5YTJtdzZCVFFHRGFJdE5NM0x4T2xR?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": -38.041575,
+      "geo_lon": 144.472251,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "700b05daeb27",
+      "created_at": "2026-06-05T15:21:20.840455+00:00",
+      "last_updated": "2026-06-05T15:21:20.840464+00:00",
       "source_count": 1
     },
     {
@@ -164,9 +221,10 @@
       "date": "2026-06-04",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPU2IxYllpd2V4MzR3UnNwZFNYUlJROXNGeGhSNkc4aHUtUkJITGR3OHEyVk93UVYtaGpCQlBqbG1rbUd1akpqLU9WVEtGdkdLMFlCTGg1Q3ZFTVZ3ZWVNVkswV3dGN2oxN2xVMUNINmxUeHM3ZlBoZ1AyMmVHcWVEeWs3UVNiQ29RTGFCT3RIdmkwQks0S09TbGN0WktBMS0weFQtVWNPcklUSXU2TXBLeU0ycHN5dlhGRDZaMXYxbkdDU1JzM2lreUFyUHBhbzRSMlEzc2RGUHZ6SHdaTmZZeA?oc=5",
         "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbWRBcFlKRmQ1dUNPSm9SSk1uV0ZpZ0U5RkN0MFhHbC16OEZiaV94QmtTNW9VOG1aTVU0Q2ZvaXlRV1JwUTdHajI1REtBYU9qcWhxX0ZjRGhsOWpJOVRnbFJRNW5zQUJrZUpDV1lqNm9zUUtic2xTUTduZHJkYUdPM0hvSHRLUVNFdElmd3VQS21BRDNFc29ZcldyS2ZMbWhEdUx5eWJyS3lJRU1WT0NadGlTY1hXeXBuZV9lUXRTUjhmTzBUMlpBelp2bnhrQmxDVDF1NUVuTQ?oc=5",
         "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQc1NjSlQxa1J5dUY1b09uby1vaFVCUjdfeXF5YjZEYVBUM3AycldrTXhYMXRVWGhlaHZOSDFfdWNOZkdkSUtWX0VwV3J4REJjajR2dmdOMVlWMWF2YmtnMzdwbDNBQXNJOWZvd01wZ3RfR1Q0bXYyZFFONUpUMEI4LVNHQlF5amJPanBfX1dWVlRybk9qVHkzTWZHcG9YOHk3OFVZejBlWUlaREIzQzhGX09reDZwajJja1hYSU1zWGNha3c?oc=5",
-        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPU2IxYllpd2V4MzR3UnNwZFNYUlJROXNGeGhSNkc4aHUtUkJITGR3OHEyVk93UVYtaGpCQlBqbG1rbUd1akpqLU9WVEtGdkdLMFlCTGg1Q3ZFTVZ3ZWVNVkswV3dGN2oxN2xVMUNINmxUeHM3ZlBoZ1AyMmVHcWVEeWs3UVNiQ29RTGFCT3RIdmkwQks0S09TbGN0WktBMS0weFQtVWNPcklUSXU2TXBLeU0ycHN5dlhGRDZaMXYxbkdDU1JzM2lreUFyUHBhbzRSMlEzc2RGUHZ6SHdaTmZZeA?oc=5"
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxONDIwUF9YTGdRVl82N0l1M1VzMkFNLXl3SVExZTZUd1o1YzlpR2pkQkctbXhvd3Z4bEN3UmpIelhIOGZ5MUxPTHpFaXAwbkkweU5wVlZBOEhkOG1LYU55NkxxODBmdzYtQlZtRENOeVRXZjFCWjUwYnFvYlhkS0JSTE8zRFRZWUZRTC16TUdrSUdMaGRxNzlDSnhpVEd5bllCdGJJellPUkc?oc=5"
       ],
       "source_articles": [
         0
@@ -188,8 +246,8 @@
       "verification_score": 1.0,
       "id": "42edb3d98f45",
       "created_at": "2026-06-04T20:15:41.267491+00:00",
-      "last_updated": "2026-06-05T10:06:11.435806",
-      "source_count": 3
+      "last_updated": "2026-06-05T15:21:20.840315",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
