@@ -873,5 +873,10 @@
     "lat": 38.68679,
     "lon": -121.59038,
     "display_name": "Sacramento International Airport, Power Line Road, Sacramento County, California, 95836, United States"
+  },
+  "muscat, oman": {
+    "lat": 23.612363,
+    "lon": 58.593813,
+    "display_name": "مسقط, ولاية مسقط, محافظة مسقط, عمان"
   }
 }

@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-04T20:15:41.267510+00:00",
-    "total_incidents": 141,
+    "last_updated": "2026-06-05T04:22:54.834133+00:00",
+    "total_incidents": 142,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-06-05",
+      "publish_date": "2026-06-05",
+      "country": "Oman",
+      "country_code": "OM",
+      "city": "Muscat",
+      "location_detail": "Mina al-Fahal oil terminal",
+      "airport_name": null,
+      "airport_iata": "MCT",
+      "hotel_name": null,
+      "venue_name": "oil terminal",
+      "attack_type": "drone",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Drone strike at oil terminal",
+      "summary_tr": "Petrol terminaline drone saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone strike",
+        "oil terminal"
+      ],
+      "date": "2026-06-05",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/clashreport/status/2062743676430803050#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 23.612363,
+      "geo_lon": 58.593813,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "100f945cb5ba",
+      "created_at": "2026-06-05T04:22:54.834117+00:00",
+      "last_updated": "2026-06-05T04:22:54.834127+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-06-04",
@@ -93,8 +149,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Sacramento airport bomber caught",
-      "summary_tr": "Sacramento havalimanı bombacısı yakalandı",
+      "summary_en": "Man arrested with bomb at Sacramento airport",
+      "summary_tr": "Sacramento havalimanında bomba ile bir kişi tutuklandı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -108,7 +164,8 @@
       "date": "2026-06-04",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPU2IxYllpd2V4MzR3UnNwZFNYUlJROXNGeGhSNkc4aHUtUkJITGR3OHEyVk93UVYtaGpCQlBqbG1rbUd1akpqLU9WVEtGdkdLMFlCTGg1Q3ZFTVZ3ZWVNVkswV3dGN2oxN2xVMUNINmxUeHM3ZlBoZ1AyMmVHcWVEeWs3UVNiQ29RTGFCT3RIdmkwQks0S09TbGN0WktBMS0weFQtVWNPcklUSXU2TXBLeU0ycHN5dlhGRDZaMXYxbkdDU1JzM2lreUFyUHBhbzRSMlEzc2RGUHZ6SHdaTmZZeA?oc=5"
+        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPU2IxYllpd2V4MzR3UnNwZFNYUlJROXNGeGhSNkc4aHUtUkJITGR3OHEyVk93UVYtaGpCQlBqbG1rbUd1akpqLU9WVEtGdkdLMFlCTGg1Q3ZFTVZ3ZWVNVkswV3dGN2oxN2xVMUNINmxUeHM3ZlBoZ1AyMmVHcWVEeWs3UVNiQ29RTGFCT3RIdmkwQks0S09TbGN0WktBMS0weFQtVWNPcklUSXU2TXBLeU0ycHN5dlhGRDZaMXYxbkdDU1JzM2lreUFyUHBhbzRSMlEzc2RGUHZ6SHdaTmZZeA?oc=5",
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbWRBcFlKRmQ1dUNPSm9SSk1uV0ZpZ0U5RkN0MFhHbC16OEZiaV94QmtTNW9VOG1aTVU0Q2ZvaXlRV1JwUTdHajI1REtBYU9qcWhxX0ZjRGhsOWpJOVRnbFJRNW5zQUJrZUpDV1lqNm9zUUtic2xTUTduZHJkYUdPM0hvSHRLUVNFdElmd3VQS21BRDNFc29ZcldyS2ZMbWhEdUx5eWJyS3lJRU1WT0NadGlTY1hXeXBuZV9lUXRTUjhmTzBUMlpBelp2bnhrQmxDVDF1NUVuTQ?oc=5"
       ],
       "source_articles": [
         0
@@ -130,8 +187,8 @@
       "verification_score": 1.0,
       "id": "42edb3d98f45",
       "created_at": "2026-06-04T20:15:41.267491+00:00",
-      "last_updated": "2026-06-04T20:15:41.267503+00:00",
-      "source_count": 1
+      "last_updated": "2026-06-05T04:22:54.817745",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -231,9 +288,10 @@
       "date": "2026-06-03",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZmlQQUFDcUVzVjY0WFBPQW81aG9BbDZNcWFoNnJINklpZDkwMk12NEdpOU05TmNoM2JKSE5mcjA1UU0yYzZhQmJUTTBqb2hrTndKVnFnQ2JRaC1CVHBUTHU0SkdQMGZDRHpaOVB2QlVrdEVzYTAtajJualVfdjhpZDRVZXVTemVxWXVocnFhQzUzazg?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNN2doSHhzTDNHNjNFSFFrUjBzbUtoTXJ3RUNzMjhVaGE4Ukt5b2kycjVFbzBtVzRrQXhMeUdNSkw2Zk9CdTJaNjlFcXJpbGdvZEZ0R0F0UDJKa2h6ZmF3S3hxUFZ3NE5HS0JhRmFnd3R6S1Y2NnVWeG8xWXA4NlEtaXY1N2Z4VFZrWEZR?oc=5",
         "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNMlFObDRYMVB6QjJwR0RNUXk3NVkwc3RLZWlwTHN6RzQxUURxQ0RrOFhmcEZmTVJCLUJUV1BjWVhvdm4tX0U3M0sxSG02X1RkTmIxUTBMbVBMTWg0LUlESnFVX2sxc0poNVNkM1VlNklNQW1fVTFnUDBmTWhTZlVjZDBzRWZCMGZyc2l3d3hSbm91Zlp5STlIazdiYlhYZTI0SzBuY0xfek5xVk1qcHQ0ZUVsMDg2RkVHd1U1SkJYcjIwckc2azVPcjNWa09TNWFpOHB0M254REtnUW5YWS1TN0QzMW5WVnZMMFFrdTYzU05rWTMySGhoT3ROOA?oc=5",
-        "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOFdYamZzMTBRZ2VPc1JnNFZuSG81NXdqN1o3aVhKencxeEdMb1dUVUFESU80Y0R0aGlmcU9ZTFdiSnM2a3BpX2xIRXJqamFsY1RpcllJMXVtNDg5aEhjdno3cmxJNHBQQlhnNkg5MUVIOUhVc2c1Umw5UW8wYXNObUJfeXM0NXVKTXNMM3VzN1M2SmdzUmlOS1Z2Q0l6X3g0NUhIUllHM3ZDZzNQMjZ3bkxZODFUQWVDYjZMa01uMkY1T2pS?oc=5",
-        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNN2doSHhzTDNHNjNFSFFrUjBzbUtoTXJ3RUNzMjhVaGE4Ukt5b2kycjVFbzBtVzRrQXhMeUdNSkw2Zk9CdTJaNjlFcXJpbGdvZEZ0R0F0UDJKa2h6ZmF3S3hxUFZ3NE5HS0JhRmFnd3R6S1Y2NnVWeG8xWXA4NlEtaXY1N2Z4VFZrWEZR?oc=5"
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOFdYamZzMTBRZ2VPc1JnNFZuSG81NXdqN1o3aVhKencxeEdMb1dUVUFESU80Y0R0aGlmcU9ZTFdiSnM2a3BpX2xIRXJqamFsY1RpcllJMXVtNDg5aEhjdno3cmxJNHBQQlhnNkg5MUVIOUhVc2c1Umw5UW8wYXNObUJfeXM0NXVKTXNMM3VzN1M2SmdzUmlOS1Z2Q0l6X3g0NUhIUllHM3ZDZzNQMjZ3bkxZODFUQWVDYjZMa01uMkY1T2pS?oc=5"
       ],
       "source_articles": [
         0
@@ -255,8 +313,8 @@
       "verification_score": 1.0,
       "id": "9eb312f244bd",
       "created_at": "2026-06-04T04:49:22.025381+00:00",
-      "last_updated": "2026-06-04T20:15:41.267345",
-      "source_count": 3
+      "last_updated": "2026-06-05T04:22:54.818691",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
