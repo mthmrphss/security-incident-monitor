@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-05T20:09:32.769983+00:00",
-    "total_incidents": 145,
+    "last_updated": "2026-06-06T04:04:40.402214+00:00",
+    "total_incidents": 147,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -130,6 +130,63 @@
       "id": "700b05daeb27",
       "created_at": "2026-06-05T15:21:20.840455+00:00",
       "last_updated": "2026-06-05T15:21:20.840464+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-06-05",
+      "publish_date": "2026-06-05",
+      "country": "Mali",
+      "country_code": "ML",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "siege",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Mali hunts suspects after hotel siege",
+      "summary_tr": "Mali, otel kuşatması sonrası şüphelileri arıyor",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "hotel attack",
+        "Mali",
+        "siege"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-05",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3JHUW5XSEpkVGdJb1FVRjBrMjB6WVJ1bEtrTzRxV2o1TnRNLWgtUnhOczRyNVNCdkFta2xWdFN0TGxIeS1XLUlMZUJfbTBla2hmLTluUFdVY0JjZUczeV9xMFp5a2lWbERVRWNSZFBhOWZoMDA5WmhRdnBINUNmMmhfdC1FOFJWRjJ6c0V0TUR5WklmWENSeTBZdjlxOXJGelRpaw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 16.370036,
+      "geo_lon": -2.290024,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "6860caf6ae94",
+      "created_at": "2026-06-06T04:04:40.402204+00:00",
+      "last_updated": "2026-06-06T04:04:40.402209+00:00",
       "source_count": 1
     },
     {
@@ -360,6 +417,63 @@
       "id": "2c528661580a",
       "created_at": "2026-06-05T20:09:32.769974+00:00",
       "last_updated": "2026-06-05T20:09:32.769978+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-04",
+      "publish_date": "2026-06-04",
+      "country": "Kuwait",
+      "country_code": "KW",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Kuwait releases footage of deadly airport attack",
+      "summary_tr": "Kuveyt, ölümcül havalimanı saldırısının görüntülerini yayınladı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "Kuwait",
+        "Iran"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-04",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNb0pGMHBobkV5bEd0cmRrczRxdlJQajEwY1FjM2FQVWUwYXFMWk9tT2RBTFNPWjdjWnNhQTgyYng3UzFJSGZ4ZlhGdDlCSzIzZ2s1dTdJRDhnTWpGSXYxZUU3WUdpRWs1OEEzLTllcTBwYTFMZGxFeHkxSGcyTnlaLWl6ZDZUMUVvOG9xcDJjYWh5TVBMbl9tMlMyTnVYZ0l3enVud2xFQVlWekx3R3VKTG9QUWVzTFNtRWdSZzZsWDFDbHBQaDZsSmtUNUZaTjN5?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 29.273396,
+      "geo_lon": 47.497948,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "381bff23114d",
+      "created_at": "2026-06-06T04:04:40.402177+00:00",
+      "last_updated": "2026-06-06T04:04:40.402189+00:00",
       "source_count": 1
     },
     {
