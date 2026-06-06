@@ -883,5 +883,10 @@
     "lat": 38.499161,
     "lon": -77.027847,
     "display_name": "Charles County, Maryland, United States"
+  },
+  "new zealand": {
+    "lat": -41.500083,
+    "lon": 172.834408,
+    "display_name": "New Zealand / Aotearoa"
   }
 }
