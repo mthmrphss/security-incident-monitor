@@ -888,5 +888,10 @@
     "lat": -41.500083,
     "lon": 172.834408,
     "display_name": "New Zealand / Aotearoa"
+  },
+  "alicante-elche airport, alicante, spain": {
+    "lat": 38.284418,
+    "lon": -0.565753,
+    "display_name": "Aeropuerto de Alicante-Elche Miguel Hernández, N-338, l'Altet, Elx / Elche, el Baix Vinalopó, Alacant / Alicante, Comunitat Valenciana, 03195, España"
   }
 }
