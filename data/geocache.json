@@ -893,5 +893,10 @@
     "lat": 38.284418,
     "lon": -0.565753,
     "display_name": "Aeropuerto de Alicante-Elche Miguel Hernández, N-338, l'Altet, Elx / Elche, el Baix Vinalopó, Alacant / Alicante, Comunitat Valenciana, 03195, España"
+  },
+  "kannur airport, kannur, india": {
+    "lat": 11.917272,
+    "lon": 75.544785,
+    "display_name": "Kannur International Airport, Chovva - Anjarakandy - Keezhallur Mattannur Road, Vayanthod, Thalassery, Kannur, Kerala, 670708, India"
   }
 }
