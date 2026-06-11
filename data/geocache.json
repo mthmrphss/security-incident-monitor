@@ -898,5 +898,10 @@
     "lat": 11.917272,
     "lon": 75.544785,
     "display_name": "Kannur International Airport, Chovva - Anjarakandy - Keezhallur Mattannur Road, Vayanthod, Thalassery, Kannur, Kerala, 670708, India"
+  },
+  "rickenbacker international airport, united states": {
+    "lat": 39.813217,
+    "lon": -82.9342,
+    "display_name": "Rickenbacker International Airport, 2241, John Circle Drive, Columbus, Madison Township, Franklin County, Ohio, 43217, United States"
   }
 }
