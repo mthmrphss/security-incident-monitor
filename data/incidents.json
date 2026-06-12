@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-12T15:31:25.170629+00:00",
+    "last_updated": "2026-06-12T20:23:00.399546+00:00",
     "total_incidents": 152,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -52,8 +52,9 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRmp2OVVxTXF1T194TmhhdGFibE1Nc0ZjS3kzWE8yVVJYYVd6Wjc2cml2a0pVUGVZVnYyS1RVOHhxOHczUE9VTmJDamJvZ0YwRVZBWERaY1lXQnZrVkF4TWVCc3M0ZnlIR3dIZ0NtTFRQYzdOS1N6TmNJWkk5Zi0xZVQ2Q3ExTWlUQVJHTzM1bzXSAZgBQVVfeXFMTi1EUXpCYzhvTUdyZEtCWER6OTNFU0NEajFNQnJuajRVS01aT292YW5IV0VNUmNoQ29PUjBjeF82YmZsam03d3N5VHlaaUV4czlybzZVNTNNLVB5UFpCYWJ3T1VSUEVfQTdieHRHRHF0b2ZPcmNiNGVLU0dfWkVYMXRheHhxTTlzZFFvakM3dmtHZ3RqaHdKWG0?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWUUxenQxNVFOU3VZWjRHeks4aDhISDkwdnJLNFZ3YzVqOEttcllCbk5vSnVDVkg0QTV3NjRsbldzS2FCdmNmRGN1UE1Bc2NvNEtWVzVQQjNHeXRYZ3FEaklfQXVCMmR0NkV6MDdwUmZMMDBtbXQxRTRYWWpLOUN5d3I0OHl0eExyQUh0RDVYVnhJbWpFQmlkbjhJLVQ1N3MyVWhkMg?oc=5",
         "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQllLNUtjWTEzVHNPdHRxTVdsV1dGOVhYZ0JVY20wRWRCN3ZJQnFJMFF2NThEOWxhSFEtVHpiOGhGc1hhV3UtRUpYM20zXzV4dmxwWHZCd2FsMEhnRXNhZDRkYkFnY25aeHZmQzEyaUk1dURYRnp6SHRheEs4b2FxYjJPbV9qM2NH?oc=5",
-        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWUUxenQxNVFOU3VZWjRHeks4aDhISDkwdnJLNFZ3YzVqOEttcllCbk5vSnVDVkg0QTV3NjRsbldzS2FCdmNmRGN1UE1Bc2NvNEtWVzVQQjNHeXRYZ3FEaklfQXVCMmR0NkV6MDdwUmZMMDBtbXQxRTRYWWpLOUN5d3I0OHl0eExyQUh0RDVYVnhJbWpFQmlkbjhJLVQ1N3MyVWhkMg?oc=5"
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXy16NzNLdHFHZk5RMHIyNGptelVkRTRTLWlKQWlBQmRkcVhQazlBQWZWdENvVHRxdU45Nzl0Z0E2VWFLU0ctbmRzZkxZREIyQlBGRkFfN2Z6eUlBTUxpMGFkb1d5eTNuU092SndhWURWZ216QzNlWDd1Z3dlN21OWjJPRXNyd1Y4ZGxEVEF2dnhsQkgzQzZTTTN3VlTSAa4BQVVfeXFMTzFZX1RuUHhySEZRVS1qV1Bzei1YSWNMTXY2UEtSN0FWNmhGaHp5R2lYVmRYX2ZXcVFMQ2Y1X3lia3VnWW90Y3RHOF9sRXZXTXhweHpYUDBxdmlTUjRjSWstUlBXSTU4cHl6TUdJLWRGRmt0eWN6RXBTRk9kMXVCYjJlZVBXY3VqWVRiSUI5djRuOXEwbXhKVGwwb1ZGSGM5VGpKWUQ2cWhwbzlhTXp3?oc=5"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "quality_score": 0.9,
       "verification_status": "verified",
       "verification_score": 0.9,
-      "source_count": 3,
-      "last_updated": "2026-06-12T15:31:25.170623+00:00",
+      "source_count": 4,
+      "last_updated": "2026-06-12T20:23:00.398467",
       "id": "a5aa59cdbf1a",
       "created_at": "2026-06-12T15:31:25.170612+00:00"
     },
@@ -153,8 +154,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Bomb threat note found in flight toilet",
-      "summary_tr": "Uçak tuvalette bomba tehdidi notu bulundu",
+      "summary_en": "Bomb threat note found in IndiGo flight loo",
+      "summary_tr": "IndiGo uçağı tuvalette bomba tehdidi notu bulundu",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -168,8 +169,9 @@
       "date": "2026-06-10",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTGNiQ1FsblRrSVA3RlE1MFpBc1FjY1Mzck5Oa0MyVDZMOW9qV3VZbFBDVjdjUXRQQzJ2eENCbTY2NDN2SGRMcHl5Mzl2eXBaRVp4LXd4OXFRUlRLeGFWc2tMTjgxbUxHNENfSjQ2OUYtQjY2M2hNWFUtei1QNjZpZHNlZWhjLUVKWXhQNzdiTFg1ZmxjSk16X2RNTWU2ek9IbWpYUHVsa2ZCaWVkVVNwR2FmNm0wYnl4Nkg1bdIBwgFBVV95cUxPb2tjNV95WGpVdkhTX3Zjd1h1NDI1ZVNPMlFlcXNyYlk5eERUNzFUWmk5UVdQSTNnV0xxTmNBV2JRd3hrV1VsYV9ZWXkzYy1fZHl0amFPSEhTMktJRnluRlg1NHF3dVdVOTZUYTFHWVJLRWJBbnBxeEZwcWhXNzN1OGpuVzRhR0RjSXhDR0RhYlMxNlMxbVpzdkd5OFc1X0dEUVQ3NEhNYWhnbnpINVphZ0o1SHpDdVktM0lHOW9DbG1pdw?oc=5",
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWHowQ2lDMC1XYnpNSEJlbEptdktrdGp4THJ2QXBQYzVEbHhxTW02Ym9CY2FJS2VPek1ncEtGaEtnWTl6aERTbEd2MzdCMkFINTluOFQ5RkxoNmNMbV9yY2ROVVRvLXNpZHdIU1RXZ2xzZUU4Y1QyMUlfanhtZGFlN2JIRXd0dzVmU0hEXzFISmjSAZYBQVVfeXFMTThxQzlKOXFMODVwSm4ycWlLZHlEYW16bG5pTzBXOHAzY2hCU3R2c3ZDazgtM2tWbWs2VkRVZjFoV1YyTmxfbzVLenAyUzdKRTQyOGU5MmF5VC0xZ0tUek9QTWJ4TmJsbm5BbkpiN2JSVHBWSDhVUHVEc3VXNXo0NVNVODItZGZjNEdWTFpRdzByZEd0eEhB?oc=5"
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWHowQ2lDMC1XYnpNSEJlbEptdktrdGp4THJ2QXBQYzVEbHhxTW02Ym9CY2FJS2VPek1ncEtGaEtnWTl6aERTbEd2MzdCMkFINTluOFQ5RkxoNmNMbV9yY2ROVVRvLXNpZHdIU1RXZ2xzZUU4Y1QyMUlfanhtZGFlN2JIRXd0dzVmU0hEXzFISmjSAZYBQVVfeXFMTThxQzlKOXFMODVwSm4ycWlLZHlEYW16bG5pTzBXOHAzY2hCU3R2c3ZDazgtM2tWbWs2VkRVZjFoV1YyTmxfbzVLenAyUzdKRTQyOGU5MmF5VC0xZ0tUek9QTWJ4TmJsbm5BbkpiN2JSVHBWSDhVUHVEc3VXNXo0NVNVODItZGZjNEdWTFpRdzByZEd0eEhB?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQbk4xOHhhX3dpSDNSMzBFTmNkcG9SMzN2RGJFanFRRHlkc3ZrRkdLa2ktSEdfdlAzZldrV0xLYmw0UzdiYnNvY0NvbTN2ak1LR0ZWOGpXUjFrNk1JWlktR0pPTVpqSmt3US1GdFpqdE52VVJ6V1VuTjF4RnIwbldnVVdwcXBJY0RzVF9MUUxGNG9jdWFodXdVR09Pd2pBSW9MNWRpeGpKS3V5QTdOWGloXzFHSUJpVmg1UlhlY1FZZVAxNE1wUHhhaEY0ZGlmWHdqWk5TclRqajJaZ19BWkduaWo4eDVDX3lsRGg2czhTd9IB9AFBVV95cUxQQ0lTTFNUUk40RnZXSlA2SlFSZC1ZQS1LcnlBYWFwVlE3S3dOb2hDazkwamh5cV9YNVh5eHByY001aDI1ZDdHTzBydnNFaVVHeU5HN0VMY1Y4WWlWaUdjN1Q5WFhzclZXUHVhT29WdDVPSTk3YVBWTFZDMGpMSTJUR3BjRFBLcm5PcjVtdms2SFAxRFdWbm9EaE9MV1pqTlZFXzlFZzVyMFdKUF9TYVVodHJpUXdGV3ZJRUpJSHZGRWpYTjdERTF4QWQ3MjhBODhJZHd1dHJidmt2NWdxX1BEbE1IU0N5blRNcUpUdnNTRE9fUTVC?oc=5",
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTGNiQ1FsblRrSVA3RlE1MFpBc1FjY1Mzck5Oa0MyVDZMOW9qV3VZbFBDVjdjUXRQQzJ2eENCbTY2NDN2SGRMcHl5Mzl2eXBaRVp4LXd4OXFRUlRLeGFWc2tMTjgxbUxHNENfSjQ2OUYtQjY2M2hNWFUtei1QNjZpZHNlZWhjLUVKWXhQNzdiTFg1ZmxjSk16X2RNTWU2ek9IbWpYUHVsa2ZCaWVkVVNwR2FmNm0wYnl4Nkg1bdIBwgFBVV95cUxPb2tjNV95WGpVdkhTX3Zjd1h1NDI1ZVNPMlFlcXNyYlk5eERUNzFUWmk5UVdQSTNnV0xxTmNBV2JRd3hrV1VsYV9ZWXkzYy1fZHl0amFPSEhTMktJRnluRlg1NHF3dVdVOTZUYTFHWVJLRWJBbnBxeEZwcWhXNzN1OGpuVzRhR0RjSXhDR0RhYlMxNlMxbVpzdkd5OFc1X0dEUVQ3NEhNYWhnbnpINVphZ0o1SHpDdVktM0lHOW9DbG1pdw?oc=5"
       ],
       "source_articles": [
         0
@@ -191,8 +193,8 @@
       "verification_score": 1.0,
       "id": "c1274bb12655",
       "created_at": "2026-06-10T15:55:32.021533+00:00",
-      "last_updated": "2026-06-12T15:31:25.149339",
-      "source_count": 2
+      "last_updated": "2026-06-12T20:23:00.399420",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",

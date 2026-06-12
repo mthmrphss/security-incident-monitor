@@ -928,5 +928,10 @@
     "lat": 40.642948,
     "lon": -73.779373,
     "display_name": "John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States"
+  },
+  "lucknow airport, lucknow, india": {
+    "lat": 26.763838,
+    "lon": 80.885592,
+    "display_name": "Lucknow Airport Bus Depot, Vikram Nagar, Lucknow, Uttar Pradesh, India"
   }
 }
