@@ -908,5 +908,25 @@
     "lat": 39.813217,
     "lon": -82.9342,
     "display_name": "Rickenbacker International Airport, 2241, John Circle Drive, Columbus, Madison Township, Franklin County, Ohio, 43217, United States"
+  },
+  "jfk airport, usa": {
+    "lat": 40.642948,
+    "lon": -73.779373,
+    "display_name": "John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States"
+  },
+  "jfk airport, new york, united states": {
+    "lat": 40.642948,
+    "lon": -73.779373,
+    "display_name": "John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States"
+  },
+  "jfk, new york, united states": {
+    "lat": 40.642948,
+    "lon": -73.779373,
+    "display_name": "John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States"
+  },
+  "jfk airport": {
+    "lat": 40.642948,
+    "lon": -73.779373,
+    "display_name": "John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States"
   }
 }
