@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-12T20:23:00.399546+00:00",
+    "last_updated": "2026-06-13T04:24:32.036792+00:00",
     "total_incidents": 152,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -36,8 +36,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "woman",
-      "summary_en": "JFK Airport Terminal 4 evacuated due to bomb scare",
-      "summary_tr": "JFK havalimanı terminali bomba tehdidi nedeniyle boşaltıldı",
+      "summary_en": "JFK Airport's Terminal 4 briefly evacuated due to bomb scare",
+      "summary_tr": "JFK Havalimanı Terminal 4 bomba ihbarı nedeniyle geçici olarak boşaltıldı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -51,10 +51,11 @@
       "date": "2026-06-12",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRmp2OVVxTXF1T194TmhhdGFibE1Nc0ZjS3kzWE8yVVJYYVd6Wjc2cml2a0pVUGVZVnYyS1RVOHhxOHczUE9VTmJDamJvZ0YwRVZBWERaY1lXQnZrVkF4TWVCc3M0ZnlIR3dIZ0NtTFRQYzdOS1N6TmNJWkk5Zi0xZVQ2Q3ExTWlUQVJHTzM1bzXSAZgBQVVfeXFMTi1EUXpCYzhvTUdyZEtCWER6OTNFU0NEajFNQnJuajRVS01aT292YW5IV0VNUmNoQ29PUjBjeF82YmZsam03d3N5VHlaaUV4czlybzZVNTNNLVB5UFpCYWJ3T1VSUEVfQTdieHRHRHF0b2ZPcmNiNGVLU0dfWkVYMXRheHhxTTlzZFFvakM3dmtHZ3RqaHdKWG0?oc=5",
-        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWUUxenQxNVFOU3VZWjRHeks4aDhISDkwdnJLNFZ3YzVqOEttcllCbk5vSnVDVkg0QTV3NjRsbldzS2FCdmNmRGN1UE1Bc2NvNEtWVzVQQjNHeXRYZ3FEaklfQXVCMmR0NkV6MDdwUmZMMDBtbXQxRTRYWWpLOUN5d3I0OHl0eExyQUh0RDVYVnhJbWpFQmlkbjhJLVQ1N3MyVWhkMg?oc=5",
         "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQllLNUtjWTEzVHNPdHRxTVdsV1dGOVhYZ0JVY20wRWRCN3ZJQnFJMFF2NThEOWxhSFEtVHpiOGhGc1hhV3UtRUpYM20zXzV4dmxwWHZCd2FsMEhnRXNhZDRkYkFnY25aeHZmQzEyaUk1dURYRnp6SHRheEs4b2FxYjJPbV9qM2NH?oc=5",
-        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXy16NzNLdHFHZk5RMHIyNGptelVkRTRTLWlKQWlBQmRkcVhQazlBQWZWdENvVHRxdU45Nzl0Z0E2VWFLU0ctbmRzZkxZREIyQlBGRkFfN2Z6eUlBTUxpMGFkb1d5eTNuU092SndhWURWZ216QzNlWDd1Z3dlN21OWjJPRXNyd1Y4ZGxEVEF2dnhsQkgzQzZTTTN3VlTSAa4BQVVfeXFMTzFZX1RuUHhySEZRVS1qV1Bzei1YSWNMTXY2UEtSN0FWNmhGaHp5R2lYVmRYX2ZXcVFMQ2Y1X3lia3VnWW90Y3RHOF9sRXZXTXhweHpYUDBxdmlTUjRjSWstUlBXSTU4cHl6TUdJLWRGRmt0eWN6RXBTRk9kMXVCYjJlZVBXY3VqWVRiSUI5djRuOXEwbXhKVGwwb1ZGSGM5VGpKWUQ2cWhwbzlhTXp3?oc=5"
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWUUxenQxNVFOU3VZWjRHeks4aDhISDkwdnJLNFZ3YzVqOEttcllCbk5vSnVDVkg0QTV3NjRsbldzS2FCdmNmRGN1UE1Bc2NvNEtWVzVQQjNHeXRYZ3FEaklfQXVCMmR0NkV6MDdwUmZMMDBtbXQxRTRYWWpLOUN5d3I0OHl0eExyQUh0RDVYVnhJbWpFQmlkbjhJLVQ1N3MyVWhkMg?oc=5",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXy16NzNLdHFHZk5RMHIyNGptelVkRTRTLWlKQWlBQmRkcVhQazlBQWZWdENvVHRxdU45Nzl0Z0E2VWFLU0ctbmRzZkxZREIyQlBGRkFfN2Z6eUlBTUxpMGFkb1d5eTNuU092SndhWURWZ216QzNlWDd1Z3dlN21OWjJPRXNyd1Y4ZGxEVEF2dnhsQkgzQzZTTTN3VlTSAa4BQVVfeXFMTzFZX1RuUHhySEZRVS1qV1Bzei1YSWNMTXY2UEtSN0FWNmhGaHp5R2lYVmRYX2ZXcVFMQ2Y1X3lia3VnWW90Y3RHOF9sRXZXTXhweHpYUDBxdmlTUjRjSWstUlBXSTU4cHl6TUdJLWRGRmt0eWN6RXBTRk9kMXVCYjJlZVBXY3VqWVRiSUI5djRuOXEwbXhKVGwwb1ZGSGM5VGpKWUQ2cWhwbzlhTXp3?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRmp2OVVxTXF1T194TmhhdGFibE1Nc0ZjS3kzWE8yVVJYYVd6Wjc2cml2a0pVUGVZVnYyS1RVOHhxOHczUE9VTmJDamJvZ0YwRVZBWERaY1lXQnZrVkF4TWVCc3M0ZnlIR3dIZ0NtTFRQYzdOS1N6TmNJWkk5Zi0xZVQ2Q3ExTWlUQVJHTzM1bzXSAZgBQVVfeXFMTi1EUXpCYzhvTUdyZEtCWER6OTNFU0NEajFNQnJuajRVS01aT292YW5IV0VNUmNoQ29PUjBjeF82YmZsam03d3N5VHlaaUV4czlybzZVNTNNLVB5UFpCYWJ3T1VSUEVfQTdieHRHRHF0b2ZPcmNiNGVLU0dfWkVYMXRheHhxTTlzZFFvakM3dmtHZ3RqaHdKWG0?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxQR2NuRzZTeXRRWVp6Vk5TVGFXdUt1RlFSTWlYckJTQ2owOFpsXy1UcDdkei1ILUZET2NtQmJaQmF2TWprTW54OGtmS1A5UjRKc2JSOEVUMmlIMnRRVGZXdmYyOGROQkxKeHVMdVc1UlJfWHFmeVl5RTZxZ2laQ2M1WlF2cjlfVHZaclZaSnBHcUEtS2tBbmxnSlZxWGtMbHM?oc=5"
       ],
       "source_articles": [
         0
@@ -74,8 +75,8 @@
       "quality_score": 0.9,
       "verification_status": "verified",
       "verification_score": 0.9,
-      "source_count": 4,
-      "last_updated": "2026-06-12T20:23:00.398467",
+      "source_count": 5,
+      "last_updated": "2026-06-13T04:24:32.036700",
       "id": "a5aa59cdbf1a",
       "created_at": "2026-06-12T15:31:25.170612+00:00"
     },
