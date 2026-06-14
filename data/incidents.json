@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-14T04:52:02.796684+00:00",
-    "total_incidents": 152,
+    "last_updated": "2026-06-14T19:46:54.134160+00:00",
+    "total_incidents": 153,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,64 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-14",
+      "publish_date": "2026-06-14",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Mumbai",
+      "location_detail": "Mumbai airport",
+      "airport_name": "Mumbai airport",
+      "airport_iata": "BOM",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Mumbai airport gets hoax bomb threat",
+      "summary_tr": "Mumbai havalimanı sahte bomba tehdidi aldı",
+      "is_ongoing": false,
+      "is_false_alarm": true,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "hoax",
+        "bomb threat",
+        "false_alarm"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-14",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNllMY1UwUkNnaGFkQ0tUVW5vbi02MU9VR3l4eGRfU2wtWlVtUGZ6N3JVX1J5YklndnBRSnNFdFZaUVVJbHFiSzRoTE95ckkwYmJTV2NfUkdkX0gzd3NHLW9zMl9Bc1lEVkNGeEtOa2U3UHJVdTZoNGJjQ3NUN3hkSTJDa1VRT29xb1diUFM3SWFCcFhxREozRHZTN0FiejZHcXdNbElNU2JRWkhaTlFDYlVjc1hoem5oWTJPeFhIcXVBeUlMTVo5WNIBzgFBVV95cUxQLXJOcDFZanRTdWJtRkItWWdwZU92ZHhyZE1FMldDSjJPd0hHLXhYa1RuclhrOHo5eWdJMzdkTy1JVTVLX1I0MEd5Q2dqTFZpQUxlUlVrblMwRDdYckZ6WFpSeUtWakNNUTd5eUtvRnMtN2YwZ0ZDby12MDFtbTh3d1FRR1FvdGJGNGxSNlF0WmdtMVFMNG9xNERRSnpJVmk1V1g5UjZQTDhoaWVTVzJxdmhUNFA5NVMzZ3ZqaWpBTW5VTzlUUEJCdUtIczFEUQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 19.090138,
+      "geo_lon": 72.863822,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": false
+      },
+      "quality_score": 0.95,
+      "verification_status": "verified",
+      "verification_score": 0.95,
+      "id": "7a0877b6d46d",
+      "created_at": "2026-06-14T19:46:54.134149+00:00",
+      "last_updated": "2026-06-14T19:46:54.134156+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-06-12",
@@ -157,7 +215,7 @@
       "casualties_injured": 0,
       "perpetrator": "unknown",
       "summary_en": "Bomb threat note found in IndiGo flight loo",
-      "summary_tr": "IndiGo uçağı tuvalette bomba tehdidi notu bulundu",
+      "summary_tr": "Bombalı tehdit e-postası güvenlik alarmını tetikledi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -172,8 +230,9 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWHowQ2lDMC1XYnpNSEJlbEptdktrdGp4THJ2QXBQYzVEbHhxTW02Ym9CY2FJS2VPek1ncEtGaEtnWTl6aERTbEd2MzdCMkFINTluOFQ5RkxoNmNMbV9yY2ROVVRvLXNpZHdIU1RXZ2xzZUU4Y1QyMUlfanhtZGFlN2JIRXd0dzVmU0hEXzFISmjSAZYBQVVfeXFMTThxQzlKOXFMODVwSm4ycWlLZHlEYW16bG5pTzBXOHAzY2hCU3R2c3ZDazgtM2tWbWs2VkRVZjFoV1YyTmxfbzVLenAyUzdKRTQyOGU5MmF5VC0xZ0tUek9QTWJ4TmJsbm5BbkpiN2JSVHBWSDhVUHVEc3VXNXo0NVNVODItZGZjNEdWTFpRdzByZEd0eEhB?oc=5",
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTGNiQ1FsblRrSVA3RlE1MFpBc1FjY1Mzck5Oa0MyVDZMOW9qV3VZbFBDVjdjUXRQQzJ2eENCbTY2NDN2SGRMcHl5Mzl2eXBaRVp4LXd4OXFRUlRLeGFWc2tMTjgxbUxHNENfSjQ2OUYtQjY2M2hNWFUtei1QNjZpZHNlZWhjLUVKWXhQNzdiTFg1ZmxjSk16X2RNTWU2ek9IbWpYUHVsa2ZCaWVkVVNwR2FmNm0wYnl4Nkg1bdIBwgFBVV95cUxPb2tjNV95WGpVdkhTX3Zjd1h1NDI1ZVNPMlFlcXNyYlk5eERUNzFUWmk5UVdQSTNnV0xxTmNBV2JRd3hrV1VsYV9ZWXkzYy1fZHl0amFPSEhTMktJRnluRlg1NHF3dVdVOTZUYTFHWVJLRWJBbnBxeEZwcWhXNzN1OGpuVzRhR0RjSXhDR0RhYlMxNlMxbVpzdkd5OFc1X0dEUVQ3NEhNYWhnbnpINVphZ0o1SHpDdVktM0lHOW9DbG1pdw?oc=5",
         "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQbk4xOHhhX3dpSDNSMzBFTmNkcG9SMzN2RGJFanFRRHlkc3ZrRkdLa2ktSEdfdlAzZldrV0xLYmw0UzdiYnNvY0NvbTN2ak1LR0ZWOGpXUjFrNk1JWlktR0pPTVpqSmt3US1GdFpqdE52VVJ6V1VuTjF4RnIwbldnVVdwcXBJY0RzVF9MUUxGNG9jdWFodXdVR09Pd2pBSW9MNWRpeGpKS3V5QTdOWGloXzFHSUJpVmg1UlhlY1FZZVAxNE1wUHhhaEY0ZGlmWHdqWk5TclRqajJaZ19BWkduaWo4eDVDX3lsRGg2czhTd9IB9AFBVV95cUxQQ0lTTFNUUk40RnZXSlA2SlFSZC1ZQS1LcnlBYWFwVlE3S3dOb2hDazkwamh5cV9YNVh5eHByY001aDI1ZDdHTzBydnNFaVVHeU5HN0VMY1Y4WWlWaUdjN1Q5WFhzclZXUHVhT29WdDVPSTk3YVBWTFZDMGpMSTJUR3BjRFBLcm5PcjVtdms2SFAxRFdWbm9EaE9MV1pqTlZFXzlFZzVyMFdKUF9TYVVodHJpUXdGV3ZJRUpJSHZGRWpYTjdERTF4QWQ3MjhBODhJZHd1dHJidmt2NWdxX1BEbE1IU0N5blRNcUpUdnNTRE9fUTVC?oc=5",
-        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTGNiQ1FsblRrSVA3RlE1MFpBc1FjY1Mzck5Oa0MyVDZMOW9qV3VZbFBDVjdjUXRQQzJ2eENCbTY2NDN2SGRMcHl5Mzl2eXBaRVp4LXd4OXFRUlRLeGFWc2tMTjgxbUxHNENfSjQ2OUYtQjY2M2hNWFUtei1QNjZpZHNlZWhjLUVKWXhQNzdiTFg1ZmxjSk16X2RNTWU2ek9IbWpYUHVsa2ZCaWVkVVNwR2FmNm0wYnl4Nkg1bdIBwgFBVV95cUxPb2tjNV95WGpVdkhTX3Zjd1h1NDI1ZVNPMlFlcXNyYlk5eERUNzFUWmk5UVdQSTNnV0xxTmNBV2JRd3hrV1VsYV9ZWXkzYy1fZHl0amFPSEhTMktJRnluRlg1NHF3dVdVOTZUYTFHWVJLRWJBbnBxeEZwcWhXNzN1OGpuVzRhR0RjSXhDR0RhYlMxNlMxbVpzdkd5OFc1X0dEUVQ3NEhNYWhnbnpINVphZ0o1SHpDdVktM0lHOW9DbG1pdw?oc=5"
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxQM0NOZkJiNjNaYlFSM2drRGJsdWNSZ2dPS0xsWjVxbXVUZ1A1cklNbmhfcXk1Q2pHMUpZUUdUZEZ2Q3c0b2p5V0JyMWdQYndPV1p2NUFsQS1wRnEtRlgzWHkwdmxXdkRFcWdDakhpTGxrRXhheFRmTlR0V2hRazM4X1RYcVZ6dXVoRGJ0VA?oc=5"
       ],
       "source_articles": [
         0
@@ -195,8 +254,8 @@
       "verification_score": 1.0,
       "id": "c1274bb12655",
       "created_at": "2026-06-10T15:55:32.021533+00:00",
-      "last_updated": "2026-06-12T20:23:00.399420",
-      "source_count": 3
+      "last_updated": "2026-06-14T19:46:54.134037",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
