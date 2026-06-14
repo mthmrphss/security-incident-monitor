@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-13T04:24:32.036792+00:00",
+    "last_updated": "2026-06-14T04:52:02.796684+00:00",
     "total_incidents": 152,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -97,8 +97,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Replica pipe bomb found in carry-on",
-      "summary_tr": "Güvenlik görevlileri sahte boru bombası buldu",
+      "summary_en": "Replica pipe bomb found in carry-on bag",
+      "summary_tr": "Taşıma torbasında replika boru bombası bulundu",
       "is_ongoing": false,
       "is_false_alarm": true,
       "is_stale": false,
@@ -112,8 +112,9 @@
       "date": "2026-06-11",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenNJV2dPLThwal85MGxqemg4UVlSWktsalBPUTA5Q1lCTjl6c2pmcWRGM05tMk9OTTBRNzNQRXZVdHU4VzJzR1ZSdWYycHNPOWNTbGRMV1p6ZmtnRF9UUjd0WXRhZmV3QWZRTEFZYTNiVW1aTHYxM21VNnhTdHJGaldYQnlaTWd2eFJRaV9tYUR1dzJic1o2YzVqY1FOaU9hZGJPUGFfaHZnRW5aWDFHYWgxMUQwSThQ?oc=5",
         "https://news.google.com/rss/articles/CBMi-wFBVV95cUxONkpjMmhpNW5YdzIzeUpnQnNWVmtaSzFWSF9iR3lqQWtBVm1vdW81SWV4U0hTSDVVaGotVzVvdXVTTWF4YU03ZUJWVjNiSXJUTUYybnZCaTd4R0gwQS0zTWptb0prRVcxV1h3Vm4teEpEOUN4Qk1hSGZfTXlJZEk2NFBtbWdFTFJESjFPNkw2NUhwX1hsem5hSDRTaUo5QTRzcmxSWmdEVTlVZkhXd3VvbXBvRTUxcHdHRnhvUjZwTWF6elBnci1DWDVDUnA1Skt4dmNNUkJwMGwzdUF4RDBhNDVxdzM0aXVXVGEyRzNLcEpsb29PZ040SWRSUQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenNJV2dPLThwal85MGxqemg4UVlSWktsalBPUTA5Q1lCTjl6c2pmcWRGM05tMk9OTTBRNzNQRXZVdHU4VzJzR1ZSdWYycHNPOWNTbGRMV1p6ZmtnRF9UUjd0WXRhZmV3QWZRTEFZYTNiVW1aTHYxM21VNnhTdHJGaldYQnlaTWd2eFJRaV9tYUR1dzJic1o2YzVqY1FOaU9hZGJPUGFfaHZnRW5aWDFHYWgxMUQwSThQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWWs2alBXWk5iNUpkUE5CcjFaZ2xsdWxlYUtPZkdERHJwYldxZmRXeGQ1Ty0xck4xNWxBREJaVEwwNEk3ekRaWkJLREVrN3F0M0xPcEpjS3FqOXdLaGp6WldMdktwRmkxalhtT3lwOTNtZUh1bkFycUxXaURXRkRjbFVDdHJIMTZ6OEs2WHQwcUNkOFVxd3FITU1iSHAxWG4wNmRwVFJCUTU3NlhVMGplSExFdTdNbHZqOEFUb0pRV3dBOFBfUnFkeFdMRQ?oc=5"
       ],
       "source_articles": [
         0
@@ -135,8 +136,8 @@
       "verification_score": 0.85,
       "id": "79a25b5c4f0a",
       "created_at": "2026-06-11T16:16:46.217869+00:00",
-      "last_updated": "2026-06-11T20:32:58.571220",
-      "source_count": 2
+      "last_updated": "2026-06-14T04:52:02.796561",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",

@@ -933,5 +933,10 @@
     "lat": 26.763838,
     "lon": 80.885592,
     "display_name": "Lucknow Airport Bus Depot, Vikram Nagar, Lucknow, Uttar Pradesh, India"
+  },
+  "ohio, united states": {
+    "lat": 40.225357,
+    "lon": -82.68814,
+    "display_name": "Ohio, United States"
   }
 }
