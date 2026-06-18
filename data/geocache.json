@@ -948,5 +948,20 @@
     "lat": 28.378046,
     "lon": 83.99999,
     "display_name": "नेपाल"
+  },
+  "guayaquil, ecuador": {
+    "lat": -2.190057,
+    "lon": -79.886867,
+    "display_name": "Guayaquil, Guayas, Ecuador"
+  },
+  "diori hamani international airport, niamey, niger": {
+    "lat": 13.490166,
+    "lon": 2.184601,
+    "display_name": "Aéroport international Diori-Hamani, Boulevard du 15 Avril, Tondigamey, Arrondissement Communal Niamey 4, Niamey, Kollo, 5001, Niger"
+  },
+  "niamey, niger": {
+    "lat": 13.524834,
+    "lon": 2.109823,
+    "display_name": "Niamey, Kollo, Niger"
   }
 }
