@@ -963,5 +963,10 @@
     "lat": 13.524834,
     "lon": 2.109823,
     "display_name": "Niamey, Kollo, Niger"
+  },
+  "konya, turkey": {
+    "lat": 37.872734,
+    "lon": 32.492438,
+    "display_name": "Konya, Selçuklu, Konya, İç Anadolu Bölgesi, 42040, Türkiye"
   }
 }

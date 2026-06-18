@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-18T10:41:46.971019+00:00",
-    "total_incidents": 156,
+    "last_updated": "2026-06-18T15:41:30.639200+00:00",
+    "total_incidents": 157,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -93,8 +93,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Gunfire and explosions at Niger airport",
-      "summary_tr": "Havalimanı yakınlarında patlamalar ve silahlı saldırı",
+      "summary_en": "Gunmen attack airport in Niger's capital",
+      "summary_tr": "Silahlı saldırganlar Nijer'in başkentindeki havalimanına saldırdı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -109,8 +109,9 @@
       "year": 2026,
       "source_urls": [
         "https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&at_campaign=rss",
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0tCb21IVHY3eXVrSjdMa2YxYWJHWTg5MVoyN2dpSjJoaUpQV3EyanBwUWJEbVlEc0RQOFFBeHJiLUgtVzVNTWV4Sl9Gb3RNU2o4Z2xOcmwwU0VEVHJoenlIVmdtd3lybV8yekFrTktkb0NzdkRRYlRYQThJS2dhN2NaLWlBWXFNYzVJNjMzSTRBUVJ0RWZNR0N6d29zZzNyT1doZlp0MHhDRVNaaUdzUmdtZUs1cHhUTk1B?oc=5",
-        "http://www.jpost.com/international/article-899790"
+        "http://www.jpost.com/international/article-899790",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRENXYzBEdENISDdBT014a0ROS1lQTkFBTDYyV0FjMlBZWjZvS3V4ekFFZTRqTExqYzJUUDlUR0JjTnBMbTR3LV9GUmVleFIyN1A1VTRGLWtEalhqYldpZFNGc184NTh5am5ZLXhEV25FQ0pubUxuNEE1UEJJQW1tYm1kUlFmdTRxZDZ3N3RKT180b0pLQzlSckwxTGw2TFdBRFpNY2NXOUZ6LXVLYmsxbDJaMGRlYmJPZmlV?oc=5",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0tCb21IVHY3eXVrSjdMa2YxYWJHWTg5MVoyN2dpSjJoaUpQV3EyanBwUWJEbVlEc0RQOFFBeHJiLUgtVzVNTWV4Sl9Gb3RNU2o4Z2xOcmwwU0VEVHJoenlIVmdtd3lybV8yekFrTktkb0NzdkRRYlRYQThJS2dhN2NaLWlBWXFNYzVJNjMzSTRBUVJ0RWZNR0N6d29zZzNyT1doZlp0MHhDRVNaaUdzUmdtZUs1cHhUTk1B?oc=5"
       ],
       "source_articles": [
         0
@@ -131,10 +132,66 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 3,
-      "last_updated": "2026-06-18T10:41:46.971014+00:00",
+      "source_count": 4,
+      "last_updated": "2026-06-18T15:41:30.623793",
       "id": "429106c3a7fb",
       "created_at": "2026-06-18T10:41:46.971011+00:00"
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-06-18",
+      "publish_date": "2026-06-18",
+      "country": "Turkey",
+      "country_code": "TR",
+      "city": "Konya",
+      "location_detail": "in front of a hotel",
+      "airport_name": null,
+      "airport_iata": "KYA",
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "shooting",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 1,
+      "perpetrator": "unknown",
+      "summary_en": "Shooting in front of hotel",
+      "summary_tr": "Otel önünde silahlı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "silahlı saldırı",
+        "otel saldırısı"
+      ],
+      "date": "2026-06-18",
+      "year": 2026,
+      "source_urls": [
+        "https://www.yenikonya.com.tr/konya/konya_da_otel_onundeki_silahli_saldirida_yeni_gelisme-1980362"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 37.872734,
+      "geo_lon": 32.492438,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": false,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.65,
+      "verification_status": "probable",
+      "verification_score": 0.65,
+      "id": "adfeea80a6a6",
+      "created_at": "2026-06-18T15:41:30.639183+00:00",
+      "last_updated": "2026-06-18T15:41:30.639194+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "HOTEL_ATTACK",
