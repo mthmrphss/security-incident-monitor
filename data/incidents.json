@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-19T05:05:54.874505+00:00",
-    "total_incidents": 158,
+    "last_updated": "2026-06-19T10:49:30.375329+00:00",
+    "total_incidents": 160,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,118 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-19",
+      "publish_date": "2026-06-19",
+      "country": "Niger",
+      "country_code": "NE",
+      "city": "Niamey",
+      "location_detail": "Diori Hamani International Airport",
+      "airport_name": "Diori Hamani International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "assault",
+      "severity": "critical",
+      "casualties_dead": 35,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Deadly assault on Diori Hamani airport",
+      "summary_tr": "Diori Hamani havalimanına ölümcül saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "aviation security",
+        "airport attack"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-19",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE5BOFF6ZFI3WjlRVEEyTEtCOG9LNzJFSTcxRVFFX1hwS1pZSl8tV29BdmpDZmUwWDd3bWVhMnVZcU5PcnRhTGZSTWotVFF0ZXdnMnRZM1BJUk1ZX3ZEZXBfVWlncF9mQzltUUYwTEJR?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 13.490166,
+      "geo_lon": 2.184601,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "429106c3a7fb",
+      "created_at": "2026-06-19T10:49:30.375303+00:00",
+      "last_updated": "2026-06-19T10:49:30.375310+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-19",
+      "publish_date": "2026-06-19",
+      "country": "Niger",
+      "country_code": "NE",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "Niger airport",
+      "attack_type": "other",
+      "severity": "high",
+      "casualties_dead": 13,
+      "casualties_injured": 0,
+      "perpetrator": "Al Qaeda-linked group",
+      "summary_en": "Al Qaeda-linked group claims Niger airport attack",
+      "summary_tr": "El Kaide bağlantılı grup Nijer havalimanı saldırısını üstlendi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "terrorism",
+        "airport attack"
+      ],
+      "date": "2026-06-19",
+      "year": 2026,
+      "source_urls": [
+        "https://www.samaa.tv/2087352262-al-qaeda-linked-group-claims-niger-airport-attack-that-killed-13"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "a0ec1997dcf5",
+      "created_at": "2026-06-19T10:49:30.375321+00:00",
+      "last_updated": "2026-06-19T10:49:30.375325+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-06-18",
@@ -89,9 +201,9 @@
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "shooting",
-      "severity": "high",
+      "severity": "critical",
       "casualties_dead": 33,
-      "casualties_injured": 0,
+      "casualties_injured": 4,
       "perpetrator": "gunmen",
       "summary_en": "Gunmen attack airport in Niger's capital",
       "summary_tr": "Silahlı saldırganlar Nijer'in başkentindeki havalimanına saldırdı",
@@ -108,12 +220,13 @@
       "date": "2026-06-18",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0tCb21IVHY3eXVrSjdMa2YxYWJHWTg5MVoyN2dpSjJoaUpQV3EyanBwUWJEbVlEc0RQOFFBeHJiLUgtVzVNTWV4Sl9Gb3RNU2o4Z2xOcmwwU0VEVHJoenlIVmdtd3lybV8yekFrTktkb0NzdkRRYlRYQThJS2dhN2NaLWlBWXFNYzVJNjMzSTRBUVJ0RWZNR0N6d29zZzNyT1doZlp0MHhDRVNaaUdzUmdtZUs1cHhUTk1B?oc=5",
-        "https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&at_campaign=rss",
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRENXYzBEdENISDdBT014a0ROS1lQTkFBTDYyV0FjMlBZWjZvS3V4ekFFZTRqTExqYzJUUDlUR0JjTnBMbTR3LV9GUmVleFIyN1A1VTRGLWtEalhqYldpZFNGc184NTh5am5ZLXhEV25FQ0pubUxuNEE1UEJJQW1tYm1kUlFmdTRxZDZ3N3RKT180b0pLQzlSckwxTGw2TFdBRFpNY2NXOUZ6LXVLYmsxbDJaMGRlYmJPZmlV?oc=5",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0tCb21IVHY3eXVrSjdMa2YxYWJHWTg5MVoyN2dpSjJoaUpQV3EyanBwUWJEbVlEc0RQOFFBeHJiLUgtVzVNTWV4Sl9Gb3RNU2o4Z2xOcmwwU0VEVHJoenlIVmdtd3lybV8yekFrTktkb0NzdkRRYlRYQThJS2dhN2NaLWlBWXFNYzVJNjMzSTRBUVJ0RWZNR0N6d29zZzNyT1doZlp0MHhDRVNaaUdzUmdtZUs1cHhUTk1B?oc=5",
+        "https://www.reddit.com/r/worldnews/comments/1u9d4jw/gunmen_attack_airport_in_nigers_capital_as/",
+        "https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&at_campaign=rss",
+        "http://www.parisguardian.com/news/279133343/dozens-die-in-niger-airport-attack",
         "https://www.africanews.com/2026/06/18/suspected-jihadists-stage-deadly-new-attack-on-niger-airport/",
-        "http://www.jpost.com/international/article-899790",
-        "https://www.reddit.com/r/worldnews/comments/1u9d4jw/gunmen_attack_airport_in_nigers_capital_as/"
+        "http://www.jpost.com/international/article-899790"
       ],
       "source_articles": [
         0
@@ -134,8 +247,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 6,
-      "last_updated": "2026-06-19T05:05:54.874379",
+      "source_count": 7,
+      "last_updated": "2026-06-19T10:49:30.375188",
       "id": "429106c3a7fb",
       "created_at": "2026-06-18T10:41:46.971011+00:00"
     },
