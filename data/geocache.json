@@ -973,5 +973,10 @@
     "lat": 13.501067,
     "lon": 2.090021,
     "display_name": "Université Abdou Moumouni Dioffo, Boulevard de l'Université, Nogaré, Arrondissement Communal Niamey 5, Niamey, Kollo, 8001, Niger"
+  },
+  "niger": {
+    "lat": 17.735621,
+    "lon": 9.323843,
+    "display_name": "Niger"
   }
 }

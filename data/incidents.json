@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-18T20:37:42.526376+00:00",
+    "last_updated": "2026-06-19T05:05:54.874505+00:00",
     "total_incidents": 158,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -90,7 +90,7 @@
       "venue_name": "airport",
       "attack_type": "shooting",
       "severity": "high",
-      "casualties_dead": 0,
+      "casualties_dead": 33,
       "casualties_injured": 0,
       "perpetrator": "gunmen",
       "summary_en": "Gunmen attack airport in Niger's capital",
@@ -108,10 +108,11 @@
       "date": "2026-06-18",
       "year": 2026,
       "source_urls": [
-        "http://www.jpost.com/international/article-899790",
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0tCb21IVHY3eXVrSjdMa2YxYWJHWTg5MVoyN2dpSjJoaUpQV3EyanBwUWJEbVlEc0RQOFFBeHJiLUgtVzVNTWV4Sl9Gb3RNU2o4Z2xOcmwwU0VEVHJoenlIVmdtd3lybV8yekFrTktkb0NzdkRRYlRYQThJS2dhN2NaLWlBWXFNYzVJNjMzSTRBUVJ0RWZNR0N6d29zZzNyT1doZlp0MHhDRVNaaUdzUmdtZUs1cHhUTk1B?oc=5",
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRENXYzBEdENISDdBT014a0ROS1lQTkFBTDYyV0FjMlBZWjZvS3V4ekFFZTRqTExqYzJUUDlUR0JjTnBMbTR3LV9GUmVleFIyN1A1VTRGLWtEalhqYldpZFNGc184NTh5am5ZLXhEV25FQ0pubUxuNEE1UEJJQW1tYm1kUlFmdTRxZDZ3N3RKT180b0pLQzlSckwxTGw2TFdBRFpNY2NXOUZ6LXVLYmsxbDJaMGRlYmJPZmlV?oc=5",
         "https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&at_campaign=rss",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRENXYzBEdENISDdBT014a0ROS1lQTkFBTDYyV0FjMlBZWjZvS3V4ekFFZTRqTExqYzJUUDlUR0JjTnBMbTR3LV9GUmVleFIyN1A1VTRGLWtEalhqYldpZFNGc184NTh5am5ZLXhEV25FQ0pubUxuNEE1UEJJQW1tYm1kUlFmdTRxZDZ3N3RKT180b0pLQzlSckwxTGw2TFdBRFpNY2NXOUZ6LXVLYmsxbDJaMGRlYmJPZmlV?oc=5",
+        "https://www.africanews.com/2026/06/18/suspected-jihadists-stage-deadly-new-attack-on-niger-airport/",
+        "http://www.jpost.com/international/article-899790",
         "https://www.reddit.com/r/worldnews/comments/1u9d4jw/gunmen_attack_airport_in_nigers_capital_as/"
       ],
       "source_articles": [
@@ -133,8 +134,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 5,
-      "last_updated": "2026-06-18T20:37:42.526238",
+      "source_count": 6,
+      "last_updated": "2026-06-19T05:05:54.874379",
       "id": "429106c3a7fb",
       "created_at": "2026-06-18T10:41:46.971011+00:00"
     },
