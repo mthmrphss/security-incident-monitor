@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-19T10:49:30.375329+00:00",
+    "last_updated": "2026-06-19T15:34:39.339295+00:00",
     "total_incidents": 160,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -81,15 +81,15 @@
       "publish_date": "2026-06-19",
       "country": "Niger",
       "country_code": "NE",
-      "city": "unknown",
-      "location_detail": "unknown",
-      "airport_name": "unknown",
+      "city": "Niamey",
+      "location_detail": "Niamey Airport",
+      "airport_name": "Niamey Airport",
       "airport_iata": null,
       "hotel_name": null,
       "venue_name": "Niger airport",
       "attack_type": "other",
-      "severity": "high",
-      "casualties_dead": 13,
+      "severity": "critical",
+      "casualties_dead": 35,
       "casualties_injured": 0,
       "perpetrator": "Al Qaeda-linked group",
       "summary_en": "Al Qaeda-linked group claims Niger airport attack",
@@ -105,14 +105,15 @@
       "date": "2026-06-19",
       "year": 2026,
       "source_urls": [
+        "https://www.punjabkesari.com/world-news/niamey-airport-attack/",
         "https://www.samaa.tv/2087352262-al-qaeda-linked-group-claims-niger-airport-attack-that-killed-13"
       ],
       "source_articles": [
         0
       ],
       "data_quality": "medium",
-      "geo_lat": null,
-      "geo_lon": null,
+      "geo_lat": 13.524834,
+      "geo_lon": 2.109823,
       "validation_signals": {
         "has_country": true,
         "has_city": false,
@@ -128,8 +129,8 @@
       "verification_score": 0.9,
       "id": "a0ec1997dcf5",
       "created_at": "2026-06-19T10:49:30.375321+00:00",
-      "last_updated": "2026-06-19T10:49:30.375325+00:00",
-      "source_count": 1
+      "last_updated": "2026-06-19T15:34:39.339156",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
