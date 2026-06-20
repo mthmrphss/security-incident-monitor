@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-20T04:16:29.435898+00:00",
-    "total_incidents": 160,
+    "last_updated": "2026-06-20T09:34:05.528038+00:00",
+    "total_incidents": 161,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -189,6 +189,62 @@
       "created_at": "2026-06-19T10:49:30.375303+00:00",
       "last_updated": "2026-06-20T04:16:29.435759",
       "source_count": 2
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-19",
+      "publish_date": "2026-06-20",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Kolkata",
+      "location_detail": "Netaji Subhas Chandra Bose International Airport",
+      "airport_name": "Netaji Subhas Chandra Bose International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Armed individuals posed security threat",
+      "summary_tr": "Silahlı kişiler güvenlik tehdidi oluşturdu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "security threat",
+        "airport"
+      ],
+      "date": "2026-06-19",
+      "year": 2026,
+      "source_urls": [
+        "https://www.thehindu.com/news/national/west-bengal/abhishek-banerjee-says-armedindividualsat-airportposedsecurity-threattrinamool-claims-murderbid/article71125236.ece"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 22.572646,
+      "geo_lon": 88.363895,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "dd469479e1e8",
+      "created_at": "2026-06-20T09:34:05.528023+00:00",
+      "last_updated": "2026-06-20T09:34:05.528033+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",

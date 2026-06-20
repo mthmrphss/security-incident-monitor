@@ -983,5 +983,10 @@
     "lat": 55.950257,
     "lon": -3.359386,
     "display_name": "Edinburgh Airport, Hallyards Road, Hallyards, Ratho Station, City of Edinburgh, Alba / Scotland, EH28 8TB, United Kingdom"
+  },
+  "kolkata, india": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "display_name": "Kolkata, Kolkata Metropolitan Area, Kolkata, West Bengal, India"
   }
 }
