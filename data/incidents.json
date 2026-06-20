@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-20T09:34:05.528038+00:00",
+    "last_updated": "2026-06-20T14:19:42.449685+00:00",
     "total_incidents": 161,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -106,8 +106,9 @@
       "year": 2026,
       "source_urls": [
         "https://www.samaa.tv/2087352262-al-qaeda-linked-group-claims-niger-airport-attack-that-killed-13",
+        "https://www.punjabkesari.com/world-news/niamey-airport-attack/",
         "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSnNVSXVoeDRTaVVOeW54SGZsVml6ekNwVzIyV0hSR05NR1hKREFfcGRqRFI2cllvVHB3dHB2N1lVOXlBVjJjMmhOOGszUU1pdk00Y0lYc0ZqNGU4bkNyQUpEOTZZUzl2ZmxjRFJQQS1jMFR6RHpXSE5TU0E3VUhoTDdHYUp0QWhwWWJHMXFuUlpJdTcteG4wY0lWcmtGaHM?oc=5",
-        "https://www.punjabkesari.com/world-news/niamey-airport-attack/"
+        "https://x.com/ConflictTR/status/2068315428259234259#m"
       ],
       "source_articles": [
         0
@@ -130,8 +131,8 @@
       "verification_score": 0.9,
       "id": "a0ec1997dcf5",
       "created_at": "2026-06-19T10:49:30.375321+00:00",
-      "last_updated": "2026-06-19T19:57:51.829849",
-      "source_count": 3
+      "last_updated": "2026-06-20T14:19:42.449589",
+      "source_count": 4
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -149,9 +150,9 @@
       "severity": "critical",
       "casualties_dead": 35,
       "casualties_injured": 0,
-      "perpetrator": "unknown",
-      "summary_en": "Deadly assault on Diori Hamani airport",
-      "summary_tr": "Diori Hamani havalimanına ölümcül saldırı",
+      "perpetrator": "Al-Qaeda-linked jihadists",
+      "summary_en": "Al-Qaeda-linked jihadists attack Niger airport",
+      "summary_tr": "El Kaide bağlantılı cihatçılar Nijer havalimanına saldırdı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -164,8 +165,8 @@
       "date": "2026-06-19",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMibkFVX3lxTE5BOFF6ZFI3WjlRVEEyTEtCOG9LNzJFSTcxRVFFX1hwS1pZSl8tV29BdmpDZmUwWDd3bWVhMnVZcU5PcnRhTGZSTWotVFF0ZXdnMnRZM1BJUk1ZX3ZEZXBfVWlncF9mQzltUUYwTEJR?oc=5",
-        "http://www.arabherald.com/news/279134924/uae-strongly-condemns-terrorist-attack-on-airport-in-niger-capital"
+        "https://www.surinametimes.com/artikel/al-qaeda-linked-jihadists-attack-niger-airport-11-soldiers-killed",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE5BOFF6ZFI3WjlRVEEyTEtCOG9LNzJFSTcxRVFFX1hwS1pZSl8tV29BdmpDZmUwWDd3bWVhMnVZcU5PcnRhTGZSTWotVFF0ZXdnMnRZM1BJUk1ZX3ZEZXBfVWlncF9mQzltUUYwTEJR?oc=5"
       ],
       "source_articles": [
         0
@@ -187,7 +188,7 @@
       "verification_score": 1.0,
       "id": "429106c3a7fb",
       "created_at": "2026-06-19T10:49:30.375303+00:00",
-      "last_updated": "2026-06-20T04:16:29.435759",
+      "last_updated": "2026-06-20T14:19:42.449029",
       "source_count": 2
     },
     {
