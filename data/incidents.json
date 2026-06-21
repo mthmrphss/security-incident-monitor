@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-20T14:19:42.449685+00:00",
-    "total_incidents": 161,
+    "last_updated": "2026-06-21T10:00:09.621699+00:00",
+    "total_incidents": 162,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -415,6 +415,63 @@
       "id": "1385de357ff2",
       "created_at": "2026-06-18T20:37:42.526363+00:00",
       "last_updated": "2026-06-18T20:37:42.526371+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-18",
+      "publish_date": "2026-06-18",
+      "country": "Niger",
+      "country_code": "NE",
+      "city": "Niger's capital",
+      "location_detail": "airport in Niger's capital",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "shooting",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Gunmen attack airport in Niger's capital",
+      "summary_tr": "Silahlı saldırganlar Nijer'in başkentindeki havalimanına saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "Niger",
+        "gunmen"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-18",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdjdNV1pmMnZfZ3B1SzBWbTIzYm1yV2staUNjcnBwVzhkOWZDblQ4enRzYkY2dnlvSGdkOW9xZlpkQm1GQml0SU9TMTVKM20tUmFia2gwTjA1elY0LTZSWGF4b2pldTA5bHBtWnZKcXJlWHdIamd0Zk1IWmJMOXhacl9wd2t5czJPZm5TdTc5aUpOeFJRVlBmbw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "bc8b3f586357",
+      "created_at": "2026-06-21T10:00:09.621674+00:00",
+      "last_updated": "2026-06-21T10:00:09.621692+00:00",
       "source_count": 1
     },
     {
