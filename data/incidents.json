@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-21T10:00:09.621699+00:00",
-    "total_incidents": 162,
+    "last_updated": "2026-06-23T04:08:48.677798+00:00",
+    "total_incidents": 163,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,64 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-22",
+      "publish_date": "2026-06-22",
+      "country": "Australia",
+      "country_code": "AU",
+      "city": "Sydney",
+      "location_detail": "Sydney Airport",
+      "airport_name": "Sydney Airport",
+      "airport_iata": "SYD",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Man arrested at Sydney Airport over bomb hoax",
+      "summary_tr": "Sidney Havalimanı'nda bomba tehdidi nedeniyle bir kişi tutuklandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat",
+        "Sydney"
+      ],
+      "data_quality": "low",
+      "date": "2026-06-22",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZC1jWG13a0lWUWxtaWtIaEFJVFpNZ1hOdV9vcWkxMFR5ZEZpSk9YMnZMRGhERVdzYm9kX0Q5N3F5LWUwc2lDTUlXSnlzOU12c0xHQjNmSGV1bXQxNlJ5YUFzQUhGY3lNWTFMSlU3QTBHU2tjMkhnUzkxaXE0dk52OXEySzRKZ3h0dW5va1paSnJzaWxzcUpSYk4xZXJmNG1naGc?oc=5",
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMEZWLWdhU0FTUFVLcnZ6ZlFJQmJ1ZVEtQVAyVDdFd2ZXVXI3b3VjdUFxUElOLTgwcUt6WDhxYVBwcGF2Zzk5dGp1dHlKclhhWjlyazZqSGZ0b2gyMDV2NjZjWkg0U0JndTh2dzJ5MWJ3OXhEaEFSdnMxbW9pX0N0TUd0b1FJZ25s?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": -33.949894,
+      "geo_lon": 151.181968,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-06-23T04:08:48.677791+00:00",
+      "id": "bec5dbba2c19",
+      "created_at": "2026-06-23T04:08:48.677781+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-06-19",
