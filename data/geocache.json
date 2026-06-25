@@ -993,5 +993,15 @@
     "lat": 45.477236,
     "lon": -73.701723,
     "display_name": "Hilton Garden Inn Montreal Airport, 7880, Chemin de la Côte-de-Liesse, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4T 1E7, Canada"
+  },
+  "navi mumbai international airport, navi mumbai, india": {
+    "lat": 18.991351,
+    "lon": 73.065748,
+    "display_name": "Navi Mumbai International Airport, Amra Marg, Vahal Village, Targhar, Navi Mumbai, Panvel Subdistrict, Raigad, Maharashtra, 400706, India"
+  },
+  "navi mumbai airport, navi mumbai, india": {
+    "lat": 18.991351,
+    "lon": 73.065748,
+    "display_name": "Navi Mumbai International Airport, Amra Marg, Vahal Village, Targhar, Navi Mumbai, Panvel Subdistrict, Raigad, Maharashtra, 400706, India"
   }
 }

@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-24T04:08:58.287439+00:00",
+    "last_updated": "2026-06-25T14:46:45.934137+00:00",
     "total_incidents": 165,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -92,8 +92,8 @@
       "severity": "low",
       "casualties_dead": 0,
       "casualties_injured": 0,
-      "perpetrator": "Montenegro man",
-      "summary_en": "Bomb hoax threat at Sydney airport",
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat at Navi Mumbai Airport",
       "summary_tr": "Bombalı tehdit şüphelisi mahkemeye çıkacak",
       "is_ongoing": false,
       "is_false_alarm": false,
@@ -108,8 +108,8 @@
       "date": "2026-06-23",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMihAJBVV95cUxQS2hJMHB2NzNLM1NFbl81ZEdCNWtuMjU0RFRFMllRbUQ2ODlCdm04eHlvUTFGSThpVDNPRE9yaDhSQVdSS1pXQ1hXeGJwQVNkTFpRQlVKQVgxd3luQ2owYUhoQkd1YjRjdzNNdVJYTjdWaWgwZll0c2pjZjdGcjZ1cDFyaW16clJDcG5DRnVUb0hIN2p4eUcwTnJ1a283LVoyRmY3LVBmSHpPSXJHdWsxTWdOWjFCZ1V0bV9SdWoxVzlXcDRIWEJROV9fUk12Nm5LVUpCRlQxVjlUTFhNV1BxOXJyN2twc2Nnb3Z5bTUxbVZYU2FqV3VMWlBpZmpsTndVdklyddIBigJBVV95cUxNUy1iN2o3eVAtcC05NXVuM2o0UW1hcUZQak15VjhSVXBTU3ZXYjVyN3BlS2VHbmRkam9oVWl4N0FqeDZ4Y0RMVlRDdnRXQklBT3Fucjgyd2Qtb3pxVGRGRDYwNGctRUpSUk5JUEhzWGxqSC1wbDhYYmJ1UTRYM01XN256czk2dG5yWC00MlFpcGpGa3VVd0dQQjR2WnVkdVM5UDRUeHA3bHJCMUhaNDBDVU15Z1Bob29TY0hQWFVWWGdVVFltY3RfNEhVNE56WjFuNFRSNjNPUzNvWExLZTNyRnFvTUlQTllVX3pHY3NpZ01SUURBMWt2d0QwQTVPaEx0OWtlZzJjNjBGdw?oc=5",
-        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNaHp0MUNldDhqNDl4RHlJODg4bDAyNlRrb1BOTzhTc3phOWs3M0ViT0FhUHhtRVFiTzI2b2RUMzBtSDZ2S1JQNF9ILVJrdmVlRkxSOUVqVVR1LVJqRGdZXzZRcEkyYnJaYzVMWVhUbTFYS21yN0Nvd0lHZXlveWx4d1JYMER3N1JOR0pSWGNEWm1qU3A0TTdHbHllSWVtWUNyRUxGeUNOYS1RaWFBUnpDMzA0MklWaFNwV0s1azBNNTliNmlkbVkwbm1WWFZiVFlVdUlNb1o0aW9DZjF2QjNPVkZPZzhMWHRFcHBsS1lkSkw5R2ZaMlE?oc=5"
+        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNaHp0MUNldDhqNDl4RHlJODg4bDAyNlRrb1BOTzhTc3phOWs3M0ViT0FhUHhtRVFiTzI2b2RUMzBtSDZ2S1JQNF9ILVJrdmVlRkxSOUVqVVR1LVJqRGdZXzZRcEkyYnJaYzVMWVhUbTFYS21yN0Nvd0lHZXlveWx4d1JYMER3N1JOR0pSWGNEWm1qU3A0TTdHbHllSWVtWUNyRUxGeUNOYS1RaWFBUnpDMzA0MklWaFNwV0s1azBNNTliNmlkbVkwbm1WWFZiVFlVdUlNb1o0aW9DZjF2QjNPVkZPZzhMWHRFcHBsS1lkSkw5R2ZaMlE?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdEFEdURKNGJpRmJLMExwWlVuTU82UmNzb25uQmplMmpWRmxmQ1huNHAtOHJCYnJVQUREbXdtcHAwaFUwUk9mMmxQSjhnZ0hXaXEzUUNqcEN1Zl9RZXd1alhqNlVpbGt1bXZrOExCc25nUUJGRzZTMkJzRlQ4cEliYnk5ZHJHcmJSUXBnQnBPd3lkSjE3Y1U3Mk9nQUNUNENKVndqMEkyMnZVX19nV1plZ08yc2XSAboBQVVfeXFMUEVOX2ZyRkJiNTk5NUdoazdUeVlDeXhJczliS2x1M1NiVzhUeG40cmxXeWNwZEVtWE9rc2FxVmJkNkQxWFVWZjNBaEFPbzZLUXBSWUNoazlEOUpGQWhDdkdCSWk2akZ2Q09EVy0yUXFOSkF3UTVXSkt0eTU3RnZqMVBkS1RoQUlicHhwY3ZGT3NwWHNJUmhhQVN0NG5rbHVNM2R5b1JwLTFnejNiQnlfSHkxLXNXNlVpcXpn?oc=5"
       ],
       "source_articles": [
         0
@@ -131,7 +131,7 @@
       "verification_score": 1.0,
       "id": "bec5dbba2c19",
       "created_at": "2026-06-23T15:19:11.479817+00:00",
-      "last_updated": "2026-06-24T04:08:58.270345",
+      "last_updated": "2026-06-25T14:46:45.934016",
       "source_count": 2
     },
     {
