@@ -1003,5 +1003,10 @@
     "lat": 18.991351,
     "lon": 73.065748,
     "display_name": "Navi Mumbai International Airport, Amra Marg, Vahal Village, Targhar, Navi Mumbai, Panvel Subdistrict, Raigad, Maharashtra, 400706, India"
+  },
+  "aeropuerto de maiquetía, maiquetía, venezuela": {
+    "lat": 10.603162,
+    "lon": -66.996677,
+    "display_name": "Aeropuerto Internacional de Maiquetía Simón Bolívar, Avenida La Armada, La Veguita, Week-End, Catia La Mar, Parroquia Urimare, Municipio Vargas, La Guaira, 1162, Venezuela"
   }
 }

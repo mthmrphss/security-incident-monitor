@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-25T14:46:45.934137+00:00",
-    "total_incidents": 165,
+    "last_updated": "2026-06-25T20:11:19.806772+00:00",
+    "total_incidents": 166,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-06-25",
+      "publish_date": "2026-06-25",
+      "country": "Venezuela",
+      "country_code": "VE",
+      "city": "Maiquetía",
+      "location_detail": "norte de Venezuela",
+      "airport_name": "Aeropuerto de Maiquetía",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Terror at Maiquetía airport during Venezuela earthquakes",
+      "summary_tr": "Venezuela depremleri sırasında Maiquetía havalimanında terör",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "earthquake",
+        "airport",
+        "Venezuela"
+      ],
+      "date": "2026-06-25",
+      "year": 2026,
+      "source_urls": [
+        "https://www.entornointeligente.com/terror-en-el-aeropuerto-de-maiquetia-durante-los-terremotos-de-venezuela-todo-quedo-destrozado/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 10.603162,
+      "geo_lon": -66.996677,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "251e16f7fdd3",
+      "created_at": "2026-06-25T20:11:19.806750+00:00",
+      "last_updated": "2026-06-25T20:11:19.806765+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-06-23",
