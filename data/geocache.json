@@ -1008,5 +1008,10 @@
     "lat": 10.603162,
     "lon": -66.996677,
     "display_name": "Aeropuerto Internacional de Maiquetía Simón Bolívar, Avenida La Armada, La Veguita, Week-End, Catia La Mar, Parroquia Urimare, Municipio Vargas, La Guaira, 1162, Venezuela"
+  },
+  "labuan airport": {
+    "lat": 5.302406,
+    "lon": 115.250649,
+    "display_name": "Lapangan Terbang Labuan, Jalan Tun Mustapha, Bandar Victoria, Labuan, 87000, Malaysia"
   }
 }
