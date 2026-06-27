@@ -1013,5 +1013,10 @@
     "lat": 5.302406,
     "lon": 115.250649,
     "display_name": "Lapangan Terbang Labuan, Jalan Tun Mustapha, Bandar Victoria, Labuan, 87000, Malaysia"
+  },
+  "embassy suites, georgia, united states": {
+    "lat": 33.760754,
+    "lon": -84.394559,
+    "display_name": "Embassy Suites, 267, Marietta Street Northwest, Atlanta, Fulton County, Georgia, 30313, United States"
   }
 }
