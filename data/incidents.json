@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-29T16:02:51.538154+00:00",
+    "last_updated": "2026-06-29T20:07:45.910778+00:00",
     "total_incidents": 168,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -36,8 +36,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Dubbo airport reopens after bomb threat",
-      "summary_tr": "Dubbo havalimanı bomba tehdidi sonrası yeniden açıldı",
+      "summary_en": "Airport evacuated after Qantas bomb threat",
+      "summary_tr": "Qantas bomba tehdidi sonrası havalimanı tahliye edildi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -51,11 +51,12 @@
       "date": "2026-06-29",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMibkFVX3lxTE9oaC1mUWhfZGpIZU1NYjMtMWNhUUJrZ2gyYjlacmtCLS12dDRFbVk5SEZYNUJRdnBMQ0tHcjVXaGl3Z1lTVF9YaV92SkdFOWpFN3NsVVJtWDl0N3U5OWFNVkMyR0d3U0xCX2RILTlR?oc=5",
         "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeG44ZkRkMkYwUXVsVG5fU0k2ZlFrTUJ0dnhiUXZRNEFOeGo5S0dNdmNQcE9SYXRaWnJhaFA1Yng0X0c0WVV0Q2JqLXE0djBWb1RjdEZXZHV1Um1rWjFsS0FRTlhMTTc1UTN1R0NsNDAteFR3QXoxZGtZbjI1SUpVRklRbHktVjhKeUhDUWZQc1NiNlRkRzZRTDljRzU3cno1OXBjUzNDTXpqYWlkWm40eGFfOXhEODRfbmk1OGdB?oc=5",
+        "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQQlFva2FDdGlmVTQtNTVUNWNxSnA2VVZrQ1hmSnZMS0tIQ2JadmhKRzBOMVpNdG85bUJYLXhrWEt0Vm1WcGNZVjFSNThfWkt4V2lQWThNcXBYVE1ScXZPWDlYLWJ3UV9GeHhmQ0VxcGxoazB3VjZ2WTJuMXZ2VHFLZkZWdTNvbTg4ZkttV2xXZWdKRjhkaWwtbzI3U0hfRTltcjRiY1NZRWVFdVkwTnNVVVdZelg1VzNVaGFvdGUxcVYxVU5Hb1cteUFYMzhqcUVReHVuMDR5N2x3NmtGREVCRGtielA4clU3RzJ3V09WX3FaeE9LMXZuYjVKRUo4d9IBgwJBVV95cUxOdG5rTmNCVzdobWVDVGJzZmE5ZjhuQmVVZGdLbVFXd0h4cG1yZWpvNXZlOTdFdW1YVEoyVDZpRXoweU9zVlRRYXc1Y21mYTRfN2xsdGY0aWhMU1RMamxTTjJTNkFFajFHZTR3ZU9feHJKYjl6RmUycHEyM01LRGlzeUkwRWtRUHhjbjZ2ZDhTUmdxWENVcGV6azh3WF83Q3hTRkRCMlRMOXlLOVBfYW1lNVBqdTNIQWZqTWo1YXFjMF8xczMzR09icUtVcTl1Mmlsd3ZNR3ZZX1o1SDl3aC13NG1KVVBrYnppdTZ6S3E2UDMzWUs5T2ZFdXlwdHpZbkxZVnZN?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE9oaC1mUWhfZGpIZU1NYjMtMWNhUUJrZ2gyYjlacmtCLS12dDRFbVk5SEZYNUJRdnBMQ0tHcjVXaGl3Z1lTVF9YaV92SkdFOWpFN3NsVVJtWDl0N3U5OWFNVkMyR0d3U0xCX2RILTlR?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbnhwdXFDRVN1aVNXaF9JOTVidWU5azdveEFzQUZRdEJIcVRuNHNTaTc4bXB5YmpCQlhPNnFTQWtOVjcxaDdFb2QzRTdhU2FRQ2FmU1lUUlY0T0tJTWRrbWxjRWk0MGlPZDZGc2dyTTRETnBzbG9EcTdjOVBqaWw0cFZSQQ?oc=5",
         "https://news.google.com/rss/articles/CBMijwJBVV95cUxPTG5XTFg0aXJsaUM2X2RDMFBHdERMWE11el9RSTZxSDBMMU1Wc3gwU3ljOXZBUHNMRDZvOTRvdGVGNUk2c0dYRFJxXzZ5TDZYcVZyTjhNc1JSczhEaHhOUmhmYW5iVER5VjgxZXVzamUwZzFLQzloM2QtdXhwYjZkSXFfeDEtRFp1eF8zYzdHUjQ1My1sTnNtdGdWd2c1VDlLWTFyYkFPY0FfUlFDb1Mta1p1bkFYMTFLZDEteFFkdlZOOVBMZ0t0NmlUM1gxN25ObHJXdVdreXF6clBnZnhCV3lkQ2hxcTdKdmptVGZVdGNrVVRKazdQeGhUVllrMjIxUXpxdi1qVFNDaFRRam5v?oc=5",
-        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUjhUQW02UlV6OXZWVWxRQkJNc3pxbEl5dFBDei1EU0szdWtlY241WXB6LVI4UWhiS24yQmJ5OE5SNkVkdzBVaTZzS3VWYnFrcEdIQmkxa280WVdmeVAwRlBoMi1pUVBqTUF0RXg1Ul9WLXVyMW93VW1BbGlaVmVQUThnbklMeE9tTFpHTWZpUGFsdjVmZFBZN0F1eU1qQ3hqck91bF8yckxFSDRM?oc=5",
-        "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbnhwdXFDRVN1aVNXaF9JOTVidWU5azdveEFzQUZRdEJIcVRuNHNTaTc4bXB5YmpCQlhPNnFTQWtOVjcxaDdFb2QzRTdhU2FRQ2FmU1lUUlY0T0tJTWRrbWxjRWk0MGlPZDZGc2dyTTRETnBzbG9EcTdjOVBqaWw0cFZSQQ?oc=5"
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUjhUQW02UlV6OXZWVWxRQkJNc3pxbEl5dFBDei1EU0szdWtlY241WXB6LVI4UWhiS24yQmJ5OE5SNkVkdzBVaTZzS3VWYnFrcEdIQmkxa280WVdmeVAwRlBoMi1pUVBqTUF0RXg1Ul9WLXVyMW93VW1BbGlaVmVQUThnbklMeE9tTFpHTWZpUGFsdjVmZFBZN0F1eU1qQ3hqck91bF8yckxFSDRM?oc=5"
       ],
       "source_articles": [
         0
@@ -75,8 +76,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 5,
-      "last_updated": "2026-06-29T16:02:51.538016",
+      "source_count": 6,
+      "last_updated": "2026-06-29T20:07:45.910632",
       "id": "f2e5169c4e64",
       "created_at": "2026-06-29T04:45:23.416031+00:00"
     },
