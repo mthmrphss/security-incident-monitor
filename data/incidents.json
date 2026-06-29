@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-06-29T04:45:23.416048+00:00",
+    "last_updated": "2026-06-29T11:15:56.060072+00:00",
     "total_incidents": 168,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -52,8 +52,9 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMibkFVX3lxTE9oaC1mUWhfZGpIZU1NYjMtMWNhUUJrZ2gyYjlacmtCLS12dDRFbVk5SEZYNUJRdnBMQ0tHcjVXaGl3Z1lTVF9YaV92SkdFOWpFN3NsVVJtWDl0N3U5OWFNVkMyR0d3U0xCX2RILTlR?oc=5",
-        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUjhUQW02UlV6OXZWVWxRQkJNc3pxbEl5dFBDei1EU0szdWtlY241WXB6LVI4UWhiS24yQmJ5OE5SNkVkdzBVaTZzS3VWYnFrcEdIQmkxa280WVdmeVAwRlBoMi1pUVBqTUF0RXg1Ul9WLXVyMW93VW1BbGlaVmVQUThnbklMeE9tTFpHTWZpUGFsdjVmZFBZN0F1eU1qQ3hqck91bF8yckxFSDRM?oc=5",
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeG44ZkRkMkYwUXVsVG5fU0k2ZlFrTUJ0dnhiUXZRNEFOeGo5S0dNdmNQcE9SYXRaWnJhaFA1Yng0X0c0WVV0Q2JqLXE0djBWb1RjdEZXZHV1Um1rWjFsS0FRTlhMTTc1UTN1R0NsNDAteFR3QXoxZGtZbjI1SUpVRklRbHktVjhKeUhDUWZQc1NiNlRkRzZRTDljRzU3cno1OXBjUzNDTXpqYWlkWm40eGFfOXhEODRfbmk1OGdB?oc=5"
+        "https://news.google.com/rss/articles/CBMijwJBVV95cUxPTG5XTFg0aXJsaUM2X2RDMFBHdERMWE11el9RSTZxSDBMMU1Wc3gwU3ljOXZBUHNMRDZvOTRvdGVGNUk2c0dYRFJxXzZ5TDZYcVZyTjhNc1JSczhEaHhOUmhmYW5iVER5VjgxZXVzamUwZzFLQzloM2QtdXhwYjZkSXFfeDEtRFp1eF8zYzdHUjQ1My1sTnNtdGdWd2c1VDlLWTFyYkFPY0FfUlFDb1Mta1p1bkFYMTFLZDEteFFkdlZOOVBMZ0t0NmlUM1gxN25ObHJXdVdreXF6clBnZnhCV3lkQ2hxcTdKdmptVGZVdGNrVVRKazdQeGhUVllrMjIxUXpxdi1qVFNDaFRRam5v?oc=5",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeG44ZkRkMkYwUXVsVG5fU0k2ZlFrTUJ0dnhiUXZRNEFOeGo5S0dNdmNQcE9SYXRaWnJhaFA1Yng0X0c0WVV0Q2JqLXE0djBWb1RjdEZXZHV1Um1rWjFsS0FRTlhMTTc1UTN1R0NsNDAteFR3QXoxZGtZbjI1SUpVRklRbHktVjhKeUhDUWZQc1NiNlRkRzZRTDljRzU3cno1OXBjUzNDTXpqYWlkWm40eGFfOXhEODRfbmk1OGdB?oc=5",
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUjhUQW02UlV6OXZWVWxRQkJNc3pxbEl5dFBDei1EU0szdWtlY241WXB6LVI4UWhiS24yQmJ5OE5SNkVkdzBVaTZzS3VWYnFrcEdIQmkxa280WVdmeVAwRlBoMi1pUVBqTUF0RXg1Ul9WLXVyMW93VW1BbGlaVmVQUThnbklMeE9tTFpHTWZpUGFsdjVmZFBZN0F1eU1qQ3hqck91bF8yckxFSDRM?oc=5"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 3,
-      "last_updated": "2026-06-29T04:45:23.416038+00:00",
+      "source_count": 4,
+      "last_updated": "2026-06-29T11:15:56.059939",
       "id": "f2e5169c4e64",
       "created_at": "2026-06-29T04:45:23.416031+00:00"
     },
