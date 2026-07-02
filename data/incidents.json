@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-02T04:10:29.938690+00:00",
-    "total_incidents": 171,
+    "last_updated": "2026-07-02T09:29:10.190280+00:00",
+    "total_incidents": 172,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-02",
+      "publish_date": "2026-07-02",
+      "country": "Ukraine",
+      "country_code": "UA",
+      "city": "Kyiv",
+      "location_detail": "over 20 locations across the capital",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "residential buildings, ambulance station, scientific institute",
+      "attack_type": "drone",
+      "severity": "critical",
+      "casualties_dead": 13,
+      "casualties_injured": 90,
+      "perpetrator": "Russia",
+      "summary_en": "Russia hit Kyiv with missiles and drones",
+      "summary_tr": "Rusya Kiev'i füzelerle ve insansız hava araçlarıyla vurdu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "missile attack",
+        "drone attack"
+      ],
+      "date": "2026-07-02",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/clashreport/status/2072584851916505498#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 50.450034,
+      "geo_lon": 30.524136,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "b27a49f51fb4",
+      "created_at": "2026-07-02T09:29:10.190266+00:00",
+      "last_updated": "2026-07-02T09:29:10.190276+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-07-01",
