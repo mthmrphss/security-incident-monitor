@@ -1048,5 +1048,10 @@
     "lat": -5.681607,
     "lon": 144.248908,
     "display_name": "Papua Niugini"
+  },
+  "indonesia": {
+    "lat": -2.483383,
+    "lon": 117.890285,
+    "display_name": "Indonesia"
   }
 }
