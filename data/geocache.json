@@ -1043,5 +1043,10 @@
     "lat": 39.905714,
     "lon": 116.391297,
     "display_name": "北京市, 中国"
+  },
+  "papua": {
+    "lat": -5.681607,
+    "lon": 144.248908,
+    "display_name": "Papua Niugini"
   }
 }

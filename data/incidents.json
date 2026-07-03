@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-02T14:22:15.178834+00:00",
-    "total_incidents": 173,
+    "last_updated": "2026-07-03T03:55:07.536409+00:00",
+    "total_incidents": 174,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -129,6 +129,63 @@
       "id": "08bd1aa54fc7",
       "created_at": "2026-07-02T14:22:15.178820+00:00",
       "last_updated": "2026-07-02T14:22:15.178828+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "event_date": "2026-07-02",
+      "publish_date": "2026-07-02",
+      "country": "Papua",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "unknown",
+      "attack_type": "shooting",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "Papuan rebels",
+      "summary_en": "Papuan rebels shot dead US pilot",
+      "summary_tr": "Papua isyancıları ABD'li pilotu öldürdü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "Papua",
+        "US pilot",
+        "shooting"
+      ],
+      "date": "2026-07-02",
+      "year": 2026,
+      "source_urls": [
+        "https://www.reddit.com/r/worldnews/comments/1ulsgir/papuan_rebels_say_they_shot_dead_us_pilot_and/"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": -5.681607,
+      "geo_lon": 144.248908,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "a30254d1277d",
+      "created_at": "2026-07-03T03:55:07.536383+00:00",
+      "last_updated": "2026-07-03T03:55:07.536400+00:00",
       "source_count": 1
     },
     {
