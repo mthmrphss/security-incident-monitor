@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-03T09:30:08.687640+00:00",
-    "total_incidents": 175,
+    "last_updated": "2026-07-03T19:40:35.308517+00:00",
+    "total_incidents": 176,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -74,6 +74,62 @@
       "id": "08a5a614bf23",
       "created_at": "2026-07-03T09:30:08.687624+00:00",
       "last_updated": "2026-07-03T09:30:08.687634+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-03",
+      "publish_date": "2026-07-03",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Counter terror police swooped on him",
+      "summary_tr": "Terörle mücadele polisi onaOperasyon düzenledi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "counter terror"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-03",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxOcmtWNkN2cEtWbG56dmVVSkdhNGwwWGlfLWZWVlV5Rm9BeDBZalpLV3NZV1dEQWd1cnBPZXhHd2NHQldXOTkyUVJrc0VGSHpqMEpXdml6YlRzZXN6MVVTM3dBU1poNjNKWWQtaVlzNXNjTWFMNGpVLVRoQXB2NThNcC1QeFo3NUNHRm9sTjcxWXFEYmNLRncxbEZVRlRqMGhfZ252eHJ4dnRJTERXTGo2WmpHLXZtNTUzZGNKanNsTQ?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "800fd7d80dae",
+      "created_at": "2026-07-03T19:40:35.308500+00:00",
+      "last_updated": "2026-07-03T19:40:35.308509+00:00",
       "source_count": 1
     },
     {
