@@ -1053,5 +1053,15 @@
     "lat": -2.483383,
     "lon": 117.890285,
     "display_name": "Indonesia"
+  },
+  "gold coast": {
+    "lat": -28.002373,
+    "lon": 153.414599,
+    "display_name": "Gold Coast, Queensland, 4217, Australia"
+  },
+  "santa fe, united states": {
+    "lat": 35.68761,
+    "lon": -105.938456,
+    "display_name": "Santa Fe, Santa Fe County, New Mexico, United States"
   }
 }
