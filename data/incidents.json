@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-06T10:55:20.282262+00:00",
-    "total_incidents": 179,
+    "last_updated": "2026-07-07T04:03:57.097092+00:00",
+    "total_incidents": 180,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -188,6 +188,62 @@
       "id": "b7b351fd1b7c",
       "created_at": "2026-07-06T10:55:20.282257+00:00",
       "last_updated": "2026-07-06T10:55:20.282259+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-07-05",
+      "publish_date": "2026-07-06",
+      "country": "Pakistan",
+      "country_code": "PK",
+      "city": "Quetta",
+      "location_detail": "Hina Urak on the outskirts of Quetta",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "tourist spot",
+      "attack_type": "assault",
+      "severity": "high",
+      "casualties_dead": 4,
+      "casualties_injured": 9,
+      "perpetrator": "armed terrorists",
+      "summary_en": "Terror attack near Quetta resort",
+      "summary_tr": "Quetta yakınlarında terör saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "terrorist attack",
+        "Quetta resort"
+      ],
+      "date": "2026-07-05",
+      "year": 2026,
+      "source_urls": [
+        "https://tribune.com.pk/story/2616864/terror-attack-kills-four-near-quetta-resort"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 30.191627,
+      "geo_lon": 67.000756,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "c0f7bc556433",
+      "created_at": "2026-07-07T04:03:57.097074+00:00",
+      "last_updated": "2026-07-07T04:03:57.097086+00:00",
       "source_count": 1
     },
     {
