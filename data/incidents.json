@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-07T14:56:51.447386+00:00",
+    "last_updated": "2026-07-09T03:56:50.815972+00:00",
     "total_incidents": 181,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -36,8 +36,8 @@
       "casualties_dead": 0,
       "casualties_injured": 18,
       "perpetrator": "unknown",
-      "summary_en": "Twin bomb blasts near Macron's hotel",
-      "summary_tr": "Macron'un otelinde çift bombalı saldırı",
+      "summary_en": "Bomb attacks hit Damascus near Macron hotel",
+      "summary_tr": "Macron'ın otelinin yakınında bombalı saldırı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -50,6 +50,7 @@
       "year": 2026,
       "source_urls": [
         "https://www.maalaimalar.com/news/world/twin-bomb-blasts-near-macrons-damascus-hotel-18-injured-in-explosions-close-to-four-seasons-during-syria-state-visit",
+        "https://torontosun.com/news/world/damascus-bomb-attacks-macron-hotel",
         "https://www.hngn.com/articles/271937/20260707/explosions-wound-18-damascus-during-macrons-visit-syria.htm"
       ],
       "source_articles": [
@@ -71,8 +72,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 2,
-      "last_updated": "2026-07-07T14:56:51.447380+00:00",
+      "source_count": 3,
+      "last_updated": "2026-07-09T03:56:50.815864",
       "id": "18c2280810a2",
       "created_at": "2026-07-07T14:56:51.447372+00:00"
     },
