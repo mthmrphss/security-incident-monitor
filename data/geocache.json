@@ -1083,5 +1083,10 @@
     "lat": 4.099917,
     "lon": -72.908813,
     "display_name": "Colombia"
+  },
+  "taj hotel, mumbai, india": {
+    "lat": 18.921778,
+    "lon": 72.833285,
+    "display_name": "Taj Mahal Palace, Prem J. Ramchandani Road, Apollo Bandar, Koli Nagar, A Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400001, India"
   }
 }
