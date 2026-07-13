@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-12T08:31:34.920363+00:00",
-    "total_incidents": 182,
+    "last_updated": "2026-07-13T14:52:42.673406+00:00",
+    "total_incidents": 183,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,66 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-13",
+      "publish_date": "2026-07-13",
+      "country": "Yemen",
+      "country_code": "YE",
+      "city": "Sanaa",
+      "location_detail": "Sanaa International Airport",
+      "airport_name": "Sanaa International Airport",
+      "airport_iata": "SAH",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Saudi",
+      "summary_en": "Yemen gov forces attacked Sanaa airport",
+      "summary_tr": "Yemen'in Sanaa Havalimanı bombalı saldırıya uğradı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "Saudi",
+        "Yemen",
+        "airport attack",
+        "Houthis"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-13",
+      "year": 2026,
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/7/13/yemen-govt-says-its-forces-attacked-sanaa-airport?traffic_source=rss",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNYWVqMEotREZLODZJeU9oQzFRUkRkVlV2cEdBNkEyNFZqS1c3ZE5TVXQ1OUNzQWhjSmpaYWJKV1hwdnExQ0R2blNucURXYmpmeWRMMkpmNlBWeE8xakloZ2ZCZGxfNDRxSDF2cHhhR0x4eklVUWVGcGtUOHM0WHg4UlRwa2dVYlpIcFg1eU1GQzZGV212WGl5c3RlT1RabC03SmNQYkRmVDZhOHBMTnhfZVhveE1qeWl2Zmt3cThDWkNLU2NqcFp6bDNONzNMT090N044VlhobzdQMlnSAeABQVVfeXFMUEpFS3lMV0tjZXBCdjEwYWFheHVBVy1jM0FGQldRODFtVENpdDBxTzhOb3BvQjU3OEhqZzE2QlRNa0lYeDVIR1VydzRWSXRwdmE4YjRhMzZqWGF4Nmxkb0ZNV05NOUdjakkzaUNUaXQ5a2cyT3N4OFNUNEdYNWtsbTl5UXg4WWVRUUs4dERhZHNZQ2NBSXo4Y2U1X2hWZVY4eno1REs5SjF1WVpSb0pNaUg2dDJxdjVFMlVXQ2RHTlhXTDVLZmRDdE5jYnNRbW1mTllJVHhNLUtOQ1FQN0pNT3g?oc=5",
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jZzdlVWZDVFR6NHhkUnpGT2pMSXI4SlhRLW1FbmNmbVRnX0FsS2liaEJiYUJDd2xrQUJhR3pNLXNQaV9ZdHpjUzcwS0EtY1J1UFlWTy1MWkJrMWVzTlpyZDBB?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 15.474545,
+      "geo_lon": 44.219736,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 3,
+      "last_updated": "2026-07-13T14:52:42.673399+00:00",
+      "id": "b7fc2b83362b",
+      "created_at": "2026-07-13T14:52:42.673388+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-10",

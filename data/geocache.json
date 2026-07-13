@@ -1088,5 +1088,15 @@
     "lat": 18.921778,
     "lon": 72.833285,
     "display_name": "Taj Mahal Palace, Prem J. Ramchandani Road, Apollo Bandar, Koli Nagar, A Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400001, India"
+  },
+  "sanaa international airport, sanaa, yemen": {
+    "lat": 15.474545,
+    "lon": 44.219736,
+    "display_name": "مطار صنعاء الدولي, شارع المطار, الربعي, بني حوات, مديرية بني الحارث, أمانة العاصمة, اليمن"
+  },
+  "sanaa airport, sanaa, yemen": {
+    "lat": 15.474545,
+    "lon": 44.219736,
+    "display_name": "مطار صنعاء الدولي, شارع المطار, الدفاع, بني حوات, مديرية بني الحارث, أمانة العاصمة, اليمن"
   }
 }
