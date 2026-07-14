@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-14T03:00:06.854500+00:00",
-    "total_incidents": 183,
+    "last_updated": "2026-07-14T08:24:10.761928+00:00",
+    "total_incidents": 185,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,120 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-14",
+      "publish_date": "2026-07-14",
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "city": "Abha",
+      "location_detail": "Abha Airport",
+      "airport_name": "Abha Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Yemen’s Houthis",
+      "summary_en": "Abha Airport under missile threat",
+      "summary_tr": "Abha Havalimanı füze tehdidi altında",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "missile threat",
+        "airport security",
+        "Yemen’s Houthis"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-14",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTFBLbVh0NEQ3U2Y3N3ZqYTU0ODRtWUhOeFBYYTVmaHRwUGxCemJJQmxERWljdUdsWkgwdk13VmVDRWl1TDY0UmlDN2ptYUpVWTZPRGNiYVN5RW1peFZETnFyMXktazRMU1B3QjhRdDl3?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 18.241661,
+      "geo_lon": 42.653766,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "08671cfebb74",
+      "created_at": "2026-07-14T08:24:10.761890+00:00",
+      "last_updated": "2026-07-14T08:24:10.761907+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-14",
+      "publish_date": "2026-07-14",
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "city": "Sana’a",
+      "location_detail": "Sana’a airport",
+      "airport_name": "Sana’a airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Saudi Arabia",
+      "summary_en": "Saudi Arabia attacked Sana’a airport",
+      "summary_tr": "Suudi Arabistan Sana’a havalimanına saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "Saudi Arabia",
+        "Sana’a"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-14",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPanNIT2VIdDBTSWN1Q0NfM291VktVSG9WdVJjSUNLcE5TX3d4SGM2dm1pY0tUeTFnRVdDRk5SazlfSUNNNFZrZTczdUlkYV9kS1pKQ01CTjJTUGh3ZzJHSXFrR0pCNlFSY3czYWFSdU1jSWVGTVB0U0JKckk1SzhKTGJtRGxxbVhCTGxMbmctUTNXbXc?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 15.334032,
+      "geo_lon": 44.204291,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "fcaa5fb354c7",
+      "created_at": "2026-07-14T08:24:10.761920+00:00",
+      "last_updated": "2026-07-14T08:24:10.761923+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-13",
@@ -52,11 +166,12 @@
       "date": "2026-07-13",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNYWVqMEotREZLODZJeU9oQzFRUkRkVlV2cEdBNkEyNFZqS1c3ZE5TVXQ1OUNzQWhjSmpaYWJKV1hwdnExQ0R2blNucURXYmpmeWRMMkpmNlBWeE8xakloZ2ZCZGxfNDRxSDF2cHhhR0x4eklVUWVGcGtUOHM0WHg4UlRwa2dVYlpIcFg1eU1GQzZGV212WGl5c3RlT1RabC03SmNQYkRmVDZhOHBMTnhfZVhveE1qeWl2Zmt3cThDWkNLU2NqcFp6bDNONzNMT090N044VlhobzdQMlnSAeABQVVfeXFMUEpFS3lMV0tjZXBCdjEwYWFheHVBVy1jM0FGQldRODFtVENpdDBxTzhOb3BvQjU3OEhqZzE2QlRNa0lYeDVIR1VydzRWSXRwdmE4YjRhMzZqWGF4Nmxkb0ZNV05NOUdjakkzaUNUaXQ5a2cyT3N4OFNUNEdYNWtsbTl5UXg4WWVRUUs4dERhZHNZQ2NBSXo4Y2U1X2hWZVY4eno1REs5SjF1WVpSb0pNaUg2dDJxdjVFMlVXQ2RHTlhXTDVLZmRDdE5jYnNRbW1mTllJVHhNLUtOQ1FQN0pNT3g?oc=5",
         "https://www.aljazeera.com/news/2026/7/13/yemen-govt-says-its-forces-attacked-sanaa-airport?traffic_source=rss",
-        "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jZzdlVWZDVFR6NHhkUnpGT2pMSXI4SlhRLW1FbmNmbVRnX0FsS2liaEJiYUJDd2xrQUJhR3pNLXNQaV9ZdHpjUzcwS0EtY1J1UFlWTy1MWkJrMWVzTlpyZDBB?oc=5",
         "https://www.theamericanconservative.com/airstrikes-hit-runway-at-sanaa-international-airport-in-yemen/",
-        "https://moderntokyotimes.com/saudi-arabia-airport-hit-after-yemen-houthis-strike-retaliation/"
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jZzdlVWZDVFR6NHhkUnpGT2pMSXI4SlhRLW1FbmNmbVRnX0FsS2liaEJiYUJDd2xrQUJhR3pNLXNQaV9ZdHpjUzcwS0EtY1J1UFlWTy1MWkJrMWVzTlpyZDBB?oc=5",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNYWVqMEotREZLODZJeU9oQzFRUkRkVlV2cEdBNkEyNFZqS1c3ZE5TVXQ1OUNzQWhjSmpaYWJKV1hwdnExQ0R2blNucURXYmpmeWRMMkpmNlBWeE8xakloZ2ZCZGxfNDRxSDF2cHhhR0x4eklVUWVGcGtUOHM0WHg4UlRwa2dVYlpIcFg1eU1GQzZGV212WGl5c3RlT1RabC03SmNQYkRmVDZhOHBMTnhfZVhveE1qeWl2Zmt3cThDWkNLU2NqcFp6bDNONzNMT090N044VlhobzdQMlnSAeABQVVfeXFMUEpFS3lMV0tjZXBCdjEwYWFheHVBVy1jM0FGQldRODFtVENpdDBxTzhOb3BvQjU3OEhqZzE2QlRNa0lYeDVIR1VydzRWSXRwdmE4YjRhMzZqWGF4Nmxkb0ZNV05NOUdjakkzaUNUaXQ5a2cyT3N4OFNUNEdYNWtsbTl5UXg4WWVRUUs4dERhZHNZQ2NBSXo4Y2U1X2hWZVY4eno1REs5SjF1WVpSb0pNaUg2dDJxdjVFMlVXQ2RHTlhXTDVLZmRDdE5jYnNRbW1mTllJVHhNLUtOQ1FQN0pNT3g?oc=5",
+        "https://moderntokyotimes.com/saudi-arabia-airport-hit-after-yemen-houthis-strike-retaliation/",
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQOGFIMTJWRktYRURLOGh1ZEtzcUlqYkFJcHlVaURXVUJPdmQ4UnRpbl9rbnRhcW5QNzVxVVB2enY5VFF0M3JVOF96RWxzX1RWZGt0bkJIRlJXSG5HMkU1UDFTbFhfMEpKQVFlX1JXdjVVeHlOaXd0X3BFbHl2RHc0cmpabXFfeUdYYVBRU18zRDQ1YUhvR3c4M2FzXzIzYldhVWZBQURYS2FGTXZFQXNidldxeGJMM2Jla0MxeU1XNnpkZXVOaWxVUzJBYUgzd1kzUHNKQdIB2gFBVV95cUxOZWFmMjFUVmhjQjBrQXhRTTEyZTA5UmdkRHZRZjRjVk9MUFhNTGI4dHBXWVNSZDBHSGhQMHk4U1EyeV9oR3BQb0NQczRyejY0Y29MbTRtNUpnUUZpOG9mSlQyQnlvOWF5dDVRTFVjZmI5SkVQb0xHT1haZjJPU19ZN3ZoNG11Uk1xU1Mwd0ozLW5DREJ2aEwzbkRqckJpenJCTnJLcDhJWWx1ZGg3SS1wY2tUMzZ6TF83S2FPZ0Q0ckRIbHFHd0lMemd5QkZnNkwyWl9JOGhLQXI2Zw?oc=5"
       ],
       "source_articles": [
         0
@@ -76,8 +191,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 5,
-      "last_updated": "2026-07-14T03:00:06.854390",
+      "source_count": 6,
+      "last_updated": "2026-07-14T08:24:10.722092",
       "id": "b7fc2b83362b",
       "created_at": "2026-07-13T14:52:42.673388+00:00"
     },
