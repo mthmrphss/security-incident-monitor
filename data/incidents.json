@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-14T08:24:10.761928+00:00",
+    "last_updated": "2026-07-14T14:02:28.913796+00:00",
     "total_incidents": 185,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -28,7 +28,7 @@
       "city": "Abha",
       "location_detail": "Abha Airport",
       "airport_name": "Abha Airport",
-      "airport_iata": null,
+      "airport_iata": "SAH",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "other",
@@ -51,7 +51,8 @@
       "date": "2026-07-14",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMibkFVX3lxTFBLbVh0NEQ3U2Y3N3ZqYTU0ODRtWUhOeFBYYTVmaHRwUGxCemJJQmxERWljdUdsWkgwdk13VmVDRWl1TDY0UmlDN2ptYUpVWTZPRGNiYVN5RW1peFZETnFyMXktazRMU1B3QjhRdDl3?oc=5"
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTFBLbVh0NEQ3U2Y3N3ZqYTU0ODRtWUhOeFBYYTVmaHRwUGxCemJJQmxERWljdUdsWkgwdk13VmVDRWl1TDY0UmlDN2ptYUpVWTZPRGNiYVN5RW1peFZETnFyMXktazRMU1B3QjhRdDl3?oc=5",
+        "https://www.aljazeera.com/video/newsfeed/2026/7/14/whats-behind-the-sanaa-airport-attack-and-latest-yemen-tensions?traffic_source=rss"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "verification_score": 1.0,
       "id": "08671cfebb74",
       "created_at": "2026-07-14T08:24:10.761890+00:00",
-      "last_updated": "2026-07-14T08:24:10.761907+00:00",
-      "source_count": 1
+      "last_updated": "2026-07-14T14:02:28.913667",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
