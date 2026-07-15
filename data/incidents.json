@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-15T02:58:05.848402+00:00",
-    "total_incidents": 187,
+    "last_updated": "2026-07-15T08:27:43.146851+00:00",
+    "total_incidents": 188,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-15",
+      "publish_date": "2026-07-15",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Man released on bail after airport luggage bomb claim",
+      "summary_tr": "Bagaj bombası iddiası后的 havaalanında bir adam kefaletle serbest bırakıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb claim",
+        "luggage"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-15",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaW9Rd0xhOEMwRkhvcDVlejB1RWFycTVROE5ZVUgyVVhLNFRfNHgwbUhTOUJMZk5od2U4a2poOHRCYTdpMGg1a0F3OTN0TldvT0VQUEs2WXQ1T3FBNURtcS14YjVSZ1NMYWI1YXd1VjkyM0tzSU5FZG8wbnYxaWdDTFMwUFdWb1VZYmdVazl0Q016UGRDb1dSR0JNa2E4dVBkWTlv?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.6,
+      "verification_status": "probable",
+      "verification_score": 0.6,
+      "id": "800fd7d80dae",
+      "created_at": "2026-07-15T08:27:43.146838+00:00",
+      "last_updated": "2026-07-15T08:27:43.146846+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-14",
@@ -96,7 +153,7 @@
       "casualties_injured": 0,
       "perpetrator": "Saudi Arabia",
       "summary_en": "Saudi Arabia attacked Sana’a airport",
-      "summary_tr": "Suudi Arabistan Sana’a havalimanına saldırdı",
+      "summary_tr": "Yemen Hükümeti güçleri Sanaa Havalimanı'nı bombaladı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -110,8 +167,9 @@
       "date": "2026-07-14",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPanNIT2VIdDBTSWN1Q0NfM291VktVSG9WdVJjSUNLcE5TX3d4SGM2dm1pY0tUeTFnRVdDRk5SazlfSUNNNFZrZTczdUlkYV9kS1pKQ01CTjJTUGh3ZzJHSXFrR0pCNlFSY3czYWFSdU1jSWVGTVB0U0JKckk1SzhKTGJtRGxxbVhCTGxMbmctUTNXbXc?oc=5",
-        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMGJjYTB1Vl9meGFNWl9qSk1qU2JmXzZKMEV6YmZueGg5ZHN0RkI1cXcwRmlDT1p6UUw3cjB0dEVVSF9FUzlHUjJzVk8tWFF2S3NGbjhPVUtvNmtpb1k3X2RXRVJEV0xLb1cwSjJBSnh0NFpRS3pMMzZISFpaalRrMDJBNzR1YmhVVERDcGhmeHplOHhqUUVn0gGcAUFVX3lxTE5PTlNOdEd6M0VmdjNWTFFnRWwtU1ZlMmZ4eXRGajkyNDE1WGVad0h5Tkt2WEhQUDhYUGt1NUN3OEJza29WeWxDbHFzdHJ0QkVuMzRuQmpvdWg3cmt5QVlmcWZQZmJfNjNSVUZlQUtNY2lLSURCZHBobFhENUxfT2NwblBtR2RiMUd1YXJFSWFzTXM0cnpnZ2Y4NzNXQg?oc=5"
+        "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYXFXaDFYa2xkWGktTVIzOUQtV01Uc0R0WHN4ZlJWU2lSM1A1amRLUjF4TGhldjc5MFh6NUVITVg2SWMwV18wcjBGbGVlQUpaWkVYZlJuQnNXb3B6dHlUSF9XcnZPaXBBWUJXWFNBV0llT3BKUkpzWnRaYklaNHRneGRmRkNWX2UtWkdaYk5FN25FODczNkV1WDF5WG03aFFvMkxOOVhGWjMzWl9ETnNlNVVhWmR5RkV1ZEs3UGlELXhvaTJ4SnBGdnJrUnpjWkJ4UndlTVI0eDBicGpZM3ZzMUxfUk42aU5rUHc?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMGJjYTB1Vl9meGFNWl9qSk1qU2JmXzZKMEV6YmZueGg5ZHN0RkI1cXcwRmlDT1p6UUw3cjB0dEVVSF9FUzlHUjJzVk8tWFF2S3NGbjhPVUtvNmtpb1k3X2RXRVJEV0xLb1cwSjJBSnh0NFpRS3pMMzZISFpaalRrMDJBNzR1YmhVVERDcGhmeHplOHhqUUVn0gGcAUFVX3lxTE5PTlNOdEd6M0VmdjNWTFFnRWwtU1ZlMmZ4eXRGajkyNDE1WGVad0h5Tkt2WEhQUDhYUGt1NUN3OEJza29WeWxDbHFzdHJ0QkVuMzRuQmpvdWg3cmt5QVlmcWZQZmJfNjNSVUZlQUtNY2lLSURCZHBobFhENUxfT2NwblBtR2RiMUd1YXJFSWFzTXM0cnpnZ2Y4NzNXQg?oc=5",
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPanNIT2VIdDBTSWN1Q0NfM291VktVSG9WdVJjSUNLcE5TX3d4SGM2dm1pY0tUeTFnRVdDRk5SazlfSUNNNFZrZTczdUlkYV9kS1pKQ01CTjJTUGh3ZzJHSXFrR0pCNlFSY3czYWFSdU1jSWVGTVB0U0JKckk1SzhKTGJtRGxxbVhCTGxMbmctUTNXbXc?oc=5"
       ],
       "source_articles": [
         0
@@ -133,8 +191,8 @@
       "verification_score": 1.0,
       "id": "fcaa5fb354c7",
       "created_at": "2026-07-14T08:24:10.761920+00:00",
-      "last_updated": "2026-07-15T02:58:05.848274",
-      "source_count": 2
+      "last_updated": "2026-07-15T08:27:43.146727",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -142,10 +200,10 @@
       "publish_date": "2026-07-14",
       "country": "United States",
       "country_code": "US",
-      "city": "unknown",
-      "location_detail": "airport",
+      "city": "Hong Kong",
+      "location_detail": "Hong Kong airport",
       "airport_name": "unknown",
-      "airport_iata": null,
+      "airport_iata": "HKG",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "threat",
@@ -170,6 +228,7 @@
       "date": "2026-07-14",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxQV3hkTlpSSmdOYUl3Q1Y1VE9uM1I2bGVkbS1vM0lTdHJycEMtenpYYjBTNmtOSDR6VGJhNFczNEdVbXEtbG10enRrNEJzZWJhMEV3d0pja2lkNlRmRXA1c0haTFhlYlhKVTlDNXBOd0pod0NxdmhUbmIzVkZJTERGMkswSTAySDJ2ck9xVzNmNktMamszd2p4UmM4SXA4bElqdEJVaVhzTnRvblZLWjJBaDFJWnk0cEFGbU9pSEEzT3cxSFlMR3c?oc=5",
         "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMlpDd1NSOExGLVlyZU5KTHpxNU96TEN2Rm9ZX2ZhQUM0d25pZU9BX24wMWhpZC1qYXQ4OE5LazktajBVZ1hWYmx4Y2FPX3VXWWZiR1hGN1VXYVRISmdRMGpTMUZZdE5KNFRaZ3lnMHBtWVROcmtkUUtMV2lJd0lCRlExSXhaSEVVa01DQmpaZGtHUEFEYmItWFZONFZzSDZYQlZxeWRIdDZWdW4tQlE3aS1zLXVGVDRlT0hpd3poRk9rNnFmMUlXQkhR?oc=5"
       ],
       "source_articles": [
@@ -192,8 +251,8 @@
       "verification_score": 0.7,
       "id": "768966de572a",
       "created_at": "2026-07-14T19:39:40.314833+00:00",
-      "last_updated": "2026-07-14T19:39:40.314847+00:00",
-      "source_count": 1
+      "last_updated": "2026-07-15T08:27:43.125528",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",

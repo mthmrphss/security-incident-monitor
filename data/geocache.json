@@ -1123,5 +1123,10 @@
     "lat": 16.347124,
     "lon": 47.891527,
     "display_name": "اليمن"
+  },
+  "hong kong, hong kong": {
+    "lat": 22.281833,
+    "lon": 114.158283,
+    "display_name": "香港 Hong Kong, 中国"
   }
 }
