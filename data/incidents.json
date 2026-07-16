@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-16T08:28:08.700607+00:00",
+    "last_updated": "2026-07-16T14:12:09.051220+00:00",
     "total_incidents": 188,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -168,9 +168,10 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMGJjYTB1Vl9meGFNWl9qSk1qU2JmXzZKMEV6YmZueGg5ZHN0RkI1cXcwRmlDT1p6UUw3cjB0dEVVSF9FUzlHUjJzVk8tWFF2S3NGbjhPVUtvNmtpb1k3X2RXRVJEV0xLb1cwSjJBSnh0NFpRS3pMMzZISFpaalRrMDJBNzR1YmhVVERDcGhmeHplOHhqUUVn0gGcAUFVX3lxTE5PTlNOdEd6M0VmdjNWTFFnRWwtU1ZlMmZ4eXRGajkyNDE1WGVad0h5Tkt2WEhQUDhYUGt1NUN3OEJza29WeWxDbHFzdHJ0QkVuMzRuQmpvdWg3cmt5QVlmcWZQZmJfNjNSVUZlQUtNY2lLSURCZHBobFhENUxfT2NwblBtR2RiMUd1YXJFSWFzTXM0cnpnZ2Y4NzNXQg?oc=5",
-        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQS09MTnpsUm5XbTVqZmhySEJNWm9YRGd1R0VGUDhRTGdGeGF3LW5vTmI5aUt4ZWVwaEtrbGJCVTQwc2FMeUlUVjB0TWlCQnJzSXhXM0VybmRBVjhsNkVYYnNfXzZSZjBmR2p3eENrcWNnTlZsdlBGUXd2V1NZMjdQaWkxLVpkaHFHbjJqV2NLa205M2dsel9admVoUjRrbkdXX254ZnJ4SFd3Yk1aWnJuMC0tMW9WTHB4bi0zU204dlhGenJqb3NUZFZpUDk2QUpkTEpSSmVJZV8wbUVxdElkMw?oc=5",
         "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYXFXaDFYa2xkWGktTVIzOUQtV01Uc0R0WHN4ZlJWU2lSM1A1amRLUjF4TGhldjc5MFh6NUVITVg2SWMwV18wcjBGbGVlQUpaWkVYZlJuQnNXb3B6dHlUSF9XcnZPaXBBWUJXWFNBV0llT3BKUkpzWnRaYklaNHRneGRmRkNWX2UtWkdaYk5FN25FODczNkV1WDF5WG03aFFvMkxOOVhGWjMzWl9ETnNlNVVhWmR5RkV1ZEs3UGlELXhvaTJ4SnBGdnJrUnpjWkJ4UndlTVI0eDBicGpZM3ZzMUxfUk42aU5rUHc?oc=5",
-        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPanNIT2VIdDBTSWN1Q0NfM291VktVSG9WdVJjSUNLcE5TX3d4SGM2dm1pY0tUeTFnRVdDRk5SazlfSUNNNFZrZTczdUlkYV9kS1pKQ01CTjJTUGh3ZzJHSXFrR0pCNlFSY3czYWFSdU1jSWVGTVB0U0JKckk1SzhKTGJtRGxxbVhCTGxMbmctUTNXbXc?oc=5"
+        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQS09MTnpsUm5XbTVqZmhySEJNWm9YRGd1R0VGUDhRTGdGeGF3LW5vTmI5aUt4ZWVwaEtrbGJCVTQwc2FMeUlUVjB0TWlCQnJzSXhXM0VybmRBVjhsNkVYYnNfXzZSZjBmR2p3eENrcWNnTlZsdlBGUXd2V1NZMjdQaWkxLVpkaHFHbjJqV2NLa205M2dsel9admVoUjRrbkdXX254ZnJ4SFd3Yk1aWnJuMC0tMW9WTHB4bi0zU204dlhGenJqb3NUZFZpUDk2QUpkTEpSSmVJZV8wbUVxdElkMw?oc=5",
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPanNIT2VIdDBTSWN1Q0NfM291VktVSG9WdVJjSUNLcE5TX3d4SGM2dm1pY0tUeTFnRVdDRk5SazlfSUNNNFZrZTczdUlkYV9kS1pKQ01CTjJTUGh3ZzJHSXFrR0pCNlFSY3czYWFSdU1jSWVGTVB0U0JKckk1SzhKTGJtRGxxbVhCTGxMbmctUTNXbXc?oc=5",
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSTk3MlFCYnJkY2s2dE9YaEJRVXJ6Q1FUaFVQOGc4cHo4VU1GVklMTDhIeGpkRU5HblZrX2plRUVPbVhLV2UxT1lMRWMxOVNybGxVeWRFTzNIY05CdjktME9qRU5RXzUyU1gtcUxrcmRoM0Q4cVlyeUxmak9aZU55NHJUN1dzenp3ajZxcGVWd3pHY1hBVHRxZnlVcWItdWxjbENJRkVxZTBTN0J6T2k5U285VW5hOTZfSmJhWFB6aTBtd24y?oc=5"
       ],
       "source_articles": [
         0
@@ -192,8 +193,8 @@
       "verification_score": 1.0,
       "id": "fcaa5fb354c7",
       "created_at": "2026-07-14T08:24:10.761920+00:00",
-      "last_updated": "2026-07-16T08:28:08.700476",
-      "source_count": 4
+      "last_updated": "2026-07-16T14:12:09.051078",
+      "source_count": 5
     },
     {
       "incident_type": "AIRPORT_ATTACK",
