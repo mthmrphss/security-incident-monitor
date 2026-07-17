@@ -1148,5 +1148,15 @@
     "lat": 34.866106,
     "lon": 48.606059,
     "display_name": "(راه آهن(رباط شورین, مرز راه آهن, دهستان هگمتانه, بخش مرکزی شهرستان همدان, شهرستان همدان, استان همدان, ایران"
+  },
+  "bengaluru airport, bengaluru, india": {
+    "lat": 13.197605,
+    "lon": 77.707486,
+    "display_name": "Kempegowda International Airport, Cargo Road, Bengaluru, Devanahalli taluku, Bengaluru North, Karnataka, 560300, India"
+  },
+  "iran": {
+    "lat": 32.647531,
+    "lon": 54.564352,
+    "display_name": "ایران"
   }
 }
