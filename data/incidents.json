@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-17T08:24:23.256903+00:00",
+    "last_updated": "2026-07-17T19:24:06.130824+00:00",
     "total_incidents": 191,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -51,8 +51,9 @@
       "date": "2026-07-17",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxOT3MtMkgteWxEVGtET2JIZGp1TzRsNkQ1S1Q4Y0ZfekV0dENpQ1UxMHNpVkphUWlrOFh4VVlhR08wVlVVeGdWbHh1d0tIdXRHTjZMU2RmVFl0dlR2cHlYYWhlSlo3UHZPNTRoaXJZdzRiVkJkT204MmUwQ0dFMWM1RzBRdmdsM1pWa0ZzZGJIZU56Zm13eWtaVlJTUW5GTTQwRWdF?oc=5",
         "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcHdueDhlcTFUdnUxU0pwbHUtWVRBWGROZVlqUk9wamM3aXlDdWpDSUU4Vmw5aVRPcjMzcjBKWE41dlJmUk1McmI0dGtXakFqSE9RVzBaaGlsTUFHUVdUYWpqU3hLNXoxTXE4cUItWkhrSVlQQUpUcDNiSWhnMmVXS3FxOEJHNjdWYUJmQi1Sc9IBlwFBVV95cUxOVWNMRUdackQwQU05VFpLSWJmbHdVcFI4a0dtQmZfMVVWWFlIS3JLb3NiM25XNy1PTndGLUU3NFRlLWJBR180OGFGY1VOMDZiQ0IwYU5VU29EX214UzJqWHdrTmh0bEdmbll0blVra1NHUGpzWnJVZEtrQ2MwWWhHdkt0bW1acERIbF92cXVIblUzcHVUOHEw?oc=5",
-        "https://news.google.com/rss/articles/CBMiowFBVV95cUxOT3MtMkgteWxEVGtET2JIZGp1TzRsNkQ1S1Q4Y0ZfekV0dENpQ1UxMHNpVkphUWlrOFh4VVlhR08wVlVVeGdWbHh1d0tIdXRHTjZMU2RmVFl0dlR2cHlYYWhlSlo3UHZPNTRoaXJZdzRiVkJkT204MmUwQ0dFMWM1RzBRdmdsM1pWa0ZzZGJIZU56Zm13eWtaVlJTUW5GTTQwRWdF?oc=5"
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcEJtZHNuMjZUSXUxYXhxc0NIbTh2YjhldTlRM3FTZ1FudTdiNFIwZy1ROUk3Y0tWejYyaDBYN1ZOd3V2c2U3a0VrMEFQRVNMMGI0aDJ3a1VjNzg0SkNzaFN6b0tYOUdEaW1wZHhUdUgwMlhvSHFiYVBwUENDNnJVNF82ekRZeXhuUnNNM0RsT2ZZdmVJRnJJT0dxRQ?oc=5"
       ],
       "source_articles": [
         0
@@ -74,8 +75,8 @@
       "verification_score": 0.75,
       "id": "12b99ee005a5",
       "created_at": "2026-07-17T03:23:53.596838+00:00",
-      "last_updated": "2026-07-17T08:24:23.231541",
-      "source_count": 2
+      "last_updated": "2026-07-17T19:24:06.130665",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
