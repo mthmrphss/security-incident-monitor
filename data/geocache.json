@@ -1138,5 +1138,15 @@
     "lat": 25.624262,
     "lon": 42.352833,
     "display_name": "السعودية"
+  },
+  "private jet, united states": {
+    "lat": 38.578646,
+    "lon": -121.497517,
+    "display_name": "GOGO JETS - Sacramento Private Jet Charter, 770, L Street, Downtown, Sacramento, Sacramento County, California, 95814, United States"
+  },
+  "railway station, iran": {
+    "lat": 34.866106,
+    "lon": 48.606059,
+    "display_name": "(راه آهن(رباط شورین, مرز راه آهن, دهستان هگمتانه, بخش مرکزی شهرستان همدان, شهرستان همدان, استان همدان, ایران"
   }
 }

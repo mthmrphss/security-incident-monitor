@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-16T19:25:58.031200+00:00",
-    "total_incidents": 188,
+    "last_updated": "2026-07-17T03:23:53.596844+00:00",
+    "total_incidents": 190,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,120 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-17",
+      "publish_date": "2026-07-17",
+      "country": "Iran",
+      "country_code": "IR",
+      "city": "unknown",
+      "location_detail": "airport, railway station",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport, railway station",
+      "attack_type": "bombing",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "US",
+      "summary_en": "US strikes hit Iran airport",
+      "summary_tr": "ABD İran havalimanına saldırı düzenledi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "US",
+        "Iran",
+        "airport attack"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-17",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcHdueDhlcTFUdnUxU0pwbHUtWVRBWGROZVlqUk9wamM3aXlDdWpDSUU4Vmw5aVRPcjMzcjBKWE41dlJmUk1McmI0dGtXakFqSE9RVzBaaGlsTUFHUVdUYWpqU3hLNXoxTXE4cUItWkhrSVlQQUpUcDNiSWhnMmVXS3FxOEJHNjdWYUJmQi1Sc9IBlwFBVV95cUxOVWNMRUdackQwQU05VFpLSWJmbHdVcFI4a0dtQmZfMVVWWFlIS3JLb3NiM25XNy1PTndGLUU3NFRlLWJBR180OGFGY1VOMDZiQ0IwYU5VU29EX214UzJqWHdrTmh0bEdmbll0blVra1NHUGpzWnJVZEtrQ2MwWWhHdkt0bW1acERIbF92cXVIblUzcHVUOHEw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 34.866106,
+      "geo_lon": 48.606059,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": false,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "12b99ee005a5",
+      "created_at": "2026-07-17T03:23:53.596838+00:00",
+      "last_updated": "2026-07-17T03:23:53.596840+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRLINE_PERSONNEL",
+      "event_date": "2026-07-16",
+      "publish_date": "2026-07-16",
+      "country": "United States",
+      "country_code": "US",
+      "city": "unknown",
+      "location_detail": "aboard Thiel's private jet",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "private jet",
+      "attack_type": "assault",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Matthew Danzeisen",
+      "summary_en": "Assault on flight attendant",
+      "summary_tr": "Hostese saldırısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "assault",
+        "private jet",
+        "flight attendant"
+      ],
+      "date": "2026-07-16",
+      "year": 2026,
+      "source_urls": [
+        "https://www.hindustantimes.com/world-news/us-news/who-is-peter-thiel-husband-matthew-danzeisen-sued-by-flight-attendant-stefanie-bojar-over-violent-assault-101784139110293.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 38.578646,
+      "geo_lon": -121.497517,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "5b514210876a",
+      "created_at": "2026-07-17T03:23:53.596817+00:00",
+      "last_updated": "2026-07-17T03:23:53.596829+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-15",
