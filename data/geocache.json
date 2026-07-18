@@ -1158,5 +1158,10 @@
     "lat": 32.647531,
     "lon": 54.564352,
     "display_name": "ایران"
+  },
+  "kempegowda airport, bengaluru, india": {
+    "lat": 13.197605,
+    "lon": 77.707486,
+    "display_name": "Kempegowda International Airport, KIAL Exit Road, Bengaluru, Devanahalli taluku, Bengaluru North, Karnataka, 560300, India"
   }
 }

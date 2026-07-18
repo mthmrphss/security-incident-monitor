@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-18T03:00:17.456341+00:00",
-    "total_incidents": 191,
+    "last_updated": "2026-07-18T08:07:05.320135+00:00",
+    "total_incidents": 192,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -111,11 +111,12 @@
       "date": "2026-07-17",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNb1N5SWpkcmIzakhydTBxT1FwOGZpUlo2U2o1aUhzdnJza21zY3FZd3o4b1pjTzh6QzM3cUZxX2RpU0ZqWHdOdl9fU0UwOS1hNF90SjhSdE85Y295b3RNcWhYXzlfRVhCUGZJcTJqSTdIRkpBb1lCellDbV9idUdJamVzZU1qSmpUb3BBczhDbFpwSThOLVBXNDFvdDBaMV9UNFg2dUp1STY0Um1hVU4ya0cyTWFsZE83ajRCWEhnMXZMWl9Udlp0YTFvdzBtVUg20gHWAUFVX3lxTE9xeWxSRUVpTG95YTFqc0VwUkoxQldrVmZuVWsyNnVBd2RhdjRlX092NUQtZVl1dVJ6eDQtSFk5UnRZLUlpOFlQaTdwZXhFR3NsNDZmTTYzRTA0bS0xRzBEQnI1N1NUN2VtR1lkWDNmVGVvRFZza0YxMk50NFV4YjJlMDdzVE9zczNtY0ZYaEQtb1A3RlhRWkVKa1dEWnVhY0t1Vl9vVVEzZnJZX1Y5MmhEbjVRUDRoMzl0Mmg5eWNUMTFJb1hYZWFJdl91M3dheWEwUzZ5Ync?oc=5",
+        "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOalljN2kwM0xDR1Z6aXhWYlJwcDRXVnpQbGd2eWFUWWxySTlrWEwzSzVuRmRtVUNVNEFBRWVLd3p0cDZBVHRzbVJkX1UyRFM4SjJoTGR2X3lfWGQ0VWxNZ1dvd0RDbF8teU96Y2VGOTQ3NWlJRTU0WWt2NWFKLWQ2cFZUMGhZbXFfelpiNUhVMHhGS1VKS3hJMHd0NHdvb2plTmJDcDZwYWhqRFg1ekxqZmtONlhJbFVybFZZUGUzcXpVR19DMURBTElPcFJUNDRvSTI4OXpUZVNQZlhBMjZfVmw3UnVUMzlrRkJQSDRLaG84VkNCeHVGaXhLcTVyUdIBgwJBVV95cUxPTF9NcmNRMm1wSTNqU1VwQWRWdUVrR191bFhhcGJPeFk5RHpfUjNpMGdUeXZMZ2pOZVI0Z0JHSllUMkZwRTd1dnhYZThDNGFEQzlpX1poamJlX20zOWp6V0VNa1ZGeFFCYUExaEIzOG8zS0psbS0xUnVPMnd2TjZlR0IxRUUxR3QxN0tsVTB2WHVfSHdNMk1kd0hJMWFVQ2J1SnNHakxYMDVHbWNrbEo4TUF5VWY4ZXV4VU53cFdHdUhGbTJhRUVMRWt5RkxrdFI2VW10LUh0QlAxcGlaYmpFM1FDNV9zT0hPNkJOdjEzUGZGaWpmYjNBem1OMUhhR28zVDhB?oc=5",
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxOU05IY1d3d2luX0ROY0piVmZReGpTQWtscF9oZ0pBM1ZpZlRlUjRCVEd2MDdSbC1vNktiSEpEZ3p5RkQwM01NZUtfa3IxeDc1MDluZnVlbkdkSk9LX3FYZGZWRl95Z3hvajdtTXlNSTRzOU00bXhodmduZVpGdXBjcnpKTWRqamM0OTFhbE5mZXB5UW90QjI5bE9zYVRkeFgtYXhxMlE3emVUSVFTOVVCeU50M29IbzJkaVl0aElyMG1iQ0RpVEVxU3ZnclFpZ9IB0wFBVV95cUxOdTE0VjhRMThEamF1RHhydmZyellsdGpXTjBFLVhqRl81cnp5dTBqZ04zTGIwTWtuTVhEdGNFbEVTamJ3SkZzaXZ1Rm1TMGxXU3N5MXZYSUxadFFVZlZSVVdRX0ZtNmx1V2hFSnVQMlhJMzl4WmNVVjRGWjZNZFJqazJrbGI4Z0pOSEFtcU5FckowSkFDcGllbms5Ml81YnN5eGxuLTFKSlhkN2NSTkkzbUxCN2xXTHFYQTRldzFoZ2VOa2xveGpFWXN1TmNxUHZYVDFj?oc=5",
         "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc2FORTg4ejFlRlVRLVp0SjRBam1Cb3ViRjdNRUZPQTRZN0JiaXBPSjlxc01uRXE2SDBmaWoxdEFRdmxRcDhjdHJNbFJqVVd5YW41bGlsNHBBWTE5eWxMN19PeXFmeU1RZ1BVRWtrM1V1eTBIWUlGR3R1R2JPbFlCYTN3aVZ0QnlZeVlqQ2cxNA?oc=5",
         "https://news.google.com/rss/articles/CBMigAJBVV95cUxONWtEeXRXdzFLOUd1dTNwLUdYVmJtMXBIYi14TVZ0VWhXZXFCb0owWHFDRDFTazhOaEZONDBtTFpBbXFQd3V3bHFhMUd4cTFxb1R2cjJhUnc3d2F4Q0IyazNKY2hWMXNJLS1SME1iVS05WkkyUUItcmxYTFVzaWt3OFNHY3FaYVBoLUgyc1RJQ2d1VTR2VW1DQXB5MzhuYVlwZFppd1RFaFBLWWlOXzJaM3pSLXpCRmx6LTI4TWV3UDR0WkI3Mkl6VHlGZEg5Q2FwNVZFd1lwMzJUdTJqS0htZFZzWVA4Yzh6Uk93SUN3NlQxNVYzZS1uQ056ZUJpYnhx?oc=5",
         "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQUGs2UldYVXpUWE5UYmpiY05CSDI2eG9SNXdjd2Vzb0VxVGRWdF9yWjRGT3hTS3daajNjUzBBbFVmNFp2WWIxaFp0XzZVQzJfNF81MFhrWU4xSDdWamJnX1JXX1EzVzBGNC1qQ3BYeHNPUFBfYVlrR2huN3gzT1hibXpZWE43WjZ2M0poZDZJOXUxbWNOYzVKLVkxdlFOdlVDVjdkZjZkRWtQNUtxa2tBR3hSVFl1cHo4cVZSTkI0YkZ6M0hJZTRKX1VrMHY1MWxCVzBVTEtCNUptaHJQMUZ6c2dhTHJkUzZvbXhN0gHwAUFVX3lxTE9DQ3dyVHdtMHR0T0NIZHYyRWxJODk4SDk5VDFZLXM5X0NFT1ZaSFp5Y3o0eEdZa241eHFCWUIzZnp2d0piLXJJRU5lSU5neE5GR1l5Wm1QRUQwSFk1UnlDRjVuV0h2WHVfUDhMVzh2SloyTER6Y290a21IeWllR0p3UXA2VnhNMW91d3ZxbEZMUFREYTVtUkJRMlpaY3FsNHBpOWhPbGg5SmJSQVl6bmpUX0ozX2VSd2NDcW1GbVlWZDU1QW4wT3Z3czNjemR6OWFFYnY1dU5QQ2s2NEhVam1qb3N4em9LdlhtQXpUc0FVUA?oc=5",
-        "https://news.google.com/rss/articles/CBMizgFBVV95cUxOU05IY1d3d2luX0ROY0piVmZReGpTQWtscF9oZ0pBM1ZpZlRlUjRCVEd2MDdSbC1vNktiSEpEZ3p5RkQwM01NZUtfa3IxeDc1MDluZnVlbkdkSk9LX3FYZGZWRl95Z3hvajdtTXlNSTRzOU00bXhodmduZVpGdXBjcnpKTWRqamM0OTFhbE5mZXB5UW90QjI5bE9zYVRkeFgtYXhxMlE3emVUSVFTOVVCeU50M29IbzJkaVl0aElyMG1iQ0RpVEVxU3ZnclFpZ9IB0wFBVV95cUxOdTE0VjhRMThEamF1RHhydmZyellsdGpXTjBFLVhqRl81cnp5dTBqZ04zTGIwTWtuTVhEdGNFbEVTamJ3SkZzaXZ1Rm1TMGxXU3N5MXZYSUxadFFVZlZSVVdRX0ZtNmx1V2hFSnVQMlhJMzl4WmNVVjRGWjZNZFJqazJrbGI4Z0pOSEFtcU5FckowSkFDcGllbms5Ml81YnN5eGxuLTFKSlhkN2NSTkkzbUxCN2xXTHFYQTRldzFoZ2VOa2xveGpFWXN1TmNxUHZYVDFj?oc=5"
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNb1N5SWpkcmIzakhydTBxT1FwOGZpUlo2U2o1aUhzdnJza21zY3FZd3o4b1pjTzh6QzM3cUZxX2RpU0ZqWHdOdl9fU0UwOS1hNF90SjhSdE85Y295b3RNcWhYXzlfRVhCUGZJcTJqSTdIRkpBb1lCellDbV9idUdJamVzZU1qSmpUb3BBczhDbFpwSThOLVBXNDFvdDBaMV9UNFg2dUp1STY0Um1hVU4ya0cyTWFsZE83ajRCWEhnMXZMWl9Udlp0YTFvdzBtVUg20gHWAUFVX3lxTE9xeWxSRUVpTG95YTFqc0VwUkoxQldrVmZuVWsyNnVBd2RhdjRlX092NUQtZVl1dVJ6eDQtSFk5UnRZLUlpOFlQaTdwZXhFR3NsNDZmTTYzRTA0bS0xRzBEQnI1N1NUN2VtR1lkWDNmVGVvRFZza0YxMk50NFV4YjJlMDdzVE9zczNtY0ZYaEQtb1A3RlhRWkVKa1dEWnVhY0t1Vl9vVVEzZnJZX1Y5MmhEbjVRUDRoMzl0Mmg5eWNUMTFJb1hYZWFJdl91M3dheWEwUzZ5Ync?oc=5"
       ],
       "source_articles": [
         0
@@ -135,10 +136,66 @@
       "quality_score": 0.95,
       "verification_status": "verified",
       "verification_score": 0.95,
-      "source_count": 5,
-      "last_updated": "2026-07-18T03:00:17.456191",
+      "source_count": 6,
+      "last_updated": "2026-07-18T08:07:05.294060",
       "id": "fcbfcfd083f2",
       "created_at": "2026-07-17T08:24:23.256885+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-17",
+      "publish_date": "2026-07-17",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Bengaluru",
+      "location_detail": "Kempegowda Airport",
+      "airport_name": "Kempegowda Airport",
+      "airport_iata": "BLR",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Security alert at Kempegowda Airport",
+      "summary_tr": "Kempegowda Havalimanı'nda güvenlik uyarısı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport security",
+        "threat note"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-17",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU183VnNBTXZMLU16R2l6dTJPZldJcDlmelBwcnFLUXJ5eXJ3TXFjQjdwSFRqb2kyZ1puZ0FwdC1BUUVsZGtSQU5LdVNWa0FzSzcySmhIWC1qZmVOQktCS21OSm5VOE4yTmNvVWFoaVhTSGFsbk5id2dQeENsbDVvLTg3SFdadWRs?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 13.197605,
+      "geo_lon": 77.707486,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "e24585eebb06",
+      "created_at": "2026-07-18T08:07:05.320118+00:00",
+      "last_updated": "2026-07-18T08:07:05.320128+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRLINE_PERSONNEL",
