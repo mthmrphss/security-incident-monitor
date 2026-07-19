@@ -1163,5 +1163,10 @@
     "lat": 13.197605,
     "lon": 77.707486,
     "display_name": "Kempegowda International Airport, KIAL Exit Road, Bengaluru, Devanahalli taluku, Bengaluru North, Karnataka, 560300, India"
+  },
+  "aqaba international airport, aqaba, jordan": {
+    "lat": 29.609997,
+    "lon": 35.018937,
+    "display_name": "مطار الملك الحسين الدولي, Jordan Valley Highway, العقبة, قضاء العقبة, لواء قصبة العقبة, العقبة, الأردن"
   }
 }

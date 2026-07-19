@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-18T08:07:05.320135+00:00",
-    "total_incidents": 192,
+    "last_updated": "2026-07-19T13:42:14.515313+00:00",
+    "total_incidents": 193,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-19",
+      "publish_date": "2026-07-19",
+      "country": "Jordan",
+      "country_code": "JO",
+      "city": "Aqaba",
+      "location_detail": "Aqaba International Airport and the seaport",
+      "airport_name": "Aqaba International Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport and seaport",
+      "attack_type": "threat",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Aqaba airport evacuated due to credible security threat",
+      "summary_tr": "Aqaba havalimanı güvenlikle ilgili tehdit nedeniyle boşaltıldı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport evacuation",
+        "security threat"
+      ],
+      "date": "2026-07-19",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/clashreport/status/2078782053533847670#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 29.609997,
+      "geo_lon": 35.018937,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "14c428bcde1b",
+      "created_at": "2026-07-19T13:42:14.515297+00:00",
+      "last_updated": "2026-07-19T13:42:14.515306+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-17",
