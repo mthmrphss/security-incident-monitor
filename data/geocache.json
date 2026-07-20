@@ -1168,5 +1168,10 @@
     "lat": 29.609997,
     "lon": 35.018937,
     "display_name": "مطار الملك الحسين الدولي, Jordan Valley Highway, العقبة, قضاء العقبة, لواء قصبة العقبة, العقبة, الأردن"
+  },
+  "bar, bali, indonesia": {
+    "lat": -8.710263,
+    "lon": 115.254497,
+    "display_name": "Bar, Jalan Sudamala, Sanur Kauh, Denpasar Selatan, Denpasar, Bali, Kepulauan Nusa Tenggara, 80227, Indonesia"
   }
 }

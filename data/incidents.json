@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-19T13:42:14.515313+00:00",
-    "total_incidents": 193,
+    "last_updated": "2026-07-20T09:31:09.546615+00:00",
+    "total_incidents": 194,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -73,6 +73,63 @@
       "id": "14c428bcde1b",
       "created_at": "2026-07-19T13:42:14.515297+00:00",
       "last_updated": "2026-07-19T13:42:14.515306+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-19",
+      "publish_date": "2026-07-20",
+      "country": "Indonesia",
+      "country_code": "ID",
+      "city": "Bali",
+      "location_detail": "The Shady Pig bar, Jalan Pantai Berawa in Canggu",
+      "airport_name": null,
+      "airport_iata": "DPS",
+      "hotel_name": null,
+      "venue_name": "bar",
+      "attack_type": "shooting",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 2,
+      "perpetrator": "unknown",
+      "summary_en": "Shooting in Bali bar",
+      "summary_tr": "Bali barında silahlı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "shooting",
+        "bar",
+        "Bali"
+      ],
+      "date": "2026-07-19",
+      "year": 2026,
+      "source_urls": [
+        "https://www.perthnow.com.au/news/world/two-people-injured-after-shooting-breaks-out-in-busy-bali-bar-manhunt-for-gunman-ends-in-airport-arrest-c-22601311"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": -8.710263,
+      "geo_lon": 115.254497,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "7bab6641b656",
+      "created_at": "2026-07-20T09:31:09.546592+00:00",
+      "last_updated": "2026-07-20T09:31:09.546608+00:00",
       "source_count": 1
     },
     {
