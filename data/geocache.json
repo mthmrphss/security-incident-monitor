@@ -1173,5 +1173,10 @@
     "lat": -8.710263,
     "lon": 115.254497,
     "display_name": "Bar, Jalan Sudamala, Sanur Kauh, Denpasar Selatan, Denpasar, Bali, Kepulauan Nusa Tenggara, 80227, Indonesia"
+  },
+  "barcelona airport, barcelona, spain": {
+    "lat": 41.296944,
+    "lon": 2.079047,
+    "display_name": "Aeroport Barcelona - el Prat Josep Tarradellas, Carretera d'accés a l'Aeroport, Vinyets i Molí Vell, Sant Boi de Llobregat, Baix Llobregat, Barcelona, Catalunya, 08840, España"
   }
 }
