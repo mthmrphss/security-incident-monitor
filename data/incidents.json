@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-21T14:11:51.654762+00:00",
-    "total_incidents": 195,
+    "last_updated": "2026-07-23T03:31:45.819511+00:00",
+    "total_incidents": 196,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-22",
+      "publish_date": "2026-07-22",
+      "country": "United States",
+      "country_code": "US",
+      "city": "New York",
+      "location_detail": "near LaGuardia Airport",
+      "airport_name": "LaGuardia Airport",
+      "airport_iata": "LGA",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "LaGuardia Tower alerts pilots to possible missile threat",
+      "summary_tr": "LaGuardia Kulesi pilotlara olası füze tehdidine karşı uyarıda bulunuyor",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "LaGuardia Airport",
+        "missile threat",
+        "airport security"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-22",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxPN1FWNEJyWFgtV3Q1anpHdHk4ZklpSVNybnp0VkNfRGtiNXJmSVl4ZFl0OHVtaDZoUXVrd2UwZmdYYXZaZHZFeTdLZjVTeHFwMi1MYXhkVW9ZaDNhQldmeGdDWVh1NXNDZzAwdTk1c2FSeHlrYlFkbnJpZjYxd2RpYmI5ckpmc1ZSWE9oWFgzMER1Ujc1RjdfZXZhM0RtbnNnUmtPTDVvZHRFcjVGOTZBS2FjeUw1dDdtNmhnaw?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 40.775714,
+      "geo_lon": -73.873364,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "bf09bb631afe",
+      "created_at": "2026-07-23T03:31:45.819494+00:00",
+      "last_updated": "2026-07-23T03:31:45.819506+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-21",
