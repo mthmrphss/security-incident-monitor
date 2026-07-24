@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-24T03:26:18.941079+00:00",
+    "last_updated": "2026-07-24T19:42:47.421421+00:00",
     "total_incidents": 198,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -36,8 +36,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Bomb threat sparks investigation",
-      "summary_tr": "Bombalı tehdit soruşturma başlatıyor",
+      "summary_en": "Bomb threat at airport, no explosives found",
+      "summary_tr": "Havalimanında bomba tehdidi, patlayıcı bulunamadı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -51,6 +51,7 @@
       "date": "2026-07-23",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRGREbV9TYXg0M1hZTmhVUFdnRUtwMlJLbG1nZS1Rd0ZTd1JhTFdhb1dHTHNhWkY0c2hTZ0t2ME1KS216MjlBQVJWZnJnVmt1OTBJSS16Mm9qT0hwUkhIMDdibHVpN2RmeHJZNjhPUy1GX09XdmdXU1YtbG5GeEN4QTMtLV9YYmZmODRlbF9qUFI2UkJEcnBYU2I4TVZyVGtzZFdOcm10ckxtYzJIZmhUZkJOcjlEcnFZa0ZidW56d3JIXy1Qbk4xMmo3N1ZESlHSAboBQVVfeXFMT0ZqVkg5clEyOHJRaTRrdHd4V3ZWSVM0cjNtWDVTVm5QOVQwR1RTaWgxVkFETEF1Q05fbXlOdHVBNGNSZzJENk90R1RCYnVxN18wWWw3M01XU2tIVjJEQ29xUTRsMzZrWEJoQ3owVFgzVjRUV3NQcVlhTE5MLVB4Qjc0UTBwSS1LZWpYYWMyTHFzblZMU3JyT1daV1RNNTRYcC1RZHdicFU4UExyNkdGUlJOVG5qU3h1UkJR?oc=5",
         "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdy1ucEF4Z2JaR0pwU2FiSUtiMGwwcDJNakp4UmxFSTdQdGZhdndKSmFIaWFBQ1Vub1IyYmtKTHVjRkIzR2xFVG13T2RFM0lwV3ZaMzRBcWFRb3VYTUt6ME5Jd3UtV2VlTURaSXBhVkZsR0NMMHRGQjJ5N2RpMFA1QUZ0NA?oc=5"
       ],
       "source_articles": [
@@ -73,8 +74,8 @@
       "verification_score": 1.0,
       "id": "14cfdf24bcaf",
       "created_at": "2026-07-23T19:32:28.465235+00:00",
-      "last_updated": "2026-07-23T19:32:28.465247+00:00",
-      "source_count": 1
+      "last_updated": "2026-07-24T19:42:47.421289",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
