@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-25T03:24:15.455272+00:00",
-    "total_incidents": 200,
+    "last_updated": "2026-07-25T08:20:15.505589+00:00",
+    "total_incidents": 201,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-25",
+      "publish_date": "2026-07-25",
+      "country": "Romania",
+      "country_code": "RO",
+      "city": "Sfântu Gheorghe",
+      "location_detail": "10 km west of the locality of Sfântu Gheorghe (Delta)",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": null,
+      "attack_type": "drone",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Drone shot down in Romanian airspace",
+      "summary_tr": "Romanya hava sahasında drone düşürüldü",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone",
+        "Romanian airspace"
+      ],
+      "date": "2026-07-25",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/clashreport/status/2080925187092935044#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 46.45355,
+      "geo_lon": 24.265935,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "f8b960726f32",
+      "created_at": "2026-07-25T08:20:15.505559+00:00",
+      "last_updated": "2026-07-25T08:20:15.505583+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-24",
