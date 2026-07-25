@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-24T19:42:47.421421+00:00",
-    "total_incidents": 198,
+    "last_updated": "2026-07-25T03:24:15.455272+00:00",
+    "total_incidents": 200,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,120 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-07-24",
+      "publish_date": "2026-07-24",
+      "country": "Yemen",
+      "country_code": "YE",
+      "city": "unknown",
+      "location_detail": "unknown",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "other",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Yemen and Saudi Arabia exchange airport attacks",
+      "summary_tr": "Yemen ve Suudi Arabistan havalimanı saldırıları ile karşılık verdi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport attack",
+        "Yemen",
+        "Saudi Arabia"
+      ],
+      "data_quality": "low",
+      "date": "2026-07-24",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVVNWOTUxM0tjUUFCc3dwZmxMRThwbFU1TDNrbDcwN3ZpWExFb2tGYk5OemdlanBSRHJzMUc1eDZKZm9kRG5oWlFGY0pFNm9zeVl2YlZvSHgtZGJzQ2xSTk50d1ZaN1A2RXctQ0RNQ0dxZGpPTlZsWTZEZkM2d0RYajNuQWZMRl9jN3QtSkJRTUF3TDMxU3E4?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 16.347124,
+      "geo_lon": 47.891527,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "cdef3d582a41",
+      "created_at": "2026-07-25T03:24:15.455226+00:00",
+      "last_updated": "2026-07-25T03:24:15.455238+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-07-24",
+      "publish_date": "2026-07-24",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Washington",
+      "location_detail": "Waldorf Astoria",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": "Waldorf Astoria",
+      "venue_name": "Washington Hilton",
+      "attack_type": "shooting",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Cole Allen",
+      "summary_en": "Shooting at White House Correspondents' Dinner",
+      "summary_tr": "Beyaz Saray Muhabirleri Dîneri'nde silahlı saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "White House Correspondents' Dinner",
+        "Waldorf Astoria",
+        "shooting"
+      ],
+      "date": "2026-07-24",
+      "year": 2026,
+      "source_urls": [
+        "https://cbs6albany.com/news/nation-world/white-house-correspondents-dinner-to-honor-secret-service-hotel-staff-after-shooting-president-trump-cole-allen-waldorf-astoria"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 38.894118,
+      "geo_lon": -77.027563,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "093d9afa81a6",
+      "created_at": "2026-07-25T03:24:15.455263+00:00",
+      "last_updated": "2026-07-25T03:24:15.455266+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-07-23",
@@ -52,6 +166,7 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRGREbV9TYXg0M1hZTmhVUFdnRUtwMlJLbG1nZS1Rd0ZTd1JhTFdhb1dHTHNhWkY0c2hTZ0t2ME1KS216MjlBQVJWZnJnVmt1OTBJSS16Mm9qT0hwUkhIMDdibHVpN2RmeHJZNjhPUy1GX09XdmdXU1YtbG5GeEN4QTMtLV9YYmZmODRlbF9qUFI2UkJEcnBYU2I4TVZyVGtzZFdOcm10ckxtYzJIZmhUZkJOcjlEcnFZa0ZidW56d3JIXy1Qbk4xMmo3N1ZESlHSAboBQVVfeXFMT0ZqVkg5clEyOHJRaTRrdHd4V3ZWSVM0cjNtWDVTVm5QOVQwR1RTaWgxVkFETEF1Q05fbXlOdHVBNGNSZzJENk90R1RCYnVxN18wWWw3M01XU2tIVjJEQ29xUTRsMzZrWEJoQ3owVFgzVjRUV3NQcVlhTE5MLVB4Qjc0UTBwSS1LZWpYYWMyTHFzblZMU3JyT1daV1RNNTRYcC1RZHdicFU4UExyNkdGUlJOVG5qU3h1UkJR?oc=5",
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxOSHFwa0lFRWlPVzg4YzcwRUJKZVpoMTFMbTJDZ2RZYzNNTDY1a1Q3LXJ6Si12WDB4Z2g1T0xiR1dZMk15aERBSS03SjJRbVBPNmE4QndRc2ltX29GRjFDZ2VDQTlnbWphMUtObDhLX3VGZXZXVEpQWlIzOHBvYUNPeF9TVWxBWC1kZmczRkFuajVzNFdUV2FjVTh5Z0RyRkU2TS05N1dIM3JLSXlIcGdzQ1I5UnVteWJ6Q1BqY0tKS1JibXhkUm14Ykc4N21Fclk?oc=5",
         "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdy1ucEF4Z2JaR0pwU2FiSUtiMGwwcDJNakp4UmxFSTdQdGZhdndKSmFIaWFBQ1Vub1IyYmtKTHVjRkIzR2xFVG13T2RFM0lwV3ZaMzRBcWFRb3VYTUt6ME5Jd3UtV2VlTURaSXBhVkZsR0NMMHRGQjJ5N2RpMFA1QUZ0NA?oc=5"
       ],
       "source_articles": [
@@ -74,8 +189,8 @@
       "verification_score": 1.0,
       "id": "14cfdf24bcaf",
       "created_at": "2026-07-23T19:32:28.465235+00:00",
-      "last_updated": "2026-07-24T19:42:47.421289",
-      "source_count": 2
+      "last_updated": "2026-07-25T03:24:15.400840",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",

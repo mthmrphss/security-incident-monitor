@@ -1203,5 +1203,10 @@
     "lat": 40.125181,
     "lon": -84.582097,
     "display_name": "Trump Airport, Kruckeberg Road, Darke County, Ohio, 45331, United States"
+  },
+  "waldorf astoria, washington, united states": {
+    "lat": 38.894118,
+    "lon": -77.027563,
+    "display_name": "Waldorf Astoria Washington DC, 1100, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20004, United States"
   }
 }
