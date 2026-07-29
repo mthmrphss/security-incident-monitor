@@ -1213,5 +1213,15 @@
     "lat": 46.45355,
     "lon": 24.265935,
     "display_name": "Sfântu Gheorghe, Iernut, Mureș, 545108, România"
+  },
+  "washington dc, united states": {
+    "lat": 38.895098,
+    "lon": -77.036385,
+    "display_name": "Washington, District of Columbia, United States"
+  },
+  "washington, dc, united states": {
+    "lat": 38.895098,
+    "lon": -77.036385,
+    "display_name": "Washington, District of Columbia, United States"
   }
 }
