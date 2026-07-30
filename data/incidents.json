@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-29T08:51:32.951106+00:00",
-    "total_incidents": 204,
+    "last_updated": "2026-07-30T02:51:08.965305+00:00",
+    "total_incidents": 205,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-07-30",
+      "publish_date": "2026-07-30",
+      "country": "Bulgaria",
+      "country_code": "BG",
+      "city": "Sunny Beach",
+      "location_detail": "an alley",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "hotel",
+      "attack_type": "assault",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "British tourists",
+      "summary_en": "Israeli tourists attacked",
+      "summary_tr": "İsrail turistlerine saldırı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "tourist attack",
+        "Sunny Beach"
+      ],
+      "date": "2026-07-30",
+      "year": 2026,
+      "source_urls": [
+        "https://www.theyeshivaworld.com/news/israel-news/2580476/bulgaria-attack-israeli-tourists-report-violent-assault-families-say-they-are-trapped-in-hotel.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 42.687606,
+      "geo_lon": 27.712591,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "d6b3e66d5ef2",
+      "created_at": "2026-07-30T02:51:08.965289+00:00",
+      "last_updated": "2026-07-30T02:51:08.965299+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-07-29",

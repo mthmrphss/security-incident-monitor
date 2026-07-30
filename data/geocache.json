@@ -1223,5 +1223,10 @@
     "lat": 38.895098,
     "lon": -77.036385,
     "display_name": "Washington, District of Columbia, United States"
+  },
+  "sunny beach, bulgaria": {
+    "lat": 42.687606,
+    "lon": 27.712591,
+    "display_name": "Sunny Beach, кв. Фрегата, Несебър, Бургас, България"
   }
 }
