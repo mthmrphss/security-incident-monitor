@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-07-30T02:51:08.965305+00:00",
-    "total_incidents": 205,
+    "last_updated": "2026-08-03T19:52:07.326707+00:00",
+    "total_incidents": 206,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-03",
+      "publish_date": "2026-08-03",
+      "country": "Russia",
+      "country_code": "RU",
+      "city": "unknown",
+      "location_detail": "busy beach in southern Russia",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "beach",
+      "attack_type": "drone",
+      "severity": "high",
+      "casualties_dead": 7,
+      "casualties_injured": 40,
+      "perpetrator": "Ukrainian",
+      "summary_en": "Drone hits beach in Russia",
+      "summary_tr": "Rusya'da dron plajı vurdu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone attack",
+        "Russia",
+        "Ukraine"
+      ],
+      "date": "2026-08-03",
+      "year": 2026,
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cr7kmnyrdn7o?at_medium=RSS&at_campaign=rss"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 54.07198,
+      "geo_lon": 61.526507,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.9,
+      "verification_status": "verified",
+      "verification_score": 0.9,
+      "id": "6956979f7b50",
+      "created_at": "2026-08-03T19:52:07.326690+00:00",
+      "last_updated": "2026-08-03T19:52:07.326702+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-07-30",
