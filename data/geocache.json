@@ -1243,5 +1243,10 @@
     "lat": -8.742014,
     "lon": 115.163694,
     "display_name": "Bandara Ngurah Rai, Jalan Bus Parking Lot, Tuban, Kuta, Badung, Bali, Kepulauan Nusa Tenggara, 80361, Indonesia"
+  },
+  "aden airport, aden, yemen": {
+    "lat": 12.829543,
+    "lon": 45.031552,
+    "display_name": "مطار عدن الدولي, خط المملاح, حي النصر, مديرية خور مكسر, مدينة عدن, محافظة عدن, اليمن"
   }
 }
