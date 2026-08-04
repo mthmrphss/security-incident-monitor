@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-03T19:52:07.326707+00:00",
-    "total_incidents": 206,
+    "last_updated": "2026-08-04T03:19:46.012061+00:00",
+    "total_incidents": 207,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -74,6 +74,63 @@
       "id": "6956979f7b50",
       "created_at": "2026-08-03T19:52:07.326690+00:00",
       "last_updated": "2026-08-03T19:52:07.326702+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-02",
+      "publish_date": "2026-08-02",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "Reading",
+      "location_detail": "unknown",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "shooting",
+      "severity": "critical",
+      "casualties_dead": 1,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Man arrested at airport after fatal shooting",
+      "summary_tr": "Öldürücü silahlı saldırı sonrası havalimanında bir kişi tutuklandı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "shooting",
+        "arrest",
+        "airport"
+      ],
+      "date": "2026-08-02",
+      "year": 2026,
+      "source_urls": [
+        "https://www.mdjonline.com/extra/news/police-reading-man-arrested-at-airport-trying-to-flee-to-dominican-republic-after-fatal-shooting/article_63dd35ad-cd2c-525b-a908-171c69408820.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 51.456424,
+      "geo_lon": -0.970066,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.85,
+      "verification_status": "verified",
+      "verification_score": 0.85,
+      "id": "a830d09e256d",
+      "created_at": "2026-08-04T03:19:46.012048+00:00",
+      "last_updated": "2026-08-04T03:19:46.012057+00:00",
       "source_count": 1
     },
     {
