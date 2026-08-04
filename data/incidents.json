@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-04T03:19:46.012061+00:00",
-    "total_incidents": 207,
+    "last_updated": "2026-08-04T08:49:12.251300+00:00",
+    "total_incidents": 208,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-04",
+      "publish_date": "2026-08-04",
+      "country": "Indonesia",
+      "country_code": "ID",
+      "city": "Bali",
+      "location_detail": "Ngurah Rai Airport",
+      "airport_name": "Ngurah Rai Airport",
+      "airport_iata": "DPS",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat at Ngurah Rai Airport",
+      "summary_tr": "Ngurah Rai Havalimanı'nda bomba tehdidi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "bomb threat",
+        "airport security"
+      ],
+      "data_quality": "low",
+      "date": "2026-08-04",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaG5WVk5FU0lFQ01vZUhCMzRmSk9ZaWg2VkVZVzJQQnpCRVcwVEFZOUVJY1h4RXJYdndFOGVnbmNuRjR0dVl2ZktZNUFpVTZBT2pJUmh5RG1MTWRlWkdoU0pCS05vSEVlT1RsbWx2cjlLNTljRzd3dmpTNkpFWXJGVThsMlVKcjA?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": -8.742014,
+      "geo_lon": 115.163694,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "8fe35977aef2",
+      "created_at": "2026-08-04T08:49:12.251285+00:00",
+      "last_updated": "2026-08-04T08:49:12.251295+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-08-03",

@@ -1238,5 +1238,10 @@
     "lat": 51.456424,
     "lon": -0.970066,
     "display_name": "Reading, England, United Kingdom"
+  },
+  "ngurah rai airport, bali, indonesia": {
+    "lat": -8.742014,
+    "lon": 115.163694,
+    "display_name": "Bandara Ngurah Rai, Jalan Bus Parking Lot, Tuban, Kuta, Badung, Bali, Kepulauan Nusa Tenggara, 80361, Indonesia"
   }
 }
