@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-05T03:01:55.123136+00:00",
-    "total_incidents": 209,
+    "last_updated": "2026-08-05T14:27:41.735462+00:00",
+    "total_incidents": 210,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,64 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-05",
+      "publish_date": "2026-08-05",
+      "country": "Germany",
+      "country_code": "DE",
+      "city": "Leipzig",
+      "location_detail": "tarmac",
+      "airport_name": "Leipzig/Halle Airport",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Drone with IED found at Leipzig/Halle Airport",
+      "summary_tr": "Leipzig/Halle Havalimanı'nda IED ile donatılmış drone bulundu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone",
+        "IED",
+        "airport security"
+      ],
+      "date": "2026-08-05",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5",
+        "https://x.com/clashreport/status/2084981788087070896#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 51.340632,
+      "geo_lon": 12.374733,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 2,
+      "last_updated": "2026-08-05T14:27:41.735455+00:00",
+      "id": "41ee5e03a26d",
+      "created_at": "2026-08-05T14:27:41.735444+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-08-04",

@@ -1253,5 +1253,15 @@
     "lat": 25.624262,
     "lon": 42.352833,
     "display_name": "السعودية"
+  },
+  "leipzig, germany": {
+    "lat": 51.340632,
+    "lon": 12.374733,
+    "display_name": "Leipzig, Sachsen, Deutschland"
+  },
+  "germany": {
+    "lat": 51.163818,
+    "lon": 10.447831,
+    "display_name": "Deutschland"
   }
 }
