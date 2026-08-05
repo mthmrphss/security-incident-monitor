@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-04T19:49:12.458096+00:00",
+    "last_updated": "2026-08-05T03:01:55.123136+00:00",
     "total_incidents": 209,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -92,8 +92,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "Houthis",
-      "summary_en": "Houthis attacked Saudi airport",
-      "summary_tr": "Houthis Suudi havalimanına saldırdı",
+      "summary_en": "Service suspended at Saudi airport",
+      "summary_tr": "Suudi havalimanında hizmet durduruldu",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -106,7 +106,8 @@
       "date": "2026-08-04",
       "year": 2026,
       "source_urls": [
-        "https://www.thehindu.com/news/international/service-suspended-at-a-saudi-airport-after-attack-claimed-by-houthis/article71306733.ece"
+        "https://www.thehindu.com/news/international/service-suspended-at-a-saudi-airport-after-attack-claimed-by-houthis/article71306733.ece",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ0JUajdHam9UQ0dMWEVJc1NPdDdYNjg2UjFtZ2d2YTFMLXp6MnVheVA5NEpIQmstLWVpSWlFVTBEZGNpU1ZRMVJQeDRKUzl2b0x6ZEdFb3EzWWQybjZaQ1lkTnJZWHllcE9qSzJYUG5MdlNVYVpZRXdaaDNQQVJoVkxBQzhBZm5iN1JwWldndm1hOVdPLUNDM005NG1FRU5K0gGmAUFVX3lxTE5mWGFNQmkwUTNHRnR5ekltVmdRZEsyWGdxdFdHR1QxTG12NVA0b3hKNTd2TVdNOHF5RGx0TWtwTWtZVUhVTnduNmNIbnZOODdCME5MTUFGaWxoWjM1azcta2xON1hydF96ZUY0WVhJNTBsSzMzVUtEWV9ydFRuRDg2QmZONnc3ODNuVVFWaVhvcmJfSUVvd0VxdURsMFdFczRyLUlYNGc?oc=5"
       ],
       "source_articles": [
         0
@@ -129,8 +130,8 @@
       "verification_score": 0.9,
       "id": "fe3207dcc321",
       "created_at": "2026-08-04T19:49:12.458073+00:00",
-      "last_updated": "2026-08-04T19:49:12.458088+00:00",
-      "source_count": 1
+      "last_updated": "2026-08-05T03:01:55.122986",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
