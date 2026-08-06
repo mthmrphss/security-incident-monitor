@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-05T19:48:31.775543+00:00",
-    "total_incidents": 210,
+    "last_updated": "2026-08-06T03:18:57.294570+00:00",
+    "total_incidents": 211,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -50,8 +50,9 @@
       "date": "2026-08-05",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5",
         "https://elpais.com/internacional/2026-08-05/la-policia-alemana-desactiva-un-dron-bomba-que-cayo-junto-a-un-avion-de-carga-ucranio-en-el-aeropuerto-de-leipzig.html",
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYVFMbDhrbnVEWDhpTjdDUVdFU3B1QmVDbmpXMm1xUFdzNkV4R0JOelp3Y25UaFZXYzg4b3MzVHJqdVFfcEJVd3JnT000SnZ3WkdOU1hoR2ozcTZTSG9laHdBVHVSTmxXN29od0lSV0FZczFxVFNRSHJsemlYcnJ2aTdldVhfR05NRGtSWWhOTWZrb1ktSmF0MGtpLU83cDBKempNQzhuQjZpSlI3T2hWS0ZBN0huaVNpRXRJ?oc=5",
         "https://x.com/clashreport/status/2084981788087070896#m"
       ],
       "source_articles": [
@@ -73,10 +74,67 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 3,
-      "last_updated": "2026-08-05T19:48:31.775394",
+      "source_count": 4,
+      "last_updated": "2026-08-06T03:18:57.270135",
       "id": "41ee5e03a26d",
       "created_at": "2026-08-05T14:27:41.735444+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-05",
+      "publish_date": "2026-08-05",
+      "country": "Germany",
+      "country_code": "DE",
+      "city": "unknown",
+      "location_detail": "German airport",
+      "airport_name": "unknown",
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb robot deployed after explosive drone found",
+      "summary_tr": "Patlayıcı drone bulunması üzerine bomba robotu devreye girdi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "explosive drone",
+        "German airport",
+        "bomb robot"
+      ],
+      "data_quality": "low",
+      "date": "2026-08-05",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNLVZzR2dGSXc5dmx5Y2IzTlM5aHJXTHFQdU5hXzBiQXZRVmdUc1FRdXRVT1RnTEJscnFpTkxXTWc0Z3JrZnkyWDJpRDFTYTgzRUY5VWRyaHhMWjE1X0dodm5xUUZUeVNzUE5XakFwMGVUZGNjVURBNUpHWjZsTlZSTzNHb3p1RWZmREEzU3RJN1IxTXN2aE5DaUFHWGlDZDlCLWNsV3dkVGdtUjhtc2xQMlNkVnJGeEhxTzBaOXFKckZqQ3pCcDhsWmtXb0RkaUgtOWVaTS0yOVVFUlV3bnc1X2g3NA?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 51.163818,
+      "geo_lon": 10.447831,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "2dd5a358d63f",
+      "created_at": "2026-08-06T03:18:57.294552+00:00",
+      "last_updated": "2026-08-06T03:18:57.294563+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -151,8 +209,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "Houthis",
-      "summary_en": "Service suspended at Saudi airport",
-      "summary_tr": "Suudi havalimanında hizmet durduruldu",
+      "summary_en": "Houthis attacked Saudi airport and tanker",
+      "summary_tr": "Houthis Suudi havalimanına ve bir tankere saldırdı",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -166,7 +224,8 @@
       "year": 2026,
       "source_urls": [
         "https://www.thehindu.com/news/international/service-suspended-at-a-saudi-airport-after-attack-claimed-by-houthis/article71306733.ece",
-        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ0JUajdHam9UQ0dMWEVJc1NPdDdYNjg2UjFtZ2d2YTFMLXp6MnVheVA5NEpIQmstLWVpSWlFVTBEZGNpU1ZRMVJQeDRKUzl2b0x6ZEdFb3EzWWQybjZaQ1lkTnJZWHllcE9qSzJYUG5MdlNVYVpZRXdaaDNQQVJoVkxBQzhBZm5iN1JwWldndm1hOVdPLUNDM005NG1FRU5K0gGmAUFVX3lxTE5mWGFNQmkwUTNHRnR5ekltVmdRZEsyWGdxdFdHR1QxTG12NVA0b3hKNTd2TVdNOHF5RGx0TWtwTWtZVUhVTnduNmNIbnZOODdCME5MTUFGaWxoWjM1azcta2xON1hydF96ZUY0WVhJNTBsSzMzVUtEWV9ydFRuRDg2QmZONnc3ODNuVVFWaVhvcmJfSUVvd0VxdURsMFdFczRyLUlYNGc?oc=5"
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ0JUajdHam9UQ0dMWEVJc1NPdDdYNjg2UjFtZ2d2YTFMLXp6MnVheVA5NEpIQmstLWVpSWlFVTBEZGNpU1ZRMVJQeDRKUzl2b0x6ZEdFb3EzWWQybjZaQ1lkTnJZWHllcE9qSzJYUG5MdlNVYVpZRXdaaDNQQVJoVkxBQzhBZm5iN1JwWldndm1hOVdPLUNDM005NG1FRU5K0gGmAUFVX3lxTE5mWGFNQmkwUTNHRnR5ekltVmdRZEsyWGdxdFdHR1QxTG12NVA0b3hKNTd2TVdNOHF5RGx0TWtwTWtZVUhVTnduNmNIbnZOODdCME5MTUFGaWxoWjM1azcta2xON1hydF96ZUY0WVhJNTBsSzMzVUtEWV9ydFRuRDg2QmZONnc3ODNuVVFWaVhvcmJfSUVvd0VxdURsMFdFczRyLUlYNGc?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQXJHS3g3U3loeXFWX015WXlybmxZb01xTVdQRHpseEEwalFJa3hJbnIwZmRRcENxaVVaYUJGZEVKelcxRUhlb29JM3czaXdIMFI4eHJNRkljWXNKYWZqRlkyZExDZGQ2TlNxeTFwbDh6TzRVdXRtUVctZmdrNzVRb1BGZklGQ1FhbkJIc2ZmM3RWeGt5clZSYkQyRzl5UUNkZ3BUams4QTNjVnVxbF91dDY4QTlJckk?oc=5"
       ],
       "source_articles": [
         0
@@ -189,8 +248,8 @@
       "verification_score": 0.9,
       "id": "fe3207dcc321",
       "created_at": "2026-08-04T19:49:12.458073+00:00",
-      "last_updated": "2026-08-05T03:01:55.122986",
-      "source_count": 2
+      "last_updated": "2026-08-06T03:18:57.294391",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
