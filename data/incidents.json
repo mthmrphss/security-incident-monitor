@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-07T13:21:33.976380+00:00",
+    "last_updated": "2026-08-07T19:09:54.858249+00:00",
     "total_incidents": 212,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -110,14 +110,15 @@
       "date": "2026-08-05",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMUR6alFsdWszNEFaYjN6QlFEbjFuVGlPSGw4MWh0eEtvNUJaTmppakFMbTNSdEt1dUVtczhsX01sY3JTeUFEMzZIak92TnFBbGpkNHVMN1JzYjdWaDRyQXNlUXA3NURiV1NDcW1qbklhSTBIdnFnbV9oUHZEVi1Kck9xVQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaGdQaVFpVEpoNGQ1MUNuRU5NcUh1aXA0TGNsT19iQU1qYWFYaEx5R2M5Q1NDWWs4N0QxUWJNTmgtb1FBRk93cThvN1hCaUJMLThHd3NuWGoyc2ozUUhPNVRVY01ndGJzTEZUNms5WF9pbWpVZjQxT2xTc0xfczZTNko1Vkk4WVVNY2dHZGZCVjBiMmhqZTJCLUsydDFaVDVmbXQ1Q3pRNzZ4U19RNy1WdXdLUQ?oc=5",
+        "https://www.wutc.org/2026-08-06/drone-with-explosives-found-at-german-airport-official-sees-new-quality-of-threat",
         "https://x.com/clashreport/status/2084981788087070896#m",
         "https://elpais.com/internacional/2026-08-05/la-policia-alemana-desactiva-un-dron-bomba-que-cayo-junto-a-un-avion-de-carga-ucranio-en-el-aeropuerto-de-leipzig.html",
-        "https://www.wutc.org/2026-08-06/drone-with-explosives-found-at-german-airport-official-sees-new-quality-of-threat",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYVFMbDhrbnVEWDhpTjdDUVdFU3B1QmVDbmpXMm1xUFdzNkV4R0JOelp3Y25UaFZXYzg4b3MzVHJqdVFfcEJVd3JnT000SnZ3WkdOU1hoR2ozcTZTSG9laHdBVHVSTmxXN29od0lSV0FZczFxVFNRSHJsemlYcnJ2aTdldVhfR05NRGtSWWhOTWZrb1ktSmF0MGtpLU83cDBKempNQzhuQjZpSlI3T2hWS0ZBN0huaVNpRXRJ?oc=5",
         "https://www.bbc.co.uk/news/articles/ckgdmrxxkdxo?at_medium=RSS&at_campaign=rss",
         "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU01ZcklNOUtndFN3SHBCdzVVVEJpSFBxNTlHZVRoYklwV3MzYmk2Sk5UNGdEYmloeUNnTFRob3V5TFlYY1hPSGV2dUhleGlUY1hIblRxSDh0ZzJUVk1zZW05aFRZdy1NdEhBaDVzbEp6bXJidldqSzl6YWhHSWlrWTliNFVVdFhZNkIxWWJNcTBHWWU2TzFnMzJDSHNuME55MzFjNFFlNA?oc=5",
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYVFMbDhrbnVEWDhpTjdDUVdFU3B1QmVDbmpXMm1xUFdzNkV4R0JOelp3Y25UaFZXYzg4b3MzVHJqdVFfcEJVd3JnT000SnZ3WkdOU1hoR2ozcTZTSG9laHdBVHVSTmxXN29od0lSV0FZczFxVFNRSHJsemlYcnJ2aTdldVhfR05NRGtSWWhOTWZrb1ktSmF0MGtpLU83cDBKempNQzhuQjZpSlI3T2hWS0ZBN0huaVNpRXRJ?oc=5",
-        "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMUR6alFsdWszNEFaYjN6QlFEbjFuVGlPSGw4MWh0eEtvNUJaTmppakFMbTNSdEt1dUVtczhsX01sY3JTeUFEMzZIak92TnFBbGpkNHVMN1JzYjdWaDRyQXNlUXA3NURiV1NDcW1qbklhSTBIdnFnbV9oUHZEVi1Kck9xVQ?oc=5"
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5"
       ],
       "source_articles": [
         0
@@ -138,8 +139,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 8,
-      "last_updated": "2026-08-07T13:21:33.976210",
+      "source_count": 9,
+      "last_updated": "2026-08-07T19:09:54.857544",
       "id": "41ee5e03a26d",
       "created_at": "2026-08-05T14:27:41.735444+00:00"
     },
@@ -176,7 +177,8 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNLVZzR2dGSXc5dmx5Y2IzTlM5aHJXTHFQdU5hXzBiQXZRVmdUc1FRdXRVT1RnTEJscnFpTkxXTWc0Z3JrZnkyWDJpRDFTYTgzRUY5VWRyaHhMWjE1X0dodm5xUUZUeVNzUE5XakFwMGVUZGNjVURBNUpHWjZsTlZSTzNHb3p1RWZmREEzU3RJN1IxTXN2aE5DaUFHWGlDZDlCLWNsV3dkVGdtUjhtc2xQMlNkVnJGeEhxTzBaOXFKckZqQ3pCcDhsWmtXb0RkaUgtOWVaTS0yOVVFUlV3bnc1X2g3NA?oc=5",
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPM3FUbVJzeGVOVHMyc1A2cjg0cFFSSDFOaTZwRHFNTkFkLUw4TUF4ZVVNZzBEZzNJeU1JR0lBUjVSNDRlN2psRTV6dS1DWm12RGk2bkVMWlA3RERjaElzSDZIUjRncTRZQkxwZzBuelZVWktwQ0stbUUyZVBpU25MQjhnVllZV2VPWjd5by01d25Cd0oyWFk3VmpxVkVSWU55MkZIWDBoX29QZzQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPM3FUbVJzeGVOVHMyc1A2cjg0cFFSSDFOaTZwRHFNTkFkLUw4TUF4ZVVNZzBEZzNJeU1JR0lBUjVSNDRlN2psRTV6dS1DWm12RGk2bkVMWlA3RERjaElzSDZIUjRncTRZQkxwZzBuelZVWktwQ0stbUUyZVBpU25MQjhnVllZV2VPWjd5by01d25Cd0oyWFk3VmpxVkVSWU55MkZIWDBoX29QZzQ?oc=5",
+        "https://www.reddit.com/r/worldnews/comments/1vi422q/bus_driver_kicked_explosive_drone_out_of_air_at/"
       ],
       "source_articles": [
         0
@@ -198,8 +200,8 @@
       "verification_score": 0.75,
       "id": "2dd5a358d63f",
       "created_at": "2026-08-06T03:18:57.294552+00:00",
-      "last_updated": "2026-08-06T14:28:47.473989",
-      "source_count": 2
+      "last_updated": "2026-08-07T19:09:54.858085",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
