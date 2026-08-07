@@ -1268,5 +1268,20 @@
     "lat": 52.517389,
     "lon": 13.395131,
     "display_name": "Berlin, Deutschland"
+  },
+  "bush airport": {
+    "lat": 36.842635,
+    "lon": -80.238382,
+    "display_name": "Bush Airport, Woods Gap Road, Patrick County, Virginia, United States"
+  },
+  "bush airport, houston, united states": {
+    "lat": 29.984142,
+    "lon": -95.332986,
+    "display_name": "George Bush Intercontinental Airport - Houston, 2800, North Terminal Road, Houston, Harris County, Texas, 77066, United States"
+  },
+  "houston airport, houston, united states": {
+    "lat": 29.984142,
+    "lon": -95.332986,
+    "display_name": "George Bush Intercontinental Airport - Houston, 2800, North Terminal Road, Houston, Harris County, Texas, 77066, United States"
   }
 }

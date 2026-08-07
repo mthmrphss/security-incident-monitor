@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-06T14:28:47.474142+00:00",
-    "total_incidents": 211,
+    "last_updated": "2026-08-07T00:13:11.278977+00:00",
+    "total_incidents": 212,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,65 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-06",
+      "publish_date": "2026-08-06",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Houston",
+      "location_detail": "Bush Airport",
+      "airport_name": "Bush Airport",
+      "airport_iata": "IAH",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "woman",
+      "summary_en": "Passenger removed from flight after verbal bomb threat",
+      "summary_tr": "Sözlü bomba tehdidi nedeniyle yolcudan uçaktan indirildi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat"
+      ],
+      "data_quality": "low",
+      "date": "2026-08-06",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOc3prdXB2d2JsS1A3X1g2Q3VFb3hQdHhtY3IyUFpRemNNWkp3MExYVUV1RVE3b3NFb3VHOV9wSEs1ZS10MU9yMlJVOWhCM213M3Y4ZFJkc0hsV3EwLTIxaVlOOEtnYk1BV085TVVxVC1ZSDNoM0xBYmlIM2lxZGZuMzh5VGwyaWRxekJ2MU9qc1ZlWWN2R2JRcmltQk9pU0xBT0IzUlNzY0NGQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNakxQdEZjMVM4YXp0bkdMdWlGVFN5eGhXWHJrWm5lOHFMTEFsMmZUM2dmQXdaUkE1UDBiVmtYaU1DeGVOZi1QbW1vLWtpSnZYUnAtTWlISUJ5OFZNcEtzTWw3dUZ1aE1Ma0Uwa3kzZkVFTzFmbnNKZWlZZ201OHhEUkR4NHZvcXRJYnlvRlY5NHF2UGh4V1pock5lSHQ4WmVYMEFKMi1NdmZvTE85NGhuYTA1VFlqc1BNMHp3LXZPQU9nMTVpYjlFN2JJdjVOZFVlUHBJMFppT2NXMDQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa2hoNjdicTdXR05BYnU4WHpSLUplNEhUSHY0LW1VOU1Wc1lQX1Fzd1U5eXQ0dGF0TFBTR1FLU0xWRWNWZ3NsVDNqV25adGVxZ0YyRzdmTzRCOVRjNlNpZXVyZTdiY280LVBoOEVFWEppYnY3dGUwZXRFM2RYTlp4ZGJoNWhDVzg4djlUQWlRdmpOaktoN3ZsZDBsMXUxUV81U3lRQ0VadFI?oc=5",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 36.842635,
+      "geo_lon": -80.238382,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "source_count": 4,
+      "last_updated": "2026-08-07T00:13:11.278971+00:00",
+      "id": "c8e3a4c15ec7",
+      "created_at": "2026-08-07T00:13:11.278962+00:00"
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-08-05",
@@ -170,6 +229,7 @@
       "date": "2026-08-04",
       "year": 2026,
       "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc3JGaGNRM0RZWmNyWnhrSU9mMzdQYU9GUFkxMEVpOHE1Ti1PUFRkUlk2U3Rza3RVcWoyV09IYWgteGUxclJOaTFDZEZJQ0IzNGNDSHVFeUp5SzhIZGUyTVd3WXdnNVdxbXAzY2o4cnBLMi1QcUFvR1BqVExQMU1Mb0N1MWZZa3hwWHhvS1JDcXdnMElNdWhINTFGRFFPQWlVNzJSNDNDTGlWZmFzUG5HeDBtQThDZDdKUDh1eDI5emk?oc=5",
         "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaG5WVk5FU0lFQ01vZUhCMzRmSk9ZaWg2VkVZVzJQQnpCRVcwVEFZOUVJY1h4RXJYdndFOGVnbmNuRjR0dVl2ZktZNUFpVTZBT2pJUmh5RG1MTWRlWkdoU0pCS05vSEVlT1RsbWx2cjlLNTljRzd3dmpTNkpFWXJGVThsMlVKcjA?oc=5"
       ],
       "source_articles": [
@@ -192,8 +252,8 @@
       "verification_score": 1.0,
       "id": "8fe35977aef2",
       "created_at": "2026-08-04T08:49:12.251285+00:00",
-      "last_updated": "2026-08-04T08:49:12.251295+00:00",
-      "source_count": 1
+      "last_updated": "2026-08-07T00:13:11.238512",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
