@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-07T00:13:11.278977+00:00",
+    "last_updated": "2026-08-07T07:27:07.298726+00:00",
     "total_incidents": 212,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -50,10 +50,11 @@
       "date": "2026-08-06",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOc3prdXB2d2JsS1A3X1g2Q3VFb3hQdHhtY3IyUFpRemNNWkp3MExYVUV1RVE3b3NFb3VHOV9wSEs1ZS10MU9yMlJVOWhCM213M3Y4ZFJkc0hsV3EwLTIxaVlOOEtnYk1BV085TVVxVC1ZSDNoM0xBYmlIM2lxZGZuMzh5VGwyaWRxekJ2MU9qc1ZlWWN2R2JRcmltQk9pU0xBT0IzUlNzY0NGQQ?oc=5",
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNakxQdEZjMVM4YXp0bkdMdWlGVFN5eGhXWHJrWm5lOHFMTEFsMmZUM2dmQXdaUkE1UDBiVmtYaU1DeGVOZi1QbW1vLWtpSnZYUnAtTWlISUJ5OFZNcEtzTWw3dUZ1aE1Ma0Uwa3kzZkVFTzFmbnNKZWlZZ201OHhEUkR4NHZvcXRJYnlvRlY5NHF2UGh4V1pock5lSHQ4WmVYMEFKMi1NdmZvTE85NGhuYTA1VFlqc1BNMHp3LXZPQU9nMTVpYjlFN2JJdjVOZFVlUHBJMFppT2NXMDQ?oc=5",
         "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa2hoNjdicTdXR05BYnU4WHpSLUplNEhUSHY0LW1VOU1Wc1lQX1Fzd1U5eXQ0dGF0TFBTR1FLU0xWRWNWZ3NsVDNqV25adGVxZ0YyRzdmTzRCOVRjNlNpZXVyZTdiY280LVBoOEVFWEppYnY3dGUwZXRFM2RYTlp4ZGJoNWhDVzg4djlUQWlRdmpOaktoN3ZsZDBsMXUxUV81U3lRQ0VadFI?oc=5",
-        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P?oc=5"
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P0gF6QVVfeXFMTVBJVDQ0RVhSUFJLbWtscUFJSGpEUWZjV0s4cDZXWkp4Q1U4eXdscHFaVm1YTWR4OExyVE5EODV6RmZBNXo0OExVWXNucWkzQTNsSVZoSllxeElmYTcyZ1hsQ3ZCOGRnSWpsSGRZYks2ZkVlOTR3NGhpRkE?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOc3prdXB2d2JsS1A3X1g2Q3VFb3hQdHhtY3IyUFpRemNNWkp3MExYVUV1RVE3b3NFb3VHOV9wSEs1ZS10MU9yMlJVOWhCM213M3Y4ZFJkc0hsV3EwLTIxaVlOOEtnYk1BV085TVVxVC1ZSDNoM0xBYmlIM2lxZGZuMzh5VGwyaWRxekJ2MU9qc1ZlWWN2R2JRcmltQk9pU0xBT0IzUlNzY0NGQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P?oc=5",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNakxQdEZjMVM4YXp0bkdMdWlGVFN5eGhXWHJrWm5lOHFMTEFsMmZUM2dmQXdaUkE1UDBiVmtYaU1DeGVOZi1QbW1vLWtpSnZYUnAtTWlISUJ5OFZNcEtzTWw3dUZ1aE1Ma0Uwa3kzZkVFTzFmbnNKZWlZZ201OHhEUkR4NHZvcXRJYnlvRlY5NHF2UGh4V1pock5lSHQ4WmVYMEFKMi1NdmZvTE85NGhuYTA1VFlqc1BNMHp3LXZPQU9nMTVpYjlFN2JJdjVOZFVlUHBJMFppT2NXMDQ?oc=5"
       ],
       "source_articles": [
         0
@@ -73,8 +74,8 @@
       "quality_score": 0.75,
       "verification_status": "verified",
       "verification_score": 0.75,
-      "source_count": 4,
-      "last_updated": "2026-08-07T00:13:11.278971+00:00",
+      "source_count": 5,
+      "last_updated": "2026-08-07T07:27:07.298071",
       "id": "c8e3a4c15ec7",
       "created_at": "2026-08-07T00:13:11.278962+00:00"
     },
@@ -109,12 +110,13 @@
       "date": "2026-08-05",
       "year": 2026,
       "source_urls": [
-        "https://x.com/clashreport/status/2084981788087070896#m",
-        "https://www.wutc.org/2026-08-06/drone-with-explosives-found-at-german-airport-official-sees-new-quality-of-threat",
-        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5",
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYVFMbDhrbnVEWDhpTjdDUVdFU3B1QmVDbmpXMm1xUFdzNkV4R0JOelp3Y25UaFZXYzg4b3MzVHJqdVFfcEJVd3JnT000SnZ3WkdOU1hoR2ozcTZTSG9laHdBVHVSTmxXN29od0lSV0FZczFxVFNRSHJsemlYcnJ2aTdldVhfR05NRGtSWWhOTWZrb1ktSmF0MGtpLU83cDBKempNQzhuQjZpSlI3T2hWS0ZBN0huaVNpRXRJ?oc=5",
+        "https://www.wutc.org/2026-08-06/drone-with-explosives-found-at-german-airport-official-sees-new-quality-of-threat",
         "https://elpais.com/internacional/2026-08-05/la-policia-alemana-desactiva-un-dron-bomba-que-cayo-junto-a-un-avion-de-carga-ucranio-en-el-aeropuerto-de-leipzig.html",
-        "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMUR6alFsdWszNEFaYjN6QlFEbjFuVGlPSGw4MWh0eEtvNUJaTmppakFMbTNSdEt1dUVtczhsX01sY3JTeUFEMzZIak92TnFBbGpkNHVMN1JzYjdWaDRyQXNlUXA3NURiV1NDcW1qbklhSTBIdnFnbV9oUHZEVi1Kck9xVQ?oc=5"
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMUR6alFsdWszNEFaYjN6QlFEbjFuVGlPSGw4MWh0eEtvNUJaTmppakFMbTNSdEt1dUVtczhsX01sY3JTeUFEMzZIak92TnFBbGpkNHVMN1JzYjdWaDRyQXNlUXA3NURiV1NDcW1qbklhSTBIdnFnbV9oUHZEVi1Kck9xVQ?oc=5",
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb2FLbjF6ZFFHU1lwS014aGp4UXZWRGdwZkxlcmdXS3kwMjhQeVV1X01NZkhBUlFXRzZpYXpNWU5Xb01HQ1MtWmhsMW9BSnFpUEo0TElTWGFUN3AzLV9XdzVLV3BHRFlweEotTUc3YVhGdjNmNEp3a2YxWFB6U1MyU281cUpIdw?oc=5",
+        "https://x.com/clashreport/status/2084981788087070896#m",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU01ZcklNOUtndFN3SHBCdzVVVEJpSFBxNTlHZVRoYklwV3MzYmk2Sk5UNGdEYmloeUNnTFRob3V5TFlYY1hPSGV2dUhleGlUY1hIblRxSDh0ZzJUVk1zZW05aFRZdy1NdEhBaDVzbEp6bXJidldqSzl6YWhHSWlrWTliNFVVdFhZNkIxWWJNcTBHWWU2TzFnMzJDSHNuME55MzFjNFFlNA?oc=5"
       ],
       "source_articles": [
         0
@@ -135,8 +137,8 @@
       "quality_score": 1.0,
       "verification_status": "verified",
       "verification_score": 1.0,
-      "source_count": 6,
-      "last_updated": "2026-08-06T14:28:47.473553",
+      "source_count": 7,
+      "last_updated": "2026-08-07T07:27:07.298582",
       "id": "41ee5e03a26d",
       "created_at": "2026-08-05T14:27:41.735444+00:00"
     },
@@ -215,8 +217,8 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Bomb threat at Ngurah Rai Airport",
-      "summary_tr": "Ngurah Rai Havalimanı'nda bomba tehdidi",
+      "summary_en": "Bomb threat at George Bush Intercontinental Airport",
+      "summary_tr": "George Bush Intercontinental Havalimanı'nda bomba tehdidi",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -229,8 +231,9 @@
       "date": "2026-08-04",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc3JGaGNRM0RZWmNyWnhrSU9mMzdQYU9GUFkxMEVpOHE1Ti1PUFRkUlk2U3Rza3RVcWoyV09IYWgteGUxclJOaTFDZEZJQ0IzNGNDSHVFeUp5SzhIZGUyTVd3WXdnNVdxbXAzY2o4cnBLMi1QcUFvR1BqVExQMU1Mb0N1MWZZa3hwWHhvS1JDcXdnMElNdWhINTFGRFFPQWlVNzJSNDNDTGlWZmFzUG5HeDBtQThDZDdKUDh1eDI5emk?oc=5",
-        "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaG5WVk5FU0lFQ01vZUhCMzRmSk9ZaWg2VkVZVzJQQnpCRVcwVEFZOUVJY1h4RXJYdndFOGVnbmNuRjR0dVl2ZktZNUFpVTZBT2pJUmh5RG1MTWRlWkdoU0pCS05vSEVlT1RsbWx2cjlLNTljRzd3dmpTNkpFWXJGVThsMlVKcjA?oc=5"
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOamg0ZkZRdmRaaTMzUF9KR2xnVUw1Vkd2d0RTOWRTUzkyM3FXX2d0c1ZjUElmQmJ0T3JyQ083ZFVIQlZFM0IzbEd0WjlXOElSZnI4ajNZc08tWkQyVHFqTlpvQzBvWkZTYzFaa2RXVG1vYnpsNUZQajk2NEUzem5iQVVjVmg0c2RzOFZDRml5Sng0SHFkdFlpLUV0OUhkaTZ0aVprdVdEYVdSVkdPZTdLbXRGRFNzWmdaM0tWcC1SbzJwVkoyY0o1YV95RWd2bnB6UzhjcdIB2gFBVV95cUxNdVJIZDdGRHJadi13anFWT0tVQTJPWm43UEZKcm5FZ2dJRExRUWQxQVRIRWdvdTJ6OUR3RVpfYW5nbHpXNXRaNExzaklkRTUwdWkwd1IwTkRkTWIzR0NvTEJkdGxxVXoyM1JZRnRncUpfLXNFeVlWcTM2YVdnYWh1czJPcWlBOHNkRGFwRkg5SHNCNGtzNHROeXV3YVB3ckxhTWtya2pJZ29LZWVfYlJ6NUJhWExDUzJvQXcyNGt3RnB6YlZrX1oteS1zQXRTTkFDMkF4YjR0VGNfUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaG5WVk5FU0lFQ01vZUhCMzRmSk9ZaWg2VkVZVzJQQnpCRVcwVEFZOUVJY1h4RXJYdndFOGVnbmNuRjR0dVl2ZktZNUFpVTZBT2pJUmh5RG1MTWRlWkdoU0pCS05vSEVlT1RsbWx2cjlLNTljRzd3dmpTNkpFWXJGVThsMlVKcjA?oc=5",
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc3JGaGNRM0RZWmNyWnhrSU9mMzdQYU9GUFkxMEVpOHE1Ti1PUFRkUlk2U3Rza3RVcWoyV09IYWgteGUxclJOaTFDZEZJQ0IzNGNDSHVFeUp5SzhIZGUyTVd3WXdnNVdxbXAzY2o4cnBLMi1QcUFvR1BqVExQMU1Mb0N1MWZZa3hwWHhvS1JDcXdnMElNdWhINTFGRFFPQWlVNzJSNDNDTGlWZmFzUG5HeDBtQThDZDdKUDh1eDI5emk?oc=5"
       ],
       "source_articles": [
         0
@@ -252,8 +255,8 @@
       "verification_score": 1.0,
       "id": "8fe35977aef2",
       "created_at": "2026-08-04T08:49:12.251285+00:00",
-      "last_updated": "2026-08-07T00:13:11.238512",
-      "source_count": 2
+      "last_updated": "2026-08-07T07:27:07.297484",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",

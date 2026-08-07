@@ -1283,5 +1283,15 @@
     "lat": 29.984142,
     "lon": -95.332986,
     "display_name": "George Bush Intercontinental Airport - Houston, 2800, North Terminal Road, Houston, Harris County, Texas, 77066, United States"
+  },
+  "george bush intercontinental airport, houston, united states": {
+    "lat": 29.984142,
+    "lon": -95.332986,
+    "display_name": "George Bush Intercontinental Airport - Houston, 2800, North Terminal Road, Houston, Harris County, Texas, 77066, United States"
+  },
+  "bush intercontinental airport": {
+    "lat": 29.984142,
+    "lon": -95.332986,
+    "display_name": "George Bush Intercontinental Airport - Houston, 2800, North Terminal Road, Houston, Harris County, Texas, 77066, United States"
   }
 }
