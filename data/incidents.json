@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-08T02:06:05.074458+00:00",
+    "last_updated": "2026-08-09T13:05:03.961033+00:00",
     "total_incidents": 212,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -50,11 +50,12 @@
       "date": "2026-08-06",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa2hoNjdicTdXR05BYnU4WHpSLUplNEhUSHY0LW1VOU1Wc1lQX1Fzd1U5eXQ0dGF0TFBTR1FLU0xWRWNWZ3NsVDNqV25adGVxZ0YyRzdmTzRCOVRjNlNpZXVyZTdiY280LVBoOEVFWEppYnY3dGUwZXRFM2RYTlp4ZGJoNWhDVzg4djlUQWlRdmpOaktoN3ZsZDBsMXUxUV81U3lRQ0VadFI?oc=5",
-        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P0gF6QVVfeXFMTVBJVDQ0RVhSUFJLbWtscUFJSGpEUWZjV0s4cDZXWkp4Q1U4eXdscHFaVm1YTWR4OExyVE5EODV6RmZBNXo0OExVWXNucWkzQTNsSVZoSllxeElmYTcyZ1hsQ3ZCOGRnSWpsSGRZYks2ZkVlOTR3NGhpRkE?oc=5",
         "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOc3prdXB2d2JsS1A3X1g2Q3VFb3hQdHhtY3IyUFpRemNNWkp3MExYVUV1RVE3b3NFb3VHOV9wSEs1ZS10MU9yMlJVOWhCM213M3Y4ZFJkc0hsV3EwLTIxaVlOOEtnYk1BV085TVVxVC1ZSDNoM0xBYmlIM2lxZGZuMzh5VGwyaWRxekJ2MU9qc1ZlWWN2R2JRcmltQk9pU0xBT0IzUlNzY0NGQQ?oc=5",
         "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P?oc=5",
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNakxQdEZjMVM4YXp0bkdMdWlGVFN5eGhXWHJrWm5lOHFMTEFsMmZUM2dmQXdaUkE1UDBiVmtYaU1DeGVOZi1QbW1vLWtpSnZYUnAtTWlISUJ5OFZNcEtzTWw3dUZ1aE1Ma0Uwa3kzZkVFTzFmbnNKZWlZZ201OHhEUkR4NHZvcXRJYnlvRlY5NHF2UGh4V1pock5lSHQ4WmVYMEFKMi1NdmZvTE85NGhuYTA1VFlqc1BNMHp3LXZPQU9nMTVpYjlFN2JJdjVOZFVlUHBJMFppT2NXMDQ?oc=5"
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNakxQdEZjMVM4YXp0bkdMdWlGVFN5eGhXWHJrWm5lOHFMTEFsMmZUM2dmQXdaUkE1UDBiVmtYaU1DeGVOZi1QbW1vLWtpSnZYUnAtTWlISUJ5OFZNcEtzTWw3dUZ1aE1Ma0Uwa3kzZkVFTzFmbnNKZWlZZ201OHhEUkR4NHZvcXRJYnlvRlY5NHF2UGh4V1pock5lSHQ4WmVYMEFKMi1NdmZvTE85NGhuYTA1VFlqc1BNMHp3LXZPQU9nMTVpYjlFN2JJdjVOZFVlUHBJMFppT2NXMDQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa2hoNjdicTdXR05BYnU4WHpSLUplNEhUSHY0LW1VOU1Wc1lQX1Fzd1U5eXQ0dGF0TFBTR1FLU0xWRWNWZ3NsVDNqV25adGVxZ0YyRzdmTzRCOVRjNlNpZXVyZTdiY280LVBoOEVFWEppYnY3dGUwZXRFM2RYTlp4ZGJoNWhDVzg4djlUQWlRdmpOaktoN3ZsZDBsMXUxUV81U3lRQ0VadFI?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNekQtbW42OXhnTHBkNXZxQWM2bThjVEZuYnZuenZjWWJOT0VlY2pob2dIbkFsNUFSQVEyOGJEcWlXd1dxVVN6dlpuMlRseW1mSnBhTVVrVVpBMjdVSmd0WHAzZ1dJM2dtSlR5endkQ1pjUkFqNzJjOG9uV0FZZHIzUTJSTVBnLW5yenFXdGVzRXM3b202bnVz?oc=5",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ta3ZKMkVXQ3ctcV9CRkVrREt6SnNVMVU2MUVjLVhYcHBRWVc1SlRXeFRVVWdUSEZVY3Q3OG9uZzBxbzVMakxOT1ZZMXVkVXRzM2RlMko2LUQ5ZnlmWXZCckdBeFVJOU5MXzU5UnNfZFVBUm1P0gF6QVVfeXFMTVBJVDQ0RVhSUFJLbWtscUFJSGpEUWZjV0s4cDZXWkp4Q1U4eXdscHFaVm1YTWR4OExyVE5EODV6RmZBNXo0OExVWXNucWkzQTNsSVZoSllxeElmYTcyZ1hsQ3ZCOGRnSWpsSGRZYks2ZkVlOTR3NGhpRkE?oc=5"
       ],
       "source_articles": [
         0
@@ -74,8 +75,8 @@
       "quality_score": 0.75,
       "verification_status": "verified",
       "verification_score": 0.75,
-      "source_count": 5,
-      "last_updated": "2026-08-07T07:27:07.298071",
+      "source_count": 6,
+      "last_updated": "2026-08-09T13:05:03.960871",
       "id": "c8e3a4c15ec7",
       "created_at": "2026-08-07T00:13:11.278962+00:00"
     },
