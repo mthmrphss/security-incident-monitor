@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-10T07:54:11.267391+00:00",
-    "total_incidents": 214,
+    "last_updated": "2026-08-10T13:24:39.169575+00:00",
+    "total_incidents": 215,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -78,6 +78,62 @@
     },
     {
       "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-10",
+      "publish_date": "2026-08-10",
+      "country": "Germany",
+      "country_code": "DE",
+      "city": "Berlin",
+      "location_detail": "Leipzig/Halle Airport",
+      "airport_name": "Leipzig/Halle Airport",
+      "airport_iata": "LEJ",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bus driver stopped drone attack",
+      "summary_tr": "Otobüs şoförü drone saldırısını durdurdu",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone attack",
+        "airport security"
+      ],
+      "date": "2026-08-10",
+      "year": 2026,
+      "source_urls": [
+        "http://www.jamaicantimes.com/news/279227674/bus-driver-at-major-german-airport-kicked-explosive-drone-away"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 52.517389,
+      "geo_lon": 13.395131,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "a64213a9a270",
+      "created_at": "2026-08-10T13:24:39.169559+00:00",
+      "last_updated": "2026-08-10T13:24:39.169568+00:00",
+      "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-08-09",
       "publish_date": "2026-08-09",
       "country": "Germany",
@@ -131,6 +187,63 @@
       "created_at": "2026-08-09T18:54:05.956031+00:00",
       "last_updated": "2026-08-09T18:54:05.956041+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-09",
+      "publish_date": "2026-08-09",
+      "country": "Germany",
+      "country_code": "DE",
+      "city": "Berlin",
+      "location_detail": "German airport housing Ukrainian planes",
+      "airport_name": "Leipzig/Halle Airport",
+      "airport_iata": "LEJ",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "drone",
+      "severity": "critical",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bus driver stopped drone attack at airport",
+      "summary_tr": "Otobüs şoförü havalimanında drone saldırısını engelledi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone attack",
+        "airport security"
+      ],
+      "data_quality": "low",
+      "date": "2026-08-09",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQ3gzcTdTSVhkbUc4enN3NlNuLTZtZE9SNmkybUZPWE9JUGpVS0lkVjFpT0VPM3VOb29OZWVRN2E5NjFranZZc0JWMEZSN3BSalR3aEp3VWwwbGM5Z1NzYktLZk1hckEya0Z1c21jQjBvRzBRSTBGcHFkRXBEWUlrTjd4YmVxeXNQRHcyMTBJVGlDQkgyLTN3RV9zSXU0bmF2MTNuNlZ6RXZJcHdEZk9jdjQyTzBrWjZaNGc?oc=5",
+        "http://www.britainnews.net/news/279227674/catastrophe-averted-at-german-airport-as-bus-driver-kicked-drone-away"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 51.163818,
+      "geo_lon": 10.447831,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": false,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "2dd5a358d63f",
+      "created_at": "2026-08-09T18:54:05.956031+00:00",
+      "last_updated": "2026-08-10T13:24:39.169363",
+      "source_count": 2
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -258,65 +371,6 @@
       "last_updated": "2026-08-08T02:06:05.074313",
       "id": "41ee5e03a26d",
       "created_at": "2026-08-05T14:27:41.735444+00:00"
-    },
-    {
-      "incident_type": "AIRPORT_ATTACK",
-      "event_date": "2026-08-05",
-      "publish_date": "2026-08-05",
-      "country": "Germany",
-      "country_code": "DE",
-      "city": "unknown",
-      "location_detail": "German airport",
-      "airport_name": "unknown",
-      "airport_iata": null,
-      "hotel_name": null,
-      "venue_name": "airport",
-      "attack_type": "drone",
-      "severity": "critical",
-      "casualties_dead": 0,
-      "casualties_injured": 0,
-      "perpetrator": "unknown",
-      "summary_en": "Bomb robot deployed after explosive drone found",
-      "summary_tr": "Patlayıcı drone bulunması üzerine bomba robotu devreye girdi",
-      "is_ongoing": false,
-      "is_false_alarm": false,
-      "is_stale": false,
-      "original_event_year": null,
-      "tags": [
-        "explosive drone",
-        "German airport",
-        "bomb robot"
-      ],
-      "data_quality": "low",
-      "date": "2026-08-05",
-      "year": 2026,
-      "source_urls": [
-        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNLVZzR2dGSXc5dmx5Y2IzTlM5aHJXTHFQdU5hXzBiQXZRVmdUc1FRdXRVT1RnTEJscnFpTkxXTWc0Z3JrZnkyWDJpRDFTYTgzRUY5VWRyaHhMWjE1X0dodm5xUUZUeVNzUE5XakFwMGVUZGNjVURBNUpHWjZsTlZSTzNHb3p1RWZmREEzU3RJN1IxTXN2aE5DaUFHWGlDZDlCLWNsV3dkVGdtUjhtc2xQMlNkVnJGeEhxTzBaOXFKckZqQ3pCcDhsWmtXb0RkaUgtOWVaTS0yOVVFUlV3bnc1X2g3NA?oc=5",
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPM3FUbVJzeGVOVHMyc1A2cjg0cFFSSDFOaTZwRHFNTkFkLUw4TUF4ZVVNZzBEZzNJeU1JR0lBUjVSNDRlN2psRTV6dS1DWm12RGk2bkVMWlA3RERjaElzSDZIUjRncTRZQkxwZzBuelZVWktwQ0stbUUyZVBpU25MQjhnVllZV2VPWjd5by01d25Cd0oyWFk3VmpxVkVSWU55MkZIWDBoX29QZzQ?oc=5",
-        "https://www.reddit.com/r/worldnews/comments/1vi422q/bus_driver_kicked_explosive_drone_out_of_air_at/"
-      ],
-      "source_articles": [
-        0
-      ],
-      "geo_lat": 51.163818,
-      "geo_lon": 10.447831,
-      "validation_signals": {
-        "has_country": true,
-        "has_city": false,
-        "has_valid_date": true,
-        "text_overlap": true,
-        "valid_type": true,
-        "attack_in_source": true,
-        "location_in_source": false,
-        "not_false_alarm": true
-      },
-      "quality_score": 0.75,
-      "verification_status": "verified",
-      "verification_score": 0.75,
-      "id": "2dd5a358d63f",
-      "created_at": "2026-08-06T03:18:57.294552+00:00",
-      "last_updated": "2026-08-07T19:09:54.858085",
-      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
