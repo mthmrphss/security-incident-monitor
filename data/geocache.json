@@ -1293,5 +1293,10 @@
     "lat": 29.984142,
     "lon": -95.332986,
     "display_name": "George Bush Intercontinental Airport - Houston, 2800, North Terminal Road, Houston, Harris County, Texas, 77066, United States"
+  },
+  "leipzig, russia": {
+    "lat": 53.568313,
+    "lon": 61.047302,
+    "display_name": "Лейпциг, Варненский муниципальный округ, Челябинская область, Уральский федеральный округ, 457214, Россия"
   }
 }
