@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-09T18:54:05.956047+00:00",
-    "total_incidents": 213,
+    "last_updated": "2026-08-10T07:54:11.267391+00:00",
+    "total_incidents": 214,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "HOTEL_ATTACK",
+      "event_date": "2026-08-10",
+      "publish_date": "2026-08-10",
+      "country": "Russia",
+      "country_code": "RU",
+      "city": "Makiivka",
+      "location_detail": "Galaktika shopping center",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "Galaktika shopping center",
+      "attack_type": "drone",
+      "severity": "high",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "Ukrainian drones",
+      "summary_en": "Drones struck targets in Russia",
+      "summary_tr": "Dronlar Rusya'daki hedeflere saldırdı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "drone attack",
+        "Russia",
+        "Ukraine"
+      ],
+      "date": "2026-08-10",
+      "year": 2026,
+      "source_urls": [
+        "https://x.com/clashreport/status/2086710875243565185#m"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": null,
+      "geo_lon": null,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "5e203a53d1ae",
+      "created_at": "2026-08-10T07:54:11.267376+00:00",
+      "last_updated": "2026-08-10T07:54:11.267386+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-08-09",
