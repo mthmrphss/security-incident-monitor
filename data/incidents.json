@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-11T02:12:19.955073+00:00",
+    "last_updated": "2026-08-11T19:15:12.193666+00:00",
     "total_incidents": 215,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -93,7 +93,7 @@
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Bus driver stopped drone attack",
+      "summary_en": "Drone attack on Ukrainian cargo planes",
       "summary_tr": "Otobüs şoförü drone saldırısını engelledi",
       "is_ongoing": false,
       "is_false_alarm": false,
@@ -106,8 +106,9 @@
       "date": "2026-08-10",
       "year": 2026,
       "source_urls": [
+        "http://www.newyorkstatesman.com/news/279227674/bus-driver-at-major-german-airport-kicked-explosive-drone-away",
         "http://www.jamaicantimes.com/news/279227674/bus-driver-at-major-german-airport-kicked-explosive-drone-away",
-        "http://www.newyorkstatesman.com/news/279227674/bus-driver-at-major-german-airport-kicked-explosive-drone-away"
+        "https://x.com/clashreport/status/2087195980399522043#m"
       ],
       "source_articles": [
         0
@@ -130,8 +131,8 @@
       "verification_score": 1.0,
       "id": "a64213a9a270",
       "created_at": "2026-08-10T13:24:39.169559+00:00",
-      "last_updated": "2026-08-10T19:07:31.409548",
-      "source_count": 2
+      "last_updated": "2026-08-11T19:15:12.193550",
+      "source_count": 3
     },
     {
       "incident_type": "AIRPORT_ATTACK",
