@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-10T19:07:31.409702+00:00",
+    "last_updated": "2026-08-11T02:12:19.955073+00:00",
     "total_incidents": 215,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -198,7 +198,7 @@
       "city": "Leipzig",
       "location_detail": "German airport housing Ukrainian planes",
       "airport_name": "Leipzig airport",
-      "airport_iata": null,
+      "airport_iata": "LEJ",
       "hotel_name": null,
       "venue_name": "airport",
       "attack_type": "drone",
@@ -221,7 +221,7 @@
       "year": 2026,
       "source_urls": [
         "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQ3gzcTdTSVhkbUc4enN3NlNuLTZtZE9SNmkybUZPWE9JUGpVS0lkVjFpT0VPM3VOb29OZWVRN2E5NjFranZZc0JWMEZSN3BSalR3aEp3VWwwbGM5Z1NzYktLZk1hckEya0Z1c21jQjBvRzBRSTBGcHFkRXBEWUlrTjd4YmVxeXNQRHcyMTBJVGlDQkgyLTN3RV9zSXU0bmF2MTNuNlZ6RXZJcHdEZk9jdjQyTzBrWjZaNGc?oc=5",
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNEdtQ3lDLVRhRmVvNkZKWFNZbThidFIwU1Y1VFFWblBnamdLSnMwOVpYOGJ1Q3JmeDlFTDZMcWJKUnNEWV8wdUg5SEt6REl4OUJmemE2eUFaR3ItTFdQREFHT0t5UURZYzhWSUdvTW9EZVpGdktPVS1FclFLSFdBcEJxcUZnRVF4Yl9vNWNpUWQyTHVvc2x1WlJsaF9IeVM2N2NjQXJpejBHV2sxX0cxdHlKWFdDUdIBpwFBVV95cUxPQnphM0l4VFBhY1l1LUlhamtNQlE0NlJaOXZjVlE3cXZuUFlxbnlEVE5jblllQUZsOGdMZF8yN25pdHRsSll6aFhkVGw4MHE0SnVlby1HZUYtX2ZUU3N3SnpIcDJjcXpWTElRT0ZOVF8wdlZ0cWFKU0JTTU5QT1BndkhmS2lMb25pMUhoZzJBLTRuandoZ0JyUXRkeXpuOC1ieHg0eHBNRQ?oc=5"
+        "https://www.reddit.com/r/worldnews/comments/1vl45zv/us_intelligence_believes_russia_was_behind/"
       ],
       "source_articles": [
         0
@@ -243,7 +243,7 @@
       "verification_score": 0.75,
       "id": "2dd5a358d63f",
       "created_at": "2026-08-09T18:54:05.956031+00:00",
-      "last_updated": "2026-08-10T19:07:31.409195",
+      "last_updated": "2026-08-11T02:12:19.954903",
       "source_count": 2
     },
     {
