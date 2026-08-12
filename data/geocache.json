@@ -1298,5 +1298,10 @@
     "lat": 53.568313,
     "lon": 61.047302,
     "display_name": "Лейпциг, Варненский муниципальный округ, Челябинская область, Уральский федеральный округ, 457214, Россия"
+  },
+  "sangster international airport, montego bay, jamaica": {
+    "lat": 18.503781,
+    "lon": -77.911468,
+    "display_name": "Sangster International Airport, Mckenzie Avenue, Flankers, Montego Bay, Saint James, Cornwall County, Jamaica"
   }
 }

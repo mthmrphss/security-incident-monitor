@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-11T19:15:12.193666+00:00",
-    "total_incidents": 215,
+    "last_updated": "2026-08-12T07:44:39.709425+00:00",
+    "total_incidents": 216,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,63 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-11",
+      "publish_date": "2026-08-12",
+      "country": "Jamaica",
+      "country_code": "JM",
+      "city": "Montego Bay",
+      "location_detail": "Queen’s Drive, near the airport",
+      "airport_name": "Sangster International Airport",
+      "airport_iata": "MBJ",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "shooting",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 1,
+      "perpetrator": "unknown",
+      "summary_en": "Briton shot, seeks refuge in airport",
+      "summary_tr": "Bir İngiliz vuruldu, havalimanına sığındı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "shooting",
+        "airport",
+        "Jamaica"
+      ],
+      "date": "2026-08-11",
+      "year": 2026,
+      "source_urls": [
+        "https://jamaica-gleaner.com/article/news/20260812/briton-seeks-refuge-mobay-airport-after-being-shot"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 18.503781,
+      "geo_lon": -77.911468,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "7a49643eb9d1",
+      "created_at": "2026-08-12T07:44:39.709403+00:00",
+      "last_updated": "2026-08-12T07:44:39.709418+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "HOTEL_ATTACK",
       "event_date": "2026-08-10",
