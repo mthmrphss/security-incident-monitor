@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-14T13:22:22.024700+00:00",
+    "last_updated": "2026-08-14T19:04:01.888700+00:00",
     "total_incidents": 218,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -133,6 +133,66 @@
       "created_at": "2026-08-14T13:22:22.024692+00:00",
       "last_updated": "2026-08-14T13:22:22.024695+00:00",
       "source_count": 1
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-14",
+      "publish_date": "2026-08-14",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Delhi",
+      "location_detail": "Terminal 3",
+      "airport_name": "Delhi Airport",
+      "airport_iata": "DEL",
+      "hotel_name": null,
+      "venue_name": "Delhi High Court, Airport",
+      "attack_type": "threat",
+      "severity": "low",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "Bomb threat at Delhi Airport and 7 locations",
+      "summary_tr": "Delhi Yüksek Mahkemesi ve havalimanına bomba tehditleri",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport security",
+        "bomb threat"
+      ],
+      "data_quality": "low",
+      "date": "2026-08-14",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQzNiWlRCUmpyd1poTS1wZXZseFJvSDgwRUM2S0JfQlh6UDVkcVdzS28wUWRJWkZxZGFpajNSNFFYM0ZpOWhvU2Q0eVBURzQtWWhnc3N5REJaVDREcHJKdUFwZEQ2WEM5bXFTUS1ZSDQybkpsSmNlZzdubEE0THdwMDdFTEZ4U0F0TTZrTXNQMmVmemRtZ04xcXdwbUtQRDVYN1VpNUpzYTJ4dWFIV2tQb1hmUnNub1VPZDBWZUxFYWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMifkFVX3lxTFBKV0ZRTUpJNV9OclBnU3l5TnRtNmYxWjQ2bHNFeVBEZ2RUV2JYbEZyNV9ybGtDbm9oWmkxWDNnQlFtdjdoMkp4YktROVMyeVNORHFFejVMclBjU3hHSW1rQkFIS0dfeGVKQ1h3SmpGNkZkekdYSHp4ZnFvb3BqQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS0RpaXQwSGpSeHZ5cU96RUlFcEg2RHE4V3J2Q1UwSVRXTTRpTHpCQlRBWkliQTJCZk90N0pXekJmRTVlY1J4ZDVQOG9Pa09wa0t0WnJKOWM5dlZhQThmUXNtM0JkdWM1OXhEbS1Xd0hSY05OcTRmVmlaZjg2VFdBdTZRVzV4eXlVdjJhc1lVLURhUFNGUjBYQ2N4TlBpWUN2RlpzZk9YbVQwU29KWl80SHhFY9IBuwFBVV95cUxNcERXMG9HdC1QNmk0WlN1cUsyWTRHM0hrejk0TW5FRXl5RVFGaG9VY291U1pqZFczMlJncEFDNlRMWHVLOVRoa2M3cFFUSzh6bE0wQWk1TURGbXhSNjBhVG1rdnFTWGtoUThQY21vSnJPOTROMkRfUFY1RGFSS2l4d2Y0dGJobXJSOENudG5iQkhqUFVpdE5XX3FzWVdlRDNETG8yZ1k2bUNickpJZlozb0hoV2dzMUZzMWFr?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5",
+        "https://www.oneindia.com/new-delhi/red-fort-delhi-airport-and-6-others-receive-bomb-threat-on-pakistans-independence-day-know-key-lo-8176193.html"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 28.561095,
+      "geo_lon": 77.085314,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "source_count": 5,
+      "last_updated": "2026-08-14T19:04:01.888574",
+      "id": "65c2a025f388",
+      "created_at": "2026-08-14T13:22:22.024669+00:00"
     },
     {
       "incident_type": "AIRPORT_ATTACK",
@@ -4879,63 +4939,6 @@
       "id": "2c246f04c471",
       "created_at": "2026-05-30T08:38:29.932442+00:00",
       "last_updated": "2026-05-30T08:38:29.932455+00:00",
-      "source_count": 1
-    },
-    {
-      "incident_type": "AIRPORT_ATTACK",
-      "event_date": "2026-05-28",
-      "publish_date": "2026-05-28",
-      "country": "India",
-      "country_code": "IN",
-      "city": "Delhi",
-      "location_detail": "Delhi Airport",
-      "airport_name": "Delhi Airport",
-      "airport_iata": "DEL",
-      "hotel_name": null,
-      "venue_name": "airport",
-      "attack_type": "threat",
-      "severity": "medium",
-      "casualties_dead": 0,
-      "casualties_injured": 0,
-      "perpetrator": "unknown",
-      "summary_en": "Bomb threat on IndiGo flight",
-      "summary_tr": "IndiGo uçuşunda bomba tehdidi",
-      "is_ongoing": false,
-      "is_false_alarm": false,
-      "is_stale": false,
-      "original_event_year": null,
-      "tags": [
-        "airport",
-        "bomb threat",
-        "IndiGo"
-      ],
-      "data_quality": "low",
-      "date": "2026-05-28",
-      "year": 2026,
-      "source_urls": [
-        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQU2sxVTZEN1E5NHI4SDZydG5YeUJNYkZyZnVydzlTb085SERMUkZuOE5Tdk1fdTRva3lhMlFESS1kWUdNcGVmQXV0Rk9Nd0Y2VjJBd19JTnhVeGZCUTBXbVp2YWNGR2l5YlYydjZPTk5fX1VFTzhuUG5zb29ub0ktMVJhNHhJcEpmRTctWVpHcnlmLXVGTTJMNFY5c0xfM2VYTWVJ?oc=5"
-      ],
-      "source_articles": [
-        0
-      ],
-      "geo_lat": 28.561095,
-      "geo_lon": 77.085314,
-      "validation_signals": {
-        "has_country": true,
-        "has_city": true,
-        "has_valid_date": true,
-        "text_overlap": true,
-        "valid_type": true,
-        "attack_in_source": true,
-        "location_in_source": true,
-        "not_false_alarm": true
-      },
-      "quality_score": 1.0,
-      "verification_status": "verified",
-      "verification_score": 1.0,
-      "id": "65c2a025f388",
-      "created_at": "2026-05-28T10:20:45.389518+00:00",
-      "last_updated": "2026-05-28T10:20:45.389530+00:00",
       "source_count": 1
     },
     {
