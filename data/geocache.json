@@ -1303,5 +1303,15 @@
     "lat": 18.503781,
     "lon": -77.911468,
     "display_name": "Sangster International Airport, Mckenzie Avenue, Flankers, Montego Bay, Saint James, Cornwall County, Jamaica"
+  },
+  "delhi, india": {
+    "lat": 28.666453,
+    "lon": 77.216978,
+    "display_name": "Delhi, Old Delhi, Delhi, India"
+  },
+  "calgary airport, calgary, canada": {
+    "lat": 51.12226,
+    "lon": -114.013541,
+    "display_name": "Calgary International Airport, 2000, Airport Road NE, Calgary International Airport, Calgary, Alberta, T2E 6W5, Canada"
   }
 }
