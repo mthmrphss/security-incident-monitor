@@ -1318,5 +1318,15 @@
     "lat": 28.556463,
     "lon": 77.086699,
     "display_name": "IGI Airport, Indira Gandhi International Airport Arrival Road, Najafgarh, Delhi Cantonment, New Delhi, Delhi, 110077, India"
+  },
+  "igi airport, delhi, india": {
+    "lat": 28.556463,
+    "lon": 77.086699,
+    "display_name": "IGI Airport, Indira Gandhi International Airport Arrival Road, Najafgarh, Delhi Cantonment, New Delhi, Delhi, 110077, India"
+  },
+  "samara, russia": {
+    "lat": 53.195625,
+    "lon": 50.101493,
+    "display_name": "Самара, городской округ Самара, Самарская область, Приволжский федеральный округ, 443028, Россия"
   }
 }
