@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-14T19:04:01.888700+00:00",
-    "total_incidents": 218,
+    "last_updated": "2026-08-15T01:41:45.735917+00:00",
+    "total_incidents": 219,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -193,6 +193,62 @@
       "last_updated": "2026-08-14T19:04:01.888574",
       "id": "65c2a025f388",
       "created_at": "2026-08-14T13:22:22.024669+00:00"
+    },
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-14",
+      "publish_date": "2026-08-14",
+      "country": "unknown",
+      "country_code": "unknown",
+      "city": "unknown",
+      "location_detail": "IGI Airport T-3",
+      "airport_name": "IGI Airport",
+      "airport_iata": "unknown",
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "threat",
+      "severity": "unknown",
+      "casualties_dead": 0,
+      "casualties_injured": 0,
+      "perpetrator": "unknown",
+      "summary_en": "IGI Airport T-3 receives bomb threat",
+      "summary_tr": "IGI Havalimanı T-3'e bomba tehdidi",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport",
+        "bomb threat"
+      ],
+      "data_quality": "low",
+      "date": "2026-08-14",
+      "year": 2026,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNa1NTRXNibEVJYk9jaVlrT2xIZ0dRU1BkcUZYZ2gyQTNocG1fLXptMGc2Mk5KamxfT2FNWnd4LVR5aFhDZFpRbzN2Y0tBSmtCbFZuaXlxS1Q5NnUtSU5RRk9GaGVDQlVkaVZGLTlUeFpETFVrdVNIdkwwWFJ6ZE5maV9pZHhKeFNuQVHSAY8BQVVfeXFMT0dwcTRyME5tUTdlMGhmZ0ZFYnV0ZTRfS3hQaXJqVDk5Z3pRUjZSWW5CVkNyUXVqU0E1LTBva0k2N1c2WWF5dkFxaWt1VFpaTXNLck1hSzhWcXFRUFRzb2x2bTB3ckhrczh4aTVnMTk0ei1lNWtNTWdyeFlzNjdEQ21faHIzSHRkUWpJUXkwZTg?oc=5"
+      ],
+      "source_articles": [
+        0
+      ],
+      "geo_lat": 28.556463,
+      "geo_lon": 77.086699,
+      "validation_signals": {
+        "has_country": false,
+        "has_city": false,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 0.75,
+      "verification_status": "verified",
+      "verification_score": 0.75,
+      "id": "def29e3207a9",
+      "created_at": "2026-08-15T01:41:45.735898+00:00",
+      "last_updated": "2026-08-15T01:41:45.735911+00:00",
+      "source_count": 1
     },
     {
       "incident_type": "AIRPORT_ATTACK",

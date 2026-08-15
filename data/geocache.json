@@ -1313,5 +1313,10 @@
     "lat": 51.12226,
     "lon": -114.013541,
     "display_name": "Calgary International Airport, 2000, Airport Road NE, Calgary International Airport, Calgary, Alberta, T2E 6W5, Canada"
+  },
+  "igi airport": {
+    "lat": 28.556463,
+    "lon": 77.086699,
+    "display_name": "IGI Airport, Indira Gandhi International Airport Arrival Road, Najafgarh, Delhi Cantonment, New Delhi, Delhi, 110077, India"
   }
 }
