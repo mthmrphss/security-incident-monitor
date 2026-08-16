@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-16T06:53:28.592971+00:00",
+    "last_updated": "2026-08-16T12:52:14.938274+00:00",
     "total_incidents": 220,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -222,10 +222,10 @@
       "date": "2026-08-14",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQWJaUXZIanZiNmZtOHJkX0RsNFJIX3o5RDJDbUkyV09zdXFPX2hnZDdYb21EXzRxUUJMV0xveHdIWEc4Vi05czN5dWZWTGFJeGo2WlFPbUlxUlZvQ2I0RUVydFFtWlh0VWxBZTBSZWhuY0xQS0NSbFRQdVU1V1hrZnpadTBpZFRVMW9DLVpPQ2RXcHVlcHhLMG1haFZmb3Y0dU1saWo1STZVQ01CSjk0b0VEZ1NkU0xh?oc=5",
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5",
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQzNiWlRCUmpyd1poTS1wZXZseFJvSDgwRUM2S0JfQlh6UDVkcVdzS28wUWRJWkZxZGFpajNSNFFYM0ZpOWhvU2Q0eVBURzQtWWhnc3N5REJaVDREcHJKdUFwZEQ2WEM5bXFTUS1ZSDQybkpsSmNlZzdubEE0THdwMDdFTEZ4U0F0TTZrTXNQMmVmemRtZ04xcXdwbUtQRDVYN1VpNUpzYTJ4dWFIV2tQb1hmUnNub1VPZDBWZUxFYWQ?oc=5",
         "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS0RpaXQwSGpSeHZ5cU96RUlFcEg2RHE4V3J2Q1UwSVRXTTRpTHpCQlRBWkliQTJCZk90N0pXekJmRTVlY1J4ZDVQOG9Pa09wa0t0WnJKOWM5dlZhQThmUXNtM0JkdWM1OXhEbS1Xd0hSY05OcTRmVmlaZjg2VFdBdTZRVzV4eXlVdjJhc1lVLURhUFNGUjBYQ2N4TlBpWUN2RlpzZk9YbVQwU29KWl80SHhFY9IBuwFBVV95cUxNcERXMG9HdC1QNmk0WlN1cUsyWTRHM0hrejk0TW5FRXl5RVFGaG9VY291U1pqZFczMlJncEFDNlRMWHVLOVRoa2M3cFFUSzh6bE0wQWk1TURGbXhSNjBhVG1rdnFTWGtoUThQY21vSnJPOTROMkRfUFY1RGFSS2l4d2Y0dGJobXJSOENudG5iQkhqUFVpdE5XX3FzWVdlRDNETG8yZ1k2bUNickpJZlozb0hoV2dzMUZzMWFr?oc=5",
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQzNiWlRCUmpyd1poTS1wZXZseFJvSDgwRUM2S0JfQlh6UDVkcVdzS28wUWRJWkZxZGFpajNSNFFYM0ZpOWhvU2Q0eVBURzQtWWhnc3N5REJaVDREcHJKdUFwZEQ2WEM5bXFTUS1ZSDQybkpsSmNlZzdubEE0THdwMDdFTEZ4U0F0TTZrTXNQMmVmemRtZ04xcXdwbUtQRDVYN1VpNUpzYTJ4dWFIV2tQb1hmUnNub1VPZDBWZUxFYWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5",
+        "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNaVRrMkpFejN5Q01fRERFOWt4cmRVQm1BWnVrT2pWLWxPbmJaT1IwTS1jZlZvdTlUcnZ3aDFCaXdlSF84Q1FEMTRqWFlXWnAxeUxFWUlZNzE3d2hEb3FaUklVYW4xeDRRUDktTzRYcWlicWYtSmpXdTA4dzRLc3hFRG5lYTM5eTNVMWRMNGlJTWdOTXJONEpnV1gtZWhrVE5Xbkg3aVQ5MkRDVHBqOXVzUGJOLVhHMWxGYmgxcHFyVURRZ1VENEFscEExSEFzN0hEaTJFbDRuOEd0cGpXc2c?oc=5",
         "https://www.oneindia.com/new-delhi/red-fort-delhi-airport-and-6-others-receive-bomb-threat-on-pakistans-independence-day-know-key-lo-8176193.html"
       ],
       "source_articles": [
@@ -247,7 +247,7 @@
       "verification_status": "verified",
       "verification_score": 1.0,
       "source_count": 5,
-      "last_updated": "2026-08-16T06:53:28.592823",
+      "last_updated": "2026-08-16T12:52:14.938131",
       "id": "65c2a025f388",
       "created_at": "2026-08-14T13:22:22.024669+00:00"
     },
