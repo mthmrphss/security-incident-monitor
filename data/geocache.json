@@ -1328,5 +1328,20 @@
     "lat": 53.195625,
     "lon": 50.101493,
     "display_name": "Самара, городской округ Самара, Самарская область, Приволжский федеральный округ, 443028, Россия"
+  },
+  "houston hobby airport, houston, united states": {
+    "lat": 29.651377,
+    "lon": -95.255362,
+    "display_name": "Comfort Suites Hobby Airport Houston, Airport Boulevard, Houston, Harris County, Texas, 77075, United States"
+  },
+  "hobby airport, texas, united states": {
+    "lat": 29.647149,
+    "lon": -95.27693,
+    "display_name": "William P. Hobby Airport, Meldrum Lane, Houston, Harris County, Texas, 77075, United States"
+  },
+  "hobby airport": {
+    "lat": 29.647149,
+    "lon": -95.27693,
+    "display_name": "William P. Hobby Airport, Airport Boulevard, Houston, Harris County, Texas, 77061, United States"
   }
 }

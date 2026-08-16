@@ -4,7 +4,7 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-15T12:53:31.372555+00:00",
+    "last_updated": "2026-08-16T06:53:28.592971+00:00",
     "total_incidents": 220,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
@@ -204,12 +204,12 @@
       "hotel_name": null,
       "venue_name": "Delhi High Court, Airport",
       "attack_type": "threat",
-      "severity": "high",
+      "severity": "low",
       "casualties_dead": 0,
       "casualties_injured": 0,
       "perpetrator": "unknown",
-      "summary_en": "Bomb threat emails to IGI Airport and High Court",
-      "summary_tr": "IGI Havalimanı ve Yüksek Mahkeme'ye bomba tehdidi e-postaları",
+      "summary_en": "Bomb threat at Delhi Airport and 7 locations",
+      "summary_tr": "Delhi Yüksek Mahkemesi ve havalimanına bomba tehditleri",
       "is_ongoing": false,
       "is_false_alarm": false,
       "is_stale": false,
@@ -222,11 +222,11 @@
       "date": "2026-08-14",
       "year": 2026,
       "source_urls": [
-        "https://www.oneindia.com/new-delhi/red-fort-delhi-airport-and-6-others-receive-bomb-threat-on-pakistans-independence-day-know-key-lo-8176193.html",
-        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS0RpaXQwSGpSeHZ5cU96RUlFcEg2RHE4V3J2Q1UwSVRXTTRpTHpCQlRBWkliQTJCZk90N0pXekJmRTVlY1J4ZDVQOG9Pa09wa0t0WnJKOWM5dlZhQThmUXNtM0JkdWM1OXhEbS1Xd0hSY05OcTRmVmlaZjg2VFdBdTZRVzV4eXlVdjJhc1lVLURhUFNGUjBYQ2N4TlBpWUN2RlpzZk9YbVQwU29KWl80SHhFY9IBuwFBVV95cUxNcERXMG9HdC1QNmk0WlN1cUsyWTRHM0hrejk0TW5FRXl5RVFGaG9VY291U1pqZFczMlJncEFDNlRMWHVLOVRoa2M3cFFUSzh6bE0wQWk1TURGbXhSNjBhVG1rdnFTWGtoUThQY21vSnJPOTROMkRfUFY1RGFSS2l4d2Y0dGJobXJSOENudG5iQkhqUFVpdE5XX3FzWVdlRDNETG8yZ1k2bUNickpJZlozb0hoV2dzMUZzMWFr?oc=5",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQWJaUXZIanZiNmZtOHJkX0RsNFJIX3o5RDJDbUkyV09zdXFPX2hnZDdYb21EXzRxUUJMV0xveHdIWEc4Vi05czN5dWZWTGFJeGo2WlFPbUlxUlZvQ2I0RUVydFFtWlh0VWxBZTBSZWhuY0xQS0NSbFRQdVU1V1hrZnpadTBpZFRVMW9DLVpPQ2RXcHVlcHhLMG1haFZmb3Y0dU1saWo1STZVQ01CSjk0b0VEZ1NkU0xh?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5",
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQzNiWlRCUmpyd1poTS1wZXZseFJvSDgwRUM2S0JfQlh6UDVkcVdzS28wUWRJWkZxZGFpajNSNFFYM0ZpOWhvU2Q0eVBURzQtWWhnc3N5REJaVDREcHJKdUFwZEQ2WEM5bXFTUS1ZSDQybkpsSmNlZzdubEE0THdwMDdFTEZ4U0F0TTZrTXNQMmVmemRtZ04xcXdwbUtQRDVYN1VpNUpzYTJ4dWFIV2tQb1hmUnNub1VPZDBWZUxFYWQ?oc=5",
-        "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdkplZFItaHJHWW50SV9BeWxrX0p2WTNUV3NwSDVPenliZ3ZYRS1RcUVreTVPVnJHVEZmMWc4bXlyaHpIQmJ2RW1JR2VMMmJES2lfR3RqaXQ5N1VKZlU3cUlsNWhSNkQ4VGI5RHpHeE9CaHdtcjFNYk82eXBNSTBZQWZ5d2U?oc=5",
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5"
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS0RpaXQwSGpSeHZ5cU96RUlFcEg2RHE4V3J2Q1UwSVRXTTRpTHpCQlRBWkliQTJCZk90N0pXekJmRTVlY1J4ZDVQOG9Pa09wa0t0WnJKOWM5dlZhQThmUXNtM0JkdWM1OXhEbS1Xd0hSY05OcTRmVmlaZjg2VFdBdTZRVzV4eXlVdjJhc1lVLURhUFNGUjBYQ2N4TlBpWUN2RlpzZk9YbVQwU29KWl80SHhFY9IBuwFBVV95cUxNcERXMG9HdC1QNmk0WlN1cUsyWTRHM0hrejk0TW5FRXl5RVFGaG9VY291U1pqZFczMlJncEFDNlRMWHVLOVRoa2M3cFFUSzh6bE0wQWk1TURGbXhSNjBhVG1rdnFTWGtoUThQY21vSnJPOTROMkRfUFY1RGFSS2l4d2Y0dGJobXJSOENudG5iQkhqUFVpdE5XX3FzWVdlRDNETG8yZ1k2bUNickpJZlozb0hoV2dzMUZzMWFr?oc=5",
+        "https://www.oneindia.com/new-delhi/red-fort-delhi-airport-and-6-others-receive-bomb-threat-on-pakistans-independence-day-know-key-lo-8176193.html"
       ],
       "source_articles": [
         0
@@ -247,7 +247,7 @@
       "verification_status": "verified",
       "verification_score": 1.0,
       "source_count": 5,
-      "last_updated": "2026-08-15T12:53:31.354715",
+      "last_updated": "2026-08-16T06:53:28.592823",
       "id": "65c2a025f388",
       "created_at": "2026-08-14T13:22:22.024669+00:00"
     },
