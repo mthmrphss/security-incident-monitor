@@ -1343,5 +1343,10 @@
     "lat": 29.647149,
     "lon": -95.27693,
     "display_name": "William P. Hobby Airport, Airport Boulevard, Houston, Harris County, Texas, 77061, United States"
+  },
+  "varanasi, india": {
+    "lat": 25.335649,
+    "lon": 83.007629,
+    "display_name": "Varanasi, Sadar, Varanasi, Uttar Pradesh, 221001, India"
   }
 }

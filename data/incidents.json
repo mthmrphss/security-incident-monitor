@@ -4,8 +4,8 @@
     "description": "Airport attacks, airline personnel incidents, hotel attacks database",
     "version": "2.0",
     "created_at": "",
-    "last_updated": "2026-08-16T12:52:14.938274+00:00",
-    "total_incidents": 220,
+    "last_updated": "2026-08-16T18:40:57.783261+00:00",
+    "total_incidents": 221,
     "categories": {
       "AIRPORT_ATTACK": "Physical attacks on airports",
       "AIRLINE_PERSONNEL": "Attacks/assaults on airline workers",
@@ -19,6 +19,62 @@
     }
   },
   "incidents": [
+    {
+      "incident_type": "AIRPORT_ATTACK",
+      "event_date": "2026-08-16",
+      "publish_date": "2026-08-16",
+      "country": "India",
+      "country_code": "IN",
+      "city": "Varanasi",
+      "location_detail": "security screening",
+      "airport_name": null,
+      "airport_iata": null,
+      "hotel_name": null,
+      "venue_name": "airport",
+      "attack_type": "shooting",
+      "severity": "medium",
+      "casualties_dead": 0,
+      "casualties_injured": 2,
+      "perpetrator": "unknown",
+      "summary_en": "Passenger's gun goes off during security screening",
+      "summary_tr": "Güvenlik kontrolü sırasında yolcunun tabancası patladı",
+      "is_ongoing": false,
+      "is_false_alarm": false,
+      "is_stale": false,
+      "original_event_year": null,
+      "tags": [
+        "airport security",
+        "gun incident"
+      ],
+      "date": "2026-08-16",
+      "year": 2026,
+      "source_urls": [
+        "https://www.indiablooms.com/news/shocking-airport-incident-passengers-gun-goes-off-during-security-screening-in-varanasi-2-injured/details"
+      ],
+      "source_articles": [
+        0
+      ],
+      "data_quality": "medium",
+      "geo_lat": 25.335649,
+      "geo_lon": 83.007629,
+      "validation_signals": {
+        "has_country": true,
+        "has_city": true,
+        "has_valid_date": true,
+        "text_overlap": true,
+        "valid_type": true,
+        "attack_in_source": true,
+        "location_in_source": true,
+        "not_false_alarm": true
+      },
+      "quality_score": 1.0,
+      "verification_status": "verified",
+      "verification_score": 1.0,
+      "id": "a01e270c9aca",
+      "created_at": "2026-08-16T18:40:57.783245+00:00",
+      "last_updated": "2026-08-16T18:40:57.783254+00:00",
+      "source_count": 1
+    },
     {
       "incident_type": "AIRPORT_ATTACK",
       "event_date": "2026-08-15",
@@ -222,11 +278,11 @@
       "date": "2026-08-14",
       "year": 2026,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS0RpaXQwSGpSeHZ5cU96RUlFcEg2RHE4V3J2Q1UwSVRXTTRpTHpCQlRBWkliQTJCZk90N0pXekJmRTVlY1J4ZDVQOG9Pa09wa0t0WnJKOWM5dlZhQThmUXNtM0JkdWM1OXhEbS1Xd0hSY05OcTRmVmlaZjg2VFdBdTZRVzV4eXlVdjJhc1lVLURhUFNGUjBYQ2N4TlBpWUN2RlpzZk9YbVQwU29KWl80SHhFY9IBuwFBVV95cUxNcERXMG9HdC1QNmk0WlN1cUsyWTRHM0hrejk0TW5FRXl5RVFGaG9VY291U1pqZFczMlJncEFDNlRMWHVLOVRoa2M3cFFUSzh6bE0wQWk1TURGbXhSNjBhVG1rdnFTWGtoUThQY21vSnJPOTROMkRfUFY1RGFSS2l4d2Y0dGJobXJSOENudG5iQkhqUFVpdE5XX3FzWVdlRDNETG8yZ1k2bUNickpJZlozb0hoV2dzMUZzMWFr?oc=5",
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQzNiWlRCUmpyd1poTS1wZXZseFJvSDgwRUM2S0JfQlh6UDVkcVdzS28wUWRJWkZxZGFpajNSNFFYM0ZpOWhvU2Q0eVBURzQtWWhnc3N5REJaVDREcHJKdUFwZEQ2WEM5bXFTUS1ZSDQybkpsSmNlZzdubEE0THdwMDdFTEZ4U0F0TTZrTXNQMmVmemRtZ04xcXdwbUtQRDVYN1VpNUpzYTJ4dWFIV2tQb1hmUnNub1VPZDBWZUxFYWQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5",
-        "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNaVRrMkpFejN5Q01fRERFOWt4cmRVQm1BWnVrT2pWLWxPbmJaT1IwTS1jZlZvdTlUcnZ3aDFCaXdlSF84Q1FEMTRqWFlXWnAxeUxFWUlZNzE3d2hEb3FaUklVYW4xeDRRUDktTzRYcWlicWYtSmpXdTA4dzRLc3hFRG5lYTM5eTNVMWRMNGlJTWdOTXJONEpnV1gtZWhrVE5Xbkg3aVQ5MkRDVHBqOXVzUGJOLVhHMWxGYmgxcHFyVURRZ1VENEFscEExSEFzN0hEaTJFbDRuOEd0cGpXc2c?oc=5",
-        "https://www.oneindia.com/new-delhi/red-fort-delhi-airport-and-6-others-receive-bomb-threat-on-pakistans-independence-day-know-key-lo-8176193.html"
+        "https://www.oneindia.com/new-delhi/red-fort-delhi-airport-and-6-others-receive-bomb-threat-on-pakistans-independence-day-know-key-lo-8176193.html",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS0RpaXQwSGpSeHZ5cU96RUlFcEg2RHE4V3J2Q1UwSVRXTTRpTHpCQlRBWkliQTJCZk90N0pXekJmRTVlY1J4ZDVQOG9Pa09wa0t0WnJKOWM5dlZhQThmUXNtM0JkdWM1OXhEbS1Xd0hSY05OcTRmVmlaZjg2VFdBdTZRVzV4eXlVdjJhc1lVLURhUFNGUjBYQ2N4TlBpWUN2RlpzZk9YbVQwU29KWl80SHhFY9IBuwFBVV95cUxNcERXMG9HdC1QNmk0WlN1cUsyWTRHM0hrejk0TW5FRXl5RVFGaG9VY291U1pqZFczMlJncEFDNlRMWHVLOVRoa2M3cFFUSzh6bE0wQWk1TURGbXhSNjBhVG1rdnFTWGtoUThQY21vSnJPOTROMkRfUFY1RGFSS2l4d2Y0dGJobXJSOENudG5iQkhqUFVpdE5XX3FzWVdlRDNETG8yZ1k2bUNickpJZlozb0hoV2dzMUZzMWFr?oc=5",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNU5xV0xMbDJvOENhMmNicWE5TmZNQl9zdERIRjRldnhfeVNEMFFVOHJPZERfUUduaGV6d2d2LV9lTUZsZk5GdzNDWFdyTXVpdExha2p0SF9Xd1o1NjFINFBIcEp6TENQcTRlUHA4bEdyM1ZkUnQ2Znk1NGtkSnlPeDZTSmdjVk1kVDV1TnV1anJBWVVLcXlyaGtwamJpM3UwQjFwN1dWUXhyRVYxU2pKTWk3V3cxdFNOd3hCS3Rn?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMWVmYUdULXd5dHc0bFVKcTdyamFYOGgyemRROTQwbGFfdzZVaVY1RVdGZjU5TURZUjJvbEQzSkRGNFViTnEwVEdVNkY1enU5ZmpMZ3MwQjJSUVJYTHRxcDNpNG84VWs1ZkJlenBiR0NHdUpfbDlYblZhOXVkRldqSGhrNmxRdFFPcW1fM0V5Q3lGMWJ4VDFHUXgzamUyeEdiY3duQkFMVzFrZw?oc=5"
       ],
       "source_articles": [
         0
@@ -247,7 +303,7 @@
       "verification_status": "verified",
       "verification_score": 1.0,
       "source_count": 5,
-      "last_updated": "2026-08-16T12:52:14.938131",
+      "last_updated": "2026-08-16T18:40:57.753765",
       "id": "65c2a025f388",
       "created_at": "2026-08-14T13:22:22.024669+00:00"
     },
