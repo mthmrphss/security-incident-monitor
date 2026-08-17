@@ -1348,5 +1348,10 @@
     "lat": 25.335649,
     "lon": 83.007629,
     "display_name": "Varanasi, Sadar, Varanasi, Uttar Pradesh, 221001, India"
+  },
+  "houston hobby airport, houston": {
+    "lat": 29.651377,
+    "lon": -95.255362,
+    "display_name": "Comfort Suites Hobby Airport Houston, Airport Boulevard, Houston, Harris County, Texas, 77075, United States"
   }
 }
